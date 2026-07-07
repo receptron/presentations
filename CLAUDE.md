@@ -10,10 +10,10 @@ Scripts live under `mulmoclaude/`, organized by intent: `vision/` (Why), plus pl
 
 ## Commands
 
-Videos are generated with the `mulmocast` CLI (installed globally, v2.7.x — not a package.json dependency):
+Videos are generated with the `mulmocast` CLI (installed globally, v2.7.x — not a package.json dependency). `mulmo` and `mulmocast` are aliases for the same binary; `mulmo-mcp` is its MCP server:
 
 ```sh
-npm run movie -- mulmoclaude/vision/<name>.json   # = mulmocast movie -g <file>
+npm run movie -- mulmoclaude/vision/<name>.json   # = mulmo movie -g <file>
 ```
 
 - `-g/--grouped` puts all generated files under `output/<basename>/` (images, per-beat audio, mp3, mp4, studio.json).
@@ -44,6 +44,14 @@ When writing a new script, copy the params blocks from an existing script and wr
 - Zod schemas: `node_modules/mulmocast/lib/types/schema.d.ts` — exports `mulmoScriptSchema`, `mulmoBeatSchema`, etc.
 
 Consult these files (not memory or the web) for available beat fields, slide layouts, and provider options. After writing or editing a script, validate it before rendering:
+
+```sh
+mulmo tool complete mulmoclaude/vision/<name>.json -o /dev/null
+```
+
+There is no dedicated `validate` command; `tool complete` parses the script against the full schema first, prints `Validation errors:` with field paths and exits 1 on failure, exits 0 on success. The `-o /dev/null` discards the completed-script output (otherwise it writes `<name>_completed.json` next to the file).
+
+Its messages can be shallow for deeply nested union fields (e.g. a bad slide layout surfaces only as `beats.0.image: Invalid input`). To pinpoint such errors, fall back to the full Zod issue list:
 
 ```sh
 node -e "const m=require('mulmocast'); const r=m.mulmoScriptSchema.safeParse(require('./mulmoclaude/vision/<name>.json')); console.log(r.success ? 'valid' : r.error.issues)"

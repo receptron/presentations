@@ -66,11 +66,11 @@
     "suppressSpeech": false
   },
   "title": "GUI Chat Protocol — From Text Chat to Multi-Modal AI",
-  "description": "An overview of the GUI Chat Protocol: how a simple enhancement to standard tool calling brings rich GUI and multi-modal interaction to LLM chat, enables code-free composable roles, and points toward a chat-centric operating system.",
+  "description": "An overview of the GUI Chat Protocol: how a simple enhancement to standard tool calling and MCP brings rich GUI and multi-modal interaction to LLM chat, enables code-free composable roles, and points toward a chat-centric operating system.",
   "lang": "en",
   "beats": [
     {
-      "text": "GUI Chat Protocol: a natural extension of tool calling that brings graphical, multi-modal interaction to LLM chat interfaces.",
+      "text": "GUI Chat Protocol: a natural extension of tool calling and M C P that brings graphical, multi-modal interaction to LLM chat interfaces.",
       "image": {
         "type": "slide",
         "slide": {
@@ -83,7 +83,7 @@
           "title": "GUI Chat Protocol",
           "subtitle": "From text-only chat to {primary:rich, interactive, multi-modal AI}",
           "chips": [
-            "🔧 built on tool calling",
+            "🔧 built on tool calling & MCP",
             "🖼️ typed GUI results",
             "🔁 bidirectional",
             "🧩 model-agnostic"
@@ -148,7 +148,7 @@
             ]
           },
           "callout": {
-            "text": "Leverage {primary:existing tool calling infrastructure} to trigger GUI components — no new architecture.",
+            "text": "Leverage {primary:existing tool calling and MCP infrastructure} to trigger GUI components — no new architecture.",
             "label": "Key idea",
             "color": "info",
             "leftBar": true
@@ -157,7 +157,7 @@
       }
     },
     {
-      "text": "From the LLM's perspective, nothing changes — it's standard function calling. The enhancement lives in the tool result.",
+      "text": "From the LLM's perspective, nothing changes — it's a standard tool call, whether built-in or served over M C P. The enhancement lives in the tool result.",
       "image": {
         "type": "slide",
         "slide": {
@@ -178,7 +178,7 @@
                 {
                   "type": "bullets",
                   "items": [
-                    "Tool defs in system prompt",
+                    "Built-in tools or MCP servers",
                     "Standard JSON Schema",
                     "No special model capability"
                   ]
@@ -348,7 +348,7 @@
       }
     },
     {
-      "text": "Because it builds on standard function calling, the protocol works with any capable model — OpenAI, Claude, Gemini, or open-weight models.",
+      "text": "Because it builds on standard function calling and M C P, the protocol works with any capable model — OpenAI, Claude, Gemini, or open-weight models.",
       "image": {
         "type": "slide",
         "slide": {
@@ -674,7 +674,7 @@
       }
     },
     {
-      "text": "GUI Chat Protocol: a small enhancement to tool calling, and a foundation for the next generation of AI applications.",
+      "text": "GUI Chat Protocol: a small enhancement to tool calling and M C P, and a foundation for the next generation of AI applications.",
       "image": {
         "type": "slide",
         "slide": {
@@ -684,7 +684,7 @@
           },
           "quote": "The operating system becomes a {primary:**conversational partner**}, not a collection of apps.",
           "author": "GUI Chat Protocol",
-          "role": "Existing tool calls + typed GUI data = multi-modal conversational AI 🚀"
+          "role": "Existing tool calls & MCP + typed GUI data = multi-modal conversational AI 🚀"
         }
       }
     }

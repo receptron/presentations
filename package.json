@@ -16,7 +16,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "movie": "mulmocast movie -g"
+    "viewer": "mulmo viewer -g",
+    "movie": "mulmo movie -g"
   },
   "devDependencies": {
     "mulmocast": "^2.7.0"
