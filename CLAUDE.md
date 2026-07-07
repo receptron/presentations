@@ -21,6 +21,8 @@ npm run movie -- mulmoclaude/vision/<name>.json   # = mulmo movie -g <file>
 - `--estimate` prints API cost estimates without generating.
 - `-l <lang>` / `-c <lang>` select narration / caption language.
 
+`npm run viewer -- <file>` generates a single-file HTML slideshow (no audio/video — fast and cheap). `npm run preview -- <file>` (`scripts/preview.js`) serves that viewer at http://localhost:8787 with live reload: on each save it re-runs `mulmo viewer` (cached beats are reused) and auto-refreshes the browser; invalid scripts show an error banner instead. The server exits on its own a few seconds after the last preview tab is closed (`--no-open` suppresses opening a browser tab).
+
 `output/` is gitignored. Generation requires API keys in `.env` (OpenAI for images, Gemini for TTS, Replicate for movie/sound effects, etc.).
 
 ## MulmoScript structure

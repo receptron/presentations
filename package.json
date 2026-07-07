@@ -16,6 +16,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node scripts/validate-all.js",
+    "preview": "node scripts/preview.js",
     "validate": "mulmo tool complete -o /dev/null",
     "viewer": "mulmo viewer -g",
     "movie": "mulmo movie -g"
