@@ -46,10 +46,12 @@ When writing a new script, copy the params blocks from an existing script and wr
 Consult these files (not memory or the web) for available beat fields, slide layouts, and provider options. After writing or editing a script, validate it before rendering:
 
 ```sh
-mulmo tool complete mulmoclaude/vision/<name>.json -o /dev/null
+npm run validate -- mulmoclaude/vision/<name>.json   # = mulmo tool complete -o /dev/null <file>
 ```
 
-There is no dedicated `validate` command; `tool complete` parses the script against the full schema first, prints `Validation errors:` with field paths and exits 1 on failure, exits 0 on success. The `-o /dev/null` discards the completed-script output (otherwise it writes `<name>_completed.json` next to the file).
+`npm test` validates every script under `mulmoclaude/` at once (`scripts/validate-all.js`, using the local devDependency's `mulmoScriptSchema` — reports all invalid files with full Zod issue paths).
+
+The CLI has no dedicated `validate` command; `tool complete` parses the script against the full schema first, prints `Validation errors:` with field paths and exits 1 on failure, exits 0 on success. The `-o /dev/null` discards the completed-script output (otherwise it writes `<name>_completed.json` next to the file).
 
 Its messages can be shallow for deeply nested union fields (e.g. a bad slide layout surfaces only as `beats.0.image: Invalid input`). To pinpoint such errors, fall back to the full Zod issue list:
 

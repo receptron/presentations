@@ -15,7 +15,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node scripts/validate-all.js",
+    "validate": "mulmo tool complete -o /dev/null",
     "viewer": "mulmo viewer -g",
     "movie": "mulmo movie -g"
   },
