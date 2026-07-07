@@ -1,0 +1,656 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini"
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "0A0F24",
+        "bgCard": "111A3A",
+        "bgCardAlt": "16224D",
+        "text": "EEF2FF",
+        "textMuted": "9FB0D8",
+        "textDim": "6F7FA0",
+        "primary": "38BDF8",
+        "accent": "818CF8",
+        "success": "34D399",
+        "warning": "FBBF24",
+        "danger": "FB7185",
+        "info": "22D3EE",
+        "highlight": "F0ABFC"
+      },
+      "fonts": {
+        "title": "Georgia",
+        "body": "Helvetica",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
+      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.2,
+    "audioVolume": 1,
+    "suppressSpeech": false
+  },
+  "title": "Software for an Audience of One",
+  "description": "Why the marginal cost of bespoke software has collapsed to near zero — inverting the economics that forced 'build for the mass' into 'build for this one person' — and where the cost of correctness relocates. Based on the 2026 essay by Satoshi Nakajima.",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "Software for an audience of one. Why the marginal cost of bespoke software has collapsed to near zero — and what that new phase of software development costs.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Essay · 2026-06-14"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "Software for an **Audience of One**",
+          "subtitle": "The marginal cost of bespoke software just collapsed to {primary:near zero.}",
+          "author": "Satoshi Nakajima",
+          "chips": [
+            "🧩 build for one",
+            "♻️ disposable code",
+            "🗄️ durable intent & data"
+          ]
+        }
+      }
+    },
+    {
+      "text": "Look at one real workspace today. Six collections have grown their own bespoke interfaces — each a self-contained HTML file the agent wrote on request, none of it ever seen by its owner.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "table",
+          "accentColor": "primary",
+          "eyebrow": {
+            "label": "The claim"
+          },
+          "title": "One workspace, six bespoke apps",
+          "subtitle": "Each a self-contained HTML view the agent wrote on request",
+          "headers": [
+            "Collection",
+            "Custom view",
+            "What it is"
+          ],
+          "rows": [
+            [
+              "restaurants",
+              "tokyo-map.html",
+              "Tokyo restaurants as a subway map"
+            ],
+            [
+              "watchlist",
+              "gallery.html",
+              "A movie-poster wall"
+            ],
+            [
+              "vocabulary",
+              "flashcards.html",
+              "An interactive flashcard drill"
+            ],
+            [
+              "portfolio",
+              "allocation.html",
+              "An asset-allocation chart"
+            ],
+            [
+              "baseball-scout",
+              "radar.html",
+              "Per-player rating radar charts"
+            ],
+            [
+              "mag2-subscribers",
+              "trend.html",
+              "A subscriber-count trend line"
+            ]
+          ],
+          "rowHeaders": true,
+          "callout": {
+            "text": "The owner never wrote — or even saw — a line of the HTML. He described what he wanted; the code appeared.",
+            "label": "Key fact",
+            "color": "primary",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "Every one of these is software that no company would ever build. The addressable market for each is exactly one person — and under fifty years of software economics, that made them not just hard, but impossible.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "accentColor": "accent",
+          "eyebrow": {
+            "label": "Why it matters"
+          },
+          "quote": "Every one of these is software that {highlight:**no company would ever build.**} The addressable market is exactly one person.",
+          "author": "Not hard — *impossible*, under the old economics.",
+          "role": "Build cost far exceeded the value any single user could justify"
+        }
+      }
+    },
+    {
+      "text": "The old constraint was a cost structure. Building software was expensive and fixed; serving one more user was free. The rational strategy was to spread the fixed cost over as many users as possible — build for the mass.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "columns",
+          "accentColor": "warning",
+          "title": "The economics that forced \"software for the mass\"",
+          "stepLabel": "SECTION 1",
+          "subtitle": "Individualization was never a preference problem — it was arithmetic",
+          "columns": [
+            {
+              "title": "Cost to build",
+              "accentColor": "danger",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "**Large, fixed, paid up front.**"
+                },
+                {
+                  "type": "bullets",
+                  "items": [
+                    "Teams, years, QA",
+                    "Precious source code",
+                    "Must be recouped"
+                  ]
+                }
+              ],
+              "num": 1
+            },
+            {
+              "title": "Cost to serve +1 user",
+              "accentColor": "info",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "**Approximately zero.**"
+                },
+                {
+                  "type": "bullets",
+                  "items": [
+                    "Replication is free",
+                    "Distribution is free"
+                  ]
+                }
+              ],
+              "num": 2
+            },
+            {
+              "title": "Rational strategy",
+              "accentColor": "warning",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "**Build for the mass.**"
+                },
+                {
+                  "type": "bullets",
+                  "items": [
+                    "Largest common denominator",
+                    "Regress to the mean of need",
+                    "80% right, forever 20% wrong"
+                  ]
+                }
+              ],
+              "num": 3
+            }
+          ],
+          "showArrows": true,
+          "callout": {
+            "text": "The settings panel you never fully use; the feature \"not worth building for your use case.\" Not a failure of taste — the arithmetic.",
+            "label": "Symptom",
+            "color": "warning",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "The constraint had a single load-bearing term: building software is expensive. An LLM that generates working code on demand removes it — and the whole structure falls.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "Section 2 · The collapse"
+          },
+          "title": "One term removed, the whole structure falls",
+          "left": {
+            "title": "Old arithmetic",
+            "accentColor": "danger",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "Build cost: large, fixed, up front",
+                    "icon": "no"
+                  },
+                  {
+                    "text": "Must amortize across a market",
+                    "icon": "no"
+                  },
+                  {
+                    "text": "∴ build for the mass",
+                    "icon": "no"
+                  }
+                ]
+              },
+              {
+                "type": "metric",
+                "value": "millions",
+                "label": "users needed to repay one build",
+                "color": "danger"
+              }
+            ]
+          },
+          "right": {
+            "title": "New arithmetic",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "Build cost ≈ a sentence of intent",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "No fixed cost to repay",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "∴ build for exactly this person",
+                    "icon": "ok"
+                  }
+                ]
+              },
+              {
+                "type": "metric",
+                "value": "1",
+                "label": "user is now a viable audience",
+                "color": "success"
+              }
+            ]
+          },
+          "callout": {
+            "text": "When building for one is as cheap as building for millions, the reason to build for millions — {primary:cost amortization} — evaporates.",
+            "label": "The inversion",
+            "color": "primary",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "This is not merely 'software is easier to build.' The category that was economically impossible for the entire history of the field — software whose audience is a single person — has become the default for a large class of needs.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "accentColor": "primary",
+          "quote": "The interesting unit of software is no longer the product shipped to a market. It is {primary:**the artifact grown for an individual.**}",
+          "author": "Not \"software is easier to build\" — that undersells it",
+          "role": "The impossible category is now the default"
+        }
+      }
+    },
+    {
+      "text": "The most important detail is the one easiest to skip: the owner never saw the HTML. When code costs almost nothing, it stops being the asset and becomes an intermediate representation between intent and behavior.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "columns",
+          "accentColor": "primary",
+          "title": "Code becomes an intermediate representation",
+          "stepLabel": "SECTION 3",
+          "subtitle": "The durable things are the two ends; the code is the compile target between them",
+          "columns": [
+            {
+              "title": "Intent",
+              "accentColor": "primary",
+              "content": [
+                {
+                  "type": "tag",
+                  "text": "DURABLE",
+                  "color": "success"
+                },
+                {
+                  "type": "text",
+                  "value": "Natural language:"
+                },
+                {
+                  "type": "text",
+                  "value": "*\"Draw my restaurants as a subway map.\"*"
+                }
+              ]
+            },
+            {
+              "title": "Code",
+              "accentColor": "warning",
+              "content": [
+                {
+                  "type": "tag",
+                  "text": "DISPOSABLE",
+                  "color": "danger"
+                },
+                {
+                  "type": "text",
+                  "value": "Generated HTML / JS."
+                },
+                {
+                  "type": "text",
+                  "value": "**Regrown on demand** — no more precious than compiler-emitted assembly."
+                }
+              ]
+            },
+            {
+              "title": "Data",
+              "accentColor": "success",
+              "content": [
+                {
+                  "type": "tag",
+                  "text": "DURABLE",
+                  "color": "success"
+                },
+                {
+                  "type": "text",
+                  "value": "The collection's records:"
+                },
+                {
+                  "type": "text",
+                  "value": "`restaurants/items/*.json`"
+                }
+              ]
+            }
+          ],
+          "showArrows": true,
+          "callout": {
+            "text": "\"Also color the stations by cuisine\" opens no code review — it reissues the request. It is cheaper to {primary:regenerate} the artifact than to repair it.",
+            "label": "Maintenance",
+            "color": "info",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "A claim that LLMs invented software-for-one would be false. The category already existed — its name was the spreadsheet. What's new is that the LLM is the first tool to remove both of its constraints at once.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "Section 4 · The honest precedent"
+          },
+          "title": "Spreadsheets got there first — at a price",
+          "subtitle": "VisiCalc, HyperCard, Excel, no-code: bespoke software with a market of one",
+          "left": {
+            "title": "Spreadsheet / No-code",
+            "accentColor": "warning",
+            "content": [
+              {
+                "type": "text",
+                "value": "**Authoring surface:** constrained DSL — a grid or block palette."
+              },
+              {
+                "type": "text",
+                "value": "**Authoring burden:** the *user* assembles it — must become, partly, a programmer."
+              }
+            ],
+            "footer": "Removed the dev team, kept the user in a grid"
+          },
+          "right": {
+            "title": "LLM codegen",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "text",
+                "value": "**Authoring surface:** arbitrary code — full HTML/JS/charts. A subway-map layout no builder offers."
+              },
+              {
+                "type": "text",
+                "value": "**Authoring burden:** the *agent* writes it — you don't assemble, you **describe**."
+              }
+            ],
+            "footer": "Both constraints removed simultaneously"
+          },
+          "callout": {
+            "text": "Not a no-code platform handing the user blocks — an {primary:agent that materializes the surface on request.}",
+            "label": "The novelty",
+            "color": "primary",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "But honesty requires naming what this gives up. Mass software is extraordinarily good at one thing: accumulating correctness. Millions of users debug it for you. Software for one has no such audience — its bugs ship to their only user.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "Section 5 · The relocated cost",
+            "color": "danger"
+          },
+          "title": "Correctness doesn't vanish — it **relocates**",
+          "left": {
+            "title": "Mass software",
+            "accentColor": "info",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "Hardened by many eyes over years",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "Edge cases surfaced, regressions caught",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "You inherit everyone else's fixes",
+                    "icon": "ok"
+                  }
+                ]
+              }
+            ],
+            "footer": "Correctness amortized across millions"
+          },
+          "right": {
+            "title": "Software for one",
+            "accentColor": "danger",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "No other eyes will ever run it",
+                    "icon": "warn"
+                  },
+                  {
+                    "text": "Correct — or not — between you and the model, once",
+                    "icon": "warn"
+                  },
+                  {
+                    "text": "{danger:The bug ships to its only user: you}",
+                    "icon": "no"
+                  }
+                ]
+              }
+            ],
+            "footer": "From the vendor's QA org → one user, one LLM"
+          },
+          "callout": {
+            "text": "The spreadsheet era's danger was never the visible UI — it was the {danger:invisible formula error} no one else ever checked. A wrong poster wall is harmless; a wrong portfolio allocation is not.",
+            "label": "Old lesson",
+            "color": "danger",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "The mitigations are the boring, correct ones — and they are the real frontier work of this phase. The codegen is solved; verification is not.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "manifesto",
+          "eyebrow": {
+            "label": "Mitigations",
+            "color": "success"
+          },
+          "title": "The real frontier work — not the codegen",
+          "items": [
+            {
+              "title": "Keep the data independently verifiable.",
+              "description": "The chart can be wrong; the numbers it reads must not be. Durable data, disposable view.",
+              "accentColor": "primary"
+            },
+            {
+              "title": "Reserve review for consequential views.",
+              "description": "Human or deterministic checks where the arithmetic matters; let harmless views run unaudited — the reliability dial.",
+              "accentColor": "warning"
+            },
+            {
+              "title": "Treat regenerability as a safety feature.",
+              "description": "An artifact cheap to throw away is also cheap to distrust and replace.",
+              "accentColor": "success"
+            },
+            {
+              "title": "Distrust beats defending precious code.",
+              "description": "Institutions defend expensive code long past its correctness. Disposable code carries no such loyalty.",
+              "accentColor": "accent"
+            }
+          ],
+          "columns": 2
+        }
+      }
+    },
+    {
+      "text": "Two sentences capture the change. The old phase: build once, for the mass, because building is expensive — the code is the asset. The new phase: build for one, on demand, because building is nearly free — intent and data are the asset.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "Section 6 · The broader shift"
+          },
+          "title": "Old phase vs. new phase",
+          "left": {
+            "title": "The old phase assumed",
+            "accentColor": "danger",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "Build **once, for the mass** — building is expensive",
+                    "icon": "no"
+                  },
+                  {
+                    "text": "The individual gets the *average*",
+                    "icon": "no"
+                  },
+                  {
+                    "text": "{danger:The code is the asset}",
+                    "icon": "no"
+                  }
+                ],
+                "size": "lead"
+              }
+            ],
+            "cardless": true
+          },
+          "right": {
+            "title": "The new phase assumes",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "Build **for one, on demand** — building is nearly free",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "The individual gets *exactly their need*",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "{success:Intent and data are the asset; code is disposable}",
+                    "icon": "ok"
+                  }
+                ],
+                "size": "lead"
+              }
+            ],
+            "cardless": true
+          },
+          "callout": {
+            "text": "From maintaining precious code → to {primary:verifying disposable code} and curating the durable intent and data behind it.",
+            "label": "Discipline shift",
+            "color": "primary",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "A restaurant guide drawn as a subway map is not a toy at the edge of this shift — it is the shape of the whole thing: software no market would fund, built for one person who never saw the code, kept only as long as it is useful, and regenerated the moment it is not.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "Closing"
+          },
+          "quote": "Software no market would fund, built for one person who never saw the code — kept while useful, {primary:**regenerated the moment it is not.**}",
+          "author": "*Software for an Audience of One* — Satoshi Nakajima, 2026",
+          "role": "Companions: workspace-is-the-agent · collections-architecture · dsl-as-harness"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,692 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini"
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "0A0F24",
+        "bgCard": "111A3A",
+        "bgCardAlt": "16224D",
+        "text": "EEF2FF",
+        "textMuted": "9FB0D8",
+        "textDim": "6F7FA0",
+        "primary": "38BDF8",
+        "accent": "818CF8",
+        "success": "34D399",
+        "warning": "FBBF24",
+        "danger": "FB7185",
+        "info": "22D3EE",
+        "highlight": "F0ABFC"
+      },
+      "fonts": {
+        "title": "Georgia",
+        "body": "Helvetica",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
+      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.2,
+    "audioVolume": 1,
+    "suppressSpeech": false
+  },
+  "title": "GUI Chat Protocol — From Text Chat to Multi-Modal AI",
+  "description": "An overview of the GUI Chat Protocol: how a simple enhancement to standard tool calling brings rich GUI and multi-modal interaction to LLM chat, enables code-free composable roles, and points toward a chat-centric operating system.",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "GUI Chat Protocol: a natural extension of tool calling that brings graphical, multi-modal interaction to LLM chat interfaces.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Protocol Overview"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "GUI Chat Protocol",
+          "subtitle": "From text-only chat to {primary:rich, interactive, multi-modal AI}",
+          "chips": [
+            "🔧 built on tool calling",
+            "🖼️ typed GUI results",
+            "🔁 bidirectional",
+            "🧩 model-agnostic"
+          ]
+        }
+      }
+    },
+    {
+      "text": "Conversational AI has been trapped in a text-only paradigm — but many real-world use cases need visual and interactive elements.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "Motivation"
+          },
+          "title": "Text alone isn't enough",
+          "left": {
+            "title": "Text-Only Chat",
+            "accentColor": "danger",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "User sends text, LLM responds with text",
+                    "icon": "no"
+                  },
+                  {
+                    "text": "Linear interaction, no visual context",
+                    "icon": "no"
+                  },
+                  {
+                    "text": "Rich content described, never shown",
+                    "icon": "warn"
+                  }
+                ]
+              }
+            ]
+          },
+          "right": {
+            "title": "What Users Actually Need",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "Generated images & edited photos",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "Maps, charts, data visualizations",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "Games, quizzes, media players",
+                    "icon": "ok"
+                  }
+                ]
+              }
+            ]
+          },
+          "callout": {
+            "text": "Leverage {primary:existing tool calling infrastructure} to trigger GUI components — no new architecture.",
+            "label": "Key idea",
+            "color": "info",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "From the LLM's perspective, nothing changes — it's standard function calling. The enhancement lives in the tool result.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "columns",
+          "accentColor": "primary",
+          "title": "It's just a tool call",
+          "stepLabel": "CORE CONCEPT",
+          "subtitle": "The LLM never needs to know it's driving a GUI",
+          "columns": [
+            {
+              "title": "LLM calls tool",
+              "accentColor": "primary",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "Standard function calling with JSON arguments."
+                },
+                {
+                  "type": "bullets",
+                  "items": [
+                    "Tool defs in system prompt",
+                    "Standard JSON Schema",
+                    "No special model capability"
+                  ]
+                }
+              ],
+              "num": 1
+            },
+            {
+              "title": "Tool returns twice",
+              "accentColor": "accent",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "One result, two payloads."
+                },
+                {
+                  "type": "bullets",
+                  "items": [
+                    "`message` + `jsonData` → LLM",
+                    "typed `data` → the UI",
+                    "optional `instructions` guide follow-up"
+                  ]
+                }
+              ],
+              "num": 2
+            },
+            {
+              "title": "UI renders type",
+              "accentColor": "success",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "The `type` tag picks the visual component."
+                },
+                {
+                  "type": "bullets",
+                  "items": [
+                    "Full-size view in canvas",
+                    "Compact preview in sidebar",
+                    "Conversation continues normally"
+                  ]
+                }
+              ],
+              "num": 3
+            }
+          ],
+          "showArrows": true
+        }
+      }
+    },
+    {
+      "text": "Each typed payload maps to a registered component — image viewers, maps, games, music players, forms, and more.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "accentColor": "accent",
+          "eyebrow": {
+            "label": "Typed Return Data"
+          },
+          "title": "Types drive the rendering",
+          "subtitle": "Every type pairs a full-size view with a sidebar preview",
+          "gridColumns": 4,
+          "items": [
+            {
+              "title": "image",
+              "description": "Image viewer for generated or edited pictures",
+              "accentColor": "primary",
+              "icon": "🖼️"
+            },
+            {
+              "title": "map",
+              "description": "Interactive map with markers and zoom",
+              "accentColor": "info",
+              "icon": "🗺️"
+            },
+            {
+              "title": "game",
+              "description": "Game boards — Othello, Go, quizzes",
+              "accentColor": "accent",
+              "icon": "🎮"
+            },
+            {
+              "title": "music",
+              "description": "Music and podcast players",
+              "accentColor": "highlight",
+              "icon": "🎵"
+            },
+            {
+              "title": "browse",
+              "description": "Web content viewer",
+              "accentColor": "success",
+              "icon": "🌐"
+            },
+            {
+              "title": "form",
+              "description": "Structured input collection",
+              "accentColor": "warning",
+              "icon": "📝"
+            },
+            {
+              "title": "document",
+              "description": "Rich markdown with embedded images",
+              "accentColor": "primary",
+              "icon": "📄"
+            },
+            {
+              "title": "…extensible",
+              "description": "Register new types without touching chat logic",
+              "accentColor": "info",
+              "icon": "➕"
+            }
+          ],
+          "footer": "Existing text tools keep working unchanged — adoption is incremental."
+        }
+      }
+    },
+    {
+      "text": "The protocol isn't just output — GUI forms collect structured input and send it back to the LLM as JSON.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "accentColor": "primary",
+          "eyebrow": {
+            "label": "Bidirectional"
+          },
+          "left": {
+            "title": "The round trip",
+            "label": "FLOW",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "text",
+                "value": "GUI components both **present to** and **collect from** users.",
+                "bold": true
+              },
+              {
+                "type": "bullets",
+                "items": [
+                  "LLM calls `presentForm` with field defs",
+                  "User fills the form in the GUI",
+                  "Submission returns as a JSON text message",
+                  "LLM parses it and responds — e.g. a recipe document"
+                ]
+              },
+              {
+                "type": "callout",
+                "text": "Enables guided tutorials, form-based workflows, and interactive apps.",
+                "style": "info"
+              }
+            ],
+            "ratio": 50
+          },
+          "right": {
+            "title": "Form submission → LLM",
+            "content": [
+              {
+                "type": "code",
+                "code": "{\n  \"formSubmission\": {\n    \"formTitle\": \"Recipe Preferences\",\n    \"responses\": {\n      \"dish\": \"Spaghetti Carbonara\",\n      \"servings\": 4,\n      \"skillLevel\": \"Intermediate\",\n      \"time\": \"1 hour\",\n      \"dietary\": \"No dairy\"\n    }\n  }\n}"
+              }
+            ],
+            "dark": true,
+            "ratio": 50
+          }
+        }
+      }
+    },
+    {
+      "text": "Because it builds on standard function calling, the protocol works with any capable model — OpenAI, Claude, Gemini, or open-weight models.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "accentColor": "info",
+          "eyebrow": {
+            "label": "LLM Agnostic"
+          },
+          "title": "Works with any model",
+          "subtitle": "No special capabilities beyond basic function calling",
+          "gridColumns": 4,
+          "items": [
+            {
+              "title": "OpenAI GPT",
+              "description": "Native function calling",
+              "accentColor": "primary",
+              "icon": "🤖"
+            },
+            {
+              "title": "Anthropic Claude",
+              "description": "Tool use feature",
+              "accentColor": "accent",
+              "icon": "🧠"
+            },
+            {
+              "title": "Google Gemini",
+              "description": "Function declarations",
+              "accentColor": "info",
+              "icon": "✨"
+            },
+            {
+              "title": "Open weights",
+              "description": "Llama, Mistral, and beyond",
+              "accentColor": "success",
+              "icon": "🔓"
+            }
+          ],
+          "footer": "Standard JSON Schema definitions · standard invocation patterns · structured JSON results"
+        }
+      }
+    },
+    {
+      "text": "The most powerful idea: complete AI applications defined with zero custom code. A role is just tools plus a system prompt.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "manifesto",
+          "eyebrow": {
+            "label": "Composable Roles",
+            "color": "warning"
+          },
+          "title": "The role {primary:IS} the application",
+          "items": [
+            {
+              "title": "Tools + prompt. That's it.",
+              "description": "A role is a tool selection plus a system prompt — no code, no components, no custom logic.",
+              "accentColor": "primary"
+            },
+            {
+              "title": "The chat app stays generic.",
+              "description": "It only executes tools, renders typed data, and relays user input. All specifics live in the role.",
+              "accentColor": "accent"
+            },
+            {
+              "title": "Prototype in minutes.",
+              "description": "Recipe Guide, Trip Planner, Tutor, Game Companion — each is just a different configuration.",
+              "accentColor": "success"
+            },
+            {
+              "title": "Anyone can build one.",
+              "description": "Non-programmers create specialized AI assistants by editing text, not shipping code.",
+              "accentColor": "warning"
+            }
+          ],
+          "columns": 2
+        }
+      }
+    },
+    {
+      "text": "For example, a Recipe Guide role composes six existing tools with a short behavioral prompt.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "accentColor": "success",
+          "eyebrow": {
+            "label": "Example Role"
+          },
+          "left": {
+            "title": "Available tools",
+            "label": "COMPOSE",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "presentForm — collect preferences",
+                  "presentDocument — recipe w/ images",
+                  "generateImage — step-by-step visuals",
+                  "browse + searchWeb — look up recipes",
+                  "scrollToAnchor — hands-free navigation"
+                ]
+              }
+            ],
+            "ratio": 45
+          },
+          "right": {
+            "title": "System prompt (the behavior)",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "**Greet** the user warmly",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "**Collect** dish, servings, skill, time via form",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "**Create** recipe document with embedded images",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "**Assist hands-free** — scroll to a step, read it aloud",
+                    "icon": "ok"
+                  }
+                ]
+              },
+              {
+                "type": "callout",
+                "text": "Same pattern yields Trip Planner, Clinic Receptionist, Tutor, Weather Reporter, Game Companion…",
+                "style": "info"
+              }
+            ],
+            "ratio": 55
+          }
+        }
+      }
+    },
+    {
+      "text": "Because roles are pure data, the LLM can switch between them dynamically — or even create new ones on the fly.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "timeline",
+          "accentColor": "accent",
+          "eyebrow": {
+            "label": "Meta-Capabilities"
+          },
+          "title": "Roles are data — so they're dynamic",
+          "subtitle": "From switching to self-evolution",
+          "items": [
+            {
+              "date": "switchRole()",
+              "title": "Dynamic switching",
+              "description": "LLM or user changes role\nmid-conversation",
+              "color": "primary",
+              "done": true
+            },
+            {
+              "date": "createRole()",
+              "title": "On-the-fly creation",
+              "description": "LLM designs a custom role\nfrom a user's description",
+              "color": "accent",
+              "hot": true
+            },
+            {
+              "date": "Marketplace",
+              "title": "Shared roles",
+              "description": "Community-created roles,\ndownloadable & remixable",
+              "color": "info"
+            },
+            {
+              "date": "Self-evolving",
+              "title": "Adaptive apps",
+              "description": "Roles refine themselves\nfrom user feedback",
+              "color": "success"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "text": "The long-term vision: conversation replaces applications as the primary interface of the operating system.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "table",
+          "accentColor": "primary",
+          "eyebrow": {
+            "label": "Future Direction",
+            "color": "highlight"
+          },
+          "title": "Toward a chat-centric OS",
+          "subtitle": "The paradigm shift, dimension by dimension",
+          "headers": [
+            "Dimension",
+            "App-Centric OS",
+            "Chat-Centric OS"
+          ],
+          "rows": [
+            [
+              "Primary interface",
+              "Applications",
+              {
+                "text": "Conversation + dynamic GUI",
+                "color": "primary",
+                "bold": true
+              }
+            ],
+            [
+              "User action",
+              "Launch app, navigate UI",
+              {
+                "text": "Express intent naturally",
+                "color": "primary",
+                "bold": true
+              }
+            ],
+            [
+              "Software units",
+              "Applications",
+              {
+                "text": "Tools + Roles",
+                "color": "accent",
+                "bold": true
+              }
+            ],
+            [
+              "Context switching",
+              "Constant, between apps",
+              {
+                "text": "Minimal, within conversation",
+                "color": "success",
+                "bold": true
+              }
+            ],
+            [
+              "Learning curve",
+              "Per application",
+              {
+                "text": "One-time (conversational)",
+                "color": "success",
+                "bold": true
+              }
+            ],
+            [
+              "Interoperability",
+              "Limited (via APIs)",
+              {
+                "text": "Native — all tools composable",
+                "color": "info",
+                "bold": true
+              }
+            ]
+          ],
+          "rowHeaders": true,
+          "callout": {
+            "text": "Tools become {primary:composable OS primitives} — like system calls, but for AI. Roles replace app launching.",
+            "label": "Vision",
+            "color": "info",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "No apps launched, no interfaces learned — just intent, conversation, and context-appropriate GUI.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "columns",
+          "accentColor": "info",
+          "title": "\"I want to plan a trip to Japan\"",
+          "stepLabel": "EXAMPLE WORKFLOW",
+          "subtitle": "One conversation, many capabilities — zero app switching",
+          "columns": [
+            {
+              "title": "Intent",
+              "accentColor": "primary",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "User expresses a goal in natural language, by voice or text."
+                }
+              ],
+              "num": 1
+            },
+            {
+              "title": "Role + tools",
+              "accentColor": "accent",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "OS assumes the Trip Planner role: form → itinerary → interactive map."
+                }
+              ],
+              "num": 2
+            },
+            {
+              "title": "Seamless pivot",
+              "accentColor": "success",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "\"Now teach me Japanese phrases\" — OS switches to Tutor role, mid-conversation."
+                }
+              ],
+              "num": 3
+            }
+          ],
+          "showArrows": true,
+          "callout": {
+            "text": "Zero learning curve · unified experience · preserved context · no app fragmentation · developers build **tools, not apps**.",
+            "label": "Benefits",
+            "color": "success",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "GUI Chat Protocol: a small enhancement to tool calling, and a foundation for the next generation of AI applications.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "Conclusion"
+          },
+          "quote": "The operating system becomes a {primary:**conversational partner**}, not a collection of apps.",
+          "author": "GUI Chat Protocol",
+          "role": "Existing tool calls + typed GUI data = multi-modal conversational AI 🚀"
+        }
+      }
+    }
+  ]
+}
