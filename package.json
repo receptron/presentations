@@ -1,0 +1,21 @@
+{
+  "name": "mulmo-p",
+  "version": "1.0.0",
+  "description": "a collection of mulmocast scripts",
+  "homepage": "https://github.com/receptron/presentations#readme",
+  "bugs": {
+    "url": "https://github.com/receptron/presentations/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/receptron/presentations.git"
+  },
+  "license": "MIT",
+  "author": "receptron",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "movie": "mulmocast movie -g"
+  }
+}
