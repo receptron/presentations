@@ -1,5 +1,15 @@
 # Presentations
 
+## Getting Started
+
+初回は以下を実行してください。
+
+```sh
+yarn install
+```
+
+`mulmocast` を devDependency としてローカルにインストールします。これにより、MulmoScript の正式な型定義（`node_modules/mulmocast/lib/types/type.d.ts`）と Zod スキーマがローカルで参照できるようになり、Claude Code がスクリプトの作成時に正確なスキーマを参照し、動画生成の前に検証（validate）できるようになります。
+
 ## GOALS
 
 - MulmoClaude/MulmoTerminalを人々にとって「なかった時代が想像できないほど」重要なツールにすること。

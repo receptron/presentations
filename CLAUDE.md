@@ -1,0 +1,50 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## What this repository is
+
+A collection of MulmoCast presentation scripts (JSON) about MulmoClaude/MulmoTerminal — an AI assistant vision for recording, organizing, and presenting people's work and life. There is no application code here; the "source" is MulmoScript JSON files, and the build product is narrated presentation videos.
+
+Scripts live under `mulmoclaude/`, organized by intent: `vision/` (Why), plus planned `demos/` (What) and `tutorials/` (How).
+
+## Commands
+
+Videos are generated with the `mulmocast` CLI (installed globally, v2.7.x — not a package.json dependency):
+
+```sh
+npm run movie -- mulmoclaude/vision/<name>.json   # = mulmocast movie -g <file>
+```
+
+- `-g/--grouped` puts all generated files under `output/<basename>/` (images, per-beat audio, mp3, mp4, studio.json).
+- `-f/--force` regenerates everything; without it, unchanged beats are reused via content-hash-cached audio/image files.
+- `--estimate` prints API cost estimates without generating.
+- `-l <lang>` / `-c <lang>` select narration / caption language.
+
+`output/` is gitignored. Generation requires API keys in `.env` (OpenAI for images, Gemini for TTS, Replicate for movie/sound effects, etc.).
+
+## MulmoScript structure
+
+Each script is a single JSON file with this shape (see `mulmoclaude/vision/gui-chat-protocol.json` as the reference example):
+
+- `$mulmocast.version`, `canvasSize` (1280×720), `title`, `description`, `lang`
+- `speechParams.speakers` — one "Presenter" speaker, Gemini voice `Kore`
+- `imageParams` (provider: openai), `movieParams` / `soundEffectParams` (provider: replicate)
+- `slideParams.theme` — the shared visual identity: dark navy palette (`bg: 0A0F24`, primary `38BDF8`, accent `818CF8`), Georgia/Helvetica/Menlo fonts, glass card style, radial/linear gradient backgrounds. Keep new scripts consistent with this theme.
+- `audioParams` — padding and volume settings
+- `beats[]` — the presentation itself. Each beat has `text` (spoken narration) and `image.slide` with a `layout` such as `title`, `columns`, `grid`, `split`, `comparison`, `manifesto`, `timeline`, `table`, `bigQuote`. Scripts run ~10–12 beats.
+
+When writing a new script, copy the params blocks from an existing script and write new `title`, `description`, and `beats`.
+
+## MulmoScript type definition and validation
+
+`mulmocast` is installed as a devDependency (version matched to the global CLI). The authoritative MulmoScript definition is local:
+
+- Types: `node_modules/mulmocast/lib/types/type.d.ts` (compiled from the CLI repo's `src/types/type.ts`)
+- Zod schemas: `node_modules/mulmocast/lib/types/schema.d.ts` — exports `mulmoScriptSchema`, `mulmoBeatSchema`, etc.
+
+Consult these files (not memory or the web) for available beat fields, slide layouts, and provider options. After writing or editing a script, validate it before rendering:
+
+```sh
+node -e "const m=require('mulmocast'); const r=m.mulmoScriptSchema.safeParse(require('./mulmoclaude/vision/<name>.json')); console.log(r.success ? 'valid' : r.error.issues)"
+```
