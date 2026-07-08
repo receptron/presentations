@@ -507,6 +507,36 @@ CLAUDE.md's reference-example pointer updated to
 twelve artifacts, video rendering (`npm run movie`) per script after review,
 and the four open decisions in the header.
 
+## Standalone — The Assistant You Own
+
+**Status: DRAFTED** (2026-07-08) — `07-the-assistant-you-own.md` (~1,500 words).
+Not Part 7; a standalone companion distilling Part 6's final argument for a
+general audience — the most headline-friendly piece in the set.
+
+**The one idea**: the assistant's most important part is not the AI model but
+the accumulation (data + apps built for you); the model must be swappable, and
+the accumulation must live on hardware you own — your own PC as your personal
+cloud.
+**Spine**: Satoshi's public self-revision — he long argued the 24/7 assistant
+belongs in the cloud, not the device; right about any-device/always-on, wrong
+about never asking who owns the cloud.
+**Quotable**: "The most important part of your AI assistant is not the AI."
+**Ownership test**: could you switch models tomorrow and keep your assistant?
+Could you move it and keep its memory? If no, it's a subscription.
+**Notable moves**: names model providers (Anthropic/OpenAI) as capture risks
+alongside Meta/Google — written by someone building on Claude daily; honest
+costs (relay residue, tinkerer gap framed as an engineering problem vs.
+capture as a business model); Sloan "sovereignty" citation; ends pointing to
+the series. Future note (Satoshi, 2026-07-08): eventually the model itself
+runs on the PC too — no hurry ("慌てることはない") — woven in via Karpathy's
+1960s time-sharing analogy ("the computer became personal; now it's the
+model's turn"); the architecture needs only an endpoint change, completing
+sovereignty.
+**Companion MulmoScript**: `mulmoclaude/vision/the-assistant-you-own.json` —
+DRAFTED (2026-07-08), 13 beats, validated, no imagePrompt beats (two
+html_tailwind visuals: the 7 AM phone scene, the house/relay/personal-cloud
+topology; the last-rented-part timeline for the local-model future).
+
 ## Order of work
 
 1. `research-notes.md` — land the deep-research report here (in progress).

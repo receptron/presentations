@@ -1,0 +1,426 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini"
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "0A0F24",
+        "bgCard": "111A3A",
+        "bgCardAlt": "16224D",
+        "text": "EEF2FF",
+        "textMuted": "9FB0D8",
+        "textDim": "6F7FA0",
+        "primary": "38BDF8",
+        "accent": "818CF8",
+        "success": "34D399",
+        "warning": "FBBF24",
+        "danger": "FB7185",
+        "info": "22D3EE",
+        "highlight": "F0ABFC"
+      },
+      "fonts": {
+        "title": "Georgia",
+        "body": "Helvetica",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
+      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.2,
+    "audioVolume": 1,
+    "suppressSpeech": false
+  },
+  "title": "The Assistant You Own",
+  "description": "Standalone companion to the essay of the same name — where should your 24/7 AI assistant live, and who owns the place? The most important part of your AI assistant is not the AI. From the 'Beyond the Sea of App Icons' series.",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "The assistant you own. Every company now promises an AI assistant that is with you twenty four hours a day. This is a standalone essay from my series on AI-native computing — about the one question nobody puts on the slide.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "A standalone essay · Beyond the Sea of App Icons"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "The Assistant **You Own**",
+          "subtitle": "Where should your AI assistant live — and {primary:who owns the place?}",
+          "author": "Satoshi Nakajima",
+          "chips": [
+            "🏠 your PC as your personal cloud",
+            "🔄 the model is the swappable part"
+          ]
+        }
+      }
+    },
+    {
+      "text": "Seven in the morning. My assistant has been working all night. The podcast feeds came in at three. A bill reminder is waiting. The flashcards are updated. And from the train, I ask it about my restaurant list. Not some assistant — mine. The one that has been accumulating my life for a year.",
+      "image": {
+        "type": "html_tailwind",
+        "html": "<div class=\"w-[1280px] h-[720px] overflow-hidden flex items-center justify-center gap-16 px-16\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg,#0A0F24,#111A3A 55%,#16224D); color:#EEF2FF; font-family:Helvetica,Arial,sans-serif\"><div class=\"w-[420px]\"><div class=\"text-[#38BDF8] text-lg font-semibold uppercase mb-3\" style=\"letter-spacing:.18em\">7:04 AM · on the train</div><div class=\"text-5xl leading-tight mb-5\" style=\"font-family:Georgia,serif\">It worked <span class=\"text-[#FBBF24]\">all night.</span></div><div class=\"text-xl text-[#9FB0D8] leading-relaxed\">Your assistant — at home, always on. Your phone is just a window into it.</div></div><div class=\"w-[400px] bg-white/5 border border-white/10 rounded-3xl p-5 flex flex-col gap-3\"><div class=\"flex justify-between text-sm text-[#9FB0D8] px-1\"><div>7:04</div><div>📶 🔋</div></div><div class=\"bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3\"><div class=\"text-2xl\">🎙</div><div><div class=\"text-[15px] font-semibold\">3 new episodes ingested</div><div class=\"text-[13px] text-[#9FB0D8]\">3:12 AM · while you slept</div></div></div><div class=\"bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3\"><div class=\"text-2xl\">🔔</div><div><div class=\"text-[15px] font-semibold\">Rent recurs on the 10th</div><div class=\"text-[13px] text-[#9FB0D8]\">reminder raised · 6:00 AM</div></div></div><div class=\"bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3\"><div class=\"text-2xl\">🎴</div><div><div class=\"text-[15px] font-semibold\">Flashcards updated</div><div class=\"text-[13px] text-[#9FB0D8]\">12 new cards ready</div></div></div><div class=\"mt-2 self-end max-w-[85%] bg-[#38BDF8]/15 border border-[#38BDF8]/30 rounded-2xl rounded-br-sm px-4 py-2 text-[15px]\">What was that ramen place on the Chuo line?</div><div class=\"self-start max-w-[85%] bg-white/5 border border-white/10 rounded-2xl rounded-bl-sm px-4 py-2 text-[15px]\">Ramen Kaze — Nakano. You rated it ★★★★ in March.</div></div></div>"
+      }
+    },
+    {
+      "text": "The promise is real. But here is the housing question. Where does this assistant live — and who owns the place where it lives?",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "The question nobody puts on the slide"
+          },
+          "quote": "Where does your assistant {primary:live} — and {warning:who owns the place} where it lives?",
+          "author": "The housing question",
+          "role": "Every 24/7-assistant pitch skips it"
+        }
+      }
+    },
+    {
+      "text": "For years, I argued in public that the assistant should live in the cloud, not in a device. I was half right. Any device, always on — that part was correct. My mistake: I said 'the cloud' like people say 'the grid' — as if it were neutral. It isn't. I never asked who owns it.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "I was half right",
+            "color": "highlight"
+          },
+          "title": "My own argument, revised",
+          "left": {
+            "title": "What I got right",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "Not trapped in one device",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "Reachable from anywhere",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "Always on — works while you sleep",
+                    "icon": "ok"
+                  }
+                ]
+              }
+            ],
+            "footer": "These are what make an assistant an assistant"
+          },
+          "right": {
+            "title": "What I never asked",
+            "accentColor": "warning",
+            "content": [
+              {
+                "type": "text",
+                "value": "“The cloud” is not neutral infrastructure. It is **a specific company's computers.**",
+                "bold": true
+              },
+              {
+                "type": "callout",
+                "text": "If your assistant's self lives on their computers — they own your assistant.",
+                "style": "warning"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "text": "We know what renting software feels like. The redesign you didn't ask for. The pivot. The price change. The beloved service, discontinued. Robin Sloan named what renting can never give you: sovereignty — it won't change unless you want it to. Now raise the stakes. A discontinued assistant doesn't lose you photos. It loses the accumulated self of the thing that organizes your life.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "eyebrow": {
+            "label": "What renting means",
+            "color": "danger"
+          },
+          "title": "You already know this feeling",
+          "gridColumns": 4,
+          "items": [
+            {
+              "title": "The redesign",
+              "description": "you didn't ask for",
+              "icon": "🎨",
+              "accentColor": "warning"
+            },
+            {
+              "title": "The pivot",
+              "description": "your feature, gone",
+              "icon": "🔀",
+              "accentColor": "warning"
+            },
+            {
+              "title": "The price change",
+              "description": "their strategy, your bill",
+              "icon": "💸",
+              "accentColor": "warning"
+            },
+            {
+              "title": "The shutdown",
+              "description": "on their schedule",
+              "icon": "🪦",
+              "accentColor": "danger"
+            }
+          ],
+          "footer": "Sloan's word for what renting never gives you: sovereignty — “it won't change unless we want it to.”"
+        }
+      }
+    },
+    {
+      "text": "And here is the harder half. It's easy to nod when the warning names Meta or Google. But an assistant whose self lives with Anthropic or Open A I is rented all the same. I build on Anthropic's models every single day, and I expect to for years. The model vendor deserves my A P I calls. It should not own my assistant.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "accentColor": "accent",
+          "eyebrow": {
+            "label": "The harder half — model providers too"
+          },
+          "quote": "The model vendor deserves my API calls. It should {danger:not own my assistant.}",
+          "author": "— said while building on Anthropic's models, daily",
+          "role": "Meta · Google · Anthropic · OpenAI — capture is capture"
+        }
+      }
+    },
+    {
+      "text": "Strip an assistant down to its parts. The model is brilliant — and a commodity in the making. Several excellent ones, leapfrogging each other every few months. You should want to swap them freely, like engines. The accumulation is the opposite. Your data. Its memory. The apps built for exactly you. Worthless to everyone else — and irreplaceable to you.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "Strip it down"
+          },
+          "title": "The two parts of an assistant",
+          "left": {
+            "title": "The model",
+            "accentColor": "info",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "Brilliant — and a commodity in the making",
+                  "New leaders every few months",
+                  "**Swap it like an engine**"
+                ]
+              }
+            ],
+            "footer": "The part they own — and market"
+          },
+          "right": {
+            "title": "The accumulation",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "Your data, its memory of you",
+                  "The apps grown for exactly you",
+                  "**Worthless to others, irreplaceable to you**"
+                ]
+              }
+            ],
+            "footer": "The part you should own"
+          },
+          "callout": {
+            "text": "A year of accumulation cannot be re-bought at any price. It can only be {warning:re-lived.}",
+            "label": "The stakes",
+            "color": "warning",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "The most important part of your AI assistant is not the AI.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "The one line to remember"
+          },
+          "quote": "The most important part of your AI assistant is {primary:not the AI.}",
+          "author": "The Assistant You Own",
+          "role": "It's the accumulation — and the model should be the interchangeable part"
+        }
+      }
+    },
+    {
+      "text": "So here is the ownership test. Two questions. Could you switch models tomorrow — and keep your assistant? Could you move your assistant — and keep its memory? If either answer is no, you don't own an assistant. You have a subscription to one.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "manifesto",
+          "eyebrow": {
+            "label": "The ownership test",
+            "color": "primary"
+          },
+          "title": "Two questions",
+          "items": [
+            {
+              "title": "1 · Switch models tomorrow — keep your assistant?",
+              "description": "Every memory, every app, a new engine.",
+              "accentColor": "primary"
+            },
+            {
+              "title": "2 · Move your assistant — keep its memory?",
+              "description": "The whole self, on a disk you can carry.",
+              "accentColor": "accent"
+            }
+          ],
+          "columns": 2,
+          "footer": "If either answer is no — you don't own an assistant. You have a subscription to one."
+        }
+      }
+    },
+    {
+      "text": "So the device is wrong, and the provider's cloud is wrong. What's left sounds almost quaint: your own computer. Always on, at home. Its whole self is files on a disk you own. Your phone becomes a thin window — and it never touches the PC directly. Both sides talk through a relay, and the house only dials out. No open port. Nothing to scan. Your own PC becomes your personal cloud.",
+      "image": {
+        "type": "html_tailwind",
+        "html": "<div class=\"w-[1280px] h-[720px] overflow-hidden flex flex-col px-16 py-12\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg,#0A0F24,#111A3A 55%,#16224D); color:#EEF2FF; font-family:Helvetica,Arial,sans-serif\"><div class=\"text-[#38BDF8] text-lg font-semibold uppercase\" style=\"letter-spacing:.18em\">The third place</div><div class=\"flex-1 flex items-center justify-between gap-8 mt-2\"><div class=\"w-[420px] bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col items-center gap-4\"><div class=\"text-7xl\">🏠</div><div class=\"rounded-2xl px-5 py-4 bg-[#FBBF24]/10 border border-[#FBBF24]/40 flex items-center gap-3\"><div class=\"text-4xl\">🖥️</div><div><div class=\"text-lg font-semibold\">the agent · always on</div><div class=\"text-sm text-[#9FB0D8]\">its whole self: files on your disk</div></div></div><div class=\"text-sm text-[#9FB0D8]\">memory · records · the apps it built</div></div><div class=\"flex flex-col items-center gap-3\"><div class=\"text-xs text-[#9FB0D8]\">the house only dials out ⟶</div><div class=\"border-t-2 border-dashed border-[#38BDF8]/50 w-[130px]\"></div><div class=\"rounded-full px-5 py-2 bg-[#38BDF8]/10 border border-[#38BDF8]/40 text-[#38BDF8] text-sm font-semibold whitespace-nowrap\">relay · per-user queue</div><div class=\"border-t-2 border-dashed border-[#38BDF8]/50 w-[130px]\"></div><div class=\"text-xs text-[#9FB0D8]\">no open port · nothing to scan</div></div><div class=\"flex flex-col gap-5\"><div class=\"w-[260px] bg-white/5 border border-white/10 rounded-2xl px-6 py-5 flex items-center gap-4\"><div class=\"text-4xl\">📱</div><div><div class=\"text-lg font-semibold\">your phone</div><div class=\"text-sm text-[#9FB0D8]\">a thin window</div></div></div><div class=\"w-[260px] bg-white/5 border border-white/10 rounded-2xl px-6 py-5 flex items-center gap-4\"><div class=\"text-4xl\">💻</div><div><div class=\"text-lg font-semibold\">your laptop</div><div class=\"text-sm text-[#9FB0D8]\">another window</div></div></div></div></div><div class=\"text-center text-2xl mt-2\" style=\"font-family:Georgia,serif\">Your own PC becomes <span class=\"text-[#38BDF8] font-semibold\">your personal cloud.</span></div></div>"
+      }
+    },
+    {
+      "text": "The honest costs. Your requests still travel through a relay — the self stays home, but the errands travel. And today, self-hosting is for tinkerers: someone has to keep the disk backed up. But notice the difference. That is an engineering problem. Capture is a business model. Only one of these can be fixed.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "manifesto",
+          "eyebrow": {
+            "label": "The honest costs",
+            "color": "danger"
+          },
+          "title": "What I will not wave away",
+          "items": [
+            {
+              "title": "The errands travel",
+              "description": "Requests transit a relay on someone's cloud. The self stays home; the errands don't.",
+              "accentColor": "warning"
+            },
+            {
+              "title": "Today: tinkerers only",
+              "description": "Updates, backups, uptime — someone has to care. Closing this gap is real product work.",
+              "accentColor": "danger"
+            },
+            {
+              "title": "But note the difference",
+              "description": "These are engineering problems. Capture is a business model — it can't be patched away.",
+              "accentColor": "success"
+            }
+          ],
+          "columns": 3
+        }
+      }
+    },
+    {
+      "text": "One more piece comes home, eventually. In the nineteen-sixties, computers were so expensive that everyone time-shared a distant mainframe. That era ended when the computer became personal. Today's models are in their time-sharing era. No hurry — when the day comes, nothing changes but an endpoint, pointing home instead of out. And the sovereignty is complete.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "timeline",
+          "eyebrow": {
+            "label": "The last rented part",
+            "color": "highlight"
+          },
+          "title": "The computer came home. The model will too.",
+          "items": [
+            {
+              "date": "1960s",
+              "title": "Time-shared mainframes",
+              "description": "Compute too expensive to own — everyone rents a slice",
+              "color": "info",
+              "done": true
+            },
+            {
+              "date": "1980s",
+              "title": "The computer becomes personal",
+              "description": "The era ends in the most literal way possible",
+              "color": "success",
+              "done": true
+            },
+            {
+              "date": "Today",
+              "title": "Models are time-shared",
+              "description": "The engine is rented — contentedly, for now",
+              "color": "primary",
+              "done": true
+            },
+            {
+              "date": "Next",
+              "title": "The model comes home",
+              "description": "Nothing changes but an endpoint — sovereignty complete",
+              "color": "highlight",
+              "hot": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "text": "The full essay goes deeper, and the six-part series behind it explains the architecture that makes an assistant ownable at all. The short version is this. The model is the engine — and engines are for swapping. Make sure the part that accumulates, the part that becomes a second self over the years, accumulates on a disk that belongs to you.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Read the full essay"
+          },
+          "titleSize": "large",
+          "title": "The Assistant **You Own**",
+          "subtitle": "The architecture behind it: {primary:Beyond the Sea of App Icons}, Parts 1–6",
+          "chips": [
+            "1 · Sea of app icons",
+            "2 · Chat needs a canvas",
+            "3 · DSLs as harnesses",
+            "4 · Apps become data",
+            "5 · Software for one",
+            "6 · The workspace is the agent"
+          ]
+        }
+      }
+    }
+  ]
+}
