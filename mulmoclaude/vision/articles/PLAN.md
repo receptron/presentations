@@ -175,8 +175,12 @@ blocks) and fix these specific faults:
   clauses, no essay diction read aloud. Read it out loud before validating.
 - **Series identity in every script**: the two pillars named, "part N of the
   series" positioning, closing beat that points to the full essay.
-- **Vary the visuals**: mix in generated images (`imageParams` is already
-  wired) between slide layouts to give the deck air.
+- **Vary the visuals — but NEVER with AI-generated images** (Satoshi's rule,
+  2026-07-08: no `imagePrompt` beats). Author scene/visual beats as structured
+  content instead: `html_tailwind` UI mocks and diagrams (using the shared navy
+  theme palette), `markdown`, `mermaid`, or `chart` beats. Deterministic,
+  diffable, no per-render API cost — consistent with the series' own
+  DSL-as-harness argument.
 
 ## Positioning research (done)
 
