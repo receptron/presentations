@@ -1,0 +1,525 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini"
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "0A0F24",
+        "bgCard": "111A3A",
+        "bgCardAlt": "16224D",
+        "text": "EEF2FF",
+        "textMuted": "9FB0D8",
+        "textDim": "6F7FA0",
+        "primary": "38BDF8",
+        "accent": "818CF8",
+        "success": "34D399",
+        "warning": "FBBF24",
+        "danger": "FB7185",
+        "info": "22D3EE",
+        "highlight": "F0ABFC"
+      },
+      "fonts": {
+        "title": "Georgia",
+        "body": "Helvetica",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
+      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.2,
+    "audioVolume": 1,
+    "suppressSpeech": false
+  },
+  "title": "The Workspace Is the Agent",
+  "description": "Part 6 of a 6-part series on AI-native computing — the conclusion. When the agent authors applications into its own substrate, the app/agent boundary dissolves: the workspace is the agent, and building software is how the agent grows. Companion video to the essay of the same name.",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "The workspace is the agent. This is part six of six — the conclusion of the series. It ends on a strange claim: your assistant is a folder of files. Let me show you why that is not a metaphor.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Part 6 of 6 · The conclusion · Beyond the Sea of App Icons"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "The **Workspace** Is the **Agent**",
+          "subtitle": "Your assistant is a {primary:folder of files} — and that changes {accent:who owns it}",
+          "author": "Satoshi Nakajima",
+          "chips": [
+            "🗣️ the computer that understands",
+            "🛠️ the computer that builds",
+            "📁 the agent that keeps what it builds"
+          ]
+        }
+      }
+    },
+    {
+      "text": "Look inside one directory on my computer. Role definitions — who the agent is when it speaks. Collection schemas — one per application. Skills it reads to operate them. Scheduled automations. Feeds. Memory. A wiki it writes and links itself. Everything my agent is fits in this one folder.",
+      "imagePrompt": "Editorial illustration on a deep navy blue background with glowing cyan and violet accents. A large open directory rendered as a luminous floating file tree, its folders and documents — role files, schemas, skill notes, small linked wiki pages — arranged so that together they form the unmistakable silhouette of a calm humanoid assistant, as if the files themselves are the being. Soft light emanating from within each file, thin connecting lines like constellations, painterly, elegant, cinematic composition, no text, no logos."
+    },
+    {
+      "text": "Now the turn. Only some of those files are data. The rest is program. The roles are its identity. The schemas are its capabilities. The skills are its behavior. The model is just the runtime that reads them. Strip away the running process, and the agent does not disappear. It sits there, complete, on disk.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "The turn"
+          },
+          "title": "Some of it is data. The rest is **program.**",
+          "left": {
+            "title": "Data",
+            "accentColor": "info",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "Memory — accreted facts",
+                  "Artifacts — documents, images",
+                  "The records themselves"
+                ]
+              }
+            ],
+            "footer": "What the agent knows"
+          },
+          "right": {
+            "title": "Program",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "Roles — its identity",
+                  "Schemas & skills — its capabilities",
+                  "Automations — when it acts"
+                ]
+              }
+            ],
+            "footer": "What the agent is"
+          },
+          "callout": {
+            "text": "Strip away the running process — the agent is {primary:still there, on disk.}",
+            "label": "The claim",
+            "color": "primary",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "So the sharper claim of this whole series: the workspace is the agent. And building software is how the agent grows.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "The one line to remember"
+          },
+          "quote": "The workspace {primary:is} the agent — and building software is how the agent {accent:grows.}",
+          "author": "The Workspace Is the Agent",
+          "role": "Part 6 of 6 · the conclusion"
+        }
+      }
+    },
+    {
+      "text": "How does it grow? Watch one need climb a ladder. It starts as conversation — gone tomorrow. Then a memory file — kept, but loose. Then a collection — structured, queryable. Then a collection skill: workflows, a user interface, a stable contract. That top rung is an application. In the full, traditional sense.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "columns",
+          "eyebrow": {
+            "label": "The maturity ladder"
+          },
+          "title": "From a chat to an application",
+          "columns": [
+            {
+              "title": "Conversation",
+              "accentColor": "accent",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "Ephemeral — **gone tomorrow.**"
+                }
+              ],
+              "num": 1
+            },
+            {
+              "title": "Memory",
+              "accentColor": "info",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "Kept, but **loose.**"
+                }
+              ],
+              "num": 2
+            },
+            {
+              "title": "Collection",
+              "accentColor": "primary",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "Structured. **Queryable.**"
+                }
+              ],
+              "num": 3
+            },
+            {
+              "title": "Application",
+              "accentColor": "success",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "Workflows + UI + **a stable contract.**"
+                }
+              ],
+              "num": 4
+            }
+          ],
+          "showArrows": true,
+          "callout": {
+            "text": "A collection skill {success:is an application} — records, UI, computation, workflow.",
+            "label": "The top rung",
+            "color": "success",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "And here the boundary dissolves. That application was never shipped across a deployment gap. The agent wrote it into its own substrate. The restaurant guide is now one of the agent's own capabilities — same in kind as its roles and skills. So when the agent refines an app it built, it is modifying its own code. Improving the app is self-improvement.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "accentColor": "accent",
+          "eyebrow": {
+            "label": "The boundary dissolves"
+          },
+          "left": {
+            "title": "The old shape",
+            "accentColor": "warning",
+            "content": [
+              {
+                "type": "text",
+                "value": "Developers **build**. A release **ships**. Users **operate**. The app lives apart from you."
+              }
+            ],
+            "ratio": 50
+          },
+          "right": {
+            "title": "The new shape",
+            "accentColor": "accent",
+            "content": [
+              {
+                "type": "text",
+                "value": "The agent writes the app **into itself** — no build, no release.",
+                "bold": true
+              },
+              {
+                "type": "callout",
+                "text": "Improving an app it built is modifying its own code — self-improvement.",
+                "style": "info"
+              }
+            ],
+            "ratio": 50
+          }
+        }
+      }
+    },
+    {
+      "text": "Self-improvement runs as a loop. Recognize — a need keeps coming back. Crystallize — turn it into a small, durable app. Tune — adjust what is pinned down and what stays flexible. And retire — when an app is superseded, delete it. That last step matters most. It keeps the agent's self coherent, not just larger.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "eyebrow": {
+            "label": "The self-improvement loop"
+          },
+          "title": "Four steps — the fourth is the one people forget",
+          "gridColumns": 4,
+          "items": [
+            {
+              "title": "Recognize",
+              "description": "a need keeps coming back",
+              "accentColor": "info",
+              "icon": "👀"
+            },
+            {
+              "title": "Crystallize",
+              "description": "make it a small, durable app",
+              "accentColor": "primary",
+              "icon": "💎"
+            },
+            {
+              "title": "Tune",
+              "description": "adjust the reliability dial",
+              "accentColor": "accent",
+              "icon": "🎚️"
+            },
+            {
+              "title": "Retire",
+              "description": "delete what's superseded",
+              "accentColor": "danger",
+              "icon": "🗑️"
+            }
+          ],
+          "footer": "Retiring keeps the self coherent — not just larger."
+        }
+      }
+    },
+    {
+      "text": "Why isn't this just flaky chat with extra steps? Because of the reliability dial. Whatever must not drift goes into the schema — validation, computation, storage. Identical every time. Whatever needs judgment goes to the model. Pin too much, and you rebuild the old no-code cage. Pin too little, and it is a bare prompt — flaky. The craft is where you set the dial.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "accentColor": "primary",
+          "eyebrow": {
+            "label": "The reliability dial"
+          },
+          "left": {
+            "title": "Pinned in the schema",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "text",
+                "value": "What must **not drift**: validation, computation, storage — identical every time.",
+                "bold": true
+              },
+              {
+                "type": "callout",
+                "text": "Over-pinned → a cage. The old no-code rigidity.",
+                "style": "warning"
+              }
+            ],
+            "ratio": 50
+          },
+          "right": {
+            "title": "Left to the model",
+            "accentColor": "accent",
+            "content": [
+              {
+                "type": "text",
+                "value": "What needs **judgment**: meaning, language, when to ask a human.",
+                "bold": true
+              },
+              {
+                "type": "callout",
+                "text": "Under-pinned → flaky. A bare prompt, no contract.",
+                "style": "warning"
+              }
+            ],
+            "ratio": 50
+          }
+        }
+      }
+    },
+    {
+      "text": "Now the part I care about most. Because the agent is files, it can live anywhere — so put it in your house. An always-on PC runs it twenty-four hours a day. Schedules fire and feeds ingest while you sleep. Your phone and laptop become thin windows into the agent at home. The big cloud assistants keep the memory, the learning, the personality on their servers — you don't own that assistant, you rent it. This one is yours. The cloud may supply the model. The assistant never leaves your house.",
+      "imagePrompt": "Editorial illustration on a deep navy blue night background with glowing cyan and violet accents. A small cozy house at night under a starry sky, one warm amber window glowing where a desktop computer quietly works on its own, soft radiating light suggesting activity while the household sleeps. In the foreground far from the house, a person holds a phone and a laptop rests beside them, each connected to the house only by a single thin faint thread of cyan light arcing across the dark sky. Warm amber against cool navy, painterly, cinematic, gently whimsical, no text, no logos."
+    },
+    {
+      "text": "But remote access sounds like a hole in the wall. It isn't — because the phone never connects to the PC at all. Both sides talk through a relay. The phone writes a command into a queue only you can reach. The home machine dials out, claims it, does the work, and writes the answer back. Outbound connections only. No open port. Nothing to scan. And the queue is durable — ask while the PC sleeps, and it answers the moment it wakes.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "columns",
+          "eyebrow": {
+            "label": "The remote-access answer"
+          },
+          "title": "The phone never touches the PC",
+          "columns": [
+            {
+              "title": "Phone",
+              "accentColor": "info",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "Writes a command into **your queue.**"
+                }
+              ],
+              "num": 1
+            },
+            {
+              "title": "Relay queue",
+              "accentColor": "primary",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "Per-user. **Durable** — it holds while the PC sleeps."
+                }
+              ],
+              "num": 2
+            },
+            {
+              "title": "Home PC",
+              "accentColor": "success",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "**Dials out**, claims it, answers back."
+                }
+              ],
+              "num": 3
+            }
+          ],
+          "showArrows": true,
+          "callout": {
+            "text": "Outbound only. {success:No open port. Nothing to scan.}",
+            "label": "The security model",
+            "color": "success",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "Now the honest costs. Self-improvement without self-pruning is a junk drawer — half-built apps and stale automations pile up unless something deletes them. Self-hosting is an ops burden — someone must apply the updates and keep the disk from filling. And a home PC is not a datacenter. Uptime, backups, power failures — those become your problem.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "manifesto",
+          "eyebrow": {
+            "label": "The part I cannot wave away",
+            "color": "danger"
+          },
+          "title": "Three honest costs",
+          "items": [
+            {
+              "title": "The junk drawer",
+              "description": "Self-improvement without self-pruning just accretes — stale apps, dead skills, conflicting instructions.",
+              "accentColor": "warning"
+            },
+            {
+              "title": "The ops burden",
+              "description": "Self-hosting means someone applies updates and keeps the disk from filling. Probably you.",
+              "accentColor": "danger"
+            },
+            {
+              "title": "Home PC ≠ datacenter",
+              "description": "Uptime, backups, and power failures become your problem, not a vendor's.",
+              "accentColor": "danger"
+            }
+          ],
+          "columns": 3,
+          "footer": "The full essay argues each one properly — and answers what can be answered."
+        }
+      }
+    },
+    {
+      "text": "Here is what you get in exchange. The expertise lives in files, not in weights. Swap the model for next year's better one, and the veteran stays — every schema, every skill, every note, untouched. Want a second agent? Copy the folder. Want its history? It's in git. That is a kind of ownership no cloud assistant can offer.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "accentColor": "success",
+          "eyebrow": {
+            "label": "Ownership"
+          },
+          "left": {
+            "title": "Swap the model, keep the veteran",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "text",
+                "value": "The expertise lives in **files, not weights.** Replace the model — the accumulated knowledge is untouched.",
+                "bold": true
+              }
+            ],
+            "ratio": 50
+          },
+          "right": {
+            "title": "An agent you can hold",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "Fork it: copy the folder",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "Version it: git",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "Read it: every file, greppable",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "Carry it: to any model, any machine",
+                    "icon": "ok"
+                  }
+                ]
+              }
+            ],
+            "ratio": 50
+          }
+        }
+      }
+    },
+    {
+      "text": "This series opened with two pillars. The computer that understands — you speak, and it knows what you mean. The computer that builds — it writes the software your intent requires. But two pillars alone make a brilliant contractor: it understands the commission, builds the house, and the engagement ends. The final step is the one neither pillar implies. The agent keeps what it builds — as itself. That's the series. Six essays. This was the short version of the last one. Read them all.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "The series, complete · Read the full essays"
+          },
+          "titleSize": "large",
+          "title": "Understands. Builds. **Keeps what it builds — as itself.**",
+          "subtitle": "{primary:Part 6: The Workspace Is the Agent} — the conclusion of Beyond the Sea of App Icons",
+          "chips": [
+            "1 · Beyond the Sea of App Icons",
+            "2 · Chat Needs a Canvas",
+            "3 · DSLs as Harnesses",
+            "4 · Applications Become Data",
+            "5 · Software for an Audience of One"
+          ]
+        }
+      }
+    }
+  ]
+}

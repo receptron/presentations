@@ -27,7 +27,7 @@ npm run movie -- mulmoclaude/vision/<name>.json   # = mulmo movie -g <file>
 
 ## MulmoScript structure
 
-Each script is a single JSON file with this shape (see `mulmoclaude/vision/gui-chat-protocol.json` as the reference example):
+Each script is a single JSON file with this shape (see `mulmoclaude/vision/beyond-the-sea-of-app-icons.json` as the reference example):
 
 - `$mulmocast.version`, `canvasSize` (1280×720), `title`, `description`, `lang`
 - `speechParams.speakers` — one "Presenter" speaker, Gemini voice `Kore`

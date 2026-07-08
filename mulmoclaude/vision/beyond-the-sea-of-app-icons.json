@@ -1,0 +1,489 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini"
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "0A0F24",
+        "bgCard": "111A3A",
+        "bgCardAlt": "16224D",
+        "text": "EEF2FF",
+        "textMuted": "9FB0D8",
+        "textDim": "6F7FA0",
+        "primary": "38BDF8",
+        "accent": "818CF8",
+        "success": "34D399",
+        "warning": "FBBF24",
+        "danger": "FB7185",
+        "info": "22D3EE",
+        "highlight": "F0ABFC"
+      },
+      "fonts": {
+        "title": "Georgia",
+        "body": "Helvetica",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
+      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.2,
+    "audioVolume": 1,
+    "suppressSpeech": false
+  },
+  "title": "Beyond the Sea of App Icons",
+  "description": "Part 1 of a 6-part series on AI-native computing. Apps solved capability, never intent. When the computer both understands what you mean and builds what you need, the app dies twice. Companion video to the essay of the same name.",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "Beyond the sea of app icons. This is part one of a six part series about where computing goes next — when the computer finally understands what you mean, and can build what you need.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Part 1 of 6 · Beyond the Sea of App Icons"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "Beyond the **Sea of App Icons**",
+          "subtitle": "What happens when the computer {primary:understands} — and {accent:builds}",
+          "author": "Satoshi Nakajima",
+          "chips": [
+            "🗣️ the computer that understands",
+            "🛠️ the computer that builds"
+          ]
+        }
+      }
+    },
+    {
+      "text": "Maria makes soap. This morning she wants to tell her customers about a new lavender bar. That takes six apps. A notes app for the caption. A photo editor for the picture. Then Instagram, Facebook, and X — each with its own quirks, its own limits, its own little dialect. Twenty minutes, gone.",
+      "imagePrompt": "Editorial illustration, warm and human against a deep navy blue background. A woman in her forties at a wooden workbench in a small soap-making studio, bars of lavender soap neatly stacked beside her, holding a smartphone whose screen glows with a cluttered grid of dozens of tiny colorful app icons. Her expression is patient but weary. Soft morning light from a window. Painterly, muted palette with lavender and warm amber accents, cinematic composition, no text."
+    },
+    {
+      "text": "Here is the maddening part. Every step was easy. Nothing crashed. Nothing was confusing. The twenty minutes disappeared into the seams between the programs. What she wanted was one sentence: announce the lavender soap, everywhere we post. There is no icon on her phone that accepts that sentence.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "The problem"
+          },
+          "quote": "“Announce the lavender soap, everywhere we post.”",
+          "author": "One sentence. Six apps. Twenty minutes.",
+          "role": "There is no icon that accepts that sentence."
+        }
+      }
+    },
+    {
+      "text": "Why not? Because an app is a bundle. An interface, some logic, and a slice of your data — sealed together by a vendor and shipped as a unit. Capability lives inside the bundle. But what you actually want almost always crosses bundles. So the integration — the real work — becomes your unpaid job.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "Apps solved capability, never intent"
+          },
+          "title": "The bundle vs. your intent",
+          "left": {
+            "title": "An app is a bundle",
+            "accentColor": "warning",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "An interface",
+                  "Some logic",
+                  "A slice of your data"
+                ]
+              }
+            ],
+            "footer": "Sealed by a vendor, shipped as a unit"
+          },
+          "right": {
+            "title": "Intent crosses bundles",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "“Announce the soap” → 5 apps",
+                  "“Plan the trip” → 4 apps",
+                  "You carry everything across the seams"
+                ]
+              }
+            ],
+            "footer": "Integration is your unpaid job"
+          }
+        }
+      }
+    },
+    {
+      "text": "And the bundles keep growing. Software raises its price by doing more — every new tier needs a feature to justify it. Look at just one feature: graphing. Your spreadsheet has charts. So does your project tracker. Your notes app. Your accounting package. Your CRM calls them analytics. You own half a dozen charting engines. And you pay for every single one.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "eyebrow": {
+            "label": "The feature ratchet",
+            "color": "warning"
+          },
+          "title": "How many charting engines do you own?",
+          "gridColumns": 3,
+          "items": [
+            {
+              "title": "Spreadsheet",
+              "description": "charts, of course",
+              "icon": "📊"
+            },
+            {
+              "title": "Project tracker",
+              "description": "“dashboards”",
+              "icon": "📈"
+            },
+            {
+              "title": "CRM",
+              "description": "“analytics”",
+              "icon": "📉"
+            },
+            {
+              "title": "Notes app",
+              "description": "charts now, too",
+              "icon": "📝"
+            },
+            {
+              "title": "Accounting",
+              "description": "report charts",
+              "icon": "🧾"
+            },
+            {
+              "title": "Survey tool",
+              "description": "result charts",
+              "icon": "🗳️"
+            }
+          ],
+          "footer": "Each one implemented separately. Each one priced separately. Each app more complex for it."
+        }
+      }
+    },
+    {
+      "text": "Now flip it. No Mac app ships its own scroll bar — the operating system provides it, once, for everyone. In the same way, graphing can live at the AI layer, shared by every application. Ask about your revenue, and the AI reads the ledger and draws the chart. Each application shrinks to what is truly its own: its data, its rules, a simple view. Simple. Slim. And cheaper.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "accentColor": "success",
+          "eyebrow": {
+            "label": "The inversion"
+          },
+          "left": {
+            "title": "Capability moves up",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "text",
+                "value": "**One graphing capability**, at the AI layer, shared by every application.",
+                "bold": true
+              },
+              {
+                "type": "callout",
+                "text": "No Mac app ships its own scroll bar. The OS provides it.",
+                "style": "info"
+              }
+            ],
+            "ratio": 50
+          },
+          "right": {
+            "title": "Each app slims down",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "The shape of its data",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "Its rules",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "A plain view of its records",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "Bespoke UI? Generated on request",
+                    "icon": "ok"
+                  }
+                ]
+              }
+            ],
+            "ratio": 50
+          }
+        }
+      }
+    },
+    {
+      "text": "Step back for a moment. The whole history of computing is a negotiation over who does the translating. The command line made us learn the machine's grammar. Graphical interfaces let us point instead of memorize. Then, in 2022, the direction flipped. The computer started speaking our language.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "columns",
+          "eyebrow": {
+            "label": "Fifty years of moving the translation"
+          },
+          "title": "Who does the translating?",
+          "columns": [
+            {
+              "title": "Command line",
+              "accentColor": "accent",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "**You** learn the machine's grammar."
+                },
+                {
+                  "type": "text",
+                  "value": "`cd`, `ls`, flags, pipes",
+                  "dim": true
+                }
+              ],
+              "num": 1
+            },
+            {
+              "title": "GUI",
+              "accentColor": "info",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "The machine shows; **you point.**"
+                },
+                {
+                  "type": "text",
+                  "value": "Recognize instead of recall",
+                  "dim": true
+                }
+              ],
+              "num": 2
+            },
+            {
+              "title": "Chat · 2022",
+              "accentColor": "primary",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "**The computer speaks your language.**"
+                },
+                {
+                  "type": "text",
+                  "value": "Queries became conversations",
+                  "dim": true
+                }
+              ],
+              "num": 3
+            }
+          ],
+          "showArrows": true,
+          "callout": {
+            "text": "But chat alone is a scroll — superb for questions, {warning:awkward for work.}",
+            "label": "The catch",
+            "color": "warning",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "That's because the future rests on two pillars, not one. The computer that understands: you speak, and it figures out what your intent requires. And the computer that builds: it generates the document, the table, even the interface and the logic — for you, on the spot. Understanding alone is a concierge in front of fixed apps. Building alone is a power tool for programmers. The revolution is the fusion.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "The two pillars",
+            "color": "highlight"
+          },
+          "title": "Understands **and** builds",
+          "left": {
+            "title": "The computer that understands",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "text",
+                "value": "You express **intent**; it finds the capabilities.",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "value": "Alone: a concierge in front of fixed apps — Siri's limit.",
+                "size": "sub",
+                "dim": true
+              }
+            ]
+          },
+          "right": {
+            "title": "The computer that builds",
+            "accentColor": "accent",
+            "content": [
+              {
+                "type": "text",
+                "value": "It **generates** the artifact — fitted to you, in the moment.",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "value": "Alone: a power tool for people who read code.",
+                "size": "sub",
+                "dim": true
+              }
+            ]
+          },
+          "callout": {
+            "text": "The revolution is the fusion: {highlight:**software materializes from intent.**}",
+            "label": "The thesis",
+            "color": "highlight",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "Watch the fusion work. You say: I need to explain our Q4 results to the board. A table appears. You speak the numbers — a chart forms beside them. Compare to Q3 — it becomes a trend. Now draft the summary — an outline opens, already pulling from the table. Turn this into a short video — and minutes later, you're watching it. You never opened a spreadsheet, a word processor, or a video editor.",
+      "imagePrompt": "Editorial illustration on a deep navy blue background with glowing cyan and violet accents. A person seen from behind, speaking at a large luminous workspace in the air, where artifacts are materializing out of conversation: a data table, a rising line chart, a structured document outline, and a small video player, connected by soft streams of light suggesting they grew from spoken words. Elegant, futuristic but warm, painterly, cinematic lighting, no text, no logos."
+    },
+    {
+      "text": "The app dies twice. You stop choosing apps. And apps stop needing to pre-exist.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "The one line to remember"
+          },
+          "quote": "The app dies twice: you stop {primary:choosing} apps — and apps stop needing to {accent:pre-exist.}",
+          "author": "Beyond the Sea of App Icons",
+          "role": "Part 1 of 6"
+        }
+      }
+    },
+    {
+      "text": "I'm not alone in seeing this. Satya Nadella says business apps will, probably, collapse into the agent era — the logic moves to A I. Andrej Karpathy says prompts are the new programs, but defends apps as the place where humans verify machines. And the new standards let A I deliver an interface — that a vendor still designed in advance. Everyone sees a piece. Nobody yet claims the full fusion: A I authoring the interface, the schema, and the logic. That unclaimed square is where this series lives.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "eyebrow": {
+            "label": "Others have noticed"
+          },
+          "title": "Smart people, each holding a piece",
+          "gridColumns": 3,
+          "items": [
+            {
+              "title": "Nadella",
+              "description": "Business logic “probably” migrates to agents — but no architecture named",
+              "accentColor": "primary",
+              "icon": "🏢"
+            },
+            {
+              "title": "Karpathy",
+              "description": "“Prompts are programs” — yet apps survive, as Iron Man suits for verification",
+              "accentColor": "info",
+              "icon": "🦾"
+            },
+            {
+              "title": "Generative UI",
+              "description": "AI delivers the interface — over schemas a vendor still authors",
+              "accentColor": "accent",
+              "icon": "🧩"
+            }
+          ],
+          "footer": "The unclaimed square: AI authoring all three layers — interface, schema, logic — per user."
+        }
+      }
+    },
+    {
+      "text": "Two problems I can't wave away. Discovery: a blank conversation doesn't tell you what's possible. Icons did — they were a catalog. And trust: when one sentence acts on your behalf, the work must be fast to inspect and cheap to reject. These are real. Parts three and five take them head on.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "manifesto",
+          "eyebrow": {
+            "label": "The part I cannot wave away",
+            "color": "danger"
+          },
+          "title": "Two honest problems",
+          "items": [
+            {
+              "title": "Discovery",
+              "description": "A blank conversation shows nothing. The icon grid was a catalog of the possible — killing it kills the catalog.",
+              "accentColor": "warning"
+            },
+            {
+              "title": "Trust",
+              "description": "An interface acting on your behalf must be fast to inspect and cheap to reject — never “just believe me.”",
+              "accentColor": "danger"
+            }
+          ],
+          "columns": 2,
+          "footer": "Taken head-on in Parts 3 and 5."
+        }
+      }
+    },
+    {
+      "text": "This was part one of six — and the short version. The full essay has the evidence, the counterarguments, and the map of who's saying what. Next, part two: why conversation needs a canvas — and what happens when the L L M, not the app, holds the pen.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Read the full essay"
+          },
+          "titleSize": "large",
+          "title": "Beyond the **Sea of App Icons**",
+          "subtitle": "Part 2: {primary:Chat Needs a Canvas} — when the model, not the app, holds the pen",
+          "chips": [
+            "3 · DSLs as harnesses",
+            "4 · Applications become data",
+            "5 · Software for one",
+            "6 · The workspace is the agent"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -66,47 +66,81 @@
     "suppressSpeech": false
   },
   "title": "DSLs as Harnesses",
-  "description": "Why a deliberately limited language is one of the most reliable harnesses for an AI agent — the four harness properties a DSL delivers for free, three concrete examples (MulmoScript, Collections, vibe crafting), the escape-hatch hazard, and why this matters more as models improve.",
+  "description": "Part 3 of a 6-part series on AI-native computing. A deliberately limited language is what makes AI-generated software trustworthy for someone who cannot read code. Companion video to the essay of the same name.",
   "lang": "en",
   "beats": [
     {
-      "text": "D S Ls as harnesses. Why a deliberately limited language is one of the most reliable ways to give an AI agent a place to stand.",
+      "text": "D S Ls as harnesses. This is part three of six. Part one claimed that computing's future rests on two pillars: the computer that understands, and the computer that builds. But a computer that builds leaves a question hanging. Who checks its work? This part is the answer.",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "title",
           "eyebrow": {
-            "label": "Essay · 2026"
+            "label": "Part 3 of 6 · Beyond the Sea of App Icons"
           },
           "titleSize": "hero",
           "subtitleSize": "lead",
           "title": "DSLs as **Harnesses**",
-          "subtitle": "Why a deliberately limited language gives an agent {primary:a place to stand}",
+          "subtitle": "The computer that {accent:builds} — and the language that makes its work {primary:safe to trust}",
+          "author": "Satoshi Nakajima",
           "chips": [
-            "🧭 harness > model",
-            "📐 constraint as feature",
-            "🚪 design the escape hatch"
+            "🛠️ generation needs a harness",
+            "📐 constraint is a feature"
           ]
         }
       }
     },
     {
-      "text": "The prevailing lesson of applied AI engineering is that the harness — the designed environment an agent operates inside — matters more than the model. For a language model, the interface is not a convenience layer. The interface is the cognitive architecture.",
+      "text": "Start with a story. The team behind SWE-agent, a coding agent, studied what made it succeed. The most valuable component was not the model. It was a linter. A simple checker that ran on every edit — and rejected broken changes the moment they were made, before one mistake could snowball into ten. The model supplied the intelligence. A guardrail supplied the reliability.",
+      "imagePrompt": "Editorial illustration on a deep navy blue background with glowing cyan and violet accents. A small luminous humanoid figure of light works intently at a floating desk, writing code that streams upward as glowing glyphs, all inside a large elegant structured frame — a geometric scaffold of thin bright cyan lines enclosing and supporting the workspace. At one edge, where a stray line of the figure's work touches the frame, the scaffold glows warmly, gently catching the mistake. Painterly, futuristic but warm, cinematic lighting, no text, no logos."
+    },
+    {
+      "text": "That finding became the prevailing lesson of applied AI engineering. The harness — the designed environment an agent works inside — matters more than the model. The same model, in a better harness, does dramatically better work. And here is this essay's narrower claim: a deliberately limited language is one of the most powerful harnesses you can build.",
       "image": {
         "type": "slide",
         "slide": {
-          "layout": "bigQuote",
+          "layout": "split",
+          "accentColor": "primary",
           "eyebrow": {
-            "label": "The Claim"
+            "label": "The claim"
           },
-          "quote": "The interface is not a convenience layer wrapped around the intelligence. For a language model, {primary:**the interface is the cognitive architecture.**}",
-          "author": "And a DSL is a powerful harness *precisely because it gives up power.*",
-          "role": "Bounded expressiveness → reliable long-horizon autonomy"
+          "left": {
+            "title": "The harness",
+            "accentColor": "info",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "The tools the agent can call",
+                  "The format of what it sees",
+                  "The feedback that catches mistakes"
+                ]
+              }
+            ],
+            "ratio": 50
+          },
+          "right": {
+            "title": "matters more than the model",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "text",
+                "value": "Same model, better harness — **dramatically better work.**",
+                "bold": true
+              },
+              {
+                "type": "callout",
+                "text": "A deliberately limited language is a harness.",
+                "style": "info"
+              }
+            ],
+            "ratio": 50
+          }
         }
       }
     },
     {
-      "text": "Why does the trade pay off? A general-purpose language is Turing complete — that is its glory and, for an agent, its hazard. Infinite ways to write anything, no conventions, no signal of domain correctness. A DSL inverts every one of those properties.",
+      "text": "Why would less power help? A general-purpose language can express anything. Which means there are infinite ways to go wrong — and nothing in the language says whether a program is right for your problem. Given that much freedom, agents thrash. A small language flips it. Fewer things, said in fewer ways, with a checker that says yes or no before anything runs. You haven't handed the agent a tool. You've reshaped the space it has to search.",
       "image": {
         "type": "slide",
         "slide": {
@@ -114,94 +148,103 @@
           "eyebrow": {
             "label": "Why the trade pays off"
           },
-          "title": "General-purpose code vs. a DSL",
+          "title": "General-purpose code vs. a small language",
           "left": {
-            "title": "General-Purpose Language",
+            "title": "General-purpose code",
             "accentColor": "danger",
             "content": [
               {
                 "type": "bullets",
                 "items": [
                   {
-                    "text": "Turing-complete — infinite ways to express anything",
-                    "icon": "no"
-                  },
-                  {
-                    "text": "Nothing signals *correct for this domain*",
-                    "icon": "no"
-                  },
-                  {
-                    "text": "Freedom under uncertainty → agents **thrash and drift**",
+                    "text": "Can express anything",
                     "icon": "warn"
+                  },
+                  {
+                    "text": "Infinite ways to go wrong",
+                    "icon": "no"
+                  },
+                  {
+                    "text": "Mistakes surface much later",
+                    "icon": "no"
                   }
                 ]
               }
             ],
-            "footer": "Subtle mistakes surface much later"
+            "footer": "Freedom under uncertainty — agents thrash"
           },
           "right": {
-            "title": "Domain-Specific Language",
+            "title": "A DSL",
             "accentColor": "success",
             "content": [
               {
                 "type": "bullets",
                 "items": [
                   {
-                    "text": "Bounded things, in bounded ways",
+                    "text": "Fewer things, fewer ways",
                     "icon": "ok"
                   },
                   {
-                    "text": "Ships with a parser & validator",
+                    "text": "Yes or no — before anything runs",
                     "icon": "ok"
                   },
                   {
-                    "text": "**Reshapes the search space** the agent explores",
+                    "text": "The search space itself shrinks",
                     "icon": "ok"
                   }
                 ]
               }
             ],
-            "footer": "Well-formed or rejected — before anything executes"
-          },
-          "callout": {
-            "text": "Handing an agent a DSL isn't giving it a tool — it's {primary:**reshaping the space it has to search.**}",
-            "label": "Key move",
-            "color": "primary",
-            "leftBar": true
+            "footer": "Not a tool — a reshaped search space"
           }
         }
       }
     },
     {
-      "text": "From that single design decision, the four classic harness patterns fall out for free. The schema is the system of record. The validator is a free feedback loop. The grammar is a forcing function. And the unit of the language is the unit of context.",
+      "text": "That is the whole trade, in one line. A DSL is a powerful harness precisely because it gives up power.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "The one line to remember"
+          },
+          "quote": "A DSL is a powerful harness precisely because it {primary:gives up power.}",
+          "author": "DSLs as Harnesses",
+          "role": "Part 3 of 6"
+        }
+      }
+    },
+    {
+      "text": "Make that trade, and four good things fall out for free. The schema is the record — intent lives in a document you can read. The validator is free feedback — mistakes are caught the instant they're made. The grammar forces correctness — there's no room to invent options that don't exist. And the unit of the language is the unit of context — the agent fixes one piece without rethinking the whole.",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "manifesto",
           "eyebrow": {
-            "label": "Four properties, one decision",
+            "label": "Four properties, for free",
             "color": "warning"
           },
-          "title": "What a DSL gives you for free",
+          "title": "What the trade buys you",
           "items": [
             {
-              "title": "1 · The schema is the system of record.",
-              "description": "Intent lives in a structured, inspectable artifact — diffable, versionable, checkable without running it.",
+              "title": "1 · The schema is the record",
+              "description": "Intent lives in a document you can read and diff.",
               "accentColor": "primary"
             },
             {
-              "title": "2 · The validator is a free feedback loop.",
-              "description": "Malformed output is rejected at the moment of introduction, with a localized, actionable message.",
+              "title": "2 · The validator is free feedback",
+              "description": "Mistakes caught the instant they're made.",
               "accentColor": "success"
             },
             {
-              "title": "3 · The grammar is a forcing function.",
-              "description": "A finite vocabulary structurally shrinks the room to hallucinate — the agent can only compose real primitives.",
+              "title": "3 · The grammar forces correctness",
+              "description": "No room to invent options that don't exist.",
               "accentColor": "warning"
             },
             {
-              "title": "4 · The unit of the language is the unit of context.",
-              "description": "A beat, a rule, a record — the agent edits one piece without holding the whole document in mind.",
+              "title": "4 · The unit of language is the unit of context",
+              "description": "Fix one piece without holding the whole.",
               "accentColor": "accent"
             }
           ],
@@ -210,321 +253,106 @@
       }
     },
     {
-      "text": "First example: MulmoScript, a JSON DSL for multimodal presentations. The key architecture: the agent does not produce the video — it produces the script. A deterministic renderer turns that script into the finished artifact.",
+      "text": "Here's the part I enjoy. This very video is the argument. It was written by an agent, in MulmoScript — a small JSON language for describing presentations. A validator checked every beat before a single frame was rendered. The agent never touched a pixel; a renderer that never guesses drew what you're watching. The medium is the argument.",
       "image": {
         "type": "slide",
         "slide": {
-          "layout": "columns",
+          "layout": "timeline",
           "eyebrow": {
-            "label": "Example 1 · MulmoScript"
+            "label": "The meta move",
+            "color": "highlight"
           },
-          "title": "Generation and execution, cleanly separated",
-          "subtitle": "The agent writes the *script* — never the pixels",
-          "columns": [
+          "title": "How this video was made",
+          "subtitle": "A DSL-authored video, about DSLs",
+          "accentColor": "highlight",
+          "items": [
             {
-              "title": "Agent writes the DSL",
-              "accentColor": "primary",
-              "content": [
-                {
-                  "type": "text",
-                  "value": "The probabilistic, creative work:",
-                  "bold": true
-                },
-                {
-                  "type": "bullets",
-                  "items": [
-                    "What the video should say",
-                    "What each beat should show",
-                    "Composed only from real primitives"
-                  ]
-                }
-              ],
-              "num": 1
+              "date": "Write",
+              "title": "An agent writes MulmoScript",
+              "description": "A JSON document of beats — never pixels",
+              "color": "primary",
+              "done": true
             },
             {
-              "title": "Validator checks it",
-              "accentColor": "warning",
-              "content": [
-                {
-                  "type": "text",
-                  "value": "Inspectable before a single frame renders:",
-                  "bold": true
-                },
-                {
-                  "type": "bullets",
-                  "items": [
-                    "Schema-checked on every save",
-                    "Malformed beats rejected locally",
-                    "No wasted frames"
-                  ]
-                }
-              ],
-              "num": 2
+              "date": "Check",
+              "title": "The validator says yes",
+              "description": "Every beat schema-checked before rendering",
+              "color": "success",
+              "done": true
             },
             {
-              "title": "Renderer executes it",
-              "accentColor": "success",
-              "content": [
-                {
-                  "type": "text",
-                  "value": "The deterministic work — code that never guesses:",
-                  "bold": true
-                },
-                {
-                  "type": "bullets",
-                  "items": [
-                    "Same script → same video",
-                    "Bad result? Diff, edit, re-render",
-                    "Never regenerate from scratch"
-                  ]
-                }
-              ],
-              "num": 3
+              "date": "Render",
+              "title": "A renderer that never guesses",
+              "description": "Same script, same video — diff, edit, re-render",
+              "color": "accent",
+              "done": true
+            },
+            {
+              "date": "Now",
+              "title": "You're watching it",
+              "description": "The medium is the argument",
+              "color": "highlight",
+              "hot": true
             }
-          ],
-          "showArrows": true,
-          "callout": {
-            "text": "The model decides *what* to think about; the harness decides *how* it is executed — in MulmoScript, an actual boundary in the pipeline.",
-            "label": "Boundary",
-            "color": "info",
-            "leftBar": true
-          }
+          ]
         }
       }
     },
     {
-      "text": "Second example: Collections — a DSL that enforces its own invariants, and whose authoring pen is handed to the end user. A schema declares fields, relationships, recurrence and notifications; the loader rejects an incoherent schema before it is ever used.",
+      "text": "Now hand that power to someone who has never seen code. She says: track my rent, and make it recur monthly. Give me a year-at-a-glance view. A working app appears — live. She never sees a schema. She never sees a line of HTML. There's a name for this: vibe crafting.",
+      "imagePrompt": "Editorial illustration on a deep navy blue background with glowing cyan and violet accents. A woman in a cozy home office speaks casually toward the air, and in front of her a small elegant application is assembling itself out of light — a tidy table of records, a small monthly calendar, a rising chart — all held inside a soft glowing geometric frame. Thin streams of light flow from her words into the forming app. Painterly, warm and human, cinematic lighting, no text, no logos."
+    },
+    {
+      "text": "But possible is not the same as safe. A developer who vibe-codes still reads the diff, runs the tests, owns the failure. An end user has none of that — and shouldn't need it. You can't ship ninety percent correct. So the harness supplies the safety she can't. The language can only say things that are safe to render. And anything less than valid never loads.",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "split",
-          "accentColor": "accent",
+          "accentColor": "highlight",
           "eyebrow": {
-            "label": "Example 2 · Collections"
-          },
-          "left": {
-            "title": "The user authors the harness",
-            "label": "NOVEL MOVE",
-            "accentColor": "accent",
-            "content": [
-              {
-                "type": "text",
-                "value": "By declaring a schema, a **non-engineer designs the environment the agent works in.**",
-                "bold": true
-              },
-              {
-                "type": "divider",
-                "color": "accent"
-              },
-              {
-                "type": "bullets",
-                "items": [
-                  "Fields, types, relationships",
-                  "What counts as \"done\", when to notify",
-                  "How a record recurs (spawn)"
-                ]
-              },
-              {
-                "type": "callout",
-                "text": "\"Engineers design environments\" becomes \"*anyone* can — declaratively.\"",
-                "style": "info"
-              }
-            ],
-            "ratio": 50
-          },
-          "right": {
-            "title": "The loader rejects incoherence",
-            "accentColor": "danger",
-            "content": [
-              {
-                "type": "text",
-                "value": "Structurally broken schemas never load:",
-                "bold": true
-              },
-              {
-                "type": "bullets",
-                "items": [
-                  {
-                    "text": "Money field with no currency source",
-                    "icon": "no"
-                  },
-                  {
-                    "text": "`ref` to a collection that doesn't exist",
-                    "icon": "no"
-                  },
-                  {
-                    "text": "`spawn` born already matching its predicate — an unbounded respawn",
-                    "icon": "no"
-                  },
-                  {
-                    "text": "`triggerField` naming a non-date field",
-                    "icon": "no"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": "Each failure: a precise, actionable message — no human in the loop.",
-                "dim": true,
-                "size": "sub"
-              }
-            ],
-            "ratio": 50
-          }
-        }
-      }
-    },
-    {
-      "text": "This is what vibe crafting looks like from the user's chair. Where vibe coding lets a developer conjure software, vibe crafting lets an end user conjure a working data app. But possible is not the same as safe — and what closes that gap is not a better model. It is the harness.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "comparison",
-          "eyebrow": {
-            "label": "Example 3 · Vibe Crafting",
+            "label": "Vibe crafting",
             "color": "highlight"
           },
-          "title": "Vibe coding vs. **vibe crafting**",
           "left": {
-            "title": "Vibe coding (developer)",
+            "title": "The developer's safety net",
             "accentColor": "info",
             "content": [
               {
                 "type": "bullets",
                 "items": [
-                  "Describes intent, model fills in code",
-                  "**Reviews the diff, runs the tests**",
-                  "Owns the failure when it breaks"
-                ]
-              },
-              {
-                "type": "tag",
-                "text": "Safety net: the developer",
-                "color": "info"
-              }
-            ]
-          },
-          "right": {
-            "title": "Vibe crafting (end user)",
-            "accentColor": "highlight",
-            "content": [
-              {
-                "type": "bullets",
-                "items": [
-                  "\"Add a priority field.\" \"Make rent recur monthly.\"",
-                  "Never sees a schema or a line of HTML",
-                  "Cannot audit output — **and shouldn't have to**"
-                ]
-              },
-              {
-                "type": "tag",
-                "text": "Safety net: the harness",
-                "color": "highlight"
-              }
-            ]
-          },
-          "callout": {
-            "text": "The model supplies the expressiveness; the DSL, validators, and sandbox supply {highlight:**the safety the user can no longer supply for themselves.**} Take the harness away and you have an untrained user holding a loaded code generator.",
-            "label": "The gap",
-            "color": "highlight",
-            "leftBar": true
-          }
-        }
-      }
-    },
-    {
-      "text": "One hazard: the same rigidity that makes a DSL a good harness is also its failure mode. A DSL that cannot express what the user needs becomes a cage. Well-designed DSLs all answer this the same way — with a deliberate exit to a more expressive layer.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "grid",
-          "eyebrow": {
-            "label": "The one hazard",
-            "color": "danger"
-          },
-          "title": "Design the **escape hatch**",
-          "subtitle": "When the language runs out, provide a clean, legible path to a more expressive layer",
-          "gridColumns": 3,
-          "items": [
-            {
-              "title": "Collections → seeded chat",
-              "description": "When a record needs human judgment, an action button opens an agent chat with full tools",
-              "accentColor": "primary",
-              "icon": "💬"
-            },
-            {
-              "title": "Schema → custom HTML view",
-              "description": "A portfolio as a chart, restaurants as a map — sandboxed arbitrary code instead of contorted field types",
-              "accentColor": "accent",
-              "icon": "🖼️"
-            },
-            {
-              "title": "MulmoScript → external assets",
-              "description": "Arbitrary media and raw HTML, rather than forcing everything into its own primitives",
-              "accentColor": "success",
-              "icon": "🎬"
-            }
-          ],
-          "footer": "A harness with no escape hatch eventually forces the agent to fail or lie — both worse than a slightly leakier abstraction."
-        }
-      }
-    },
-    {
-      "text": "It's tempting to think DSLs are a crutch for weak models. The opposite is true. The case for a DSL is strongest exactly where we delegate autonomously and over long horizons — and those conditions matter more as we trust agents with more.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "split",
-          "accentColor": "primary",
-          "eyebrow": {
-            "label": "Why this matters more as models improve"
-          },
-          "left": {
-            "title": "The tempting intuition",
-            "accentColor": "danger",
-            "content": [
-              {
-                "type": "text",
-                "value": "\"Smarter models can handle general-purpose code — {danger:drop the guardrails.}\"",
-                "bold": true
-              },
-              {
-                "type": "text",
-                "value": "But the conditions of serious agentic work are exactly where DSLs shine:",
-                "size": "sub"
-              },
-              {
-                "type": "bullets",
-                "items": [
-                  "No human reviews each step",
-                  "Output must be verifiable",
-                  "Execution must be deterministic & reversible"
+                  "Reads the diff",
+                  "Runs the tests",
+                  "Owns the failure"
                 ]
               }
             ],
             "ratio": 45
           },
           "right": {
-            "title": "The right division of labor",
-            "accentColor": "success",
+            "title": "The end user's safety net: the harness",
+            "accentColor": "highlight",
             "content": [
               {
                 "type": "bullets",
                 "items": [
                   {
-                    "text": "The **model** is the reasoning engine — what to say, build, express",
+                    "text": "The DSL can only say what's safe to render",
                     "icon": "ok"
                   },
                   {
-                    "text": "The **DSL** decides what it gets to reason about — and guarantees the rest",
+                    "text": "Less than valid **never loads**",
                     "icon": "ok"
                   },
                   {
-                    "text": "A smarter model in a harness = capability aimed at the part that needs *judgment*",
+                    "text": "Custom views run sandboxed",
                     "icon": "ok"
                   }
-                ],
-                "size": "lead"
+                ]
+              },
+              {
+                "type": "callout",
+                "text": "You can't ship \"90% correct.\"",
+                "style": "warning"
               }
             ],
             "ratio": 55
@@ -533,17 +361,160 @@
       }
     },
     {
-      "text": "Getting that boundary right is the whole game — and a well-chosen DSL draws it with unusual precision.",
+      "text": "One hazard. The same rigidity that makes a small language safe can turn it into a cage. When the language can't say what the user needs, the agent gives up — or contorts it into something it was never meant to hold. Well-designed DSLs all answer the same way: a deliberate exit to a more expressive layer, exactly where the language runs out.",
       "image": {
         "type": "slide",
         "slide": {
-          "layout": "bigQuote",
+          "layout": "grid",
           "eyebrow": {
-            "label": "The whole game"
+            "label": "The hazard",
+            "color": "danger"
           },
-          "quote": "Getting that boundary right is the whole game — and a well-chosen DSL draws it with {primary:**unusual precision.**}",
-          "author": "*DSLs as Harnesses* · 2026",
-          "role": "Constraint is a feature 📐"
+          "title": "Design the **escape hatch**",
+          "gridColumns": 3,
+          "items": [
+            {
+              "title": "Record → seeded chat",
+              "description": "A record that needs human judgment opens a chat with a full agent",
+              "accentColor": "primary",
+              "icon": "💬"
+            },
+            {
+              "title": "Schema → custom view",
+              "description": "Restaurants as a map, a portfolio as a chart — sandboxed HTML, not contorted fields",
+              "accentColor": "accent",
+              "icon": "🗺️"
+            },
+            {
+              "title": "Script → external media",
+              "description": "MulmoScript embeds arbitrary assets instead of faking them in its primitives",
+              "accentColor": "success",
+              "icon": "🎬"
+            }
+          ],
+          "footer": "A harness with no exit forces the agent to fail — or lie."
+        }
+      }
+    },
+    {
+      "text": "So here is the honest cost: this is a dial, and both ends are failure. Pin down too much, and the language becomes a cage. Pin down too little, and you're back to flaky chat — nothing checked, nothing guaranteed. The craft is not maximizing constraint. The craft is choosing where the dial sits.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "The honest cost",
+            "color": "danger"
+          },
+          "title": "Both ends of the dial are failure",
+          "left": {
+            "title": "Over-pinned",
+            "accentColor": "warning",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "Can't say what the user needs",
+                  "The agent contorts it — or gives up"
+                ]
+              }
+            ],
+            "footer": "A cage"
+          },
+          "right": {
+            "title": "Under-pinned",
+            "accentColor": "danger",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "Nothing checked, nothing guaranteed",
+                  "Mistakes surface much later"
+                ]
+              }
+            ],
+            "footer": "Flaky chat"
+          },
+          "callout": {
+            "text": "The craft is {primary:**where the dial sits.**}",
+            "label": "The craft",
+            "color": "primary",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "You might think guardrails are a crutch for weak models — that smarter models won't need them. I think the opposite. The smarter the model, the more we delegate, and the more the value shifts to verifying its work. Andrej Karpathy put it well: less Iron Man robots, more Iron Man suits. A DSL is what the suit is made of. A small document you can read at a glance. A validator that checks what a glance can't. A renderer that guarantees what you verified is what will run.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "columns",
+          "eyebrow": {
+            "label": "Why this matters more as models improve"
+          },
+          "title": "The verification interface",
+          "columns": [
+            {
+              "title": "You can read it",
+              "accentColor": "primary",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "A **small document** a human verifies at a glance."
+                }
+              ],
+              "num": 1
+            },
+            {
+              "title": "It checks the rest",
+              "accentColor": "success",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "The **validator** catches what a glance can't."
+                }
+              ],
+              "num": 2
+            },
+            {
+              "title": "It runs as verified",
+              "accentColor": "accent",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "The **deterministic renderer** runs exactly what you approved."
+                }
+              ],
+              "num": 3
+            }
+          ],
+          "showArrows": true,
+          "callout": {
+            "text": "\"Less Iron Man robots — {primary:more Iron Man suits.}\" — Andrej Karpathy, 2025",
+            "label": "The suit",
+            "color": "info",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "This was part three of six — and the short version. The full essay has the schemas, the examples, and the counterarguments. Next, part four follows the logic to its end. If a schema can be the harness, then the application itself becomes data — and the model becomes the runtime.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Read the full essay"
+          },
+          "titleSize": "large",
+          "title": "DSLs as **Harnesses**",
+          "subtitle": "Part 4: {primary:Applications Become Data} — the schema is the app, the model is the runtime",
+          "chips": [
+            "5 · Software for an audience of one",
+            "6 · The workspace is the agent"
+          ]
         }
       }
     }

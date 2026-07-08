@@ -1,0 +1,481 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini"
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "0A0F24",
+        "bgCard": "111A3A",
+        "bgCardAlt": "16224D",
+        "text": "EEF2FF",
+        "textMuted": "9FB0D8",
+        "textDim": "6F7FA0",
+        "primary": "38BDF8",
+        "accent": "818CF8",
+        "success": "34D399",
+        "warning": "FBBF24",
+        "danger": "FB7185",
+        "info": "22D3EE",
+        "highlight": "F0ABFC"
+      },
+      "fonts": {
+        "title": "Georgia",
+        "body": "Helvetica",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
+      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.2,
+    "audioVolume": 1,
+    "suppressSpeech": false
+  },
+  "title": "Chat Needs a Canvas",
+  "description": "Part 2 of a 6-part series on AI-native computing. Conversation is the wrong shape for creation — the fix is not going back to apps, but letting tools return interfaces, not just text. Companion video to the essay of the same name.",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "Chat needs a canvas. This is part two of a six part series about where computing goes next. Part one asked what replaces the app. This part asks a smaller, sharper question. When a tool answers you — why should it only answer in text?",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Part 2 of 6 · Beyond the Sea of App Icons"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "Chat Needs a **Canvas**",
+          "subtitle": "When tools return {primary:interfaces} — not just {accent:text}",
+          "author": "Satoshi Nakajima",
+          "chips": [
+            "🗣️ the computer that understands",
+            "🛠️ the computer that builds"
+          ]
+        }
+      }
+    },
+    {
+      "text": "Elena is sixty-eight, and her left knee has been bad since March. At the clinic, there's no clipboard. Just a conversation. What brings you in today? The knee again, she says. Worse on stairs. And then a form appears — right there, in the chat.",
+      "imagePrompt": "Editorial illustration, warm and human against a deep navy blue background. A woman in her late sixties with silver hair sits in a bright clinic waiting area, holding a tablet. On the screen, a chat conversation is visible, and a small, clean five-field form is materializing out of the conversation in a soft glow of cyan light, as if written into being. Her expression is calm and slightly pleased. Painterly, muted palette with cyan and warm amber accents, soft morning light, cinematic composition, no text, no logos."
+    },
+    {
+      "text": "Five fields, not forty. Which knee — already filled in. Pain on stairs, scored on its own, because she mentioned stairs. One line to confirm her blood thinner dose. Nothing her record already knows. Ninety seconds, start to finish. And here's the strange part. Nobody designed this form. It did not exist until she said the word knee.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "eyebrow": {
+            "label": "The form that didn't exist"
+          },
+          "title": "Five fields, not forty",
+          "gridColumns": 2,
+          "items": [
+            {
+              "title": "Which knee?",
+              "description": "already filled in: left",
+              "icon": "🦵"
+            },
+            {
+              "title": "Pain on stairs",
+              "description": "scored separately — she mentioned stairs",
+              "icon": "🪜"
+            },
+            {
+              "title": "Blood thinner",
+              "description": "confirm the one dose that matters",
+              "icon": "💊"
+            },
+            {
+              "title": "Imaging elsewhere?",
+              "description": "one checkbox — nothing her record knows",
+              "icon": "🩻"
+            }
+          ],
+          "footer": "Nobody designed it. It did not exist until she said “knee.”"
+        }
+      }
+    },
+    {
+      "text": "Why does that matter? Because chat is a scroll. It only grows downward. Superb for questions — terrible for creation. A designer needs a canvas. An analyst needs a table she can sort. A patient needs five labeled fields, not five questions asked one at a time. A transcript can describe a spreadsheet perfectly. You still can't drag a cell.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "A scroll is not a workshop"
+          },
+          "title": "Chat listens. Work needs surfaces.",
+          "left": {
+            "title": "Chat is a scroll",
+            "accentColor": "warning",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "Linear — it only grows downward",
+                  "Superb for questions",
+                  "You can't drag a cell in a transcript"
+                ]
+              }
+            ],
+            "footer": "Describing a spreadsheet isn't a spreadsheet"
+          },
+          "right": {
+            "title": "Creation needs surfaces",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "A designer needs a canvas",
+                  "An analyst needs a sortable table",
+                  "A patient needs labeled fields"
+                ]
+              }
+            ],
+            "footer": "The fix isn't going back to apps"
+          },
+          "callout": {
+            "text": "Keep the conversation as the spine — and let tools return {primary:interfaces}.",
+            "label": "The fix",
+            "color": "primary",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "The mechanism is small — and that's the point. Every model already knows how to call a tool. The change is this: the tool answers with two payloads. Words for the model. Form created, five fields — that's all it ever sees. And an interface for you. A real form, rendered live, beside the conversation. When Elena taps submit, her answers flow back in as data. One loop. The interface never leaves the dialogue.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "eyebrow": {
+            "label": "One tool call, two payloads"
+          },
+          "left": {
+            "title": "Payload 1 — for the model",
+            "accentColor": "accent",
+            "content": [
+              {
+                "type": "text",
+                "value": "**Words.** “Form created with five fields.”",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "value": "That's all the model ever sees — nothing changes on its side.",
+                "size": "sub",
+                "dim": true
+              }
+            ],
+            "ratio": 50
+          },
+          "right": {
+            "title": "Payload 2 — for you",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "text",
+                "value": "**An interface.** A form, a chart, a map — rendered live beside the transcript.",
+                "bold": true
+              },
+              {
+                "type": "callout",
+                "text": "Submit → your answers rejoin the conversation as data.",
+                "style": "info"
+              }
+            ],
+            "ratio": 50
+          }
+        }
+      }
+    },
+    {
+      "text": "And it's not just forms. Ask for the present value of a thousand dollars a month — and make the discount rate easy to change. A live spreadsheet opens beside the chat. Drag the rate, and the table recomputes while you keep talking. Claude's Artifacts and ChatGPT's Canvas are the same instinct: a live surface, opening next to the words.",
+      "imagePrompt": "Editorial illustration on a deep navy blue background with glowing cyan and violet accents. A person seen from behind, in conversation with a large luminous surface floating in the air beside a glowing chat transcript: a spreadsheet with one brightly highlighted cell and a small line chart, materializing out of streams of soft light that flow from the spoken words into the table. Elegant, futuristic but warm, painterly, cinematic lighting, no text, no logos."
+    },
+    {
+      "text": "Here's what tells you the idea is real: everyone arrived at once. Vercel shipped generative U I in early twenty twenty-four. M C P dash U I pioneered it over an open protocol in May twenty twenty-five. That October, OpenAI launched its Apps S D K. And in November, Anthropic and OpenAI — direct competitors — cosigned one standard, M C P Apps. When rivals co-author the substrate, it has stopped being anyone's thesis.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "timeline",
+          "eyebrow": {
+            "label": "Everyone arrived at once"
+          },
+          "title": "Four roads to the same shape",
+          "subtitle": "Convergence is validation, not priority",
+          "items": [
+            {
+              "date": "Mar 2024",
+              "title": "Vercel AI SDK 3.0",
+              "description": "“Generative UI” — tool calls stream components into chat",
+              "color": "info",
+              "done": true
+            },
+            {
+              "date": "May 2025",
+              "title": "MCP-UI",
+              "description": "The pioneer over an open protocol — adopted by Shopify, Postman",
+              "color": "primary",
+              "done": true
+            },
+            {
+              "date": "Oct 2025",
+              "title": "OpenAI Apps SDK",
+              "description": "Full apps inside ChatGPT, built on MCP",
+              "color": "accent",
+              "done": true
+            },
+            {
+              "date": "Nov 2025",
+              "title": "MCP Apps (SEP-1865)",
+              "description": "Cosigned by Anthropic + OpenAI — rivals co-author the substrate",
+              "color": "highlight",
+              "hot": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "text": "So the interesting question moved. M C P Apps is well designed. A developer ships the interface as a fixed template, and the host can audit it before it ever runs. That fixedness is the security model — it's deliberate. But run Elena through it. The developer designs one good intake form. The model can summon it. It can never reshape it. Not for her knee. Not for her blood thinner.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "The question moved",
+            "color": "highlight"
+          },
+          "title": "Summon a form — or write one?",
+          "left": {
+            "title": "The app's form",
+            "accentColor": "info",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "A template, fixed at development time",
+                  "Auditable before it runs — that's the trust model",
+                  "The model can summon it, never shape it"
+                ]
+              }
+            ],
+            "footer": "One good form, for every patient"
+          },
+          "right": {
+            "title": "The model's form",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "Fields chosen for this patient, this visit",
+                  "The blood-thinner line, because it matters",
+                  "Nothing her record already answers"
+                ]
+              }
+            ],
+            "footer": "Authored at runtime, in the conversation"
+          },
+          "callout": {
+            "text": "Both camps agree tools should return interfaces. They differ on {highlight:authorship.}",
+            "label": "The real disagreement",
+            "color": "highlight",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "The disagreement is smaller and sharper than competing protocols. It's about who holds the pen. In M C P Apps, the app holds the pen. Here, the model does. And that's the first appearance of the second pillar — the computer that builds — showing up at the interface, before it ever touches logic.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "The pen question"
+          },
+          "quote": "In MCP Apps, the {info:app} holds the pen; here, the {primary:model} does.",
+          "author": "Chat Needs a Canvas",
+          "role": "Part 2 of 6"
+        }
+      }
+    },
+    {
+      "text": "Remember the feature ratchet from part one? Graphing, rebuilt in the spreadsheet, the tracker, the C R M — and paid for every single time. Here's the fix, as a working mechanism. Present form. Present chart. Present markdown. One shared toolkit, owned by the conversation — and the model composes it across every domain. No Mac app ships its own scroll bar. No tool here ships its own chart engine.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "eyebrow": {
+            "label": "The ratchet gets its mechanism",
+            "color": "success"
+          },
+          "title": "One toolkit, every domain",
+          "gridColumns": 3,
+          "items": [
+            {
+              "title": "presentForm",
+              "description": "collects exactly what's missing",
+              "accentColor": "primary",
+              "icon": "📝"
+            },
+            {
+              "title": "presentChart",
+              "description": "draws any tool's numbers",
+              "accentColor": "accent",
+              "icon": "📊"
+            },
+            {
+              "title": "presentMarkdown",
+              "description": "composes the document",
+              "accentColor": "info",
+              "icon": "📄"
+            }
+          ],
+          "footer": "Written once. Composed by the model. Every application slims down."
+        }
+      }
+    },
+    {
+      "text": "Now look at what's left of the receptionist that greeted Elena. A list of tool names. And a paragraph telling the model how a receptionist behaves. That's the whole application. No custom code. No custom screens. Swap the list and the paragraph, and the same shell becomes a recipe guide — or a trip planner. The role is the application.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "eyebrow": {
+            "label": "An application in a paragraph"
+          },
+          "left": {
+            "title": "A role is just…",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "A tool list — presentForm, records lookup…",
+                  "A system prompt — “act as a receptionist”"
+                ]
+              },
+              {
+                "type": "callout",
+                "text": "No custom code. No custom screens.",
+                "style": "info"
+              }
+            ],
+            "ratio": 50
+          },
+          "right": {
+            "title": "Swap it, get a new app",
+            "accentColor": "accent",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "🩺 Clinic receptionist",
+                  "🍳 Recipe guide",
+                  "🗺️ Trip planner"
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Same shell — only the list and the paragraph change.",
+                "size": "sub",
+                "dim": true
+              }
+            ],
+            "ratio": 50
+          }
+        }
+      }
+    },
+    {
+      "text": "Two honest problems. If vendors ship branded widgets into chat, the sea of icons doesn't die — it migrates into the conversation. An app store, one level down. And interfaces generated per person are interfaces no two people share. Documentation, support, a granddaughter showing Elena where to tap — all of that assumes a common surface. Part of the answer is constraint. Part of it has no answer yet.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "manifesto",
+          "eyebrow": {
+            "label": "The part I cannot wave away",
+            "color": "danger"
+          },
+          "title": "Two honest problems",
+          "items": [
+            {
+              "title": "The icon sea migrates",
+              "description": "Branded widgets competing for placement in the transcript are an app store inside a chat window.",
+              "accentColor": "warning"
+            },
+            {
+              "title": "No two screens alike",
+              "description": "Generated UI breaks the shared surface — documentation, support, showing someone where to tap.",
+              "accentColor": "danger"
+            }
+          ],
+          "columns": 2,
+          "footer": "Interactive UI in chat is necessary — and sufficient for none of this."
+        }
+      }
+    },
+    {
+      "text": "This was part two of six — and the short version. The full essay has the whole record: who arrived when, what M C P Apps gets right, and the costs, stated in full. Next, part three. If the model writes the interface — and someday the logic — what makes its output trustworthy? The answer is a language that gives up power on purpose.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Read the full essay"
+          },
+          "titleSize": "large",
+          "title": "Chat Needs a **Canvas**",
+          "subtitle": "Part 3: {primary:DSLs as Harnesses} — a language that gives up power on purpose",
+          "chips": [
+            "1 · Beyond the sea of app icons",
+            "4 · Applications become data",
+            "5 · Software for one",
+            "6 · The workspace is the agent"
+          ]
+        }
+      }
+    }
+  ]
+}

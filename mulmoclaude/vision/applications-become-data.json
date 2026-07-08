@@ -1,0 +1,478 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini"
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "0A0F24",
+        "bgCard": "111A3A",
+        "bgCardAlt": "16224D",
+        "text": "EEF2FF",
+        "textMuted": "9FB0D8",
+        "textDim": "6F7FA0",
+        "primary": "38BDF8",
+        "accent": "818CF8",
+        "success": "34D399",
+        "warning": "FBBF24",
+        "danger": "FB7185",
+        "info": "22D3EE",
+        "highlight": "F0ABFC"
+      },
+      "fonts": {
+        "title": "Georgia",
+        "body": "Helvetica",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
+      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.2,
+    "audioVolume": 1,
+    "suppressSpeech": false
+  },
+  "title": "Applications Become Data",
+  "description": "Part 4 of a 6-part series on AI-native computing. A schema, its records, and a model make a complete application — the AI authors all three layers, per user. Companion video to the essay of the same name.",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "Applications become data. This is part four of a six part series. Part one said the future rests on two pillars — the computer that understands, and the computer that builds. This time we follow the second pillar all the way down. What is an application, once a machine can build one?",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Part 4 of 6 · Beyond the Sea of App Icons"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "Applications **Become Data**",
+          "subtitle": "Following {accent:the computer that builds} all the way down",
+          "author": "Satoshi Nakajima",
+          "chips": [
+            "🗣️ the computer that understands",
+            "🛠️ the computer that builds"
+          ]
+        }
+      }
+    },
+    {
+      "text": "Remember Maria, the soap maker? Good news: a dozen shops now stock her soap. Bad news: the invoices have outgrown a folder of PDFs. So she says to her computer — track the invoices I send my wholesale accounts. Who has paid, who is late. A moment later, there is an invoice tracker. Overdue rows flagged. The total she is owed at the top. And it's correct.",
+      "imagePrompt": "Editorial illustration, warm and human against a deep navy blue background with glowing cyan and violet accents. A woman in her forties in a small soap-making studio, stacked bars of lavender soap beside her, speaking toward a large luminous surface floating in the air, where a tidy business application is assembling itself out of soft streams of light flowing from her spoken words — neat rows of an invoice list forming, a glowing total at the top, a small detail form taking shape. Painterly, cinematic lighting, muted palette with lavender and warm amber accents, no text, no logos."
+    },
+    {
+      "text": "Now look at what did not happen. She didn't pick a vendor. Nothing was installed. No database server, no deployment. And the strange part — nobody wrote this app for her in advance. What appeared on her disk was a small schema file, and a folder of records. The third ingredient isn't on disk at all. It's the model that reads both.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "eyebrow": {
+            "label": "What just happened"
+          },
+          "left": {
+            "title": "What didn't happen",
+            "accentColor": "warning",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "No vendor, no subscription",
+                  "No server, no deployment",
+                  "No code written in advance"
+                ]
+              }
+            ],
+            "ratio": 50
+          },
+          "right": {
+            "title": "What appeared",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "A schema — a few lines of JSON",
+                  "Records — one file per invoice",
+                  "A model that reads both"
+                ]
+              }
+            ],
+            "ratio": 50
+          }
+        }
+      }
+    },
+    {
+      "text": "A traditional application is four separate systems. A database to hold the records. An O R M to translate them. A U I framework to put them on screen. And a workflow engine to make things happen. In Maria's tracker, the database became plain files. The O R M simply vanished. The U I is rendered from the schema itself. And the workflow split between strict host rules and plain prose.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "eyebrow": {
+            "label": "The collapse"
+          },
+          "title": "Four systems become one schema",
+          "gridColumns": 2,
+          "items": [
+            {
+              "title": "Database",
+              "description": "became plain files you own",
+              "icon": "🗄️"
+            },
+            {
+              "title": "ORM",
+              "description": "simply vanished",
+              "icon": "🔁"
+            },
+            {
+              "title": "UI framework",
+              "description": "views rendered from the schema",
+              "icon": "🖼️"
+            },
+            {
+              "title": "Workflow engine",
+              "description": "strict host rules + plain prose",
+              "icon": "⚙️"
+            }
+          ],
+          "footer": "All four, collapsed into one artifact: the schema."
+        }
+      }
+    },
+    {
+      "text": "So here is the whole application, written as an equation. A schema — the fields, the rules, the formulas. The records it describes. And a model that reads them. That's it. That's the entire stack. It's a spreadsheet's old bargain — columns, rows, a recalculating engine — except this runtime reasons.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "columns",
+          "eyebrow": {
+            "label": "The equation"
+          },
+          "title": "schema + records + model",
+          "columns": [
+            {
+              "title": "Schema",
+              "accentColor": "primary",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "**The fields, the rules, the formulas.**"
+                },
+                {
+                  "type": "text",
+                  "value": "A few dozen lines of JSON",
+                  "dim": true
+                }
+              ]
+            },
+            {
+              "title": "Records",
+              "accentColor": "info",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "**One small file per invoice.**"
+                },
+                {
+                  "type": "text",
+                  "value": "Files the user owns",
+                  "dim": true
+                }
+              ]
+            },
+            {
+              "title": "Model",
+              "accentColor": "accent",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "**Reads both. Does the work.**"
+                },
+                {
+                  "type": "text",
+                  "value": "Not on disk at all",
+                  "dim": true
+                }
+              ]
+            }
+          ],
+          "callout": {
+            "text": "= {success:**a complete application**}",
+            "label": "The whole stack",
+            "color": "success",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "The records are data. The schema is the application. The model is the runtime.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "The one line to remember"
+          },
+          "quote": "The records are {primary:data}. The schema is the {accent:application}. The model is the {highlight:runtime}.",
+          "author": "Applications Become Data",
+          "role": "Part 4 of 6"
+        }
+      }
+    },
+    {
+      "text": "Some applications are more than record keeping. A ledger must balance. A room can't be double booked. Those rules deserve real code that never guesses. But even then, the shape changes. Traditional software puts the U I on top — the product — with the A P I as a side door. Invert it. The A P I is the product. And two clients call it as peers: a simple screen for you, and the model.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "The inversion"
+          },
+          "title": "Where does the interface sit?",
+          "left": {
+            "title": "UI-centric",
+            "accentColor": "warning",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "The UI is the product",
+                  "The API is a side door"
+                ]
+              }
+            ],
+            "footer": "Every SaaS you rent"
+          },
+          "right": {
+            "title": "API-centric",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "One contract: the API",
+                  "Two peer clients: the GUI — and the model"
+                ]
+              }
+            ],
+            "footer": "A click and a tool call run the same code"
+          }
+        }
+      }
+    },
+    {
+      "text": "Now watch what the inversion buys. Take an accounting app built this way. Ask it: graph my Q three revenue. A chart rises out of the ledger. Simple. Except for one thing.",
+      "imagePrompt": "Editorial illustration on a deep navy blue background with glowing cyan and violet accents. A person seen from behind, speaking toward a large luminous workspace floating in the air, where a glowing line chart is rising out of an open ledger of neat accounting rows, drawn by soft streams of light that connect the spoken words, the ledger, and the chart. Elegant, painterly, futuristic but warm, cinematic lighting, no text, no logos."
+    },
+    {
+      "text": "That accounting app contains no chart code. Not a charting library. Not one drawing routine. Graphing lives once, at the A I layer, shared by every application. The model read the numbers from one tool, and drew them with another. The workflow, graph my Q three revenue, exists nowhere as code. It's a decision the model makes at runtime.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "eyebrow": {
+            "label": "The ratchet pays off",
+            "color": "success"
+          },
+          "left": {
+            "title": "In the app",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "callout",
+                "text": "**Zero chart code.** No library, no drawing routine.",
+                "style": "info"
+              },
+              {
+                "type": "text",
+                "value": "Graphing lives once, at the AI layer — shared by everything.",
+                "dim": true
+              }
+            ],
+            "ratio": 50
+          },
+          "right": {
+            "title": "At runtime",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "Read: the accounting API",
+                  "Draw: the shared chart presenter",
+                  "This pipeline appears in no source file"
+                ]
+              }
+            ],
+            "ratio": 50
+          }
+        }
+      }
+    },
+    {
+      "text": "So every application settles into four slim parts. The shape of its data. Its rules. A basic view of its records. And whatever custom interfaces the model generates when you ask. Everything else — the charts, the dashboards, the exports — lives in a shared layer that no application owns.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "eyebrow": {
+            "label": "The slim application"
+          },
+          "title": "Four parts. Nothing more.",
+          "gridColumns": 2,
+          "items": [
+            {
+              "title": "Database schema",
+              "description": "the shape of the data",
+              "icon": "🧬",
+              "accentColor": "primary"
+            },
+            {
+              "title": "Business logic",
+              "description": "rules that never guess",
+              "icon": "⚖️",
+              "accentColor": "info"
+            },
+            {
+              "title": "Basic UI",
+              "description": "the canonical views",
+              "icon": "🪟",
+              "accentColor": "accent"
+            },
+            {
+              "title": "Generated UI",
+              "description": "made by the model, on request",
+              "icon": "✨",
+              "accentColor": "highlight"
+            }
+          ],
+          "footer": "Everything else lives in a shared layer no app owns."
+        }
+      }
+    },
+    {
+      "text": "Others see pieces of this. Satya Nadella predicts that business apps will, probably, all collapse — the logic moves to agents. The closest published cousin, agent native architecture, gives the agent equal access: it can operate every action the developers defined. But it cannot define one. That's the difference here. Maria's tracker had no developer. The schema itself was authored — for her.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "eyebrow": {
+            "label": "The discourse"
+          },
+          "title": "Access is not authorship",
+          "gridColumns": 3,
+          "items": [
+            {
+              "title": "Nadella",
+              "description": "Business apps “probably” collapse — logic moves to agents",
+              "accentColor": "primary",
+              "icon": "🏢"
+            },
+            {
+              "title": "Agent-native",
+              "description": "The agent gets equal access — to developer-authored actions",
+              "accentColor": "info",
+              "icon": "🤝"
+            },
+            {
+              "title": "This series",
+              "description": "The agent authors the schema itself — per user",
+              "accentColor": "highlight",
+              "icon": "🖊️"
+            }
+          ],
+          "footer": "Maria's tracker had no developer."
+        }
+      }
+    },
+    {
+      "text": "Now the honest part. A generated app comes from a system that is sometimes confidently wrong, for a user who can't read a schema. So the invariants must hold. The host validates everything the model authors — an invalid app never runs. That was part three's harness. Keep the declarative layer small: extend it only where it beats the agent. And know where this earns its keep — accounting, contracts, places where the rules are the value. For notes? The model just edits the files.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "manifesto",
+          "eyebrow": {
+            "label": "The case against this",
+            "color": "danger"
+          },
+          "title": "Who checks the work?",
+          "items": [
+            {
+              "title": "The host validates",
+              "description": "Every schema the model authors is checked first. An invalid app never runs. (Part 3's harness.)",
+              "accentColor": "danger"
+            },
+            {
+              "title": "Declare less",
+              "description": "Extend the declarative layer only when it outperforms the agent.",
+              "accentColor": "warning"
+            },
+            {
+              "title": "Know the tiers",
+              "description": "Real code where rules are the value: accounting, contracts. For notes, the plugin layer disappears.",
+              "accentColor": "info"
+            }
+          ],
+          "columns": 3,
+          "footer": "Structure is checkable. Meaning is Part 5's problem."
+        }
+      }
+    },
+    {
+      "text": "This was part four of six — and the short version. The full essay has the counterarguments, the file layouts, and the real accounting app that puts this to the test. Next, part five: what happens to the price of software, when the audience is one person.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Read the full essay"
+          },
+          "titleSize": "large",
+          "title": "Applications **Become Data**",
+          "subtitle": "Part 5: {primary:Software for an Audience of One} — what happens to the price of software when the audience is one person",
+          "chips": [
+            "1 · Beyond the sea of app icons",
+            "2 · Chat needs a canvas",
+            "3 · DSLs as harnesses",
+            "6 · The workspace is the agent"
+          ]
+        }
+      }
+    }
+  ]
+}
