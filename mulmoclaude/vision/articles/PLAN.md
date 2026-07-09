@@ -458,7 +458,9 @@ how the agent grows."
 - Soften: heavy MulmoClaude specifics (`config/roles/`, `mc-*` migration) into
   "in my reference implementation" framing; the trajectory argument (§3.4) stays
   because it is evidence, but one paragraph, not a section.
-- Trim the arXiv self-reference (§1.1 note) or keep as a footnote.
+- The §1.1 arXiv note is NOT a self-reference: *The Log is the Agent*
+  (arXiv:2605.21997, May 2026) is by **Yohei** Nakajima. Keep it as a
+  correctly-attributed contrast footnote (fixed 2026-07-09).
 - End the series where the paper ends: two ways software comes to exist, old
   phase / new phase.
 

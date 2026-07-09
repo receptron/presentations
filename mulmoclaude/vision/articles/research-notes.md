@@ -202,6 +202,23 @@ Verified (3-0), but **handle with care — he is on both sides**:
   AI-native architecture — the "let the agent click through the vendor's GUI"
   path measurably fails; the fix is architectural, not more model.
 
+### Yohei Nakajima, "The Log is the Agent" (arXiv:2605.21997, May 2026) — VERIFIED 2026-07-09
+
+- Full title: *The Log is the Agent: Event-Sourced Reactive Graphs for
+  Auditable, Forkable Agentic Systems*. Introduces ActiveGraph: the append-only
+  event log is the source of truth; behaviors react to graph changes; buys
+  deterministic replay, forking at any execution point, and full lineage from
+  goal to model call.
+- **Attribution caution**: by **Yohei** Nakajima (BabyAGI author) — NOT Satoshi.
+  Article 6 §1.1 briefly misattributed it as "a separate paper of mine"; fixed
+  2026-07-09 in the article, `docs/workspace-is-the-agent.md`, and PLAN.md.
+- Source: https://arxiv.org/abs/2605.21997
+- **Use in Article 6**: the named contrast for §1.1 — a different primary
+  artifact (event log vs. workspace files); the workspace view trades
+  byte-for-byte replay for a readable, forkable, plain-file agent. Also feeds
+  §6's determinism-gap note (git-backed workspace as the sliver of
+  log-as-source-of-truth worth importing).
+
 ### Other verified/contrarian voices
 
 - Amelia Wattenberger, ["Why Chatbots Are Not the Future"](https://wattenberger.com/thoughts/boo-chatbots/) —

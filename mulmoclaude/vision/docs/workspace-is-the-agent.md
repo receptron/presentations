@@ -113,8 +113,8 @@ feature, which is why the rest of the paper is about the loop that produces it
 (§6).
 
 > A note on what this design gives up. Other work names a different primary
-> artifact — Nakajima's *The Log is the Agent* (arXiv:2605.21997) makes the
-> event log primary to get deterministic execution replay. The workspace view
+> artifact — Yohei Nakajima's *The Log is the Agent* (arXiv:2605.21997) makes
+> the event log primary to get deterministic execution replay. The workspace view
 > deliberately forgoes byte-for-byte run replay (the LLM step is
 > nondeterministic) in exchange for an agent you can read, fork, and evolve as
 > plain files. The two optimize for different things; this paper pursues the
@@ -487,5 +487,7 @@ agent, and building software is how the agent grows.**
 - Karpathy, [*LLM Knowledge Bases*](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
   — the self-maintained-wiki idea this paper extends from memory to applications
   (§1.1).
-- Nakajima, *The Log is the Agent*, arXiv:2605.21997 — names a different primary
-  artifact (the event log); briefly contrasted in §1.1.
+- Yohei Nakajima, [*The Log is the Agent: Event-Sourced Reactive Graphs for
+  Auditable, Forkable Agentic Systems*](https://arxiv.org/abs/2605.21997)
+  (arXiv:2605.21997, May 2026) — names a different primary artifact (the event
+  log); briefly contrasted in §1.1.
