@@ -1,0 +1,386 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": { "ja": "プレゼンター" },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini"
+      }
+    }
+  },
+  "imageParams": { "provider": "openai", "images": {} },
+  "movieParams": { "provider": "replicate" },
+  "soundEffectParams": { "provider": "replicate" },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "0A0F24", "bgCard": "111A3A", "bgCardAlt": "16224D",
+        "text": "EEF2FF", "textMuted": "9FB0D8", "textDim": "6F7FA0",
+        "primary": "38BDF8", "accent": "818CF8", "success": "34D399",
+        "warning": "FBBF24", "danger": "FB7185", "info": "22D3EE", "highlight": "F0ABFC"
+      },
+      "fonts": { "title": "Georgia", "body": "Helvetica", "mono": "Menlo", "accent": "Outfit" },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
+      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "padding": 0.3, "introPadding": 1, "closingPadding": 0.8, "outroPadding": 1,
+    "bgmVolume": 0.2, "audioVolume": 1, "suppressSpeech": false, "concurrency": 1
+  },
+  "title": "コレクション作成デモ — 天気予報コレクション",
+  "description": "マルモクロードのコレクション機能を使って天気予報コレクションを作成するデモ。ガイド付きセットアップからカスタムビューまで、一連の流れを紹介します。",
+  "lang": "ja",
+  "beats": [
+    {
+      "text": "出張で複数の場所を移動するとき、行き先ごとの天気を時間帯で調べるの、結構大変ですよね。土浦、東京、盛岡と移動するなら、それぞれの天気を調べて、時間帯ごとに整理して。マルモクロードなら、こんな出張タイムラインが会話だけで作れます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-8 space-y-5'>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-3xl font-bold text-white leading-tight'>出張の天気、<br/>調べるの大変<br/>じゃない？</h2>",
+          "    <div data-animation='animate' data-opacity='0,1' data-translate-y='15,0' data-start='0.5' data-end='1.0' data-easing='easeOut' class='bg-sky-500/10 border border-sky-400/30 rounded-xl p-4'>",
+          "      <div class='text-sky-300 text-xs mb-2 font-semibold'>入力したプロンプト</div>",
+          "      <p class='text-white text-sm leading-relaxed'>「出張スケジュールに合わせて、各地点の天気を時間ごとに並べて見たい」</p>",
+          "    </div>",
+          "    <p data-animation='animate' data-opacity='0,1' data-start='1.2' data-end='1.7' data-easing='easeOut' class='text-indigo-300 text-sm'>→ 会話だけでこの画面が作れます</p>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <img data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.3' data-end='1.0' data-easing='easeOut' src='collection-demo-assets/demo-18-timeline-clean.png' class='rounded-xl shadow-2xl' style='max-height: 660px; object-fit: contain' />",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "これを、マルモクロードの「コレクション」機能でゼロから作る流れを解説します。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": { "label": "コレクション作成デモ" },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "天気予報コレクション",
+          "subtitle": "{primary:会話だけ}で、天気チェックの仕組みを作る",
+          "chips": ["☁️ 天気予報を自動取得", "📍 複数地点を一覧表示", "🗺️ 出張タイムライン"]
+        }
+      }
+    },
+    {
+      "text": "マルモクロードの起動はとても簡単です。ターミナルで npx mulmoclaude@latest と入力するだけ。これだけでブラウザが開き、すぐに使い始めることができます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex items-center justify-center h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='text-center space-y-10 px-12'>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-4xl font-bold text-white'>起動方法</h2>",
+          "    <div data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.5' data-end='1.2' data-easing='easeOut' class='bg-gray-950 rounded-2xl p-8 border border-gray-700 max-w-2xl mx-auto shadow-2xl'>",
+          "      <div class='flex items-center gap-2 mb-4'>",
+          "        <div class='w-3 h-3 rounded-full bg-red-500'></div>",
+          "        <div class='w-3 h-3 rounded-full bg-yellow-500'></div>",
+          "        <div class='w-3 h-3 rounded-full bg-green-500'></div>",
+          "        <span class='text-gray-500 text-sm ml-2'>Terminal</span>",
+          "      </div>",
+          "      <div class='text-left font-mono'>",
+          "        <span class='text-green-400'>$</span>",
+          "        <span data-animation='animate' data-opacity='0,1' data-start='1.0' data-end='1.5' data-easing='easeOut' class='text-cyan-300 text-2xl ml-3'>npx mulmoclaude@latest</span>",
+          "      </div>",
+          "    </div>",
+          "    <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='1.8' data-end='2.3' data-easing='easeOut' class='text-indigo-300 text-lg'>インストール不要。ブラウザが開いてすぐに使えます。</p>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "では早速作っていきましょう。サイドバーの「コレクション」タブを開いて、右上の「＋ コレクション」ボタンをクリックします。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-8 space-y-4'>",
+          "    <span data-animation='animate' data-opacity='0,1' data-start='0' data-end='0.3' class='inline-block bg-sky-500/80 text-white text-xs font-bold px-3 py-1 rounded-full w-fit'>STEP 1</span>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='15,0' data-start='0.2' data-end='0.6' data-easing='easeOut' class='text-2xl font-bold text-white leading-tight'>コレクションタブを開く</h2>",
+          "    <p data-animation='animate' data-opacity='0,1' data-start='0.5' data-end='0.9' data-easing='easeOut' class='text-indigo-200/80 leading-relaxed'>右上の「＋ コレクション」ボタンをクリック</p>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <div data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.3' data-end='0.8' data-easing='easeOut' class='relative'>",
+          "      <img src='collection-demo-assets/demo-14-collections-list.png' class='rounded-xl shadow-2xl' style='max-height: 660px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-red-500 rounded-lg' style='top: 8%; right: 2%; width: 13%; height: 5%'></div>",
+          "    </div>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "新しいコレクションの作成方法を選べるモーダルが表示されました。一番上の「ガイド付きセットアップ」を選びます。何を管理したいかを質問形式で聞いてくれるモードです。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-8 space-y-4'>",
+          "    <span data-animation='animate' data-opacity='0,1' data-start='0' data-end='0.3' class='inline-block bg-sky-500/80 text-white text-xs font-bold px-3 py-1 rounded-full w-fit'>STEP 2</span>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='15,0' data-start='0.2' data-end='0.6' data-easing='easeOut' class='text-2xl font-bold text-white leading-tight'>ガイド付き<br/>セットアップを選ぶ</h2>",
+          "    <p data-animation='animate' data-opacity='0,1' data-start='0.5' data-end='0.9' data-easing='easeOut' class='text-indigo-200/80 leading-relaxed'>質問に答えるだけで<br/>コレクションを作ってくれます</p>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <div data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.3' data-end='0.8' data-easing='easeOut' class='relative'>",
+          "      <img src='collection-demo-assets/demo-15-guided-setup-modal.png' class='rounded-xl shadow-2xl' style='max-height: 660px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-red-500 rounded-lg' style='top: 21%; left: 31%; width: 19%; height: 9%'></div>",
+          "    </div>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "ガイド付きセットアップを選ぶと、何を管理したいかをフォームで聞いてくれます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-8 space-y-4'>",
+          "    <span data-animation='animate' data-opacity='0,1' data-start='0' data-end='0.3' class='inline-block bg-sky-500/80 text-white text-xs font-bold px-3 py-1 rounded-full w-fit'>STEP 3</span>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='15,0' data-start='0.2' data-end='0.6' data-easing='easeOut' class='text-2xl font-bold text-white leading-tight'>フォームに答える</h2>",
+          "    <p data-animation='animate' data-opacity='0,1' data-start='0.5' data-end='0.9' data-easing='easeOut' class='text-indigo-200/80 leading-relaxed'>どんなデータを管理したいか<br/>聞いてくれます</p>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <img data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.3' data-end='0.8' data-easing='easeOut' src='collection-demo-assets/demo-03-guided-setup-start.png' class='rounded-xl shadow-2xl' style='max-height: 660px; object-fit: contain' />",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "コレクション名は「天気予報」。出張先の天気を一覧で見たい、と伝えるだけです。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-8 space-y-4'>",
+          "    <span data-animation='animate' data-opacity='0,1' data-start='0' data-end='0.3' class='inline-block bg-sky-500/80 text-white text-xs font-bold px-3 py-1 rounded-full w-fit'>STEP 3</span>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='15,0' data-start='0.2' data-end='0.6' data-easing='easeOut' class='text-2xl font-bold text-white leading-tight'>やりたいことを伝える</h2>",
+          "    <div data-animation='animate' data-opacity='0,1' data-start='0.5' data-end='0.9' data-easing='easeOut' class='bg-sky-500/10 border border-sky-400/30 rounded-xl p-4'>",
+          "      <p class='text-white text-sm leading-relaxed'>「天気予報コレクションを作って。出張先の天気を一覧で見たい」</p>",
+          "    </div>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <img data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.3' data-end='0.8' data-easing='easeOut' src='collection-demo-assets/demo-06-form-filled-v2.png' class='rounded-xl shadow-2xl' style='max-height: 660px; object-fit: contain' />",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "すると、天気予報に必要な項目が自動で用意されました。地点名、今日の天気、最高気温、最低気温、降水確率、週間予報。全部AIが考えてくれます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-8 space-y-4'>",
+          "    <span data-animation='animate' data-opacity='0,1' data-start='0' data-end='0.3' class='inline-block bg-emerald-500/80 text-white text-xs font-bold px-3 py-1 rounded-full w-fit'>自動生成</span>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='15,0' data-start='0.2' data-end='0.6' data-easing='easeOut' class='text-2xl font-bold text-white leading-tight'>必要な項目が<br/>自動で完成</h2>",
+          "    <p data-animation='animate' data-opacity='0,1' data-start='0.5' data-end='0.9' data-easing='easeOut' class='text-indigo-200/80 leading-relaxed'>地点名・天気・気温・降水確率・<br/>週間予報まで<br/>全部AIが設計してくれます</p>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <img data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.3' data-end='0.8' data-easing='easeOut' src='collection-demo-assets/demo-07-collection-created-v2.png' class='rounded-xl shadow-2xl' style='max-height: 660px; object-fit: contain' />",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "次に「土浦・東京・盛岡の天気を取ってきて」と頼むだけ。すると3地点の天気を自動で取得して、一覧にまとめてくれました。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-8 space-y-4'>",
+          "    <span data-animation='animate' data-opacity='0,1' data-start='0' data-end='0.3' class='inline-block bg-sky-500/80 text-white text-xs font-bold px-3 py-1 rounded-full w-fit'>STEP 4</span>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='15,0' data-start='0.2' data-end='0.6' data-easing='easeOut' class='text-2xl font-bold text-white leading-tight'>天気を取ってきて</h2>",
+          "    <div data-animation='animate' data-opacity='0,1' data-start='0.5' data-end='0.9' data-easing='easeOut' class='bg-sky-500/10 border border-sky-400/30 rounded-xl p-4'>",
+          "      <p class='text-white text-sm leading-relaxed'>「土浦・東京・盛岡の天気を取ってきて」</p>",
+          "    </div>",
+          "    <p data-animation='animate' data-opacity='0,1' data-start='0.9' data-end='1.3' data-easing='easeOut' class='text-emerald-300 text-sm'>→ 3地点の天気を自動取得！</p>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <img data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.3' data-end='0.8' data-easing='easeOut' src='collection-demo-assets/demo-16-weather-table-final.png' class='rounded-xl shadow-2xl' style='max-height: 660px; object-fit: contain' />",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "各地点をクリックすると、7日間の週間予報も確認できます。盛岡の画面では、日付ごとの天気、気温、降水確率がきれいに並んでいますね。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-8 space-y-4'>",
+          "    <span data-animation='animate' data-opacity='0,1' data-start='0' data-end='0.3' class='inline-block bg-violet-500/80 text-white text-xs font-bold px-3 py-1 rounded-full w-fit'>詳細表示</span>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='15,0' data-start='0.2' data-end='0.6' data-easing='easeOut' class='text-2xl font-bold text-white leading-tight'>各地点の詳細を確認</h2>",
+          "    <p data-animation='animate' data-opacity='0,1' data-start='0.5' data-end='0.9' data-easing='easeOut' class='text-indigo-200/80 leading-relaxed'>7日間の週間予報も<br/>自動で取得されています</p>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <img data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.3' data-end='0.8' data-easing='easeOut' src='collection-demo-assets/demo-11-morioka-detail.png' class='rounded-xl shadow-2xl' style='max-height: 660px; object-fit: contain' />",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "でも出張中は、日ごとの予報だけでなく、時間帯ごとの天気も知りたいですよね。「3時間ごとの天気も出せる？」と聞いたら、別の天気サービスも組み合わせて、もっと細かいデータを取ってくれました。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex items-center justify-center h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='max-w-3xl mx-auto space-y-8 px-12'>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-4xl font-bold text-white text-center'>もっと細かい天気が知りたい</h2>",
+          "    <div class='grid grid-cols-2 gap-8 mt-8'>",
+          "      <div data-animation='animate' data-opacity='0,1' data-translate-x='-40,0' data-start='0.5' data-end='1.0' data-easing='easeOut' class='bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10'>",
+          "        <div class='text-sky-400 font-semibold text-lg mb-4'>気象庁</div>",
+          "        <div class='text-white text-3xl font-bold mb-2'>日ごとの天気</div>",
+          "        <div class='text-slate-400'>週間予報が充実</div>",
+          "      </div>",
+          "      <div data-animation='animate' data-opacity='0,1' data-translate-x='40,0' data-start='0.8' data-end='1.3' data-easing='easeOut' class='bg-green-500/10 backdrop-blur rounded-2xl p-8 border border-green-500/20'>",
+          "        <div class='text-green-400 font-semibold text-lg mb-4'>+ 海外天気サービス</div>",
+          "        <div class='text-white text-3xl font-bold mb-2'>1時間ごとの天気</div>",
+          "        <div class='text-slate-400'>気温・降水・風速も</div>",
+          "      </div>",
+          "    </div>",
+          "    <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='1.5' data-end='2.0' data-easing='easeOut' class='text-center text-indigo-300 text-lg mt-4'>→ 両方組み合わせて、いいとこ取り！</p>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "3時間ごとの天気予報が追加されました。3地点すべてに、今日と明日の細かい予報データが入っています。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-8 space-y-4'>",
+          "    <span data-animation='animate' data-opacity='0,1' data-start='0' data-end='0.3' class='inline-block bg-emerald-500/80 text-white text-xs font-bold px-3 py-1 rounded-full w-fit'>拡張完了</span>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='15,0' data-start='0.2' data-end='0.6' data-easing='easeOut' class='text-2xl font-bold text-white leading-tight'>3時間ごとの予報を追加</h2>",
+          "    <p data-animation='animate' data-opacity='0,1' data-start='0.5' data-end='0.9' data-easing='easeOut' class='text-indigo-200/80 leading-relaxed'>3地点すべてに<br/>今日と明日の<br/>細かい予報が入りました</p>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <img data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.3' data-end='0.8' data-easing='easeOut' src='collection-demo-assets/demo-12-hourly-data-complete.png' class='rounded-xl shadow-2xl' style='max-height: 660px; object-fit: contain' />",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "最後に「出張の移動に合わせて、時間ごとの天気を並べて見たい」と伝えたら、最初にお見せした出張タイムラインが完成しました。朝7時に土浦を出て、8時半に東京着、15時に東京を出て、18時に盛岡着。各時間帯の天気がひと目でわかります。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-8 space-y-4'>",
+          "    <span data-animation='animate' data-opacity='0,1' data-start='0' data-end='0.3' class='inline-block bg-amber-500/80 text-white text-xs font-bold px-3 py-1 rounded-full w-fit'>STEP 5</span>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='15,0' data-start='0.2' data-end='0.6' data-easing='easeOut' class='text-2xl font-bold text-white leading-tight'>タイムライン完成！</h2>",
+          "    <div data-animation='animate' data-opacity='0,1' data-start='0.5' data-end='0.9' data-easing='easeOut' class='bg-sky-500/10 border border-sky-400/30 rounded-xl p-4'>",
+          "      <p class='text-white text-sm leading-relaxed'>「出張の移動に合わせて、時間ごとの天気を並べて見たい」</p>",
+          "    </div>",
+          "    <p data-animation='animate' data-opacity='0,1' data-start='0.9' data-end='1.3' data-easing='easeOut' class='text-amber-300 text-sm'>→ 最初にお見せした画面が完成！</p>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <img data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.3' data-end='0.8' data-easing='easeOut' src='collection-demo-assets/demo-17-timeline-fixed.png' class='rounded-xl shadow-2xl' style='max-height: 660px; object-fit: contain' />",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "ここまでの作業、全部会話だけで完了しました。やりたいことを伝える、結果を確認する、追加の要望を言う。この繰り返しだけで、天気チェックの仕組みが完成しました。コードは一行も書いていません。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "timeline",
+          "accentColor": "primary",
+          "eyebrow": { "label": "作業の流れ" },
+          "title": "会話だけで完成",
+          "subtitle": "コード不要。やりたいことを伝えるだけ",
+          "items": [
+            { "date": "Step 1", "title": "セットアップ開始", "description": "「天気予報を管理したい」と伝える", "color": "primary", "done": true },
+            { "date": "Step 2", "title": "項目が自動で完成", "description": "必要な情報をAIが設計", "color": "accent", "done": true },
+            { "date": "Step 3", "title": "天気を取得", "description": "3地点の天気を自動で取ってくる", "color": "success", "done": true },
+            { "date": "Step 4", "title": "時間帯ごとに拡張", "description": "「もっと細かく」と言うだけ", "color": "info", "done": true },
+            { "date": "Step 5", "title": "タイムライン完成", "description": "出張スケジュールに合わせた表示", "color": "warning", "done": true }
+          ]
+        }
+      }
+    },
+    {
+      "text": "そして、ここからがさらに面白いところです。出張によく行く場所の天気を毎日自動チェック。Googleカレンダーの予定を見て、行き先の天気を自動で取得。毎朝6時にまとめて通知。こういったことが、全部できるようになります。コレクションは、作ってからが本番です。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='flex items-center justify-center h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='max-w-4xl mx-auto space-y-8 px-12'>",
+          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.6' data-easing='easeOut' class='text-4xl font-bold text-white text-center'>さらに広がる使い方</h2>",
+          "    <div class='grid grid-cols-2 gap-6 mt-10'>",
+          "      <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='0.6' data-end='1.1' data-easing='easeOut' class='bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 flex items-start gap-4'>",
+          "        <div class='text-3xl'>📍</div>",
+          "        <div>",
+          "          <div class='text-white font-semibold text-lg'>よく行く場所の天気</div>",
+          "          <div class='text-indigo-300 text-sm mt-1'>出張先・自宅・職場を登録して自動チェック</div>",
+          "        </div>",
+          "      </div>",
+          "      <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='0.9' data-end='1.4' data-easing='easeOut' class='bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 flex items-start gap-4'>",
+          "        <div class='text-3xl'>📅</div>",
+          "        <div>",
+          "          <div class='text-white font-semibold text-lg'>カレンダーと連携</div>",
+          "          <div class='text-indigo-300 text-sm mt-1'>予定の場所から天気を自動で取得</div>",
+          "        </div>",
+          "      </div>",
+          "      <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='1.2' data-end='1.7' data-easing='easeOut' class='bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 flex items-start gap-4'>",
+          "        <div class='text-3xl'>⏰</div>",
+          "        <div>",
+          "          <div class='text-white font-semibold text-lg'>毎朝6時に通知</div>",
+          "          <div class='text-indigo-300 text-sm mt-1'>今日の出張先の天気をまとめてお届け</div>",
+          "        </div>",
+          "      </div>",
+          "      <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='1.5' data-end='2.0' data-easing='easeOut' class='bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 flex items-start gap-4'>",
+          "        <div class='text-3xl'>🗾</div>",
+          "        <div>",
+          "          <div class='text-white font-semibold text-lg'>全国どこでも対応</div>",
+          "          <div class='text-indigo-300 text-sm mt-1'>場所を追加するだけで天気が増える</div>",
+          "        </div>",
+          "      </div>",
+          "    </div>",
+          "    <p data-animation='animate' data-opacity='0,1' data-scale='0.9,1' data-start='2.2' data-end='3.0' data-easing='easeOut' class='text-center text-2xl text-white font-bold mt-8'>コレクションは、作ってからが本番です。</p>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
