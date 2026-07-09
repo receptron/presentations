@@ -134,7 +134,7 @@
                   "glasses",
                   "phone",
                   "laptop",
-                  "home computer"
+                  "desktop"
                 ]
               }
             ],
@@ -375,33 +375,68 @@
       }
     },
     {
-      "text": "That is the shape of MulmoClaude. A user describes a need. The assistant grows an application. The application and data stay with the user. The phone today, and other devices later, remain windows into the same assistant.",
+      "text": "That is the shape of MulmoClaude. User describes a need. The assistant grows an application. The application and data stay with the user. The phone today, and other devices later, remain windows into the same assistant.",
       "image": {
         "type": "slide",
         "slide": {
-          "layout": "manifesto",
+          "layout": "columns",
           "eyebrow": {
             "label": "The product shape"
           },
-          "title": "A workspace for owned applications",
-          "items": [
+          "title": "The MulmoClaude loop",
+          "columns": [
             {
-              "title": "Describe a need",
-              "description": "the user speaks in ordinary language",
-              "accentColor": "info"
+              "title": "Describe",
+              "accentColor": "info",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "User describes a need."
+                }
+              ],
+              "num": 1
             },
             {
-              "title": "Grow an application",
-              "description": "the assistant crystallizes repeated work",
-              "accentColor": "primary"
+              "title": "Grow",
+              "accentColor": "primary",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "The assistant grows an application."
+                }
+              ],
+              "num": 2
             },
             {
-              "title": "Keep it yours",
-              "description": "apps, records, and memory remain in the workspace",
-              "accentColor": "success"
+              "title": "Keep",
+              "accentColor": "success",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "The application and data stay with the user."
+                }
+              ],
+              "num": 3
+            },
+            {
+              "title": "Reach",
+              "accentColor": "warning",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "Every device remains a window."
+                }
+              ],
+              "num": 4
             }
           ],
-          "columns": 3
+          "showArrows": true,
+          "callout": {
+            "text": "A workspace where recurring needs become {primary:owned applications}.",
+            "label": "The point",
+            "color": "primary",
+            "leftBar": true
+          }
         }
       }
     },

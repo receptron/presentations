@@ -10,7 +10,7 @@ That is the future every large technology company is now trying to build: an AI 
 
 The model is not the hard part. The hard part is the accumulation.
 
-## An Assistant Is Something You Raise
+## An Assistant Needs a Growth Environment
 
 For weeks I struggled to say, in one phrase, what I have been building. "Agent framework" describes the plumbing. "Personal AI" describes the market. "Local-first assistant" describes one design constraint. None of them names the thing that matters.
 
