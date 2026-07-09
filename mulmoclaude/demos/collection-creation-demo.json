@@ -35,7 +35,7 @@
   "lang": "ja",
   "beats": [
     {
-      "text": "出張で複数の場所を移動するとき、行き先ごとの天気を時間帯で調べるの、結構大変ですよね。土浦、東京、盛岡と移動するなら、それぞれの天気を調べて、時間帯ごとに整理して。マルモクロードなら、こんな出張タイムラインが会話だけで作れます。",
+      "text": "出張で複数の場所を移動するとき、行き先ごとの天気を調べるの、結構大変ですよね。移動のたびにそれぞれの天気を調べて、時間帯ごとに整理して。マルモクロードなら、こんな出張タイムラインが会話だけで作れます。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -213,7 +213,7 @@
       }
     },
     {
-      "text": "すると、天気予報に必要な項目が自動で用意されました。地点名、今日の天気、最高気温、最低気温、降水確率、週間予報。全部AIが考えてくれます。",
+      "text": "すると、天気予報に必要な項目が自動で用意されました。地点名、今日の天気、気温、降水確率、複数日の予報。全部AIが考えてくれます。しかも一番下を見てください。次にやることまで、AIのほうから提案してくれました。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -223,17 +223,21 @@
           "      <span class='bg-emerald-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>自動生成</span>",
           "      <h2 class='text-4xl font-bold text-white'>必要な項目が自動で完成</h2>",
           "    </div>",
-          "    <p class='text-indigo-300 text-2xl'>天気・気温・降水確率・週間予報まで、全部おまかせ</p>",
+          "    <p class='text-indigo-300 text-2xl'>項目の設計から、次のステップの提案までおまかせ</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
-          "    <img src='collection-demo-assets/demo-23-created-panel.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "    <div class='relative'>",
+          "      <img src='collection-demo-assets/demo-26-created-fields.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-red-500 rounded-lg' style='top: 83%; left: 1.5%; width: 96%; height: 11.5%'></div>",
+          "      <div class='absolute bg-red-500 text-white text-lg font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow-lg' style='top: 79%; right: 3%'>AIからの提案</div>",
+          "    </div>",
           "  </div>",
           "</div>"
         ]
       }
     },
     {
-      "text": "次に「土浦・東京・盛岡の天気を取ってきて」と頼むだけ。すると3地点の天気を自動で取得して、一覧にまとめてくれました。",
+      "text": "この提案に「はい、お願いします」と答えるだけ。すると3地点の天気を自動で取得して、一覧にまとめてくれました。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -241,15 +245,15 @@
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-sky-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 5</span>",
-          "      <h2 class='text-4xl font-bold text-white'>「天気を取ってきて」と頼む</h2>",
+          "      <h2 class='text-4xl font-bold text-white'>「はい、お願いします」と答えるだけ</h2>",
           "    </div>",
-          "    <p class='text-indigo-300 text-2xl'>3地点の天気を自動で取得して、一覧にまとめてくれます</p>",
+          "    <p class='text-indigo-300 text-2xl'>AIの提案に乗るだけで、3地点の天気が一覧になりました</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
           "      <img src='collection-demo-assets/demo-16-weather-table-final.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
           "      <div class='absolute bg-slate-900/90 border border-sky-400/40 rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='top: 58%; left: 50%; transform: translateX(-50%)'>",
-          "        <span class='text-sky-100 text-2xl'>💬 「土浦・東京・盛岡の天気を取ってきて」</span>",
+          "        <span class='text-sky-100 text-2xl'>💬 「はい、お願いします！」</span>",
           "      </div>",
           "    </div>",
           "  </div>",
