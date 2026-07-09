@@ -61,7 +61,7 @@
     "introPadding": 1,
     "closingPadding": 0.8,
     "outroPadding": 1,
-    "bgmVolume": 0.2,
+    "bgmVolume": 0.12,
     "audioVolume": 1,
     "suppressSpeech": false
   },
@@ -234,7 +234,7 @@
       }
     },
     {
-      "text": "But nurture creates dependence. If the assistant becomes useful because it knows your data, preferences, workflows, and the applications it built for you, then whoever controls that accumulation controls the assistant. Memory is not just a feature. It is where lock-in compounds.",
+      "text": "But nurture creates dependence. If the assistant's memory, data, workflows, and applications live inside one service provider, then the provider controls the accumulation. The longer you use it, the harder it becomes to switch. Memory is not just a feature. It is where lock-in compounds.",
       "image": {
         "type": "slide",
         "slide": {
@@ -243,56 +243,14 @@
           "eyebrow": {
             "label": "The lock-in problem"
           },
-          "quote": "Whoever controls the {warning:accumulation} controls the assistant.",
-          "author": "Memory is not just a feature",
-          "role": "It is where lock-in compounds"
+          "quote": "If one service provider controls the {warning:accumulation}, it controls the assistant.",
+          "author": "The risk of a hosted assistant",
+          "role": "The longer you use it, the harder it becomes to switch"
         }
       }
     },
     {
-      "text": "We already know rented software. The redesign you did not ask for. The pivot. The price change. The shutdown. Now raise the stakes. If your assistant changes direction, you risk losing the accumulated shape of the thing that organizes your life.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "grid",
-          "eyebrow": {
-            "label": "Rented software, raised stakes",
-            "color": "danger"
-          },
-          "title": "The familiar pattern gets more serious",
-          "gridColumns": 4,
-          "items": [
-            {
-              "title": "Redesign",
-              "description": "you did not ask for",
-              "icon": "🎨",
-              "accentColor": "warning"
-            },
-            {
-              "title": "Pivot",
-              "description": "your workflow disappears",
-              "icon": "🔀",
-              "accentColor": "warning"
-            },
-            {
-              "title": "Price change",
-              "description": "their strategy, your bill",
-              "icon": "💸",
-              "accentColor": "warning"
-            },
-            {
-              "title": "Shutdown",
-              "description": "on their schedule",
-              "icon": "⏹️",
-              "accentColor": "danger"
-            }
-          ],
-          "footer": "Nurture only pays if the result belongs to the person who did the nurturing."
-        }
-      }
-    },
-    {
-      "text": "MulmoClaude is my attempt to create that growth environment. Its design rests on three constraints: regular users can grow small database applications, the applications and data live on the user's computer, and remote access is a window into that assistant, not a move to the cloud.",
+      "text": "MulmoClaude is my attempt to avoid that lock-in by creating a growth environment the user owns. Its design rests on three constraints: regular users can grow small database applications, the applications and data live on the user's computer, and remote access is a window into that assistant, not a move to the cloud.",
       "image": {
         "type": "slide",
         "slide": {
@@ -301,7 +259,7 @@
             "label": "The MulmoClaude answer",
             "color": "primary"
           },
-          "title": "A growth environment, with three constraints",
+          "title": "Avoid lock-in with a user-owned growth environment",
           "items": [
             {
               "title": "Grow apps by describing needs",
@@ -402,7 +360,7 @@
       }
     },
     {
-      "text": "Third: the phone should work from anywhere, but the assistant's self should stay home. MulmoClaude uses a relay for commands and results. The phone sends an errand. The user's machine does the work. The relay carries the errand; it does not become the assistant.",
+      "text": "Third: remote devices should be windows into the assistant, but the assistant's self should stay home. Today that window is the phone. In the future, it can be smart glasses, a smart headset, or whatever device is closest. The user's machine does the work. The relay carries the errand; it does not become the assistant.",
       "image": {
         "type": "slide",
         "slide": {
@@ -410,14 +368,14 @@
           "eyebrow": {
             "label": "Constraint 3"
           },
-          "quote": "Remote access should make the phone a {primary:window}, not move the assistant into the cloud.",
+          "quote": "Remote access should make each device a {primary:window}, not move the assistant into the cloud.",
           "author": "The relay carries errands",
-          "role": "The assistant's self stays in the user's workspace"
+          "role": "Phone today. Smart glasses, headsets, and other surfaces tomorrow."
         }
       }
     },
     {
-      "text": "That is the shape of MulmoClaude. A user describes a need. The assistant grows an application. The application and data stay with the user. The phone remains a window into the same assistant.",
+      "text": "That is the shape of MulmoClaude. A user describes a need. The assistant grows an application. The application and data stay with the user. The phone today, and other devices later, remain windows into the same assistant.",
       "image": {
         "type": "slide",
         "slide": {
