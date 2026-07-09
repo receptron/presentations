@@ -1,7 +1,9 @@
 # Article Series Plan — "Beyond the Sea of App Icons"
 
 **Status**: Planning. Created 2026-07-08.
-**Deliverables**: 6 Markdown articles (this folder) + 6 companion MulmoScript presentations (`mulmoclaude/vision/*.json`).
+**Deliverables**: 1 MulmoClaude vision document (`VISION.md`) + 6 Markdown
+articles (this folder) + 6 companion MulmoScript presentations
+(`mulmoclaude/vision/*.json`).
 
 **Context** (self-contained — this plan should work in a fresh session):
 Satoshi Nakajima is publishing a public series articulating his AI-native
@@ -497,6 +499,12 @@ the fork-is-cp-r slide, the closing restatement.
 
 ## Status (2026-07-08)
 
+**Front door**: `VISION.md` — **The Assistant You Nurture** — is the MulmoClaude
+vision document. It should be treated as the first thing to show someone who
+asks what MulmoClaude is for: not an agent framework, but a tool for nurturing
+an AI assistant whose accumulation belongs to the user. The six-part series
+below supplies the technical and economic argument behind that vision.
+
 **All six articles AND all six companion MulmoScripts are DRAFTED**, validated
 (6/6 via `npm test`), and cross-verified (naming, quotable uniqueness, pillar
 consistency, "Part N of 6" identity, cross-references). Article 6 includes the
@@ -506,7 +514,7 @@ scripts are gone: `dsls-as-harnesses.json` and
 `gui-chat-protocol.json` was deleted (superseded by `chat-needs-a-canvas.json`;
 CLAUDE.md's reference-example pointer updated to
 `beyond-the-sea-of-app-icons.json`). Remaining: Satoshi's review pass of all
-twelve artifacts, video rendering (`npm run movie`) per script after review,
+thirteen artifacts, video rendering (`npm run movie`) per script after review,
 and the four open decisions in the header.
 
 ## Standalone — The Assistant You Own

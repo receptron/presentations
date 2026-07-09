@@ -1,6 +1,6 @@
 # The Assistant You Nurture
 
-*A standalone essay on what an AI assistant actually is — and how one comes to exist.*
+*The vision of MulmoClaude: an AI assistant is not something you buy, but something you nurture.*
 
 For weeks I struggled to say, in one phrase, what I have been building. "Agent framework" describes the plumbing. "Personal AI" describes the customer. The phrase I finally landed on is this: **a tool for nurturing an AI assistant.** Every word in it is doing work, and "nurturing" is doing the most.
 
