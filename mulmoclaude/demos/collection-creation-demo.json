@@ -39,7 +39,7 @@
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class='flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='w-2/5 flex flex-col justify-center px-10 space-y-6'>",
           "    <h2 class='text-4xl font-semibold text-white leading-snug'>出張のたびに、<br/>行き先ごとの天気を<br/>調べていませんか？</h2>",
           "    <div class='bg-sky-500/10 border border-sky-400/30 rounded-xl p-5'>",
@@ -49,8 +49,9 @@
           "    <p class='text-indigo-300 text-xl'>→ 会話だけでこの画面が作れます</p>",
           "  </div>",
           "  <div class='w-3/5 flex items-center justify-center p-4'>",
-          "    <img src='collection-demo-assets/demo-20-timeline-hero.png' class='rounded-xl shadow-2xl' style='max-height: 640px; object-fit: contain' />",
+          "    <img src='collection-demo-assets/demo-31-timeline-hero-1280.png' class='rounded-xl shadow-2xl' style='max-height: 640px; object-fit: contain' />",
           "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>1 / 16</div>",
           "</div>"
         ]
       }
@@ -75,7 +76,7 @@
         "type": "html_tailwind",
         "animation": true,
         "html": [
-          "<div class='flex items-center justify-center h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex items-center justify-center h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='text-center space-y-10 px-12'>",
           "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold text-white'>起動方法</h2>",
           "    <div data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.5' data-end='1.2' data-easing='easeOut' class='bg-gray-950 rounded-2xl p-10 border border-gray-700 max-w-2xl mx-auto shadow-2xl'>",
@@ -92,6 +93,7 @@
           "    </div>",
           "    <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='1.8' data-end='2.3' data-easing='easeOut' class='text-indigo-300 text-2xl'>インストール不要。ブラウザが開いてすぐに使えます。</p>",
           "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>3 / 16</div>",
           "</div>"
         ]
       }
@@ -101,7 +103,7 @@
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class='flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-sky-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 1</span>",
@@ -109,13 +111,19 @@
           "    </div>",
           "    <p class='text-indigo-300 text-2xl'>機能はすべて画面上部のツールバーに並んでいます</p>",
           "  </div>",
-          "  <div class='flex-1 flex flex-col items-center justify-center px-6 pb-6'>",
-          "    <div class='relative'>",
-          "      <img src='collection-demo-assets/demo-19-toolbar-zoom.png' class='rounded-xl shadow-2xl' style='width: 1050px' />",
+          "  <div class='flex-1 flex flex-col items-center justify-center px-6 pb-4'>",
+          "    <div class='relative mb-12'>",
+          "      <img src='collection-demo-assets/demo-19-toolbar-zoom.png' class='rounded-xl shadow-2xl' style='width: 1000px' />",
           "      <div class='absolute border-4 border-red-500 rounded-lg' style='top: 4%; left: 57.5%; width: 5.6%; height: 88%'></div>",
-          "      <div class='absolute text-red-400 text-2xl font-bold whitespace-nowrap' style='top: 130%; left: 53%'>↑ この「コレクション」ボタンをクリック</div>",
+          "      <div class='absolute text-red-400 text-2xl font-bold whitespace-nowrap' style='top: 118%; left: 50%'>↑ この「コレクション」ボタンをクリック</div>",
+          "    </div>",
+          "    <div class='relative mt-10'>",
+          "      <img src='collection-demo-assets/demo-28-collections-1280.png' class='rounded-xl shadow-2xl' style='max-height: 320px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-sky-400 rounded-lg' style='top: 0%; left: 0%; width: 60.5%; height: 7.4%'></div>",
+          "      <div class='absolute text-sky-300 text-xl font-semibold whitespace-nowrap' style='top: -13%; left: 18%'>⬆ この部分を拡大しています</div>",
           "    </div>",
           "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>4 / 16</div>",
           "</div>"
         ]
       }
@@ -125,7 +133,7 @@
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class='flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-sky-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 2</span>",
@@ -135,10 +143,11 @@
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
-          "      <img src='collection-demo-assets/demo-14-collections-list.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "      <div class='absolute border-2 border-red-500 rounded-lg' style='top: 7%; left: 68%; width: 10%; height: 5%'></div>",
+          "      <img src='collection-demo-assets/demo-28-collections-1280.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-red-500 rounded-lg' style='top: 9%; left: 74.4%; width: 11.4%; height: 7%'></div>",
           "    </div>",
           "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>5 / 16</div>",
           "</div>"
         ]
       }
@@ -148,7 +157,7 @@
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class='flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-sky-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 3</span>",
@@ -158,20 +167,48 @@
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
-          "      <img src='collection-demo-assets/demo-21-guided-modal.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "      <div class='absolute border-2 border-red-500 rounded-lg' style='top: 11%; left: 2.5%; width: 47%; height: 14.5%'></div>",
+          "      <img src='collection-demo-assets/demo-32-guided-modal-bg.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-red-500 rounded-lg' style='top: 17.5%; left: 24.4%; width: 26%; height: 16.5%'></div>",
           "    </div>",
           "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>6 / 16</div>",
           "</div>"
         ]
       }
     },
     {
-      "text": "フォームが表示されるので、やりたいことを書いていきます。コレクション名は「天気予報」。内容は、場所ごと・時間帯ごとの天気を管理したい。出張で移動するので、複数の場所の天気を一覧で確認したい。これだけです。",
+      "text": "ガイド付きセットアップを選ぶと、画面はこう変わります。左側がAIとの会話。そして、やり取りの結果がすぐ右横に表示される仕組みです。今回は、何を管理したいかを聞くフォームが出てきました。作業はぜんぶ、この一つの画面で完結します。",
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class='flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-indigo-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>画面の見方</span>",
+          "      <h2 class='text-4xl font-bold text-white'>左で会話すると、右に画面が出る</h2>",
+          "    </div>",
+          "    <p class='text-indigo-300 text-2xl'>やり取りはぜんぶ、この一つの画面で完結します</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='collection-demo-assets/demo-33-chat-form-1280.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-sky-400 rounded-lg' style='top: 14.5%; left: 0.4%; width: 24.6%; height: 84%'></div>",
+          "      <div class='absolute bg-sky-500 text-white text-xl font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg' style='top: 10.5%; left: 1.5%'>① 左で会話</div>",
+          "      <div class='absolute border-4 border-emerald-400 rounded-lg' style='top: 14.5%; left: 26.2%; width: 73%; height: 84%'></div>",
+          "      <div class='absolute bg-emerald-500 text-white text-xl font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg' style='top: 10.5%; left: 27.5%'>② 結果がすぐ横に表示される</div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>7 / 16</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "このフォームに、やりたいことを書いていきます。コレクション名は「天気予報」。内容は、場所ごと・時間帯ごとの天気を管理したい。出張で移動するので、複数の場所の天気を一覧で確認したい。これだけです。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-sky-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 4</span>",
@@ -182,32 +219,7 @@
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <img src='collection-demo-assets/demo-22-form-panel.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
           "  </div>",
-          "</div>"
-        ]
-      }
-    },
-    {
-      "text": "フォームを送ったら、あとは会話で進んでいきます。左側のチャットでやり取りすると、その結果がすぐ右横の画面に表示されます。作業はぜんぶ、この一つの画面で完結します。",
-      "image": {
-        "type": "html_tailwind",
-        "html": [
-          "<div class='flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
-          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
-          "    <div class='flex items-center gap-4'>",
-          "      <span class='bg-indigo-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>会話で進行</span>",
-          "      <h2 class='text-4xl font-bold text-white'>左で会話すると、右に結果が出る</h2>",
-          "    </div>",
-          "    <p class='text-indigo-300 text-2xl'>やり取りはぜんぶ、この一つの画面で完結します</p>",
-          "  </div>",
-          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
-          "    <div class='relative'>",
-          "      <img src='collection-demo-assets/demo-07-collection-created-v2.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "      <div class='absolute border-4 border-sky-400 rounded-lg' style='top: 10.5%; left: 0.3%; width: 18.5%; height: 88%'></div>",
-          "      <div class='absolute bg-sky-500 text-white text-xl font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg' style='top: 6%; left: 1.5%'>① 会話で頼む</div>",
-          "      <div class='absolute border-4 border-emerald-400 rounded-lg' style='top: 17%; left: 36%; width: 46%; height: 79%'></div>",
-          "      <div class='absolute bg-emerald-500 text-white text-xl font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg' style='top: 12.5%; left: 37.5%'>② 結果がすぐ横に表示される</div>",
-          "    </div>",
-          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>8 / 16</div>",
           "</div>"
         ]
       }
@@ -217,7 +229,7 @@
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class='flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-emerald-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>自動生成</span>",
@@ -232,6 +244,7 @@
           "      <div class='absolute bg-red-500 text-white text-lg font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow-lg' style='top: 79%; right: 3%'>AIからの提案</div>",
           "    </div>",
           "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>9 / 16</div>",
           "</div>"
         ]
       }
@@ -241,7 +254,7 @@
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class='flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-sky-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 5</span>",
@@ -251,12 +264,13 @@
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
-          "      <img src='collection-demo-assets/demo-16-weather-table-final.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "      <img src='collection-demo-assets/demo-29-weather-table-1280.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
           "      <div class='absolute bg-slate-900/90 border border-sky-400/40 rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='top: 58%; left: 50%; transform: translateX(-50%)'>",
           "        <span class='text-sky-100 text-2xl'>💬 「はい、お願いします！」</span>",
           "      </div>",
           "    </div>",
           "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>10 / 16</div>",
           "</div>"
         ]
       }
@@ -266,7 +280,7 @@
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class='flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-violet-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>詳細表示</span>",
@@ -277,6 +291,7 @@
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <img src='collection-demo-assets/demo-24-detail-modal.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
           "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>11 / 16</div>",
           "</div>"
         ]
       }
@@ -287,7 +302,7 @@
         "type": "html_tailwind",
         "animation": true,
         "html": [
-          "<div class='flex items-center justify-center h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex items-center justify-center h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='max-w-4xl mx-auto space-y-8 px-12'>",
           "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold text-white text-center'>もっと細かい天気が知りたい</h2>",
           "    <div class='grid grid-cols-2 gap-8 mt-8'>",
@@ -304,6 +319,7 @@
           "    </div>",
           "    <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='1.5' data-end='2.0' data-easing='easeOut' class='text-center text-indigo-300 text-2xl mt-4'>→ 作った後でも、両方組み合わせていいとこ取り！</p>",
           "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>12 / 16</div>",
           "</div>"
         ]
       }
@@ -313,7 +329,7 @@
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class='flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-emerald-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>後から拡張</span>",
@@ -324,6 +340,7 @@
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <img src='collection-demo-assets/demo-25-hourly-modal.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
           "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>13 / 16</div>",
           "</div>"
         ]
       }
@@ -333,7 +350,7 @@
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class='flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-amber-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 6</span>",
@@ -343,12 +360,13 @@
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
-          "      <img src='collection-demo-assets/demo-27-timeline-view.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "      <div class='absolute bg-slate-900/90 border border-sky-400/40 rounded-2xl px-6 py-4 shadow-xl' style='top: 38%; left: 60%; width: 36%'>",
+          "      <img src='collection-demo-assets/demo-30-timeline-1280.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "      <div class='absolute bg-slate-900/90 border border-sky-400/40 rounded-2xl px-6 py-4 shadow-xl' style='top: 38%; left: 71%; width: 27%'>",
           "        <span class='text-sky-100 text-2xl leading-relaxed'>💬 「出張の移動に合わせて、時間ごとの天気を並べて見たい」</span>",
           "      </div>",
           "    </div>",
           "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>14 / 16</div>",
           "</div>"
         ]
       }
@@ -359,7 +377,7 @@
         "type": "html_tailwind",
         "animation": true,
         "html": [
-          "<div class='flex flex-col items-center justify-center h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex flex-col items-center justify-center h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold text-white mb-12'>会話だけで完成</h2>",
           "  <div class='w-full max-w-5xl space-y-5 px-12'>",
           "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='0.4' data-end='0.8' data-easing='easeOut' class='flex items-center gap-6'>",
@@ -394,17 +412,18 @@
           "    </div>",
           "  </div>",
           "  <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='2.0' data-end='2.5' data-easing='easeOut' class='text-indigo-200/70 text-2xl mt-12'>コード不要。作った後も、会話で育てられます。</p>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>15 / 16</div>",
           "</div>"
         ]
       }
     },
     {
-      "text": "出張によく行く場所の天気を毎日自動チェック。Googleカレンダーの予定を見て、行き先の天気を自動で取得。毎朝6時にまとめて通知。こういったことが全部できるようになります。コレクションは作りっきりではなく、後からいつでも、会話で変更できます。作ってからが本番です。ぜひ、皆さんも試してみてください。",
+      "text": "出張によく行く場所の天気を毎日自動チェック。Googleカレンダーの予定を見て、行き先の天気を自動で取得。毎朝6時にまとめて通知。こういったことが全部できるようになります。コレクションは作って終わりではありません。会話しながら、いくらでも育てていけます。作ってからが本番です。ぜひ、皆さんも試してみてください。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
-          "<div class='flex flex-col items-center justify-center h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
+          "<div class='relative flex flex-col items-center justify-center h-full' style='background: linear-gradient(135deg, #0A0F24, #111A3A 55%, #16224D)'>",
           "  <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.6' data-easing='easeOut' class='text-5xl font-bold text-white mb-12'>さらに広がる使い方</h2>",
           "  <div class='grid grid-cols-2 gap-6 max-w-5xl px-12'>",
           "    <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='0.6' data-end='1.1' data-easing='easeOut' class='bg-white/5 backdrop-blur rounded-2xl p-7 border border-white/10 flex items-start gap-5'>",
@@ -429,14 +448,15 @@
           "      </div>",
           "    </div>",
           "    <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='1.5' data-end='2.0' data-easing='easeOut' class='bg-white/5 backdrop-blur rounded-2xl p-7 border border-white/10 flex items-start gap-5'>",
-          "      <div class='text-4xl'>🔄</div>",
+          "      <div class='text-4xl'>🌱</div>",
           "      <div>",
-          "        <div class='text-white font-semibold text-3xl'>後からいつでも変更</div>",
-          "        <div class='text-indigo-300 text-xl mt-2'>項目もビューも、会話で育てられる</div>",
+          "        <div class='text-white font-semibold text-3xl'>作った後も、育てられる</div>",
+          "        <div class='text-indigo-300 text-xl mt-2'>項目もビューも、会話ひとつで</div>",
           "      </div>",
           "    </div>",
           "  </div>",
           "  <p data-animation='animate' data-opacity='0,1' data-scale='0.9,1' data-start='2.2' data-end='3.0' data-easing='easeOut' class='text-center text-4xl text-white font-bold mt-12'>ぜひ、試してみてください！</p>",
+          "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>16 / 16</div>",
           "</div>"
         ]
       }
