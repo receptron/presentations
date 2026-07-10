@@ -240,7 +240,7 @@
       }
     },
     {
-      "text": "That is the reason I began building MulmoClaude: to make it possible to grow an AI assistant while keeping its data, applications, and memory under the user's control. But control does not mean buying a finished assistant. An AI assistant is something you nurture. When you first install MulmoClaude, it has no accumulated data and no personal applications. As it stands, it cannot yet play the role of your AI assistant.",
+      "text": "That is why MulmoClaude starts from a different premise. I do not want an AI assistant to be something you rent inside someone else's service. I want it to be something that grows in a place the user controls, with its memory, data, and applications kept within reach. When you first install MulmoClaude, it is empty: no history, no personal apps, no accumulated knowledge. It becomes your assistant only as you grow it.",
       "image": {
         "type": "slide",
         "slide": {
@@ -248,7 +248,7 @@
           "eyebrow": {
             "label": "Why MulmoClaude exists"
           },
-          "quote": "The assistant you depend on should be one you can {primary:nurture and control}.",
+          "quote": "An AI assistant should not be rented. It should be {primary:grown under your control}.",
           "author": "The starting point of MulmoClaude",
           "role": "It is fine to start empty. You grow it from there."
         }
