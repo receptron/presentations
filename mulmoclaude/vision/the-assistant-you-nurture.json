@@ -240,15 +240,15 @@
       }
     },
     {
-      "text": "This is where the feeling of nurturing an AI assistant becomes important. An AI assistant is not a finished product you buy somewhere. It is something you grow. When you first install MulmoClaude, it has no accumulated data and no personal applications. As it stands, it cannot yet play the role of your AI assistant.",
+      "text": "That is the reason I began building MulmoClaude: to make it possible to grow an AI assistant while keeping its data, applications, and memory under the user's control. But control does not mean buying a finished assistant. An AI assistant is something you nurture. When you first install MulmoClaude, it has no accumulated data and no personal applications. As it stands, it cannot yet play the role of your AI assistant.",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "bigQuote",
           "eyebrow": {
-            "label": "The central idea"
+            "label": "Why MulmoClaude exists"
           },
-          "quote": "An AI assistant is not a finished product you buy. It is something you {primary:nurture}.",
+          "quote": "The assistant you depend on should be one you can {primary:nurture and control}.",
           "author": "The starting point of MulmoClaude",
           "role": "It is fine to start empty. You grow it from there."
         }
