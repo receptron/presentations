@@ -70,7 +70,7 @@
   "lang": "en",
   "beats": [
     {
-      "text": "Last week, I wrote that I was still trying to find the right words for what MulmoClaude is. I think I have found them: an AI assistant nurturing tool. An AI assistant is not a finished product you buy. It is something you nurture for yourself.",
+      "text": "What if you had an AI assistant that knew everything about you and stood by your side around the clock, supporting both your work and your life — how would your days change? Here is the thing: such an assistant is not sold anywhere. You cannot buy one. There is only one way to get one: nurture it yourself. Today, I want to talk about how.",
       "image": {
         "type": "slide",
         "slide": {
@@ -93,50 +93,7 @@
       }
     },
     {
-      "text": "By AI assistant, I mean an AI that stays with us all day and helps across work and everyday life. That is different from an AI agent, which performs a specific task on a person's behalf. In human terms, an AI assistant is closer to a secretary or a butler. An AI agent is closer to a lawyer, a cook, or a gardener.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "comparison",
-          "eyebrow": {
-            "label": "First, separate the words"
-          },
-          "title": "An assistant is not an agent",
-          "left": {
-            "title": "AI Assistant",
-            "accentColor": "primary",
-            "content": [
-              {
-                "type": "bullets",
-                "items": [
-                  "Stays beside you all day",
-                  "Helps broadly across work and life",
-                  "Closer to a secretary or butler"
-                ]
-              }
-            ],
-            "footer": "Understands the person"
-          },
-          "right": {
-            "title": "AI Agent",
-            "accentColor": "accent",
-            "content": [
-              {
-                "type": "bullets",
-                "items": [
-                  "Performs a specific task",
-                  "Acts toward a defined goal",
-                  "Closer to a lawyer, cook, or gardener"
-                ]
-              }
-            ],
-            "footer": "Completes a job"
-          }
-        }
-      }
-    },
-    {
-      "text": "When people hear AI assistant, many picture smart glasses. But smart glasses are only one device for accessing the assistant. A phone, a watch, and a desktop are also doorways. The assistant itself should not be trapped inside one particular device.",
+      "text": "When people hear \"AI assistant,\" many picture smart glasses, or Siri and Alexa. But those are just entry points. Just as the person you are talking to does not live inside your phone, the substance of an assistant does not live inside a device. From your smartphone, your smartwatch, or your computer, you reach the same assistant. That is how it should be.",
       "image": {
         "type": "slide",
         "slide": {
@@ -172,12 +129,12 @@
               "accentColor": "success"
             }
           ],
-          "footer": "What matters is reaching the same assistant from every doorway."
+          "footer": "Just as the person you talk to does not live inside your phone, the assistant does not live inside a device."
         }
       }
     },
     {
-      "text": "There is another important point. The substance of an AI assistant is not the AI model itself, such as GPT or Claude. The model is the engine. To do good work, the assistant has to know the person well: past conversations, calendar, contacts, to-do lists, email, meeting notes, journals, and even the apps that person uses.",
+      "text": "Then what is the substance of an assistant? You might think it is the AI model itself — GPT or Claude — but that is not it either. The model is just the engine. To do good work, an assistant has to know you well: your past conversations, your calendar, your address book, your to-do lists, your email, your meeting notes, your journal, and even the apps you use.",
       "image": {
         "type": "slide",
         "slide": {
@@ -192,7 +149,7 @@
       }
     },
     {
-      "text": "It makes sense that OpenAI and Anthropic are investing in memory. Meta and Google, which already hold a great deal of user data, are looking at the same place. The value of an AI assistant is not only in the model. It is in the data and applications accumulated around one person.",
+      "text": "The companies building AI understand this very well. It is no coincidence that ChatGPT and Claude keep adding features that remember things about you. Meta, which already holds vast amounts of user data through Facebook and Instagram, and Google, which holds Gmail and your calendar, have joined the same race. The value of an AI assistant is determined not by how smart the model is, but by how much it knows about you. Every one of these companies has realized that.",
       "image": {
         "type": "slide",
         "slide": {
@@ -224,7 +181,7 @@
       }
     },
     {
-      "text": "But I do not think it is wise to entrust something as important as an AI assistant to a single service provider, especially when it will keep accumulating your personal data and applications. The longer you use it, the more painful switching becomes. Eventually, you may find yourself unable to leave that service at all.",
+      "text": "But something as important as an AI assistant — one that accumulates your personal data and apps — is not something you should entrust to any single service provider. The longer you use it, the harder it becomes to move to another service, until you can never leave at all.",
       "image": {
         "type": "slide",
         "slide": {
@@ -233,14 +190,14 @@
           "eyebrow": {
             "label": "The lock-in problem"
           },
-          "quote": "The longer you use it, the more painful switching becomes.",
+          "quote": "The longer you use it, the harder it becomes to leave — until you cannot.",
           "author": "The risk of depending on one service",
           "role": "If someone else owns the accumulation, they own the assistant"
         }
       }
     },
     {
-      "text": "That is why MulmoClaude starts from a different premise. I do not want an AI assistant to be something you rent inside someone else's service. I want it to be something that grows in a place the user controls, with its memory, data, and applications kept within reach. When you first install MulmoClaude, it is empty: no history, no personal apps, no accumulated knowledge. It becomes your assistant only as you grow it.",
+      "text": "This is why I started building a piece of software called MulmoClaude. MulmoClaude is open source, so there is no risk of being locked in by any single company. If you nurture your assistant inside someone else's service, your memories, your data, and your apps accumulate inside that service. I wanted the accumulation to stay in the user's own hands. What MulmoClaude makes possible is nurturing an AI assistant on your own computer. An assistant you do not hand over to anyone — one you nurture in your own hands, yours alone.",
       "image": {
         "type": "slide",
         "slide": {
@@ -248,14 +205,14 @@
           "eyebrow": {
             "label": "Why MulmoClaude exists"
           },
-          "quote": "An AI assistant should not be rented. It should be {primary:grown under your control}.",
+          "quote": "An assistant nurtured {primary:in your own hands}.",
           "author": "The starting point of MulmoClaude",
-          "role": "It is fine to start empty. You grow it from there."
+          "role": "Open source. What accumulates stays yours."
         }
       }
     },
     {
-      "text": "To nurture an assistant, you need an environment. A place where memory can accumulate. A place to keep data. A place to create personal applications. A place where, through natural language conversation, you can keep adding the tools you need. MulmoClaude is my attempt to create a growth environment for an AI assistant.",
+      "text": "Nurturing takes an environment. A place to accumulate memories. A place to keep your data. A place to build apps just for you. A place where you can grow your set of tools simply by talking in everyday words. MulmoClaude is, so to speak, a garden for nurturing your AI assistant. Right after you install it, the garden is still empty. You plant seeds and tend the soil, and grow an assistant that is yours alone.",
       "image": {
         "type": "slide",
         "slide": {
@@ -263,7 +220,7 @@
           "eyebrow": {
             "label": "MulmoClaude's answer"
           },
-          "title": "A growth environment for an AI assistant",
+          "title": "A garden for nurturing your AI assistant",
           "items": [
             {
               "title": "Accumulate memory",
@@ -282,63 +239,35 @@
             }
           ],
           "columns": 3,
-          "footer": "The harness is part of this environment. The point is the place where the assistant can grow."
+          "footer": "The garden starts empty. Plant seeds, tend the soil, and grow."
         }
       }
     },
     {
-      "text": "With MulmoClaude, you can nurture an AI assistant on your own computer. Its substance accumulates there. The data, the applications, and the memory are yours. If you use GitHub for backup and version control, you can make that foundation even safer.",
+      "text": "You talk with the AI running inside MulmoClaude, build apps just for yourself, and accumulate all kinds of data. That, I believe, is the right way to nurture an AI assistant. And building apps requires no programming knowledge. When programmers have AI write code for them, they call it \"vibe coding\" — but with MulmoClaude, you never have to think about code at all. You simply say \"I want something like this,\" and the AI builds the app you need.",
       "image": {
         "type": "slide",
         "slide": {
-          "layout": "comparison",
+          "layout": "bigQuote",
           "eyebrow": {
-            "label": "Where it accumulates"
+            "label": "No programming needed"
           },
-          "title": "Grow it on your computer, not inside a service",
-          "left": {
-            "title": "Inside a service",
-            "accentColor": "danger",
-            "content": [
-              {
-                "type": "bullets",
-                "items": [
-                  "The data lives elsewhere",
-                  "The apps live elsewhere",
-                  "Leaving gets more painful over time"
-                ]
-              }
-            ],
-            "footer": "Accumulation becomes lock-in"
-          },
-          "right": {
-            "title": "On your computer",
-            "accentColor": "success",
-            "content": [
-              {
-                "type": "bullets",
-                "items": [
-                  "The data is yours",
-                  "The apps are yours",
-                  "Backup and version control are possible"
-                ]
-              }
-            ],
-            "footer": "You control its future"
-          }
+          "quote": "You just say \"I want something like this,\" and the AI builds the app you need.",
+          "author": "You never have to think about code",
+          "role": "A step beyond programmers' \"vibe coding\""
         }
       }
     },
     {
-      "text": "Inside MulmoClaude, you talk with the AI in natural language, create applications for yourself, and accumulate many kinds of data. I think that is the right way to grow an AI assistant. A restaurant list, an invoice tracker, a vocabulary practice tool. Each one is a small application for one person.",
+      "text": "A restaurant list, an invoice tracker, vocabulary practice. Each one is a small app for an audience of one. Until recently, building an app for a single person was unthinkable — the cost was far too high. This is a world that became possible only because AI has driven the cost of software development close to zero.",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "grid",
           "eyebrow": {
-            "label": "How it grows"
+            "label": "For an audience of one"
           },
-          "title": "From conversation to personal apps",
+          "title": "Small apps for an audience of one",
           "gridColumns": 3,
           "items": [
             {
@@ -360,12 +289,12 @@
               "accentColor": "accent"
             }
           ],
-          "footer": "Add the tools you need through conversation, without writing code."
+          "footer": "A world possible only because AI drove the cost of software development close to zero."
         }
       }
     },
     {
-      "text": "Of course, an assistant should not only be usable when you are sitting in front of your computer. With MulmoClaude, if you log in with the same ID from both your computer and your phone, you can communicate with the AI assistant living on your computer even when you are away from home. The server only relays the request. It does not store your data or applications. That is how you can safely reach the same assistant from outside. In the future, smart glasses and smart headsets can become the same kind of doorway.",
+      "text": "Of course, an assistant should not be useful only while you are sitting at your computer. With MulmoClaude, if you log in with the same ID from both your computer and your smartphone, you can talk to the AI assistant living on your computer even when you are away from home. The server only relays messages — it keeps no data and no apps. That is why you can safely reach the same assistant from outside. In the future, smart glasses and smart headsets will connect to the same assistant, too.",
       "image": {
         "type": "slide",
         "slide": {
@@ -397,7 +326,7 @@
       }
     },
     {
-      "text": "AI will clearly become more and more important. And there will be a large gap between people who can use AI well and people who cannot. I do not think that gap will be decided simply by who can rent a smarter model. It will be decided by who can nurture an AI assistant that understands them.",
+      "text": "As AI becomes ever more important, a wide gap will open between people who can make full use of it and people who cannot. That gap will be decided not by whether you can rent a smart model, but by whether you can nurture an AI assistant that understands you. Nurturing an assistant raises your own productivity — and your value to society.",
       "image": {
         "type": "slide",
         "slide": {
@@ -407,12 +336,12 @@
           },
           "quote": "The gap will not come from renting a smarter model. It will come from {primary:nurturing an AI assistant that understands you}.",
           "author": "Move to the side that can use AI well",
-          "role": "Data - apps - memory - work style"
+          "role": "Nurturing raises your productivity — and your value to society"
         }
       }
     },
     {
-      "text": "Please install MulmoClaude and start nurturing your own AI assistant. It is fine to begin with nothing. Start the accumulation on your own computer.",
+      "text": "So install MulmoClaude and nurture your own AI assistant. An assistant that knows everything about you and supports you around the clock is not sold anywhere. But you can nurture one. Start the accumulation today, on your own computer.",
       "image": {
         "type": "slide",
         "slide": {
