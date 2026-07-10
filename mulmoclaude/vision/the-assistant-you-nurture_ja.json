@@ -366,83 +366,34 @@
       }
     },
     {
-      "text": "もちろん、アシスタントはパソコンの前にいる時だけ使えれば良いわけではありません。今はスマートフォンからアクセスできます。将来はスマートグラスやスマートヘッドセットからもアクセスできるべきです。ただし、それらはあくまで窓です。アシスタントの実体は、自分のコンピューターに残ります。",
+      "text": "もちろん、アシスタントはパソコンの前にいる時だけ使えれば良いわけではありません。MulmoClaudeでは、自分のパソコンとスマートフォンの両方から同じIDでログインすれば、家の外からでもパソコンの中にいるAIアシスタントと通信できます。サーバーは用件を中継するだけで、データやアプリは置きません。だから安全に、外から同じアシスタントにアクセスできるのです。将来は、スマートグラスやスマートヘッドセットも同じ窓になります。",
       "image": {
         "type": "slide",
         "slide": {
-          "layout": "bigQuote",
+          "layout": "manifesto",
           "eyebrow": {
             "label": "リモートアクセス"
           },
-          "quote": "デバイスは{primary:窓}。アシスタントの実体は、自分のコンピューターに残る。",
-          "author": "電話、スマートグラス、ヘッドセット",
-          "role": "アクセス手段は増えても、蓄積の場所は変えない"
-        }
-      }
-    },
-    {
-      "text": "つまり、MulmoClaudeの形はこうです。ユーザーが必要なものを説明する。AIが自分専用のアプリを育てる。アプリとデータは自分のパソコンに残る。さまざまなデバイスから、同じアシスタントにアクセスできる。",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "columns",
-          "eyebrow": {
-            "label": "MulmoClaudeのループ"
-          },
-          "title": "育てて、所有し、どこからでも使う",
-          "columns": [
+          "title": "家の外から、自宅PCのアシスタントへ",
+          "items": [
             {
-              "title": "説明する",
-              "accentColor": "info",
-              "content": [
-                {
-                  "type": "text",
-                  "value": "ユーザーが必要なものを説明する。"
-                }
-              ],
-              "num": 1
+              "title": "同じIDでログイン",
+              "description": "パソコンとスマートフォンを、同じユーザーとしてつなぐ。",
+              "accentColor": "primary"
             },
             {
-              "title": "育てる",
-              "accentColor": "primary",
-              "content": [
-                {
-                  "type": "text",
-                  "value": "AIが自分専用のアプリを育てる。"
-                }
-              ],
-              "num": 2
+              "title": "サーバーは中継だけ",
+              "description": "用件を運ぶだけ。データやアプリはサーバー側に置かない。",
+              "accentColor": "success"
             },
             {
-              "title": "所有する",
-              "accentColor": "success",
-              "content": [
-                {
-                  "type": "text",
-                  "value": "アプリとデータは自分のパソコンに残る。"
-                }
-              ],
-              "num": 3
-            },
-            {
-              "title": "使う",
-              "accentColor": "warning",
-              "content": [
-                {
-                  "type": "text",
-                  "value": "どのデバイスからでも同じアシスタントに届く。"
-                }
-              ],
-              "num": 4
+              "title": "デバイスは窓",
+              "description": "今日はスマホ。将来はスマートグラスやヘッドセットも。",
+              "accentColor": "warning"
             }
           ],
-          "showArrows": true,
-          "callout": {
-            "text": "AIアシスタントを{primary:自分のものとして育てる}ための環境。",
-            "label": "要点",
-            "color": "primary",
-            "leftBar": true
-          }
+          "columns": 3,
+          "footer": "アシスタントの実体は、自分のコンピューターに残る。"
         }
       }
     },

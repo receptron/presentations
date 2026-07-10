@@ -1,0 +1,478 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini"
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "0A0F24",
+        "bgCard": "111A3A",
+        "bgCardAlt": "16224D",
+        "text": "EEF2FF",
+        "textMuted": "9FB0D8",
+        "textDim": "6F7FA0",
+        "primary": "38BDF8",
+        "accent": "818CF8",
+        "success": "34D399",
+        "warning": "FBBF24",
+        "danger": "FB7185",
+        "info": "22D3EE",
+        "highlight": "F0ABFC"
+      },
+      "fonts": {
+        "title": "Georgia",
+        "body": "Helvetica",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
+      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false
+  },
+  "title": "The Assistant You Nurture",
+  "description": "The vision of MulmoClaude: an AI assistant is not something you buy, but something you nurture. The presentation explains why an assistant needs a growth environment, the lock-in problem, and MulmoClaude's answer.",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "The Assistant You Nurture. The vision of MulmoClaude begins with a simple claim: an AI assistant is not something you buy. It is something you nurture. And to grow well, it needs a growth environment.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "The MulmoClaude vision"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "The Assistant **You Nurture**",
+          "subtitle": "An AI assistant is not something you {warning:buy}. It is something you {primary:nurture}.",
+          "author": "Satoshi Nakajima",
+          "chips": [
+            "nurture first",
+            "growth environment",
+            "ownership matters",
+            "MulmoClaude as the answer"
+          ]
+        }
+      }
+    },
+    {
+      "text": "It is seven in the morning, and your assistant has already been working. Feeds updated while you slept. A bill reminder waiting. Flashcards ready. On the train, you ask about a restaurant list it keeps for you. Not some assistant. Your assistant.",
+      "image": {
+        "type": "html_tailwind",
+        "html": "<div class=\"w-[1280px] h-[720px] overflow-hidden flex items-center justify-center gap-16 px-16\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg,#0A0F24,#111A3A 55%,#16224D); color:#EEF2FF; font-family:Helvetica,Arial,sans-serif\"><div class=\"w-[430px]\"><div class=\"text-[#38BDF8] text-lg font-semibold uppercase mb-3\" style=\"letter-spacing:.18em\">7:04 AM · on the train</div><div class=\"text-5xl leading-tight mb-5\" style=\"font-family:Georgia,serif\">Your assistant has already been <span class=\"text-[#FBBF24]\">working.</span></div><div class=\"text-xl text-[#9FB0D8] leading-relaxed\">Not a generic model. A relationship that has accumulated over time.</div></div><div class=\"w-[410px] bg-white/5 border border-white/10 rounded-3xl p-5 flex flex-col gap-3\"><div class=\"flex justify-between text-sm text-[#9FB0D8] px-1\"><div>7:04</div><div>📶 🔋</div></div><div class=\"bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3\"><div class=\"text-2xl\">🎙</div><div><div class=\"text-[15px] font-semibold\">Podcast feeds updated</div><div class=\"text-[13px] text-[#9FB0D8]\">while you slept</div></div></div><div class=\"bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3\"><div class=\"text-2xl\">🔔</div><div><div class=\"text-[15px] font-semibold\">Bill reminder waiting</div><div class=\"text-[13px] text-[#9FB0D8]\">threshold crossed before breakfast</div></div></div><div class=\"bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3\"><div class=\"text-2xl\">🎴</div><div><div class=\"text-[15px] font-semibold\">Flashcards ready</div><div class=\"text-[13px] text-[#9FB0D8]\">updated from yesterday's notes</div></div></div><div class=\"mt-2 self-end max-w-[85%] bg-[#38BDF8]/15 border border-[#38BDF8]/30 rounded-2xl rounded-br-sm px-4 py-2 text-[15px]\">What was that ramen place on the Chuo line?</div><div class=\"self-start max-w-[85%] bg-white/5 border border-white/10 rounded-2xl rounded-bl-sm px-4 py-2 text-[15px]\">Ramen Kaze — Nakano. You saved it in March and rated it four stars.</div></div></div>"
+      }
+    },
+    {
+      "text": "Every large technology company is chasing this future: an AI that knows the texture of your work and life, and gets more useful the longer it stays with you. The model is not the hard part. The hard part is the accumulation.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "The promise is real"
+          },
+          "quote": "The model is not the hard part. The hard part is the {primary:accumulation}.",
+          "author": "What makes an assistant personal",
+          "role": "Records · preferences · corrections · workflows · small tools"
+        }
+      }
+    },
+    {
+      "text": "An assistant is not a device. Glasses, phones, watches, laptops, and desktops are doorways. And it is not the model either. GPT, Claude, Gemini, and their successors are engines. Powerful, but interchangeable. What makes the assistant yours is what grows around one life.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "What an assistant is not"
+          },
+          "title": "Doorways and engines",
+          "left": {
+            "title": "Not the device",
+            "accentColor": "info",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "glasses",
+                  "phone",
+                  "laptop",
+                  "desktop"
+                ]
+              }
+            ],
+            "footer": "These are ways in"
+          },
+          "right": {
+            "title": "Not the model",
+            "accentColor": "accent",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "powerful",
+                  "interchangeable",
+                  "improving elsewhere"
+                ]
+              }
+            ],
+            "footer": "This is the engine"
+          }
+        }
+      }
+    },
+    {
+      "text": "The old nature-versus-nurture distinction applies cleanly. The model is nature: what the assistant is born with. The accumulation is nurture: how it was brought up. But nurture needs an environment: memory, tools, structure, feedback, and a way to keep what it builds.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "manifesto",
+          "eyebrow": {
+            "label": "Nature · nurture · environment"
+          },
+          "title": "An assistant needs a growth environment",
+          "items": [
+            {
+              "title": "Nature",
+              "description": "The model: what the assistant is born with.",
+              "accentColor": "accent"
+            },
+            {
+              "title": "Nurture",
+              "description": "The accumulation: records, habits, corrections.",
+              "accentColor": "success"
+            },
+            {
+              "title": "Environment",
+              "description": "Memory, tools, structure, feedback, and a way to keep what it builds.",
+              "accentColor": "primary"
+            }
+          ],
+          "columns": 3,
+          "footer": "A harness is part of this environment, but not the whole of it."
+        }
+      }
+    },
+    {
+      "text": "That is why a new assistant is supposed to be empty. No memories. No records. No applications built for you. It becomes useful through conversation: you ask, correct, add records, and shape workflows. Repeated needs harden into tools.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "timeline",
+          "eyebrow": {
+            "label": "How nurture happens"
+          },
+          "title": "Conversation becomes capability",
+          "items": [
+            {
+              "date": "Ask",
+              "title": "A need appears",
+              "description": "restaurants, invoices, flashcards",
+              "color": "info",
+              "done": true
+            },
+            {
+              "date": "Correct",
+              "title": "The assistant learns your taste",
+              "description": "your edits matter",
+              "color": "accent",
+              "done": true
+            },
+            {
+              "date": "Accumulate",
+              "title": "Records and memory grow",
+              "description": "the assistant stops being generic",
+              "color": "primary",
+              "done": true
+            },
+            {
+              "date": "Harden",
+              "title": "Repeated needs become tools",
+              "description": "small applications for one person",
+              "color": "success",
+              "hot": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "text": "But nurture creates dependence. If the assistant's memory, data, workflows, and applications live inside one service provider, then the provider controls the accumulation. The longer you use it, the harder it becomes to switch. Memory is not just a feature. It is where lock-in compounds.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "accentColor": "warning",
+          "eyebrow": {
+            "label": "The lock-in problem"
+          },
+          "quote": "If one service provider controls the {warning:accumulation}, it controls the assistant.",
+          "author": "The risk of a hosted assistant",
+          "role": "The longer you use it, the harder it becomes to switch"
+        }
+      }
+    },
+    {
+      "text": "MulmoClaude is my attempt to avoid that lock-in by creating a growth environment the user owns. Its design rests on three constraints: regular users can grow small database applications, the applications and data live on the user's computer, and remote access is a window into that assistant, not a move to the cloud.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "manifesto",
+          "eyebrow": {
+            "label": "The MulmoClaude answer",
+            "color": "primary"
+          },
+          "title": "Avoid lock-in with a user-owned growth environment",
+          "items": [
+            {
+              "title": "Grow apps by describing needs",
+              "description": "regular users, not part-time programmers",
+              "accentColor": "primary"
+            },
+            {
+              "title": "Keep apps and data local",
+              "description": "the accumulation lives in the user's workspace",
+              "accentColor": "success"
+            },
+            {
+              "title": "Reach it remotely",
+              "description": "the phone is a window, not a new home",
+              "accentColor": "warning"
+            }
+          ],
+          "columns": 3
+        }
+      }
+    },
+    {
+      "text": "First: regular users should be able to create small database applications without writing code. A restaurant list. An invoice tracker. A vocabulary drill. The user describes the need; the assistant turns it into a structured tool and helps it evolve.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "eyebrow": {
+            "label": "Constraint 1"
+          },
+          "title": "Database apps for an audience of one",
+          "gridColumns": 3,
+          "items": [
+            {
+              "title": "Restaurants",
+              "description": "saved places, notes, map views",
+              "icon": "🍜",
+              "accentColor": "primary"
+            },
+            {
+              "title": "Invoices",
+              "description": "clients, payments, due dates",
+              "icon": "🧾",
+              "accentColor": "success"
+            },
+            {
+              "title": "Vocabulary",
+              "description": "flashcards, progress, practice",
+              "icon": "🎴",
+              "accentColor": "accent"
+            }
+          ],
+          "footer": "Not a no-code builder. A conversation that grows a tool."
+        }
+      }
+    },
+    {
+      "text": "Second: the applications and data should live on the user's computer. In MulmoClaude, the assistant's accumulation is a workspace of files. Files can be inspected, searched, copied, backed up, versioned, and moved. The model can change without losing the assistant.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "Constraint 2"
+          },
+          "title": "Where the accumulation lives",
+          "left": {
+            "title": "Provider account",
+            "accentColor": "danger",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "memory hidden in a service",
+                  "apps tied to a platform",
+                  "leaving gets harder over time"
+                ]
+              }
+            ],
+            "footer": "The provider owns the switching cost"
+          },
+          "right": {
+            "title": "User workspace",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "records as files",
+                  "apps as files",
+                  "copy, back up, version, move"
+                ]
+              }
+            ],
+            "footer": "The user owns the accumulation"
+          }
+        }
+      }
+    },
+    {
+      "text": "Third: remote devices should be windows into the assistant, but the assistant's self should stay home. Today that window is the phone. In the future, it can be smart glasses, a smart headset, or whatever device is closest. The user's machine does the work. The relay carries the errand; it does not become the assistant.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "Constraint 3"
+          },
+          "quote": "Remote access should make each device a {primary:window}, not move the assistant into the cloud.",
+          "author": "The relay carries errands",
+          "role": "Phone today. Smart glasses, headsets, and other surfaces tomorrow."
+        }
+      }
+    },
+    {
+      "text": "That is the shape of MulmoClaude. User describes a need. The assistant grows an application. The application and data stay with the user. The phone today, and other devices later, remain windows into the same assistant.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "columns",
+          "eyebrow": {
+            "label": "The product shape"
+          },
+          "title": "The MulmoClaude loop",
+          "columns": [
+            {
+              "title": "Describe",
+              "accentColor": "info",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "User describes a need."
+                }
+              ],
+              "num": 1
+            },
+            {
+              "title": "Grow",
+              "accentColor": "primary",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "The assistant grows an application."
+                }
+              ],
+              "num": 2
+            },
+            {
+              "title": "Keep",
+              "accentColor": "success",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "The application and data stay with the user."
+                }
+              ],
+              "num": 3
+            },
+            {
+              "title": "Reach",
+              "accentColor": "warning",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "Every device remains a window."
+                }
+              ],
+              "num": 4
+            }
+          ],
+          "showArrows": true,
+          "callout": {
+            "text": "A workspace where recurring needs become {primary:owned applications}.",
+            "label": "The point",
+            "color": "primary",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "The next decade will create a wide gap between people who merely rent access to powerful models, and people who have assistants that know them. The durable advantage will not be access to the smartest model. It will be an assistant whose data, applications, and learned working style belong to the person who invested in them.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "Why it matters"
+          },
+          "quote": "The durable advantage is an assistant whose {primary:accumulation belongs to you}.",
+          "author": "Nurtured, owned, portable",
+          "role": "Data · applications · learned working style"
+        }
+      }
+    },
+    {
+      "text": "That is the vision of MulmoClaude: a place to nurture an assistant while keeping the accumulation yours. Start while it knows nothing. Let the accumulation begin on a computer that belongs to you.",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "Read the full vision"
+          },
+          "titleSize": "large",
+          "title": "Start while it **knows nothing**",
+          "subtitle": "Let the accumulation begin on a computer that {primary:belongs to you}.",
+          "chips": [
+            "VISION.md · The Assistant You Nurture",
+            "Beyond the Sea of App Icons · Parts 1–6"
+          ]
+        }
+      }
+    }
+  ]
+}
