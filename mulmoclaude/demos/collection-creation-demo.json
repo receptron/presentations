@@ -91,7 +91,7 @@
           "        <span data-animation='animate' data-opacity='0,1' data-start='1.0' data-end='1.5' data-easing='easeOut' class='text-cyan-300 text-3xl ml-3'>npx mulmoclaude@latest</span>",
           "      </div>",
           "    </div>",
-          "    <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='1.8' data-end='2.3' data-easing='easeOut' class='text-indigo-300 text-2xl'>インストール不要。ブラウザが開いてすぐに使えます。</p>",
+          "    <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='1.8' data-end='2.3' data-easing='easeOut' class='text-indigo-300 text-2xl'>面倒な設定は不要。この一行だけで始められます。</p>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>3 / 16</div>",
           "</div>"
