@@ -84,7 +84,7 @@
           "  <div class=\"relative z-10 flex flex-col justify-center h-full px-16\">",
           "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#38BDF8;font-family:Helvetica,'Hiragino Sans',sans-serif\">MulmoClaude</p>",
           "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#FFFFFF,#38BDF8 60%,#818CF8);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,'Hiragino Mincho ProN',serif\">AIアシスタント育成ツール</h1>",
-          "    <p class=\"text-[26px] mt-6\" style=\"color:#9FB0D8;font-family:Helvetica,'Hiragino Sans',sans-serif\">AIアシスタントは<span style=\"color:#FBBF24\">買う</span>ものではない。<span style=\"color:#38BDF8\">育てる</span>ものだ。</p>",
+          "    <p class=\"text-[26px] mt-6\" style=\"color:#9FB0D8;font-family:Helvetica,'Hiragino Sans',sans-serif\">AIアシスタントは<span style=\"color:#FBBF24\">買う</span>ものではありません。<span style=\"color:#38BDF8\">育てる</span>ものです。</p>",
           "    <p class=\"text-[18px] mt-12\" style=\"color:#6F7FA0;font-family:Helvetica,'Hiragino Sans',sans-serif\">Satoshi Nakajima</p>",
           "  </div>",
           "</div>"
@@ -213,8 +213,8 @@
           "  <div class=\"absolute -bottom-12 -left-16 w-[280px] h-[280px] rounded-full\" style=\"background:#818CF8;opacity:.1\"></div>",
           "  <div class=\"relative z-10 flex flex-col justify-center h-full px-16\">",
           "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#38BDF8;font-family:Helvetica,'Hiragino Sans',sans-serif\">MulmoClaude</p>",
-          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#FFFFFF,#38BDF8 60%,#818CF8);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,'Hiragino Mincho ProN',serif\">自分専用のAIアシスタントを育てる</h1>",
-          "    <p class=\"text-[26px] mt-6\" style=\"color:#9FB0D8;font-family:Helvetica,'Hiragino Sans',sans-serif\">蓄積を、<span style=\"color:#38BDF8\">自分のコンピューター</span>の上で始める。</p>",
+          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#FFFFFF,#38BDF8 60%,#818CF8);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,'Hiragino Mincho ProN',serif\">自分専用のAIアシスタントを育てましょう</h1>",
+          "    <p class=\"text-[26px] mt-6\" style=\"color:#9FB0D8;font-family:Helvetica,'Hiragino Sans',sans-serif\">価値の蓄積を、<span style=\"color:#38BDF8\">自分のコンピューター</span>の上で始めて下さい。</p>",
           "    <p class=\"text-[20px] mt-12\" style=\"color:#6F7FA0;font-family:Menlo,monospace\">https://github.com/receptron/mulmoclaude</p>",
           "  </div>",
           "</div>"
