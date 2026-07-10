@@ -118,82 +118,30 @@
     {
       "text": "MulmoClaudeの中で動くAIと会話しながら、自分専用のアプリを作り、さまざまなデータを蓄積していく。それが、AIアシスタントの正しい育て方だと私は思います。アプリを作るといっても、プログラミングの知識は要りません。プログラマーがAIにコードを書かせることを「バイブコーディング」と呼びますが、MulmoClaudeでは、コードのことを意識する必要すらありません。「こういうものが欲しい」と話すだけで、AIが必要なアプリを作ってくれるのです。",
       "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "bigQuote",
-          "eyebrow": {
-            "label": "プログラミング不要"
-          },
-          "quote": "「こういうものが欲しい」と話すだけで、AIが必要なアプリを作ってくれる。",
-          "author": "コードを意識する必要すらない",
-          "role": "プログラマーの「バイブコーディング」のさらに先へ"
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/vision08.png"
         }
       }
     },
     {
       "text": "レストランリスト、請求書トラッカー、単語練習。どれも、ひとりのための小さなアプリです。少し前まで、たったひとりのためにアプリを作るなど、コストが高すぎて考えられませんでした。AIによってソフトウェアの開発コストが限りなくゼロに近づいたからこそ、初めて可能になった世界なのです。",
       "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "grid",
-          "eyebrow": {
-            "label": "ひとりのためのアプリ"
-          },
-          "title": "ひとりのための小さなアプリ",
-          "gridColumns": 3,
-          "items": [
-            {
-              "title": "レストラン",
-              "description": "保存した店、メモ、地図ビュー",
-              "icon": "🍜",
-              "accentColor": "primary"
-            },
-            {
-              "title": "請求書",
-              "description": "顧客、支払い、期限",
-              "icon": "🧾",
-              "accentColor": "success"
-            },
-            {
-              "title": "単語練習",
-              "description": "カード、進捗、復習",
-              "icon": "🎴",
-              "accentColor": "accent"
-            }
-          ],
-          "footer": "開発コストが限りなくゼロに近づいたからこそ、可能になった世界。"
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/vision09.png"
         }
       }
     },
     {
       "text": "もちろん、アシスタントはパソコンの前にいる時だけ使えれば良いわけではありません。MulmoClaudeでは、自分のパソコンとスマートフォンの両方から同じIDでログインすれば、家の外からでもパソコンの中にいるAIアシスタントと通信できます。サーバーは用件を中継するだけで、データやアプリは置きません。だから安全に、外から同じアシスタントにアクセスできるのです。将来は、スマートグラスやスマートヘッドセットからも、同じアシスタントにつながるようになります。",
       "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "manifesto",
-          "eyebrow": {
-            "label": "リモートアクセス"
-          },
-          "title": "家の外から、自宅PCのアシスタントへ",
-          "items": [
-            {
-              "title": "同じIDでログイン",
-              "description": "パソコンとスマートフォンを、同じユーザーとしてつなぐ。",
-              "accentColor": "primary"
-            },
-            {
-              "title": "サーバーは中継だけ",
-              "description": "用件を運ぶだけ。データやアプリはサーバー側に置かない。",
-              "accentColor": "success"
-            },
-            {
-              "title": "デバイスは入口",
-              "description": "今日はスマホ。将来はスマートグラスやヘッドセットも。",
-              "accentColor": "warning"
-            }
-          ],
-          "columns": 3,
-          "footer": "アシスタントの実体は、自分のコンピューターに残る。"
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/vision10.png"
         }
       }
     },
