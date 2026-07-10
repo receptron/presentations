@@ -8,6 +8,8 @@ A collection of MulmoCast presentation scripts (JSON) about MulmoClaude/MulmoTer
 
 Scripts live under `mulmoclaude/`, organized by intent: `vision/` (Why), plus planned `demos/` (What) and `tutorials/` (How).
 
+For demo scripts with app screenshots (`mulmoclaude/demos/`), follow `mulmoclaude/demos/DEMO-GUIDE.md` — beat structure, HTML slide snippets, capture conventions, and narration rules distilled from the reviewed `collection-creation-demo.json`.
+
 ## Commands
 
 Videos are generated with the `mulmocast` CLI (installed globally, v2.7.x — not a package.json dependency). `mulmo` and `mulmocast` are aliases for the same binary; `mulmo-mcp` is its MCP server:
