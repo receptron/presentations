@@ -73,24 +73,21 @@
     {
       "text": "What if you had an AI assistant that knew everything about you and stood by your side around the clock, supporting both your work and your life — how would your days change? Here is the thing: such an assistant is not sold anywhere. You cannot buy one. There is only one way to get one: nurture it yourself. Today, I want to talk about how.",
       "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "title",
-          "eyebrow": {
-            "label": "The MulmoClaude vision"
-          },
-          "titleSize": "hero",
-          "subtitleSize": "lead",
-          "title": "An **AI Assistant** Nurturing Tool",
-          "subtitle": "An AI assistant is not something you {warning:buy}. It is something you {primary:nurture}.",
-          "author": "Satoshi Nakajima",
-          "chips": [
-            "An AI beside you all day",
-            "Grown for one person",
-            "Own the accumulated value",
-            "MulmoClaude"
-          ]
-        }
+        "type": "html_tailwind",
+        "html": [
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#38BDF8\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:#818CF8\"></div>",
+          "  <div class=\"absolute -top-20 -right-8 w-[360px] h-[360px] rounded-full\" style=\"background:#38BDF8;opacity:.1\"></div>",
+          "  <div class=\"absolute -bottom-12 -left-16 w-[280px] h-[280px] rounded-full\" style=\"background:#818CF8;opacity:.1\"></div>",
+          "  <div class=\"relative z-10 flex flex-col justify-center h-full px-16\">",
+          "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#38BDF8;font-family:Helvetica,Arial,sans-serif\">MulmoClaude</p>",
+          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#FFFFFF,#38BDF8 60%,#818CF8);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,serif\">An AI Assistant Nurturing Tool</h1>",
+          "    <p class=\"text-[26px] mt-6\" style=\"color:#9FB0D8;font-family:Helvetica,Arial,sans-serif\">An AI assistant is not something you <span style=\"color:#FBBF24\">buy</span>. It is something you <span style=\"color:#38BDF8\">nurture</span>.</p>",
+          "    <p class=\"text-[18px] mt-12\" style=\"color:#6F7FA0;font-family:Helvetica,Arial,sans-serif\">Satoshi Nakajima</p>",
+          "  </div>",
+          "</div>"
+        ]
       }
     },
     {
@@ -206,21 +203,21 @@
     {
       "text": "So install MulmoClaude and nurture your own AI assistant. An assistant that knows everything about you and supports you around the clock is not sold anywhere. But you can nurture one. Start the accumulation today, on your own computer.",
       "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "title",
-          "eyebrow": {
-            "label": "Nurture an AI assistant"
-          },
-          "titleSize": "large",
-          "title": "Nurture your own **AI Assistant**",
-          "subtitle": "Start the accumulation on {primary:your own computer}.",
-          "chips": [
-            "MulmoClaude",
-            "AI assistant nurturing tool",
-            "Own your data and apps"
-          ]
-        }
+        "type": "html_tailwind",
+        "html": [
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#38BDF8\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:#818CF8\"></div>",
+          "  <div class=\"absolute -top-20 -right-8 w-[360px] h-[360px] rounded-full\" style=\"background:#38BDF8;opacity:.1\"></div>",
+          "  <div class=\"absolute -bottom-12 -left-16 w-[280px] h-[280px] rounded-full\" style=\"background:#818CF8;opacity:.1\"></div>",
+          "  <div class=\"relative z-10 flex flex-col justify-center h-full px-16\">",
+          "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#38BDF8;font-family:Helvetica,Arial,sans-serif\">MulmoClaude</p>",
+          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#FFFFFF,#38BDF8 60%,#818CF8);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,serif\">Nurture your own AI Assistant</h1>",
+          "    <p class=\"text-[26px] mt-6\" style=\"color:#9FB0D8;font-family:Helvetica,Arial,sans-serif\">Start the accumulation on <span style=\"color:#38BDF8\">your own computer</span>.</p>",
+          "    <p class=\"text-[20px] mt-12\" style=\"color:#6F7FA0;font-family:Menlo,monospace\">https://github.com/receptron/mulmoclaude</p>",
+          "  </div>",
+          "</div>"
+        ]
       }
     }
   ]
