@@ -66,12 +66,12 @@
     "audioVolume": 1,
     "suppressSpeech": false
   },
-  "title": "育てるAIアシスタント",
-  "description": "MulmoClaudeのビジョン。AIアシスタントは買うものではなく、育てるもの。アシスタントに成長環境が必要な理由、ロックインの問題、そしてMulmoClaudeの答えを説明する。",
+  "title": "AIアシスタント育成ツール",
+  "description": "MulmoClaudeのビジョン。AIアシスタントは出来上がったものを買うのではなく、自分で育てるもの。なぜ成長環境が必要なのか、なぜサービスプロバイダーへのロックインを避けるべきなのかを説明する。",
   "lang": "ja",
   "beats": [
     {
-      "text": "育てるAIアシスタント。MulmoClaudeのビジョンは、ひとつのシンプルな主張から始まります。AIアシスタントは買うものではありません。育てるものです。そして、うまく育つためには、成長環境が必要です。",
+      "text": "先週、MulmoClaudeを何と呼べば良いのか悩んでいると書きましたが、ようやく答えを見つけました。AIアシスタント育成ツールです。AIアシスタントは、出来上がったものを買うものではなく、自分で育てるものなのです。",
       "image": {
         "type": "slide",
         "slide": {
@@ -81,161 +81,151 @@
           },
           "titleSize": "hero",
           "subtitleSize": "lead",
-          "title": "育てる**AIアシスタント**",
+          "title": "**AIアシスタント**育成ツール",
           "subtitle": "AIアシスタントは{warning:買う}ものではない。{primary:育てる}ものだ。",
           "author": "Satoshi Nakajima",
           "chips": [
-            "まずは「育てる」",
-            "成長環境",
-            "所有が大事",
-            "MulmoClaudeという答え"
+            "24時間そばにいるAI",
+            "自分専用に育てる",
+            "蓄積を自分で所有する",
+            "MulmoClaude"
           ]
         }
       }
     },
     {
-      "text": "朝の7時。あなたのアシスタントは、もう働いています。寝ている間にフィードを更新し、請求のリマインダーを用意し、単語カードも準備しています。電車の中で、保存していたレストランについて聞く。どこかのアシスタントではありません。あなたのアシスタントです。",
-      "image": {
-        "type": "html_tailwind",
-        "html": "<div class=\"w-[1280px] h-[720px] overflow-hidden flex items-center justify-center gap-16 px-16\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg,#0A0F24,#111A3A 55%,#16224D); color:#EEF2FF; font-family:Helvetica,Arial,sans-serif\"><div class=\"w-[430px]\"><div class=\"text-[#38BDF8] text-lg font-semibold uppercase mb-3\" style=\"letter-spacing:.18em\">7:04 AM · 電車の中</div><div class=\"text-5xl leading-tight mb-5\" style=\"font-family:Georgia,serif\">あなたのアシスタントは<br/>もう<span class=\"text-[#FBBF24]\">働いている。</span></div><div class=\"text-xl text-[#9FB0D8] leading-relaxed\">汎用モデルではなく、時間をかけて蓄積された関係。</div></div><div class=\"w-[410px] bg-white/5 border border-white/10 rounded-3xl p-5 flex flex-col gap-3\"><div class=\"flex justify-between text-sm text-[#9FB0D8] px-1\"><div>7:04</div><div>📶 🔋</div></div><div class=\"bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3\"><div class=\"text-2xl\">🎙</div><div><div class=\"text-[15px] font-semibold\">ポッドキャストを更新</div><div class=\"text-[13px] text-[#9FB0D8]\">あなたが寝ている間に</div></div></div><div class=\"bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3\"><div class=\"text-2xl\">🔔</div><div><div class=\"text-[15px] font-semibold\">請求リマインダー</div><div class=\"text-[13px] text-[#9FB0D8]\">朝食前に通知</div></div></div><div class=\"bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3\"><div class=\"text-2xl\">🎴</div><div><div class=\"text-[15px] font-semibold\">単語カードを準備</div><div class=\"text-[13px] text-[#9FB0D8]\">昨日のメモから更新</div></div></div><div class=\"mt-2 self-end max-w-[85%] bg-[#38BDF8]/15 border border-[#38BDF8]/30 rounded-2xl rounded-br-sm px-4 py-2 text-[15px]\">中央線のあのラーメン屋、どこだっけ?</div><div class=\"self-start max-w-[85%] bg-white/5 border border-white/10 rounded-2xl rounded-bl-sm px-4 py-2 text-[15px]\">中野のRamen Kazeです。3月に保存し、星4つを付けています。</div></div></div>"
-      }
-    },
-    {
-      "text": "大きなテクノロジー企業は、みなこの未来を追いかけています。あなたの仕事と生活の文脈を理解し、長く一緒にいるほど役に立つAIです。難しいのはモデルではありません。難しいのは蓄積です。",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "bigQuote",
-          "eyebrow": {
-            "label": "約束は本物"
-          },
-          "quote": "難しいのはモデルではない。難しいのは{primary:蓄積}だ。",
-          "author": "アシスタントを個人的な存在にするもの",
-          "role": "記録 · 好み · 修正 · ワークフロー · 小さなツール"
-        }
-      }
-    },
-    {
-      "text": "アシスタントはデバイスではありません。メガネ、電話、時計、ラップトップ、デスクトップは入口にすぎません。そして、モデルでもありません。GPT、Claude、Gemini、そしてその後継モデルはエンジンです。強力ですが、交換可能です。アシスタントをあなたのものにするのは、ひとつの人生の周りに育つものです。",
+      "text": "AIアシスタントとは、私たちと24時間一緒にいて、仕事や生活に関わるさまざまなことを助けてくれるAIです。特定の仕事を人間の代わりにするAIエージェントとは違います。人間に例えるなら、AIアシスタントは秘書や執事。AIエージェントは弁護士、料理人、庭師に近い存在です。",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "comparison",
           "eyebrow": {
-            "label": "アシスタントではないもの"
+            "label": "まず言葉を分ける"
           },
-          "title": "入口とエンジン",
+          "title": "アシスタントとエージェントは違う",
           "left": {
-            "title": "デバイスではない",
-            "accentColor": "info",
+            "title": "AIアシスタント",
+            "accentColor": "primary",
             "content": [
               {
                 "type": "bullets",
                 "items": [
-                  "メガネ",
-                  "電話",
-                  "ラップトップ",
-                  "デスクトップ"
+                  "24時間そばにいる",
+                  "仕事と生活を広く支える",
+                  "秘書・執事に近い"
                 ]
               }
             ],
-            "footer": "これらは入口"
+            "footer": "本人を理解する存在"
           },
           "right": {
-            "title": "モデルではない",
+            "title": "AIエージェント",
             "accentColor": "accent",
             "content": [
               {
                 "type": "bullets",
                 "items": [
-                  "強力",
-                  "交換可能",
-                  "どこかで進化する"
+                  "特定の仕事を代行する",
+                  "目的ごとに動く",
+                  "弁護士・料理人・庭師に近い"
                 ]
               }
             ],
-            "footer": "これはエンジン"
+            "footer": "仕事をこなす存在"
           }
         }
       }
     },
     {
-      "text": "生まれと育ち、という古い区別はソフトウェアにもそのまま当てはまります。モデルは生まれです。アシスタントが最初から持っているもの。蓄積は育ちです。どう育てられたか。けれど、育つには環境が必要です。記憶、道具、構造、フィードバック、そして作ったものを保持する仕組みです。",
+      "text": "AIアシスタントというと、スマートグラスを思い浮かべる人が多いと思います。でもスマートグラスは、アクセスするためのデバイスのひとつにすぎません。スマートフォン、スマートウォッチ、パソコン。どれも入口です。アシスタントの実体は、特定のデバイスの上に閉じ込められていてはいけません。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "eyebrow": {
+            "label": "デバイスは入口"
+          },
+          "title": "アシスタントはデバイスではない",
+          "gridColumns": 4,
+          "items": [
+            {
+              "title": "スマートグラス",
+              "description": "アクセス手段のひとつ",
+              "icon": "👓",
+              "accentColor": "primary"
+            },
+            {
+              "title": "スマートフォン",
+              "description": "外出先からの入口",
+              "icon": "📱",
+              "accentColor": "info"
+            },
+            {
+              "title": "スマートウォッチ",
+              "description": "身につける入口",
+              "icon": "⌚",
+              "accentColor": "accent"
+            },
+            {
+              "title": "パソコン",
+              "description": "作業する入口",
+              "icon": "💻",
+              "accentColor": "success"
+            }
+          ],
+          "footer": "大事なのは、どの入口からでも同じアシスタントに届くこと。"
+        }
+      }
+    },
+    {
+      "text": "もうひとつ大事なのは、AIアシスタントの実体は、GPTやClaudeのようなAIモデルそのものではない、という点です。モデルはエンジンです。良い仕事をするには、本人のことをよく知っている必要があります。過去の会話、予定表、住所録、ToDoリスト、メール、ミーティングメモ、日記、そしてその人が使うアプリまで理解している必要があります。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "モデルだけでは足りない"
+          },
+          "quote": "AIアシスタントの実体は、AIモデルそのものではない。",
+          "author": "モデルはエンジン",
+          "role": "必要なのは、本人を知るための蓄積"
+        }
+      }
+    },
+    {
+      "text": "OpenAIやAnthropicがメモリー機能を強化しているのは当然そこを狙ってのことです。実際にユーザーのデータを多く握っているMetaやGoogleも、同じ場所を見ています。AIアシスタントの価値は、モデルだけではなく、その人について蓄積されたデータとアプリにあるからです。",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "manifesto",
           "eyebrow": {
-            "label": "生まれ · 育ち · 環境"
+            "label": "価値はどこにあるか"
           },
-          "title": "アシスタントには成長環境が必要",
+          "title": "アシスタントを賢くする蓄積",
           "items": [
             {
-              "title": "生まれ",
-              "description": "モデル: アシスタントが最初から持っているもの。",
-              "accentColor": "accent"
+              "title": "記憶",
+              "description": "過去の会話、好み、修正。",
+              "accentColor": "primary"
             },
             {
-              "title": "育ち",
-              "description": "蓄積: 記録、習慣、修正。",
+              "title": "データ",
+              "description": "予定表、住所録、ToDo、メール、メモ、日記。",
               "accentColor": "success"
             },
             {
-              "title": "環境",
-              "description": "記憶、道具、構造、フィードバック、作ったものを保持する仕組み。",
-              "accentColor": "primary"
+              "title": "アプリ",
+              "description": "本人が使う、あるいは必要に応じて作った道具。",
+              "accentColor": "accent"
             }
           ],
           "columns": 3,
-          "footer": "ハーネスはこの環境の一部だが、すべてではない。"
+          "footer": "ここを握るものが、AIアシスタントを握る。"
         }
       }
     },
     {
-      "text": "だから、新しいアシスタントは空っぽでいいのです。記憶も、記録も、あなたのために作られたアプリもありません。会話を通じて役に立つようになります。頼み、直し、記録を加え、ワークフローを整える。繰り返されるニーズが、道具として固まっていきます。",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "timeline",
-          "eyebrow": {
-            "label": "育ちはどう起きるか"
-          },
-          "title": "会話が能力になる",
-          "items": [
-            {
-              "date": "頼む",
-              "title": "ニーズが現れる",
-              "description": "レストラン、請求書、単語カード",
-              "color": "info",
-              "done": true
-            },
-            {
-              "date": "直す",
-              "title": "好みを学ぶ",
-              "description": "あなたの修正が意味を持つ",
-              "color": "accent",
-              "done": true
-            },
-            {
-              "date": "蓄積",
-              "title": "記録と記憶が育つ",
-              "description": "汎用ではなくなっていく",
-              "color": "primary",
-              "done": true
-            },
-            {
-              "date": "固まる",
-              "title": "繰り返しが道具になる",
-              "description": "ひとりのための小さなアプリ",
-              "color": "success",
-              "hot": true
-            }
-          ]
-        }
-      }
-    },
-    {
-      "text": "しかし、育てることは依存も生みます。アシスタントの記憶、データ、ワークフロー、そして作られたアプリがひとつのサービスプロバイダーの中にあるなら、そのプロバイダーが蓄積を支配します。長く使うほど、乗り換えは難しくなります。記憶は単なる機能ではありません。ロックインが積み上がる場所です。",
+      "text": "しかし、個人のデータやアプリを抱えて蓄積していくAIアシスタントほど重要なものを、特定のサービスプロバイダーに任せてしまうのは賢くありません。長く使えば使うほど、切り替えに伴う痛みが大きくなり、一生そのサービスから離れられなくなってしまうからです。",
       "image": {
         "type": "slide",
         "slide": {
@@ -244,54 +234,112 @@
           "eyebrow": {
             "label": "ロックインの問題"
           },
-          "quote": "ひとつのサービスプロバイダーが{warning:蓄積}を支配するなら、アシスタントを支配する。",
-          "author": "ホスト型アシスタントのリスク",
-          "role": "長く使うほど、乗り換えは難しくなる"
+          "quote": "長く使えば使うほど、切り替えに伴う痛みは大きくなる。",
+          "author": "特定サービスに任せるリスク",
+          "role": "蓄積を握られると、アシスタントを握られる"
         }
       }
     },
     {
-      "text": "MulmoClaudeは、そのロックインを避けるために、ユーザーが所有する成長環境を作ろうとする試みです。設計は3つの制約に基づいています。普通のユーザーが小さなデータベースアプリを育てられること。アプリとデータがユーザーのコンピューターにあること。そして、リモートアクセスはクラウドへの移住ではなく、そのアシスタントへの窓であることです。",
+      "text": "ここで重要なのが、AIアシスタントを育てる、という感覚です。AIアシスタントは、どこかから完成品を買ってくるものではありません。自分で育てるものです。インストールしたばかりのMulmoClaudeには、データも、自分専用のアプリもありません。そのままでは、まだAIアシスタントの役割は果たせません。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "中心にある感覚"
+          },
+          "quote": "AIアシスタントは完成品を買うものではない。{primary:自分で育てる}ものだ。",
+          "author": "MulmoClaudeの出発点",
+          "role": "最初は空っぽでいい。そこから育てる。"
+        }
+      }
+    },
+    {
+      "text": "育てるためには、環境が必要です。記憶を蓄積する場所。データを置く場所。自分専用のアプリを作る場所。自然言語で会話しながら、必要な道具を増やしていける場所。MulmoClaudeは、AIアシスタントを育てるための成長環境を作ろうとする試みです。",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "manifesto",
           "eyebrow": {
-            "label": "MulmoClaudeの答え",
-            "color": "primary"
+            "label": "MulmoClaudeの答え"
           },
-          "title": "ユーザー所有の成長環境でロックインを避ける",
+          "title": "AIアシスタントの成長環境",
           "items": [
             {
-              "title": "ニーズを説明してアプリを育てる",
-              "description": "普通のユーザー。パートタイム開発者ではない。",
+              "title": "記憶を蓄積する",
+              "description": "会話、修正、好みが残る。",
               "accentColor": "primary"
             },
             {
-              "title": "アプリとデータをローカルに保つ",
-              "description": "蓄積はユーザーのワークスペースにある。",
+              "title": "データを置く",
+              "description": "自分の仕事と生活の記録を持つ。",
               "accentColor": "success"
             },
             {
-              "title": "リモートから届く",
-              "description": "電話は窓であって、新しい住み家ではない。",
-              "accentColor": "warning"
+              "title": "アプリを育てる",
+              "description": "必要に応じて自分専用の道具を作る。",
+              "accentColor": "accent"
             }
           ],
-          "columns": 3
+          "columns": 3,
+          "footer": "ハーネスはこの環境の一部。大事なのは、育つ場所そのもの。"
         }
       }
     },
     {
-      "text": "第一に、普通のユーザーがコードを書かずに、小さなデータベースアプリを作れるべきです。レストランリスト、請求書トラッカー、単語練習。ユーザーが必要なものを説明し、アシスタントがそれを構造化された道具に変え、進化させていきます。",
+      "text": "MulmoClaudeを使うと、AIアシスタントを自分のパソコンの上で育てることができます。実体は、自分のパソコンの上に蓄積されていきます。データも、アプリも、メモリーも、自分のものです。GitHubを使ってバックアップやバージョン管理をすれば、さらに安心です。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "どこに蓄積するか"
+          },
+          "title": "サービスではなく、自分のパソコンに育てる",
+          "left": {
+            "title": "サービスの中",
+            "accentColor": "danger",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "データは外にある",
+                  "アプリも外にある",
+                  "離れるほど痛みが増える"
+                ]
+              }
+            ],
+            "footer": "蓄積がロックインになる"
+          },
+          "right": {
+            "title": "自分のパソコン",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "データは自分のもの",
+                  "アプリも自分のもの",
+                  "バックアップとバージョン管理ができる"
+                ]
+              }
+            ],
+            "footer": "運命を自分でコントロールできる"
+          }
+        }
+      }
+    },
+    {
+      "text": "MulmoClaudeの中で動くAIと自然言語で会話しながら、自分専用のアプリを作り、さまざまなデータを蓄積していく。それが、AIアシスタントの正しい育て方だと私は思います。レストランリスト、請求書トラッカー、単語練習。どれも、ひとりのための小さなアプリです。",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "grid",
           "eyebrow": {
-            "label": "制約 1"
+            "label": "どう育てるか"
           },
-          "title": "ひとりのためのデータベースアプリ",
+          "title": "会話から自分専用アプリへ",
           "gridColumns": 3,
           "items": [
             {
@@ -307,84 +355,41 @@
               "accentColor": "success"
             },
             {
-              "title": "単語",
-              "description": "カード、進捗、練習",
+              "title": "単語練習",
+              "description": "カード、進捗、復習",
               "icon": "🎴",
               "accentColor": "accent"
             }
           ],
-          "footer": "ノーコードビルダーではない。会話が道具を育てる。"
+          "footer": "コードを書かずに、必要な道具を会話で増やしていく。"
         }
       }
     },
     {
-      "text": "第二に、アプリとデータはユーザーのコンピューターにあるべきです。MulmoClaudeでは、アシスタントの蓄積はファイルのワークスペースです。ファイルは見られ、検索でき、コピーでき、バックアップでき、バージョン管理でき、移動できます。モデルを変えても、アシスタントを失いません。",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "comparison",
-          "eyebrow": {
-            "label": "制約 2"
-          },
-          "title": "蓄積はどこにあるか",
-          "left": {
-            "title": "プロバイダーのアカウント",
-            "accentColor": "danger",
-            "content": [
-              {
-                "type": "bullets",
-                "items": [
-                  "記憶はサービスの中",
-                  "アプリはプラットフォームに依存",
-                  "時間とともに離れにくくなる"
-                ]
-              }
-            ],
-            "footer": "乗り換えコストはプロバイダーの資産"
-          },
-          "right": {
-            "title": "ユーザーのワークスペース",
-            "accentColor": "success",
-            "content": [
-              {
-                "type": "bullets",
-                "items": [
-                  "記録はファイル",
-                  "アプリもファイル",
-                  "コピー、バックアップ、バージョン管理、移動"
-                ]
-              }
-            ],
-            "footer": "蓄積はユーザーのもの"
-          }
-        }
-      }
-    },
-    {
-      "text": "第三に、リモートデバイスはアシスタントへの窓であるべきで、アシスタントの本体は家に残るべきです。今はその窓が電話です。将来はスマートグラス、スマートヘッドセット、あるいは一番近くにあるデバイスになります。作業をするのはユーザーのマシンです。リレーは用事を運ぶだけで、アシスタントにはなりません。",
+      "text": "もちろん、アシスタントはパソコンの前にいる時だけ使えれば良いわけではありません。今はスマートフォンからアクセスできます。将来はスマートグラスやスマートヘッドセットからもアクセスできるべきです。ただし、それらはあくまで窓です。アシスタントの実体は、自分のコンピューターに残ります。",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "bigQuote",
           "eyebrow": {
-            "label": "制約 3"
+            "label": "リモートアクセス"
           },
-          "quote": "リモートアクセスは各デバイスを{primary:窓}にする。アシスタントをクラウドへ移すことではない。",
-          "author": "リレーは用事を運ぶ",
-          "role": "今日は電話。明日はスマートグラス、ヘッドセット、他のサーフェス。"
+          "quote": "デバイスは{primary:窓}。アシスタントの実体は、自分のコンピューターに残る。",
+          "author": "電話、スマートグラス、ヘッドセット",
+          "role": "アクセス手段は増えても、蓄積の場所は変えない"
         }
       }
     },
     {
-      "text": "これがMulmoClaudeの形です。ユーザーが必要なものを説明する。アシスタントがアプリを育てる。アプリとデータはユーザーのもとに残る。すべてのデバイスは窓であり続ける。",
+      "text": "つまり、MulmoClaudeの形はこうです。ユーザーが必要なものを説明する。AIが自分専用のアプリを育てる。アプリとデータは自分のパソコンに残る。さまざまなデバイスから、同じアシスタントにアクセスできる。",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "columns",
           "eyebrow": {
-            "label": "プロダクトの形"
+            "label": "MulmoClaudeのループ"
           },
-          "title": "MulmoClaudeのループ",
+          "title": "育てて、所有し、どこからでも使う",
           "columns": [
             {
               "title": "説明する",
@@ -403,29 +408,29 @@
               "content": [
                 {
                   "type": "text",
-                  "value": "アシスタントがアプリを育てる。"
+                  "value": "AIが自分専用のアプリを育てる。"
                 }
               ],
               "num": 2
             },
             {
-              "title": "保つ",
+              "title": "所有する",
               "accentColor": "success",
               "content": [
                 {
                   "type": "text",
-                  "value": "アプリとデータはユーザーのもとに残る。"
+                  "value": "アプリとデータは自分のパソコンに残る。"
                 }
               ],
               "num": 3
             },
             {
-              "title": "届く",
+              "title": "使う",
               "accentColor": "warning",
               "content": [
                 {
                   "type": "text",
-                  "value": "すべてのデバイスは窓であり続ける。"
+                  "value": "どのデバイスからでも同じアシスタントに届く。"
                 }
               ],
               "num": 4
@@ -433,7 +438,7 @@
           ],
           "showArrows": true,
           "callout": {
-            "text": "繰り返されるニーズが{primary:所有されたアプリ}になるワークスペース。",
+            "text": "AIアシスタントを{primary:自分のものとして育てる}ための環境。",
             "label": "要点",
             "color": "primary",
             "leftBar": true
@@ -442,7 +447,7 @@
       }
     },
     {
-      "text": "次の10年で、大きな差が生まれます。強力なモデルへのアクセスを借りるだけの人と、自分を知るアシスタントを持つ人です。持続的な優位は、最も賢いモデルへのアクセスではありません。データ、アプリ、学習された働き方が、投資した本人に属しているアシスタントです。",
+      "text": "AIがこれからますます重要になることは明らかです。そして、AIを使いこなせる人と、そうでない人の間には大きな差が生まれます。その差は、単に賢いモデルを借りられるかではなく、自分を理解しているAIアシスタントを育てられるかで決まるはずです。",
       "image": {
         "type": "slide",
         "slide": {
@@ -450,27 +455,28 @@
           "eyebrow": {
             "label": "なぜ重要か"
           },
-          "quote": "持続的な優位は、{primary:蓄積が自分のもの}であるアシスタント。",
-          "author": "育てられ、所有され、持ち運べる",
-          "role": "データ · アプリ · 学習された働き方"
+          "quote": "差がつくのは、賢いモデルを借りることではなく、{primary:自分を理解するAIアシスタントを育てること}。",
+          "author": "AIを使いこなせる側へ",
+          "role": "データ · アプリ · 記憶 · 働き方"
         }
       }
     },
     {
-      "text": "これがMulmoClaudeのビジョンです。蓄積を自分のものにしたまま、アシスタントを育てる場所。まだ何も知らないうちに始めましょう。あなたのコンピューターの上で、蓄積を始めるのです。",
+      "text": "ぜひMulmoClaudeをインストールし、自分専用のAIアシスタントを育ててください。何も知らないところから始めればいいのです。蓄積を、自分のコンピューターの上で始めましょう。",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "title",
           "eyebrow": {
-            "label": "ビジョン全文へ"
+            "label": "AIアシスタントを育てる"
           },
           "titleSize": "large",
-          "title": "まだ**何も知らない**うちに始める",
-          "subtitle": "蓄積を、{primary:あなたのコンピューター}の上で始める。",
+          "title": "自分専用の**AIアシスタント**を育てる",
+          "subtitle": "蓄積を、{primary:自分のコンピューター}の上で始める。",
           "chips": [
-            "VISION.md · 育てるAIアシスタント",
-            "Beyond the Sea of App Icons · Parts 1–6"
+            "MulmoClaude",
+            "AIアシスタント育成ツール",
+            "自分のデータとアプリを自分で所有する"
           ]
         }
       }
