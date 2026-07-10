@@ -46,6 +46,13 @@ let generating = false;
 let pending = false;
 const clients = new Set();
 
+// mulmocast occasionally hangs (e.g. Puppeteer Target.createTarget timeouts).
+// Kill the child after a while and retry — generated media is cached to disk
+// per beat, so each retry makes forward progress.
+const GENERATE_TIMEOUT_MS = Number(process.env.MULMO_PREVIEW_TIMEOUT_MS) || 120000;
+const MAX_RESTARTS = 2;
+let restarts = 0;
+
 // Exit when the last tab closes. Reloads drop the connection briefly before
 // reconnecting, so only shut down after a grace period with no clients.
 const SHUTDOWN_GRACE_MS = 5000;
@@ -74,9 +81,19 @@ function generate(onDone) {
   generating = true;
   broadcast("generating", "1");
   console.log(`[${new Date().toLocaleTimeString()}] regenerating…`);
-  execFile("mulmo", ["viewer", "-g", scriptPath], { cwd: path.resolve(__dirname, "..") }, (err, stdout, stderr) => {
+  execFile("mulmo", ["viewer", "-g", scriptPath], { cwd: path.resolve(__dirname, ".."), timeout: GENERATE_TIMEOUT_MS }, (err, stdout, stderr) => {
     generating = false;
-    if (err) {
+    if (err && err.killed && restarts < MAX_RESTARTS) {
+      restarts++;
+      console.warn(`[${new Date().toLocaleTimeString()}] generation timed out after ${GENERATE_TIMEOUT_MS / 1000}s — killed and restarting (${restarts}/${MAX_RESTARTS})`);
+      generate(onDone);
+      return;
+    }
+    if (err && err.killed) {
+      broadcast("error", JSON.stringify(`Generation timed out ${1 + MAX_RESTARTS} times (${GENERATE_TIMEOUT_MS / 1000}s each) — mulmocast may be hung. Save the file to retry.`));
+      console.error("giving up after repeated timeouts");
+      restarts = 0;
+    } else if (err) {
       const msg = (stderr || stdout || err.message)
         .replace(/\x1b\[[0-9;]*m/g, "")
         .split(/\n\s+at /)[0]
@@ -85,6 +102,7 @@ function generate(onDone) {
       console.error(msg);
       broadcast("error", JSON.stringify("Generation failed:\n" + msg));
     } else {
+      restarts = 0;
       html = fs.readFileSync(viewerPath, "utf8").replace(/<\/body>/i, CLIENT_SNIPPET + "</body>");
       console.log(`[${new Date().toLocaleTimeString()}] updated`);
       broadcast("reload", "1");

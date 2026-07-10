@@ -20,6 +20,7 @@
   },
   "imageParams": {
     "provider": "openai",
+    "style": "Minimal flat vector editorial illustration on a deep navy background (#0A0F24). Simple geometric shapes, clean silhouettes, generous negative space. Limited palette: deep navy, luminous cyan (#38BDF8), soft indigo (#818CF8), off-white highlights. Calm, modern, optimistic tone. No incidental text, letters, or logos — but when the prompt explicitly specifies labels, render exactly those words, spelled exactly as written, in a clean modern sans-serif.",
     "images": {}
   },
   "movieParams": {
@@ -94,154 +95,27 @@
     },
     {
       "text": "When people hear \"AI assistant,\" many picture smart glasses, or Siri and Alexa. But those are just entry points. Just as the person you are talking to does not live inside your phone, the substance of an assistant does not live inside a device. From your smartphone, your smartwatch, or your computer, you reach the same assistant. That is how it should be.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "grid",
-          "eyebrow": {
-            "label": "Devices are doorways"
-          },
-          "title": "The assistant is not the device",
-          "gridColumns": 4,
-          "items": [
-            {
-              "title": "Smart Glasses",
-              "description": "One way to access it",
-              "icon": "👓",
-              "accentColor": "primary"
-            },
-            {
-              "title": "Phone",
-              "description": "A doorway when away",
-              "icon": "📱",
-              "accentColor": "info"
-            },
-            {
-              "title": "Watch",
-              "description": "A wearable doorway",
-              "icon": "⌚",
-              "accentColor": "accent"
-            },
-            {
-              "title": "Desktop",
-              "description": "A doorway while working",
-              "icon": "💻",
-              "accentColor": "success"
-            }
-          ],
-          "footer": "Just as the person you talk to does not live inside your phone, the assistant does not live inside a device."
-        }
-      }
+      "imagePrompt": "A single radiant orb of light floating at the center of the scene, surrounded by four open doorways arranged in a loose arc; through each doorway a different device is visible as a simple silhouette — smart glasses, a smartphone, a wristwatch, a laptop — and a faint thread of light passes through every doorway, all converging on the same central orb."
     },
     {
       "text": "Then what is the substance of an assistant? You might think it is the AI model itself — GPT or Claude — but that is not it either. The model is just the engine. To do good work, an assistant has to know you well: your past conversations, your calendar, your address book, your to-do lists, your email, your meeting notes, your journal, and even the apps you use.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "bigQuote",
-          "eyebrow": {
-            "label": "A model is not enough"
-          },
-          "quote": "The substance of an AI assistant is not the AI model itself.",
-          "author": "The model is the engine",
-          "role": "What matters is the accumulation that lets it understand the person"
-        }
-      }
+      "imagePrompt": "A side-by-side conceptual comparison. On the left, small and plain: a simple mechanical engine block resting on the ground, labeled with the word \"MODEL\" beneath it. On the right, much larger and brighter: a glowing orb encircled by two or three thin orbit rings carrying small icons — speech bubbles, calendar pages, envelopes, note cards — labeled with the word \"ASSISTANT\" beneath it. The orb with its orbiting accumulation clearly outshines the bare engine. Both labels in small clean sans-serif capitals in luminous cyan."
     },
     {
       "text": "The companies building AI understand this very well. It is no coincidence that ChatGPT and Claude keep adding features that remember things about you. Meta, which already holds vast amounts of user data through Facebook and Instagram, and Google, which holds Gmail and your calendar, have joined the same race. The value of an AI assistant is determined not by how smart the model is, but by how much it knows about you. Every one of these companies has realized that.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "manifesto",
-          "eyebrow": {
-            "label": "Where the value lives"
-          },
-          "title": "The accumulation that makes an assistant smart",
-          "items": [
-            {
-              "title": "Memory",
-              "description": "Past conversations, preferences, corrections.",
-              "accentColor": "primary"
-            },
-            {
-              "title": "Data",
-              "description": "Calendar, contacts, to-dos, email, notes, journals.",
-              "accentColor": "success"
-            },
-            {
-              "title": "Apps",
-              "description": "Tools the person uses, or creates when needed.",
-              "accentColor": "accent"
-            }
-          ],
-          "columns": 3,
-          "footer": "Whoever controls this accumulation controls the assistant."
-        }
-      }
+      "imagePrompt": "A strict schematic diagram of exactly three horizontal lanes on the left, converging into one large glowing orb on the right. Top lane: a row of identical speech bubbles only, labeled with the word \"Memory\". Middle lane: a row of calendar pages and envelopes only, labeled with the word \"Data\". Bottom lane: a row of small app windows with a wrench only, labeled with the word \"Apps\". Each lane's label sits at the left end of the lane in small clean sans-serif capitals in luminous cyan. Each lane is a thin luminous guide line carrying its icons, with generous empty space separating the three lanes, and the three guide lines curve together and merge into the glowing orb, which is ringed by concentric halos. Minimal, ordered, engineered layout like a clean flow diagram."
     },
     {
       "text": "But something as important as an AI assistant — one that accumulates your personal data and apps — is not something you should entrust to any single service provider. The longer you use it, the harder it becomes to move to another service, until you can never leave at all.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "bigQuote",
-          "accentColor": "warning",
-          "eyebrow": {
-            "label": "The lock-in problem"
-          },
-          "quote": "The longer you use it, the harder it becomes to leave — until you cannot.",
-          "author": "The risk of depending on one service",
-          "role": "If someone else owns the accumulation, they own the assistant"
-        }
-      }
+      "imagePrompt": "A glowing orb trapped inside a closed birdcage on a pedestal; the orb's luminous threads have grown out through the bars and rooted deep into the ground around the cage like vines, so the orb can no longer be pulled free. A small person stands outside, reaching toward the cage. The cage bars carry a faint warm amber (#FBBF24) warning glow — the only warm accent in the otherwise deep navy and cyan scene."
     },
     {
       "text": "This is why I started building a piece of software called MulmoClaude. MulmoClaude is open source, so there is no risk of being locked in by any single company. If you nurture your assistant inside someone else's service, your memories, your data, and your apps accumulate inside that service. I wanted the accumulation to stay in the user's own hands. What MulmoClaude makes possible is nurturing an AI assistant on your own computer. An assistant you do not hand over to anyone — one you nurture in your own hands, yours alone.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "bigQuote",
-          "eyebrow": {
-            "label": "Why MulmoClaude exists"
-          },
-          "quote": "An assistant nurtured {primary:in your own hands}.",
-          "author": "The starting point of MulmoClaude",
-          "role": "Open source. What accumulates stays yours."
-        }
-      }
+      "imagePrompt": "A person seated at a desk in a softly lit room, side view, gently cupping a small radiant orb of light in their hands like a seedling; faint threads of light connect the orb to books, notes, and everyday objects around the room, suggesting memories accumulating in a place of their own."
     },
     {
       "text": "Nurturing takes an environment. A place to accumulate memories. A place to keep your data. A place to build apps just for you. A place where you can grow your set of tools simply by talking in everyday words. MulmoClaude is, so to speak, a garden for nurturing your AI assistant. Right after you install it, the garden is still empty. You plant seeds and tend the soil, and grow an assistant that is yours alone.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "manifesto",
-          "eyebrow": {
-            "label": "MulmoClaude's answer"
-          },
-          "title": "A garden for nurturing your AI assistant",
-          "items": [
-            {
-              "title": "Accumulate memory",
-              "description": "Conversations, corrections, and preferences remain.",
-              "accentColor": "primary"
-            },
-            {
-              "title": "Keep data",
-              "description": "Hold the records of your work and life.",
-              "accentColor": "success"
-            },
-            {
-              "title": "Grow apps",
-              "description": "Create personal tools as needs arise.",
-              "accentColor": "accent"
-            }
-          ],
-          "columns": 3,
-          "footer": "The garden starts empty. Plant seeds, tend the soil, and grow."
-        }
-      }
+      "imagePrompt": "A person kneeling in a small private garden at night, gently planting a glowing seedling of light into dark soil; a few other seedlings of light sprout nearby at different heights, each trailing a faint thread of light, with a watering can beside the person and a low fence framing the garden as a personal, protected place."
     },
     {
       "text": "You talk with the AI running inside MulmoClaude, build apps just for yourself, and accumulate all kinds of data. That, I believe, is the right way to nurture an AI assistant. And building apps requires no programming knowledge. When programmers have AI write code for them, they call it \"vibe coding\" — but with MulmoClaude, you never have to think about code at all. You simply say \"I want something like this,\" and the AI builds the app you need.",
@@ -327,18 +201,7 @@
     },
     {
       "text": "As AI becomes ever more important, a wide gap will open between people who can make full use of it and people who cannot. That gap will be decided not by whether you can rent a smart model, but by whether you can nurture an AI assistant that understands you. Nurturing an assistant raises your own productivity — and your value to society.",
-      "image": {
-        "type": "slide",
-        "slide": {
-          "layout": "bigQuote",
-          "eyebrow": {
-            "label": "Why this matters"
-          },
-          "quote": "The gap will not come from renting a smarter model. It will come from {primary:nurturing an AI assistant that understands you}.",
-          "author": "Move to the side that can use AI well",
-          "role": "Nurturing raises your productivity — and your value to society"
-        }
-      }
+      "imagePrompt": "A dark chasm splits the ground into two cliff edges pulling apart. On the left cliff, slightly lower and dimmer, a person stands alone beside a small plain closed box. On the right cliff, higher and bathed in soft light, a person stands beside a large glowing orb encircled by a thin orbit ring, gentle threads of light linking the orb to the person. The widening dark gap between the two cliffs is the focus of the composition."
     },
     {
       "text": "So install MulmoClaude and nurture your own AI assistant. An assistant that knows everything about you and supports you around the clock is not sold anywhere. But you can nurture one. Start the accumulation today, on your own computer.",
