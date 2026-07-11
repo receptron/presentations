@@ -68,8 +68,8 @@
     },
     "padding": 0.3,
     "introPadding": 1,
-    "closingPadding": 3,
-    "outroPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
     "bgmVolume": 0.12,
     "audioVolume": 1,
     "suppressSpeech": false
