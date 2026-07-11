@@ -21,7 +21,8 @@
   },
   "imageParams": {
     "provider": "openai",
-    "style": "Hand-painted Japanese animation film style in the spirit of classic Studio Ghibli: soft watercolor-and-gouache textures, painterly light and clouds, warm nostalgic atmosphere, gentle rounded character design, lush detailed backgrounds. Night scenes rendered in deep blue tones (#0A0F24 to #16224D) with luminous cyan (#38BDF8) glow as the main light source. No incidental text, letters, or logos — but when the prompt explicitly specifies labels, render exactly those words, spelled exactly as written, in clean gentle hand-lettering.",
+    "model": "gpt-image-2",
+    "style": "Hand-painted Japanese animation film style in the spirit of classic Studio Ghibli: soft watercolor-and-gouache textures, painterly light and clouds, warm nostalgic atmosphere, gentle rounded character design, lush detailed backgrounds. Scenes bathed in warm golden daylight: soft cream (#FFFBF2) and peach (#FCE8C8) skies, amber (#F59E0B) and warm orange (#EA580C) accents, gentle morning sunlight as the main light source, hopeful and bright overall. No incidental text, letters, or logos — but when the prompt explicitly specifies labels, render exactly those words, spelled exactly as written, in clean gentle hand-lettering.",
     "images": {}
   },
   "movieParams": {
@@ -33,19 +34,19 @@
   "slideParams": {
     "theme": {
       "colors": {
-        "bg": "0A0F24",
-        "bgCard": "111A3A",
-        "bgCardAlt": "16224D",
-        "text": "EEF2FF",
-        "textMuted": "9FB0D8",
-        "textDim": "6F7FA0",
-        "primary": "38BDF8",
-        "accent": "818CF8",
-        "success": "34D399",
-        "warning": "FBBF24",
-        "danger": "FB7185",
-        "info": "22D3EE",
-        "highlight": "F0ABFC"
+        "bg": "FFFBF2",
+        "bgCard": "FFF3DC",
+        "bgCardAlt": "FCE8C8",
+        "text": "431407",
+        "textMuted": "7C5E3C",
+        "textDim": "A08B6E",
+        "primary": "EA580C",
+        "accent": "F59E0B",
+        "success": "65A30D",
+        "warning": "B45309",
+        "danger": "DC2626",
+        "info": "0284C7",
+        "highlight": "DB2777"
       },
       "fonts": {
         "title": "Georgia",
@@ -53,8 +54,8 @@
         "mono": "Menlo",
         "accent": "Outfit"
       },
-      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
-      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)",
+      "titleGradient": "linear-gradient(100deg, #431407, #B45309 55%, #EA580C)",
       "cardStyle": "glass"
     }
   },
@@ -76,16 +77,16 @@
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D);\">",
-          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#38BDF8\"></div>",
-          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:#818CF8\"></div>",
-          "  <div class=\"absolute -top-20 -right-8 w-[360px] h-[360px] rounded-full\" style=\"background:#38BDF8;opacity:.1\"></div>",
-          "  <div class=\"absolute -bottom-12 -left-16 w-[280px] h-[280px] rounded-full\" style=\"background:#818CF8;opacity:.1\"></div>",
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), radial-gradient(1000px 520px at 50% 118%, rgba(249,115,22,.25), transparent 60%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#F59E0B\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:linear-gradient(90deg,#FB923C,#F59E0B)\"></div>",
+          "  <div class=\"absolute -top-20 -right-8 w-[360px] h-[360px] rounded-full\" style=\"background:#F59E0B;opacity:.12\"></div>",
+          "  <div class=\"absolute -bottom-12 -left-16 w-[280px] h-[280px] rounded-full\" style=\"background:#FB923C;opacity:.10\"></div>",
           "  <div class=\"relative z-10 flex flex-col justify-center h-full px-16\">",
-          "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#38BDF8;font-family:Helvetica,'Hiragino Sans',sans-serif\">MulmoClaude</p>",
-          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#FFFFFF,#38BDF8 60%,#818CF8);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,'Hiragino Mincho ProN',serif\">AIアシスタント育成ツール</h1>",
-          "    <p class=\"text-[26px] mt-6\" style=\"color:#9FB0D8;font-family:Helvetica,'Hiragino Sans',sans-serif\">AIアシスタントは<span style=\"color:#FBBF24\">買う</span>ものではありません。<span style=\"color:#38BDF8\">育てる</span>ものです。</p>",
-          "    <p class=\"text-[18px] mt-12\" style=\"color:#6F7FA0;font-family:Helvetica,'Hiragino Sans',sans-serif\">Satoshi Nakajima</p>",
+          "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#EA580C;font-family:Helvetica,'Hiragino Sans',sans-serif\">MulmoClaude</p>",
+          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#431407,#B45309 55%,#EA580C);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,'Hiragino Mincho ProN',serif\">AIアシスタント育成ツール</h1>",
+          "    <p class=\"text-[26px] mt-6\" style=\"color:#7C5E3C;font-family:Helvetica,'Hiragino Sans',sans-serif\">AIアシスタントは<span style=\"color:#B0A18C\">買う</span>ものではありません。<span style=\"color:#EA580C;font-weight:bold\">育てる</span>ものです。</p>",
+          "    <p class=\"text-[18px] mt-12\" style=\"color:#A08B6E;font-family:Helvetica,'Hiragino Sans',sans-serif\">Satoshi Nakajima</p>",
           "  </div>",
           "</div>"
         ]
@@ -93,27 +94,27 @@
     },
     {
       "text": "AIアシスタントというと、スマートグラスやSiri、Alexaを思い浮かべる人が多いと思います。でも、それらはアクセスするための入り口にすぎません。電話機の中に話し相手が住んでいるわけではないのと同じで、アシスタントの実体は、デバイスの中にあるわけではありません。スマートフォンからでも、スマートウォッチからでも、パソコンからでも、同じアシスタントにつながる。それがあるべき姿です。",
-      "imagePrompt": "A single radiant orb of light floating at the center of the scene, surrounded by four open doorways arranged in a loose arc; through each doorway a different device is visible as a simple silhouette — smart glasses, a smartphone, a wristwatch, a laptop — and a faint thread of light passes through every doorway, all converging on the same central orb."
+      "imagePrompt": "A single radiant orb of warm golden light floating at the center of a bright open meadow under a soft morning sky, surrounded by four open doorways arranged in a loose arc; through each doorway a different device is visible as a simple silhouette — smart glasses, a smartphone, a wristwatch, a laptop — and a faint thread of golden light passes through every doorway, all converging on the same central orb."
     },
     {
       "text": "では、アシスタントの実体とは何でしょうか。GPTやClaudeのようなAIモデルそのものだ、と思うかもしれませんが、それも違います。モデルはエンジンにすぎません。良い仕事をするには、本人のことをよく知っている必要があります。過去の会話、予定表、住所録、ToDoリスト、メール、ミーティングメモ、日記、そしてその人が使うアプリまで理解している必要があります。",
-      "imagePrompt": "A side-by-side conceptual comparison. On the left, small and plain: a simple mechanical engine block resting on the ground, labeled with the word \"MODEL\" beneath it. On the right, much larger and brighter: a glowing orb encircled by two or three thin orbit rings carrying small icons — speech bubbles, calendar pages, envelopes, note cards — labeled with the word \"ASSISTANT\" beneath it. The orb with its orbiting accumulation clearly outshines the bare engine. Both labels in small clean sans-serif capitals in luminous cyan."
+      "imagePrompt": "A side-by-side conceptual comparison in a sunlit field. On the left, small and plain: a simple mechanical engine block resting on the ground, labeled with the word \"MODEL\" beneath it. On the right, much larger and brighter: a glowing orb of warm golden light encircled by two or three thin orbit rings carrying small icons — speech bubbles, calendar pages, envelopes, note cards — labeled with the word \"ASSISTANT\" beneath it. The radiant golden orb with its orbiting accumulation clearly outshines the bare engine. Both labels in small clean sans-serif capitals in warm orange."
     },
     {
       "text": "実は、AIを作っている会社たちもそれをよく分かっています。ChatGPTやClaudeに「あなたのことを覚えておく機能」が次々と追加されているのは、偶然ではありません。FacebookやInstagramでユーザーのデータをすでに大量に持っているMetaや、GmailやカレンダーをおさえているGoogleも、同じ勝負に加わっています。AIアシスタントの価値は、モデルの賢さではなく、その人についてどれだけ知っているかで決まる。どの会社も、それに気づいているのです。",
-      "imagePrompt": "A strict schematic diagram of exactly three horizontal lanes on the left, converging into one large glowing orb on the right. Top lane: a row of identical speech bubbles only, labeled with the word \"Memory\". Middle lane: a row of calendar pages and envelopes only, labeled with the word \"Data\". Bottom lane: a row of small app windows with a wrench only, labeled with the word \"Apps\". Each lane's label sits at the left end of the lane in small clean sans-serif capitals in luminous cyan. Each lane is a thin luminous guide line carrying its icons, with generous empty space separating the three lanes, and the three guide lines curve together and merge into the glowing orb, which is ringed by concentric halos. Minimal, ordered, engineered layout like a clean flow diagram."
+      "imagePrompt": "A strict schematic diagram on a warm cream background of exactly three horizontal lanes on the left, converging into one large glowing orb of warm golden light on the right. Top lane: a row of identical speech bubbles only, labeled with the word \"Memory\". Middle lane: a row of calendar pages and envelopes only, labeled with the word \"Data\". Bottom lane: a row of small app windows with a wrench only, labeled with the word \"Apps\". Each lane's label sits at the left end of the lane in small clean sans-serif capitals in warm orange. Each lane is a thin amber guide line carrying its icons, with generous empty space separating the three lanes, and the three guide lines curve together and merge into the glowing golden orb, which is ringed by concentric halos. Minimal, ordered, engineered layout like a clean flow diagram."
     },
     {
       "text": "しかし、個人のデータやアプリを抱えて蓄積していくAIアシスタントほど重要なものを、特定のサービスプロバイダーに任せてしまうのは賢くありません。長く使えば使うほど、他のサービスへの乗り換えが難しくなり、一生そのサービスから離れられなくなってしまうからです。",
-      "imagePrompt": "A glowing orb trapped inside a closed birdcage on a pedestal; the orb's luminous threads have grown out through the bars and rooted deep into the ground around the cage like vines, so the orb can no longer be pulled free. A small person stands outside, reaching toward the cage. The cage bars carry a faint warm amber (#FBBF24) warning glow — the only warm accent in the otherwise deep navy and cyan scene."
+      "imagePrompt": "A glowing orb of warm golden light trapped inside a closed birdcage on a pedestal, its light dimmed and muffled by the bars; the orb's luminous threads have grown out through the bars and rooted deep into the ground around the cage like vines, so the orb can no longer be pulled free. A small person stands outside, reaching toward the cage. The scene is lit by muted, overcast late-afternoon light with desaturated dusty tones — the sun hidden behind clouds — and the cage bars carry a cold steel-gray sheen, the only cold element in the scene."
     },
     {
       "text": "これが、私がMulmoClaudeというソフトウェアを作り始めた理由です。MulmoClaudeはオープンソースで、特定の会社に囲い込まれる心配はありません。誰かのサービスの中で育てれば、記憶も、データも、アプリも、そのサービスの中に蓄積されていきます。そうではなく、育てた蓄積がユーザー自身の手元に残るようにしたかったのです。MulmoClaudeが可能にするのは、自分のパソコンの上でAIアシスタントを育てること。誰かに預けるのではなく、自分の手元で育てる、あなただけのアシスタントです。",
-      "imagePrompt": "A person seated at a desk in a softly lit room, side view, gently cupping a small radiant orb of light in their hands like a seedling; faint threads of light connect the orb to books, notes, and everyday objects around the room, suggesting memories accumulating in a place of their own."
+      "imagePrompt": "A person seated at a desk in a sun-filled room in the morning, side view, gently cupping a small radiant orb of warm golden light in their hands like a seedling; soft sunlight streams through an open window with curtains stirring, and faint threads of golden light connect the orb to books, notes, and everyday objects around the room, suggesting memories accumulating in a place of their own. Warm, hopeful, serene atmosphere."
     },
     {
       "text": "育てるためには、環境が必要です。記憶を蓄積する場所。データを置く場所。自分専用のアプリを作る場所。普通の言葉で話しかけながら、必要な道具を増やしていける場所。MulmoClaudeは、いわばAIアシスタントを育てるための畑です。インストールした直後の畑は、まだ空っぽです。そこに種をまき、耕しながら、自分だけのアシスタントを育てていくのです。",
-      "imagePrompt": "A person kneeling in a small private garden at night, gently planting a glowing seedling of light into dark soil; a few other seedlings of light sprout nearby at different heights, each trailing a faint thread of light, with a watering can beside the person and a low fence framing the garden as a personal, protected place."
+      "imagePrompt": "A person kneeling in a small private garden in the early morning, gently planting a glowing golden seedling of light into rich dark soil; the rising sun bathes the garden in warm golden light, dew sparkles on the leaves, a few other seedlings of light sprout nearby at different heights, each trailing a faint thread of warm light, with a watering can beside the person and a low wooden fence framing the garden as a personal, protected place."
     },
     {
       "text": "MulmoClaudeの中で動くAIと会話しながら、自分専用のアプリを作り、さまざまなデータを蓄積していく。それが、AIアシスタントの正しい育て方だと私は思います。アプリを作るといっても、プログラミングの知識は要りません。プログラマーがAIにコードを書かせることを「バイブコーディング」と呼びますが、MulmoClaudeでは、コードのことを意識する必要すらありません。「こういうものが欲しい」と話すだけで、AIが必要なアプリを作ってくれるのです。",
@@ -147,23 +148,23 @@
     },
     {
       "text": "AIがこれからますます重要になるにつれ、AIを使いこなせる人と、そうでない人の間には大きな差が生まれます。その差は、単に賢いモデルを借りられるかではなく、自分を理解しているAIアシスタントを育てられるかで決まるはずです。アシスタントを育てることは、自分自身の生産性を上げ、社会にとっての自分の価値を高めることでもあるのです。",
-      "imagePrompt": "A dark chasm splits the ground into two cliff edges pulling apart. On the left cliff, slightly lower and dimmer, a person stands alone beside a small plain closed box. On the right cliff, higher and bathed in soft light, a person stands beside a large glowing orb encircled by a thin orbit ring, gentle threads of light linking the orb to the person. The widening dark gap between the two cliffs is the focus of the composition."
+      "imagePrompt": "A deep chasm splits the ground into two cliff edges pulling apart under a morning sky. On the left cliff, lower and in cool gray shadow under a passing cloud, a person stands alone beside a small plain closed box. On the right cliff, higher and bathed in warm golden sunlight, a person stands beside a large glowing orb of warm light encircled by a thin orbit ring, gentle threads of golden light linking the orb to the person. The widening gap between the shadowed side and the sunlit side is the focus of the composition."
     },
     {
       "text": "ぜひMulmoClaudeをインストールし、自分専用のAIアシスタントを育ててください。あなたのことを何でも知っていて、24時間そばで支えてくれるアシスタントは、どこにも売っていません。でも、育てることはできるのです。今日、自分のパソコンの上で、その蓄積を始めましょう。",
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D);\">",
-          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#38BDF8\"></div>",
-          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:#818CF8\"></div>",
-          "  <div class=\"absolute -top-20 -right-8 w-[360px] h-[360px] rounded-full\" style=\"background:#38BDF8;opacity:.1\"></div>",
-          "  <div class=\"absolute -bottom-12 -left-16 w-[280px] h-[280px] rounded-full\" style=\"background:#818CF8;opacity:.1\"></div>",
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1100px 620px at 50% 115%, rgba(251,146,60,.38), transparent 65%), radial-gradient(900px 520px at 85% 105%, rgba(253,224,71,.35), transparent 60%), radial-gradient(1200px 700px at 12% -10%, rgba(253,230,138,.25), transparent 60%), linear-gradient(160deg, #FFFDF6, #FFF1D6 55%, #FBDFAE);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#F59E0B\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:linear-gradient(90deg,#F59E0B,#FBBF24)\"></div>",
+          "  <div class=\"absolute -top-20 -right-8 w-[360px] h-[360px] rounded-full\" style=\"background:#FBBF24;opacity:.14\"></div>",
+          "  <div class=\"absolute -bottom-12 -left-16 w-[280px] h-[280px] rounded-full\" style=\"background:#FB923C;opacity:.12\"></div>",
           "  <div class=\"relative z-10 flex flex-col justify-center h-full px-16\">",
-          "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#38BDF8;font-family:Helvetica,'Hiragino Sans',sans-serif\">MulmoClaude</p>",
-          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#FFFFFF,#38BDF8 60%,#818CF8);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,'Hiragino Mincho ProN',serif\">自分専用のAIアシスタントを育てましょう</h1>",
-          "    <p class=\"text-[26px] mt-6\" style=\"color:#9FB0D8;font-family:Helvetica,'Hiragino Sans',sans-serif\">価値の蓄積を、<span style=\"color:#38BDF8\">自分のコンピューター</span>の上で始めて下さい。</p>",
-          "    <p class=\"text-[20px] mt-12\" style=\"color:#6F7FA0;font-family:Menlo,monospace\">https://github.com/receptron/mulmoclaude</p>",
+          "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#EA580C;font-family:Helvetica,'Hiragino Sans',sans-serif\">MulmoClaude</p>",
+          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#431407,#B45309 55%,#EA580C);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,'Hiragino Mincho ProN',serif\">自分専用のAIアシスタントを育てましょう</h1>",
+          "    <p class=\"text-[26px] mt-6\" style=\"color:#7C5E3C;font-family:Helvetica,'Hiragino Sans',sans-serif\">価値の蓄積を、<span style=\"color:#EA580C;font-weight:bold\">自分のコンピューター</span>の上で始めて下さい。</p>",
+          "    <p class=\"text-[20px] mt-12\" style=\"color:#A08B6E;font-family:Menlo,monospace\">https://github.com/receptron/mulmoclaude</p>",
           "  </div>",
           "</div>"
         ]

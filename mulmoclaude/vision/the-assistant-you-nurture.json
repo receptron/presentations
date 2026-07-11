@@ -20,7 +20,8 @@
   },
   "imageParams": {
     "provider": "openai",
-    "style": "Minimal flat vector editorial illustration on a deep navy background (#0A0F24). Simple geometric shapes, clean silhouettes, generous negative space. Limited palette: deep navy, luminous cyan (#38BDF8), soft indigo (#818CF8), off-white highlights. Calm, modern, optimistic tone. No incidental text, letters, or logos — but when the prompt explicitly specifies labels, render exactly those words, spelled exactly as written, in a clean modern sans-serif.",
+    "model": "gpt-image-2",
+    "style": "Hand-painted Japanese animation film style in the spirit of classic Studio Ghibli: soft watercolor-and-gouache textures, painterly light and clouds, warm nostalgic atmosphere, gentle rounded character design, lush detailed backgrounds. Scenes bathed in warm golden daylight: soft cream (#FFFBF2) and peach (#FCE8C8) skies, amber (#F59E0B) and warm orange (#EA580C) accents, gentle morning sunlight as the main light source, hopeful and bright overall. No incidental text, letters, or logos — but when the prompt explicitly specifies labels, render exactly those words, spelled exactly as written, in clean gentle hand-lettering.",
     "images": {}
   },
   "movieParams": {
@@ -32,19 +33,19 @@
   "slideParams": {
     "theme": {
       "colors": {
-        "bg": "0A0F24",
-        "bgCard": "111A3A",
-        "bgCardAlt": "16224D",
-        "text": "EEF2FF",
-        "textMuted": "9FB0D8",
-        "textDim": "6F7FA0",
-        "primary": "38BDF8",
-        "accent": "818CF8",
-        "success": "34D399",
-        "warning": "FBBF24",
-        "danger": "FB7185",
-        "info": "22D3EE",
-        "highlight": "F0ABFC"
+        "bg": "FFFBF2",
+        "bgCard": "FFF3DC",
+        "bgCardAlt": "FCE8C8",
+        "text": "431407",
+        "textMuted": "7C5E3C",
+        "textDim": "A08B6E",
+        "primary": "EA580C",
+        "accent": "F59E0B",
+        "success": "65A30D",
+        "warning": "B45309",
+        "danger": "DC2626",
+        "info": "0284C7",
+        "highlight": "DB2777"
       },
       "fonts": {
         "title": "Georgia",
@@ -52,8 +53,8 @@
         "mono": "Menlo",
         "accent": "Outfit"
       },
-      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
-      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)",
+      "titleGradient": "linear-gradient(100deg, #431407, #B45309 55%, #EA580C)",
       "cardStyle": "glass"
     }
   },
@@ -75,16 +76,16 @@
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D);\">",
-          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#38BDF8\"></div>",
-          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:#818CF8\"></div>",
-          "  <div class=\"absolute -top-20 -right-8 w-[360px] h-[360px] rounded-full\" style=\"background:#38BDF8;opacity:.1\"></div>",
-          "  <div class=\"absolute -bottom-12 -left-16 w-[280px] h-[280px] rounded-full\" style=\"background:#818CF8;opacity:.1\"></div>",
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), radial-gradient(1000px 520px at 50% 118%, rgba(249,115,22,.25), transparent 60%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#F59E0B\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:linear-gradient(90deg,#FB923C,#F59E0B)\"></div>",
+          "  <div class=\"absolute -top-20 -right-8 w-[360px] h-[360px] rounded-full\" style=\"background:#F59E0B;opacity:.12\"></div>",
+          "  <div class=\"absolute -bottom-12 -left-16 w-[280px] h-[280px] rounded-full\" style=\"background:#FB923C;opacity:.10\"></div>",
           "  <div class=\"relative z-10 flex flex-col justify-center h-full px-16\">",
-          "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#38BDF8;font-family:Helvetica,Arial,sans-serif\">MulmoClaude</p>",
-          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#FFFFFF,#38BDF8 60%,#818CF8);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,serif\">An AI Assistant Nurturing Tool</h1>",
-          "    <p class=\"text-[26px] mt-6\" style=\"color:#9FB0D8;font-family:Helvetica,Arial,sans-serif\">An AI assistant is not something you <span style=\"color:#FBBF24\">buy</span>. It is something you <span style=\"color:#38BDF8\">nurture</span>.</p>",
-          "    <p class=\"text-[18px] mt-12\" style=\"color:#6F7FA0;font-family:Helvetica,Arial,sans-serif\">Satoshi Nakajima</p>",
+          "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#EA580C;font-family:Helvetica,Arial,sans-serif\">MulmoClaude</p>",
+          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#431407,#B45309 55%,#EA580C);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,serif\">An AI Assistant Nurturing Tool</h1>",
+          "    <p class=\"text-[26px] mt-6\" style=\"color:#7C5E3C;font-family:Helvetica,Arial,sans-serif\">An AI assistant is not something you <span style=\"color:#B0A18C\">buy</span>. It is something you <span style=\"color:#EA580C;font-weight:bold\">nurture</span>.</p>",
+          "    <p class=\"text-[18px] mt-12\" style=\"color:#A08B6E;font-family:Helvetica,Arial,sans-serif\">Satoshi Nakajima</p>",
           "  </div>",
           "</div>"
         ]
@@ -92,27 +93,27 @@
     },
     {
       "text": "When people hear \"AI assistant,\" many picture smart glasses, or Siri and Alexa. But those are just entry points. Just as the person you are talking to does not live inside your phone, the substance of an assistant does not live inside a device. From your smartphone, your smartwatch, or your computer, you reach the same assistant. That is how it should be.",
-      "imagePrompt": "A single radiant orb of light floating at the center of the scene, surrounded by four open doorways arranged in a loose arc; through each doorway a different device is visible as a simple silhouette — smart glasses, a smartphone, a wristwatch, a laptop — and a faint thread of light passes through every doorway, all converging on the same central orb."
+      "imagePrompt": "A single radiant orb of warm golden light floating at the center of a bright open meadow under a soft morning sky, surrounded by four open doorways arranged in a loose arc; through each doorway a different device is visible as a simple silhouette — smart glasses, a smartphone, a wristwatch, a laptop — and a faint thread of golden light passes through every doorway, all converging on the same central orb."
     },
     {
       "text": "Then what is the substance of an assistant? You might think it is the AI model itself — GPT or Claude — but that is not it either. The model is just the engine. To do good work, an assistant has to know you well: your past conversations, your calendar, your address book, your to-do lists, your email, your meeting notes, your journal, and even the apps you use.",
-      "imagePrompt": "A side-by-side conceptual comparison. On the left, small and plain: a simple mechanical engine block resting on the ground, labeled with the word \"MODEL\" beneath it. On the right, much larger and brighter: a glowing orb encircled by two or three thin orbit rings carrying small icons — speech bubbles, calendar pages, envelopes, note cards — labeled with the word \"ASSISTANT\" beneath it. The orb with its orbiting accumulation clearly outshines the bare engine. Both labels in small clean sans-serif capitals in luminous cyan."
+      "imagePrompt": "A side-by-side conceptual comparison in a sunlit field. On the left, small and plain: a simple mechanical engine block resting on the ground, labeled with the word \"MODEL\" beneath it. On the right, much larger and brighter: a glowing orb of warm golden light encircled by two or three thin orbit rings carrying small icons — speech bubbles, calendar pages, envelopes, note cards — labeled with the word \"ASSISTANT\" beneath it. The radiant golden orb with its orbiting accumulation clearly outshines the bare engine. Both labels in small clean sans-serif capitals in warm orange."
     },
     {
       "text": "The companies building AI understand this very well. It is no coincidence that ChatGPT and Claude keep adding features that remember things about you. Meta, which already holds vast amounts of user data through Facebook and Instagram, and Google, which holds Gmail and your calendar, have joined the same race. The value of an AI assistant is determined not by how smart the model is, but by how much it knows about you. Every one of these companies has realized that.",
-      "imagePrompt": "A strict schematic diagram of exactly three horizontal lanes on the left, converging into one large glowing orb on the right. Top lane: a row of identical speech bubbles only, labeled with the word \"Memory\". Middle lane: a row of calendar pages and envelopes only, labeled with the word \"Data\". Bottom lane: a row of small app windows with a wrench only, labeled with the word \"Apps\". Each lane's label sits at the left end of the lane in small clean sans-serif capitals in luminous cyan. Each lane is a thin luminous guide line carrying its icons, with generous empty space separating the three lanes, and the three guide lines curve together and merge into the glowing orb, which is ringed by concentric halos. Minimal, ordered, engineered layout like a clean flow diagram."
+      "imagePrompt": "A strict schematic diagram on a warm cream background of exactly three horizontal lanes on the left, converging into one large glowing orb of warm golden light on the right. Top lane: a row of identical speech bubbles only, labeled with the word \"Memory\". Middle lane: a row of calendar pages and envelopes only, labeled with the word \"Data\". Bottom lane: a row of small app windows with a wrench only, labeled with the word \"Apps\". Each lane's label sits at the left end of the lane in small clean sans-serif capitals in warm orange. Each lane is a thin amber guide line carrying its icons, with generous empty space separating the three lanes, and the three guide lines curve together and merge into the glowing golden orb, which is ringed by concentric halos. Minimal, ordered, engineered layout like a clean flow diagram."
     },
     {
       "text": "But something as important as an AI assistant — one that accumulates your personal data and apps — is not something you should entrust to any single service provider. The longer you use it, the harder it becomes to move to another service, until you can never leave at all.",
-      "imagePrompt": "A glowing orb trapped inside a closed birdcage on a pedestal; the orb's luminous threads have grown out through the bars and rooted deep into the ground around the cage like vines, so the orb can no longer be pulled free. A small person stands outside, reaching toward the cage. The cage bars carry a faint warm amber (#FBBF24) warning glow — the only warm accent in the otherwise deep navy and cyan scene."
+      "imagePrompt": "A glowing orb of warm golden light trapped inside a closed birdcage on a pedestal, its light dimmed and muffled by the bars; the orb's luminous threads have grown out through the bars and rooted deep into the ground around the cage like vines, so the orb can no longer be pulled free. A small person stands outside, reaching toward the cage. The scene is lit by muted, overcast late-afternoon light with desaturated dusty tones — the sun hidden behind clouds — and the cage bars carry a cold steel-gray sheen, the only cold element in the scene."
     },
     {
       "text": "This is why I started building a piece of software called MulmoClaude. MulmoClaude is open source, so there is no risk of being locked in by any single company. If you nurture your assistant inside someone else's service, your memories, your data, and your apps accumulate inside that service. I wanted the accumulation to stay in the user's own hands. What MulmoClaude makes possible is nurturing an AI assistant on your own computer. An assistant you do not hand over to anyone — one you nurture in your own hands, yours alone.",
-      "imagePrompt": "A person seated at a desk in a softly lit room, side view, gently cupping a small radiant orb of light in their hands like a seedling; faint threads of light connect the orb to books, notes, and everyday objects around the room, suggesting memories accumulating in a place of their own."
+      "imagePrompt": "A person seated at a desk in a sun-filled room in the morning, side view, gently cupping a small radiant orb of warm golden light in their hands like a seedling; soft sunlight streams through an open window with curtains stirring, and faint threads of golden light connect the orb to books, notes, and everyday objects around the room, suggesting memories accumulating in a place of their own. Warm, hopeful, serene atmosphere."
     },
     {
       "text": "Nurturing takes an environment. A place to accumulate memories. A place to keep your data. A place to build apps just for you. A place where you can grow your set of tools simply by talking in everyday words. MulmoClaude is, so to speak, a garden for nurturing your AI assistant. Right after you install it, the garden is still empty. You plant seeds and tend the soil, and grow an assistant that is yours alone.",
-      "imagePrompt": "A person kneeling in a small private garden at night, gently planting a glowing seedling of light into dark soil; a few other seedlings of light sprout nearby at different heights, each trailing a faint thread of light, with a watering can beside the person and a low fence framing the garden as a personal, protected place."
+      "imagePrompt": "A person kneeling in a small private garden in the early morning, gently planting a glowing golden seedling of light into rich dark soil; the rising sun bathes the garden in warm golden light, dew sparkles on the leaves, a few other seedlings of light sprout nearby at different heights, each trailing a faint thread of warm light, with a watering can beside the person and a low wooden fence framing the garden as a personal, protected place."
     },
     {
       "text": "You talk with the AI running inside MulmoClaude, build apps just for yourself, and accumulate all kinds of data. That, I believe, is the right way to nurture an AI assistant. And building apps requires no programming knowledge. When programmers have AI write code for them, they call it \"vibe coding\" — but with MulmoClaude, you never have to think about code at all. You simply say \"I want something like this,\" and the AI builds the app you need.",
@@ -146,23 +147,23 @@
     },
     {
       "text": "As AI becomes ever more important, a wide gap will open between people who can make full use of it and people who cannot. That gap will be decided not by whether you can rent a smart model, but by whether you can nurture an AI assistant that understands you. Nurturing an assistant raises your own productivity — and your value to society.",
-      "imagePrompt": "A dark chasm splits the ground into two cliff edges pulling apart. On the left cliff, slightly lower and dimmer, a person stands alone beside a small plain closed box. On the right cliff, higher and bathed in soft light, a person stands beside a large glowing orb encircled by a thin orbit ring, gentle threads of light linking the orb to the person. The widening dark gap between the two cliffs is the focus of the composition."
+      "imagePrompt": "A deep chasm splits the ground into two cliff edges pulling apart under a morning sky. On the left cliff, lower and in cool gray shadow under a passing cloud, a person stands alone beside a small plain closed box. On the right cliff, higher and bathed in warm golden sunlight, a person stands beside a large glowing orb of warm light encircled by a thin orbit ring, gentle threads of golden light linking the orb to the person. The widening gap between the shadowed side and the sunlit side is the focus of the composition."
     },
     {
       "text": "So install MulmoClaude and nurture your own AI assistant. An assistant that knows everything about you and supports you around the clock is not sold anywhere. But you can nurture one. Start the accumulation today, on your own computer.",
       "image": {
         "type": "html_tailwind",
         "html": [
-          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D);\">",
-          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#38BDF8\"></div>",
-          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:#818CF8\"></div>",
-          "  <div class=\"absolute -top-20 -right-8 w-[360px] h-[360px] rounded-full\" style=\"background:#38BDF8;opacity:.1\"></div>",
-          "  <div class=\"absolute -bottom-12 -left-16 w-[280px] h-[280px] rounded-full\" style=\"background:#818CF8;opacity:.1\"></div>",
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1100px 620px at 50% 115%, rgba(251,146,60,.38), transparent 65%), radial-gradient(900px 520px at 85% 105%, rgba(253,224,71,.35), transparent 60%), radial-gradient(1200px 700px at 12% -10%, rgba(253,230,138,.25), transparent 60%), linear-gradient(160deg, #FFFDF6, #FFF1D6 55%, #FBDFAE);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#F59E0B\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:linear-gradient(90deg,#F59E0B,#FBBF24)\"></div>",
+          "  <div class=\"absolute -top-20 -right-8 w-[360px] h-[360px] rounded-full\" style=\"background:#FBBF24;opacity:.14\"></div>",
+          "  <div class=\"absolute -bottom-12 -left-16 w-[280px] h-[280px] rounded-full\" style=\"background:#FB923C;opacity:.12\"></div>",
           "  <div class=\"relative z-10 flex flex-col justify-center h-full px-16\">",
-          "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#38BDF8;font-family:Helvetica,Arial,sans-serif\">MulmoClaude</p>",
-          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#FFFFFF,#38BDF8 60%,#818CF8);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,serif\">Nurture your own AI Assistant</h1>",
-          "    <p class=\"text-[26px] mt-6\" style=\"color:#9FB0D8;font-family:Helvetica,Arial,sans-serif\">Start the accumulation on <span style=\"color:#38BDF8\">your own computer</span>.</p>",
-          "    <p class=\"text-[20px] mt-12\" style=\"color:#6F7FA0;font-family:Menlo,monospace\">https://github.com/receptron/mulmoclaude</p>",
+          "    <p class=\"text-[40px] font-bold tracking-wide\" style=\"color:#EA580C;font-family:Helvetica,Arial,sans-serif\">MulmoClaude</p>",
+          "    <h1 class=\"text-[60px] font-bold leading-tight mt-3 whitespace-nowrap\" style=\"background:linear-gradient(100deg,#431407,#B45309 55%,#EA580C);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,serif\">Nurture your own AI Assistant</h1>",
+          "    <p class=\"text-[26px] mt-6\" style=\"color:#7C5E3C;font-family:Helvetica,Arial,sans-serif\">Start the accumulation on <span style=\"color:#EA580C;font-weight:bold\">your own computer</span>.</p>",
+          "    <p class=\"text-[20px] mt-12\" style=\"color:#A08B6E;font-family:Menlo,monospace\">https://github.com/receptron/mulmoclaude</p>",
           "  </div>",
           "</div>"
         ]
