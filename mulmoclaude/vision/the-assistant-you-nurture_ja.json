@@ -15,7 +15,10 @@
         },
         "voiceId": "Kore",
         "isDefault": true,
-        "provider": "gemini"
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "明るく温かい、希望に満ちたトーンで話してください。大切なものを友人に楽しそうに紹介するような、優しくて前向きな語り口。決して暗く平板にならず、穏やかなエネルギーを保ってください。"
+        }
       }
     }
   },
@@ -60,9 +63,13 @@
     }
   },
   "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
     "padding": 0.3,
     "introPadding": 1,
-    "closingPadding": 0.8,
+    "closingPadding": 3,
     "outroPadding": 1,
     "bgmVolume": 0.12,
     "audioVolume": 1,
