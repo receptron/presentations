@@ -14,7 +14,10 @@
         },
         "voiceId": "Kore",
         "isDefault": true,
-        "provider": "gemini"
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Speak in a bright, warm, hopeful tone — like happily introducing something you love to a friend. Gentle, positive energy throughout; never dark or flat."
+        }
       }
     }
   },
@@ -59,9 +62,13 @@
     }
   },
   "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
     "padding": 0.3,
     "introPadding": 1,
-    "closingPadding": 0.8,
+    "closingPadding": 3,
     "outroPadding": 1,
     "bgmVolume": 0.12,
     "audioVolume": 1,

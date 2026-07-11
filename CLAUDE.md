@@ -25,14 +25,16 @@ npm run movie -- mulmoclaude/vision/<name>.json   # = mulmo movie -g <file>
 
 `output/` is gitignored. Generation requires API keys in `.env` (OpenAI for images, Gemini for TTS, Replicate for movie/sound effects, etc.).
 
+To regenerate a single beat's image, delete `output/<basename>/images/<n>p.png` (0-based beat index) and rerun preview or `mulmo images -g <file>` — only missing files are regenerated. Note the preview server kills a `mulmo viewer` run after 120s, which gpt-image-2 generation can exceed; use `mulmo images -g` directly for image regeneration.
+
 ## MulmoScript structure
 
-Each script is a single JSON file with this shape (see `mulmoclaude/vision/beyond-the-sea-of-app-icons.json` as the reference example):
+Each script is a single JSON file with this shape (see `mulmoclaude/vision/the-assistant-you-nurture.json` as the reference example):
 
 - `$mulmocast.version`, `canvasSize` (1280×720), `title`, `description`, `lang`
 - `speechParams.speakers` — one "Presenter" speaker, Gemini voice `Kore`
-- `imageParams` (provider: openai), `movieParams` / `soundEffectParams` (provider: replicate)
-- `slideParams.theme` — the shared visual identity: dark navy palette (`bg: 0A0F24`, primary `38BDF8`, accent `818CF8`), Georgia/Helvetica/Menlo fonts, glass card style, radial/linear gradient backgrounds. Keep new scripts consistent with this theme.
+- `imageParams` (provider: openai, model: gpt-image-2; generated beats use the warm golden-daylight Ghibli watercolor `style`), `movieParams` / `soundEffectParams` (provider: replicate)
+- `slideParams.theme` — the shared visual identity: warm sunrise palette (`bg: FFFBF2`, cards `FFF3DC`/`FCE8C8`, text `431407`, primary `EA580C`, accent `F59E0B`), Georgia/Helvetica/Menlo fonts, glass card style, warm cream/gold gradient backgrounds. Keep new scripts consistent with this theme. (Adopted 2026-07 after feedback that the earlier dark-navy/night theme read as gloomy sci-fi; some older decks still use navy. Reserve dark tones for warning beats via overcast light and cold-vs-warm contrast, not night scenes.)
 - `audioParams` — padding and volume settings
 - `beats[]` — the presentation itself. Each beat has `text` (spoken narration) and `image.slide` with a `layout` such as `title`, `columns`, `grid`, `split`, `comparison`, `manifesto`, `timeline`, `table`, `bigQuote`. Scripts run ~10–12 beats.
 
