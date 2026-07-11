@@ -21,6 +21,7 @@
   },
   "imageParams": {
     "provider": "openai",
+    "model": "gpt-image-2",
     "style": "Hand-painted Japanese animation film style in the spirit of classic Studio Ghibli: soft watercolor-and-gouache textures, painterly light and clouds, warm nostalgic atmosphere, gentle rounded character design, lush detailed backgrounds. Scenes bathed in warm golden daylight: soft cream (#FFFBF2) and peach (#FCE8C8) skies, amber (#F59E0B) and warm orange (#EA580C) accents, gentle morning sunlight as the main light source, hopeful and bright overall. No incidental text, letters, or logos — but when the prompt explicitly specifies labels, render exactly those words, spelled exactly as written, in clean gentle hand-lettering.",
     "images": {}
   },
