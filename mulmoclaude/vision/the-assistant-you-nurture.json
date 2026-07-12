@@ -28,7 +28,11 @@
     "images": {}
   },
   "movieParams": {
-    "provider": "replicate"
+    "provider": "replicate",
+    "transition": {
+      "type": "fade",
+      "duration": 0.4
+    }
   },
   "soundEffectParams": {
     "provider": "replicate"
