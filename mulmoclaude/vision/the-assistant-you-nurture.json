@@ -25,7 +25,120 @@
     "provider": "openai",
     "model": "gpt-image-2",
     "style": "Hand-painted Japanese animation film style in the spirit of classic Studio Ghibli: soft watercolor-and-gouache textures, painterly light and clouds, warm nostalgic atmosphere, gentle rounded character design, lush detailed backgrounds. Scenes bathed in warm golden daylight: soft cream (#FFFBF2) and peach (#FCE8C8) skies, amber (#F59E0B) and warm orange (#EA580C) accents, gentle morning sunlight as the main light source, hopeful and bright overall. No incidental text, letters, or logos — but when the prompt explicitly specifies labels, render exactly those words, spelled exactly as written, in clean gentle hand-lettering.",
-    "images": {}
+    "images": {
+      "wcup_teams": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/wcup_teams.png"
+        }
+      },
+      "movie_and_tv": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/movie_and_tv.png"
+        }
+      },
+      "restaurants": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/restaurants.png"
+        }
+      },
+      "portfolio": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/portfolio.png"
+        }
+      },
+      "app_calendar": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/calendar.png"
+        }
+      },
+      "recipes": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/recipes.png"
+        }
+      },
+      "ny_times_feed": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/ny_times_feed.png"
+        }
+      },
+      "lex_podcast": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/lex_friedman_podcast.png"
+        }
+      },
+      "spacex_schedule": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/spacex_schedule.png"
+        }
+      },
+      "wcup_games": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/wcup_games.png"
+        }
+      },
+      "m_restaurants": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/restaurants.png"
+        }
+      },
+      "m_wcup_games": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/wcup_games.png"
+        }
+      },
+      "m_nytimes": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/nytimes.png"
+        }
+      },
+      "m_recipes": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/recipes.png"
+        }
+      },
+      "m_portfolio": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/portfolio.png"
+        }
+      },
+      "m_movie_tv": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/movie_and_tv.png"
+        }
+      }
+    }
   },
   "movieParams": {
     "provider": "replicate",
@@ -105,89 +218,169 @@
     {
       "text": "When people hear \"AI assistant,\" many picture smart glasses, or Siri and Alexa. But those are just entry points. Just as the person you are talking to does not live inside your phone, the substance of an assistant does not live inside a device. From your smartphone, your smartwatch, or your computer, you reach the same assistant. That is how it should be.",
       "duration": 5.5,
+      "imageNames": [],
       "imagePrompt": "A girl with short dark hair, wearing a white blouse and a long warm orange skirt, standing in a sunlit flower meadow and looking up thoughtfully; above her, three soft round thought clouds glow in the warm morning sky — one showing a pair of smart glasses, one a smartphone with a gentle glowing voice-wave symbol, one a small smart speaker — the familiar gadgets people picture when they hear the words AI assistant. Warm, light, everyday atmosphere."
     },
     {
       "text": "",
       "duration": 10.5,
+      "imageNames": [],
       "imagePrompt": "The same girl with short dark hair, white blouse and long warm orange skirt, peeking through a tall open doorway standing alone in a sunlit flower meadow, its frame shaped like a giant smartphone; inside the doorway there is nobody — only a thin thread of warm golden light passing through it and flowing far away toward the bright horizon, showing that the device is merely an entrance and no one lives inside it. Two more open doorways stand nearby, one shaped like a wristwatch and one like a laptop, each with the same golden thread passing through toward the same distant glow."
     },
     {
       "text": "",
+      "imageNames": [],
       "imagePrompt": "A single radiant orb of warm golden light floating at the center of a bright open meadow under a soft morning sky, surrounded by four open doorways arranged in a loose arc; through each doorway a different device is visible as a simple silhouette — smart glasses, a smartphone, a wristwatch, a laptop — and a faint thread of golden light passes through every doorway, all converging on the same central orb."
     },
     {
       "text": "Then what is the substance of an assistant? You might think it is the AI model itself — GPT or Claude — but that is not it either. The model is just the engine. To do good work, an assistant has to know you well: your past conversations, your calendar, your address book, your to-do lists, your email, your meeting notes, your journal, and even the apps you use.",
       "duration": 8.5,
+      "imageNames": [],
       "imagePrompt": "A girl with short dark hair, wearing a white blouse and a long warm orange skirt, standing in a sunlit flower meadow under a soft morning sky, talking face to face with a smooth round orb hovering at eye level — a perfectly clean, shiny, brand-new sphere with a polished pearly-white surface, glinting like a factory-fresh product, with absolutely nothing orbiting or surrounding it, no icons, no rings, just the bare shiny ball; above them a large gentle question mark formed of soft golden mist floats in the sky, as if asking whether this is the assistant. Warm, curious, contemplative atmosphere."
     },
     {
       "text": "",
       "duration": 7,
+      "imageNames": [],
       "imagePrompt": "The same smooth shiny pearly-white orb hovering low over a sunlit flower meadow, now with a small round hinged hatch swung open on its side, revealing that inside there is nothing but a compact mechanical engine with gears and pistons, labeled with the word \"MODEL\" beneath the orb in small clean sans-serif capitals in warm orange; the same girl with short dark hair, white blouse and long warm orange skirt leans in to peek at the open hatch with gentle surprise — the shiny new sphere revealed to be only an engine inside, with nothing around it and no knowledge of her."
     },
     {
       "text": "",
+      "imageNames": [],
       "imagePrompt": "A large glowing orb of warm golden light floating above a sunlit field, encircled by two or three thin orbit rings carrying small icons — speech bubbles, calendar pages, envelopes, note cards, a small diary, tiny app windows — labeled with the word \"ASSISTANT\" beneath it in small clean sans-serif capitals in warm orange; the radiant orb with its orbiting accumulation of personal memories and data fills the scene with warm hopeful light."
     },
     {
       "text": "The companies building AI understand this very well. It is no coincidence that ChatGPT and Claude keep adding features that remember things about you. Meta, which already holds vast amounts of user data through Facebook and Instagram, and Google, which holds Gmail and your calendar, have joined the same race. The value of an AI assistant is determined not by how smart the model is, but by how much it knows about you. Every one of these companies has realized that.",
       "duration": 9.5,
+      "imageNames": [],
       "imagePrompt": "A cozy writing desk standing in a sunlit flower meadow, and on the desk a friendly glowing chat window shaped like a small standing picture frame, with a gentle stream of speech bubbles rising from it into the morning air; from each speech bubble a small mote of warm golden light drifts down into an open glass jar beside the frame, the jar already half full of softly glowing motes — a chat service quietly collecting memories about its user, one conversation at a time. Warm, calm, slightly uncanny in its diligence."
     },
     {
       "text": "",
       "duration": 9.5,
+      "imageNames": [],
       "imagePrompt": "Two colossal fortress-like vault towers striding onto a warm sunlit meadow from the horizon, each overflowing with its own hoard — one stuffed with photo cards, portraits, and small heart icons spilling from its windows, the other stacked with envelopes and calendar pages — both leaning eagerly toward a small glowing orb of warm golden light resting on a low pedestal in the middle of the meadow, as if joining a race for the same prize. The giants feel powerful but slightly overbearing against the gentle landscape."
     },
     {
       "text": "",
+      "imageNames": [],
       "imagePrompt": "A strict schematic diagram on a warm cream background of exactly three horizontal lanes on the left, converging into one large glowing orb of warm golden light on the right. Top lane: a row of identical speech bubbles only, labeled with the word \"Memory\". Middle lane: a row of calendar pages and envelopes only, labeled with the word \"Data\". Bottom lane: a row of small app windows with a wrench only, labeled with the word \"Apps\". Each lane's label sits at the left end of the lane in small clean sans-serif capitals in warm orange. Each lane is a thin amber guide line carrying its icons, with generous empty space separating the three lanes, and the three guide lines curve together and merge into the glowing golden orb, which is ringed by concentric halos. Minimal, ordered, engineered layout like a clean flow diagram."
     },
     {
       "text": "But something as important as an AI assistant — one that accumulates your personal data and apps — is not something you should entrust to any single service provider. The longer you use it, the harder it becomes to move to another service, until you can never leave at all.",
+      "imageNames": [],
       "imagePrompt": "A glowing orb of warm golden light trapped inside a closed birdcage on a pedestal, its light dimmed and muffled by the bars; the orb's luminous threads have grown out through the bars and rooted deep into the ground around the cage like vines, so the orb can no longer be pulled free. A small person stands outside, reaching toward the cage. The scene is lit by muted, overcast late-afternoon light with desaturated dusty tones — the sun hidden behind clouds — and the cage bars carry a cold steel-gray sheen, the only cold element in the scene."
     },
     {
       "text": "This is why I started building a piece of software called MulmoClaude. MulmoClaude is open source, so there is no risk of being locked in by any single company. If you nurture your assistant inside someone else's service, your memories, your data, and your apps accumulate inside that service. I wanted the accumulation to stay in the user's own hands. What MulmoClaude makes possible is nurturing an AI assistant on your own computer. An assistant you do not hand over to anyone — one you nurture in your own hands, yours alone.",
+      "imageNames": [],
       "imagePrompt": "A person seated at a desk in a sun-filled room in the morning, side view, gently cupping a small radiant orb of warm golden light in their hands like a seedling; soft sunlight streams through an open window with curtains stirring, and faint threads of golden light connect the orb to books, notes, and everyday objects around the room, suggesting memories accumulating in a place of their own. Warm, hopeful, serene atmosphere."
     },
     {
       "text": "Nurturing takes an environment. A place to accumulate memories. A place to keep your data. A place to build apps just for you. A place where you can grow your set of tools simply by talking in everyday words. MulmoClaude is, so to speak, a garden for nurturing your AI assistant. Right after you install it, the garden is still empty. You plant seeds and tend the soil, and grow an assistant that is yours alone.",
+      "imageNames": [],
       "imagePrompt": "A person kneeling in a small private garden in the early morning, gently planting a glowing golden seedling of light into rich dark soil; the rising sun bathes the garden in warm golden light, dew sparkles on the leaves, a few other seedlings of light sprout nearby at different heights, each trailing a faint thread of warm light, with a watering can beside the person and a low wooden fence framing the garden as a personal, protected place."
     },
     {
       "text": "You talk with the AI running inside MulmoClaude, build apps just for yourself, and accumulate all kinds of data. That, I believe, is the right way to nurture an AI assistant. And building apps requires no programming knowledge. When programmers have AI write code for them, they call it \"vibe coding\" — but with MulmoClaude, you never have to think about code at all. You simply say \"I want something like this,\" and the AI builds the app you need.",
       "image": {
-        "type": "image",
-        "source": {
-          "kind": "path",
-          "path": "./images/vision08.png"
-        }
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#F59E0B\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:linear-gradient(90deg,#FB923C,#F59E0B)\"></div>",
+          "  <p class=\"absolute top-[22px] right-[40px] text-[22px] font-bold tracking-wide\" style=\"color:#EA580C;font-family:Helvetica,Arial,sans-serif\">MulmoClaude</p>",
+          "  <div id=\"scene1\" class=\"absolute inset-0\">",
+          "    <div id=\"bubble1\" class=\"absolute top-[44px] left-[64px] bg-white rounded-[24px] px-8 py-5 shadow-lg\" style=\"opacity:0\">",
+          "      <p class=\"text-[26px] font-bold min-h-[36px] min-w-[560px]\" style=\"color:#431407;font-family:Helvetica,Arial,sans-serif\"><span id=\"req1\"></span></p>",
+          "      <div class=\"absolute -bottom-2 left-12 w-5 h-5 bg-white rotate-45\"></div>",
+          "    </div>",
+          "    <img id=\"app1\" src=\"image:wcup_teams\" class=\"absolute bottom-[44px] right-[64px] w-[840px] rounded-[16px] shadow-2xl\" style=\"opacity:0;box-shadow:0 25px 60px rgba(67,20,7,.35)\" />",
+          "  </div>",
+          "  <div id=\"scene2\" class=\"absolute inset-0\">",
+          "    <div id=\"bubble2\" class=\"absolute top-[44px] left-[64px] bg-white rounded-[24px] px-8 py-5 shadow-lg\" style=\"opacity:0\">",
+          "      <p class=\"text-[26px] font-bold min-h-[36px] min-w-[560px]\" style=\"color:#431407;font-family:Helvetica,Arial,sans-serif\"><span id=\"req2\"></span></p>",
+          "      <div class=\"absolute -bottom-2 left-12 w-5 h-5 bg-white rotate-45\"></div>",
+          "    </div>",
+          "    <img id=\"app2\" src=\"image:movie_and_tv\" class=\"absolute bottom-[44px] right-[64px] w-[840px] rounded-[16px] shadow-2xl\" style=\"opacity:0;box-shadow:0 25px 60px rgba(67,20,7,.35)\" />",
+          "  </div>",
+          "</div>"
+        ],
+        "script": [
+          "var animation = new MulmoAnimation();",
+          "animation",
+          "  .animate('#bubble1', { opacity: [0, 1], translateY: [20, 0] }, { start: 0.4, end: 1.0, easing: 'easeOut' })",
+          "  .typewriter('#req1', 'Create me a collection of World Cup 2026 teams', { start: 1.2, end: 4.0 })",
+          "  .animate('#app1', { opacity: [0, 1], translateY: [50, 0] }, { start: 5.0, end: 6.5, easing: 'easeOut' })",
+          "  .animate('#scene1', { opacity: [1, 0] }, { start: 13.5, end: 14.4, easing: 'easeInOut' })",
+          "  .animate('#bubble2', { opacity: [0, 1], translateY: [20, 0] }, { start: 14.7, end: 15.3, easing: 'easeOut' })",
+          "  .typewriter('#req2', 'Create me a collection of movies and TV dramas', { start: 15.5, end: 17.9 })",
+          "  .animate('#app2', { opacity: [0, 1], translateY: [50, 0] }, { start: 18.9, end: 20.4, easing: 'easeOut' });"
+        ]
       }
     },
     {
       "text": "A restaurant list, an invoice tracker, vocabulary practice. Each one is a small app for an audience of one. Until recently, building an app for a single person was unthinkable — the cost was far too high. This is a world that became possible only because AI has driven the cost of software development close to zero.",
       "image": {
-        "type": "image",
-        "source": {
-          "kind": "path",
-          "path": "./images/vision09.png"
-        }
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#F59E0B\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:linear-gradient(90deg,#FB923C,#F59E0B)\"></div>",
+          "  <p class=\"absolute top-[22px] right-[40px] text-[22px] font-bold tracking-wide\" style=\"color:#EA580C;font-family:Helvetica,Arial,sans-serif\">MulmoClaude</p>",
+          "  <div id=\"collage\" class=\"absolute inset-0\">",
+          "    <div class=\"absolute\" style=\"left:30px;top:80px;transform:rotate(-2deg)\"><img id=\"app0\" src=\"image:restaurants\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:315px;top:55px;transform:rotate(1.5deg)\"><img id=\"app1\" src=\"image:portfolio\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:600px;top:85px;transform:rotate(-1deg)\"><img id=\"app2\" src=\"image:app_calendar\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:885px;top:65px;transform:rotate(2deg)\"><img id=\"app3\" src=\"image:recipes\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:80px;top:395px;transform:rotate(1.5deg)\"><img id=\"app4\" src=\"image:ny_times_feed\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:370px;top:415px;transform:rotate(-1.5deg)\"><img id=\"app5\" src=\"image:lex_podcast\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:655px;top:390px;transform:rotate(1deg)\"><img id=\"app6\" src=\"image:spacex_schedule\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:880px;top:410px;transform:rotate(-2deg)\"><img id=\"app7\" src=\"image:wcup_games\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "  </div>",
+          "</div>"
+        ],
+        "script": [
+          "var animation = new MulmoAnimation();",
+          "animation",
+          "  .stagger('#app{i}', 8, { opacity: [0, 1], translateY: [40, 0] }, { start: 0.8, stagger: 1.05, duration: 0.7, easing: 'easeOut' })",
+          "  .animate('#collage', { scale: [1, 1.03] }, { start: 9.5, end: 'auto', easing: 'easeInOut' });"
+        ]
       }
     },
     {
       "text": "Of course, an assistant should not be useful only while you are sitting at your computer. With MulmoClaude, if you log in with the same ID from both your computer and your smartphone, you can talk to the AI assistant living on your computer even when you are away from home. The server only relays messages — it keeps no data and no apps. That is why you can safely reach the same assistant from outside. In the future, smart glasses and smart headsets will connect to the same assistant, too.",
       "image": {
-        "type": "image",
-        "source": {
-          "kind": "path",
-          "path": "./images/vision10.png"
-        }
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#F59E0B\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:linear-gradient(90deg,#FB923C,#F59E0B)\"></div>",
+          "  <p class=\"absolute top-[22px] right-[40px] text-[22px] font-bold tracking-wide\" style=\"color:#EA580C;font-family:Helvetica,Arial,sans-serif\">MulmoClaude</p>",
+          "  <div id=\"collage\" class=\"absolute inset-0\">",
+          "    <div class=\"absolute\" style=\"left:30px;top:150px;transform:rotate(-3deg)\"><img id=\"phone0\" src=\"image:m_restaurants\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:230px;top:250px;transform:rotate(2deg)\"><img id=\"phone1\" src=\"image:m_wcup_games\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:430px;top:140px;transform:rotate(-2deg)\"><img id=\"phone2\" src=\"image:m_nytimes\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:630px;top:250px;transform:rotate(3deg)\"><img id=\"phone3\" src=\"image:m_recipes\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:830px;top:150px;transform:rotate(-2deg)\"><img id=\"phone4\" src=\"image:m_portfolio\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:1030px;top:250px;transform:rotate(2deg)\"><img id=\"phone5\" src=\"image:m_movie_tv\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "  </div>",
+          "</div>"
+        ],
+        "script": [
+          "var animation = new MulmoAnimation();",
+          "animation",
+          "  .stagger('#phone{i}', 6, { opacity: [0, 1], translateY: [50, 0] }, { start: 0.8, stagger: 1.1, duration: 0.7, easing: 'easeOut' })",
+          "  .animate('#collage', { scale: [1, 1.03] }, { start: 8.5, end: 'auto', easing: 'easeInOut' });"
+        ]
       }
     },
     {
       "text": "As AI becomes ever more important, a wide gap will open between people who can make full use of it and people who cannot. That gap will be decided not by whether you can rent a smart model, but by whether you can nurture an AI assistant that understands you. Nurturing an assistant raises your own productivity — and your value to society.",
+      "imageNames": [],
       "imagePrompt": "A deep chasm splits the ground into two cliff edges pulling apart under a morning sky. On the left cliff, lower and in cool gray shadow under a passing cloud, a person stands alone beside a small plain closed box. On the right cliff, higher and bathed in warm golden sunlight, a person stands beside a large glowing orb of warm light encircled by a thin orbit ring, gentle threads of golden light linking the orb to the person. The widening gap between the shadowed side and the sunlit side is the focus of the composition."
     },
     {
