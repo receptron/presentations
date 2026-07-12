@@ -101,11 +101,31 @@
     },
     {
       "text": "AIアシスタントというと、スマートグラスやSiri、Alexaを思い浮かべる人が多いと思います。でも、それらはアクセスするための入り口にすぎません。電話機の中に話し相手が住んでいるわけではないのと同じで、アシスタントの実体は、デバイスの中にあるわけではありません。スマートフォンからでも、スマートウォッチからでも、パソコンからでも、同じアシスタントにつながる。それがあるべき姿です。",
+      "duration": 6.5,
+      "imagePrompt": "A girl with short dark hair, wearing a white blouse and a long warm orange skirt, standing in a sunlit flower meadow and looking up thoughtfully; above her, three soft round thought clouds glow in the warm morning sky — one showing a pair of smart glasses, one a smartphone with a gentle glowing voice-wave symbol, one a small smart speaker — the familiar gadgets people picture when they hear the words AI assistant. Warm, light, everyday atmosphere."
+    },
+    {
+      "text": "",
+      "duration": 12,
+      "imagePrompt": "The same girl with short dark hair, white blouse and long warm orange skirt, peeking through a tall open doorway standing alone in a sunlit flower meadow, its frame shaped like a giant smartphone; inside the doorway there is nobody — only a thin thread of warm golden light passing through it and flowing far away toward the bright horizon, showing that the device is merely an entrance and no one lives inside it. Two more open doorways stand nearby, one shaped like a wristwatch and one like a laptop, each with the same golden thread passing through toward the same distant glow."
+    },
+    {
+      "text": "",
       "imagePrompt": "A single radiant orb of warm golden light floating at the center of a bright open meadow under a soft morning sky, surrounded by four open doorways arranged in a loose arc; through each doorway a different device is visible as a simple silhouette — smart glasses, a smartphone, a wristwatch, a laptop — and a faint thread of golden light passes through every doorway, all converging on the same central orb."
     },
     {
       "text": "では、アシスタントの実体とは何でしょうか。GPTやClaudeのようなAIモデルそのものだ、と思うかもしれませんが、それも違います。モデルはエンジンにすぎません。良い仕事をするには、本人のことをよく知っている必要があります。過去の会話、予定表、住所録、ToDoリスト、メール、ミーティングメモ、日記、そしてその人が使うアプリまで理解している必要があります。",
-      "imagePrompt": "A side-by-side conceptual comparison in a sunlit field. On the left, small and plain: a simple mechanical engine block resting on the ground, labeled with the word \"MODEL\" beneath it. On the right, much larger and brighter: a glowing orb of warm golden light encircled by two or three thin orbit rings carrying small icons — speech bubbles, calendar pages, envelopes, note cards — labeled with the word \"ASSISTANT\" beneath it. The radiant golden orb with its orbiting accumulation clearly outshines the bare engine. Both labels in small clean sans-serif capitals in warm orange."
+      "duration": 9,
+      "imagePrompt": "A girl with short dark hair, wearing a white blouse and a long warm orange skirt, standing in a sunlit flower meadow under a soft morning sky, talking face to face with a smooth round orb hovering at eye level — a perfectly clean, shiny, brand-new sphere with a polished pearly-white surface, glinting like a factory-fresh product, with absolutely nothing orbiting or surrounding it, no icons, no rings, just the bare shiny ball; above them a large gentle question mark formed of soft golden mist floats in the sky, as if asking whether this is the assistant. Warm, curious, contemplative atmosphere."
+    },
+    {
+      "text": "",
+      "duration": 8,
+      "imagePrompt": "The same smooth shiny pearly-white orb hovering low over a sunlit flower meadow, now with a small round hinged hatch swung open on its side, revealing that inside there is nothing but a compact mechanical engine with gears and pistons, labeled with the word \"MODEL\" beneath the orb in small clean sans-serif capitals in warm orange; the same girl with short dark hair, white blouse and long warm orange skirt leans in to peek at the open hatch with gentle surprise — the shiny new sphere revealed to be only an engine inside, with nothing around it and no knowledge of her."
+    },
+    {
+      "text": "",
+      "imagePrompt": "A large glowing orb of warm golden light floating above a sunlit field, encircled by two or three thin orbit rings carrying small icons — speech bubbles, calendar pages, envelopes, note cards, a small diary, tiny app windows — labeled with the word \"ASSISTANT\" beneath it in small clean sans-serif capitals in warm orange; the radiant orb with its orbiting accumulation of personal memories and data fills the scene with warm hopeful light."
     },
     {
       "text": "実は、AIを作っている会社たちもそれをよく分かっています。ChatGPTやClaudeに「あなたのことを覚えておく機能」が次々と追加されているのは、偶然ではありません。FacebookやInstagramでユーザーのデータをすでに大量に持っているMetaや、GmailやカレンダーをおさえているGoogleも、同じ勝負に加わっています。AIアシスタントの価値は、モデルの賢さではなく、その人についてどれだけ知っているかで決まる。どの会社も、それに気づいているのです。",
