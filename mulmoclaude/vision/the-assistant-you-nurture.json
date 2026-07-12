@@ -39,6 +39,62 @@
           "kind": "path",
           "path": "../../resources/images/apps/movie_and_tv.png"
         }
+      },
+      "restaurants": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/restaurants.png"
+        }
+      },
+      "portfolio": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/portfolio.png"
+        }
+      },
+      "app_calendar": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/calendar.png"
+        }
+      },
+      "recipes": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/recipes.png"
+        }
+      },
+      "ny_times_feed": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/ny_times_feed.png"
+        }
+      },
+      "lex_podcast": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/lex_friedman_podcast.png"
+        }
+      },
+      "spacex_schedule": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/spacex_schedule.png"
+        }
+      },
+      "wcup_games": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/wcup_games.png"
+        }
       }
     }
   },
@@ -225,11 +281,31 @@
     {
       "text": "A restaurant list, an invoice tracker, vocabulary practice. Each one is a small app for an audience of one. Until recently, building an app for a single person was unthinkable — the cost was far too high. This is a world that became possible only because AI has driven the cost of software development close to zero.",
       "image": {
-        "type": "image",
-        "source": {
-          "kind": "path",
-          "path": "./images/vision09.png"
-        }
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#F59E0B\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:linear-gradient(90deg,#FB923C,#F59E0B)\"></div>",
+          "  <p class=\"absolute top-[22px] right-[40px] text-[22px] font-bold tracking-wide\" style=\"color:#EA580C;font-family:Helvetica,Arial,sans-serif\">MulmoClaude</p>",
+          "  <div id=\"collage\" class=\"absolute inset-0\">",
+          "    <div class=\"absolute\" style=\"left:30px;top:80px;transform:rotate(-2deg)\"><img id=\"app0\" src=\"image:restaurants\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:315px;top:55px;transform:rotate(1.5deg)\"><img id=\"app1\" src=\"image:portfolio\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:600px;top:85px;transform:rotate(-1deg)\"><img id=\"app2\" src=\"image:app_calendar\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:885px;top:65px;transform:rotate(2deg)\"><img id=\"app3\" src=\"image:recipes\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:80px;top:395px;transform:rotate(1.5deg)\"><img id=\"app4\" src=\"image:ny_times_feed\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:370px;top:415px;transform:rotate(-1.5deg)\"><img id=\"app5\" src=\"image:lex_podcast\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:655px;top:390px;transform:rotate(1deg)\"><img id=\"app6\" src=\"image:spacex_schedule\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:880px;top:410px;transform:rotate(-2deg)\"><img id=\"app7\" src=\"image:wcup_games\" class=\"w-[380px] rounded-[12px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "  </div>",
+          "</div>"
+        ],
+        "script": [
+          "var animation = new MulmoAnimation();",
+          "animation",
+          "  .stagger('#app{i}', 8, { opacity: [0, 1], translateY: [40, 0] }, { start: 0.8, stagger: 1.05, duration: 0.7, easing: 'easeOut' })",
+          "  .animate('#collage', { scale: [1, 1.03] }, { start: 9.5, end: 'auto', easing: 'easeInOut' });"
+        ]
       }
     },
     {
