@@ -20,8 +20,9 @@
 
 ## デザインルール
 
+- **配色は warm sunrise テーマ**（明るい暖色。palette はリポジトリの CLAUDE.md、実例は `mulmoclaude/vision/the-assistant-you-nurture_ja.json`）。`collection-creation-demo.json` は旧ダークネイビーのままなので、構成は実例として参照しつつ配色は本ガイドのスニペットを正とする
 - **キャプチャを見せるビートは完全静止**（`animation` を付けない、`data-animation` 属性も書かない）。アニメーションはテキストのみのスライド（起動・比較・まとめ・クロージング）に限定する
-- 上部バーは 2 段: 1 段目 = バッジ（`text-lg`）+ タイトル（`text-4xl`）、2 段目 = サブタイトル（`text-2xl text-indigo-300`）
+- 上部バーは 2 段: 1 段目 = バッジ（`text-lg`）+ タイトル（`text-4xl`）、2 段目 = サブタイトル（`text-2xl`、色は textMuted `#7C5E3C`）
 - 画像は `max-height: 560px`（2 段バーとの組で 720px に収まる）
 - 本文文字サイズの下限目安: 本文 `text-xl`、補足 `text-lg`。まとめ・クロージングは タイトル `text-5xl` / 行 `text-3xl`+`text-2xl` まで上げる
 - 全ビートの右下にページ番号 `N / 総数`（タイトルスライドは theme レイアウトのため番号なしで可）
@@ -30,47 +31,49 @@
 
 ## 共通パーツ（コピペ用スニペット）
 
-ルート div には `relative` を付ける（ページ番号の絶対配置に必要）。
+ルート div には `relative` を付け（ページ番号の絶対配置に必要）、背景に warm グラデーションを敷く: `style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'`。
+
+テーマ色の Tailwind 対応: primary `#EA580C` = `orange-600` / accent `#F59E0B` = `amber-500` / info `#0284C7` = `sky-600` / danger `#DC2626` = `red-600`。本文 `#431407`・textMuted `#7C5E3C`・textDim `#A08B6E` は Tailwind に無いので inline style で指定する。
 
 ```html
 <!-- 2 段上部バー -->
 <div class='px-8 pt-5 pb-3 space-y-1'>
   <div class='flex items-center gap-4'>
-    <span class='bg-sky-500/80 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 1</span>
-    <h2 class='text-4xl font-bold text-white'>タイトル</h2>
+    <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 1</span>
+    <h2 class='text-4xl font-bold' style='color: #431407'>タイトル</h2>
   </div>
-  <p class='text-indigo-300 text-2xl'>サブタイトル</p>
+  <p class='text-2xl' style='color: #7C5E3C'>サブタイトル</p>
 </div>
 
 <!-- 赤枠ハイライト（画像を relative ラッパーで包み、画像に対する % で指定） -->
 <div class='relative'>
   <img src='...' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />
-  <div class='absolute border-2 border-red-500 rounded-lg' style='top: 9%; left: 74.4%; width: 11.4%; height: 7%'></div>
+  <div class='absolute border-2 border-red-600 rounded-lg' style='top: 9%; left: 74.4%; width: 11.4%; height: 7%'></div>
 </div>
 
 <!-- プロンプト吹き出し（入力した言葉を画像に重ねる。静止） -->
-<div class='absolute bg-slate-900/90 border border-sky-400/40 rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='top: 58%; left: 50%; transform: translateX(-50%)'>
-  <span class='text-sky-100 text-2xl'>💬 「はい、お願いします！」</span>
+<div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='top: 58%; left: 50%; transform: translateX(-50%); background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>
+  <span class='text-2xl' style='color: #431407'>💬 「はい、お願いします！」</span>
 </div>
 
 <!-- 拡大コールアウト（拡大部分を上、全体像を下、対応を矢印で示す） -->
 <div class='relative mb-12'>
   <img src='(拡大クロップ)' class='rounded-xl shadow-2xl' style='width: 1000px' />
-  <div class='absolute border-4 border-red-500 rounded-lg' style='top: 4%; left: 57.5%; width: 5.6%; height: 88%'></div>
-  <div class='absolute text-red-400 text-2xl font-bold whitespace-nowrap' style='top: 118%; left: 50%'>↑ このボタンをクリック</div>
+  <div class='absolute border-4 border-red-600 rounded-lg' style='top: 4%; left: 57.5%; width: 5.6%; height: 88%'></div>
+  <div class='absolute text-red-600 text-2xl font-bold whitespace-nowrap' style='top: 118%; left: 50%'>↑ このボタンをクリック</div>
 </div>
 <div class='relative mt-10'>
   <img src='(全体スクショ)' class='rounded-xl shadow-2xl' style='max-height: 320px; object-fit: contain' />
-  <div class='absolute border-2 border-sky-400 rounded-lg' style='top: 0%; left: 0%; width: 60.5%; height: 7.4%'></div>
-  <div class='absolute text-sky-300 text-xl font-semibold whitespace-nowrap' style='top: -13%; left: 18%'>⬆ この部分を拡大しています</div>
+  <div class='absolute border-2 border-sky-600 rounded-lg' style='top: 0%; left: 0%; width: 60.5%; height: 7.4%'></div>
+  <div class='absolute text-sky-600 text-xl font-semibold whitespace-nowrap' style='top: -13%; left: 18%'>⬆ この部分を拡大しています</div>
 </div>
 
 <!-- ①② の領域説明（画面の見方ビート用） -->
-<div class='absolute border-4 border-sky-400 rounded-lg' style='top: 14.5%; left: 0.4%; width: 24.6%; height: 84%'></div>
-<div class='absolute bg-sky-500 text-white text-xl font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg' style='top: 10.5%; left: 1.5%'>① 左で会話</div>
+<div class='absolute border-4 border-sky-600 rounded-lg' style='top: 14.5%; left: 0.4%; width: 24.6%; height: 84%'></div>
+<div class='absolute bg-sky-600 text-white text-xl font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg' style='top: 10.5%; left: 1.5%'>① 左で会話</div>
 
 <!-- ページ番号 -->
-<div class='absolute bottom-3 right-6 text-indigo-300/50 text-lg'>4 / 16</div>
+<div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 16</div>
 ```
 
 画像は `collection-demo-assets/xxx.png` のような **JSON からの相対パス**で参照する（mulmocast が file:// に解決する）。
