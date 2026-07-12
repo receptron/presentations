@@ -121,55 +121,67 @@
     {
       "text": "AIアシスタントというと、スマートグラスやSiri、Alexaを思い浮かべる人が多いと思います。でも、それらはアクセスするための入り口にすぎません。電話機の中に話し相手が住んでいるわけではないのと同じで、アシスタントの実体は、デバイスの中にあるわけではありません。スマートフォンからでも、スマートウォッチからでも、パソコンからでも、同じアシスタントにつながる。それがあるべき姿です。",
       "duration": 6.5,
+      "imageNames": [],
       "imagePrompt": "A girl with short dark hair, wearing a white blouse and a long warm orange skirt, standing in a sunlit flower meadow and looking up thoughtfully; above her, three soft round thought clouds glow in the warm morning sky — one showing a pair of smart glasses, one a smartphone with a gentle glowing voice-wave symbol, one a small smart speaker — the familiar gadgets people picture when they hear the words AI assistant. Warm, light, everyday atmosphere."
     },
     {
       "text": "",
       "duration": 12,
+      "imageNames": [],
       "imagePrompt": "The same girl with short dark hair, white blouse and long warm orange skirt, peeking through a tall open doorway standing alone in a sunlit flower meadow, its frame shaped like a giant smartphone; inside the doorway there is nobody — only a thin thread of warm golden light passing through it and flowing far away toward the bright horizon, showing that the device is merely an entrance and no one lives inside it. Two more open doorways stand nearby, one shaped like a wristwatch and one like a laptop, each with the same golden thread passing through toward the same distant glow."
     },
     {
       "text": "",
+      "imageNames": [],
       "imagePrompt": "A single radiant orb of warm golden light floating at the center of a bright open meadow under a soft morning sky, surrounded by four open doorways arranged in a loose arc; through each doorway a different device is visible as a simple silhouette — smart glasses, a smartphone, a wristwatch, a laptop — and a faint thread of golden light passes through every doorway, all converging on the same central orb."
     },
     {
       "text": "では、アシスタントの実体とは何でしょうか。GPTやClaudeのようなAIモデルそのものだ、と思うかもしれませんが、それも違います。モデルはエンジンにすぎません。良い仕事をするには、本人のことをよく知っている必要があります。過去の会話、予定表、住所録、ToDoリスト、メール、ミーティングメモ、日記、そしてその人が使うアプリまで理解している必要があります。",
       "duration": 9,
+      "imageNames": [],
       "imagePrompt": "A girl with short dark hair, wearing a white blouse and a long warm orange skirt, standing in a sunlit flower meadow under a soft morning sky, talking face to face with a smooth round orb hovering at eye level — a perfectly clean, shiny, brand-new sphere with a polished pearly-white surface, glinting like a factory-fresh product, with absolutely nothing orbiting or surrounding it, no icons, no rings, just the bare shiny ball; above them a large gentle question mark formed of soft golden mist floats in the sky, as if asking whether this is the assistant. Warm, curious, contemplative atmosphere."
     },
     {
       "text": "",
       "duration": 8,
+      "imageNames": [],
       "imagePrompt": "The same smooth shiny pearly-white orb hovering low over a sunlit flower meadow, now with a small round hinged hatch swung open on its side, revealing that inside there is nothing but a compact mechanical engine with gears and pistons, labeled with the word \"MODEL\" beneath the orb in small clean sans-serif capitals in warm orange; the same girl with short dark hair, white blouse and long warm orange skirt leans in to peek at the open hatch with gentle surprise — the shiny new sphere revealed to be only an engine inside, with nothing around it and no knowledge of her."
     },
     {
       "text": "",
+      "imageNames": [],
       "imagePrompt": "A large glowing orb of warm golden light floating above a sunlit field, encircled by two or three thin orbit rings carrying small icons — speech bubbles, calendar pages, envelopes, note cards, a small diary, tiny app windows — labeled with the word \"ASSISTANT\" beneath it in small clean sans-serif capitals in warm orange; the radiant orb with its orbiting accumulation of personal memories and data fills the scene with warm hopeful light."
     },
     {
       "text": "実は、AIを作っている会社たちもそれをよく分かっています。ChatGPTやClaudeに「あなたのことを覚えておく機能」が次々と追加されているのは、偶然ではありません。FacebookやInstagramでユーザーのデータをすでに大量に持っているMetaや、GmailやカレンダーをおさえているGoogleも、同じ勝負に加わっています。AIアシスタントの価値は、モデルの賢さではなく、その人についてどれだけ知っているかで決まる。どの会社も、それに気づいているのです。",
       "duration": 11.5,
+      "imageNames": [],
       "imagePrompt": "A cozy writing desk standing in a sunlit flower meadow, and on the desk a friendly glowing chat window shaped like a small standing picture frame, with a gentle stream of speech bubbles rising from it into the morning air; from each speech bubble a small mote of warm golden light drifts down into an open glass jar beside the frame, the jar already half full of softly glowing motes — a chat service quietly collecting memories about its user, one conversation at a time. Warm, calm, slightly uncanny in its diligence."
     },
     {
       "text": "",
       "duration": 11.5,
+      "imageNames": [],
       "imagePrompt": "Two colossal fortress-like vault towers striding onto a warm sunlit meadow from the horizon, each overflowing with its own hoard — one stuffed with photo cards, portraits, and small heart icons spilling from its windows, the other stacked with envelopes and calendar pages — both leaning eagerly toward a small glowing orb of warm golden light resting on a low pedestal in the middle of the meadow, as if joining a race for the same prize. The giants feel powerful but slightly overbearing against the gentle landscape."
     },
     {
       "text": "",
+      "imageNames": [],
       "imagePrompt": "A strict schematic diagram on a warm cream background of exactly three horizontal lanes on the left, converging into one large glowing orb of warm golden light on the right. Top lane: a row of identical speech bubbles only, labeled with the word \"Memory\". Middle lane: a row of calendar pages and envelopes only, labeled with the word \"Data\". Bottom lane: a row of small app windows with a wrench only, labeled with the word \"Apps\". Each lane's label sits at the left end of the lane in small clean sans-serif capitals in warm orange. Each lane is a thin amber guide line carrying its icons, with generous empty space separating the three lanes, and the three guide lines curve together and merge into the glowing golden orb, which is ringed by concentric halos. Minimal, ordered, engineered layout like a clean flow diagram."
     },
     {
       "text": "しかし、個人のデータやアプリを抱えて蓄積していくAIアシスタントほど重要なものを、特定の会社に任せてしまうのは賢くありません。長く使えば使うほど、他のサービスへの乗り換えが難しくなり、一生そのサービスから離れられなくなってしまうからです。",
+      "imageNames": [],
       "imagePrompt": "A glowing orb of warm golden light trapped inside a closed birdcage on a pedestal, its light dimmed and muffled by the bars; the orb's luminous threads have grown out through the bars and rooted deep into the ground around the cage like vines, so the orb can no longer be pulled free. A small person stands outside, reaching toward the cage. The scene is lit by muted, overcast late-afternoon light with desaturated dusty tones — the sun hidden behind clouds — and the cage bars carry a cold steel-gray sheen, the only cold element in the scene."
     },
     {
       "text": "これが、私がマルモクロードというソフトウェアを作り始めた理由です。マルモクロードはオープンソースで、特定の会社に囲い込まれる心配はありません。誰かのサービスの中で育てれば、記憶も、データも、アプリも、そのサービスの中に蓄積されていきます。そうではなく、育てた蓄積がユーザー自身の手元に残るようにしたかったのです。マルモクロードが可能にするのは、自分のパソコンの上でAIアシスタントを育てること。誰かに預けるのではなく、自分の手元で育てる、あなただけのアシスタントです。",
+      "imageNames": [],
       "imagePrompt": "A person seated at a desk in a sun-filled room in the morning, side view, gently cupping a small radiant orb of warm golden light in their hands like a seedling; soft sunlight streams through an open window with curtains stirring, and faint threads of golden light connect the orb to books, notes, and everyday objects around the room, suggesting memories accumulating in a place of their own. Warm, hopeful, serene atmosphere."
     },
     {
       "text": "育てるためには、環境が必要です。記憶を蓄積する場所。データを置く場所。自分専用のアプリを作る場所。普通の言葉で話しかけながら、必要な道具を増やしていける場所。マルモクロードは、いわばAIアシスタントを育てるための畑です。インストールした直後の畑は、まだ空っぽです。そこに種をまき、耕しながら、自分だけのアシスタントを育てていくのです。",
+      "imageNames": [],
       "imagePrompt": "A person kneeling in a small private garden in the early morning, gently planting a glowing golden seedling of light into rich dark soil; the rising sun bathes the garden in warm golden light, dew sparkles on the leaves, a few other seedlings of light sprout nearby at different heights, each trailing a faint thread of warm light, with a watering can beside the person and a low wooden fence framing the garden as a personal, protected place."
     },
     {
@@ -233,6 +245,7 @@
     },
     {
       "text": "AIがこれからますます重要になるにつれ、AIを使いこなせる人と、そうでない人の間には大きな差が生まれます。その差は、単に賢いモデルを借りられるかではなく、自分を理解しているAIアシスタントを育てられるかで決まるはずです。アシスタントを育てることは、自分自身の生産性を上げ、社会にとっての自分の価値を高めることでもあるのです。",
+      "imageNames": [],
       "imagePrompt": "A deep chasm splits the ground into two cliff edges pulling apart under a morning sky. On the left cliff, lower and in cool gray shadow under a passing cloud, a person stands alone beside a small plain closed box. On the right cliff, higher and bathed in warm golden sunlight, a person stands beside a large glowing orb of warm light encircled by a thin orbit ring, gentle threads of golden light linking the orb to the person. The widening gap between the shadowed side and the sunlit side is the focus of the composition."
     },
     {
