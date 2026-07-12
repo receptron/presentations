@@ -25,7 +25,22 @@
     "provider": "openai",
     "model": "gpt-image-2",
     "style": "Hand-painted Japanese animation film style in the spirit of classic Studio Ghibli: soft watercolor-and-gouache textures, painterly light and clouds, warm nostalgic atmosphere, gentle rounded character design, lush detailed backgrounds. Scenes bathed in warm golden daylight: soft cream (#FFFBF2) and peach (#FCE8C8) skies, amber (#F59E0B) and warm orange (#EA580C) accents, gentle morning sunlight as the main light source, hopeful and bright overall. No incidental text, letters, or logos — but when the prompt explicitly specifies labels, render exactly those words, spelled exactly as written, in clean gentle hand-lettering.",
-    "images": {}
+    "images": {
+      "wcup_teams": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/wcup_teams.png"
+        }
+      },
+      "movie_and_tv": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/apps/movie_and_tv.png"
+        }
+      }
+    }
   },
   "movieParams": {
     "provider": "replicate",
@@ -159,11 +174,40 @@
     {
       "text": "You talk with the AI running inside MulmoClaude, build apps just for yourself, and accumulate all kinds of data. That, I believe, is the right way to nurture an AI assistant. And building apps requires no programming knowledge. When programmers have AI write code for them, they call it \"vibe coding\" — but with MulmoClaude, you never have to think about code at all. You simply say \"I want something like this,\" and the AI builds the app you need.",
       "image": {
-        "type": "image",
-        "source": {
-          "kind": "path",
-          "path": "./images/vision08.png"
-        }
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#F59E0B\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:linear-gradient(90deg,#FB923C,#F59E0B)\"></div>",
+          "  <p class=\"absolute top-[22px] right-[40px] text-[22px] font-bold tracking-wide\" style=\"color:#EA580C;font-family:Helvetica,Arial,sans-serif\">MulmoClaude</p>",
+          "  <div id=\"scene1\" class=\"absolute inset-0\">",
+          "    <div id=\"bubble1\" class=\"absolute top-[44px] left-[64px] bg-white rounded-[24px] px-8 py-5 shadow-lg\" style=\"opacity:0\">",
+          "      <p class=\"text-[26px] font-bold min-h-[36px] min-w-[560px]\" style=\"color:#431407;font-family:Helvetica,Arial,sans-serif\"><span id=\"req1\"></span></p>",
+          "      <div class=\"absolute -bottom-2 left-12 w-5 h-5 bg-white rotate-45\"></div>",
+          "    </div>",
+          "    <img id=\"app1\" src=\"image:wcup_teams\" class=\"absolute bottom-[44px] right-[64px] w-[840px] rounded-[16px] shadow-2xl\" style=\"opacity:0;box-shadow:0 25px 60px rgba(67,20,7,.35)\" />",
+          "  </div>",
+          "  <div id=\"scene2\" class=\"absolute inset-0\">",
+          "    <div id=\"bubble2\" class=\"absolute top-[44px] left-[64px] bg-white rounded-[24px] px-8 py-5 shadow-lg\" style=\"opacity:0\">",
+          "      <p class=\"text-[26px] font-bold min-h-[36px] min-w-[560px]\" style=\"color:#431407;font-family:Helvetica,Arial,sans-serif\"><span id=\"req2\"></span></p>",
+          "      <div class=\"absolute -bottom-2 left-12 w-5 h-5 bg-white rotate-45\"></div>",
+          "    </div>",
+          "    <img id=\"app2\" src=\"image:movie_and_tv\" class=\"absolute bottom-[44px] right-[64px] w-[840px] rounded-[16px] shadow-2xl\" style=\"opacity:0;box-shadow:0 25px 60px rgba(67,20,7,.35)\" />",
+          "  </div>",
+          "</div>"
+        ],
+        "script": [
+          "var animation = new MulmoAnimation();",
+          "animation",
+          "  .animate('#bubble1', { opacity: [0, 1], translateY: [20, 0] }, { start: 0.4, end: 1.0, easing: 'easeOut' })",
+          "  .typewriter('#req1', 'Create me a collection of World Cup 2026 teams', { start: 1.2, end: 4.0 })",
+          "  .animate('#app1', { opacity: [0, 1], translateY: [50, 0] }, { start: 5.0, end: 6.5, easing: 'easeOut' })",
+          "  .animate('#scene1', { opacity: [1, 0] }, { start: 13.5, end: 14.4, easing: 'easeInOut' })",
+          "  .animate('#bubble2', { opacity: [0, 1], translateY: [20, 0] }, { start: 14.7, end: 15.3, easing: 'easeOut' })",
+          "  .typewriter('#req2', 'Create me a collection of movies and TV dramas', { start: 15.5, end: 17.9 })",
+          "  .animate('#app2', { opacity: [0, 1], translateY: [50, 0] }, { start: 18.9, end: 20.4, easing: 'easeOut' });"
+        ]
       }
     },
     {
