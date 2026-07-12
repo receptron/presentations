@@ -5,7 +5,10 @@
     "speakers": {
       "Presenter": {
         "displayName": { "ja": "プレゼンター" },
-        "voiceId": "Kore", "isDefault": true, "provider": "gemini"
+        "voiceId": "Kore", "isDefault": true, "provider": "gemini",
+        "speechOptions": {
+          "instruction": "明るく温かい、希望に満ちたトーンで話してください。大切なものを友人に楽しそうに紹介するような、優しくて前向きな語り口。決して暗く平板にならず、穏やかなエネルギーを保ってください。"
+        }
       }
     }
   },
