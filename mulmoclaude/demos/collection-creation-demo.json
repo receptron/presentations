@@ -45,7 +45,7 @@
           "<div class='relative flex h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <div class='w-2/5 flex flex-col justify-center px-10 space-y-6'>",
           "    <h2 class='text-4xl font-semibold leading-snug' style='color: #431407'>出張のたびに、<br/>行き先ごとの天気を<br/>調べていませんか？</h2>",
-          "    <div class='rounded-xl p-5' style='background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "    <div class='rounded-xl p-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
           "      <div class='text-base mb-2 font-semibold' style='color: #EA580C'>入力したプロンプト</div>",
           "      <p class='text-xl leading-relaxed' style='color: #431407'>「出張スケジュールに合わせて、各地点の天気を時間ごとに並べて見たい」</p>",
           "    </div>",
