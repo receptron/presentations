@@ -96,6 +96,48 @@
           "kind": "path",
           "path": "../../resources/images/apps/wcup_games.png"
         }
+      },
+      "m_restaurants": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/restaurants.png"
+        }
+      },
+      "m_wcup_games": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/wcup_games.png"
+        }
+      },
+      "m_nytimes": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/nytimes.png"
+        }
+      },
+      "m_recipes": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/recipes.png"
+        }
+      },
+      "m_portfolio": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/portfolio.png"
+        }
+      },
+      "m_movie_tv": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "../../resources/images/remote/movie_and_tv.png"
+        }
       }
     }
   },
@@ -312,11 +354,29 @@
     {
       "text": "もちろん、アシスタントはパソコンの前にいる時だけ使えれば良いわけではありません。マルモクロードでは、自分のパソコンとスマートフォンの両方から同じIDでログインすれば、家の外からでもパソコンの中にいるAIアシスタントと通信できます。サーバーは用件を中継するだけで、データやアプリは置きません。だから安全に、外から同じアシスタントにアクセスできるのです。将来は、スマートグラスやスマートヘッドセットからも、同じアシスタントにつながるようになります。",
       "image": {
-        "type": "image",
-        "source": {
-          "kind": "path",
-          "path": "./images/vision10.png"
-        }
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class=\"relative w-[1280px] h-[720px] overflow-hidden\" style=\"background: radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8);\">",
+          "  <div class=\"absolute top-0 left-0 right-0 h-[6px]\" style=\"background:#F59E0B\"></div>",
+          "  <div class=\"absolute bottom-0 left-0 right-0 h-[6px]\" style=\"background:linear-gradient(90deg,#FB923C,#F59E0B)\"></div>",
+          "  <p class=\"absolute top-[22px] right-[40px] text-[22px] font-bold tracking-wide\" style=\"color:#EA580C;font-family:Helvetica,'Hiragino Sans',sans-serif\">MulmoClaude</p>",
+          "  <div id=\"collage\" class=\"absolute inset-0\">",
+          "    <div class=\"absolute\" style=\"left:30px;top:150px;transform:rotate(-3deg)\"><img id=\"phone0\" src=\"image:m_restaurants\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:230px;top:250px;transform:rotate(2deg)\"><img id=\"phone1\" src=\"image:m_wcup_games\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:430px;top:140px;transform:rotate(-2deg)\"><img id=\"phone2\" src=\"image:m_nytimes\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:630px;top:250px;transform:rotate(3deg)\"><img id=\"phone3\" src=\"image:m_recipes\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:830px;top:150px;transform:rotate(-2deg)\"><img id=\"phone4\" src=\"image:m_portfolio\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "    <div class=\"absolute\" style=\"left:1030px;top:250px;transform:rotate(2deg)\"><img id=\"phone5\" src=\"image:m_movie_tv\" class=\"w-[230px] rounded-[24px]\" style=\"opacity:0;box-shadow:0 18px 40px rgba(67,20,7,.30)\" /></div>",
+          "  </div>",
+          "</div>"
+        ],
+        "script": [
+          "var animation = new MulmoAnimation();",
+          "animation",
+          "  .stagger('#phone{i}', 6, { opacity: [0, 1], translateY: [50, 0] }, { start: 0.8, stagger: 1.1, duration: 0.7, easing: 'easeOut' })",
+          "  .animate('#collage', { scale: [1, 1.03] }, { start: 8.5, end: 'auto', easing: 'easeInOut' });"
+        ]
       }
     },
     {
