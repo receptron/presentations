@@ -272,7 +272,7 @@
       "imagePrompt": "A glowing orb of warm golden light trapped inside a closed birdcage on a pedestal, its light dimmed and muffled by the bars; the orb's luminous threads have grown out through the bars and rooted deep into the ground around the cage like vines, so the orb can no longer be pulled free. A small person stands outside, reaching toward the cage. The scene is lit by muted, overcast late-afternoon light with desaturated dusty tones — the sun hidden behind clouds — and the cage bars carry a cold steel-gray sheen, the only cold element in the scene."
     },
     {
-      "text": "This is why I started building a piece of software called MulmoClaude. MulmoClaude is open source, so there is no risk of being locked in by any single company. If you nurture your assistant inside someone else's service, your memories, your data, and your apps accumulate inside that service. I wanted the accumulation to stay in the user's own hands. What MulmoClaude makes possible is nurturing an AI assistant on your own computer. An assistant you do not hand over to anyone — one you nurture in your own hands, yours alone.",
+      "text": "This is why I started building a piece of software called MulmoClaude. What MulmoClaude makes possible is nurturing an AI assistant on your own computer. Your memories, your data, and your apps all stay in your own hands. And because it is open source, there is no risk of being locked in by any single company. An assistant you do not hand over to anyone — one you nurture with your own hands, yours alone.",
       "imageNames": [],
       "imagePrompt": "A person seated at a desk in a sun-filled room in the morning, side view, gently cupping a small radiant orb of warm golden light in their hands like a seedling; soft sunlight streams through an open window with curtains stirring, and faint threads of golden light connect the orb to books, notes, and everyday objects around the room, suggesting memories accumulating in a place of their own. Warm, hopeful, serene atmosphere."
     },
@@ -282,7 +282,7 @@
       "imagePrompt": "A person kneeling in a small private garden in the early morning, gently planting a glowing golden seedling of light into rich dark soil; the rising sun bathes the garden in warm golden light, dew sparkles on the leaves, a few other seedlings of light sprout nearby at different heights, each trailing a faint thread of warm light, with a watering can beside the person and a low wooden fence framing the garden as a personal, protected place."
     },
     {
-      "text": "You talk with the AI running inside MulmoClaude, build apps just for yourself, and accumulate all kinds of data. That, I believe, is the right way to nurture an AI assistant. And building apps requires no programming knowledge. When programmers have AI write code for them, they call it \"vibe coding\" — but with MulmoClaude, you never have to think about code at all. You simply say \"I want something like this,\" and the AI builds the app you need.",
+      "text": "You talk with the AI running inside MulmoClaude, build apps just for yourself, and accumulate all kinds of data. That is the right way to nurture an AI assistant — and MulmoClaude is what puts it within everyone's reach. Building apps requires no programming knowledge. You simply say \"I want something like this,\" and the AI builds the app you need. Programmers call it \"vibe coding\" when they have AI write code for them — but with MulmoClaude, you never have to think about code at all.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -321,7 +321,7 @@
       }
     },
     {
-      "text": "A restaurant list, an invoice tracker, vocabulary practice. Each one is a small app for an audience of one. Until recently, building an app for a single person was unthinkable — the cost was far too high. This is a world that became possible only because AI has driven the cost of software development close to zero.",
+      "text": "A restaurant list, an invoice tracker, vocabulary practice. Each one is a small app for an audience of one. Until recently, building an app for a single person was unthinkable — the cost was far too high. This is a world that became possible only because AI has driven the cost of software development close to zero. MulmoClaude brings that world into your hands.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
