@@ -133,6 +133,16 @@
     },
     {
       "text": "実は、AIを作っている会社たちもそれをよく分かっています。ChatGPTやClaudeに「あなたのことを覚えておく機能」が次々と追加されているのは、偶然ではありません。FacebookやInstagramでユーザーのデータをすでに大量に持っているMetaや、GmailやカレンダーをおさえているGoogleも、同じ勝負に加わっています。AIアシスタントの価値は、モデルの賢さではなく、その人についてどれだけ知っているかで決まる。どの会社も、それに気づいているのです。",
+      "duration": 11.5,
+      "imagePrompt": "A cozy writing desk standing in a sunlit flower meadow, and on the desk a friendly glowing chat window shaped like a small standing picture frame, with a gentle stream of speech bubbles rising from it into the morning air; from each speech bubble a small mote of warm golden light drifts down into an open glass jar beside the frame, the jar already half full of softly glowing motes — a chat service quietly collecting memories about its user, one conversation at a time. Warm, calm, slightly uncanny in its diligence."
+    },
+    {
+      "text": "",
+      "duration": 11.5,
+      "imagePrompt": "Two colossal fortress-like vault towers striding onto a warm sunlit meadow from the horizon, each overflowing with its own hoard — one stuffed with photo cards, portraits, and small heart icons spilling from its windows, the other stacked with envelopes and calendar pages — both leaning eagerly toward a small glowing orb of warm golden light resting on a low pedestal in the middle of the meadow, as if joining a race for the same prize. The giants feel powerful but slightly overbearing against the gentle landscape."
+    },
+    {
+      "text": "",
       "imagePrompt": "A strict schematic diagram on a warm cream background of exactly three horizontal lanes on the left, converging into one large glowing orb of warm golden light on the right. Top lane: a row of identical speech bubbles only, labeled with the word \"Memory\". Middle lane: a row of calendar pages and envelopes only, labeled with the word \"Data\". Bottom lane: a row of small app windows with a wrench only, labeled with the word \"Apps\". Each lane's label sits at the left end of the lane in small clean sans-serif capitals in warm orange. Each lane is a thin amber guide line carrying its icons, with generous empty space separating the three lanes, and the three guide lines curve together and merge into the glowing golden orb, which is ringed by concentric halos. Minimal, ordered, engineered layout like a clean flow diagram."
     },
     {
