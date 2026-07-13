@@ -197,7 +197,7 @@
   "lang": "ja",
   "beats": [
     {
-      "text": "もし、あなたのことを何でも知っていて、24時間そばで仕事も生活も支えてくれるAIアシスタントがいたら、毎日はどう変わるでしょうか。実は、そんなアシスタントはどこにも売っていません。買うことができないのです。手に入れる方法はただひとつ、自分で育てること。今日はその育て方の話をします。",
+      "text": "もし、あなたのことを何でも知っていて、24時間そばで仕事も生活も支えてくれるAIアシスタントがいたら、毎日はどう変わるでしょうか。実は、そんなアシスタントはどこにも売っていません。買うことができないのです。手に入れる方法はただひとつ、自分の手で育てること。今日はその育て方の話をします。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -283,7 +283,7 @@
       "imagePrompt": "A person kneeling in a small private garden in the early morning, gently planting a glowing golden seedling of light into rich dark soil; the rising sun bathes the garden in warm golden light, dew sparkles on the leaves, a few other seedlings of light sprout nearby at different heights, each trailing a faint thread of warm light, with a watering can beside the person and a low wooden fence framing the garden as a personal, protected place."
     },
     {
-      "text": "マルモクロードの中で動くAIと会話しながら、自分専用のアプリを作り、さまざまなデータを蓄積していく。それが、AIアシスタントの正しい育て方であり、それを誰でもできるようにしたのがマルモクロードです。アプリを作るといっても、プログラミングの知識は要りません。「こういうものが欲しい」と話すだけで、AIが必要なアプリを作ってくれます。プログラマーがAIにコードを書かせることを「バイブコーディング」と呼びますが、マルモクロードでは、コードのことを意識する必要すらないのです。",
+      "text": "マルモクロードの中で動くAIと会話しながら、自分専用のアプリを作り、さまざまなデータを蓄積していく。それが、AIアシスタントの正しい育て方であり、それを誰でもできるようにしたのがマルモクロードです。アプリを作るといっても、プログラミングの知識は要りません。「こういうものが欲しい」と話すだけで、AIが必要なアプリをその場で作ってくれます。プログラマーがAIにコードを書かせることを「バイブコーディング」と呼びますが、マルモクロードでは、コードのことを意識する必要すらないのです。",
       "image": {
         "type": "html_tailwind",
         "animation": true,

@@ -1,4 +1,4 @@
-1. What if you had an AI assistant that knew everything about you and stood by your side around the clock, supporting both your work and your life — how would your days change? Here is the thing: such an assistant is not sold anywhere. You cannot buy one. There is only one way to get one: nurture it yourself. Today, I want to talk about how.
+1. What if you had an AI assistant that knew everything about you and stood by your side around the clock, supporting both your work and your life — how would your days change? Here is the thing: such an assistant is not sold anywhere. You cannot buy one. There is only one way to get one: nurture it with your own hands. Today, I want to talk about how.
 
 2. When people hear "AI assistant," many picture smart glasses, or Siri and Alexa. But those are just entry points. Just as the person you are talking to does not live inside your phone, the substance of an assistant does not live inside a device. From your smartphone, your smartwatch, or your computer, you reach the same assistant. That is how it should be.
 
@@ -12,7 +12,7 @@
 
 7. Nurturing takes an environment. A place to accumulate memories. A place to keep your data. A place to build apps just for you. A place where you can grow your set of tools simply by talking in everyday words. MulmoClaude is, so to speak, a garden for nurturing your AI assistant. Right after you install it, the garden is still empty. You plant seeds and tend the soil, and grow an assistant that is yours alone.
 
-8. You talk with the AI running inside MulmoClaude, build apps just for yourself, and accumulate all kinds of data. That is the right way to nurture an AI assistant — and MulmoClaude is what puts it within everyone's reach. Building apps requires no programming knowledge. You simply say "I want something like this," and the AI builds the app you need. Programmers call it "vibe coding" when they have AI write code for them — but with MulmoClaude, you never have to think about code at all.
+8. You talk with the AI running inside MulmoClaude, build apps just for yourself, and accumulate all kinds of data. That is the right way to nurture an AI assistant — and MulmoClaude is what puts it within everyone's reach. Building apps requires no programming knowledge. You simply say "I want something like this," and the AI builds the app you need on the spot. Programmers call it "vibe coding" when they have AI write code for them — but with MulmoClaude, you never have to think about code at all.
 
 9. A restaurant list, an invoice tracker, vocabulary practice. Each one is a small app for an audience of one. Until recently, building an app for a single person was unthinkable — the cost was far too high. This is a world that became possible only because AI has driven the cost of software development close to zero. MulmoClaude brings that world into your hands.
 
