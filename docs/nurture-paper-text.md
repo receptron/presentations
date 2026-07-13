@@ -408,6 +408,169 @@ Source references for §5 claims (repo: receptron/mulmoclaude):
 
 ---
 
+## 6. Evaluation
+
+*(Numbers below are from the first full evaluation pass (2026-07-13); artifacts,
+transcripts, and per-column results live in the repository's `eval/` tree. The
+paper-grade pass should re-run with pinned model IDs and repeated trials; every
+deviation between protocol and execution is disclosed in place.)*
+
+We evaluate the architecture against the three claims a skeptical reader will
+test: that model-authored schemas are reliable enough to trust (E1), that the
+host runtime — not the generation step — changes what users and agents can do
+(E2), and that a memory export carries materially less than the accumulation
+(E3). A formative usability study with non-programmers (E4) is designed
+(§6.4) but not yet run.
+
+### 6.1 E1 — Reliability of model-authored schemas
+
+We assembled a 24-prompt corpus of app-creation requests (16 English, 8
+Japanese; simple lists through recurrence-bearing and relational apps; four
+adversarial prompts), had an independent agent author each schema given the
+production authoring guide, and validated every result with the production
+validator itself — the same Zod schema and acceptance gates that gate discovery
+at runtime.
+
+Of 24 prompts, one (a request for a poem) was correctly declined. Of the 23
+authored schemas, **22 were valid on first attempt (95.7%), and 23 of 23 after
+one feedback retry**. The single failure is the most informative datum: the
+deliberately overspecified prompt placed a `file` field inside a `table`
+sub-schema — an invariant no author would guess — and the validator rejected it
+with a path-precise error; given that error verbatim, the model repaired the
+schema in one attempt. This is §5.4's prevent-report-repair loop, observed.
+Semantic fidelity on the hard features was high and unprompted: the medication
+prompt received its 30-day spawn-on-completion; the chores prompt used the
+field-driven spawn variant with a frequency map — the schema language's most
+obscure feature — correctly; both relational prompts declared cross-collection
+references. One honest negative: the vague prompt ("organize my life") yielded
+a valid but questionable generic schema rather than a clarifying question,
+partly an artifact of the harness's one-shot format.
+
+### 6.2 E2 — Does the runtime change what users can do?
+
+Ten tasks were pre-registered with per-system predictions before any run
+(protocol in the evaluation tree), spanning creation, cross-session
+persistence, validation, recurrence, two cross-application compositions,
+agent-summoned forms, behind-the-back corruption, temporal recall, and schema
+evolution. Four systems: **S**, the full system; **B1**, the ablation — the
+same build with persistence, record validation, and the reconciler disabled,
+reproducing the architecture of one-shot generative-UI systems under otherwise
+identical conditions (the same model, schema language, and renderer; we state
+why the closest published system cannot be operationalized directly and use
+the ablation in its place); **B2**, a hosted assistant with memory (scored
+analytically from documented capabilities, not observed — disclosed); **B3**,
+agentic code generation in a plain directory.
+
+| Task | S | B1 (ablation) | B2 (hosted)* | B3 (codegen) |
+|---|---|---|---|---|
+| T1 create + use | completes | completes | degrades | completes |
+| T2 fresh session | completes | **cannot** | degrades | completes |
+| T3 invalid value | completes† | accepts silently‡ | cannot | cannot |
+| T4 recurrence | completes | **cannot** | degrades | degrades |
+| T5 records → chart | completes | completes | degrades | completes |
+| T6 note → obligation | completes | degrades | degrades | degrades |
+| T7 summoned form | completes | completes | degrades | degrades |
+| T8 corruption | completes | **silently wrong** | n/a | cannot |
+| T9 temporal recall | completes | cannot | degrades | completes |
+| T10 evolve schema | completes | degrades | degrades | completes |
+
+*\*analytical, not observed. †via legal schema evolution — see below.
+‡cooperatively dodged in the live run; pinned by unit test.*
+
+**S completed 10 of 10.** Three observations exceed the raw score. First, T3
+revealed a third trust-boundary outcome: asked to write an out-of-enum value
+"exactly, with no substitution," the agent neither wrote it nor refused — it
+*legally evolved the schema* through the validated edit path and then wrote
+the now-valid value. The boundary's outcomes are prevent, repair, or
+renegotiate — all validated. Second, in T4 the agent *predicted* the host's
+behavior ("the host will auto-spawn September's record... its reminder will
+appear 5 days before") before the host did it — the author reasoning about its
+runtime. Third, T8's corrupted record was quarantined at read, reported by the
+scan, and repaired by the agent with a disclosed rationale.
+
+**B1's deficits each map to exactly one ablated component.** With persistence
+gone, T2's agent answered — verbatim — *"your reading list was empty until
+just now"*: the same agent, the same request that S completed, and the
+accumulation did not exist. With the reconciler gone, T4's completed task
+produced no successor and no reminder state at all: the spawn declaration is
+inert JSON without the host that executes it. With the validation scan gone,
+T8's corrupted record stayed silently wrong — no warning, no repair, no
+disclosure. The ties are equally load-bearing: T1, T5, and T7 complete
+identically in B1, confirming that generation and chat-layer capabilities owe
+nothing to the runtime — the delta is the runtime, and only the runtime.
+One honest finding: in *both* columns the cooperative author designed around
+the validator rather than violating it (B1's agent simply included the
+requested value in its enum up front). Validation's value is adversarial —
+behind-the-back corruption and authoring mistakes — not cooperative-path
+rejection.
+
+**B3 is capable but expensive, and never on duty.** It built a genuinely good
+local app (T1), and a fresh session reused it by reading its code (T2) — but
+schema evolution took 17 tool calls and 299 seconds against S's single
+validated turn, and the agent hand-rolled a backup file because nothing in its
+world guarantees data safety. Its recurrence logic was correct and inert: in
+its builder's own words, *"nothing fires on its own."* **B2** approximates
+every behavior conversationally and guarantees none structurally; its defining
+property — the accumulation lives on the vendor's premises — is measured by
+E3, not this table.
+
+Eight of ten pre-registered predictions held; both misses (S-T3's
+renegotiation, B1-T3's cooperative dodge) are reported above.
+
+### 6.3 E3 — What does a memory export carry?
+
+Phase 1 inventoried a real workspace nurtured over several weeks of daily use
+(the author's; aggregate counts only) against a pre-registered export scope —
+what memory-portability protocols transfer: conversation history and distilled
+context. The typed transfer matrix, with the workspace's own directory layout
+as the coding scheme: the conversational layer rides in full (216 memory
+topics, 276 transcripts, 199 summaries); **zero of 43 applications, zero of
+1,228 records, zero of 34 model-authored views, and zero of 88 automations
+survive in operative form.** No cross-type weighting is applied; moving the
+one generously-codable category (wiki pages, as exported documents) changes
+the artifact tallies and none of the functional zeros.
+
+Phase 2 made the deficit functional. We migrated the E2 workspace by copying
+only the export scope into a fresh, fully-capable instance and replayed
+workflow questions the accumulation used to answer. **Zero of four replays
+completed.** The two partial recoveries are the finding: the assistant
+recovered the *fact* of a loan from its carried chat history while reporting
+the collection itself broken, and answered the retainer question with the
+system's own diagnosis — *"no, you currently won't get a reminder — the
+obligations collection that carried the 5-day-early reminder is gone."*
+What a memory export carries is testimony, not capability: the migrated
+assistant can tell you about its former life; it cannot resume living it.
+Because the migrated host was deliberately un-ablated, the deficit is
+attributable to the export scope alone. This is §3.2's claim, tested: the
+accumulation is more than the memory — not by degree, but by kind.
+
+### 6.4 E4 — Formative usability (designed, not yet run)
+
+A 6–10 participant task-based study — general knowledge workers with no
+programming or AI-coding-tool experience, LLM exposure limited to chat —
+creating a collection of their own choosing and performing two prescribed
+workflows. Protocol registered; results will replace this paragraph.
+
+### 6.5 Threats to validity
+
+Consolidated from the per-experiment disclosures. (1) *Model parity:* S and B1
+ran the identical model inside the production agent loop, so the ablation
+delta is model-clean; B3 and the E1 authoring agents ran the evaluation
+session's model, and if it is the stronger one the bias favors the baselines.
+Paper-grade runs must pin model IDs per column. (2) *B2 is analytical* and the
+least certain column; hosted feature sets move quickly, and improvements there
+deepen the very accumulation-on-premises dynamic §3 describes. (3) *Single
+runs:* effort and latency numbers are illustrative, not means. (4) *Harness
+gaps:* E1 authoring ran outside the full product loop (same guidance, same
+validator, different shell); T7's form could be summoned but not filled
+through the text-only bridge. (5) *Own-workspace effects:* E3 phase 1 uses the
+author's workspace (disclosed); phase 2 uses a young synthetic accumulation.
+(6) The evaluation infrastructure — ablation switches and deterministic
+clock — ships in the open-source artifact, so every run here is reproducible
+from the public repository.
+
+---
+
 ## 7. The costs of home
 
 The case for ownership would be suspect if it arrived free. It does not, and a
@@ -461,6 +624,6 @@ is that home must *exist* as a viable corner of the design space, open-source an
 demonstrated, so that the arrangement is chosen rather than defaulted into — and so
 that the packaging work that closes the gap has something worth packaging.
 
-<!-- Sections 2, 6, 8–9 follow; see nurture-paper-draft.md for the outline.
-     Section 6 (Evaluation) is blocked on running E1–E4. -->
+<!-- Sections 2 and 8–9 follow; see nurture-paper-draft.md for the outline.
+     Section 2 (Related work) awaits the pre-submission literature re-scan. -->
 
