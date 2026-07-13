@@ -1,11 +1,13 @@
 # E2 harness verification (2026-07-13)
 
 Host-level verification that the ablation infrastructure behaves as designed,
-run against the MulmoClaude `eval-ablation-mode` branch (commit `837c2965`,
-PR receptron/mulmoclaude#2082 — run from the branch; not merged to main by
-design). Three servers, three scratch workspaces, identical synthetic seed
-(`seed-workspace.sh`: a collection with completion bell, 3-day trigger lead,
-and monthly spawn).
+run against the MulmoClaude `eval-ablation-mode` branch at commit `837c2965`
+(PR receptron/mulmoclaude#2082 — since merged to main in `3d4bd31e` after
+review and green CI, so the ablation switches now ship in the released
+artifact; the evaluation runs below predate the merge and cite the exact
+commit they ran against). Three servers, three scratch workspaces, identical
+synthetic seed (`seed-workspace.sh`: a collection with completion bell,
+3-day trigger lead, and monthly spawn).
 
 | Boot configuration | Spawn successor | Due-record bell | Far-future record |
 |---|---|---|---|
