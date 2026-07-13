@@ -1,0 +1,38 @@
+{
+  "title": "カラオケ持ち歌リスト",
+  "icon": "mic",
+  "dataPath": "data/karaoke-songs/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": {
+      "type": "string",
+      "label": "ID",
+      "primary": true,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "label": "曲名",
+      "required": true
+    },
+    "artist": {
+      "type": "string",
+      "label": "歌手",
+      "required": true
+    },
+    "keyShift": {
+      "type": "number",
+      "label": "キー調整"
+    },
+    "lastSungOn": {
+      "type": "date",
+      "label": "最後に歌った日"
+    },
+    "isForte": {
+      "type": "boolean",
+      "label": "得意"
+    }
+  },
+  "displayField": "title",
+  "calendarField": "lastSungOn"
+}

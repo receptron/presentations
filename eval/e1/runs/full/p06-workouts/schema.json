@@ -1,0 +1,16 @@
+{
+  "title": "Workout Log",
+  "icon": "fitness_center",
+  "dataPath": "data/workout-log/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "date": { "type": "date", "label": "Date", "required": true },
+    "exercise": { "type": "enum", "label": "Exercise", "values": ["run", "swim", "weights", "yoga"], "required": true },
+    "durationMinutes": { "type": "number", "label": "Duration (min)", "required": true },
+    "feeling": { "type": "text", "label": "How I felt" }
+  },
+  "displayField": "exercise",
+  "calendarField": "date",
+  "kanbanField": "exercise"
+}

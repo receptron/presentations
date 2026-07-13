@@ -1,0 +1,45 @@
+{
+  "title": "Daily Mood",
+  "icon": "mood",
+  "dataPath": "data/daily-mood/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": {
+      "type": "string",
+      "label": "ID",
+      "primary": true,
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "label": "Date",
+      "required": true
+    },
+    "mood": {
+      "type": "number",
+      "label": "Mood (1-10)",
+      "required": true
+    },
+    "dayOfWeek": {
+      "type": "enum",
+      "label": "Day of Week",
+      "values": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "required": true
+    },
+    "note": {
+      "type": "text",
+      "label": "Note"
+    }
+  },
+  "displayField": "date",
+  "calendarField": "date",
+  "kanbanField": "dayOfWeek"
+}
