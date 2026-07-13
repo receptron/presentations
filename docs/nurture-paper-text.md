@@ -95,6 +95,100 @@ This paper contributes:
 
 ---
 
+## 3. Motivation: accumulation, lock-in, home
+
+*(Position section — argues a design stance; makes no empirical claim beyond the
+cited sources. The one falsifiable claim it produces — that memory portability
+carries only part of the accumulation — is tested in §6.)*
+
+### 3.1 An old paradox, inverted
+
+Arrow observed that information resists being traded: its value to a buyer is
+unknown until disclosed, but disclosure is the transfer — the seller gives the good
+away in the act of selling it [arrow-1962]. The market for machine intelligence
+inverts the direction of the leak. A model is useful to its user roughly in
+proportion to what the user reveals to it: preferences, corrections, documents, the
+context of a life or a business. The buyer of intelligence therefore pays twice —
+once in money, and once in the disclosed knowledge that makes the purchase useful —
+and the second payment flows in only one direction. This inversion has begun to
+receive practitioner articulation at enterprise scale [nadella-rip]; its canonical
+ancestor is Arrow, and what is being disclosed is precisely what Hayek called the
+knowledge of the particular circumstances of time and place — the knowledge that
+only its holder can possess, and that no central provider could otherwise obtain
+[hayek-1945].
+
+### 3.2 Two failure modes, often conflated
+
+Hosted accumulation exposes the user to two distinct risks, and remedies for one are
+routinely mistaken for remedies for the other.
+
+*Leakage* is the flow of interaction exhaust — prompts, corrections, usage patterns —
+into an asset the provider owns. Its natural remedy is a boundary: contractual and
+technical guarantees that what the user reveals is not learned from without consent.
+Enterprise tenant isolation is exactly this remedy, and it is the one the industry
+is presently building [nadella-rip].
+
+*Captivity* is different: the accumulation itself — the memory, records, and
+applications that make the assistant valuable — resides on the provider's premises,
+subject to the provider's continuity, pricing, and terms. A tenant boundary does not
+touch captivity; the boundary is drawn *inside* someone else's building. Captivity's
+proposed remedy is portability: open protocols for exporting agent memory and
+re-importing it elsewhere [portable-agent-memory; samep]. Portability is genuine
+progress, and we share its diagnosis. Our disagreement is with its scope, and it is
+the disagreement this paper is built to test: what a user accrues in a nurtured
+assistant is more than its memory. It is records under schemas, applications with
+host-executed semantics, views, recurrence state, and the operating manuals the
+model wrote for itself (§5). A memory export carries none of the parts that
+execute. If that is right, portability under-remedies captivity not by degree but
+by kind — and §6's migration experiment measures exactly this.
+
+### 3.3 Switching costs that compound
+
+Classic switching-cost economics describes markets where the cost of leaving a
+vendor rises with investment in it, and where rational vendors compete to create
+such costs [klemperer; shapiro-varian]. Accumulated assistant state is a textbook
+instance with an unusual property: the investment is made *by using the product at
+all*. Every conversation, every correction, every small application deepens a store
+of context that does not transfer; the switching cost is not an exit fee that can
+be waived but a body of accumulated state that must be rebuilt. The personalization
+race among assistant vendors is therefore, structurally, a race to raise switching
+costs — whatever its participants intend. We state this as an economic reading of
+the arrangement, not a measured harm: indeed, the payoff of accumulated
+personalization is itself empirically contested [recentering-humans]. But that
+uncertainty cuts toward caution, not away from it. The defaults being set today
+decide who owns the accumulation *before* the evidence about its value arrives; if
+the value materializes, the lock-in arrives with it, already in place.
+
+### 3.4 Nurtured at home, operationally
+
+The remedy this paper explores is ownership of the environment rather than
+portability of one layer. "Nurtured at home" is not a sentiment but four testable
+properties, each removing a specific failure mode:
+
+- *Plain, local files.* The accumulation lives in a workspace on the user's machine,
+  in formats readable without the system that wrote them. Removes export lock: there
+  is nothing to export, because nothing is held.
+- *Open source.* The environment cannot be discontinued, repriced, or acquired out
+  from under the accumulation it hosts. Removes platform mortality as a risk the
+  user must price in.
+- *Local execution.* The engine that renders, validates, and reconciles runs on the
+  user's machine; no request to a host service is needed for the assistant's
+  applications to function. Removes availability-by-subscription.
+- *Relay-only remote access.* Reaching the assistant from a phone or messaging
+  bridge traverses a relay that carries messages in transit and stores nothing.
+  Removes the quiet re-centralization that remote convenience usually smuggles in.
+
+Two honest boundaries on the claim. First, ownership is not model-independence: the
+intelligence is still rented, and a local-first system inherits every dependency on
+its model provider except custody of the accumulation — the design answer is to keep
+the workspace unchanged across engine swaps, which §5's architecture enables but
+this paper does not benchmark. Second, ownership has real costs — setup, backup,
+availability, security — which we treat symmetrically in §7 rather than as
+footnotes. The position is not that home is free. It is that home is the only place
+where the compounding asset compounds for its owner.
+
+---
+
 ## 5. Architecture: schema as application
 
 *(Implementation facts verified against the MulmoClaude source tree, 2026-07-13;
