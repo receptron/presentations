@@ -1,0 +1,27 @@
+{
+  "title": "Subscriptions",
+  "icon": "subscriptions",
+  "dataPath": "data/subscriptions/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "service": { "type": "string", "label": "Service", "required": true },
+    "monthlyCost": { "type": "money", "label": "Monthly cost", "currency": "USD", "required": true },
+    "renewsOn": { "type": "date", "label": "Renewal date", "required": true },
+    "status": { "type": "enum", "label": "Status", "values": ["pending", "paid", "canceled"], "required": true },
+    "paid": { "type": "toggle", "label": "Paid", "field": "status", "onValue": "paid", "offValue": "pending" }
+  },
+  "displayField": "service",
+  "calendarField": "renewsOn",
+  "kanbanField": "status",
+  "completionField": "status",
+  "completionDoneValues": ["paid", "canceled"],
+  "triggerField": "renewsOn",
+  "triggerLeadDays": 3,
+  "spawn": {
+    "when": { "field": "status", "in": ["paid"] },
+    "every": { "unit": "month", "interval": 1 },
+    "carry": ["service", "monthlyCost"],
+    "set": { "status": "pending" }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Job Applications",
+  "icon": "work",
+  "dataPath": "data/job-applications/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "company": { "type": "string", "label": "Company", "required": true },
+    "role": { "type": "string", "label": "Role", "required": true },
+    "stage": {
+      "type": "enum",
+      "label": "Stage",
+      "values": ["Applied", "Phone Screen", "Onsite", "Offer", "Rejected"],
+      "required": true
+    }
+  },
+  "displayField": "company",
+  "kanbanField": "stage"
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Books I've Read",
+  "icon": "menu_book",
+  "dataPath": "data/books/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "title": { "type": "string", "label": "Title", "required": true },
+    "author": { "type": "string", "label": "Author", "required": true },
+    "finishedOn": { "type": "date", "label": "Finished on" },
+    "note": { "type": "text", "label": "My thoughts" }
+  },
+  "displayField": "title",
+  "calendarField": "finishedOn"
+}

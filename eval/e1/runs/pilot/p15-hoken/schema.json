@@ -1,0 +1,44 @@
+{
+  "title": "保険一覧",
+  "icon": "health_and_safety",
+  "dataPath": "data/insurance/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "company": { "type": "string", "label": "保険会社", "required": true },
+    "kind": {
+      "type": "enum",
+      "label": "種類",
+      "values": ["生命保険", "医療保険", "がん保険", "自動車保険", "火災保険", "地震保険", "個人年金", "その他"],
+      "required": true
+    },
+    "annualPremium": { "type": "money", "label": "年間保険料", "currency": "JPY", "required": true },
+    "nextPaymentDate": { "type": "date", "label": "次回支払日", "required": true },
+    "status": {
+      "type": "enum",
+      "label": "支払状況",
+      "values": ["未払い", "支払済み"],
+      "required": true
+    },
+    "paid": {
+      "type": "toggle",
+      "label": "支払済",
+      "field": "status",
+      "onValue": "支払済み",
+      "offValue": "未払い"
+    },
+    "notes": { "type": "text", "label": "メモ" }
+  },
+  "displayField": "company",
+  "completionField": "status",
+  "completionDoneValues": ["支払済み"],
+  "triggerField": "nextPaymentDate",
+  "triggerLeadDays": 14,
+  "spawn": {
+    "when": { "field": "status", "in": ["支払済み"] },
+    "every": { "unit": "year", "interval": 1 },
+    "carry": ["company", "kind", "annualPremium", "notes"],
+    "set": { "status": "未払い" }
+  },
+  "calendarField": "nextPaymentDate"
+}
