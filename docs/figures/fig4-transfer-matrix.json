@@ -1,0 +1,46 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "title": "Figure 4: E3 transfer matrix",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-white text-gray-900 px-12 py-8 font-sans flex flex-col'>",
+          "  <div class='text-center text-base font-semibold mb-1'>What a memory-only export carries</div>",
+          "  <div class='text-center text-[11px] text-gray-500 mb-3'>Typed inventory of a workspace nurtured over several weeks; export scope = conversation history + distilled context (memory-portability class). No cross-type weighting.</div>",
+          "  <table class='w-full text-[12px] leading-tight border-collapse'>",
+          "    <thead><tr class='border-b-2 border-gray-800 text-left'><th class='py-1 pr-2 font-semibold'>Layer</th><th class='py-1 pr-2 font-semibold'>Artifact type</th><th class='py-1 pr-2 font-semibold text-right'>Count</th><th class='py-1 font-semibold'>Verdict</th></tr></thead>",
+          "    <tbody>",
+          "      <tr class='border-b border-gray-200'><td class='py-[3px] pr-2 text-gray-500' rowspan='3'>Conversational</td><td class='pr-2'>Memory topic files</td><td class='pr-2 text-right font-mono'>216</td><td><span class='text-green-700'>&#9679;</span> <b>carried</b></td></tr>",
+          "      <tr class='border-b border-gray-200'><td class='pr-2'>Chat transcripts</td><td class='pr-2 text-right font-mono'>276</td><td><span class='text-green-700'>&#9679;</span> <b>carried</b> <span class='text-gray-400 text-[10px]'>(session metadata lost)</span></td></tr>",
+          "      <tr class='border-b border-gray-300'><td class='pr-2'>Conversation summaries</td><td class='pr-2 text-right font-mono'>199</td><td><span class='text-green-700'>&#9679;</span> <b>carried</b></td></tr>",
+          "      <tr class='border-b border-gray-200'><td class='py-[3px] pr-2 text-gray-500' rowspan='4'>Application</td><td class='pr-2'>Collection schemas (the applications)</td><td class='pr-2 text-right font-mono'>43</td><td><span class='text-red-700'>&#9675;</span> <b>lost</b></td></tr>",
+          "      <tr class='border-b border-gray-200'><td class='pr-2'>SKILL.md operating manuals</td><td class='pr-2 text-right font-mono'>43</td><td><span class='text-amber-700'>&#9684;</span> <b>degraded</b> <span class='text-gray-400 text-[10px]'>(text survives, function lost)</span></td></tr>",
+          "      <tr class='border-b border-gray-200'><td class='pr-2'>Collection records</td><td class='pr-2 text-right font-mono'>1,228</td><td><span class='text-amber-700'>&#9684;</span> <b>degraded</b> <span class='text-gray-400 text-[10px]'>(prose at best, inoperative as data)</span></td></tr>",
+          "      <tr class='border-b border-gray-300'><td class='pr-2'>Custom views (model-authored code)</td><td class='pr-2 text-right font-mono'>34</td><td><span class='text-red-700'>&#9675;</span> <b>lost</b></td></tr>",
+          "      <tr class='border-b border-gray-200'><td class='py-[3px] pr-2 text-gray-500' rowspan='2'>Knowledge</td><td class='pr-2'>Wiki pages</td><td class='pr-2 text-right font-mono'>153</td><td><span class='text-amber-700'>&#9684;</span> <b>degraded</b> <span class='text-gray-400 text-[10px]'>(link graph, history, rendering lost)</span></td></tr>",
+          "      <tr class='border-b border-gray-300'><td class='pr-2'>Wiki snapshot history</td><td class='pr-2 text-right font-mono'>247</td><td><span class='text-red-700'>&#9675;</span> <b>lost</b></td></tr>",
+          "      <tr class='border-b border-gray-200'><td class='py-[3px] pr-2 text-gray-500' rowspan='3'>Behavioral</td><td class='pr-2'>Automations / scheduler entries</td><td class='pr-2 text-right font-mono'>88</td><td><span class='text-red-700'>&#9675;</span> <b>lost</b></td></tr>",
+          "      <tr class='border-b border-gray-200'><td class='pr-2'>Reminder / recurrence runtime state</td><td class='pr-2 text-right font-mono'>&#8212;</td><td><span class='text-red-700'>&#9675;</span> <b>lost</b></td></tr>",
+          "      <tr class='border-b border-gray-300'><td class='pr-2'>Feed definitions + ingest state</td><td class='pr-2 text-right font-mono'>12</td><td><span class='text-red-700'>&#9675;</span> <b>lost</b></td></tr>",
+          "      <tr class='border-b border-gray-200'><td class='py-[3px] pr-2 text-gray-500' rowspan='2'>Media</td><td class='pr-2'>Attachments</td><td class='pr-2 text-right font-mono'>51</td><td><span class='text-red-700'>&#9675;</span> <b>lost</b></td></tr>",
+          "      <tr class='border-b-2 border-gray-800'><td class='pr-2'>Generated artifacts (charts, docs)</td><td class='pr-2 text-right font-mono'>1,536</td><td><span class='text-red-700'>&#9675;</span> <b>lost</b></td></tr>",
+          "    </tbody>",
+          "  </table>",
+          "  <div class='mt-3 text-[12px] text-center'><b>Functionally:</b> 0 of 43 applications, 0 of 1,228 operative records, 0 of 88 automations survive. What survives in full is exactly the layer the assistant's <i>conversations</i> live in &#8212; and none of the layers its <i>applications</i> live in.</div>",
+          "  <div class='mt-1 text-[10px] text-gray-500 text-center'>&#9679; carried (operative) &nbsp;&#9684; degraded (content survives, function lost) &nbsp;&#9675; lost</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
