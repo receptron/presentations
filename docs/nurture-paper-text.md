@@ -378,12 +378,12 @@ a wiki agreement and writes a record into a recurring-obligation collection whos
 `spawn` declaration then does the recurring. In our own workspace — nurtured over
 several weeks and used as the migration subject in §6 — forty-three such
 applications coexist: the restaurant list, invoice tracker, and vocabulary drill of
-the introduction are real, alongside forty other collections spanning the breadth
-of one person's work and life, together holding on the order of 1,200 records, 25
-of them with custom views. (We disclose aggregate counts and artifact types only;
-the collections' subjects, beyond the three examples above, are the owner's own
-business.) None was built by a software company; each is a schema, a manual, and a
-folder of records.
+the introduction are real, alongside collections for health checkups, tax payments,
+a swim log, and a World Cup schedule, together holding on the order of 1,200
+records, 25 of them with custom views. (We disclose collection subjects and
+aggregate counts; record contents — names, amounts, holdings — are the owner's own
+business and appear nowhere in this paper.) None was built by a software company;
+each is a schema, a manual, and a folder of records.
 
 <!--
 Source references for §5 claims (repo: receptron/mulmoclaude):
