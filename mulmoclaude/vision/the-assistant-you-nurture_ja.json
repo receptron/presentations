@@ -197,7 +197,7 @@
   "lang": "ja",
   "beats": [
     {
-      "text": "もし、あなたのことを何でも知っていて、24時間そばで仕事も生活も支えてくれるAIアシスタントがいたら、毎日はどう変わるでしょうか。実は、そんなアシスタントはどこにも売っていません。買うことができないのです。手に入れる方法はただひとつ、自分で育てること。今日はその育て方の話をします。",
+      "text": "もし、あなたのことを何でも知っていて、24時間そばで仕事も生活も支えてくれるAIアシスタントがいたら、毎日はどう変わるでしょうか。実は、そんなアシスタントはどこにも売っていません。買うことができないのです。手に入れる方法はただひとつ、自分の手で育てること。今日はその育て方の話をします。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -251,7 +251,7 @@
       "imagePrompt": "A large glowing orb of warm golden light floating above a sunlit field, encircled by two or three thin orbit rings carrying small icons — speech bubbles, calendar pages, envelopes, note cards, a small diary, tiny app windows — labeled with the word \"ASSISTANT\" beneath it in small clean sans-serif capitals in warm orange; the radiant orb with its orbiting accumulation of personal memories and data fills the scene with warm hopeful light."
     },
     {
-      "text": "実は、AIを作っている会社たちもそれをよく分かっています。ChatGPTやClaudeに「あなたのことを覚えておく機能」が次々と追加されているのは、偶然ではありません。FacebookやInstagramでユーザーのデータをすでに大量に持っているMetaや、GmailやカレンダーをおさえているGoogleも、同じ勝負に加わっています。AIアシスタントの価値は、モデルの賢さではなく、その人についてどれだけ知っているかで決まる。どの会社も、それに気づいているのです。",
+      "text": "実は、AIを作っている会社たちもそれをよく分かっています。ChatGPTやClaudeに「あなたのことを覚えておく機能」が次々と追加されているのは、偶然ではありません。FacebookやInstagramでユーザーのデータをすでに大量に持っているMetaや、GmailやカレンダーをおさえているGoogleも、同じ勝負に加わっています。AIアシスタントの価値を分けるのは、モデルの賢さではなく、その人についてどれだけ知っているか。どの会社も、それに気づいているのです。",
       "duration": 11.5,
       "imageNames": [],
       "imagePrompt": "A cozy writing desk standing in a sunlit flower meadow, and on the desk a friendly glowing chat window shaped like a small standing picture frame, with a gentle stream of speech bubbles rising from it into the morning air; from each speech bubble a small mote of warm golden light drifts down into an open glass jar beside the frame, the jar already half full of softly glowing motes — a chat service quietly collecting memories about its user, one conversation at a time. Warm, calm, slightly uncanny in its diligence."
@@ -268,12 +268,12 @@
       "imagePrompt": "A strict schematic diagram on a warm cream background of exactly three horizontal lanes on the left, converging into one large glowing orb of warm golden light on the right. Top lane: a row of identical speech bubbles only, labeled with the word \"Memory\". Middle lane: a row of calendar pages and envelopes only, labeled with the word \"Data\". Bottom lane: a row of small app windows with a wrench only, labeled with the word \"Apps\". Each lane's label sits at the left end of the lane in small clean sans-serif capitals in warm orange. Each lane is a thin amber guide line carrying its icons, with generous empty space separating the three lanes, and the three guide lines curve together and merge into the glowing golden orb, which is ringed by concentric halos. Minimal, ordered, engineered layout like a clean flow diagram."
     },
     {
-      "text": "しかし、個人のデータやアプリを抱えて蓄積していくAIアシスタントほど重要なものを、特定の会社に任せてしまうのは賢くありません。長く使えば使うほど、他のサービスへの乗り換えが難しくなり、一生そのサービスから離れられなくなってしまうからです。",
+      "text": "しかし、個人のデータやアプリを抱えて蓄積していくAIアシスタントほど重要なものを、特定の会社に任せてしまうのは賢くありません。長く使えば使うほど、他のサービスへの乗り換えが難しくなり、気がつけばそのサービスから離れられなくなってしまうからです。",
       "imageNames": [],
       "imagePrompt": "A glowing orb of warm golden light trapped inside a closed birdcage on a pedestal, its light dimmed and muffled by the bars; the orb's luminous threads have grown out through the bars and rooted deep into the ground around the cage like vines, so the orb can no longer be pulled free. A small person stands outside, reaching toward the cage. The scene is lit by muted, overcast late-afternoon light with desaturated dusty tones — the sun hidden behind clouds — and the cage bars carry a cold steel-gray sheen, the only cold element in the scene."
     },
     {
-      "text": "これが、私がマルモクロードというソフトウェアを作り始めた理由です。マルモクロードはオープンソースで、特定の会社に囲い込まれる心配はありません。誰かのサービスの中で育てれば、記憶も、データも、アプリも、そのサービスの中に蓄積されていきます。そうではなく、育てた蓄積がユーザー自身の手元に残るようにしたかったのです。マルモクロードが可能にするのは、自分のパソコンの上でAIアシスタントを育てること。誰かに預けるのではなく、自分の手元で育てる、あなただけのアシスタントです。",
+      "text": "これが、私がマルモクロードというソフトウェアを作り始めた理由です。マルモクロードが可能にするのは、自分のパソコンの上でAIアシスタントを育てること。記憶も、データも、アプリも、すべてあなたの手元に残ります。しかもオープンソースですから、特定の会社に囲い込まれる心配もありません。誰かに預けるのではなく、自分の手で育てる、あなただけのアシスタントです。",
       "imageNames": [],
       "imagePrompt": "A person seated at a desk in a sun-filled room in the morning, side view, gently cupping a small radiant orb of warm golden light in their hands like a seedling; soft sunlight streams through an open window with curtains stirring, and faint threads of golden light connect the orb to books, notes, and everyday objects around the room, suggesting memories accumulating in a place of their own. Warm, hopeful, serene atmosphere."
     },
@@ -283,7 +283,7 @@
       "imagePrompt": "A person kneeling in a small private garden in the early morning, gently planting a glowing golden seedling of light into rich dark soil; the rising sun bathes the garden in warm golden light, dew sparkles on the leaves, a few other seedlings of light sprout nearby at different heights, each trailing a faint thread of warm light, with a watering can beside the person and a low wooden fence framing the garden as a personal, protected place."
     },
     {
-      "text": "マルモクロードの中で動くAIと会話しながら、自分専用のアプリを作り、さまざまなデータを蓄積していく。それが、AIアシスタントの正しい育て方だと私は思います。アプリを作るといっても、プログラミングの知識は要りません。プログラマーがAIにコードを書かせることを「バイブコーディング」と呼びますが、マルモクロードでは、コードのことを意識する必要すらありません。「こういうものが欲しい」と話すだけで、AIが必要なアプリを作ってくれるのです。",
+      "text": "マルモクロードの中で動くAIと会話しながら、自分専用のアプリを作り、さまざまなデータを蓄積していく。それが、AIアシスタントの正しい育て方であり、それを誰でもできるようにしたのがマルモクロードです。アプリを作るといっても、プログラミングの知識は要りません。「こういうものが欲しい」と話すだけで、AIが必要なアプリをその場で作ってくれます。プログラマーがAIにコードを書かせることを「バイブコーディング」と呼びますが、マルモクロードでは、コードのことを意識する必要すらないのです。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -322,7 +322,7 @@
       }
     },
     {
-      "text": "レストランリスト、請求書トラッカー、単語練習。どれも、ひとりのための小さなアプリです。少し前まで、たったひとりのためにアプリを作るなど、コストが高すぎて考えられませんでした。AIによってソフトウェアの開発コストが限りなくゼロに近づいたからこそ、初めて可能になった世界なのです。",
+      "text": "レストランリスト、請求書トラッカー、単語練習。どれも、ひとりのための小さなアプリです。少し前まで、たったひとりのためにアプリを作るなど、コストが高すぎて考えられませんでした。AIによってソフトウェアの開発コストが限りなくゼロに近づいたからこそ、初めて可能になった世界です。マルモクロードは、その世界をあなたの手元に届けます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -352,7 +352,7 @@
       }
     },
     {
-      "text": "もちろん、アシスタントはパソコンの前にいる時だけ使えれば良いわけではありません。マルモクロードでは、自分のパソコンとスマートフォンの両方から同じIDでログインすれば、家の外からでもパソコンの中にいるAIアシスタントと通信できます。サーバーは用件を中継するだけで、データやアプリは置きません。だから安全に、外から同じアシスタントにアクセスできるのです。将来は、スマートグラスやスマートヘッドセットからも、同じアシスタントにつながるようになります。",
+      "text": "もちろん、アシスタントはパソコンの前にいる時だけ使えれば良いわけではありません。マルモクロードでは、自分のパソコンとスマートフォンの両方から同じIDでログインすれば、家の外からでもパソコンの中にいるAIアシスタントと通信できます。サーバーはやり取りを中継するだけで、データやアプリは置きません。だから安全に、外から同じアシスタントにアクセスできるのです。将来は、スマートグラスやスマートヘッドセットからも、同じアシスタントにつながるようになります。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -380,7 +380,7 @@
       }
     },
     {
-      "text": "AIがこれからますます重要になるにつれ、AIを使いこなせる人と、そうでない人の間には大きな差が生まれます。その差は、単に賢いモデルを借りられるかではなく、自分を理解しているAIアシスタントを育てられるかで決まるはずです。アシスタントを育てることは、自分自身の生産性を上げ、社会にとっての自分の価値を高めることでもあるのです。",
+      "text": "AIがこれからますます重要になるにつれ、AIを使いこなせる人と、そうでない人の間には大きな差が生まれます。その差は、単に賢いモデルを借りられるかではなく、自分を理解しているAIアシスタントを育てられるかで決まります。アシスタントを育てることは、自分自身の生産性を上げ、仕事や生活の中でできることを広げていくことでもあるのです。",
       "imageNames": [],
       "imagePrompt": "A deep chasm splits the ground into two cliff edges pulling apart under a morning sky. On the left cliff, lower and in cool gray shadow under a passing cloud, a person stands alone beside a small plain closed box. On the right cliff, higher and bathed in warm golden sunlight, a person stands beside a large glowing orb of warm light encircled by a thin orbit ring, gentle threads of golden light linking the orb to the person. The widening gap between the shadowed side and the sunlit side is the focus of the composition."
     },
