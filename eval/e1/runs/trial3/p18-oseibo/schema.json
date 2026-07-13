@@ -1,0 +1,38 @@
+{
+  "title": "お歳暮",
+  "icon": "card_giftcard",
+  "dataPath": "data/oseibo/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": {
+      "type": "string",
+      "label": "ID",
+      "primary": true,
+      "required": true
+    },
+    "recipient": {
+      "type": "ref",
+      "to": "contacts",
+      "label": "贈り先",
+      "required": true
+    },
+    "year": {
+      "type": "number",
+      "label": "年",
+      "required": true
+    },
+    "item": {
+      "type": "string",
+      "label": "品物"
+    },
+    "amount": {
+      "type": "money",
+      "currency": "JPY",
+      "label": "金額"
+    },
+    "sent": {
+      "type": "boolean",
+      "label": "送付済み"
+    }
+  }
+}

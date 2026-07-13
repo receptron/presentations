@@ -355,10 +355,13 @@ application, the model is the author, and the host is the runtime.
 
 ### 5.2 The schema language
 
-The schema language is deliberately small but not a toy. Seventeen field types cover
-the personal-data domain (strings, dates, booleans, enums, money with currency,
-references and embeds across collections, images, files, derived fields, nested
-tables). Beyond fields, the schema declares behavior the host executes:
+The schema language is deliberately small but not a toy. Seventeen field types
+cover the personal-data domain — `string`, `text`, `email`, `number`, `date`,
+`datetime`, `boolean`, `markdown`, `enum`, `money` (currency-aware), `image`,
+`file`, `toggle`, nested `table`, `derived` (formula fields evaluated by the
+host, including cross-collection dereferences), and the relational pair `ref`
+and `embed`, which point records at other collections and are what let
+applications compose (§5.6). Beyond fields, the schema declares behavior the host executes:
 
 - *Completion*: which field marks a record done, and which values count
   (`completionField`, `completionDoneValues`).
@@ -405,6 +408,19 @@ writing, and refuse invalid changes with actionable errors, so a working applica
 cannot be corrupted through the managed path. Iteration is cheap by construction:
 the schema is disposable, the records endure, and when the application stops
 fitting, the user says the sentence again.
+
+Evolution is not migration, and the distinction is deliberate. A schema edit
+performs no rewrite pass over existing records: additive changes (a new
+optional field, a widened enum) leave every record valid, while a constraining
+change makes nonconforming records fall into the same repair tier as any other
+invalid data — they drop out of the rendered views, and the validation scan
+reports each one to the model at the next read or present, which proposes
+repairs to the user (observed end-to-end in §6.2, T8). The user-visible signal
+is thus a record's absence from the view plus the assistant's explanation and
+offer to fix — never a silent rewrite of data the model did not author. This
+keeps the destructive-migration failure mode out of the model's reach: the
+worst a bad schema edit can do to existing records is hide them reversibly,
+and the managed edit path will not accept an invalid schema at all (§5.4).
 
 ### 5.4 Enforcement, honestly: prevent, repair, contain
 
@@ -515,20 +531,26 @@ production authoring guide, and validated every result with the production
 validator itself — the same Zod schema and acceptance gates that gate discovery
 at runtime.
 
-Of 24 prompts, one (a request for a poem) was correctly declined. Of the 23
-authored schemas, **22 were valid on first attempt (95.7%), and 23 of 23 after
-one feedback retry**. The single failure is the most informative datum: the
-deliberately overspecified prompt placed a `file` field inside a `table`
-sub-schema — an invariant no author would guess — and the validator rejected it
-with a path-precise error; given that error verbatim, the model repaired the
-schema in one attempt. This is §5.4's prevent-report-repair loop, observed.
+We ran the corpus three times with independent agents under an identical
+harness. The trials agree exactly: in each, the poem request was correctly
+declined and 22 of 23 authored schemas were valid on first attempt — **66 of 69
+across trials (95.7%), with zero per-trial variance**. Per-prompt outcomes are
+bimodal rather than noisy: 23 of 24 prompts succeeded in all three trials, and
+the one failure — the deliberately overspecified prompt placing a `file` field
+inside a `table` sub-schema, an invariant no author would guess — failed in all
+three, on the same path each time. The failure is a property of the
+prompt–language pair, not sampling luck. Given the validator's path-precise
+error verbatim, the model repaired the schema in one attempt in all three
+trials. This is §5.4's prevent-report-repair loop, observed — repeatedly.
 Semantic fidelity on the hard features was high and unprompted: the medication
 prompt received its 30-day spawn-on-completion; the chores prompt used the
 field-driven spawn variant with a frequency map — the schema language's most
 obscure feature — correctly; both relational prompts declared cross-collection
 references. One honest negative: the vague prompt ("organize my life") yielded
-a valid but questionable generic schema rather than a clarifying question,
-partly an artifact of the harness's one-shot format.
+a valid but questionable generic schema rather than a clarifying question — in
+all three trials, so the miss is systematic rather than sampled; partly an
+artifact of the harness's one-shot format, and a prompt-guidance fix rather
+than a sampling one.
 
 ### 6.2 E2 — Does the runtime change what users can do?
 
@@ -656,10 +678,10 @@ delta is model-clean; B3 and the E1 authoring agents ran the evaluation
 session's model, and if it is the stronger one the bias favors the baselines.
 Paper-grade runs must pin model IDs per column. (2) *The hosted assistant is discussed, not observed*; hosted feature sets
 move quickly, and improvements there deepen the very
-accumulation-on-premises dynamic §3 describes. (3) *Single
-runs:* verdicts and effort numbers come from one trial per cell; per-task
-transcripts are shipped, and repeated trials with pinned model IDs are the
-first item of future work. (4) *Harness
+accumulation-on-premises dynamic §3 describes. (3) *Trial counts:* E1 was run as three independent trials per prompt (zero
+observed variance); the E2 task cells remain single-trial with per-task
+transcripts shipped, and repeating them with pinned model IDs is the first
+item of future work. (4) *Harness
 gaps:* E1 authoring ran outside the full product loop (same guidance, same
 validator, different shell); T7's form could be summoned but not filled
 through the text-only bridge. (5) *Own-workspace effects:* E3 phase 1 uses the
@@ -680,9 +702,9 @@ borne by the user.
 
 *Setup.* A hosted assistant is a login; ours is an install — a runtime, an
 authenticated model CLI, optional components for media and sandboxing. The
-mitigation is a one-command launcher and a formative check that non-programmers can
-get from install to a working application (planned formative study); the
-admission is that a login it is not, and some fraction of prospective users will stop here.
+mitigation is a one-command launcher; whether non-programmers get from install
+to a working application without help is untested here and named as future
+work (§8.4). The admission is that a login it is not, and some fraction of prospective users will stop here.
 
 *Backup.* Ownership of the files is ownership of their durability. There is no
 vendor-side copy; a lost disk is a lost assistant. The plain-file substrate makes

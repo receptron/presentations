@@ -1,0 +1,32 @@
+{
+  "title": "Packing Checklist",
+  "icon": "luggage",
+  "dataPath": "data/packing-list/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "item": { "type": "string", "label": "Item", "required": true },
+    "category": {
+      "type": "enum",
+      "label": "Category",
+      "values": ["Clothing", "Toiletries", "Electronics", "Documents", "Other"]
+    },
+    "quantity": { "type": "number", "label": "Qty" },
+    "status": {
+      "type": "enum",
+      "label": "Status",
+      "values": ["To Pack", "Packed"],
+      "required": true
+    },
+    "packed": {
+      "type": "toggle",
+      "label": "Packed",
+      "field": "status",
+      "onValue": "Packed",
+      "offValue": "To Pack"
+    },
+    "notes": { "type": "string", "label": "Notes" }
+  },
+  "displayField": "item",
+  "kanbanField": "status"
+}

@@ -1,0 +1,43 @@
+{
+  "title": "英単語練習帳",
+  "icon": "menu_book",
+  "dataPath": "data/english-vocab/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": {
+      "type": "string",
+      "label": "ID",
+      "primary": true,
+      "required": true
+    },
+    "word": {
+      "type": "string",
+      "label": "単語",
+      "required": true
+    },
+    "meaning": {
+      "type": "string",
+      "label": "意味",
+      "required": true
+    },
+    "example": {
+      "type": "text",
+      "label": "例文"
+    },
+    "status": {
+      "type": "enum",
+      "label": "習得状況",
+      "values": ["未習得", "覚えた"],
+      "required": true
+    },
+    "learned": {
+      "type": "toggle",
+      "label": "覚えた",
+      "field": "status",
+      "onValue": "覚えた",
+      "offValue": "未習得"
+    }
+  },
+  "displayField": "word",
+  "kanbanField": "status"
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Chores Rota",
+  "icon": "cleaning_services",
+  "dataPath": "data/chores-rota/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "chore": { "type": "string", "label": "Chore", "required": true },
+    "assignee": { "type": "string", "label": "Who", "required": true },
+    "frequency": {
+      "type": "enum",
+      "label": "Frequency",
+      "values": ["weekly", "monthly"],
+      "required": true
+    },
+    "dueOn": { "type": "date", "label": "Next due", "required": true },
+    "status": {
+      "type": "enum",
+      "label": "Status",
+      "values": ["pending", "done"],
+      "required": true
+    },
+    "done": {
+      "type": "toggle",
+      "label": "Done",
+      "field": "status",
+      "onValue": "done",
+      "offValue": "pending"
+    }
+  },
+  "displayField": "chore",
+  "completionField": "status",
+  "completionDoneValues": ["done"],
+  "triggerField": "dueOn",
+  "calendarField": "dueOn",
+  "kanbanField": "status",
+  "spawn": {
+    "when": { "field": "status", "in": ["done"] },
+    "every": {
+      "fromField": "frequency",
+      "map": {
+        "weekly": { "unit": "week", "interval": 1 },
+        "monthly": { "unit": "month", "interval": 1 }
+      }
+    },
+    "carry": ["chore", "assignee", "frequency"],
+    "set": { "status": "pending" }
+  }
+}

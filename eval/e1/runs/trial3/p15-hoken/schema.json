@@ -1,0 +1,27 @@
+{
+  "title": "保険一覧",
+  "icon": "shield",
+  "dataPath": "data/insurance/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "company": { "type": "string", "label": "保険会社", "required": true },
+    "kind": { "type": "string", "label": "種類", "required": true },
+    "premium": { "type": "money", "label": "年間保険料", "currency": "JPY" },
+    "nextPaymentDate": { "type": "date", "label": "次回支払日", "required": true },
+    "status": { "type": "enum", "label": "支払状況", "values": ["未払い", "支払済"], "required": true },
+    "paid": { "type": "toggle", "label": "支払済", "field": "status", "onValue": "支払済", "offValue": "未払い" }
+  },
+  "displayField": "company",
+  "completionField": "status",
+  "completionDoneValues": ["支払済"],
+  "triggerField": "nextPaymentDate",
+  "triggerLeadDays": 14,
+  "calendarField": "nextPaymentDate",
+  "spawn": {
+    "when": { "field": "status", "in": ["支払済"] },
+    "every": { "unit": "year", "interval": 1 },
+    "carry": ["company", "kind", "premium"],
+    "set": { "status": "未払い" }
+  }
+}

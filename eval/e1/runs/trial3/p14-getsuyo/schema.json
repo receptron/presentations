@@ -1,0 +1,13 @@
+{
+  "title": "体重記録",
+  "icon": "monitor_weight",
+  "dataPath": "data/weight-log/items",
+  "primaryKey": "date",
+  "fields": {
+    "date": { "type": "date", "label": "日付", "primary": true, "required": true },
+    "weight": { "type": "number", "label": "体重 (kg)", "required": true },
+    "memo": { "type": "text", "label": "メモ" }
+  },
+  "displayField": "date",
+  "calendarField": "date"
+}

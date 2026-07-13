@@ -1,0 +1,16 @@
+{
+  "title": "Wine Cellar",
+  "icon": "wine_bar",
+  "dataPath": "data/wine-cellar/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "name": { "type": "string", "label": "Name", "required": true },
+    "vintage": { "type": "number", "label": "Vintage" },
+    "region": { "type": "string", "label": "Region" },
+    "price": { "type": "money", "label": "Price", "currency": "USD" },
+    "opened": { "type": "boolean", "label": "Opened" },
+    "rating": { "type": "number", "label": "Rating", "when": { "field": "opened", "in": ["true"] } }
+  },
+  "displayField": "name"
+}
