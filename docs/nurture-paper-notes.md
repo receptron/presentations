@@ -48,3 +48,12 @@ immediately before submission (a check, not a rewrite).
    dogfooded-workspace disclosures.
 5. Venue formatting; artifact-evaluation packaging (`eval/` tree +
    MulmoClaude release with ablation switches).
+
+## Camera-ready figure checks (per final review, round 6 — Strong Accept)
+
+- Figure 1: verify the authoring/runtime boundary (the validation-gate line)
+  prints thick and unambiguous at final size; bolden the dashed stroke in
+  `docs/figures/fig1-architecture.json` if needed and re-render.
+- Figure 2: keep the JSON listing within one column/page — elide secondary
+  properties with `…` if the venue's format squeezes it; the load-bearing
+  elements are `rating`+`when`, `visited`, and the `views` capability set.
