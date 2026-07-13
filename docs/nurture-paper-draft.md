@@ -1,158 +1,204 @@
-# Nurtured at Home: Why Personal AI Must Grow on an Accumulation You Own
+# Nurtured at Home: A Local-First Schema-as-Application Architecture for User-Owned Personal AI
 
 *Working draft — title, abstract, and section outline. Companion document:
 [nurture-paper-literature-scan.md](nurture-paper-literature-scan.md) (novelty map and
-must-cite list, 2026-07-13). Target shape: systems paper (UIST / CHI systems track),
-with the longitudinal nurturing study as a companion or follow-up paper.*
+must-cite list, 2026-07-13). Target shape: systems paper (UIST / CHI systems track).
+Revised 2026-07-13 after external review (Codex): narrowed to a single artifact-centered
+contribution, empirical claims reframed as position/hypothesis, evaluation protocol
+added, longitudinal study explicitly future work.*
+
+## Scope decision (post-review)
+
+One paper, one contribution: **MulmoClaude as a local-first schema-as-application
+system for user-owned personal AI accumulation.** The economics argument is the
+*motivation* (a position, not an empirical claim); the nurturing study is *future
+work*; "premium features dissolve" and the GUI-protocol material are discussion
+asides, not contributions.
 
 ## Abstract
 
-Every major AI vendor has converged on the same insight: the value of a personal
-assistant is determined not by the intelligence of its model but by what accumulates
-around it — memories, data, and the applications that grow up around a user's life.
-An assistant, in other words, cannot be bought; it can only be nurtured. But the
-nurturing has already begun, and it is happening in someone else's house: hosted
-assistants now invite users to cultivate memory and context on the vendor's premises,
-where every conversation deepens an accumulation the user can never take with them.
-If accumulation is the value, accumulation is also the lock-in — switching costs
-compound with every interaction, and the personalization race is structurally a race
-to make leaving impossible. Proposed remedies focus on memory portability, but the
-accumulation is more than the memory: it includes schemas, applications, and host
-semantics that no memory export carries. An assistant must be nurtured at home, in
-an environment the user owns.
+Personal AI assistants are increasingly defined by what accumulates around the model —
+memories, data, and applications — rather than by the model alone: every major vendor
+now ships memory features that invite users to build up context on the vendor's
+premises. We take a position on this arrangement: if accumulation is what makes an
+assistant valuable, it is also what makes leaving costly, and remedies based on memory
+portability carry only one layer of what a user accrues. A personal assistant, we
+argue, should be nurtured at home — grown in an environment the user owns.
 
-We present MulmoClaude, an open-source platform embodying this position. Its central
-mechanism is a schema-as-application architecture: the user describes what they need
-in natural language; the model emits a small declarative schema; and a host runtime —
-not the model — renders the interface, validates every record, and runs reconciliation
-and recurrence over a persistent, plain-file workspace on the user's own machine. The
-same architecture yields a universal-controller property: one agent composes across
-capabilities that would otherwise be separate applications, and the cross-application
-work that constitutes the premium tier of conventional software becomes the default
-mode of operation. We describe the architecture, the design commitments behind it,
-and the questions it opens about how people nurture an assistant that is theirs alone.
+We present MulmoClaude, an open-source system that instantiates this position through
+a schema-as-application architecture: the user describes what they need in natural
+language; the model authors a small declarative schema; and a host runtime — not the
+model — renders the interface, validates every record, and runs reconciliation and
+recurrence over a plain-file workspace on the user's own machine. The model authors
+the application; the host runs it; the records endure. We evaluate the architecture
+three ways: (i) reliability — schema-generation validity and host-side rejection rates
+across a corpus of app-creation tasks; (ii) capability — cross-application workflows
+over accumulated personal data that neither memory export nor one-shot UI generation
+supports; and (iii) a migration experiment quantifying what a memory export carries
+versus what the workspace contains. We report the costs of local-first ownership
+alongside its benefits, and outline the longitudinal questions the system opens.
 
 ## Section outline
 
 ### 1. Introduction
 
-- Open with the argument chain, in three steps: (a) accumulation, not model
-  intelligence, is the value of a personal assistant — the vendors' own memory
-  features concede this; (b) therefore accumulation is also the lock-in, and it
-  compounds: every interaction deepens the switching cost; (c) therefore the remedy
-  is not portability of one layer but ownership of the environment — the assistant
-  must be nurtured at home.
-- Users are already nurturing, on hosted platforms — cite the CSCW '25 Digital
-  Companionship findings (users believe they cultivate their chatbot; back up chat
-  logs; refuse to delete). The behavior exists; the question is who owns the upbringing.
-- Contributions list: (1) the compounding-lock-in argument for local-first personal
-  AI; (2) the schema-as-application architecture with a host runtime over a persistent
-  personal workspace; (3) MulmoClaude, an installable open-source artifact embodying
-  both; (4) design lessons and open questions for longitudinal study.
+- Open with the observable fact (vendors racing to ship memory features; users already
+  cultivating context on hosted platforms — CSCW '25 Digital Companionship: users
+  believe they nurture their chatbot, back up chat logs, refuse to delete).
+- State the position as a position: *if* accumulation is the value, it is also the
+  switching cost, and it compounds. Frame as design stance motivating the system —
+  explicitly not an empirical claim of this paper. (Per the lit scan: personalization
+  payoff is itself contested, 2606.06614 — which strengthens the urgency of asking
+  who owns the accumulation before the value question settles.)
+- Contributions list (narrowed):
+  1. The schema-as-application architecture: model-authored declarative schemas
+     executed by a validating host runtime over a user-owned plain-file workspace.
+  2. MulmoClaude, an installable open-source artifact implementing it end to end.
+  3. An evaluation: schema-generation reliability, cross-application workflow
+     capability against two baselines, and a migration experiment that measures the
+     memory-export gap.
+  4. A tradeoff analysis of local-first personal AI (what ownership buys, what it costs).
 
 ### 2. Related work
 
 Positioning strategy per the literature scan — cite early, differentiate explicitly:
 
-- **Nurturing agents.** Nurture-First (arXiv 2603.10808) claims the metaphor for
-  domain-expert agents. Our one-sentence response: it argues agents must be nurtured;
-  we ask *where* — and show the answer determines who owns the assistant.
-- **Memory as substrate.** Mem0, MemGPT, MemoryBank, hosted memory features. They
-  establish accumulation-as-mechanism; none discusses ownership or switching costs.
-  Hedge the value premise with Re-Centering Humans (2606.06614): personalization
-  payoff is contested, which strengthens (not weakens) the lock-in reading — vendors
-  race to accumulate even before value is proven.
-- **Portability as remedy.** Portable Agent Memory (2605.11032), SAMEP (2507.10562).
-  State their problem statement as shared ground; argue the accumulation-is-more-
-  than-memory rebuttal: schemas, apps, and host semantics don't ride a memory export.
-- **NL-to-declarative UI.** Jelly (CHI 2025) — closest system; same anti-codegen
-  motivation. Differentiate on persistence, validation, reconciler/recurrence, and
-  real data over a personal store (all deferred in Jelly). Also Varv (CHI 2022),
-  Potluck, GenerativeGUI, Generative UI (2604.09577), Software as Content (2603.21334).
-- **Malleable software and local-first.** Ink & Switch essays; Robin Sloan's
-  home-cooked app. Apps-for-one framing is theirs; our delta is agent-composed (not
-  human-composed) and economics-motivated (not agency-motivated) local-first.
-- **Agent-GUI protocols.** MCP Apps, AG-UI, A2UI, OpenAI Apps SDK. Present
-  gui-chat-protocol as one entrant; claim only the MVC universal-controller
-  articulation and the composition-over-owned-accumulation combination.
-- **Agent substrates.** The Log is the Agent (2605.21997) — event-sourced runtime
-  layer; complementary, cited for auditability/forkability directions.
-- **Accumulation economics.** Nadella's "Reverse Information Paradox" (X, Jul 2026) —
-  the enterprise counterpart and strongest mainstream validation: the buyer of
-  intelligence pays twice (money + the proprietary knowledge revealed to use it);
-  one-directional learning converges value to the owners of learning infrastructure.
-  Differentiate on scale (enterprise → personal), mechanism (his *leakage* of exhaust
-  vs. our *captivity* of the accumulation), and remedy (his tenant boundary inside a
-  vendor cloud answers leakage but not captivity; ownership answers both).
+- **NL-to-declarative UI (primary axis).** Jelly (CHI 2025) — closest system; same
+  anti-codegen motivation. Differentiation must be *demonstrated, not asserted*
+  (→ Evaluation ii): persistence, record validation, reconciler/recurrence, real data
+  over a personal store — all deferred in Jelly. Also Varv (CHI 2022), Potluck,
+  GenerativeGUI, Generative UI (2604.09577), Software as Content (2603.21334).
+- **Portability as remedy (second axis).** Portable Agent Memory (2605.11032), SAMEP
+  (2507.10562). Shared problem statement; our rebuttal is the migration experiment
+  (→ Evaluation iii): what fraction of the workspace's operative state rides a memory
+  export.
+- **Memory as substrate.** Mem0, MemGPT, MemoryBank, hosted memory features —
+  accumulation-as-mechanism, no ownership discussion.
+- **Nurturing agents.** Nurture-First (2603.10808) claims the metaphor for
+  domain-expert agents; we ask *where* the nurturing happens. One paragraph, not a pillar.
+- **Malleable software and local-first.** Ink & Switch essays; Robin Sloan. Apps-for-one
+  is theirs; our delta: agent-composed, economics-motivated, evaluated.
+- **Accumulation economics (motivation only).** Arrow (1962), Hayek (1945); Nadella's
+  Reverse Information Paradox (X, Jul 2026) as *secondary practitioner corroboration*,
+  not scholarly support — cite once for the leakage/captivity distinction, keep the
+  weight on Arrow/Hayek and the switching-cost literature (Klemperer, Shapiro & Varian).
+- **Agent-GUI protocols.** MCP Apps, AG-UI, A2UI, Apps SDK — one paragraph situating
+  gui-chat-protocol as the artifact's implementation choice, no novelty claim.
+- **Agent substrates.** The Log is the Agent (2605.21997) — complementary runtime layer.
 
-### 3. The argument: accumulation, lock-in, home
+### 3. Motivation: accumulation, lock-in, home (position, ~1.5 pages)
 
-- Anchor the economics canonically: Arrow's Information Paradox (1962) — the seller
-  risks giving knowledge away to sell it — and its AI-age inversion (Nadella 2026):
-  the buyer gives knowledge away to use what they bought. Hayek (1945) grounds what
-  accumulates: the knowledge of time, place, and circumstance that only the user holds.
-- Two failure modes of hosted accumulation, treated separately: *leakage* (interaction
-  exhaust trains the provider; asymmetric learning) and *captivity* (the accumulation
-  is held on the premises; switching costs compound). Portability protocols address
-  neither fully; tenant boundaries address leakage only; ownership addresses both.
-- Formalize the compounding: switching cost as a function of accumulated interactions,
-  apps, and schemas; contrast with classic data-gravity/switching-cost literature.
-- Why portability protocols under-remedy: enumerate what a memory export carries vs.
-  what constitutes the assistant (records + schemas + host semantics + generated apps).
-- Define "nurtured at home": plain files, open source, local execution, relay-only
-  remote access. Each property tied to a failure mode it prevents (shutdown,
-  repricing, acquisition, export lock).
+- The economics as design rationale, hedged: Arrow's Information Paradox and its
+  AI-age inversion; Hayek's knowledge of particular circumstance; classic
+  switching-cost economics applied to accumulated assistant state.
+- Leakage vs. captivity as two distinct failure modes of hosted accumulation; map
+  existing remedies (tenant boundaries → leakage; portability protocols → part of
+  captivity) and state the ownership hypothesis: local-first addresses both — *at a
+  cost*, analyzed in §7.
+- Define "nurtured at home" operationally: plain files, open source, local execution,
+  relay-only remote access — each property tied to the specific failure mode it
+  removes (shutdown, repricing, acquisition, export lock), stated as design goals
+  the evaluation then exercises where measurable.
 
-### 4. Design commitments (from the manifesto, condensed)
+### 4. Design commitments (condensed from the manifesto, ~1 page)
 
-1. The agent is a universal controller — joins, not replaces, the UI; composes across
-   a plugin registry.
-2. Chat summons GUIs — bidirectional modality choice, including agent-requested
-   structured input (forms).
-3. The protocol is open and extends MCP (gui-chat-protocol).
+1. The agent is a universal controller — joins, not replaces, the UI.
+2. Chat summons GUIs — bidirectional modality choice, including agent-requested forms.
+3. The protocol is open and extends MCP.
 4. The accumulation belongs to the user — the commitment the other three serve.
 
 ### 5. Architecture: schema as application
 
 - The collection mechanism: NL → small declarative schema; host renders (table /
   kanban / calendar), validates every record, runs the reconciler (reminders,
-  recurrence). "The records are data, the schema is the application, the model is
-  the runtime."
-- Trust boundary: everything the model authors is validated before it runs; views
-  and recurrence are engine code that never guesses. Invalid applications never execute.
-- Honest persistence description: plain-file workspace, per-entity storage; append-only
-  islands (chat transcripts, accounting journal with compensating entries, wiki snapshot
-  history) vs. mutable subsystems — and why correctness-critical subsystems
-  independently converged on logs.
-- Worked examples: accounting (API + UI + agent; receipt photo → same API), a
-  collection built in one conversation, cross-plugin composition (accounting → chart;
-  wiki → recurring obligation).
-- Sharing: a collection schema published to a registry — apps-for-one compose into
-  a commons.
+  recurrence). Corrected slogan: **the records are data, the schema is the
+  application, the model is the author, the host is the runtime.**
+- Trust boundary: everything the model authors is validated before it runs; views,
+  reconciler, and recurrence are engine code that never guesses. Invalid applications
+  never execute.
+- Honest persistence description: plain-file workspace; append-only islands (chat
+  transcripts, accounting journal with compensating entries, wiki snapshot history)
+  vs. mutable subsystems — why correctness-critical subsystems independently
+  converged on logs.
+- Worked examples (now feeding the evaluation, not replacing it): accounting
+  (API + UI + agent; receipt photo → same API), a collection built in one
+  conversation, cross-plugin composition.
+- Sharing: schema registry — apps-for-one compose into a commons.
 
-### 6. Discussion
+### 6. Evaluation (new — the section the paper stands on)
 
-- Premium features dissolve: the integration tier was the integration cost; connect
-  to the practitioner unbundling literature (Bain, Deloitte, Gartner) as context,
-  claim the mechanism articulation.
-- Limitations: no longitudinal evidence yet (design the study; cite the n=1
-  Nurture-First case study as the current state of evidence); personalization payoff
-  contested; single-machine availability; model dependence.
-- Open questions for the longitudinal study: what do people build, does accumulation
-  measurably change capability, where does the nurturing metaphor break.
+Three questions, matching the three claims a skeptical reviewer will test:
 
-### 7. Conclusion
+**E1 — Is model-authored + host-validated reliable enough to trust?**
+- Corpus of N app-creation requests (drawn from real collection categories: trackers,
+  lists, drills, recurring obligations; varied phrasing, two languages).
+- Measure: valid-schema rate on first attempt; retry convergence; host-side rejection
+  rate (invalid schemas caught before execution — the trust-boundary claim,
+  quantified); record-validation catch rate on deliberately malformed records;
+  reconciler/recurrence correctness against a hand-built oracle (due dates,
+  recurrence advancement, reminder firing).
 
-- Return to the opening: the assistant you cannot buy — and cannot board out. The
-  architecture exists, the install is one command, and the question of who owns the
-  upbringing is being decided now, by defaults.
+**E2 — Does the combination change what users/agents can do?** (the Jelly
+differentiation, demonstrated)
+- Task suite of cross-application personal workflows over an accumulated workspace
+  (e.g., receipts → ledger → quarterly chart; wiki agreement → recurring obligation;
+  feed items → collection records).
+- Baselines: (a) a hosted assistant with memory but no host runtime (one-shot
+  generated UI / chat-only), (b) memory-portability-style export + generic tools.
+- Measure: task completion, steps/turns, error classes; qualitatively, which tasks are
+  *impossible* per baseline and why (no persistence; no validation; no recurrence; no
+  cross-app state).
+
+**E3 — Migration experiment: what does a memory export carry?** (the captivity claim,
+made empirical)
+- Take a workspace nurtured over weeks (dogfooding data, disclosed as such).
+  Export what portability protocols cover (conversational memory). Attempt to
+  reconstitute the assistant's behavior elsewhere.
+- Measure: fraction of operative state carried (records, schemas, recurrence state,
+  app behavior, cross-plugin workflows) vs. lost; enumerate failure cases. Result
+  format: "a memory export carries X% of the artifacts and 0 of the running
+  applications" — the accumulation-is-more-than-memory rebuttal as data.
+
+Scope honesty: E1–E3 are artifact evaluations, not user studies; no claims about
+long-term user behavior are made.
+
+### 7. The costs of home (expanded tradeoff analysis — was a bullet, now a section)
+
+- What ownership costs, treated symmetrically with what it buys: install and setup
+  burden; backup responsibility (no vendor durability); single-machine availability
+  and sync limits of relay-only access; security surface of a local server; model/API
+  dependence (local-first ≠ model-independent — the engine is still rented; mitigation:
+  orchestration decoupled from any single model, workspace unchanged across engine
+  swaps); the nontechnical-adoption gap.
+- For each cost: current mitigation in the artifact, or honest statement that it is
+  unmitigated. This section exists so the paper argues a *tradeoff*, not a free lunch.
+
+### 8. Discussion
+
+- Premium-features-dissolve as an observed consequence of composition (one paragraph,
+  discussion aside — not a contribution; cite unbundling literature as context).
+- What the artifact cannot yet show: longitudinal nurturing. Design sketch for the
+  study (what people build, whether accumulation measurably changes capability, where
+  the metaphor breaks) — explicitly future work, citing the n=1 Nurture-First case
+  study as the current state of evidence.
+- Generalization: which parts are MulmoClaude-specific vs. portable design patterns
+  for any local-first agent host.
+
+### 9. Conclusion
+
+- Return to the opening, now hedged honestly: the question of who owns the upbringing
+  is being decided by defaults; this paper contributes a working alternative default
+  and evidence about what it can and cannot do.
 
 ## Notes
 
-- Re-run the literature scan immediately before submission (preempting sources are
-  fresh preprints; space moves monthly).
-- Author-voice pieces to reuse: MANIFEST.md (design commitments, patterns), the
-  assistant-you-nurture essay/deck (framing, metaphors).
-- Venue candidates: UIST (systems), CHI (systems/argument hybrid), CSCW (if study
-  lands in time); short-form flag option: Interactions / CACM essay or a workshop
-  paper on the economics framing.
+- Review feedback incorporated (2026-07-13, Codex): abstract reframed from assertion
+  to position; contributions narrowed to artifact + evaluation; evaluation protocol
+  added (E1–E3); local-first tradeoffs promoted to a full section; slogan fixed
+  ("model is the author, host is the runtime"); Nadella demoted to secondary
+  corroboration; premium-dissolve demoted to discussion.
+- Re-run the literature scan immediately before submission.
+- Author-voice pieces to reuse: MANIFEST.md, the assistant-you-nurture essay/deck.
+- Venue candidates: UIST (systems) primary; CHI systems alternate. The economics
+  position could be flagged separately in a short Interactions / CACM essay or
+  workshop paper; the longitudinal study targets CHI/CSCW as paper two.
