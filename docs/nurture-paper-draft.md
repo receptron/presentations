@@ -37,6 +37,8 @@ over accumulated personal data that neither memory export nor one-shot UI genera
 supports; and (iii) a migration experiment quantifying what a memory export carries
 versus what the workspace contains. We report the costs of local-first ownership
 alongside its benefits, and outline the longitudinal questions the system opens.
+The result is a working architectural blueprint — and an evidence base — for
+personal AI whose accumulation remains with the person it describes.
 
 ## Section outline
 
@@ -113,6 +115,28 @@ Positioning strategy per the literature scan — cite early, differentiate expli
   kanban / calendar), validates every record, runs the reconciler (reminders,
   recurrence). Corrected slogan: **the records are data, the schema is the
   application, the model is the author, the host is the runtime.**
+- Implementation depth (required by systems reviewers — this is not a thin schema
+  wrapper over files, and the paper must show it):
+  - *Schema language*: the full declarative surface — field types, relations,
+    done-marker, reminder and recurrence declarations — with the grammar/JSON-Schema
+    definition and a complete example schema as a figure.
+  - *Validation semantics*: what is checked, when (authoring time vs. record write),
+    how errors surface to the agent and to the user, and the guarantee: an invalid
+    application never executes.
+  - *Beyond static validity — semantic mismatch and runtime faults*: static
+    validation cannot catch a schema that is grammatically valid but contradicts the
+    user's intent; the architecture's answer is the cheap re-authoring loop (the user
+    says the sentence again; the schema is disposable, the records endure) plus
+    runtime error surfacing — data contradictions detected by the reconciler are
+    raised through defined channels to both the agent (for self-correction) and the
+    user (for judgment), never silently absorbed.
+  - *Reconciler and recurrence model*: the tick model, recurrence-advancement rules,
+    reminder firing — specified precisely enough to be checked against the E1 oracle.
+  - *Plugin boundary*: the MCP tool surface and the gui-chat-protocol runtime
+    interface (pub/sub channels, scoped dispatch, error isolation) — what a plugin
+    consumes vs. what the host implements.
+  - Architecture figure: model-author / host-runtime split with the trust boundary
+    drawn explicitly.
 - Trust boundary: everything the model authors is validated before it runs; views,
   reconciler, and recurrence are engine code that never guesses. Invalid applications
   never execute.
@@ -139,28 +163,61 @@ Three questions, matching the three claims a skeptical reviewer will test:
   recurrence advancement, reminder firing).
 
 **E2 — Does the combination change what users/agents can do?** (the Jelly
-differentiation, demonstrated)
+differentiation, demonstrated — with a non-strawman baseline strategy)
 - Task suite of cross-application personal workflows over an accumulated workspace
   (e.g., receipts → ledger → quarterly chart; wiki agreement → recurring obligation;
   feed items → collection records).
-- Baselines: (a) a hosted assistant with memory but no host runtime (one-shot
-  generated UI / chat-only), (b) memory-portability-style export + generic tools.
-- Measure: task completion, steps/turns, error classes; qualitatively, which tasks are
-  *impossible* per baseline and why (no persistence; no validation; no recurrence; no
-  cross-app state).
+- Baseline strategy (three tiers, each answering a different "why not X?"):
+  - (a) **Ablation baseline — the Jelly-class comparison.** Jelly itself is not
+    publicly runnable and was evaluated on generated data, so it cannot be fairly
+    operationalized directly; state this explicitly, then reproduce its architectural
+    point as an ablation of our own system: same model, same schema→UI generation,
+    with persistence, record validation, and the reconciler *disabled*. This isolates
+    exactly the components we claim matter, under otherwise identical conditions —
+    fairer to Jelly than a reimplementation, and immune to the strawman objection.
+  - (b) **Hosted-assistant baseline.** A production assistant with memory but no host
+    runtime (chat + one-shot artifacts) — the status-quo competitor.
+  - (c) **Codegen baseline.** The same tasks via vibe-coded one-off apps (agentic
+    codegen) — the "generate code instead of schema" alternative the anti-codegen
+    argument must beat on iteration and durability.
+- Measure: task completion, steps/turns, error classes; for each baseline, which
+  tasks are *impossible* and which architectural absence causes it (no persistence;
+  no validation; no recurrence; no cross-app state).
 
 **E3 — Migration experiment: what does a memory export carry?** (the captivity claim,
-made empirical)
+made empirical — with an auditable metric, not a constructed one)
 - Take a workspace nurtured over weeks (dogfooding data, disclosed as such).
   Export what portability protocols cover (conversational memory). Attempt to
   reconstitute the assistant's behavior elsewhere.
-- Measure: fraction of operative state carried (records, schemas, recurrence state,
-  app behavior, cross-plugin workflows) vs. lost; enumerate failure cases. Result
-  format: "a memory export carries X% of the artifacts and 0 of the running
-  applications" — the accumulation-is-more-than-memory rebuttal as data.
+- No single "X%": a weighted scalar over heterogeneous artifacts invites the
+  constructed-result objection. Two complementary measures instead:
+  - **Transfer matrix (descriptive).** Enumerate workspace state as a typed
+    inventory — records, schemas, recurrence/reminder state, wiki pages, memory
+    topics, automations, plugin data, generated app behaviors — from the workspace
+    directory structure itself (the coding scheme is the file layout, independently
+    auditable). Report per-type: carried / degraded / lost. No cross-type weighting.
+  - **Task replay (functional).** Re-run the E2 task suite against the migrated
+    target; report per-task completion delta. This sidesteps artifact weighting
+    entirely — the denominator is tasks, defined before the experiment.
+- Result format: a transfer matrix plus "N of M workflow tasks still complete after
+  memory-only migration" — the accumulation-is-more-than-memory rebuttal as data.
 
-Scope honesty: E1–E3 are artifact evaluations, not user studies; no claims about
-long-term user behavior are made.
+**E4 — Formative usability signal** (added per review: can non-authors do this?)
+- Small task-based formative study, 6–10 participants who are not authors: create a
+  collection of their own choosing by conversation, then perform two prescribed
+  workflows over it.
+- Recruiting criteria (stated explicitly — this is what makes the no-code claim
+  testable): general knowledge workers with no programming experience and no
+  AI-coding-tool experience (Cursor, Copilot, Claude Code, etc.); prior LLM exposure
+  limited to chat use. Report the screening instrument.
+- Measure: unassisted success, time, points of confusion, and what participants ask
+  for that the schema language cannot express; standard short usability instrument
+  plus think-aloud.
+- Framed strictly as formative (does the interaction work at all for non-authors?),
+  not summative — the longitudinal study remains future work.
+
+Scope honesty: E1–E3 are artifact evaluations and E4 is formative; no claims about
+long-term user behavior or adoption are made.
 
 ### 7. The costs of home (expanded tradeoff analysis — was a bullet, now a section)
 
@@ -192,11 +249,26 @@ long-term user behavior are made.
 
 ## Notes
 
-- Review feedback incorporated (2026-07-13, Codex): abstract reframed from assertion
-  to position; contributions narrowed to artifact + evaluation; evaluation protocol
-  added (E1–E3); local-first tradeoffs promoted to a full section; slogan fixed
-  ("model is the author, host is the runtime"); Nadella demoted to secondary
+- Review feedback incorporated (2026-07-13, Codex, round 1): abstract reframed from
+  assertion to position; contributions narrowed to artifact + evaluation; evaluation
+  protocol added (E1–E3); local-first tradeoffs promoted to a full section; slogan
+  fixed ("model is the author, host is the runtime"); Nadella demoted to secondary
   corroboration; premium-dissolve demoted to discussion.
+- Review feedback incorporated (2026-07-13, Codex, round 2 — verdict upgraded to
+  plausible weak/borderline accept): E2 baseline strategy made non-strawman (ablation
+  as the Jelly-class comparison, with explicit justification for why Jelly cannot be
+  operationalized directly; hosted-assistant and codegen tiers); E3 metric made
+  auditable (typed transfer matrix with the file layout as coding scheme + task-replay
+  functional measure, replacing the weighted "X%"); implementation-depth requirements
+  spelled out in §5 (schema language, validation semantics, reconciler model, plugin
+  boundary, architecture figure); E4 formative usability study added.
+- Review feedback incorporated (2026-07-13, Gemini — verdict: execute as planned,
+  strong-accept potential): abstract closing impact sentence added (measured version,
+  not Gemini's "user-sovereign computing" phrasing, to stay consistent with the
+  hedged position framing); semantic-mismatch and runtime-fault handling added to §5
+  implementation depth (re-authoring loop + reconciler error surfacing); E4
+  recruiting criteria specified (no programming, no AI-coding tools, chat-only LLM
+  exposure).
 - Re-run the literature scan immediately before submission.
 - Author-voice pieces to reuse: MANIFEST.md, the assistant-you-nurture essay/deck.
 - Venue candidates: UIST (systems) primary; CHI systems alternate. The economics
