@@ -28,9 +28,25 @@ Abridged from the real `restaurants` collection in the author's workspace
 }
 ```
 
-**Caption:** *A complete application. The schema declares data (typed fields),
-conditional structure (`rating` appears only once `visited` is true), and
+A record the schema governs (one JSON file in `data/restaurants/items/`):
+
+```json
+{
+  "id": "tartine-bakery",
+  "name": "Tartine Bakery",
+  "cuisine": "Bakery",
+  "visited": true,
+  "rating": "★★★★",
+  "notes": "Go early; the morning bun sells out."
+}
+```
+
+**Caption:** *A complete application: the schema (top) and a record it governs
+(bottom). The schema declares data (typed fields), conditional structure
+(`rating` appears — and is accepted — only once `visited` is true), and
 presentation (a model-authored custom view with a declared read-only capability
-set). The host renders, validates, and sandboxes from this declaration; the model
-authored it — and its companion operating manual — from one sentence of
-conversation. Fields abridged; from the authors' own workspace.*
+set). From these declarations the host renders table, kanban, and map views,
+validates writes on the managed path, and sandboxes the view code; the model
+authored both artifacts — and the companion operating manual that guides its own
+future sessions — from one sentence of conversation. Schema abridged; from the
+authors' own workspace (record synthetic).*

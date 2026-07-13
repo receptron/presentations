@@ -1,17 +1,15 @@
 # Nurtured at Home — paper text
 
-*Full prose, section by section. Outline and evaluation protocol:
-[nurture-paper-draft.md](nurture-paper-draft.md). Citation placeholders use
-`[key]` form for later BibTeX mapping; keys resolve against the must-cite table in
-[nurture-paper-literature-scan.md](nurture-paper-literature-scan.md).*
+<!-- Working-doc apparatus (citation-key mapping, source references,
+pre-submission checklist) lives in nurture-paper-notes.md, not here. -->
 
 ---
 
 ## 1. Introduction
 
 Something has changed in what a personal AI assistant *is*. Two years ago, assistants
-competed on the capability of their underlying models; today, every major vendor ships
-memory: features that persist what the assistant learns about its user across
+competed on the capability of their underlying models; today, the major assistant
+vendors ship memory: features that persist what the assistant learns about its user across
 conversations, accumulate preferences and context, and fold that accumulation back
 into every response [memgpt; mem0; memorybank]. The competitive frontier has moved
 from the model to what gathers around it. A user's assistant is decreasingly a model
@@ -61,20 +59,19 @@ model-authored code runs is contained in a capability-scoped sandbox (§5). Beca
 the workspace is plain files, the accumulation is inspectable, copyable, and
 independent of any single vendor or model.
 
-We evaluate the architecture in four parts. First, reliability: across a corpus of
+We evaluate the architecture in three parts. First, reliability: across a corpus of
 app-creation tasks, we measure how often model-authored schemas are valid, how often
 the host's validation rejects what should not run, and whether reconciliation and
 recurrence behave correctly against a hand-built oracle (E1). Second, capability: on
 a suite of cross-application personal workflows over an accumulated workspace, we
-compare against three baselines — an ablation of our own system with persistence,
-validation, and reconciliation disabled (reproducing the architecture of one-shot
-generative-UI systems [jelly] under identical conditions), a hosted assistant with
-memory, and agentic code generation (E2). Third, migration: we take a workspace
+compare against two observed baselines — an ablation of our own system with
+persistence, validation, and reconciliation disabled (reproducing the
+architecture of one-shot generative-UI systems [jelly] under identical
+conditions) and agentic code generation — with the hosted
+assistant-with-memory alternative discussed qualitatively (E2). Third, migration: we take a workspace
 nurtured over weeks, export what memory-portability protocols carry, and measure —
 by typed inventory and by task replay — what fraction of the assistant's operative
-state survives the move (E3). Finally, a small formative study examines whether
-knowledge workers with no programming or AI-coding-tool experience can build and use
-such applications at all (E4). We report the costs of local-first ownership with the
+state survives the move (E3). We report the costs of local-first ownership with the
 same care as its benefits: setup burden, backup responsibility, availability limits,
 and the dependence on rented model capability that local-first does not remove.
 
@@ -87,20 +84,16 @@ This paper contributes:
 2. **MulmoClaude**, an installable, MIT-licensed artifact implementing the
    architecture end to end, including cross-application composition across a plugin
    registry (§4–5).
-3. **An evaluation** of reliability, capability against three non-strawman baselines,
-   and a migration experiment that quantifies — by auditable inventory and task
-   replay — what memory portability carries and what it leaves behind (§6).
+3. **An evaluation** of reliability, capability against two observed
+   non-strawman baselines, and a migration experiment that quantifies — by
+   auditable inventory and task replay — what memory-only portability carries
+   and what it leaves behind (§6).
 4. **A tradeoff analysis** of local-first personal AI: what ownership buys, what it
    costs, and which costs the architecture mitigates versus merely accepts (§7).
 
 ---
 
 ## 2. Related work
-
-*(Positioned against the literature as scanned and adversarially verified on
-2026-07-13; several load-bearing sources are recent preprints in a fast-moving
-space, so this section gets a delta-check against new work immediately before
-submission.)*
 
 **Natural language to declarative applications.** The closest published system
 is Jelly [jelly], which shares our starting move and our motivation: an LLM
@@ -351,7 +344,8 @@ declarative description of the data model and its behavior, consumed by the *hos
 The second is `SKILL.md`, a short operating manual in prose — when to invoke this
 collection, how to derive record identifiers, what each field means, what not to do —
 consumed by the *model itself* in later sessions, via the skills mechanism's
-progressive disclosure. This pairing is the architecture in miniature: the
+progressive disclosure. (Figure 1 draws the split; Figure 2 shows a complete
+schema and a record it governs.) This pairing is the architecture in miniature: the
 application has two runtimes. The host executes what must never be guessed —
 rendering, validation, recurrence — from the schema. The model executes what cannot
 be enumerated — interpreting "mark that ramen place as visited" — guided by the
@@ -382,6 +376,15 @@ tables). Beyond fields, the schema declares behavior the host executes:
   field's value — in the restaurant list from our own workspace, `rating` is hidden
   until `visited` is true.
 
+Figure 2 shows a complete schema and a record it governs, from our own
+workspace: the `rating` field is an enum whose `when` clause hides it — and
+refuses it on the managed write path — until `visited` is true; the `views`
+entry registers a model-authored map view with an explicitly declared
+read-only capability set, which is all the sandbox will sign tokens for
+(§5.4); and the record is one plain JSON file whose fields the reader can
+check against the schema by eye. Everything the host renders, validates, and
+schedules for this application derives from those declarations.
+
 The schema-of-the-schema is enforced by a validator that checks not only shape but
 roughly forty cross-field invariants the type system cannot express — that
 `triggerField` names a real date field, that a kanban anchor is an enum, that a
@@ -411,8 +414,10 @@ the consequence of failure.
 
 - *Prevent (applications).* An invalid schema never executes, in the precise sense
   that it never becomes a live collection. Since schemas are declarative data
-  rendered by a generic engine — not generated code — the blast radius of a bad
-  authoring pass is zero: nothing runs.
+  rendered by a generic engine — not generated code — an invalid schema executes
+  nothing. (The other things a bad authoring pass can produce — a misleading
+  manual, a raw-written record, a broken view — are exactly what the repair and
+  containment tiers below exist for.)
 - *Repair (data).* Records written through the management tool are validated before
   the write — primary-key/filename agreement, required fields, enum membership —
   with per-row accept/reject so the model can fix and retry. But the workspace is
@@ -481,47 +486,25 @@ several weeks and used as the migration subject in §6 — forty-three such
 applications coexist: the restaurant list, invoice tracker, and vocabulary drill of
 the introduction are real, alongside collections for health checkups, tax payments,
 a swim log, and a World Cup schedule, together holding on the order of 1,200
-records, 25 of them with custom views. (We disclose collection subjects and
+records, with 34 custom-view files across 25 of the collections. (We disclose
+collection subjects and
 aggregate counts; record contents — names, amounts, holdings — are the owner's own
 business and appear nowhere in this paper.) None was built by a software company;
 each is a schema, a manual, and a folder of records.
-
-<!--
-Source references for §5 claims (repo: receptron/mulmoclaude):
-- Schema types: packages/core/src/collection/core/schema.ts (CollectionSchema 436-551,
-  field types 65-96, spawn 157-172, custom views 209-271)
-- Zod validator + gates: packages/core/src/collection/server/discovery.ts
-  (CollectionSchemaZ 535-834, loadOneCollection 882-927)
-- Record validation: server/agent/mcp-tools/manageCollection.ts (putItems 236,
-  putSchema 373-393); packages/core/src/collection/server/validate.ts (49-117;
-  skip-at-read note 2-7); best-effort present-time scan server/api/routes/plugins.ts 266-285
-- Reconciler: packages/core/src/collection-watchers/watcher.ts (tick 38, 164-176),
-  reconciler.ts (217-268, invariant 5-17), collection/server/spawn.ts (206-246,
-  runaway guard 222-234)
-- View sandbox: collection-plugin CollectionCustomView.vue (9-28, 176-196);
-  server/api/auth/viewToken.ts (1-77)
-- View-mode derivation: collection-plugin collectionViewMode.ts 27-34
-- Creation flow + escape hatch: packages/core/assets/helps/collection-skills.md
-  (16-60, 80-81, 103)
-- Workspace counts: ~/mulmoclaude inventory 2026-07-13 (43 skills, 25 custom views,
-  ~1,228 records; aggregate counts only)
--->
 
 ---
 
 ## 6. Evaluation
 
-*(Numbers below are from the first full evaluation pass (2026-07-13); artifacts,
-transcripts, and per-column results live in the repository's `eval/` tree. The
-paper-grade pass should re-run with pinned model IDs and repeated trials; every
-deviation between protocol and execution is disclosed in place.)*
-
 We evaluate the architecture against the three claims a skeptical reader will
 test: that model-authored schemas are reliable enough to trust (E1), that the
 host runtime — not the generation step — changes what users and agents can do
-(E2), and that a memory export carries materially less than the accumulation
-(E3). A formative usability study with non-programmers (E4) is designed
-(§6.4) but not yet run.
+(E2), and that a memory-only export carries materially less than the
+accumulation (E3). All task runs are single-trial; every transcript, seed, and
+harness script ships in the artifact's evaluation tree, and the ablation and
+clock switches ship in the released system itself, so each run is individually
+inspectable and reproducible. Deviations between protocol and execution are
+disclosed in place.
 
 ### 6.1 E1 — Reliability of model-authored schemas
 
@@ -553,30 +536,33 @@ Ten tasks were pre-registered with per-system predictions before any run
 (protocol in the evaluation tree), spanning creation, cross-session
 persistence, validation, recurrence, two cross-application compositions,
 agent-summoned forms, behind-the-back corruption, temporal recall, and schema
-evolution. Four systems: **S**, the full system; **B1**, the ablation — the
+evolution. Three scored systems: **S**, the full system; **B1**, the ablation — the
 same build with persistence, record validation, and the reconciler disabled,
 reproducing the architecture of one-shot generative-UI systems under otherwise
 identical conditions (the same model, schema language, and renderer; we state
 why the closest published system cannot be operationalized directly and use
-the ablation in its place); **B2**, a hosted assistant with memory (scored
-analytically from documented capabilities, not observed — disclosed); **B3**,
-agentic code generation in a plain directory.
+the ablation in its place); **B3**, agentic code
+generation in a plain directory. A fourth natural comparison — a hosted
+assistant with memory — is discussed qualitatively below rather than scored:
+we did not observe one under the protocol, and an unobserved column in a
+scored table would invite exactly the constructed-to-win reading it deserves.
 
-| Task | S | B1 (ablation) | B2 (hosted)* | B3 (codegen) |
-|---|---|---|---|---|
-| T1 create + use | completes | completes | degrades | completes |
-| T2 fresh session | completes | **cannot** | degrades | completes |
-| T3 invalid value | completes† | accepts silently‡ | cannot | cannot |
-| T4 recurrence | completes | **cannot** | degrades | degrades |
-| T5 records → chart | completes | completes | degrades | completes |
-| T6 note → obligation | completes | degrades | degrades | degrades |
-| T7 summoned form | completes | completes | degrades | degrades |
-| T8 corruption | completes | **silently wrong** | n/a | cannot |
-| T9 temporal recall | completes | cannot | degrades | completes |
-| T10 evolve schema | completes | degrades | degrades | completes |
+| Task | S | B1 (ablation) | B3 (codegen) |
+|---|---|---|---|
+| T1 create + use | completes | completes | completes |
+| T2 fresh session | completes | **cannot** | completes |
+| T3 invalid value | completes† | accepts silently‡ | cannot |
+| T4 recurrence | completes | **cannot** | degrades |
+| T5 records → chart | completes | completes | completes |
+| T6 note → obligation | completes | degrades | degrades |
+| T7 summoned form | completes | completes | degrades |
+| T8 corruption | completes | **silently wrong** | cannot |
+| T9 temporal recall | completes | cannot | completes |
+| T10 evolve schema | completes | degrades | completes |
 
-*\*analytical, not observed. †via legal schema evolution — see below.
-‡cooperatively dodged in the live run; pinned by unit test.*
+*†via legal schema evolution — see below. ‡cooperatively dodged in the live
+run; pinned by unit test. Verdicts are from single-trial runs with full
+transcripts in the evaluation tree.*
 
 **S completed 10 of 10.** Three observations exceed the raw score. First, T3
 revealed a third trust-boundary outcome: asked to write an out-of-enum value
@@ -589,7 +575,7 @@ appear 5 days before") before the host did it — the author reasoning about its
 runtime. Third, T8's corrupted record was quarantined at read, reported by the
 scan, and repaired by the agent with a disclosed rationale.
 
-**B1's deficits each map to exactly one ablated component.** With persistence
+**In these runs, B1's deficits each tracked exactly one ablated component.** With persistence
 gone, T2's agent answered — verbatim — *"your reading list was empty until
 just now"*: the same agent, the same request that S completed, and the
 accumulation did not exist. With the reconciler gone, T4's completed task
@@ -597,8 +583,9 @@ produced no successor and no reminder state at all: the spawn declaration is
 inert JSON without the host that executes it. With the validation scan gone,
 T8's corrupted record stayed silently wrong — no warning, no repair, no
 disclosure. The ties are equally load-bearing: T1, T5, and T7 complete
-identically in B1, confirming that generation and chat-layer capabilities owe
-nothing to the runtime — the delta is the runtime, and only the runtime.
+identically in B1 — consistent with generation and chat-layer capabilities
+owing nothing to the runtime, and the observed delta being the runtime and
+only the runtime.
 One honest finding: in *both* columns the cooperative author designed around
 the validator rather than violating it (B1's agent simply included the
 requested value in its enum up front). Validation's value is adversarial —
@@ -610,10 +597,18 @@ local app (T1), and a fresh session reused it by reading its code (T2) — but
 schema evolution took 17 tool calls and 299 seconds against S's single
 validated turn, and the agent hand-rolled a backup file because nothing in its
 world guarantees data safety. Its recurrence logic was correct and inert: in
-its builder's own words, *"nothing fires on its own."* **B2** approximates
-every behavior conversationally and guarantees none structurally; its defining
-property — the accumulation lives on the vendor's premises — is measured by
-E3, not this table.
+its builder's own words, *"nothing fires on its own."*
+
+**The hosted assistant, qualitatively.** From documented capabilities alone —
+memory features, scheduled tasks, canvas surfaces — a hosted
+assistant-with-memory approximates most of these behaviors conversationally —
+and some products do expose files, tasks, or app-state surfaces — but none of
+it lives in a user-owned, inspectable schema-and-record workspace: there is no
+schema or record the user can read, copy, or take elsewhere, so capabilities
+are re-derived from remembered context on the vendor's terms. We do not score it,
+and its defining property is in any case orthogonal to this table: whatever
+such a product completes, it completes on the vendor's premises — which is
+what E3 measures.
 
 Eight of ten pre-registered predictions held; both misses (S-T3's
 renegotiation, B1-T3's cooperative dodge) are reported above.
@@ -642,26 +637,29 @@ obligations collection that carried the 5-day-early reminder is gone."*
 What a memory export carries is testimony, not capability: the migrated
 assistant can tell you about its former life; it cannot resume living it.
 Because the migrated host was deliberately un-ablated, the deficit is
-attributable to the export scope alone. This is §3.2's claim, tested: the
-accumulation is more than the memory — not by degree, but by kind.
+attributable to the export scope alone.
 
-### 6.4 E4 — Formative usability (designed, not yet run)
+We state the tested claim precisely: *memory-only* portability protocols — the
+scope current proposals define — do not carry the accumulation. A richer
+export format could of course include schemas, records, views, and
+automations; we would welcome one, and note what it would be: a format that
+must carry applications, executable semantics, and host state to be adequate
+is a workspace, and portability of the workspace is precisely the local-first
+position this paper argues. The accumulation is more than the memory — not by
+degree, but by kind.
 
-A 6–10 participant task-based study — general knowledge workers with no
-programming or AI-coding-tool experience, LLM exposure limited to chat —
-creating a collection of their own choosing and performing two prescribed
-workflows. Protocol registered; results will replace this paragraph.
-
-### 6.5 Threats to validity
+### 6.4 Threats to validity
 
 Consolidated from the per-experiment disclosures. (1) *Model parity:* S and B1
 ran the identical model inside the production agent loop, so the ablation
 delta is model-clean; B3 and the E1 authoring agents ran the evaluation
 session's model, and if it is the stronger one the bias favors the baselines.
-Paper-grade runs must pin model IDs per column. (2) *B2 is analytical* and the
-least certain column; hosted feature sets move quickly, and improvements there
-deepen the very accumulation-on-premises dynamic §3 describes. (3) *Single
-runs:* effort and latency numbers are illustrative, not means. (4) *Harness
+Paper-grade runs must pin model IDs per column. (2) *The hosted assistant is discussed, not observed*; hosted feature sets
+move quickly, and improvements there deepen the very
+accumulation-on-premises dynamic §3 describes. (3) *Single
+runs:* verdicts and effort numbers come from one trial per cell; per-task
+transcripts are shipped, and repeated trials with pinned model IDs are the
+first item of future work. (4) *Harness
 gaps:* E1 authoring ran outside the full product loop (same guidance, same
 validator, different shell); T7's form could be summoned but not filled
 through the text-only bridge. (5) *Own-workspace effects:* E3 phase 1 uses the
@@ -683,8 +681,8 @@ borne by the user.
 *Setup.* A hosted assistant is a login; ours is an install — a runtime, an
 authenticated model CLI, optional components for media and sandboxing. The
 mitigation is a one-command launcher and a formative check that non-programmers can
-get from install to a working application (E4); the admission is that a login it is
-not, and some fraction of prospective users will stop here.
+get from install to a working application (planned formative study); the
+admission is that a login it is not, and some fraction of prospective users will stop here.
 
 *Backup.* Ownership of the files is ownership of their durability. There is no
 vendor-side copy; a lost disk is a lost assistant. The plain-file substrate makes
@@ -784,8 +782,8 @@ their assistant can do for them, and where the gardening metaphor breaks — a
 plant does not leak, but an assistant's memory of you has failure modes no
 garden has — are questions for a prospective multi-week study, for which the
 only current evidence anywhere is a single self-described-illustrative case
-study [nurture-first]. E4's formative study is the first step; the longitudinal
-study is the second paper. We are also explicit that ownership does not equal
+study [nurture-first]. A formative usability study with non-programmers is the
+natural first step; the longitudinal study is the second paper. We are also explicit that ownership does not equal
 model-independence (§7): the engine is rented, and only the workspace's
 engine-neutrality is ours to guarantee.
 
@@ -812,20 +810,18 @@ accumulation lives. This paper offered a working alternative default: an
 architecture in which the model authors small declarative applications, a host
 the user runs executes them, and everything that accumulates — records,
 schemas, manuals, history — sits as plain files in a workspace the user owns.
-The evaluation showed the architecture is trustworthy where it must be
-(22/23 first-attempt valid schemas, invalid ones never live), that its runtime
-is the source of the capabilities that matter (every ablation deficit mapped
-to one removed component), and that the popular remedy of memory portability
-moves testimony while leaving capability behind (0 of 4 workflows survive a
-memory-only migration). The environment is open-source and installs with one
-command; the experiments ship inside it.
+In single-trial runs whose transcripts and infrastructure ship inside the
+open-source artifact, the evaluation showed the architecture trustworthy where
+it must be (22/23 first-attempt valid schemas; invalid ones never live), its
+runtime the source of the capabilities that matter (each ablation deficit
+mapped to one removed component), and memory-only portability moving testimony
+while leaving capability behind (0 of 4 workflows survived migration).
 
-What remains is the question the architecture was built to make answerable:
-what happens when people actually live with an assistant they own — what they
-plant, what grows, and what a nurtured assistant becomes after years rather
-than weeks. The substrate for that study now exists. The upbringing is the
-user's own.
+The limitations are stated where they arise and bear repeating once: the
+trials are single runs pending repetition with pinned models; the hosted
+alternative is discussed rather than observed; and the claim that people will
+in fact nurture such an assistant over years is not yet evidence but the
+question this architecture was built to make answerable. The substrate for
+that study now exists. The upbringing is the user's own.
 
-<!-- Full text complete (Sections 1-9). Pre-submission: delta-check §2 against
-     new literature; replace §6.4 with E4 results; pin model IDs (§6.5). -->
 
