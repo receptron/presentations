@@ -28,9 +28,12 @@ argue, should be nurtured at home — grown in an environment the user owns.
 We present MulmoClaude, an open-source system that instantiates this position through
 a schema-as-application architecture: the user describes what they need in natural
 language; the model authors a small declarative schema; and a host runtime — not the
-model — renders the interface, validates every record, and runs reconciliation and
-recurrence over a plain-file workspace on the user's own machine. The model authors
-the application; the host runs it; the records endure. We evaluate the architecture
+model — renders the interface, enforces the schema at its write interfaces and
+reconciliation loop, and runs recurrence over a plain-file workspace on the user's
+own machine. The model authors the application; the host runs it; the records endure.
+Enforcement is tiered by consequence: invalid applications are prevented, invalid
+data is quarantined and reported for repair, model-authored view code is contained
+in a capability-scoped sandbox. We evaluate the architecture
 three ways: (i) reliability — schema-generation validity and host-side rejection rates
 across a corpus of app-creation tasks; (ii) capability — cross-application workflows
 over accumulated personal data that neither memory export nor one-shot UI generation
@@ -137,9 +140,13 @@ Positioning strategy per the literature scan — cite early, differentiate expli
     consumes vs. what the host implements.
   - Architecture figure: model-author / host-runtime split with the trust boundary
     drawn explicitly.
-- Trust boundary: everything the model authors is validated before it runs; views,
-  reconciler, and recurrence are engine code that never guesses. Invalid applications
-  never execute.
+- Trust boundary, corrected to what the code guarantees (§5.4 of the text —
+  "prevent, repair, contain"): invalid *schemas* never become live collections
+  (hard-gated at discovery and managed edit); *records* are validated pre-write only
+  on the managed tool path, while the documented raw-file escape hatch is
+  quarantined-at-read plus best-effort validation reporting back to the model;
+  custom-view *code* is unvalidated but sandboxed (opaque-origin iframe, scoped
+  signed capability tokens). Do not claim "validates every record."
 - Honest persistence description: plain-file workspace; append-only islands (chat
   transcripts, accounting journal with compensating entries, wiki snapshot history)
   vs. mutable subsystems — why correctness-critical subsystems independently
@@ -238,8 +245,23 @@ long-term user behavior or adoption are made.
   study (what people build, whether accumulation measurably changes capability, where
   the metaphor breaks) — explicitly future work, citing the n=1 Nurture-First case
   study as the current state of evidence.
-- Generalization: which parts are MulmoClaude-specific vs. portable design patterns
-  for any local-first agent host.
+- Generalization as an explicit design space (per author observation, 2026-07-13):
+  the paper's principles (model authors the schema; host is the runtime; accumulation
+  local, exportable, vendor-independent; enforcement tiered by consequence) are
+  invariant across two orthogonal implementation axes MulmoClaude merely picks a
+  corner of —
+  - *Access mediation*: direct file manipulation by the LLM (today's escape hatch)
+    ↔ fully mediated validated API (closes the repair tier into prevent; costs the
+    agent its generic file-tool legibility). Both paths already coexist in the
+    artifact, so mediation is demonstrably policy, not architecture.
+  - *Storage substrate*: plain files ↔ embedded relational DB (e.g. SQLite in the
+    workspace: faster/relational queries, transactions; ownership intact since the
+    DB file is still local and copyable; costs git-diffability, human readability,
+    agent grep-ability).
+  - Justify the plain-files + direct-access corner as sufficiency at personal scale
+    (~10³ records need no indexes; legibility to user and model dominates), and state
+    plainly that the principles do not require the corner — pre-empting the
+    "files won't scale" review.
 
 ### 9. Conclusion
 
