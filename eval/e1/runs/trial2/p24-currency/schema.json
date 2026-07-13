@@ -1,0 +1,15 @@
+{
+  "title": "フリーランス収入記録",
+  "icon": "payments",
+  "dataPath": "data/freelance-income/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "client": { "type": "string", "label": "クライアント名", "required": true },
+    "amount": { "type": "money", "label": "金額（円）", "currency": "JPY", "required": true },
+    "receivedOn": { "type": "date", "label": "受領日", "required": true },
+    "withholding": { "type": "boolean", "label": "源泉徴収あり" }
+  },
+  "displayField": "client",
+  "calendarField": "receivedOn"
+}

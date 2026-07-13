@@ -1,0 +1,19 @@
+{
+  "title": "学校行事",
+  "icon": "school",
+  "dataPath": "data/school-events/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "name": { "type": "string", "label": "行事名", "required": true },
+    "date": { "type": "date", "label": "日付", "required": true },
+    "preparation": { "type": "text", "label": "準備するもの" },
+    "status": { "type": "enum", "label": "状態", "values": ["未準備", "準備中", "完了"], "required": true },
+    "done": { "type": "toggle", "label": "準備完了", "field": "status", "onValue": "完了", "offValue": "未準備" }
+  },
+  "displayField": "name",
+  "kanbanField": "status",
+  "calendarField": "date",
+  "completionField": "status",
+  "completionDoneValues": ["完了"]
+}

@@ -531,20 +531,26 @@ production authoring guide, and validated every result with the production
 validator itself — the same Zod schema and acceptance gates that gate discovery
 at runtime.
 
-Of 24 prompts, one (a request for a poem) was correctly declined. Of the 23
-authored schemas, **22 were valid on first attempt (95.7%), and 23 of 23 after
-one feedback retry**. The single failure is the most informative datum: the
-deliberately overspecified prompt placed a `file` field inside a `table`
-sub-schema — an invariant no author would guess — and the validator rejected it
-with a path-precise error; given that error verbatim, the model repaired the
-schema in one attempt. This is §5.4's prevent-report-repair loop, observed.
+We ran the corpus three times with independent agents under an identical
+harness. The trials agree exactly: in each, the poem request was correctly
+declined and 22 of 23 authored schemas were valid on first attempt — **66 of 69
+across trials (95.7%), with zero per-trial variance**. Per-prompt outcomes are
+bimodal rather than noisy: 23 of 24 prompts succeeded in all three trials, and
+the one failure — the deliberately overspecified prompt placing a `file` field
+inside a `table` sub-schema, an invariant no author would guess — failed in all
+three, on the same path each time. The failure is a property of the
+prompt–language pair, not sampling luck. Given the validator's path-precise
+error verbatim, the model repaired the schema in one attempt in all three
+trials. This is §5.4's prevent-report-repair loop, observed — repeatedly.
 Semantic fidelity on the hard features was high and unprompted: the medication
 prompt received its 30-day spawn-on-completion; the chores prompt used the
 field-driven spawn variant with a frequency map — the schema language's most
 obscure feature — correctly; both relational prompts declared cross-collection
 references. One honest negative: the vague prompt ("organize my life") yielded
-a valid but questionable generic schema rather than a clarifying question,
-partly an artifact of the harness's one-shot format.
+a valid but questionable generic schema rather than a clarifying question — in
+all three trials, so the miss is systematic rather than sampled; partly an
+artifact of the harness's one-shot format, and a prompt-guidance fix rather
+than a sampling one.
 
 ### 6.2 E2 — Does the runtime change what users can do?
 
@@ -672,10 +678,10 @@ delta is model-clean; B3 and the E1 authoring agents ran the evaluation
 session's model, and if it is the stronger one the bias favors the baselines.
 Paper-grade runs must pin model IDs per column. (2) *The hosted assistant is discussed, not observed*; hosted feature sets
 move quickly, and improvements there deepen the very
-accumulation-on-premises dynamic §3 describes. (3) *Single
-runs:* verdicts and effort numbers come from one trial per cell; per-task
-transcripts are shipped, and repeated trials with pinned model IDs are the
-first item of future work. (4) *Harness
+accumulation-on-premises dynamic §3 describes. (3) *Trial counts:* E1 was run as three independent trials per prompt (zero
+observed variance); the E2 task cells remain single-trial with per-task
+transcripts shipped, and repeating them with pinned model IDs is the first
+item of future work. (4) *Harness
 gaps:* E1 authoring ran outside the full product loop (same guidance, same
 validator, different shell); T7's form could be summoned but not filled
 through the text-only bridge. (5) *Own-workspace effects:* E3 phase 1 uses the

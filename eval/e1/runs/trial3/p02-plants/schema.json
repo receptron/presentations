@@ -1,0 +1,14 @@
+{
+  "title": "Houseplants",
+  "icon": "potted_plant",
+  "dataPath": "data/houseplants/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "name": { "type": "string", "label": "Name", "required": true },
+    "location": { "type": "string", "label": "Location", "required": true },
+    "lastWatered": { "type": "date", "label": "Last watered" }
+  },
+  "displayField": "name",
+  "calendarField": "lastWatered"
+}

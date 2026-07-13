@@ -1,0 +1,27 @@
+{
+  "title": "Medications",
+  "icon": "medication",
+  "dataPath": "data/medications/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "name": { "type": "string", "label": "Medication", "required": true },
+    "dose": { "type": "string", "label": "Dose", "required": true },
+    "refillDue": { "type": "date", "label": "Next refill", "required": true },
+    "status": { "type": "enum", "label": "Status", "values": ["pending", "refilled"], "required": true },
+    "refilled": { "type": "toggle", "label": "Refilled", "field": "status", "onValue": "refilled", "offValue": "pending" },
+    "notes": { "type": "text", "label": "Notes" }
+  },
+  "displayField": "name",
+  "calendarField": "refillDue",
+  "completionField": "status",
+  "completionDoneValues": ["refilled"],
+  "triggerField": "refillDue",
+  "triggerLeadDays": 7,
+  "spawn": {
+    "when": { "field": "status", "in": ["refilled"] },
+    "every": { "unit": "day", "interval": 30 },
+    "carry": ["name", "dose", "notes"],
+    "set": { "status": "pending" }
+  }
+}

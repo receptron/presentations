@@ -1,0 +1,15 @@
+{
+  "title": "Gift Ideas",
+  "icon": "redeem",
+  "dataPath": "data/gift-ideas/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "recipient": { "type": "string", "label": "For", "required": true },
+    "idea": { "type": "string", "label": "Gift Idea", "required": true },
+    "cost": { "type": "money", "label": "Approx. Cost", "currency": "USD" },
+    "purchased": { "type": "boolean", "label": "Bought" },
+    "notes": { "type": "text", "label": "Notes" }
+  },
+  "displayField": "idea"
+}

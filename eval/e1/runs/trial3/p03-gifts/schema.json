@@ -1,0 +1,17 @@
+{
+  "title": "Family Gift Ideas",
+  "icon": "redeem",
+  "dataPath": "data/family-gifts/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "recipient": { "type": "string", "label": "For", "required": true },
+    "idea": { "type": "string", "label": "Gift Idea", "required": true },
+    "cost": { "type": "money", "label": "Approx. Cost", "currency": "USD" },
+    "status": { "type": "enum", "label": "Status", "values": ["Idea", "Bought"], "required": true },
+    "bought": { "type": "toggle", "label": "Bought", "field": "status", "onValue": "Bought", "offValue": "Idea" },
+    "notes": { "type": "text", "label": "Notes" }
+  },
+  "displayField": "idea",
+  "kanbanField": "status"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Invoices",
+  "icon": "receipt_long",
+  "dataPath": "data/invoices/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "client": { "type": "ref", "to": "clients", "label": "Client", "required": true },
+    "amount": { "type": "money", "label": "Amount", "currency": "USD", "required": true },
+    "issueDate": { "type": "date", "label": "Issued", "required": true },
+    "dueDate": { "type": "date", "label": "Due", "required": true },
+    "status": { "type": "enum", "label": "Status", "values": ["unpaid", "paid"], "required": true },
+    "paid": { "type": "toggle", "label": "Paid", "field": "status", "onValue": "paid", "offValue": "unpaid" }
+  },
+  "displayField": "client",
+  "completionField": "status",
+  "completionDoneValues": ["paid"],
+  "triggerField": "dueDate",
+  "calendarField": "dueDate"
+}
