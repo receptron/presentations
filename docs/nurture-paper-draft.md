@@ -77,9 +77,24 @@ Positioning strategy per the literature scan — cite early, differentiate expli
   articulation and the composition-over-owned-accumulation combination.
 - **Agent substrates.** The Log is the Agent (2605.21997) — event-sourced runtime
   layer; complementary, cited for auditability/forkability directions.
+- **Accumulation economics.** Nadella's "Reverse Information Paradox" (X, Jul 2026) —
+  the enterprise counterpart and strongest mainstream validation: the buyer of
+  intelligence pays twice (money + the proprietary knowledge revealed to use it);
+  one-directional learning converges value to the owners of learning infrastructure.
+  Differentiate on scale (enterprise → personal), mechanism (his *leakage* of exhaust
+  vs. our *captivity* of the accumulation), and remedy (his tenant boundary inside a
+  vendor cloud answers leakage but not captivity; ownership answers both).
 
 ### 3. The argument: accumulation, lock-in, home
 
+- Anchor the economics canonically: Arrow's Information Paradox (1962) — the seller
+  risks giving knowledge away to sell it — and its AI-age inversion (Nadella 2026):
+  the buyer gives knowledge away to use what they bought. Hayek (1945) grounds what
+  accumulates: the knowledge of time, place, and circumstance that only the user holds.
+- Two failure modes of hosted accumulation, treated separately: *leakage* (interaction
+  exhaust trains the provider; asymmetric learning) and *captivity* (the accumulation
+  is held on the premises; switching costs compound). Portability protocols address
+  neither fully; tenant boundaries address leakage only; ownership addresses both.
 - Formalize the compounding: switching cost as a function of accumulated interactions,
   apps, and schemas; contrast with classic data-gravity/switching-cost literature.
 - Why portability protocols under-remedy: enumerate what a memory export carries vs.
