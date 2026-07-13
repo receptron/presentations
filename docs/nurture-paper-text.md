@@ -95,6 +95,107 @@ This paper contributes:
 
 ---
 
+## 2. Related work
+
+*(Positioned against the literature as scanned and adversarially verified on
+2026-07-13; several load-bearing sources are recent preprints in a fast-moving
+space, so this section gets a delta-check against new work immediately before
+submission.)*
+
+**Natural language to declarative applications.** The closest published system
+is Jelly [jelly], which shares our starting move and our motivation: an LLM
+interprets the user's prompt into a declarative data model, a rule-based host
+engine renders the interface from it, and — the argument we inherit gladly —
+direct code generation is rejected because generated code resists iterative
+re-tailoring by end users. Where we part is everything after rendering: Jelly
+was evaluated on generated data in single lab sessions, with persistence,
+external data, and context preservation deferred. Our contribution begins at
+that deferral — record validation, reconciliation, and recurrence executed by
+the host over a persistent, user-owned store — and our E2 ablation is designed
+to measure exactly that delta, by disabling those components inside our own
+system rather than reimplementing Jelly (§6.2). The declarative lineage is
+older and broader: Varv [varv] treats behavior as reprogrammable declarative
+data; Potluck [potluck] has AI draft declarative rules over personal notes;
+GenerativeGUI [generative-gui] and Generative UI [generative-ui] generate
+interfaces dynamically in chat; Software as Content [software-as-content]
+argues that dynamically generated applications should be the primary
+human-agent medium. We take from this line the conviction that the precise
+artifact, not the code, is the application — and add the runtime that makes
+the artifact durable, and the ownership argument for where it should live.
+
+**Memory as the assistant's substrate.** That an assistant's value lies in
+persistent memory rather than raw model capability is now established
+engineering doctrine: MemGPT [memgpt], MemoryBank [memorybank], and Mem0
+[mem0] build the machinery, and hosted assistants ship it as product. This
+literature establishes accumulation-as-mechanism and is silent on
+accumulation-as-property: none of it discusses who owns the store, what
+leaving costs, or what happens to the applications that grow around it. We
+also note, with [recentering-humans], that the payoff of accumulated
+personalization is empirically contested — humans preferred personalized
+responses in barely half of judged cases — which in our reading raises rather
+than lowers the stakes of the ownership question (§3.3).
+
+**Portability as the remedy.** Portable Agent Memory [portable-agent-memory]
+states our problem verbatim — accumulated agent context "remains locked within
+vendor-specific runtimes" — and answers with an open export protocol; SAMEP
+[samep] is a second independent proposal. We share the diagnosis and test the
+remedy: E3 migrates a workspace through exactly the layer these protocols
+carry and finds that zero of four workflows survive — the accumulation is more
+than the memory, by kind rather than degree (§6.3). Our answer is ownership of
+the environment, not portability of one stratum.
+
+**Nurturing, and the people already doing it.** The cultivation metaphor has
+been claimed: Nurture-First [nurture-first] argues that a domain-expert agent
+is "born with minimal scaffolding and then raised through sustained
+interaction," with a single-user case study as evidence. We ask the question
+that framing leaves open — *where* the raising happens, and who owns the
+upbringing — and we broaden the subject from domain expertise to a person's
+life. On the empirical side, CSCW work on long-term companionship
+[digital-companionship] documents users who already believe they cultivate
+their assistants and who keep backups and refuse deletion; that behavior is
+analyzed there as attachment, never as switching cost — a reframing this
+paper's §3 supplies.
+
+**Malleable software and local-first computing.** Our apps-for-one framing
+descends from the malleable-software line [malleable-software; home-cooked-app]
+and the local-first tradition [local-first], and we happily concede the
+lineage. The deltas: malleable software's LLM path is code generation inside a
+malleable environment, and its tools are composed by people — the essay is
+explicitly skeptical of AI orchestration — where our applications are
+model-authored declarations composed by an agent; and local-first's argument
+is agency and ownership as values, where ours is switching-cost economics
+(§3), for which local-first happens to be the remedy. The local-first
+literature's decade of sync results is also the most credible path through
+our multi-device limitation (§7).
+
+**Agent–GUI protocols.** The contract between an agent and interactive
+surfaces is a crowded, fast-moving space: MCP Apps [mcp-apps], AG-UI [ag-ui],
+A2UI [a2ui], and vendor app SDKs all define variants of tool-results-that-
+mount-as-UI. We claim no novelty at this layer (§4): our published protocol is
+the artifact's implementation choice, and the commitments it serves —
+composition across a registry, over an accumulation the user owns — are where
+this paper's claims live.
+
+**Economics of information and switching costs.** The argument of §3 is
+assembled from canonical parts: Arrow's information paradox [arrow-1962],
+Hayek's knowledge of particular circumstance [hayek-1945], and the
+switching-cost literature [klemperer; shapiro-varian]. Its AI-age inversion —
+the buyer of intelligence pays twice, once in money and once in disclosed
+knowledge — has recent practitioner articulation at enterprise scale
+[nadella-rip], to which §3.2 adds the leakage/captivity distinction and the
+personal-scale, local-first conclusion; the practitioner unbundling
+literature [saas-unbundling] supplies the industry context for §8.3.
+
+**Agent substrates.** Complementary to all of the above, event-sourced agent
+runtimes [log-is-the-agent] locate an agent's identity in its append-only
+history and derive auditability and forkability from that inversion. Our
+workspace is file-per-entity rather than event-sourced, with append-only
+islands where correctness demands them (§5.6); the substrate question — what
+the accumulation should be made of — is orthogonal to, and composable with,
+the ownership question this paper argues.
+
+---
+
 ## 3. Motivation: accumulation, lock-in, home
 
 *(Position section — argues a design stance; makes no empirical claim beyond the
@@ -725,5 +826,6 @@ plant, what grows, and what a nurtured assistant becomes after years rather
 than weeks. The substrate for that study now exists. The upbringing is the
 user's own.
 
-<!-- Section 2 (Related work) awaits the pre-submission literature re-scan. -->
+<!-- Full text complete (Sections 1-9). Pre-submission: delta-check §2 against
+     new literature; replace §6.4 with E4 results; pin model IDs (§6.5). -->
 
