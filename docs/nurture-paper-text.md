@@ -189,6 +189,53 @@ where the compounding asset compounds for its owner.
 
 ---
 
+## 4. Design commitments
+
+MulmoClaude is built on four commitments. They are separable — any one can be
+adopted alone — but they reinforce one another, and the fourth is the one the other
+three exist to serve.
+
+**The agent is a universal controller.** We place the model in the architecture as
+a controller in the MVC sense: it takes input — natural language — and decides
+which capability to invoke, in what order, with what arguments. Crucially, it
+*joins* the existing controller layer rather than replacing it. Every capability in
+the system is reachable two ways: through a conventional UI with routes, forms, and
+buttons, and through the agent — neither path privileged. What distinguishes this
+controller from a classical one is its scope: it does not belong to one
+application. It composes across a registry of plugins that in any other product
+would be separate applications, so cross-application work — read the ledger, write
+the chart; read the wiki agreement, create the recurring obligation — is not an
+integration feature but the default mode of operation. A second capability falls
+out for free: because the controller's input is multi-modal, any plugin that
+accepts natural language inherits image and audio input without integration code —
+a photographed receipt reaches the same accounting API a typed entry would.
+
+**Chat summons GUIs.** The interface is multi-modal in both directions. The agent's
+reply is a choice among formats — prose, a chart, a document, a rendered collection
+view — selected to fit the content; and what the agent *asks for* is equally a
+choice: when six structured fields are needed, it presents a form rather than
+extracting them from conversational back-and-forth. The GUI is not "the app"; it is
+what the agent renders when text is the wrong modality, in either direction.
+
+**The protocol is open.** The contract between agent and GUI surface cannot be a
+private API, or the previous two commitments collapse into a monolith with a
+chatbox. MulmoClaude builds on the open tool-call and MCP layers and extends them,
+through a small published protocol, to cover the case those layers do not: a tool
+result that mounts as an interactive surface and must call back into its host. We
+make no novelty claim for this layer — several such protocols now exist
+[mcp-apps; ag-ui; a2ui] — and treat ours as the artifact's implementation choice.
+
+**The accumulation belongs to the user.** Everything the assistant accrues —
+records, schemas, manuals, documents, history — lives as plain files in a workspace
+on the user's machine, with no server-side database (§5, §3.4). The first three
+commitments describe how the software works; this one decides whom it works *for*.
+A universal controller composing over an accumulation someone else owns is a better
+service. The same controller over an accumulation the user owns is an assistant
+being nurtured — and the difference between those two sentences is the subject of
+this paper.
+
+---
+
 ## 5. Architecture: schema as application
 
 *(Implementation facts verified against the MulmoClaude source tree, 2026-07-13;
@@ -357,4 +404,61 @@ Source references for §5 claims (repo: receptron/mulmoclaude):
   ~1,228 records; aggregate counts only)
 -->
 
-<!-- Sections 2–4 and 6–9 follow; see nurture-paper-draft.md for the outline. -->
+---
+
+## 7. The costs of home
+
+The case for ownership would be suspect if it arrived free. It does not, and a
+system paper that argues local-first as engineering rather than ideology owes its
+readers the bill. We enumerate what home costs, and for each item state either the
+mitigation the artifact ships or the plain admission that the cost is currently
+borne by the user.
+
+*Setup.* A hosted assistant is a login; ours is an install — a runtime, an
+authenticated model CLI, optional components for media and sandboxing. The
+mitigation is a one-command launcher and a formative check that non-programmers can
+get from install to a working application (E4); the admission is that a login it is
+not, and some fraction of prospective users will stop here.
+
+*Backup.* Ownership of the files is ownership of their durability. There is no
+vendor-side copy; a lost disk is a lost assistant. The plain-file substrate makes
+mitigation easy — the workspace is a directory, so any file-level backup or sync
+tool covers it, and the workspace is initialized as a git repository — but the
+system does not yet automate this, and an assistant into which a user pours years
+deserves automated, verified backup. We flag this as the most consequential
+unmitigated cost.
+
+*Availability and sync.* The assistant lives on one machine. Relay-only remote
+access restores reach — a phone or messaging bridge converses with the assistant at
+home — but if the machine sleeps, the assistant sleeps, and there is no multi-device
+replica of the workspace. Mitigations exist at the edges (mobile-targeted views with
+default-deny write scopes); the general multi-device problem is real, is the
+strongest argument for the hosted alternative, and is honestly out of scope here —
+though we note the local-first literature has spent a decade on exactly this
+[local-first], and its results apply to a plain-file workspace unusually well.
+
+*Security.* A local server with an agent that reads and writes files is attack
+surface that a hosted product would carry for you. The artifact's postures —
+capability-scoped signed tokens for view code, opaque-origin sandboxing, a relay
+that stores nothing — cover the paths this paper describes, but a full audit is
+beyond its scope, and we do not claim otherwise.
+
+*Model dependence.* The deepest honesty: local-first is not model-independence. The
+intelligence is rented from the same few providers a hosted assistant would use,
+with their pricing, terms, and availability. What ownership changes is what happens
+at the boundary: the workspace — records, schemas, manuals — is engine-neutral by
+construction, so swapping the model changes who animates the accumulation, not the
+accumulation itself. The veteran capability stays; the generalist is replaceable.
+We state this as an architectural property; benchmarking assistant quality across
+engine swaps is future work.
+
+*Adoption.* Everything above compounds into a gap between the users who could
+benefit most and those who can install a local server today. We do not minimize
+this. The paper's claim is not that home is where every user will live in 2026; it
+is that home must *exist* as a viable corner of the design space, open-source and
+demonstrated, so that the arrangement is chosen rather than defaulted into — and so
+that the packaging work that closes the gap has something worth packaging.
+
+<!-- Sections 2, 6, 8–9 follow; see nurture-paper-draft.md for the outline.
+     Section 6 (Evaluation) is blocked on running E1–E4. -->
+

@@ -269,6 +269,30 @@ long-term user behavior or adoption are made.
   is being decided by defaults; this paper contributes a working alternative default
   and evidence about what it can and cannot do.
 
+## Figure plan
+
+Figures are producible in-repo: diagrams authored as MulmoScript `html_tailwind`
+beats and rendered with `mulmo images -g` (source + PNG in `docs/figures/`);
+screenshots from `resources/images/` (verify no sensitive personal data before use).
+
+1. **Fig. 1 — Architecture** (done, `docs/figures/fig1-architecture.{json,png}`):
+   model (author) → workspace (two artifacts + records + views) → validation gate →
+   host (runtime), with the prevent/repair/contain tiers. Anchors §5.1/§5.4.
+2. **Fig. 2 — A complete schema** (listing, not image): the restaurants
+   `schema.json`, abridged, showing conditional visibility and view declarations.
+   Anchors §5.2.
+3. **Fig. 3 — One accumulation, two doorways** (screenshot pair):
+   `resources/images/apps/restaurants.png` (LLM-authored custom map view over 27
+   real records, desktop) + `resources/images/remote/restaurants.png` (same
+   collection via relay on a phone). Anchors §3.4 (relay-only) and §5.5 (sandboxed
+   custom views). Screenshots show restaurant names/photos only — confirm OK to
+   publish.
+4. **Fig. 4 — E3 transfer matrix** (table/heatmap, after the experiment runs):
+   artifact types × carried/degraded/lost.
+5. **Candidates from `resources/images/apps/`** for a "breadth" strip in §5.6:
+   calendar, portfolio, recipes, SpaceX schedule, World Cup — real apps-for-one from
+   the dogfooded workspace.
+
 ## Notes
 
 - Review feedback incorporated (2026-07-13, Codex, round 1): abstract reframed from

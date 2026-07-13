@@ -1,0 +1,75 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "title": "Figure 1: Schema-as-application architecture",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-white text-gray-900 p-10 font-sans flex flex-col'>",
+          "  <div class='text-center text-lg font-semibold mb-6'>Schema as application: two artifacts, two runtimes</div>",
+          "  <div class='flex-1 flex items-stretch gap-0'>",
+          "    <div class='w-[26%] flex flex-col justify-center'>",
+          "      <div class='border-2 border-gray-800 rounded-xl p-4'>",
+          "        <div class='font-bold text-base mb-1'>MODEL <span class='font-normal text-sm text-gray-500'>(author)</span></div>",
+          "        <ul class='text-xs leading-5 list-disc ml-4'>",
+          "          <li>interprets intent</li>",
+          "          <li>authors schema + manual</li>",
+          "          <li>writes / repairs records</li>",
+          "          <li>guided by SKILL.md written by its earlier self</li>",
+          "        </ul>",
+          "      </div>",
+          "      <div class='text-center text-xs text-gray-500 mt-3'>executes what cannot be enumerated</div>",
+          "    </div>",
+          "    <div class='w-[10%] flex flex-col justify-center items-center'>",
+          "      <div class='text-2xl'>&#8594;</div>",
+          "      <div class='text-[10px] text-gray-500 text-center'>authors<br/>(file writes)</div>",
+          "    </div>",
+          "    <div class='w-[28%] flex flex-col justify-center'>",
+          "      <div class='border-2 border-gray-800 rounded-xl p-4 bg-gray-50'>",
+          "        <div class='font-bold text-base mb-1'>WORKSPACE <span class='font-normal text-sm text-gray-500'>(user-owned, plain files)</span></div>",
+          "        <div class='text-xs border border-gray-400 rounded-md px-2 py-1 mb-1 bg-white'><span class='font-mono'>schema.json</span> — the application (host-facing)</div>",
+          "        <div class='text-xs border border-gray-400 rounded-md px-2 py-1 mb-1 bg-white'><span class='font-mono'>SKILL.md</span> — operating manual (model-facing)</div>",
+          "        <div class='text-xs border border-gray-400 rounded-md px-2 py-1 mb-1 bg-white'><span class='font-mono'>items/*.json</span> — the records (data)</div>",
+          "        <div class='text-xs border border-gray-400 rounded-md px-2 py-1 bg-white'><span class='font-mono'>views/*.html</span> — custom views (sandboxed code)</div>",
+          "      </div>",
+          "      <div class='text-center text-xs text-gray-500 mt-3'>the accumulation — copyable, inspectable, engine-neutral</div>",
+          "    </div>",
+          "    <div class='w-[10%] flex flex-col justify-center items-center relative'>",
+          "      <div class='absolute inset-y-10 left-1/2 border-l-2 border-dashed border-red-500'></div>",
+          "      <div class='relative bg-white px-1 text-[10px] text-red-600 font-semibold text-center mb-2'>validation<br/>gate</div>",
+          "      <div class='relative bg-white text-2xl'>&#8594;</div>",
+          "      <div class='relative bg-white px-1 text-[10px] text-gray-500 text-center'>discover +<br/>validate</div>",
+          "    </div>",
+          "    <div class='w-[26%] flex flex-col justify-center'>",
+          "      <div class='border-2 border-gray-800 rounded-xl p-4'>",
+          "        <div class='font-bold text-base mb-1'>HOST <span class='font-normal text-sm text-gray-500'>(runtime)</span></div>",
+          "        <ul class='text-xs leading-5 list-disc ml-4'>",
+          "          <li>renders table / kanban / calendar from schema</li>",
+          "          <li>validates managed writes</li>",
+          "          <li>reconciles: reminders, recurrence (convergent)</li>",
+          "          <li>sandboxes view code (scoped capability tokens)</li>",
+          "        </ul>",
+          "      </div>",
+          "      <div class='text-center text-xs text-gray-500 mt-3'>executes what must never be guessed</div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='mt-6 flex justify-center gap-4 text-xs'>",
+          "    <div class='border border-gray-700 rounded-full px-4 py-1'><b>prevent</b> — invalid schema never goes live</div>",
+          "    <div class='border border-gray-700 rounded-full px-4 py-1'><b>repair</b> — invalid data quarantined + reported</div>",
+          "    <div class='border border-gray-700 rounded-full px-4 py-1'><b>contain</b> — view code runs sandboxed</div>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
