@@ -37,6 +37,8 @@ over accumulated personal data that neither memory export nor one-shot UI genera
 supports; and (iii) a migration experiment quantifying what a memory export carries
 versus what the workspace contains. We report the costs of local-first ownership
 alongside its benefits, and outline the longitudinal questions the system opens.
+The result is a working architectural blueprint — and an evidence base — for
+personal AI whose accumulation remains with the person it describes.
 
 ## Section outline
 
@@ -121,6 +123,13 @@ Positioning strategy per the literature scan — cite early, differentiate expli
   - *Validation semantics*: what is checked, when (authoring time vs. record write),
     how errors surface to the agent and to the user, and the guarantee: an invalid
     application never executes.
+  - *Beyond static validity — semantic mismatch and runtime faults*: static
+    validation cannot catch a schema that is grammatically valid but contradicts the
+    user's intent; the architecture's answer is the cheap re-authoring loop (the user
+    says the sentence again; the schema is disposable, the records endure) plus
+    runtime error surfacing — data contradictions detected by the reconciler are
+    raised through defined channels to both the agent (for self-correction) and the
+    user (for judgment), never silently absorbed.
   - *Reconciler and recurrence model*: the tick model, recurrence-advancement rules,
     reminder firing — specified precisely enough to be checked against the E1 oracle.
   - *Plugin boundary*: the MCP tool surface and the gui-chat-protocol runtime
@@ -197,6 +206,10 @@ made empirical — with an auditable metric, not a constructed one)
 - Small task-based formative study, 6–10 participants who are not authors: create a
   collection of their own choosing by conversation, then perform two prescribed
   workflows over it.
+- Recruiting criteria (stated explicitly — this is what makes the no-code claim
+  testable): general knowledge workers with no programming experience and no
+  AI-coding-tool experience (Cursor, Copilot, Claude Code, etc.); prior LLM exposure
+  limited to chat use. Report the screening instrument.
 - Measure: unassisted success, time, points of confusion, and what participants ask
   for that the schema language cannot express; standard short usability instrument
   plus think-aloud.
@@ -249,6 +262,13 @@ long-term user behavior or adoption are made.
   functional measure, replacing the weighted "X%"); implementation-depth requirements
   spelled out in §5 (schema language, validation semantics, reconciler model, plugin
   boundary, architecture figure); E4 formative usability study added.
+- Review feedback incorporated (2026-07-13, Gemini — verdict: execute as planned,
+  strong-accept potential): abstract closing impact sentence added (measured version,
+  not Gemini's "user-sovereign computing" phrasing, to stay consistent with the
+  hedged position framing); semantic-mismatch and runtime-fault handling added to §5
+  implementation depth (re-authoring loop + reconciler error surfacing); E4
+  recruiting criteria specified (no programming, no AI-coding tools, chat-only LLM
+  exposure).
 - Re-run the literature scan immediately before submission.
 - Author-voice pieces to reuse: MANIFEST.md, the assistant-you-nurture essay/deck.
 - Venue candidates: UIST (systems) primary; CHI systems alternate. The economics
