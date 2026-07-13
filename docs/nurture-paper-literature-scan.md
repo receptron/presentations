@@ -73,8 +73,23 @@ the last few months in a fast-moving space. Re-scan immediately before submissio
   lock-in / switching-cost / data-gravity language.
 - Ink & Switch's local-first argument is agency/ownership; zero occurrences of lock-in or
   switching-cost economics.
-- **The unclaimed framing:** lock-in-compounds-with-accumulation as an *economic* (data-gravity,
-  switching-cost) argument for local-first personal AI.
+- **Update 2026-07-13 — the economic framing is no longer fully unclaimed:** Satya Nadella's
+  ["Reverse Information Paradox"](https://x.com/satyanadella/status/2076323181154230284) post
+  (X, Jul 2026) articulates accumulation-economics at enterprise scale, with canonical pedigree
+  (Arrow's 1962 Information Paradox inverted; Hayek's "knowledge of time, place, and
+  circumstance"): the buyer of intelligence pays twice — money plus the proprietary knowledge
+  revealed to make the model useful; learning flows one direction, so "economic value converges
+  toward the owners of the learning infrastructure rather than the creators of the knowledge";
+  "in the cloud era, enterprises accumulated data — in the AI era, they accumulate learning."
+  His remedy: a tenant trust boundary + model-decoupled orchestration + own learning loop.
+- **What remains ours after Nadella:** (a) the *personal/consumer* scale; (b) the mechanism —
+  his is *leakage* (exhaust flowing to the model provider), ours is *captivity* (the
+  accumulation held on the vendor's premises, switching costs compounding); (c) the
+  conclusion — a tenant boundary inside a vendor's cloud answers leakage but not captivity;
+  only ownership of the environment (local-first) answers both. Cite him as the enterprise
+  counterpart and strongest mainstream validation of the thesis.
+- **The remaining unclaimed framing:** lock-in-compounds-with-accumulation as an *economic*
+  (data-gravity, switching-cost) argument for **local-first personal** AI.
 - **Required rebuttal:** why local-first beats portability protocols. Strongest form:
   *the accumulation is more than the memory* — portable memory does not transfer the schema'd
   apps, host-engine semantics, and workspace that constitute the assistant.
@@ -171,4 +186,7 @@ integration: all four commitments running together in one installable, MIT-licen
 | GenerativeGUI ([10.1145/3706599.3719743](https://dl.acm.org/doi/10.1145/3706599.3719743)) | CHI EA | Dynamic GUI generation in chat |
 | MCP Apps ([announcement](https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/)) / [AG-UI](https://docs.ag-ui.com/introduction) / [A2UI](https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/) / OpenAI Apps SDK | Industry protocols, 2025–26 | Agent-GUI protocol landscape |
 | Bain ([2025](https://www.bain.com/insights/will-agentic-ai-disrupt-saas-technology-report-2025/)) / Deloitte ([2026](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/saas-ai-agents.html)) / Gartner | Analyst reports | SaaS-unbundling economics context |
+| Nadella, "The Reverse Information Paradox" ([X post](https://x.com/satyanadella/status/2076323181154230284)) | Practitioner essay, Jul 2026 | Enterprise accumulation-economics; Arrow/Hayek anchor; tenant-boundary remedy to differentiate against |
+| Arrow, "Economic Welfare and the Allocation of Resources for Invention" (1962) | NBER/book chapter | Information Paradox — canonical economics anchor |
+| Hayek, "The Use of Knowledge in Society" (1945) | AER | Knowledge of particular circumstances — grounds "your particular intelligence" |
 | The Log is the Agent ([2605.21997](https://arxiv.org/abs/2605.21997), Yohei Nakajima) | arXiv preprint, 2026 | Event-sourced agent substrate; auditability/forkability related work |
