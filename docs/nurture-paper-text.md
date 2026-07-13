@@ -1,9 +1,7 @@
 # Nurtured at Home — paper text
 
-*Full prose, section by section. Outline and evaluation protocol:
-[nurture-paper-draft.md](nurture-paper-draft.md). Citation placeholders use
-`[key]` form for later BibTeX mapping; keys resolve against the must-cite table in
-[nurture-paper-literature-scan.md](nurture-paper-literature-scan.md).*
+<!-- Working-doc apparatus (citation-key mapping, source references,
+pre-submission checklist) lives in nurture-paper-notes.md, not here. -->
 
 ---
 
@@ -96,11 +94,6 @@ This paper contributes:
 ---
 
 ## 2. Related work
-
-<!-- Positioned against the literature as scanned and adversarially verified on
-2026-07-13; several load-bearing sources are recent preprints in a fast-moving
-space, so this section gets a delta-check against new work immediately before
-submission. -->
 
 **Natural language to declarative applications.** The closest published system
 is Jelly [jelly], which shares our starting move and our motivation: an LLM
@@ -383,6 +376,15 @@ tables). Beyond fields, the schema declares behavior the host executes:
   field's value — in the restaurant list from our own workspace, `rating` is hidden
   until `visited` is true.
 
+Figure 2 shows a complete schema and a record it governs, from our own
+workspace: the `rating` field is an enum whose `when` clause hides it — and
+refuses it on the managed write path — until `visited` is true; the `views`
+entry registers a model-authored map view with an explicitly declared
+read-only capability set, which is all the sandbox will sign tokens for
+(§5.4); and the record is one plain JSON file whose fields the reader can
+check against the schema by eye. Everything the host renders, validates, and
+schedules for this application derives from those declarations.
+
 The schema-of-the-schema is enforced by a validator that checks not only shape but
 roughly forty cross-field invariants the type system cannot express — that
 `triggerField` names a real date field, that a kanban anchor is an enum, that a
@@ -490,27 +492,6 @@ aggregate counts; record contents — names, amounts, holdings — are the owner
 business and appear nowhere in this paper.) None was built by a software company;
 each is a schema, a manual, and a folder of records.
 
-<!--
-Source references for §5 claims (repo: receptron/mulmoclaude):
-- Schema types: packages/core/src/collection/core/schema.ts (CollectionSchema 436-551,
-  field types 65-96, spawn 157-172, custom views 209-271)
-- Zod validator + gates: packages/core/src/collection/server/discovery.ts
-  (CollectionSchemaZ 535-834, loadOneCollection 882-927)
-- Record validation: server/agent/mcp-tools/manageCollection.ts (putItems 236,
-  putSchema 373-393); packages/core/src/collection/server/validate.ts (49-117;
-  skip-at-read note 2-7); best-effort present-time scan server/api/routes/plugins.ts 266-285
-- Reconciler: packages/core/src/collection-watchers/watcher.ts (tick 38, 164-176),
-  reconciler.ts (217-268, invariant 5-17), collection/server/spawn.ts (206-246,
-  runaway guard 222-234)
-- View sandbox: collection-plugin CollectionCustomView.vue (9-28, 176-196);
-  server/api/auth/viewToken.ts (1-77)
-- View-mode derivation: collection-plugin collectionViewMode.ts 27-34
-- Creation flow + escape hatch: packages/core/assets/helps/collection-skills.md
-  (16-60, 80-81, 103)
-- Workspace counts: ~/mulmoclaude inventory 2026-07-13 (43 skills, 25 custom views,
-  ~1,228 records; aggregate counts only)
--->
-
 ---
 
 ## 6. Evaluation
@@ -555,7 +536,7 @@ Ten tasks were pre-registered with per-system predictions before any run
 (protocol in the evaluation tree), spanning creation, cross-session
 persistence, validation, recurrence, two cross-application compositions,
 agent-summoned forms, behind-the-back corruption, temporal recall, and schema
-evolution. Four systems: **S**, the full system; **B1**, the ablation — the
+evolution. Three scored systems: **S**, the full system; **B1**, the ablation — the
 same build with persistence, record validation, and the reconciler disabled,
 reproducing the architecture of one-shot generative-UI systems under otherwise
 identical conditions (the same model, schema language, and renderer; we state
@@ -594,7 +575,7 @@ appear 5 days before") before the host did it — the author reasoning about its
 runtime. Third, T8's corrupted record was quarantined at read, reported by the
 scan, and repaired by the agent with a disclosed rationale.
 
-**B1's deficits each map to exactly one ablated component.** With persistence
+**In these runs, B1's deficits each tracked exactly one ablated component.** With persistence
 gone, T2's agent answered — verbatim — *"your reading list was empty until
 just now"*: the same agent, the same request that S completed, and the
 accumulation did not exist. With the reconciler gone, T4's completed task
@@ -602,8 +583,9 @@ produced no successor and no reminder state at all: the spawn declaration is
 inert JSON without the host that executes it. With the validation scan gone,
 T8's corrupted record stayed silently wrong — no warning, no repair, no
 disclosure. The ties are equally load-bearing: T1, T5, and T7 complete
-identically in B1, confirming that generation and chat-layer capabilities owe
-nothing to the runtime — the delta is the runtime, and only the runtime.
+identically in B1 — consistent with generation and chat-layer capabilities
+owing nothing to the runtime, and the observed delta being the runtime and
+only the runtime.
 One honest finding: in *both* columns the cooperative author designed around
 the validator rather than violating it (B1's agent simply included the
 requested value in its enum up front). Validation's value is adversarial —
@@ -619,10 +601,11 @@ its builder's own words, *"nothing fires on its own."*
 
 **The hosted assistant, qualitatively.** From documented capabilities alone —
 memory features, scheduled tasks, canvas surfaces — a hosted
-assistant-with-memory approximates most of these behaviors conversationally
-and guarantees none of them structurally: there is no schema, no record, no
-file that either the user or the assistant can point to, so every capability
-is a best-effort re-derivation from remembered context. We do not score it,
+assistant-with-memory approximates most of these behaviors conversationally —
+and some products do expose files, tasks, or app-state surfaces — but none of
+it lives in a user-owned, inspectable schema-and-record workspace: there is no
+schema or record the user can read, copy, or take elsewhere, so capabilities
+are re-derived from remembered context on the vendor's terms. We do not score it,
 and its defining property is in any case orthogonal to this table: whatever
 such a product completes, it completes on the vendor's premises — which is
 what E3 measures.
@@ -841,7 +824,4 @@ in fact nurture such an assistant over years is not yet evidence but the
 question this architecture was built to make answerable. The substrate for
 that study now exists. The upbringing is the user's own.
 
-<!-- Full text complete (Sections 1-9). Pre-submission checklist: delta-check §2;
-     repeated trials with pinned model IDs (§6.4); E4 removed per review 2026-07-13
-     (a formative study remains future work, §8.4). -->
 
