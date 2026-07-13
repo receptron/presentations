@@ -624,6 +624,106 @@ is that home must *exist* as a viable corner of the design space, open-source an
 demonstrated, so that the arrangement is chosen rather than defaulted into — and so
 that the packaging work that closes the gap has something worth packaging.
 
-<!-- Sections 2 and 8–9 follow; see nurture-paper-draft.md for the outline.
-     Section 2 (Related work) awaits the pre-submission literature re-scan. -->
+---
+
+## 8. Discussion
+
+### 8.1 What the evaluation taught us that the design did not
+
+Three findings surprised us, and each sharpens a claim rather than merely
+supporting one. First, the trust boundary has a third outcome. We designed for
+prevent and repair; the agent discovered *renegotiate* — when an intent does not
+fit the schema, the cheapest legal move is often to evolve the schema through
+the validated edit path (§6.2, T3). The boundary's real guarantee is not "the
+model's writes are checked" but "every route to a live application passes a
+validator," and the model is free to choose its route. Second, validation earns
+its keep adversarially, not cooperatively. In every live run, on both sides of
+the ablation, the author designed around the validator rather than fighting it;
+the validator's observed value was catching authoring mistakes (E1's sub-schema
+invariant) and behind-the-back corruption (T8) — the cases where no one is
+being careful. Third, memory carries testimony, not capability (§6.3) — a
+distinction we did not have words for until the migrated assistant produced
+both halves of it in one reply, recalling the fact of a reminder while
+diagnosing its own inability to deliver one.
+
+### 8.2 The design space, revisited
+
+Two of the artifact's choices are points in a space rather than requirements of
+the thesis (§5.4). Access mediation is demonstrably policy — both the managed
+tool path and the raw-file escape hatch coexist today, and a stricter variant
+closes the hatch and moves all data enforcement into prevention, at the cost of
+the agent's generic file-tool legibility. The substrate could likewise be an
+embedded relational database with ownership fully intact, trading human
+readability and diffability for indexed queries. We occupy the plain-files,
+direct-access corner because at personal scale — order 10³ records in our own
+workspace — nothing needs an index, and a substrate natively legible to the
+user, to standard tools, and to the model is worth more than query performance.
+The principles argued here — model as author, host as runtime, accumulation
+owned by the user — hold at every corner. A reviewer who observes that plain
+files will not scale is correct, and has not disagreed with the paper.
+
+### 8.3 Premium features, dissolved
+
+A pattern worth one paragraph: what conventional software sells as its
+integration tier arose in our evaluation as the default mode of operation.
+Records-to-chart (T5), note-to-recurring-obligation (T6), and photo-to-ledger
+(§4) are, in SaaS terms, an export module, a workflow connector, and an OCR
+add-on; here each is one sentence, because capabilities are tools under one
+controller and tools compose. The practitioner literature already describes the
+economics of this unbundling at industry scale [saas-unbundling]; our
+contribution is only the mechanism stated plainly — the premium tier was the
+integration cost, and composition removes the cost, so the tier dissolves.
+
+### 8.4 What this artifact cannot yet show
+
+The nurturing claim is longitudinal, and this paper's evidence is not: E1–E3
+measure an architecture, not a life with one. Whether real users accumulate the
+way our dogfooded workspace did, whether accumulation measurably changes what
+their assistant can do for them, and where the gardening metaphor breaks — a
+plant does not leak, but an assistant's memory of you has failure modes no
+garden has — are questions for a prospective multi-week study, for which the
+only current evidence anywhere is a single self-described-illustrative case
+study [nurture-first]. E4's formative study is the first step; the longitudinal
+study is the second paper. We are also explicit that ownership does not equal
+model-independence (§7): the engine is rented, and only the workspace's
+engine-neutrality is ours to guarantee.
+
+### 8.5 Which parts travel
+
+For builders of other agent hosts, we believe three patterns generalize
+beyond this artifact: enforcement tiered by consequence (prevent applications,
+repair data, contain code — §5.4); convergent, idempotent reconciliation as
+the price of admitting users and models to the same substrate (§5.5); and the
+two-artifacts pattern — pair every machine-executed schema with a model-facing
+operating manual, so the system's two runtimes each get an artifact in their
+own language (§5.1). None of the three requires plain files, collections, or
+MulmoClaude.
+
+---
+
+## 9. Conclusion
+
+An assistant that knows everything about you and supports you around the clock
+is not sold anywhere. You cannot buy one — and, we have argued, you should not
+board one out, because the same accumulation that makes it valuable is what
+makes leaving expensive, and defaults are deciding today where that
+accumulation lives. This paper offered a working alternative default: an
+architecture in which the model authors small declarative applications, a host
+the user runs executes them, and everything that accumulates — records,
+schemas, manuals, history — sits as plain files in a workspace the user owns.
+The evaluation showed the architecture is trustworthy where it must be
+(22/23 first-attempt valid schemas, invalid ones never live), that its runtime
+is the source of the capabilities that matter (every ablation deficit mapped
+to one removed component), and that the popular remedy of memory portability
+moves testimony while leaving capability behind (0 of 4 workflows survive a
+memory-only migration). The environment is open-source and installs with one
+command; the experiments ship inside it.
+
+What remains is the question the architecture was built to make answerable:
+what happens when people actually live with an assistant they own — what they
+plant, what grows, and what a nurtured assistant becomes after years rather
+than weeks. The substrate for that study now exists. The upbringing is the
+user's own.
+
+<!-- Section 2 (Related work) awaits the pre-submission literature re-scan. -->
 
