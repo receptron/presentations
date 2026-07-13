@@ -356,11 +356,15 @@ application, the model is the author, and the host is the runtime.
 ### 5.2 The schema language
 
 The schema language is deliberately small but not a toy. Seventeen field types
-cover the personal-data domain — `string`, `text`, `email`, `number`, `date`,
-`datetime`, `boolean`, `markdown`, `enum`, `money` (currency-aware), `image`,
-`file`, `toggle`, nested `table`, `derived` (formula fields evaluated by the
-host, including cross-collection dereferences), and the relational pair `ref`
-and `embed`, which point records at other collections and are what let
+cover the personal-data domain, and they split into two groups that mirror the
+architecture's division of labor. The plain types any author can use without
+thinking — `string`, `text`, `email`, `number`, `date`, `datetime`, `boolean`,
+`markdown`, `enum`, `image`, `file` — describe data. The semantic types carry
+application behavior the host executes: `money` is currency-aware; `toggle`
+projects an enum into a checkbox the host computes; nested `table` holds
+row-structured sub-records; `derived` declares formula fields the host
+evaluates, including cross-collection dereferences; and the relational pair
+`ref` and `embed` point records at other collections — the types that let
 applications compose (§5.6). Beyond fields, the schema declares behavior the host executes:
 
 - *Completion*: which field marks a record done, and which values count
