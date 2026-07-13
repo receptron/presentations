@@ -245,8 +245,23 @@ long-term user behavior or adoption are made.
   study (what people build, whether accumulation measurably changes capability, where
   the metaphor breaks) — explicitly future work, citing the n=1 Nurture-First case
   study as the current state of evidence.
-- Generalization: which parts are MulmoClaude-specific vs. portable design patterns
-  for any local-first agent host.
+- Generalization as an explicit design space (per author observation, 2026-07-13):
+  the paper's principles (model authors the schema; host is the runtime; accumulation
+  local, exportable, vendor-independent; enforcement tiered by consequence) are
+  invariant across two orthogonal implementation axes MulmoClaude merely picks a
+  corner of —
+  - *Access mediation*: direct file manipulation by the LLM (today's escape hatch)
+    ↔ fully mediated validated API (closes the repair tier into prevent; costs the
+    agent its generic file-tool legibility). Both paths already coexist in the
+    artifact, so mediation is demonstrably policy, not architecture.
+  - *Storage substrate*: plain files ↔ embedded relational DB (e.g. SQLite in the
+    workspace: faster/relational queries, transactions; ownership intact since the
+    DB file is still local and copyable; costs git-diffability, human readability,
+    agent grep-ability).
+  - Justify the plain-files + direct-access corner as sufficiency at personal scale
+    (~10³ records need no indexes; legibility to user and model dominates), and state
+    plainly that the principles do not require the corner — pre-empting the
+    "files won't scale" review.
 
 ### 9. Conclusion
 

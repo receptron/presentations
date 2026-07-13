@@ -194,6 +194,21 @@ a schema can be valid and wrong about intent. The remedy is the cheap re-authori
 loop plus the reconciler's error surfacing — mismatches are corrected by saying the
 sentence again, not by trusting the model's first attempt.
 
+Two of these choices are points in a design space rather than requirements of the
+architecture. Because the managed tool path and the raw-file path coexist, access
+mediation is demonstrably a policy: a stricter variant closes the escape hatch and
+moves all data enforcement into the prevent tier, at the cost of the agent's
+generic file-tool legibility. Likewise the substrate: records could live in an
+embedded relational database in the workspace — gaining indexed and relational
+queries while keeping the accumulation local, copyable, and vendor-independent —
+at the cost of human readability, diffability, and the agent's direct access. We
+occupy the plain-files, direct-access corner deliberately: at personal scale
+(order 10³ records in our own workspace) nothing needs an index, and the substrate
+being natively legible to the user, to standard tools, and to the model is worth
+more than query performance. The principles this paper argues — model as author,
+host as runtime, accumulation owned by the user — hold at every corner of this
+space (§8).
+
 ### 5.5 The reconciler: convergence, not scheduling
 
 Recurrence and reminders are executed by a reconciler that is convergent rather
