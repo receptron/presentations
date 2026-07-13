@@ -1,0 +1,42 @@
+{
+  "title": "Life Organizer",
+  "icon": "checklist",
+  "dataPath": "data/life-organizer/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "title": { "type": "string", "label": "Title", "required": true },
+    "area": {
+      "type": "enum",
+      "label": "Area",
+      "values": ["Work", "Home", "Health", "Finance", "Family", "Personal"]
+    },
+    "priority": {
+      "type": "enum",
+      "label": "Priority",
+      "values": ["low", "normal", "high"]
+    },
+    "status": {
+      "type": "enum",
+      "label": "Status",
+      "values": ["Todo", "Doing", "Done"],
+      "required": true
+    },
+    "done": {
+      "type": "toggle",
+      "label": "Done",
+      "field": "status",
+      "onValue": "Done",
+      "offValue": "Todo"
+    },
+    "dueDate": { "type": "date", "label": "Due" },
+    "notes": { "type": "text", "label": "Notes" }
+  },
+  "displayField": "title",
+  "completionField": "status",
+  "completionDoneValues": ["Done"],
+  "notifyWhen": { "field": "priority", "in": ["high"] },
+  "triggerField": "dueDate",
+  "calendarField": "dueDate",
+  "kanbanField": "status"
+}

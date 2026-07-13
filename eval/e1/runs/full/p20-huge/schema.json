@@ -1,0 +1,55 @@
+{
+  "title": "Home Inventory",
+  "icon": "inventory_2",
+  "dataPath": "data/home-inventory/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "name": { "type": "string", "label": "Name", "required": true },
+    "room": {
+      "type": "enum",
+      "label": "Room",
+      "values": ["Living Room", "Kitchen", "Dining Room", "Bedroom", "Bathroom", "Office", "Garage", "Basement", "Attic", "Outdoor", "Other"]
+    },
+    "category": {
+      "type": "enum",
+      "label": "Category",
+      "values": ["Electronics", "Appliance", "Furniture", "Kitchenware", "Clothing", "Tools", "Sports & Outdoors", "Decor & Art", "Books & Media", "Jewelry", "Other"]
+    },
+    "purchaseDate": { "type": "date", "label": "Purchase date" },
+    "price": { "type": "money", "label": "Purchase price", "currency": "USD" },
+    "currentValue": { "type": "money", "label": "Current est. value", "currency": "USD" },
+    "condition": {
+      "type": "enum",
+      "label": "Condition (1-5)",
+      "values": ["1", "2", "3", "4", "5"]
+    },
+    "insured": { "type": "boolean", "label": "Insured" },
+    "warrantyExpires": { "type": "date", "label": "Warranty expires" },
+    "warrantyStatus": {
+      "type": "enum",
+      "label": "Warranty status",
+      "values": ["active", "handled", "expired", "none"],
+      "required": true
+    },
+    "serialNumber": { "type": "string", "label": "Serial number" },
+    "photo": { "type": "image", "label": "Photo" },
+    "receipts": {
+      "type": "table",
+      "label": "Receipts",
+      "of": {
+        "receipt": { "type": "string", "label": "Receipt file path" },
+        "note": { "type": "string", "label": "Note" }
+      }
+    },
+    "manualUrl": { "type": "string", "label": "Manual link" },
+    "notes": { "type": "text", "label": "Notes" }
+  },
+  "displayField": "name",
+  "completionField": "warrantyStatus",
+  "completionDoneValues": ["handled", "expired", "none"],
+  "triggerField": "warrantyExpires",
+  "triggerLeadDays": 30,
+  "calendarField": "warrantyExpires",
+  "kanbanField": "room"
+}

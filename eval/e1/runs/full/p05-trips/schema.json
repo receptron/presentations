@@ -1,0 +1,23 @@
+{
+  "title": "Trips",
+  "icon": "flight_takeoff",
+  "dataPath": "data/trips/items",
+  "primaryKey": "id",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "destination": { "type": "string", "label": "Destination", "required": true },
+    "departure": { "type": "date", "label": "Departure", "required": true },
+    "return": { "type": "date", "label": "Return" },
+    "status": {
+      "type": "enum",
+      "label": "Booking status",
+      "values": ["planned", "booked", "cancelled"],
+      "required": true
+    },
+    "notes": { "type": "text", "label": "Notes" }
+  },
+  "displayField": "destination",
+  "calendarField": "departure",
+  "calendarEndField": "return",
+  "kanbanField": "status"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Recipes",
+  "icon": "menu_book",
+  "dataPath": "data/recipes/items",
+  "primaryKey": "id",
+  "displayField": "name",
+  "fields": {
+    "id": { "type": "string", "label": "ID", "primary": true, "required": true },
+    "name": { "type": "string", "label": "Dish", "required": true },
+    "cuisine": { "type": "string", "label": "Cuisine" },
+    "ingredients": {
+      "type": "table",
+      "label": "Ingredients",
+      "of": {
+        "item": { "type": "string", "label": "Ingredient", "required": true },
+        "quantity": { "type": "string", "label": "Quantity" }
+      }
+    },
+    "cookingTimeMinutes": { "type": "number", "label": "Cooking time (min)" },
+    "photo": { "type": "image", "label": "Photo" }
+  }
+}
