@@ -355,10 +355,13 @@ application, the model is the author, and the host is the runtime.
 
 ### 5.2 The schema language
 
-The schema language is deliberately small but not a toy. Seventeen field types cover
-the personal-data domain (strings, dates, booleans, enums, money with currency,
-references and embeds across collections, images, files, derived fields, nested
-tables). Beyond fields, the schema declares behavior the host executes:
+The schema language is deliberately small but not a toy. Seventeen field types
+cover the personal-data domain — `string`, `text`, `email`, `number`, `date`,
+`datetime`, `boolean`, `markdown`, `enum`, `money` (currency-aware), `image`,
+`file`, `toggle`, nested `table`, `derived` (formula fields evaluated by the
+host, including cross-collection dereferences), and the relational pair `ref`
+and `embed`, which point records at other collections and are what let
+applications compose (§5.6). Beyond fields, the schema declares behavior the host executes:
 
 - *Completion*: which field marks a record done, and which values count
   (`completionField`, `completionDoneValues`).
@@ -405,6 +408,19 @@ writing, and refuse invalid changes with actionable errors, so a working applica
 cannot be corrupted through the managed path. Iteration is cheap by construction:
 the schema is disposable, the records endure, and when the application stops
 fitting, the user says the sentence again.
+
+Evolution is not migration, and the distinction is deliberate. A schema edit
+performs no rewrite pass over existing records: additive changes (a new
+optional field, a widened enum) leave every record valid, while a constraining
+change makes nonconforming records fall into the same repair tier as any other
+invalid data — they drop out of the rendered views, and the validation scan
+reports each one to the model at the next read or present, which proposes
+repairs to the user (observed end-to-end in §6.2, T8). The user-visible signal
+is thus a record's absence from the view plus the assistant's explanation and
+offer to fix — never a silent rewrite of data the model did not author. This
+keeps the destructive-migration failure mode out of the model's reach: the
+worst a bad schema edit can do to existing records is hide them reversibly,
+and the managed edit path will not accept an invalid schema at all (§5.4).
 
 ### 5.4 Enforcement, honestly: prevent, repair, contain
 
@@ -680,9 +696,9 @@ borne by the user.
 
 *Setup.* A hosted assistant is a login; ours is an install — a runtime, an
 authenticated model CLI, optional components for media and sandboxing. The
-mitigation is a one-command launcher and a formative check that non-programmers can
-get from install to a working application (planned formative study); the
-admission is that a login it is not, and some fraction of prospective users will stop here.
+mitigation is a one-command launcher; whether non-programmers get from install
+to a working application without help is untested here and named as future
+work (§8.4). The admission is that a login it is not, and some fraction of prospective users will stop here.
 
 *Backup.* Ownership of the files is ownership of their durability. There is no
 vendor-side copy; a lost disk is a lost assistant. The plain-file substrate makes
