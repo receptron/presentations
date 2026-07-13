@@ -3,10 +3,10 @@
 **Question.** If the owner of this workspace left via a memory-portability protocol,
 what would they carry and what would they leave behind?
 
-**Subject.** The author's production MulmoClaude workspace (`~/mulmoclaude`),
-nurtured since ~2026-06-22 (disclosed dogfooding data). Counts from
-`inventory.sh` — the coding scheme is the workspace's own directory layout;
-aggregate counts only, no record contents.
+**Subject.** The author's production MulmoClaude workspace, nurtured over several
+weeks of daily use (disclosed dogfooding data). Counts from `inventory.sh` — the
+coding scheme is the workspace's own directory layout; aggregate counts only, no
+record contents. Disclosure policy: see `eval/DISCLOSURE.md`.
 
 **Export scope definition (pre-registered).** "Memory export" = what Portable Agent
 Memory-class protocols (arXiv 2605.11032; SAMEP 2507.10562) transfer: conversational
