@@ -52,7 +52,9 @@ A moving truck driving away carrying only one small box labeled 'memories'. Left
 
 ### nah-slide10-final-169.png
 
-A big warm house outline drawn in black marker sheltering folders, small app windows and a green sprout inside. A large handwritten title 我が家 with 'HOME' written under it, underlined twice in red. A smiling sun in the corner.
+(v2 — 文字を1語に削減、日本語を除去。アニメーション化で文字が崩れたため)
+
+A big warm house outline drawn in black marker, sheltering a few folders, two small app windows and a green sprout inside. A smiling sun in the top corner. Below the house, one single large handwritten word 'HOME', underlined in red. No other text or labels anywhere.
 
 ### nah-slide11-final-169.png
 
@@ -92,7 +94,9 @@ A sad, empty chat window sketch with a single speech bubble reading 'Your readin
 
 ### nah-slide20-final-169.png
 
-Moving day: a small truck labeled 'memory only' driving from a full, lively house (windows showing app sketches, alarm clocks, folders) toward an empty house in the distance. On the curb by the full house, boxes of apps and an alarm clock left behind.
+(v2 — ラベルを1語に削減。アニメーション化で文字が崩れたため)
+
+Moving day: a small moving truck driving away from a full, lively house toward an empty house in the distance. The truck carries a single small box. A few unlabeled boxes and an alarm clock left behind on the curb. The only text in the drawing is one handwritten word 'memories' on the truck's box.
 
 ### nah-slide21-final-169.png
 
