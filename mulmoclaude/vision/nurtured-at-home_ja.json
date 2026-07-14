@@ -1,13 +1,21 @@
 {
-  "$mulmocast": { "version": "1.1" },
-  "canvasSize": { "width": 1280, "height": 720 },
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
   "title": "我が家で育てるAIアシスタント",
   "description": "あなた専属のAIアシスタントは売っていない——自分の環境で育てるもの。預けた蓄積の危険、我が家の四条件、設計図がアプリになる仕組み、三重の安全装置、そして引っ越し実験が示した「思い出は運べても能力は運べない」という事実。",
   "lang": "ja",
   "speechParams": {
     "speakers": {
       "Presenter": {
-        "displayName": { "en": "Presenter", "ja": "プレゼンター" },
+        "displayName": {
+          "en": "Presenter",
+          "ja": "プレゼンター"
+        },
         "voiceId": "Kore",
         "isDefault": true,
         "provider": "gemini",
@@ -23,7 +31,10 @@
     "style": "Whiteboard marker drawing: a hand-drawn sketch on a clean white dry-erase whiteboard, drawn with black, blue, red and green marker pens. Rough but confident strokes, simple diagrams, boxes, arrows, stick figures, underlines and quick handwritten labels. Slight marker texture, a few faint eraser smudges. Flat, bright, evenly lit, full-bleed white background. No photorealism, no gradients, no 3D rendering, no watercolor."
   },
   "audioParams": {
-    "bgm": { "kind": "path", "path": "../../resources/bgms/morning001.mp3" },
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
     "padding": 0.3,
     "introPadding": 1,
     "closingPadding": 0.8,
@@ -34,107 +45,640 @@
   "beats": [
     {
       "text": "あなたのことを何でも知っていて、24時間そばで仕事も生活も支えてくれる。そんな「あなた専属のAIアシスタント」は、まだ世界のどこにも売られていません。でも、作ることはできます。しかも、一度育て始めると、その価値は毎日少しずつ増えていきます。方法は、ひとつだけ。自分の手で、我が家と呼べる環境で育てることです。そして私たちは、そのための仕組みを作り、実験で確かめました。",
-      "imagePrompt": "A store shelf drawn in marker with an empty spot and a crossed-out price tag, handwritten label 'NOT FOR SALE' in red. Next to it, a stick figure imagines a friendly little robot assistant in a thought bubble, with a small red heart."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide1final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide1-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide1final"
+      },
+      "duration": 21.3
     },
     {
       "text": "",
-      "imagePrompt": "A stick figure lovingly watering a small green sprout that grows out of an open laptop. A simple house outline drawn around them, a smiling sun in the top corner. Handwritten label 'HOME' underlined in red, and a small Japanese handwritten label 我が家 next to it."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide2final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide2-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide2final"
+      }
     },
     {
       "text": "AIアシスタントの「実体」が、いま変わりつつあります。2年前の勝負どころは、モデルの賢さでした。今では大手各社がこぞって、会話をまたいであなたのことを覚える「記憶」の機能を搭載しています。会話、好み、記録、アプリ。アシスタントの実体は、使うほどにたまっていく、あなたについての蓄積のほうにあります。モデルは、それを動かすエンジンにすぎません。",
-      "imagePrompt": "A timeline arrow from left to right: on the left a brain sketch labeled 'Model' with a small trophy, on the right a tall growing stack of papers and folders labeled 'Memory'. A big blue arrow curving from the brain to the stack labeled 'the race moved'."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide3final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide3-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide3final"
+      },
+      "duration": 15.6
     },
     {
       "text": "",
-      "imagePrompt": "A big layered pile drawn in marker, layers labeled 'Conversations', 'Preferences', 'Records', 'Apps', with a red underlined heading 'YOUR pile'. Below it, a small box with a gear labeled 'Model = engine', drawn deliberately small."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide4final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide4-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide4final"
+      }
     },
     {
       "text": "ユーザーもそれに気づいています。チャットボットと長く付き合ってきた人々の研究では、参加者たちは自分のアシスタントとの関わりを「育てること」と表現しました。チャットの記録を自分でバックアップする人や、積み重ねが惜しくてアシスタントを削除できないと答えた人もいたのです。人々はただ使っているのではなく、育てているのです。",
-      "imagePrompt": "Two small scenes side by side: a stick figure carefully carrying chat bubbles into a box labeled 'backup', and another stick figure shielding a small robot from a trash can, saying 'No!' in a speech bubble. A green handwritten label 'raising, not using' underlined."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide5final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide5-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide5final"
+      }
     },
     {
       "text": "ここに落とし穴があります。使うほどにたまるものが価値なら、それは同時に、離れられなくなる理由でもある。使えば使うほど、乗り換えは難しくなるのです。そして預けた蓄積には、二つの危険があります。ひとつは「吸い上げ」。あなたが教えた生活のデータが、その会社のAIを賢くする燃料として使われ、会社の資産になってしまうこと。もうひとつは「囲い込み」。データもアプリも会社のサーバーの中にあるため、値上げも、規約の変更も、サービスの終了も、あなたには拒否権がないということです。",
-      "imagePrompt": "A stick figure with a ball and chain: the ball is a huge pile of folders and hearts labeled 'your data', sitting inside a cloud labeled 'their server'. An arrow pointing away labeled 'switch?' is crossed out in red."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide6final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide6-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide6final"
+      },
+      "duration": 12.7
     },
     {
       "text": "",
-      "imagePrompt": "Two warning panels drawn in marker with red triangle warning signs. Left: a funnel siphoning droplets from a stick figure's head into a big corporate robot, labeled 'siphoning'. Right: folders and a small app window locked inside a barred cage with a padlock, labeled 'captivity'."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide7final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide7-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide7final"
+      }
     },
     {
       "text": "業界の答えは、記憶を外に出して別の場所へ移せるようにする「ポータビリティ」です。確かな前進です。しかし、育てたアシスタントに積み上がるのは、会話の記憶だけではありません。レストランリストや家計簿のようなアプリと、そのデータ。決まった日に届くリマインダー。AIが自分のために書いた手引き書。記憶の引っ越しは、この「実際に動く部分」を何ひとつ運ばないのです。",
-      "imagePrompt": "A small moving box labeled 'memory export' carried by a stick figure out of one cloud toward another cloud, with a green checkmark and the handwritten word 'Portability' underlined in green."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide8final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide8-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide8final"
+      },
+      "duration": 7.7
     },
     {
       "text": "",
-      "imagePrompt": "A moving truck driving away carrying only one small box labeled 'memories'. Left behind on the curb: two sketched app windows labeled 'Restaurant list' and 'Ledger', an alarm clock labeled 'reminders', and a small booklet labeled 'manual'. A red handwritten note: 'these don't move!' with an arrow pointing at the left-behind items."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide9final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide9-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide9final"
+      }
     },
     {
       "text": "だからこそ、AIアシスタントは「我が家」——あなた自身が所有する環境で育てるべきなのです。我が家には、四つの条件があります。第一に、データがすべて自分のパソコンの中に、普通のファイルとして置かれていること。第二に、ソフトウェアがオープンソースであること。打ち切りや値上げ、買収に振り回されません。第三に、アプリが手元のマシンで動くこと。誰かのサーバーが止まっても、アプリやデータ、リマインダーは手元で動き続けます。第四に、外から繋ぐときも、途中のサーバーは何も保存しないこと。この四つが、育てたものを失う道筋を、ひとつずつ塞いでくれるのです。",
-      "imagePrompt": "A big warm house outline drawn in black marker sheltering folders, small app windows and a green sprout inside. A large handwritten title 我が家 with 'HOME' written under it, underlined twice in red. A smiling sun in the corner."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide10final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide10-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide10final"
+      },
+      "duration": 10.4
     },
     {
       "text": "",
-      "imagePrompt": "A checklist with four numbered checkboxes, each with a green check and a tiny icon: 1 a folder on a laptop labeled 'your files', 2 an open padlock labeled 'open source', 3 a gear on a laptop labeled 'runs locally', 4 two phones connected by a dotted line through a circle labeled 'relay' with a crossed-out database symbol labeled 'stores nothing'."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide11final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide11-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide11final"
+      }
     },
     {
       "text": "そこで私たちは、マルモクロードというシステムを作りました。「行ってみたいレストランのリストを作って」と言ったとき、AIはアプリのプログラムそのものを書きません。代わりに、アプリの「設計図」を書くのです。私たちはこの設計図を「スキーマ」と呼んでいます。設計図を実行するのは、マルモクロード本体である「ホスト」。画面を表示し、データをチェックし、リマインダーを動かします。一言でいえば、設計図がアプリ、AIが作者、そしてホストが実行係です。",
-      "imagePrompt": "A stick figure with a speech bubble showing a tiny fork, knife and list sketch saying 'Restaurant list!'. A friendly robot writing on a sheet of paper labeled 'Blueprint'. A crossed-out code symbol '</>' with a red handwritten note 'no code!'. Handwritten 'MulmoClaude' in a corner."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide12final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide12-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide12final"
+      },
+      "duration": 20.2
     },
     {
       "text": "",
-      "imagePrompt": "A flow diagram: a box labeled 'AI' with an arrow labeled 'writes' pointing to a sheet of paper labeled 'Blueprint (Schema)', then an arrow to a box labeled 'HOST', which points to a sketched browser window labeled 'App'. Underneath, a handwritten slogan underlined in green: 'Blueprint = App, AI = Author, Host = Runner'."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide13final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide13-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide13final"
+      }
     },
     {
       "text": "実は、AIはもうひとつ、未来の自分に宛てた取扱説明書も書いています。このアプリはいつ使うのか。各項目は何を意味するのか。何をしてはいけないのか。たとえば「あのラーメン屋、行ったことにしておいて」と言われたとき、その意味を判断するのは、説明書を読んだAI自身です。きっちり決められることはホストが確実に実行し、言葉の解釈はAIが引き受ける。そしてデータは、普通のファイルとして、あなたが自分で開けるフォルダに入っています。",
-      "imagePrompt": "A robot writing a letter at a desk, the envelope addressed 'To: future me'. Next to it an open notebook labeled 'Manual' with a sketched bullet list: 'when?', 'what?', 'don'ts'. A small lightbulb above the robot's head."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide14final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide14-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide14final"
+      },
+      "duration": 11.7
     },
     {
       "text": "",
-      "imagePrompt": "A stick figure with a speech bubble containing a steaming ramen bowl sketch and a checkmark. A robot reading a small booklet labeled 'Manual' with a lightbulb above its head. Below, an open folder with plain white file sheets spilling out, and a stick figure peeking inside happily."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide15final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide15-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide15final"
+      }
     },
     {
       "text": "とはいえ、AIは失敗します。だから私たちは、三重の安全装置を用意しました。まず、壊れたものは動かさない。設計図に誤りがあれば、ホストが受け取りを拒否し、壊れたアプリはそもそも動き出せません。次に、壊れたデータは隔離する。おかしなデータが紛れ込んでも、隔離されるのはその一件だけ。問題はAIに報告され、AIが直し方を提案します。そして、AIの書いたコードは、檻の中でしか動かさない。AIがコードを書くのは地図やグラフのような特製の画面だけで、そのコードは、許可されたデータにしか触れられない隔離された領域で動きます。AIの作ったものは、何ひとつ無条件には信用されないのです。",
-      "imagePrompt": "Three safety devices drawn side by side like shields: 1 a gate with a big red X stamped over a torn blueprint labeled 'broken? rejected', 2 a single bad file with a frowny face placed alone inside a small quarantine box apart from a healthy stack, labeled 'quarantined', 3 a code symbol '</>' inside a barred cage, labeled 'in a cage'. Heading handwritten: '3 safety devices'."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide16final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide16-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide16final"
+      },
+      "duration": 29.4
     },
     {
       "text": "",
-      "imagePrompt": "A close-up of a barred cage drawn in black marker containing a small screen showing a sketched map with a location pin and a bar chart. A hand passes a single card through a narrow slot in the bars, the slot labeled 'allowed data only'. A green checkmark beside the slot."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide17final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide17-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide17final"
+      }
     },
     {
       "text": "本当に信頼できるのか、実験で確かめました。日本語と英語で、さまざまなアプリ作りをAIに任せて、合計72回のテストを行いました。その中で、壊れた設計図がアプリとして動き出したことは、ただの一度もありません。つまずいたのはたった一種類の依頼で、それもホストの指摘を受けたAIが、毎回、一度で直してみせました。次に、ホストの機能をあえて一つずつオフにしてみました。前日に作ったはずの読書リストについて尋ねると、機能を削ったアシスタントはこう答えたのです。「あなたの読書リストは、たった今まで空でした」。蓄積を失えば、ただの空っぽのチャットボットに戻ってしまうのです。",
-      "imagePrompt": "A test scoreboard drawn in marker: a tally counter labeled '72 tests', a huge green '0' labeled 'broken apps that ran', and a checklist of green checkmarks with one red X circled, with a handwritten note 'fixed in 1 try' and a small arrow."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide18final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide18-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide18final"
+      },
+      "duration": 25.3
     },
     {
       "text": "",
-      "imagePrompt": "A sad, empty chat window sketch with a single speech bubble reading 'Your reading list was empty until just now.' Next to it a robot with a control panel of toggle switches flipped to OFF, labeled 'memory', 'reminders', 'checks'. Handwritten label in red: 'empty chatbot'."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide19final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide19-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide19final"
+      }
     },
     {
       "text": "最後に、引っ越しの実験です。数週間かけて育てた本物のワークスペースには、数十個のアプリと、千件を超えるデータが貯まっています。ここから、引っ越しプロトコルが運べる会話の記憶だけを、新しい環境に移してみました。会話の記憶は、すべて無事でした。でも、そこまででした。アプリも、データも、自動で届くはずのリマインダーも、すべて消えていました。新しい家に引っ越したそのアシスタントは、私のことを覚えていました。ある支払いについて尋ねると、リマインダーがあったことも、履歴から思い出せました。でも、それをもう届けることはできないと、自分で認めたのです。私の生活を支える力は、何一つ残っていませんでした。記憶の引っ越しで運べるのは「思い出」だけで、「能力」は運べない。かつての暮らしを語ることはできても、その暮らしを支えることは、もうできないのです。",
-      "imagePrompt": "Moving day: a small truck labeled 'memory only' driving from a full, lively house (windows showing app sketches, alarm clocks, folders) toward an empty house in the distance. On the curb by the full house, boxes of apps and an alarm clock left behind."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide20final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide20-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide20final"
+      },
+      "duration": 16.8
     },
     {
       "text": "",
-      "imagePrompt": "Inside a new, bare house: a robot with a thought bubble containing a smiling stick figure portrait labeled 'I remember you'. Around it, empty shelves, a crossed-out alarm clock, an empty picture frame. Speech bubble from the robot: 'I recall the reminder... but I can't deliver it.'"
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide21final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide21-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide21final"
+      },
+      "duration": 31.0
     },
     {
       "text": "",
-      "imagePrompt": "A two-column comparison drawn in marker: left column headed 思い出 with 'Memories' under it, a small photo album sketch and a big green checkmark labeled 'moves'; right column headed 能力 with 'Abilities' under it, a gear and alarm clock sketch and a big red X labeled 'does not move'. A thick red underline across the bottom."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide22final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide22-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide22final"
+      }
     },
     {
       "text": "もちろん、我が家で育てるには手間もかかります。ログインではなく、インストールが必要です。バックアップも自分の仕事——といっても、アシスタントの全財産はパソコンの中のひとつのフォルダに収まっていて、丸ごとコピーすれば完了です。実際、いまの利用者たちは、ギットというツールで変更の履歴ごと保存しています。そして、頭脳であるAIモデル自体は、今も借り物です。ただし、ワークスペースは、モデルを交換できるように設計されています。いまはクロード・コードの上で動いていますが、GPTベースのエンジンもベータテスト中で、オープンなモデルにも対応する計画です。エンジンを入れ替えても、育てた蓄積はあなたのものとして残ります。",
-      "imagePrompt": "A laptop with a single big folder on its screen labeled 'everything', an arrow copying the folder to an external hard drive with a green check labeled 'backup = copy'. A small tag beside it labeled 'git' with a clock-and-history spiral icon."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide23final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide23-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide23final"
+      },
+      "duration": 21.9
     },
     {
       "text": "",
-      "imagePrompt": "A friendly robot body labeled 'Workspace' with an open hatch on its chest; a small crane swaps engine blocks in and out. Three engine blocks on the floor labeled 'Claude Code', 'GPT (beta)', 'Open (planned)'. A handwritten note with an arrow to the robot: 'your pile stays'."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide24final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide24-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide24final"
+      }
     },
     {
       "text": "あなたの記憶やデータやアプリをどこに置くのか。この大事な選択は、いま「みんなが使うサービスに預けるのが当たり前」という形で決まりつつあります。マルモクロードが示すのは、もうひとつの選択肢です。AIがアプリを作る。あなたのパソコンの上のホストがそれを動かす。積み上がったものはすべて、あなた自身のファイルとして残る。あなたのことを何でも知っていて、24時間そばで支えてくれるアシスタントは、今もどこにも売っていません。でも、育て方はもうあります。育てるのは、あなた自身です。頭脳は借りてもいい。でも、育てたものまで、借り物である必要はありません。",
-      "imagePrompt": "A fork in the road drawn in marker: the wide left path leads to a huge cloud with corporate buildings labeled 'default', the narrow right path leads to a small warm house with a sprout, labeled 'HOME'. A stick figure at the fork stepping onto the right path."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide25final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide25-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide25final"
+      },
+      "duration": 26.5
     },
     {
       "text": "",
-      "imagePrompt": "A stick figure and a small friendly robot standing side by side in front of a house at sunrise, the sun drawn with red marker rays. Large handwritten Japanese text across the top: 育てるのは、あなた自身 underlined in red. Small handwritten 'MulmoClaude' in the bottom corner."
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide26final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide26-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide26final"
+      }
     }
   ]
 }
