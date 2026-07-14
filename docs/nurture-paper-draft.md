@@ -1,4 +1,4 @@
-# Nurtured at Home: A Local-First Schema-as-Application Architecture for User-Owned Personal AI
+# Nurtured at Home: Local-First Personal AI Through Schema-as-Application
 
 *Working draft — title, abstract, and section outline. Companion document:
 [nurture-paper-literature-scan.md](nurture-paper-literature-scan.md) (novelty map and
@@ -18,12 +18,13 @@ asides, not contributions.
 ## Abstract
 
 Personal AI assistants are increasingly defined by what accumulates around the model —
-memories, data, and applications — rather than by the model alone: every major vendor
-now ships memory features that invite users to build up context on the vendor's
-premises. We take a position on this arrangement: if accumulation is what makes an
-assistant valuable, it is also what makes leaving costly, and remedies based on memory
-portability carry only one layer of what a user accrues. A personal assistant, we
-argue, should be nurtured at home — grown in an environment the user owns.
+memories, data, and applications — rather than by the model alone. This changes the
+economics of switching: because every conversation deepens a store of context that does
+not transfer, using an assistant manufactures the cost of leaving it. Every major
+vendor now ships memory features that invite users to build this accumulation on the
+vendor's premises, and remedies based on memory portability carry only one layer of
+what a user accrues. We take a position: the accumulation is the user's asset, and a
+personal assistant should be nurtured at home — grown in an environment the user owns.
 
 We present MulmoClaude, an open-source system that instantiates this position through
 a schema-as-application architecture: the user describes what they need in natural

@@ -8,72 +8,51 @@ pre-submission checklist) lives in nurture-paper-notes.md, not here. -->
 ## 1. Introduction
 
 Something has changed in what a personal AI assistant *is*. Two years ago, assistants
-competed on the capability of their underlying models; today, the major assistant
-vendors ship memory: features that persist what the assistant learns about its user across
-conversations, accumulate preferences and context, and fold that accumulation back
-into every response [memgpt; mem0; memorybank]. The competitive frontier has moved
-from the model to what gathers around it. A user's assistant is decreasingly a model
-with a chat window, and increasingly a body of accumulated state — conversations,
-preferences, documents, and workflows — that happens to be animated by whichever
-model the vendor currently runs.
+competed on the capability of their models; today, major assistant vendors ship memory —
+features that persist what the assistant learns about its user across conversations
+and fold it back into every response [memgpt; mem0; memorybank]. A user's assistant is
+decreasingly a model with a chat window, and increasingly a body of accumulated state
+that happens to be animated by whichever model the vendor currently runs.
 
-Users have noticed, and their behavior has changed accordingly. In a recent study of
-long-term chatbot companionship, participants described their interactions as
-*cultivating* the assistant — believing that the data they provided contributed to
-its development — and acted on that belief: keeping personal backups of chat logs,
-and refusing to delete an assistant because of what had accumulated within it
-[digital-companionship]. People are not merely using these systems. They are, in
-their own words, raising them.
+Users have noticed. In a recent study of long-term chatbot companionship, participants
+described *cultivating* their assistant, kept personal backups of chat logs, and
+refused to delete an assistant because of what had accumulated within it
+[digital-companionship]. People are not merely using these systems; in their own
+words, they are raising them.
 
-This paper takes a position on where that raising should happen. If accumulation is
-what makes an assistant valuable, then accumulation is also what makes an assistant
-expensive to leave: every conversation deepens a store of context that does not
-transfer, so the cost of switching grows with use — not as a side effect, but as a
-structural property of the arrangement. Hosted accumulation exposes users to two
-distinct failure modes. The first is *leakage*: interaction exhaust — prompts,
-corrections, preferences — flows to the provider and improves an asset the user does
-not own [nadella-rip]. The second is *captivity*: the accumulation itself resides on
-the provider's premises, subject to that provider's continuity, pricing, and terms.
-Existing remedies address each only partially. Enterprise tenant boundaries answer
-leakage but not captivity; the accumulation still lives in someone else's
-infrastructure. Memory-portability protocols [portable-agent-memory; samep] answer
-part of captivity, but carry only one layer of what a user accrues — a hypothesis we
-make precise, and test, in this paper. We note that the value of accumulated
-personalization is itself an open empirical question [recentering-humans]; in our
-view this strengthens rather than weakens the case for examining ownership now,
-while the arrangement is still being set by defaults rather than by evidence.
+This paper's claim is economic before it is technical: **AI changes switching costs**.
+If accumulation is what makes an assistant valuable, then accumulation is also what
+makes it expensive to leave — every conversation deepens a store of context that does
+not transfer, so the act of using the product manufactures the cost of leaving it
+(§3). Hosted accumulation then fails its user in two distinct ways: *leakage*, where
+interaction exhaust improves an asset the user does not own [nadella-rip], and
+*captivity*, where the accumulation resides on the provider's premises, subject to
+its continuity, pricing, and terms. Existing remedies are partial: enterprise tenant
+boundaries answer leakage but not captivity, and memory-portability protocols
+[portable-agent-memory; samep] carry only one layer of what a user accrues — a
+hypothesis we make precise, and test. The value of accumulated personalization is
+itself contested [recentering-humans]; in our view that strengthens the case for
+settling ownership now, while the arrangement is being set by defaults rather than by
+evidence.
 
-Our position, stated plainly: a personal assistant should be *nurtured at home* —
-grown in an environment the user owns. We present MulmoClaude, an open-source system
-that instantiates this position, built around an architecture we call
-*schema-as-application*. When the user describes something they need — a restaurant
-list, an invoice tracker, a vocabulary drill — the model does not generate an
-application; it authors a small declarative schema. A host runtime, not the model,
-does the executing: it renders the interface from the schema, enforces the schema at
-its write interfaces and its reconciliation loop, and runs recurrence and reminders
-over a plain-file workspace on the user's own machine. The model authors the
-application; the host runs it; the records endure. The host's enforcement is tiered
-by consequence — an invalid schema never becomes a live application, invalid data is
-quarantined and reported for repair rather than trusted, and the one place
-model-authored code runs is contained in a capability-scoped sandbox (§5). Because
-the workspace is plain files, the accumulation is inspectable, copyable, and
-independent of any single vendor or model.
+Our position: a personal assistant should be *nurtured at home* — grown in an
+environment the user owns. We present MulmoClaude, an open-source system that
+instantiates this position through an architecture we call *schema-as-application*.
+When the user describes something they need — a restaurant list, an invoice tracker —
+the model does not generate an application; it authors a small declarative schema,
+and a host runtime, not the model, executes it: rendering, validation, recurrence,
+and reminders over a plain-file workspace on the user's own machine (§5). The model
+authors the application; the host runs it; the records endure — inspectable,
+copyable, and independent of any single vendor or model.
 
-We evaluate the architecture in three parts. First, reliability: across a corpus of
-app-creation tasks, we measure how often model-authored schemas are valid, how often
-the host's validation rejects what should not run, and whether reconciliation and
-recurrence behave correctly against a hand-built oracle (E1). Second, capability: on
-a suite of cross-application personal workflows over an accumulated workspace, we
-compare against two observed baselines — an ablation of our own system with
-persistence, validation, and reconciliation disabled (reproducing the
-architecture of one-shot generative-UI systems [jelly] under identical
-conditions) and agentic code generation — with the hosted
-assistant-with-memory alternative discussed qualitatively (E2). Third, migration: we take a workspace
-nurtured over weeks, export what memory-portability protocols carry, and measure —
-by typed inventory and by task replay — what fraction of the assistant's operative
-state survives the move (E3). We report the costs of local-first ownership with the
-same care as its benefits: setup burden, backup responsibility, availability limits,
-and the dependence on rented model capability that local-first does not remove.
+We evaluate the architecture three ways: the reliability of model-authored schemas
+against the production validator, over three independent trials (E1); capability on
+cross-application personal workflows, against an ablation of our own system that
+reproduces one-shot generative-UI architectures [jelly] and against agentic code
+generation (E2); and a migration experiment measuring what memory-only portability
+carries out of a workspace nurtured over weeks (E3). We report the costs of
+ownership — setup, backup, availability, and the rented model capability that
+local-first does not remove — with the same care as its benefits (§7).
 
 This paper contributes:
 
@@ -375,14 +354,9 @@ applications compose (§5.6). Beyond fields, the schema declares behavior the ho
   field's value — in the restaurant list from our own workspace, `rating` is hidden
   until `visited` is true.
 
-Figure 2 shows a complete schema and a record it governs, from our own
-workspace: the `rating` field is an enum whose `when` clause hides it — and
-refuses it on the managed write path — until `visited` is true; the `views`
-entry registers a model-authored map view with an explicitly declared
-read-only capability set, which is all the sandbox will sign tokens for
-(§5.4); and the record is one plain JSON file whose fields the reader can
-check against the schema by eye. Everything the host renders, validates, and
-schedules for this application derives from those declarations.
+Figure 2 shows a complete schema and a record it governs, from our own workspace;
+everything the host renders, validates, and schedules for this application derives
+from those declarations.
 
 The schema-of-the-schema is enforced by a validator that checks not only shape but
 roughly forty cross-field invariants the type system cannot express — that
@@ -406,17 +380,12 @@ the schema is disposable, the records endure, and when the application stops
 fitting, the user says the sentence again.
 
 Evolution is not migration, and the distinction is deliberate. A schema edit
-performs no rewrite pass over existing records: additive changes (a new
-optional field, a widened enum) leave every record valid, while a constraining
-change makes nonconforming records fall into the same repair tier as any other
-invalid data — they drop out of the rendered views, and the validation scan
-reports each one to the model at the next read or present, which proposes
-repairs to the user (observed end-to-end in §6.2, T8). The user-visible signal
-is thus a record's absence from the view plus the assistant's explanation and
-offer to fix — never a silent rewrite of data the model did not author. This
-keeps the destructive-migration failure mode out of the model's reach: the
-worst a bad schema edit can do to existing records is hide them reversibly,
-and the managed edit path will not accept an invalid schema at all (§5.4).
+performs no rewrite pass over existing records: additive changes leave every record
+valid, while a constraining change makes nonconforming records fall into the same
+repair tier as any other invalid data — they drop out of the rendered views and are
+reported to the model for user-approved repair (observed end-to-end in §6.2, T8).
+Destructive migration is thus out of the model's reach: the worst a bad schema edit
+can do to existing records is hide them reversibly.
 
 ### 5.4 Enforcement, honestly: prevent, repair, contain
 
@@ -453,20 +422,9 @@ a schema can be valid and wrong about intent. The remedy is the cheap re-authori
 loop plus the reconciler's error surfacing — mismatches are corrected by saying the
 sentence again, not by trusting the model's first attempt.
 
-Two of these choices are points in a design space rather than requirements of the
-architecture. Because the managed tool path and the raw-file path coexist, access
-mediation is demonstrably a policy: a stricter variant closes the escape hatch and
-moves all data enforcement into the prevent tier, at the cost of the agent's
-generic file-tool legibility. Likewise the substrate: records could live in an
-embedded relational database in the workspace — gaining indexed and relational
-queries while keeping the accumulation local, copyable, and vendor-independent —
-at the cost of human readability, diffability, and the agent's direct access. We
-occupy the plain-files, direct-access corner deliberately: at personal scale
-(order 10³ records in our own workspace) nothing needs an index, and the substrate
-being natively legible to the user, to standard tools, and to the model is worth
-more than query performance. The principles this paper argues — model as author,
-host as runtime, accumulation owned by the user — hold at every corner of this
-space (§8).
+Two of these choices — the raw-file escape hatch and the plain-file substrate — are
+points in a design space rather than requirements of the architecture; §8.2 maps
+that space and defends the corner we occupy.
 
 ### 5.5 The reconciler: convergence, not scheduling
 
@@ -527,10 +485,12 @@ production authoring guide, and validated every result with the production
 validator itself — the same Zod schema and acceptance gates that gate discovery
 at runtime.
 
-We ran the corpus three times with independent agents under an identical
-harness. The trials agree exactly: in each, the poem request was correctly
-declined and 22 of 23 authored schemas were valid on first attempt — **66 of 69
-across trials (95.7%), with zero per-trial variance**. Per-prompt outcomes are
+We ran the corpus three times under an identical harness, each trial by a
+fresh agent instance — a separate process with fresh context, sharing no
+transcripts or intermediate artifacts with the other trials. **The three trials
+produced identical per-prompt outcomes**: in each, the poem request was
+correctly declined and 22 of 23 authored schemas were valid on first attempt
+(66 of 69 authored schemas across trials, 95.7%). Per-prompt outcomes are
 bimodal rather than noisy: 23 of 24 prompts succeeded in all three trials, and
 the one failure — the deliberately overspecified prompt placing a `file` field
 inside a `table` sub-schema, an invariant no author would guess — failed in all
@@ -557,10 +517,11 @@ agent-summoned forms, behind-the-back corruption, temporal recall, and schema
 evolution. Three scored systems: **S**, the full system; **B1**, the ablation — the
 same build with persistence, record validation, and the reconciler disabled,
 reproducing the architecture of one-shot generative-UI systems under otherwise
-identical conditions (the same model, schema language, and renderer; we state
-why the closest published system cannot be operationalized directly and use
-the ablation in its place); **B3**, agentic code
-generation in a plain directory. A fourth natural comparison — a hosted
+identical conditions (the same model, schema language, and renderer); **B3**,
+agentic code generation in a plain directory. B1 is not an implementation of
+Jelly and is not presented as a performance comparison against Jelly, which
+cannot be operationalized directly; it isolates, inside our own system, the
+architectural components that Jelly explicitly defers. A fourth natural comparison — a hosted
 assistant with memory — is discussed qualitatively below rather than scored:
 we did not observe one under the protocol, and an unobserved column in a
 scored table would invite exactly the constructed-to-win reading it deserves.
@@ -636,7 +597,9 @@ renegotiation, B1-T3's cooperative dodge) are reported above.
 Phase 1 inventoried a real workspace nurtured over several weeks of daily use
 (the author's; aggregate counts only) against a pre-registered export scope —
 what memory-portability protocols transfer: conversation history and distilled
-context. The typed transfer matrix, with the workspace's own directory layout
+context. We evaluate the transfer scope these proposals define, not the
+interoperability or implementation quality of either protocol. The typed
+transfer matrix, with the workspace's own directory layout
 as the coding scheme: the conversational layer rides in full (216 memory
 topics, 276 transcripts, 199 summaries); **zero of 43 applications, zero of
 1,228 records, zero of 34 model-authored views, and zero of 88 automations
@@ -682,9 +645,12 @@ gaps:* E1 authoring ran outside the full product loop (same guidance, same
 validator, different shell); T7's form could be summoned but not filled
 through the text-only bridge. (5) *Own-workspace effects:* E3 phase 1 uses the
 author's workspace (disclosed); phase 2 uses a young synthetic accumulation.
-(6) The evaluation infrastructure — ablation switches and deterministic
-clock — ships in the open-source artifact, so every run here is reproducible
-from the public repository.
+(6) *Benchmark provenance:* the E1 corpus and the E2 task suite are
+author-designed, which risks favoring the system under test; both ship verbatim
+in the evaluation tree, and aligning them with third-party task designs or public
+benchmarks is future work. (7) The evaluation infrastructure — ablation switches
+and deterministic clock — ships in the open-source artifact, so every run here is
+reproducible from the public repository.
 
 ---
 
@@ -736,8 +702,8 @@ construction, so swapping the model changes who animates the accumulation, not t
 accumulation itself. Nor is the swap hypothetical: the artifact today runs on
 Claude Code, a second engine (Codex, GPT-based) is in beta testing against the
 same workspace, and support for open-weight models is planned — which would retire
-even the rented-intelligence dependence for users who choose it. The veteran
-capability stays; the generalist is replaceable. We state the neutrality as an
+even the rented-intelligence dependence for users who choose it. The accumulated
+expertise stays; the general-purpose model is replaceable. We state the neutrality as an
 architectural property; benchmarking assistant quality across engine swaps is
 future work.
 
@@ -829,7 +795,7 @@ MulmoClaude.
 
 An assistant that knows everything about you and supports you around the clock
 is not sold anywhere. You cannot buy one — and, we have argued, you should not
-board one out, because the same accumulation that makes it valuable is what
+entrust its upbringing to a vendor-owned environment, because the same accumulation that makes it valuable is what
 makes leaving expensive, and defaults are deciding today where that
 accumulation lives. This paper offered a working alternative default: an
 architecture in which the model authors small declarative applications, a host
