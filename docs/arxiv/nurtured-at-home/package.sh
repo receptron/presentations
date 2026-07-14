@@ -19,6 +19,10 @@ grep -o '\\viewfig{\\figroot/[^}]*}' main.tex | sed 's|.*figroot/||; s|}||' | so
   echo "Packaged: figures/$f"
 done
 
-(cd "$PKG" && tectonic main.tex && rm -f main.pdf)
+# arXiv's AutoTeX does not run BibTeX, so the package must include main.bbl.
+(cd "$PKG" && tectonic --keep-intermediates main.tex)
+test -f "$PKG/main.bbl" || { echo "ERROR: main.bbl was not produced" >&2; exit 1; }
+(cd "$PKG" && rm -f main.pdf main.aux main.log main.blg main.out main.xdv)
 tar -czf "$PKG.tar.gz" -C "$PKG" .
-echo "Packaged: $(pwd)/$PKG.tar.gz (build verified)"
+echo "Contents:"; tar -tzf "$PKG.tar.gz" | sed 's/^/  /'
+echo "Packaged: $(pwd)/$PKG.tar.gz (build verified, .bbl included)"
