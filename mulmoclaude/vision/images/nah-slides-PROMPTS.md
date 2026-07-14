@@ -48,7 +48,9 @@ A small moving box labeled 'memory export' carried by a stick figure out of one 
 
 ### nah-slide9-final-169.png
 
-A moving truck driving away carrying only one small box labeled 'memories'. Left behind on the curb: two sketched app windows labeled 'Restaurant list' and 'Ledger', an alarm clock labeled 'reminders', and a small booklet labeled 'manual'. A red handwritten note: 'these don't move!' with an arrow pointing at the left-behind items.
+(v2 — ラベルを赤字の一言だけに削減、アプリはアイコンで表現。アニメーション化で文字が潰れたため)
+
+A moving truck driving away carrying one small cardboard box. Left behind on the curb: two sketched app windows (one showing a fork and knife icon, one showing a simple table of numbers), a red alarm clock, and a small booklet. A big red arrow points at the left-behind items with one short handwritten note: 'these don't move!'. No other text or labels anywhere.
 
 ### nah-slide10-final-169.png
 
