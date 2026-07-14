@@ -332,9 +332,9 @@ this paper.
 
 ## 5. Architecture: schema as application
 
-*(Implementation facts verified against the MulmoClaude source tree, 2026-07-13;
-file references for reviewers/replication in the comment block at the end of this
-section.)*
+*(Implementation facts in this section are verified against the MulmoClaude
+source tree; exact file references for reviewers and replication are catalogued
+in the open-source artifact's evaluation tree.)*
 
 ### 5.1 Two artifacts, two runtimes
 

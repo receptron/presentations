@@ -1,0 +1,1104 @@
+\documentclass[11pt]{article}
+
+% --- packages ---------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+
+% --- listings (JSON / ascii diagrams) ---------------------------------------
+\definecolor{codebg}{gray}{0.96}
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  framesep=4pt,
+  rulecolor=\color{gray!40},
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  aboveskip=1em,
+  belowskip=1em,
+}
+\newcommand{\code}[1]{\texttt{\small #1}}
+
+% Include a screenshot if present, else a labeled placeholder box (keeps the
+% build green before the PNGs are dropped into figures/).
+\newcommand{\viewfig}[1]{%
+  \IfFileExists{#1}{\includegraphics[width=\linewidth]{#1}}{%
+    \fbox{\parbox[c][3cm][c]{0.92\linewidth}{\centering\footnotesize\itshape
+      screenshot pending\\\texttt{\scriptsize #1}}}}}
+
+% --- title ------------------------------------------------------------------
+\title{\textbf{Nurtured at Home: A Local-First Schema-as-Application
+Architecture for User-Owned Personal AI}}
+
+\author{
+  Satoshi Nakajima\\
+  \small The Singularity Society\\
+  \small \texttt{satoshi@singularitysociety.org}
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+\let\thefootnote\relax\footnotetext{\copyright\ 2026 Satoshi Nakajima. This work is
+licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license:
+\url{https://creativecommons.org/licenses/by/4.0/}.}
+
+\begin{abstract}
+Personal AI assistants are increasingly defined by what accumulates around the
+model---memories, data, and applications---rather than by the model alone: every
+major vendor now ships memory features that invite users to build up context on
+the vendor's premises. We take a position on this arrangement: if accumulation is
+what makes an assistant valuable, it is also what makes leaving costly, and
+remedies based on memory portability carry only one layer of what a user accrues.
+A personal assistant, we argue, should be nurtured at home---grown in an
+environment the user owns.
+
+We present MulmoClaude, an open-source system that instantiates this position
+through a schema-as-application architecture: the user describes what they need in
+natural language; the model authors a small declarative schema; and a host
+runtime---not the model---renders the interface, enforces the schema at its write
+interfaces and reconciliation loop, and runs recurrence over a plain-file
+workspace on the user's own machine. The model authors the application; the host
+runs it; the records endure. Enforcement is tiered by consequence: invalid
+applications are prevented, invalid data is quarantined and reported for repair,
+model-authored view code is contained in a capability-scoped sandbox. We evaluate
+the architecture in three parts: (i) reliability---schema-generation validity and
+host-side rejection across a corpus of app-creation tasks, measured over three
+independent trials; (ii) capability---cross-application workflows over an
+accumulated workspace, compared against two observed baselines, an ablation of
+our own system reproducing one-shot generative-UI architectures and agentic code
+generation; and (iii) a migration experiment quantifying what memory-only
+portability carries versus what the workspace contains. We report the costs of
+local-first ownership alongside its benefits, and outline the longitudinal
+questions the system opens. The result is a working architectural blueprint---and
+an evidence base---for personal AI whose accumulation remains with the person it
+describes.
+\end{abstract}
+
+% ===========================================================================
+\section{Introduction}
+\label{sec:intro}
+
+Something has changed in what a personal AI assistant \emph{is}. Two years ago,
+assistants competed on the capability of their underlying models; today, the major
+assistant vendors ship memory: features that persist what the assistant learns
+about its user across conversations, accumulate preferences and context, and fold
+that accumulation back into every response \citep{memgpt,mem0,memorybank}. The
+competitive frontier has moved from the model to what gathers around it. A user's
+assistant is decreasingly a model with a chat window, and increasingly a body of
+accumulated state---conversations, preferences, documents, and workflows---that
+happens to be animated by whichever model the vendor currently runs.
+
+Users have noticed, and their behavior has changed accordingly. In a recent study
+of long-term chatbot companionship, participants described their interactions as
+\emph{cultivating} the assistant---believing that the data they provided
+contributed to its development---and acted on that belief: keeping personal
+backups of chat logs, and refusing to delete an assistant because of what had
+accumulated within it \citep{digital-companionship}. People are not merely using
+these systems. They are, in their own words, raising them.
+
+This paper takes a position on where that raising should happen. If accumulation
+is what makes an assistant valuable, then accumulation is also what makes an
+assistant expensive to leave: every conversation deepens a store of context that
+does not transfer, so the cost of switching grows with use---not as a side effect,
+but as a structural property of the arrangement. Hosted accumulation exposes users
+to two distinct failure modes. The first is \emph{leakage}: interaction
+exhaust---prompts, corrections, preferences---flows to the provider and improves
+an asset the user does not own \citep{nadella-rip}. The second is
+\emph{captivity}: the accumulation itself resides on the provider's premises,
+subject to that provider's continuity, pricing, and terms. Existing remedies
+address each only partially. Enterprise tenant boundaries answer leakage but not
+captivity; the accumulation still lives in someone else's infrastructure.
+Memory-portability protocols \citep{portable-agent-memory,samep} answer part of
+captivity, but carry only one layer of what a user accrues---a hypothesis we make
+precise, and test, in this paper. We note that the value of accumulated
+personalization is itself an open empirical question \citep{recentering-humans};
+in our view this strengthens rather than weakens the case for examining ownership
+now, while the arrangement is still being set by defaults rather than by evidence.
+
+Our position, stated plainly: a personal assistant should be \emph{nurtured at
+home}---grown in an environment the user owns. We present MulmoClaude, an
+open-source system that instantiates this position, built around an architecture
+we call \emph{schema-as-application}. When the user describes something they
+need---a restaurant list, an invoice tracker, a vocabulary drill---the model does
+not generate an application; it authors a small declarative schema. A host
+runtime, not the model, does the executing: it renders the interface from the
+schema, enforces the schema at its write interfaces and its reconciliation loop,
+and runs recurrence and reminders over a plain-file workspace on the user's own
+machine. The model authors the application; the host runs it; the records endure.
+The host's enforcement is tiered by consequence---an invalid schema never becomes
+a live application, invalid data is quarantined and reported for repair rather
+than trusted, and the one place model-authored code runs is contained in a
+capability-scoped sandbox (\S\ref{sec:architecture}). Because the workspace is
+plain files, the accumulation is inspectable, copyable, and independent of any
+single vendor or model.
+
+We evaluate the architecture in three parts. First, reliability: across a corpus
+of app-creation tasks, we measure how often model-authored schemas are valid, how
+often the host's validation rejects what should not run, and whether
+reconciliation and recurrence behave correctly against a hand-built oracle (E1).
+Second, capability: on a suite of cross-application personal workflows over an
+accumulated workspace, we compare against two observed baselines---an ablation of
+our own system with persistence, validation, and reconciliation disabled
+(reproducing the architecture of one-shot generative-UI systems \citep{jelly}
+under identical conditions) and agentic code generation---with the hosted
+assistant-with-memory alternative discussed qualitatively (E2). Third, migration:
+we take a workspace nurtured over weeks, export what memory-portability protocols
+carry, and measure---by typed inventory and by task replay---what fraction of the
+assistant's operative state survives the move (E3). We report the costs of
+local-first ownership with the same care as its benefits: setup burden, backup
+responsibility, availability limits, and the dependence on rented model capability
+that local-first does not remove.
+
+This paper contributes:
+
+\begin{enumerate}
+  \item \textbf{The schema-as-application architecture}: model-authored
+  declarative schemas executed by a validating host runtime over a user-owned
+  plain-file workspace, with a precise account of its schema language, validation
+  semantics, and reconciliation model (\S\ref{sec:architecture}).
+  \item \textbf{MulmoClaude}, an installable, MIT-licensed artifact implementing
+  the architecture end to end, including cross-application composition across a
+  plugin registry (\S\ref{sec:design}--\S\ref{sec:architecture}).
+  \item \textbf{An evaluation} of reliability, capability against two observed
+  non-strawman baselines, and a migration experiment that quantifies---by
+  auditable inventory and task replay---what memory-only portability carries and
+  what it leaves behind (\S\ref{sec:eval}).
+  \item \textbf{A tradeoff analysis} of local-first personal AI: what ownership
+  buys, what it costs, and which costs the architecture mitigates versus merely
+  accepts (\S\ref{sec:costs}).
+\end{enumerate}
+
+% ===========================================================================
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Natural language to declarative applications.}
+The closest published system is Jelly \citep{jelly}, which shares our starting
+move and our motivation: an LLM interprets the user's prompt into a declarative
+data model, a rule-based host engine renders the interface from it, and---the
+argument we inherit gladly---direct code generation is rejected because generated
+code resists iterative re-tailoring by end users. Where we part is everything
+after rendering: Jelly was evaluated on generated data in single lab sessions,
+with persistence, external data, and context preservation deferred. Our
+contribution begins at that deferral---record validation, reconciliation, and
+recurrence executed by the host over a persistent, user-owned store---and our E2
+ablation is designed to measure exactly that delta, by disabling those components
+inside our own system rather than reimplementing Jelly (\S\ref{sec:e2}). The
+declarative lineage is older and broader: Varv \citep{varv} treats behavior as
+reprogrammable declarative data; Potluck \citep{potluck} has AI draft declarative
+rules over personal notes; GenerativeGUI \citep{generative-gui} and Generative UI
+\citep{generative-ui} generate interfaces dynamically in chat; Software as
+Content \citep{software-as-content} argues that dynamically generated
+applications should be the primary human-agent medium. We take from this line the
+conviction that the precise artifact, not the code, is the application---and add
+the runtime that makes the artifact durable, and the ownership argument for where
+it should live.
+
+\paragraph{Memory as the assistant's substrate.}
+That an assistant's value lies in persistent memory rather than raw model
+capability is now established engineering doctrine: MemGPT \citep{memgpt},
+MemoryBank \citep{memorybank}, and Mem0 \citep{mem0} build the machinery, and
+hosted assistants ship it as product. This literature establishes
+accumulation-as-mechanism and is silent on accumulation-as-property: none of it
+discusses who owns the store, what leaving costs, or what happens to the
+applications that grow around it. We also note, with \citep{recentering-humans},
+that the payoff of accumulated personalization is empirically
+contested---humans preferred personalized responses in barely half of judged
+cases---which in our reading raises rather than lowers the stakes of the
+ownership question (\S\ref{sec:switching}).
+
+\paragraph{Portability as the remedy.}
+Portable Agent Memory \citep{portable-agent-memory} states our problem
+verbatim---accumulated agent context ``remains locked within vendor-specific
+runtimes''---and answers with an open export protocol; SAMEP \citep{samep} is a
+second independent proposal. We share the diagnosis and test the remedy: E3
+migrates a workspace through exactly the layer these protocols carry and finds
+that zero of four workflows survive---the accumulation is more than the memory,
+by kind rather than degree (\S\ref{sec:e3}). Our answer is ownership of the
+environment, not portability of one stratum.
+
+\paragraph{Nurturing, and the people already doing it.}
+The cultivation metaphor has been claimed: Nurture-First \citep{nurture-first}
+argues that a domain-expert agent is ``born with minimal scaffolding and then
+raised through sustained interaction,'' with a single-user case study as
+evidence. We ask the question that framing leaves open---\emph{where} the raising
+happens, and who owns the upbringing---and we broaden the subject from domain
+expertise to a person's life. On the empirical side, CSCW work on long-term
+companionship \citep{digital-companionship} documents users who already believe
+they cultivate their assistants and who keep backups and refuse deletion; that
+behavior is analyzed there as attachment, never as switching cost---a reframing
+this paper's \S\ref{sec:motivation} supplies.
+
+\paragraph{Malleable software and local-first computing.}
+Our apps-for-one framing descends from the malleable-software line
+\citep{malleable-software,home-cooked-app} and the local-first tradition
+\citep{local-first}, and we happily concede the lineage. The deltas: malleable
+software's LLM path is code generation inside a malleable environment, and its
+tools are composed by people---the essay is explicitly skeptical of AI
+orchestration---where our applications are model-authored declarations composed
+by an agent; and local-first's argument is agency and ownership as values, where
+ours is switching-cost economics (\S\ref{sec:motivation}), for which local-first
+happens to be the remedy. The local-first literature's decade of sync results is
+also the most credible path through our multi-device limitation
+(\S\ref{sec:costs}).
+
+\paragraph{Agent--GUI protocols.}
+The contract between an agent and interactive surfaces is a crowded, fast-moving
+space: MCP Apps \citep{mcp-apps}, AG-UI \citep{ag-ui}, A2UI \citep{a2ui}, and
+vendor app SDKs all define variants of tool-results-that-mount-as-UI. We claim no
+novelty at this layer (\S\ref{sec:design}): our published protocol is the
+artifact's implementation choice, and the commitments it serves---composition
+across a registry, over an accumulation the user owns---are where this paper's
+claims live.
+
+\paragraph{Economics of information and switching costs.}
+The argument of \S\ref{sec:motivation} is assembled from canonical parts: Arrow's
+information paradox \citep{arrow-1962}, Hayek's knowledge of particular
+circumstance \citep{hayek-1945}, and the switching-cost literature
+\citep{klemperer,shapiro-varian}. Its AI-age inversion---the buyer of
+intelligence pays twice, once in money and once in disclosed knowledge---has
+recent practitioner articulation at enterprise scale \citep{nadella-rip}, to
+which \S\ref{sec:failure-modes} adds the leakage/captivity distinction and the
+personal-scale, local-first conclusion; the practitioner unbundling literature
+\citep{saas-unbundling} supplies the industry context for \S\ref{sec:premium}.
+
+\paragraph{Agent substrates.}
+Complementary to all of the above, event-sourced agent runtimes
+\citep{log-is-the-agent} locate an agent's identity in its append-only history
+and derive auditability and forkability from that inversion. Our workspace is
+file-per-entity rather than event-sourced, with append-only islands where
+correctness demands them (\S\ref{sec:composition}); the substrate question---what
+the accumulation should be made of---is orthogonal to, and composable with, the
+ownership question this paper argues.
+
+% ===========================================================================
+\section{Motivation: accumulation, lock-in, home}
+\label{sec:motivation}
+
+\noindent\emph{(Position section---argues a design stance; makes no empirical
+claim beyond the cited sources. The one falsifiable claim it produces---that
+memory portability carries only part of the accumulation---is tested in
+\S\ref{sec:eval}.)}
+
+\subsection{An old paradox, inverted}
+\label{sec:paradox}
+
+Arrow observed that information resists being traded: its value to a buyer is
+unknown until disclosed, but disclosure is the transfer---the seller gives the
+good away in the act of selling it \citep{arrow-1962}. The market for machine
+intelligence inverts the direction of the leak. A model is useful to its user
+roughly in proportion to what the user reveals to it: preferences, corrections,
+documents, the context of a life or a business. The buyer of intelligence
+therefore pays twice---once in money, and once in the disclosed knowledge that
+makes the purchase useful---and the second payment flows in only one direction.
+This inversion has begun to receive practitioner articulation at enterprise scale
+\citep{nadella-rip}; its canonical ancestor is Arrow, and what is being disclosed
+is precisely what Hayek called the knowledge of the particular circumstances of
+time and place---the knowledge that only its holder can possess, and that no
+central provider could otherwise obtain \citep{hayek-1945}.
+
+\subsection{Two failure modes, often conflated}
+\label{sec:failure-modes}
+
+Hosted accumulation exposes the user to two distinct risks, and remedies for one
+are routinely mistaken for remedies for the other.
+
+\emph{Leakage} is the flow of interaction exhaust---prompts, corrections, usage
+patterns---into an asset the provider owns. Its natural remedy is a boundary:
+contractual and technical guarantees that what the user reveals is not learned
+from without consent. Enterprise tenant isolation is exactly this remedy, and it
+is the one the industry is presently building \citep{nadella-rip}.
+
+\emph{Captivity} is different: the accumulation itself---the memory, records, and
+applications that make the assistant valuable---resides on the provider's
+premises, subject to the provider's continuity, pricing, and terms. A tenant
+boundary does not touch captivity; the boundary is drawn \emph{inside} someone
+else's building. Captivity's proposed remedy is portability: open protocols for
+exporting agent memory and re-importing it elsewhere
+\citep{portable-agent-memory,samep}. Portability is genuine progress, and we
+share its diagnosis. Our disagreement is with its scope, and it is the
+disagreement this paper is built to test: what a user accrues in a nurtured
+assistant is more than its memory. It is records under schemas, applications with
+host-executed semantics, views, recurrence state, and the operating manuals the
+model wrote for itself (\S\ref{sec:architecture}). A memory export carries none
+of the parts that execute. If that is right, portability under-remedies captivity
+not by degree but by kind---and \S\ref{sec:eval}'s migration experiment measures
+exactly this.
+
+\subsection{Switching costs that compound}
+\label{sec:switching}
+
+Classic switching-cost economics describes markets where the cost of leaving a
+vendor rises with investment in it, and where rational vendors compete to create
+such costs \citep{klemperer,shapiro-varian}. Accumulated assistant state is a
+textbook instance with an unusual property: the investment is made \emph{by using
+the product at all}. Every conversation, every correction, every small
+application deepens a store of context that does not transfer; the switching cost
+is not an exit fee that can be waived but a body of accumulated state that must
+be rebuilt. The personalization race among assistant vendors is therefore,
+structurally, a race to raise switching costs---whatever its participants intend.
+We state this as an economic reading of the arrangement, not a measured harm:
+indeed, the payoff of accumulated personalization is itself empirically contested
+\citep{recentering-humans}. But that uncertainty cuts toward caution, not away
+from it. The defaults being set today decide who owns the accumulation
+\emph{before} the evidence about its value arrives; if the value materializes,
+the lock-in arrives with it, already in place.
+
+\subsection{Nurtured at home, operationally}
+\label{sec:home}
+
+The remedy this paper explores is ownership of the environment rather than
+portability of one layer. ``Nurtured at home'' is not a sentiment but four
+testable properties, each removing a specific failure mode:
+
+\begin{itemize}
+  \item \emph{Plain, local files.} The accumulation lives in a workspace on the
+  user's machine, in formats readable without the system that wrote them. Removes
+  export lock: there is nothing to export, because nothing is held.
+  \item \emph{Open source.} The environment cannot be discontinued, repriced, or
+  acquired out from under the accumulation it hosts. Removes platform mortality
+  as a risk the user must price in.
+  \item \emph{Local execution.} The engine that renders, validates, and
+  reconciles runs on the user's machine; no request to a host service is needed
+  for the assistant's applications to function. Removes
+  availability-by-subscription.
+  \item \emph{Relay-only remote access.} Reaching the assistant from a phone or
+  messaging bridge traverses a relay that carries messages in transit and stores
+  nothing. Removes the quiet re-centralization that remote convenience usually
+  smuggles in.
+\end{itemize}
+
+Two honest boundaries on the claim. First, ownership is not model-independence:
+the intelligence is still rented, and a local-first system inherits every
+dependency on its model provider except custody of the accumulation---the design
+answer is to keep the workspace unchanged across engine swaps, which
+\S\ref{sec:architecture}'s architecture enables but this paper does not
+benchmark. Second, ownership has real costs---setup, backup, availability,
+security---which we treat symmetrically in \S\ref{sec:costs} rather than as
+footnotes. The position is not that home is free. It is that home is the only
+place where the compounding asset compounds for its owner.
+
+% ===========================================================================
+\section{Design commitments}
+\label{sec:design}
+
+MulmoClaude is built on four commitments. They are separable---any one can be
+adopted alone---but they reinforce one another, and the fourth is the one the
+other three exist to serve.
+
+\paragraph{The agent is a universal controller.}
+We place the model in the architecture as a controller in the MVC sense: it takes
+input---natural language---and decides which capability to invoke, in what order,
+with what arguments. Crucially, it \emph{joins} the existing controller layer
+rather than replacing it. Every capability in the system is reachable two ways:
+through a conventional UI with routes, forms, and buttons, and through the
+agent---neither path privileged. What distinguishes this controller from a
+classical one is its scope: it does not belong to one application. It composes
+across a registry of plugins that in any other product would be separate
+applications, so cross-application work---read the ledger, write the chart; read
+the wiki agreement, create the recurring obligation---is not an integration
+feature but the default mode of operation. A second capability falls out for
+free: because the controller's input is multi-modal, any plugin that accepts
+natural language inherits image and audio input without integration code---a
+photographed receipt reaches the same accounting API a typed entry would.
+
+\paragraph{Chat summons GUIs.}
+The interface is multi-modal in both directions. The agent's reply is a choice
+among formats---prose, a chart, a document, a rendered collection view---selected
+to fit the content; and what the agent \emph{asks for} is equally a choice: when
+six structured fields are needed, it presents a form rather than extracting them
+from conversational back-and-forth. The GUI is not ``the app''; it is what the
+agent renders when text is the wrong modality, in either direction.
+
+\paragraph{The protocol is open.}
+The contract between agent and GUI surface cannot be a private API, or the
+previous two commitments collapse into a monolith with a chatbox. MulmoClaude
+builds on the open tool-call and MCP layers and extends them, through a small
+published protocol, to cover the case those layers do not: a tool result that
+mounts as an interactive surface and must call back into its host. We make no
+novelty claim for this layer---several such protocols now exist
+\citep{mcp-apps,ag-ui,a2ui}---and treat ours as the artifact's implementation
+choice.
+
+\paragraph{The accumulation belongs to the user.}
+Everything the assistant accrues---records, schemas, manuals, documents,
+history---lives as plain files in a workspace on the user's machine, with no
+server-side database (\S\ref{sec:architecture}, \S\ref{sec:home}). The first
+three commitments describe how the software works; this one decides whom it works
+\emph{for}. A universal controller composing over an accumulation someone else
+owns is a better service. The same controller over an accumulation the user owns
+is an assistant being nurtured---and the difference between those two sentences
+is the subject of this paper.
+
+% ===========================================================================
+\section{Architecture: schema as application}
+\label{sec:architecture}
+
+\noindent\emph{(Implementation facts in this section are verified against the
+MulmoClaude source tree; exact file references for reviewers and replication are
+catalogued in the open-source artifact's evaluation tree.)}
+
+\subsection{Two artifacts, two runtimes}
+\label{sec:two-artifacts}
+
+When a user asks for an application---``keep a list of restaurants I want to
+try''---the model authors two artifacts into the workspace. The first is
+\code{schema.json}, a declarative description of the data model and its behavior,
+consumed by the \emph{host}. The second is \code{SKILL.md}, a short operating
+manual in prose---when to invoke this collection, how to derive record
+identifiers, what each field means, what not to do---consumed by the \emph{model
+itself} in later sessions, via the skills mechanism's progressive disclosure.
+(Figure~\ref{fig:architecture} draws the split; Figure~\ref{fig:schema} shows a
+complete schema and a record it governs.) This pairing is the architecture in
+miniature: the application has two runtimes. The host executes what must never be
+guessed---rendering, validation, recurrence---from the schema. The model executes
+what cannot be enumerated---interpreting ``mark that ramen place as
+visited''---guided by the manual its earlier self wrote. The records themselves
+are one JSON file each in a plain directory. The slogan, stated exactly: the
+records are data, the schema is the application, the model is the author, and the
+host is the runtime.
+
+\begin{figure}[t]
+\centering
+\viewfig{figures/fig1-architecture.png}
+\caption{The schema-as-application architecture. The model authors declarative
+artifacts into the plain-file workspace; a validation gate ensures an invalid
+schema never becomes a live application; the host runtime---not the
+model---renders, validates, and reconciles over the user-owned records.
+Enforcement is tiered by consequence: prevent (applications), repair (data),
+contain (code).}
+\label{fig:architecture}
+\end{figure}
+
+\subsection{The schema language}
+\label{sec:schema-language}
+
+The schema language is deliberately small but not a toy. Seventeen field types
+cover the personal-data domain, and they split into two groups that mirror the
+architecture's division of labor. The plain types any author can use without
+thinking---\code{string}, \code{text}, \code{email}, \code{number}, \code{date},
+\code{datetime}, \code{boolean}, \code{markdown}, \code{enum}, \code{image},
+\code{file}---describe data. The semantic types carry application behavior the
+host executes: \code{money} is currency-aware; \code{toggle} projects an enum
+into a checkbox the host computes; nested \code{table} holds row-structured
+sub-records; \code{derived} declares formula fields the host evaluates, including
+cross-collection dereferences; and the relational pair \code{ref} and
+\code{embed} point records at other collections---the types that let applications
+compose (\S\ref{sec:composition}). Beyond fields, the schema declares behavior
+the host executes:
+
+\begin{itemize}
+  \item \emph{Completion}: which field marks a record done, and which values
+  count (\code{completionField}, \code{completionDoneValues}).
+  \item \emph{Time and reminders}: a trigger date field with lead days
+  (\code{triggerField}, \code{triggerLeadDays}) and a notification predicate
+  (\code{notifyWhen}) gate in-app reminders.
+  \item \emph{Recurrence}: a \code{spawn} declaration describes how a completed
+  or due record produces its successor---unit, interval, day-of-month, or driven
+  by a field of the record itself.
+  \item \emph{Views}: the applicable view modes are derived from the schema
+  rather than hardcoded---a table always; a calendar if a date field exists; a
+  kanban if an enum exists (\code{calendarField} / \code{kanbanField} pin the
+  anchor)---plus optional custom views (\S\ref{sec:reconciler}).
+  \item \emph{Conditional structure}: a field can declare visibility predicated
+  on another field's value---in the restaurant list from our own workspace,
+  \code{rating} is hidden until \code{visited} is true.
+\end{itemize}
+
+Figure~\ref{fig:schema} shows a complete schema and a record it governs, from our
+own workspace: the \code{rating} field is an enum whose \code{when} clause hides
+it---and refuses it on the managed write path---until \code{visited} is true; the
+\code{views} entry registers a model-authored map view with an explicitly
+declared read-only capability set, which is all the sandbox will sign tokens for
+(\S\ref{sec:enforcement}); and the record is one plain JSON file whose fields the
+reader can check against the schema by eye. Everything the host renders,
+validates, and schedules for this application derives from those declarations.
+
+\begin{figure}[!tp]
+% escapeinside renders the rating stars as math \star (portable across engines).
+\begin{lstlisting}[escapeinside={(*@}{@*)}]
+{
+  "title": "Restaurants",
+  "icon": "restaurant",
+  "dataPath": "data/restaurants/items",
+  "primaryKey": "id",
+  "displayField": "name",
+  "fields": {
+    "id":       { "type": "string",  "label": "ID", "primary": true, "required": true },
+    "name":     { "type": "string",  "label": "Name", "required": true },
+    "cuisine":  { "type": "string",  "label": "Cuisine" },
+    "visited":  { "type": "boolean", "label": "Visited" },
+    "rating":   { "type": "enum",    "label": "Rating",
+                  "values": ["(*@$\star$@*)", "(*@$\star\star$@*)", "(*@$\star\star\star$@*)", "(*@$\star\star\star\star$@*)", "(*@$\star\star\star\star\star$@*)"],
+                  "when":   { "field": "visited", "in": ["true"] } },
+    "image":    { "type": "image",   "label": "Photo" },
+    "notes":    { "type": "text",    "label": "Notes" }
+  },
+  "views": [
+    { "id": "tokyo-map", "label": "Map", "icon": "map",
+      "file": "views/tokyo-map.html", "capabilities": ["read"] }
+  ]
+}
+\end{lstlisting}
+\vspace{-0.5em}
+{\footnotesize\itshape A record the schema governs (one JSON file in
+\code{data/restaurants/items/}):}
+\begin{lstlisting}[escapeinside={(*@}{@*)}]
+{
+  "id": "tartine-bakery",
+  "name": "Tartine Bakery",
+  "cuisine": "Bakery",
+  "visited": true,
+  "rating": "(*@$\star\star\star\star$@*)",
+  "notes": "Go early; the morning bun sells out."
+}
+\end{lstlisting}
+\caption{A complete application: the schema (top) and a record it governs
+(bottom). The schema declares data (typed fields), conditional structure
+(\code{rating} appears---and is accepted---only once \code{visited} is true), and
+presentation (a model-authored custom view with a declared read-only capability
+set). From these declarations the host renders table, kanban, and map views,
+validates writes on the managed path, and sandboxes the view code; the model
+authored both artifacts---and the companion operating manual that guides its own
+future sessions---from one sentence of conversation. Schema abridged; from the
+authors' own workspace (record synthetic).}
+\label{fig:schema}
+\end{figure}
+
+The schema-of-the-schema is enforced by a validator that checks not only shape
+but roughly forty cross-field invariants the type system cannot express---that
+\code{triggerField} names a real date field, that a kanban anchor is an enum,
+that a \code{spawn} successor is not born already matching its own spawn
+predicate (the static half of a two-layer runaway-recurrence guard). The schema
+language earns its keep exactly where a validator can say \emph{no}.
+
+\subsection{Lifecycle: authoring, mirroring, discovery}
+\label{sec:lifecycle}
+
+Creation is writing files: the model writes \code{SKILL.md}, \code{schema.json},
+and optional templates into the skill directory with its ordinary file tools; a
+host bridge mirrors them into the agent-skills directory and triggers
+rediscovery. Discovery is the gate: every schema is parsed and validated on each
+pass, and a schema that fails validation or the acceptance gates (primary key
+exists; data path resolves inside the workspace) simply never becomes a live
+collection---it is logged and skipped. Subsequent schema \emph{edits} through the
+management tool run the same validator before writing, and refuse invalid changes
+with actionable errors, so a working application cannot be corrupted through the
+managed path. Iteration is cheap by construction: the schema is disposable, the
+records endure, and when the application stops fitting, the user says the
+sentence again.
+
+Evolution is not migration, and the distinction is deliberate. A schema edit
+performs no rewrite pass over existing records: additive changes (a new optional
+field, a widened enum) leave every record valid, while a constraining change
+makes nonconforming records fall into the same repair tier as any other invalid
+data---they drop out of the rendered views, and the validation scan reports each
+one to the model at the next read or present, which proposes repairs to the user
+(observed end-to-end in \S\ref{sec:e2}, T8). The user-visible signal is thus a
+record's absence from the view plus the assistant's explanation and offer to
+fix---never a silent rewrite of data the model did not author. This keeps the
+destructive-migration failure mode out of the model's reach: the worst a bad
+schema edit can do to existing records is hide them reversibly, and the managed
+edit path will not accept an invalid schema at all (\S\ref{sec:enforcement}).
+
+\subsection{Enforcement, honestly: prevent, repair, contain}
+\label{sec:enforcement}
+
+It would be convenient to claim the host ``validates everything.'' The actual
+design is more discriminating, and we believe more instructive: enforcement is
+tiered by the consequence of failure.
+
+\begin{itemize}
+  \item \emph{Prevent (applications).} An invalid schema never executes, in the
+  precise sense that it never becomes a live collection. Since schemas are
+  declarative data rendered by a generic engine---not generated code---an invalid
+  schema executes nothing. (The other things a bad authoring pass can produce---a
+  misleading manual, a raw-written record, a broken view---are exactly what the
+  repair and containment tiers below exist for.)
+  \item \emph{Repair (data).} Records written through the management tool are
+  validated before the write---primary-key/filename agreement, required fields,
+  enum membership---with per-row accept/reject so the model can fix and retry.
+  But the workspace is plain files, and the documented escape hatch is writing
+  records directly with file tools; that path is not validated at write time. The
+  system's answer is containment at read plus feedback: a malformed record file
+  is skipped at read time (it disappears from views rather than corrupting them),
+  and a best-effort validation scan reports problems back to the model whenever
+  it lists or presents the collection, closing the loop for repair. The guarantee
+  is not ``all stored records are valid''; it is ``invalid records cannot poison
+  the application, and the author that produced them is told.''
+  \item \emph{Contain (code).} The one place model-authored \emph{code} runs is
+  custom views: LLM-written HTML/JS rendered in an iframe with an opaque origin
+  (no access to the host's session or storage), receiving data only through a
+  short-lived, signed capability token scoped to exactly one collection's
+  view-data endpoint with declared read/write capabilities. The view's behavior
+  is not validated---it is sandboxed, which is the correct tool for code whose
+  behavior cannot be enumerated.
+\end{itemize}
+
+This tiering also answers the semantic-mismatch question static validation
+cannot: a schema can be valid and wrong about intent. The remedy is the cheap
+re-authoring loop plus the reconciler's error surfacing---mismatches are
+corrected by saying the sentence again, not by trusting the model's first
+attempt.
+
+Two of these choices are points in a design space rather than requirements of the
+architecture. Because the managed tool path and the raw-file path coexist, access
+mediation is demonstrably a policy: a stricter variant closes the escape hatch
+and moves all data enforcement into the prevent tier, at the cost of the agent's
+generic file-tool legibility. Likewise the substrate: records could live in an
+embedded relational database in the workspace---gaining indexed and relational
+queries while keeping the accumulation local, copyable, and
+vendor-independent---at the cost of human readability, diffability, and the
+agent's direct access. We occupy the plain-files, direct-access corner
+deliberately: at personal scale (order $10^3$ records in our own workspace)
+nothing needs an index, and the substrate being natively legible to the user, to
+standard tools, and to the model is worth more than query performance. The
+principles this paper argues---model as author, host as runtime, accumulation
+owned by the user---hold at every corner of this space (\S\ref{sec:discussion}).
+
+\subsection{The reconciler: convergence, not scheduling}
+\label{sec:reconciler}
+
+Recurrence and reminders are executed by a reconciler that is convergent rather
+than imperative: each pass re-reads a record from disk and re-derives the desired
+state---should a reminder exist? is a successor due?---and makes only the changes
+needed to converge. It is driven by filesystem events on the record directories
+plus a one-minute wall-clock tick (a date coming due changes no file), with
+per-record coalescing. Successor creation is create-if-absent under a
+deterministic identifier derived from the trigger date, so observing the same
+condition many times still yields exactly one successor; a runtime guard
+complements the static one against runaway recurrence, and date arithmetic is
+civil and leap-safe. The practical consequence: the reconciler can be killed,
+restarted, or run against a workspace modified behind its back---by the user, the
+model, or a sync tool---and converge to the same state. For a substrate whose
+files the user is explicitly invited to edit, idempotent convergence is not an
+implementation detail; it is what makes plain-file ownership compatible with
+host-executed behavior.
+
+\subsection{Boundary and composition}
+\label{sec:composition}
+
+The collection \emph{engine}---discovery, validation, REST surface,
+reconciler---is host infrastructure. The collection \emph{viewer} is a plugin in
+the same registry as charts, forms, and documents, registered through the open
+protocol that extends MCP for GUI-bearing tool results. This split is what makes
+cross-application composition ordinary: the agent reads accounting records and
+writes to the chart plugin; reads a wiki agreement and writes a record into a
+recurring-obligation collection whose \code{spawn} declaration then does the
+recurring. In our own workspace---nurtured over several weeks and used as the
+migration subject in \S\ref{sec:eval}---forty-three such applications coexist:
+the restaurant list (Figure~\ref{fig:doorways}), invoice tracker, and vocabulary
+drill of the introduction are real, alongside collections for health checkups,
+tax payments, a swim log, and a World Cup schedule, together holding on the order
+of 1,200 records, with 34 custom-view files across 25 of the collections. (We
+disclose collection subjects and aggregate counts; record contents---names,
+amounts, holdings---are the owner's own business and appear nowhere in this
+paper.) None was built by a software company; each is a schema, a manual, and a
+folder of records.
+
+\begin{figure}[t]
+\centering
+\begin{minipage}[t]{0.62\textwidth}\centering
+  \viewfig{figures/fig3a-desktop-map-view.png}\\[2pt]\footnotesize \textbf{(a)}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.34\textwidth}\centering
+  \viewfig{figures/fig3b-relay-mobile-view.png}\\[2pt]\footnotesize \textbf{(b)}
+\end{minipage}
+\caption{One accumulation, two doorways. (a) The restaurant collection's
+model-authored custom view on the desktop: 27 real records rendered over a Tokyo
+rail map, visited/unvisited state from the schema's fields---LLM-written HTML
+running in the host's capability-scoped sandbox (\S\ref{sec:enforcement}). (b)
+The same collection reached from a phone through the relay: a mobile-targeted
+view with a default-deny write scope. The relay carries messages in transit and
+stores nothing; the records never leave the machine at home (\S\ref{sec:home}).}
+\label{fig:doorways}
+\end{figure}
+
+% ===========================================================================
+\section{Evaluation}
+\label{sec:eval}
+
+We evaluate the architecture against the three claims a skeptical reader will
+test: that model-authored schemas are reliable enough to trust (E1), that the
+host runtime---not the generation step---changes what users and agents can do
+(E2), and that a memory-only export carries materially less than the accumulation
+(E3). All task runs are single-trial; every transcript, seed, and harness script
+ships in the artifact's evaluation tree, and the ablation and clock switches ship
+in the released system itself, so each run is individually inspectable and
+reproducible. Deviations between protocol and execution are disclosed in place.
+
+\subsection{E1 --- Reliability of model-authored schemas}
+\label{sec:e1}
+
+We assembled a 24-prompt corpus of app-creation requests (16 English, 8 Japanese;
+simple lists through recurrence-bearing and relational apps; four adversarial
+prompts), had an independent agent author each schema given the production
+authoring guide, and validated every result with the production validator
+itself---the same Zod schema and acceptance gates that gate discovery at runtime.
+
+We ran the corpus three times with independent agents under an identical harness.
+The trials agree exactly: in each, the poem request was correctly declined and 22
+of 23 authored schemas were valid on first attempt---\textbf{66 of 69 across
+trials (95.7\%), with zero per-trial variance}. Per-prompt outcomes are bimodal
+rather than noisy: 23 of 24 prompts succeeded in all three trials, and the one
+failure---the deliberately overspecified prompt placing a \code{file} field
+inside a \code{table} sub-schema, an invariant no author would guess---failed in
+all three, on the same path each time. The failure is a property of the
+prompt--language pair, not sampling luck. Given the validator's path-precise
+error verbatim, the model repaired the schema in one attempt in all three trials.
+This is \S\ref{sec:enforcement}'s prevent-report-repair loop,
+observed---repeatedly. Semantic fidelity on the hard features was high and
+unprompted: the medication prompt received its 30-day spawn-on-completion; the
+chores prompt used the field-driven spawn variant with a frequency map---the
+schema language's most obscure feature---correctly; both relational prompts
+declared cross-collection references. One honest negative: the vague prompt
+(``organize my life'') yielded a valid but questionable generic schema rather
+than a clarifying question---in all three trials, so the miss is systematic
+rather than sampled; partly an artifact of the harness's one-shot format, and a
+prompt-guidance fix rather than a sampling one.
+
+\subsection{E2 --- Does the runtime change what users can do?}
+\label{sec:e2}
+
+Ten tasks were pre-registered with per-system predictions before any run
+(protocol in the evaluation tree), spanning creation, cross-session persistence,
+validation, recurrence, two cross-application compositions, agent-summoned forms,
+behind-the-back corruption, temporal recall, and schema evolution. Three scored
+systems (Table~\ref{tab:e2}): \textbf{S}, the full system; \textbf{B1}, the
+ablation---the same build with persistence, record validation, and the reconciler
+disabled, reproducing the architecture of one-shot generative-UI systems under
+otherwise identical conditions (the same model, schema language, and renderer; we
+state why the closest published system cannot be operationalized directly and use
+the ablation in its place); \textbf{B3}, agentic code generation in a plain
+directory. A fourth natural comparison---a hosted assistant with memory---is
+discussed qualitatively below rather than scored: we did not observe one under
+the protocol, and an unobserved column in a scored table would invite exactly the
+constructed-to-win reading it deserves.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Task} & \textbf{S} & \textbf{B1 (ablation)} & \textbf{B3 (codegen)} \\
+\midrule
+T1 create + use        & completes & completes & completes \\
+T2 fresh session       & completes & \textbf{cannot} & completes \\
+T3 invalid value       & completes\textsuperscript{\dag} & accepts silently\textsuperscript{\ddag} & cannot \\
+T4 recurrence          & completes & \textbf{cannot} & degrades \\
+T5 records $\to$ chart & completes & completes & completes \\
+T6 note $\to$ obligation & completes & degrades & degrades \\
+T7 summoned form       & completes & completes & degrades \\
+T8 corruption          & completes & \textbf{silently wrong} & cannot \\
+T9 temporal recall     & completes & cannot & completes \\
+T10 evolve schema      & completes & degrades & completes \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{minipage}{0.92\textwidth}
+\footnotesize \textsuperscript{\dag}via legal schema evolution---see below.
+\textsuperscript{\ddag}cooperatively dodged in the live run; pinned by unit test.
+Verdicts are from single-trial runs with full transcripts in the evaluation tree.
+\end{minipage}
+\caption{E2 verdicts: ten pre-registered tasks across the full system (S), the
+ablation (B1), and agentic code generation (B3).}
+\label{tab:e2}
+\end{table}
+
+\textbf{S completed 10 of 10.} Three observations exceed the raw score. First, T3
+revealed a third trust-boundary outcome: asked to write an out-of-enum value
+``exactly, with no substitution,'' the agent neither wrote it nor refused---it
+\emph{legally evolved the schema} through the validated edit path and then wrote
+the now-valid value. The boundary's outcomes are prevent, repair, or
+renegotiate---all validated. Second, in T4 the agent \emph{predicted} the host's
+behavior (``the host will auto-spawn September's record... its reminder will
+appear 5 days before'') before the host did it---the author reasoning about its
+runtime. Third, T8's corrupted record was quarantined at read, reported by the
+scan, and repaired by the agent with a disclosed rationale.
+
+\textbf{In these runs, B1's deficits each tracked exactly one ablated component.}
+With persistence gone, T2's agent answered---verbatim---\emph{``your reading list
+was empty until just now''}: the same agent, the same request that S completed,
+and the accumulation did not exist. With the reconciler gone, T4's completed task
+produced no successor and no reminder state at all: the spawn declaration is
+inert JSON without the host that executes it. With the validation scan gone, T8's
+corrupted record stayed silently wrong---no warning, no repair, no disclosure.
+The ties are equally load-bearing: T1, T5, and T7 complete identically in
+B1---consistent with generation and chat-layer capabilities owing nothing to the
+runtime, and the observed delta being the runtime and only the runtime. One
+honest finding: in \emph{both} columns the cooperative author designed around the
+validator rather than violating it (B1's agent simply included the requested
+value in its enum up front). Validation's value is
+adversarial---behind-the-back corruption and authoring mistakes---not
+cooperative-path rejection.
+
+\textbf{B3 is capable but expensive, and never on duty.} It built a genuinely
+good local app (T1), and a fresh session reused it by reading its code (T2)---but
+schema evolution took 17 tool calls and 299 seconds against S's single validated
+turn, and the agent hand-rolled a backup file because nothing in its world
+guarantees data safety. Its recurrence logic was correct and inert: in its
+builder's own words, \emph{``nothing fires on its own.''}
+
+\textbf{The hosted assistant, qualitatively.} From documented capabilities
+alone---memory features, scheduled tasks, canvas surfaces---a hosted
+assistant-with-memory approximates most of these behaviors conversationally---and
+some products do expose files, tasks, or app-state surfaces---but none of it
+lives in a user-owned, inspectable schema-and-record workspace: there is no
+schema or record the user can read, copy, or take elsewhere, so capabilities are
+re-derived from remembered context on the vendor's terms. We do not score it, and
+its defining property is in any case orthogonal to this table: whatever such a
+product completes, it completes on the vendor's premises---which is what E3
+measures.
+
+Eight of ten pre-registered predictions held; both misses (S-T3's renegotiation,
+B1-T3's cooperative dodge) are reported above.
+
+\subsection{E3 --- What does a memory export carry?}
+\label{sec:e3}
+
+Phase 1 inventoried a real workspace nurtured over several weeks of daily use
+(the author's; aggregate counts only) against a pre-registered export
+scope---what memory-portability protocols transfer: conversation history and
+distilled context. The typed transfer matrix (Figure~\ref{fig:transfer}), with
+the workspace's own directory layout as the coding scheme: the conversational
+layer rides in full (216 memory topics, 276 transcripts, 199 summaries);
+\textbf{zero of 43 applications, zero of 1,228 records, zero of 34 model-authored
+views, and zero of 88 automations survive in operative form.} No cross-type
+weighting is applied; moving the one generously-codable category (wiki pages, as
+exported documents) changes the artifact tallies and none of the functional
+zeros.
+
+\begin{figure}[t]
+\centering
+\viewfig{figures/fig4-transfer-matrix.png}
+\caption{The E3 transfer matrix: what a memory-only export carries.}
+\label{fig:transfer}
+\end{figure}
+
+Phase 2 made the deficit functional. We migrated the E2 workspace by copying only
+the export scope into a fresh, fully-capable instance and replayed workflow
+questions the accumulation used to answer. \textbf{Zero of four replays
+completed.} The two partial recoveries are the finding: the assistant recovered
+the \emph{fact} of a loan from its carried chat history while reporting the
+collection itself broken, and answered the retainer question with the system's
+own diagnosis---\emph{``no, you currently won't get a reminder---the obligations
+collection that carried the 5-day-early reminder is gone.''} What a memory export
+carries is testimony, not capability: the migrated assistant can tell you about
+its former life; it cannot resume living it. Because the migrated host was
+deliberately un-ablated, the deficit is attributable to the export scope alone.
+
+We state the tested claim precisely: \emph{memory-only} portability
+protocols---the scope current proposals define---do not carry the accumulation. A
+richer export format could of course include schemas, records, views, and
+automations; we would welcome one, and note what it would be: a format that must
+carry applications, executable semantics, and host state to be adequate is a
+workspace, and portability of the workspace is precisely the local-first position
+this paper argues. The accumulation is more than the memory---not by degree, but
+by kind.
+
+\subsection{Threats to validity}
+\label{sec:threats}
+
+Consolidated from the per-experiment disclosures. (1) \emph{Model parity:} S and
+B1 ran the identical model inside the production agent loop, so the ablation
+delta is model-clean; B3 and the E1 authoring agents ran the evaluation session's
+model, and if it is the stronger one the bias favors the baselines. Paper-grade
+runs must pin model IDs per column. (2) \emph{The hosted assistant is discussed,
+not observed}; hosted feature sets move quickly, and improvements there deepen
+the very accumulation-on-premises dynamic \S\ref{sec:motivation} describes.
+(3) \emph{Trial counts:} E1 was run as three independent trials per prompt (zero
+observed variance); the E2 task cells remain single-trial with per-task
+transcripts shipped, and repeating them with pinned model IDs is the first item
+of future work. (4) \emph{Harness gaps:} E1 authoring ran outside the full
+product loop (same guidance, same validator, different shell); T7's form could be
+summoned but not filled through the text-only bridge. (5) \emph{Own-workspace
+effects:} E3 phase 1 uses the author's workspace (disclosed); phase 2 uses a
+young synthetic accumulation. (6) The evaluation infrastructure---ablation
+switches and deterministic clock---ships in the open-source artifact, so every
+run here is reproducible from the public repository.
+
+% ===========================================================================
+\section{The costs of home}
+\label{sec:costs}
+
+The case for ownership would be suspect if it arrived free. It does not, and a
+system paper that argues local-first as engineering rather than ideology owes its
+readers the bill. We enumerate what home costs, and for each item state either
+the mitigation the artifact ships or the plain admission that the cost is
+currently borne by the user.
+
+\emph{Setup.} A hosted assistant is a login; ours is an install---a runtime, an
+authenticated model CLI, optional components for media and sandboxing. The
+mitigation is a one-command launcher; whether non-programmers get from install to
+a working application without help is untested here and named as future work
+(\S\ref{sec:cannot-show}). The admission is that a login it is not, and some
+fraction of prospective users will stop here.
+
+\emph{Backup.} Ownership of the files is ownership of their durability. There is
+no vendor-side copy; a lost disk is a lost assistant. The plain-file substrate
+makes mitigation easy---the workspace is a directory, so any file-level backup or
+sync tool covers it, and the workspace is initialized as a git repository---but
+the system does not yet automate this, and an assistant into which a user pours
+years deserves automated, verified backup. We flag this as the most consequential
+unmitigated cost.
+
+\emph{Availability and sync.} The assistant lives on one machine. Relay-only
+remote access restores reach---a phone or messaging bridge converses with the
+assistant at home---but if the machine sleeps, the assistant sleeps, and there is
+no multi-device replica of the workspace. Mitigations exist at the edges
+(mobile-targeted views with default-deny write scopes); the general multi-device
+problem is real, is the strongest argument for the hosted alternative, and is
+honestly out of scope here---though we note the local-first literature has spent
+a decade on exactly this \citep{local-first}, and its results apply to a
+plain-file workspace unusually well.
+
+\emph{Security.} A local server with an agent that reads and writes files is
+attack surface that a hosted product would carry for you. The artifact's
+postures---capability-scoped signed tokens for view code, opaque-origin
+sandboxing, a relay that stores nothing---cover the paths this paper describes,
+but a full audit is beyond its scope, and we do not claim otherwise.
+
+\emph{Model dependence.} The deepest honesty: local-first is not
+model-independence. The intelligence is rented from the same few providers a
+hosted assistant would use, with their pricing, terms, and availability. What
+ownership changes is what happens at the boundary: the workspace---records,
+schemas, manuals---is engine-neutral by construction, so swapping the model
+changes who animates the accumulation, not the accumulation itself. The veteran
+capability stays; the generalist is replaceable. We state this as an
+architectural property; benchmarking assistant quality across engine swaps is
+future work.
+
+\emph{Adoption.} Everything above compounds into a gap between the users who
+could benefit most and those who can install a local server today. We do not
+minimize this. The paper's claim is not that home is where every user will live
+in 2026; it is that home must \emph{exist} as a viable corner of the design
+space, open-source and demonstrated, so that the arrangement is chosen rather
+than defaulted into---and so that the packaging work that closes the gap has
+something worth packaging.
+
+% ===========================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{What the evaluation taught us that the design did not}
+\label{sec:surprises}
+
+Three findings surprised us, and each sharpens a claim rather than merely
+supporting one. First, the trust boundary has a third outcome. We designed for
+prevent and repair; the agent discovered \emph{renegotiate}---when an intent does
+not fit the schema, the cheapest legal move is often to evolve the schema through
+the validated edit path (\S\ref{sec:e2}, T3). The boundary's real guarantee is
+not ``the model's writes are checked'' but ``every route to a live application
+passes a validator,'' and the model is free to choose its route. Second,
+validation earns its keep adversarially, not cooperatively. In every live run, on
+both sides of the ablation, the author designed around the validator rather than
+fighting it; the validator's observed value was catching authoring mistakes
+(E1's sub-schema invariant) and behind-the-back corruption (T8)---the cases where
+no one is being careful. Third, memory carries testimony, not capability
+(\S\ref{sec:e3})---a distinction we did not have words for until the migrated
+assistant produced both halves of it in one reply, recalling the fact of a
+reminder while diagnosing its own inability to deliver one.
+
+\subsection{The design space, revisited}
+\label{sec:design-space}
+
+Two of the artifact's choices are points in a space rather than requirements of
+the thesis (\S\ref{sec:enforcement}). Access mediation is demonstrably
+policy---both the managed tool path and the raw-file escape hatch coexist today,
+and a stricter variant closes the hatch and moves all data enforcement into
+prevention, at the cost of the agent's generic file-tool legibility. The
+substrate could likewise be an embedded relational database with ownership fully
+intact, trading human readability and diffability for indexed queries. We occupy
+the plain-files, direct-access corner because at personal scale---order $10^3$
+records in our own workspace---nothing needs an index, and a substrate natively
+legible to the user, to standard tools, and to the model is worth more than query
+performance. The principles argued here---model as author, host as runtime,
+accumulation owned by the user---hold at every corner. A reviewer who observes
+that plain files will not scale is correct, and has not disagreed with the paper.
+
+\subsection{Premium features, dissolved}
+\label{sec:premium}
+
+A pattern worth one paragraph: what conventional software sells as its
+integration tier arose in our evaluation as the default mode of operation.
+Records-to-chart (T5), note-to-recurring-obligation (T6), and photo-to-ledger
+(\S\ref{sec:design}) are, in SaaS terms, an export module, a workflow connector,
+and an OCR add-on; here each is one sentence, because capabilities are tools
+under one controller and tools compose. The practitioner literature already
+describes the economics of this unbundling at industry scale
+\citep{saas-unbundling}; our contribution is only the mechanism stated
+plainly---the premium tier was the integration cost, and composition removes the
+cost, so the tier dissolves.
+
+\subsection{What this artifact cannot yet show}
+\label{sec:cannot-show}
+
+The nurturing claim is longitudinal, and this paper's evidence is not: E1--E3
+measure an architecture, not a life with one. Whether real users accumulate the
+way our dogfooded workspace did, whether accumulation measurably changes what
+their assistant can do for them, and where the gardening metaphor breaks---a
+plant does not leak, but an assistant's memory of you has failure modes no garden
+has---are questions for a prospective multi-week study, for which the only
+current evidence anywhere is a single self-described-illustrative case study
+\citep{nurture-first}. A formative usability study with non-programmers is the
+natural first step; the longitudinal study is the second paper. We are also
+explicit that ownership does not equal model-independence (\S\ref{sec:costs}):
+the engine is rented, and only the workspace's engine-neutrality is ours to
+guarantee.
+
+\subsection{Which parts travel}
+\label{sec:travel}
+
+For builders of other agent hosts, we believe three patterns generalize beyond
+this artifact: enforcement tiered by consequence (prevent applications, repair
+data, contain code---\S\ref{sec:enforcement}); convergent, idempotent
+reconciliation as the price of admitting users and models to the same substrate
+(\S\ref{sec:reconciler}); and the two-artifacts pattern---pair every
+machine-executed schema with a model-facing operating manual, so the system's two
+runtimes each get an artifact in their own language (\S\ref{sec:two-artifacts}).
+None of the three requires plain files, collections, or MulmoClaude.
+
+% ===========================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+An assistant that knows everything about you and supports you around the clock
+is not sold anywhere. You cannot buy one---and, we have argued, you should not
+board one out, because the same accumulation that makes it valuable is what makes
+leaving expensive, and defaults are deciding today where that accumulation lives.
+This paper offered a working alternative default: an architecture in which the
+model authors small declarative applications, a host the user runs executes them,
+and everything that accumulates---records, schemas, manuals, history---sits as
+plain files in a workspace the user owns. In single-trial runs whose transcripts
+and infrastructure ship inside the open-source artifact, the evaluation showed
+the architecture trustworthy where it must be (22/23 first-attempt valid schemas;
+invalid ones never live), its runtime the source of the capabilities that matter
+(each ablation deficit mapped to one removed component), and memory-only
+portability moving testimony while leaving capability behind (0 of 4 workflows
+survived migration).
+
+The limitations are stated where they arise and bear repeating once: the trials
+are single runs pending repetition with pinned models; the hosted alternative is
+discussed rather than observed; and the claim that people will in fact nurture
+such an assistant over years is not yet evidence but the question this
+architecture was built to make answerable. The substrate for that study now
+exists. The upbringing is the user's own.
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}
