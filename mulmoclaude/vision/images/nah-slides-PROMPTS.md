@@ -125,3 +125,19 @@ A fork in the road drawn in marker: the wide left path leads to a huge cloud wit
 ### nah-slide26-final-169.png
 
 A stick figure and a small friendly robot standing side by side in front of a house at sunrise, the sun drawn with red marker rays. Large handwritten Japanese text across the top: 育てるのは、あなた自身 underlined in red. Small handwritten 'MulmoClaude' in the bottom corner.
+
+## 英語版バリアント(nurtured-at-home.json 用、2026-07-14)
+
+日本語入りだった3枚のみ英語版を生成(モデル・スタイルは同一)。他の22枚とサイレント動画は日英で共有。
+
+### nah-slide2-final-169-en.png
+
+A stick figure lovingly watering a small green sprout that grows out of an open laptop. A simple house outline drawn around them, a smiling sun in the top corner. One handwritten label 'HOME' underlined in red. No other text anywhere.
+
+### nah-slide22-final-169-en.png
+
+A two-column comparison drawn in marker: left column headed 'Memories' with a small photo album sketch and a big green checkmark labeled 'moves'; right column headed 'Abilities' with a gear and alarm clock sketch and a big red X labeled 'does not move'. A thick red underline across the bottom. No other text.
+
+### nah-slide26-final-169-en.png
+
+A stick figure and a small friendly robot standing side by side in front of a house at sunrise, the sun drawn with red marker rays. Large handwritten text across the top: 'Raised by YOU' underlined in red. Small handwritten 'MulmoClaude' in the bottom corner. No other text.
