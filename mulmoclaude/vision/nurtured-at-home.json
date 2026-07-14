@@ -1,0 +1,659 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "title": "The AI Assistant You Raise at Home",
+  "description": "Your own personal AI assistant is not sold anywhere — you raise it in an environment you own. The dangers of entrusted accumulation, the four conditions of home, blueprints that become apps, three layers of safety, and the moving experiment: moving the memory moves the memories, not the abilities.",
+  "lang": "en",
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter",
+          "ja": "プレゼンター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Speak in a bright, warm, hopeful tone — like happily introducing something precious to a friend. Gentle and positive throughout; tighten up slightly for the experiment sections, and slow down for the closing lines to leave a lingering finish."
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "style": "Whiteboard marker drawing: a hand-drawn sketch on a clean white dry-erase whiteboard, drawn with black, blue, red and green marker pens. Rough but confident strokes, simple diagrams, boxes, arrows, stick figures, underlines and quick handwritten labels. Slight marker texture, a few faint eraser smudges. Flat, bright, evenly lit, full-bleed white background. No photorealism, no gradients, no 3D rendering, no watercolor."
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
+    "bgmVolume": 0.12,
+    "audioVolume": 1
+  },
+  "beats": [
+    {
+      "text": "It knows everything about you, and supports your work and your life around the clock. That kind of assistant — your own personal AI — is not sold anywhere in the world yet. But you can make one. And once you start raising it, its value grows a little every day. There is only one way: nurture it with your own hands, in a place you can call home. And we have built the machinery for it — and put it to the test.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide1final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide1-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide1final"
+      },
+      "duration": 18.3
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide2final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide2-final-169-en.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide2final"
+      }
+    },
+    {
+      "text": "What an AI assistant really *is* has been changing. Two years ago, the battleground was how smart the model was. Today, every major vendor ships \"memory\" — features that remember you across conversations. Conversations, preferences, records, apps: the substance of your assistant is this growing pile about you. The model is just the engine that runs it.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide3final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide3-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide3final"
+      },
+      "duration": 13.8
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide4final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide4-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide4final"
+      }
+    },
+    {
+      "text": "Users have noticed. In a study of people in long-term relationships with chatbots, participants described the relationship as raising their assistant. Some kept backups of their chat logs; some could not bring themselves to delete an assistant, because of what had built up inside. People are not just using these systems — they are raising them.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide5final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide5-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide5final"
+      }
+    },
+    {
+      "text": "Here is the catch. If what piles up as you use it is the value, that same pile is also why you cannot leave. The longer you use it, the harder switching becomes. And an accumulation entrusted to a company carries two dangers. One is siphoning: the data of your daily life becomes fuel for making the company's AI smarter — and the company's asset. The other is captivity: your data and apps sit on the company's servers, so a price hike, a change of terms, or a shutdown can come any day, and you get no veto.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide6final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide6-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide6final"
+      },
+      "duration": 11.2
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide7final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide7-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide7final"
+      }
+    },
+    {
+      "text": "The industry's answer is \"portability\": take the memory out and move it somewhere else. Real progress. But what accumulates in a nurtured assistant is more than conversation memory: apps like a restaurant list or a household ledger, and their data; reminders that arrive on the right day; the manuals the AI wrote for itself. A memory export carries none of the parts that actually run.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide8final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide8-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide8final"
+      },
+      "duration": 6.9
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide9final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide9-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide9final"
+      }
+    },
+    {
+      "text": "That is why an AI assistant should be nurtured at home — in an environment you yourself own. Home has four conditions. First, your data sits on your own computer, as ordinary files. Second, the software is open source — no shutdown, price hike, or acquisition can take it away. Third, your apps run locally: even if someone's server goes down, your apps, your data, and your reminders keep working at home. Fourth, when you connect from outside, the relay in between stores nothing. Together, these close off the ways you could lose what you have grown.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide10final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide10-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide10final"
+      },
+      "duration": 8.3
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide11final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide11-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide11final"
+      }
+    },
+    {
+      "text": "So we built a system called MulmoClaude. When you say \"keep a list of restaurants I want to try,\" the AI does not write the app's program. Instead, it writes the app's blueprint — we call this blueprint a \"schema.\" The one who executes the blueprint is the \"host,\" MulmoClaude itself: drawing the screens, checking the data, running the reminders. In one line: the blueprint is the app, the AI is the author, and the host runs it.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide12final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide12-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide12final"
+      },
+      "duration": 14.2
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide13final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide13-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide13final"
+      }
+    },
+    {
+      "text": "The AI also writes one more thing: an instruction manual for its own future self. When to use this app, what each field means, what not to do. When you say \"mark that ramen place as visited,\" deciding what that means is the AI, reading its own manual. What can be pinned down precisely, the host executes reliably; interpreting your words is the AI's job. And the data sits as ordinary files, in a folder you can open yourself.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide14final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide14-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide14final"
+      },
+      "duration": 9.0
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide15final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide15-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide15final"
+      }
+    },
+    {
+      "text": "Still, AI makes mistakes. So we built three layers of safety. Broken things never run: if the blueprint has an error, the host refuses it, and a broken app never starts. Broken data gets quarantined: a bad record is isolated — that one record only — and the AI is told, and offers a fix. And code the AI writes runs only inside a cage: the only code it writes is for special screens like maps and charts, and that code runs in an isolated area that can touch only the data it was granted. Nothing the AI produces is trusted unconditionally.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide16final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide16-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide16final"
+      },
+      "duration": 19.0
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide17final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide17-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide17final"
+      }
+    },
+    {
+      "text": "We put this to the test. We ran seventy-two rigorous tests of app-building in both Japanese and English. Not once did a broken blueprint start running as an app. Only one kind of request stumbled — and told by the host what was wrong, the AI fixed it in a single try, every time.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide18final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide18-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide18final"
+      }
+    },
+    {
+      "text": "Finally, the moving experiment. A real workspace, nurtured for weeks, held dozens of apps and more than a thousand records. From it, we moved only what portability protocols carry: the conversation memory. All of it survived. But that was all. The apps, the records, the reminders that should have arrived on their own — all gone. The assistant in its new home still remembered me. Asked about a payment, it could even recall from its history that a reminder had existed. But it admitted, itself, that it could no longer deliver one. Nothing that supported my life had made the move. Moving the memory moves the memories, not the abilities. It could talk about the old life; it could no longer support that life.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide20final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide20-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide20final"
+      },
+      "duration": 14.1
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide21final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide21-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide21final"
+      },
+      "duration": 25.9
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide22final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide22-final-169-en.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide22final"
+      }
+    },
+    {
+      "text": "Of course, home takes effort. It is an install, not a login. Backup is your job — though the assistant's entire fortune fits in one folder, and copying that folder is a complete backup; today's users keep it with git, history and all. And the AI model — the brain — is still rented. But the workspace is designed so the model can be swapped: Claude Code today, a GPT-based engine in beta, open models planned. Swap the engine, and everything you have grown stays yours.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide23final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide23-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide23final"
+      },
+      "duration": 16.6
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide24final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide24-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide24final"
+      }
+    },
+    {
+      "text": "Where will your memories, your data, and your apps live? That choice is being settled right now, by default, as \"just leave it with whatever service everyone uses.\" MulmoClaude offers another choice. The AI builds the apps. A host on your own computer runs them. Everything that piles up stays as your own files. An assistant that knows everything about you and supports you around the clock is still not sold anywhere. But you can raise one — and the one who raises it is you. The brain can be rented. But what you have raised need never be borrowed.",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide25final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide25-final-169.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide25final"
+      },
+      "duration": 20.7
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "image",
+        "source": {
+          "kind": "path",
+          "path": "./images/nah-blank-whiteboard.png"
+        }
+      },
+      "images": {
+        "slide26final": {
+          "type": "image",
+          "source": {
+            "kind": "path",
+            "path": "./images/nah-slide26-final-169-en.png"
+          }
+        }
+      },
+      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
+      "movieParams": {
+        "model": "wan-video/wan-2.2-i2v-fast",
+        "lastFrameImageName": "slide26final"
+      }
+    }
+  ]
+}
