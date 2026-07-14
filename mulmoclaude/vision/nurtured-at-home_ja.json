@@ -460,7 +460,7 @@
       }
     },
     {
-      "text": "本当に信頼できるのか、実験で確かめました。日本語と英語でさまざまなアプリ作りをAIに任せ、合計72回のテストを行いましたが、壊れた設計図がアプリとして動き出したことは、ただの一度もありません。つまずいたのはたった一種類の依頼で、それも、ホストにエラーを指摘されたAIが、毎回一度で直してみせました。もうひとつ、意地悪な実験もしました。今度は、読書リストのデータはそのままに、設計図のスキーマだけを取り除いてみたのです。ファイルはちゃんと残っています。それなのに、アシスタントに読書リストのことを尋ねると、答えは「読書リストは存在しません」。データが残っていても、設計図がなければ、AIはそれを解釈できないのです。",
+      "text": "本当に信頼できるのか、実験で確かめました。日本語と英語でさまざまなアプリ作りをAIに任せ、合計72回のテストを行いましたが、壊れた設計図がアプリとして動き出したことは、ただの一度もありません。つまずいたのはたった一種類の依頼で、それも、ホストにエラーを指摘されたAIが、毎回一度で直してみせました。",
       "image": {
         "type": "image",
         "source": {
@@ -481,31 +481,6 @@
       "movieParams": {
         "model": "wan-video/wan-2.2-i2v-fast",
         "lastFrameImageName": "slide18final"
-      },
-      "duration": 23.3
-    },
-    {
-      "text": "",
-      "image": {
-        "type": "image",
-        "source": {
-          "kind": "path",
-          "path": "./images/nah-blank-whiteboard.png"
-        }
-      },
-      "images": {
-        "slide19final": {
-          "type": "image",
-          "source": {
-            "kind": "path",
-            "path": "./images/nah-slide19-final-169.png"
-          }
-        }
-      },
-      "moviePrompt": "Whiteboard-animation time-lapse: a hand with a marker draws this exact illustration, stroke by stroke, and moves away when it is finished. Fixed camera, bright even lighting.",
-      "movieParams": {
-        "model": "wan-video/wan-2.2-i2v-fast",
-        "lastFrameImageName": "slide19final"
       }
     },
     {

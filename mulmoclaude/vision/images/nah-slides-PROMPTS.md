@@ -92,11 +92,9 @@ A close-up of a barred cage drawn in black marker containing a small screen show
 
 A test scoreboard drawn in marker: a tally counter labeled '72 tests', a huge green '0' labeled 'broken apps that ran', and a checklist of green checkmarks with one red X circled, with a handwritten note 'fixed in 1 try' and a small arrow.
 
-### nah-slide19-final-169.png
+### nah-slide19-final-169.png(削除済み)
 
-(v2 — ナレーション変更に合わせて全面差し替え、文字ゼロ。「データは残っているが、設計図がないので解釈できない」の図)
-
-A puzzled robot shrugging with a big red question mark above its head, looking at an open folder full of intact white file sheets. Above the folder, a blueprint sheet drawn only as a dashed outline with a red X through it, meaning the blueprint is missing. No text anywhere in the drawing.
+スライド自体をデッキから削除(2026-07-14)。「スキーマを取り除くとデータが解釈できない」の逸話は、直後の引っ越し実験と「失って失敗する話」が2連続になるため割愛。ファイルも削除済み。以降の nah-slideN 命名は歴史的な番号のまま(現在のビート位置とは1つずれる)。
 
 ### nah-slide20-final-169.png
 
