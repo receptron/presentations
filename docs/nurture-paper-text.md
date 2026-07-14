@@ -191,10 +191,6 @@ the ownership question this paper argues.
 
 ## 3. Motivation: accumulation, lock-in, home
 
-*(Position section — argues a design stance; makes no empirical claim beyond the
-cited sources. The one falsifiable claim it produces — that memory portability
-carries only part of the accumulation — is tested in §6.)*
-
 ### 3.1 An old paradox, inverted
 
 Arrow observed that information resists being traded: its value to a buyer is
@@ -331,10 +327,6 @@ this paper.
 ---
 
 ## 5. Architecture: schema as application
-
-*(Implementation facts in this section are verified against the MulmoClaude
-source tree; exact file references for reviewers and replication are catalogued
-in the open-source artifact's evaluation tree.)*
 
 ### 5.1 Two artifacts, two runtimes
 
@@ -676,16 +668,16 @@ degree, but by kind.
 
 ### 6.4 Threats to validity
 
-Consolidated from the per-experiment disclosures. (1) *Model parity:* S and B1
-ran the identical model inside the production agent loop, so the ablation
-delta is model-clean; B3 and the E1 authoring agents ran the evaluation
-session's model, and if it is the stronger one the bias favors the baselines.
-Paper-grade runs must pin model IDs per column. (2) *The hosted assistant is discussed, not observed*; hosted feature sets
+Consolidated from the per-experiment disclosures. (1) *Model parity:* every
+agent in the evaluation — S, both baselines, and the E1 authoring agents — ran
+the same model (Claude Fable 5); S and B1 additionally ran it inside the
+identical production agent loop. No cross-column delta is attributable to
+model choice. (2) *The hosted assistant is discussed, not observed*; hosted feature sets
 move quickly, and improvements there deepen the very
 accumulation-on-premises dynamic §3 describes. (3) *Trial counts:* E1 was run as three independent trials per prompt (zero
 observed variance); the E2 task cells remain single-trial with per-task
-transcripts shipped, and repeating them with pinned model IDs is the first
-item of future work. (4) *Harness
+transcripts shipped, and repeating them is the first item of future work.
+(4) *Harness
 gaps:* E1 authoring ran outside the full product loop (same guidance, same
 validator, different shell); T7's form could be summoned but not filled
 through the text-only bridge. (5) *Own-workspace effects:* E3 phase 1 uses the
@@ -712,11 +704,14 @@ work (§8.4). The admission is that a login it is not, and some fraction of pros
 
 *Backup.* Ownership of the files is ownership of their durability. There is no
 vendor-side copy; a lost disk is a lost assistant. The plain-file substrate makes
-mitigation easy — the workspace is a directory, so any file-level backup or sync
-tool covers it, and the workspace is initialized as a git repository — but the
-system does not yet automate this, and an assistant into which a user pours years
-deserves automated, verified backup. We flag this as the most consequential
-unmitigated cost.
+mitigation natural: the workspace is initialized as a git repository, and in
+practice every existing user backs up through git — a mechanism a file-based
+workspace is unusually well suited to, since a push to a remote carries not just
+the current state but the accumulation's full history, and any file-level backup
+or sync tool covers the directory equally. What the system does not yet do is
+automate and verify this: an assistant into which a user pours years deserves
+backup that does not depend on remembering to push, and we flag that automation
+gap as the most consequential one remaining.
 
 *Availability and sync.* The assistant lives on one machine. Relay-only remote
 access restores reach — a phone or messaging bridge converses with the assistant at
@@ -738,9 +733,13 @@ intelligence is rented from the same few providers a hosted assistant would use,
 with their pricing, terms, and availability. What ownership changes is what happens
 at the boundary: the workspace — records, schemas, manuals — is engine-neutral by
 construction, so swapping the model changes who animates the accumulation, not the
-accumulation itself. The veteran capability stays; the generalist is replaceable.
-We state this as an architectural property; benchmarking assistant quality across
-engine swaps is future work.
+accumulation itself. Nor is the swap hypothetical: the artifact today runs on
+Claude Code, a second engine (Codex, GPT-based) is in beta testing against the
+same workspace, and support for open-weight models is planned — which would retire
+even the rented-intelligence dependence for users who choose it. The veteran
+capability stays; the generalist is replaceable. We state the neutrality as an
+architectural property; benchmarking assistant quality across engine swaps is
+future work.
 
 *Adoption.* Everything above compounds into a gap between the users who could
 benefit most and those who can install a local server today. We do not minimize
@@ -844,7 +843,7 @@ mapped to one removed component), and memory-only portability moving testimony
 while leaving capability behind (0 of 4 workflows survived migration).
 
 The limitations are stated where they arise and bear repeating once: the
-trials are single runs pending repetition with pinned models; the hosted
+trials are single runs pending repetition; the hosted
 alternative is discussed rather than observed; and the claim that people will
 in fact nurture such an assistant over years is not yet evidence but the
 question this architecture was built to make answerable. The substrate for

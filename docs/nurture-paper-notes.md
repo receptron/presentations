@@ -39,8 +39,9 @@ immediately before submission (a check, not a rewrite).
 ## Pre-submission checklist
 
 1. §2 delta-check against literature published after 2026-07-13.
-2. Repeated evaluation trials with pinned model IDs per column; report
-   variance (E2/E1 single-trial verdicts currently disclosed as such).
+2. Repeated evaluation trials; report variance (E2 single-trial verdicts
+   currently disclosed as such). All runs already used the same model
+   (Claude Fable 5), so model pinning is done.
 3. Formative usability study (removed from the manuscript per review,
    2026-07-13) — run or leave as future work per venue norms.
 4. Resolve `[key]` placeholders to BibTeX; typeset figures
