@@ -30,8 +30,12 @@
 }
 \newcommand{\code}[1]{\texttt{\small #1}}
 
+% Single source of truth for figures: the canonical render location
+% docs/figures/. package.sh rewrites \figroot to a local figures/ dir when
+% assembling the self-contained arXiv upload.
+\newcommand{\figroot}{../../figures}
 % Include a screenshot if present, else a labeled placeholder box (keeps the
-% build green before the PNGs are dropped into figures/).
+% build green before the PNGs are rendered).
 \newcommand{\viewfig}[1]{%
   \IfFileExists{#1}{\includegraphics[width=\linewidth]{#1}}{%
     \fbox{\parbox[c][3cm][c]{0.92\linewidth}{\centering\footnotesize\itshape
@@ -444,7 +448,7 @@ host is the runtime.
 
 \begin{figure}[t]
 \centering
-\viewfig{figures/fig1-architecture.png}
+\viewfig{\figroot/fig1-architecture.png}
 \caption{The schema-as-application architecture. The model authors declarative
 artifacts into the plain-file workspace; a validation gate ensures an invalid
 schema never becomes a live application; the host runtime---not the
@@ -664,10 +668,10 @@ folder of records.
 \begin{figure}[t]
 \centering
 \begin{minipage}[t]{0.62\textwidth}\centering
-  \viewfig{figures/fig3a-desktop-map-view.png}\\[2pt]\footnotesize \textbf{(a)}
+  \viewfig{\figroot/fig3a-desktop-map-view.png}\\[2pt]\footnotesize \textbf{(a)}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.34\textwidth}\centering
-  \viewfig{figures/fig3b-relay-mobile-view.png}\\[2pt]\footnotesize \textbf{(b)}
+  \viewfig{\figroot/fig3b-relay-mobile-view.png}\\[2pt]\footnotesize \textbf{(b)}
 \end{minipage}
 \caption{One accumulation, two doorways. (a) The restaurant collection's
 model-authored custom view on the desktop: 27 real records rendered over a Tokyo
