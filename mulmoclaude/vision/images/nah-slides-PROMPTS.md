@@ -28,7 +28,9 @@ A timeline arrow from left to right: on the left a brain sketch labeled 'Model' 
 
 ### nah-slide4-final-169.png
 
-A big layered pile drawn in marker, layers labeled 'Conversations', 'Preferences', 'Records', 'Apps', with a red underlined heading 'YOUR pile'. Below it, a small box with a gear labeled 'Model = engine', drawn deliberately small.
+(v2 — 層のラベルをアイコン化、文字は見出しのみ。アニメーション化で文字が潰れたため)
+
+A big pile of four stacked layers drawn in marker, each layer showing only an icon: a speech bubble, a red heart, a document sheet, and a small app window. Above the pile, one large handwritten heading 'YOUR pile' underlined in red. Below the pile, a deliberately small box containing a single gear icon. No other text or labels anywhere.
 
 ### nah-slide5-final-169.png
 
@@ -92,7 +94,9 @@ A test scoreboard drawn in marker: a tally counter labeled '72 tests', a huge gr
 
 ### nah-slide19-final-169.png
 
-A sad, empty chat window sketch with a single speech bubble reading 'Your reading list was empty until just now.' Next to it a robot with a control panel of toggle switches flipped to OFF, labeled 'memory', 'reminders', 'checks'. Handwritten label in red: 'empty chatbot'.
+(v2 — ナレーション変更に合わせて全面差し替え、文字ゼロ。「データは残っているが、設計図がないので解釈できない」の図)
+
+A puzzled robot shrugging with a big red question mark above its head, looking at an open folder full of intact white file sheets. Above the folder, a blueprint sheet drawn only as a dashed outline with a red X through it, meaning the blueprint is missing. No text anywhere in the drawing.
 
 ### nah-slide20-final-169.png
 
