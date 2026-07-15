@@ -98,7 +98,7 @@
       }
     },
     {
-      "text": "まず、暮らしの記録。たとえば天気予報は、頼んでおけば、勝手に最新になっています。ワールドカップの観戦管理を頼んだ人もいます。ここに並ぶどれもが、頼んだら生まれた、その人専用のアプリです。",
+      "text": "まず、暮らしの記録。たとえば外食ガイドは、行った店を記録するほど、次のお店選びが上手になっていきます。ワールドカップの観戦管理を頼んだ人もいます。ここに並ぶどれもが、頼んだら生まれた、その人専用のアプリです。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -122,11 +122,11 @@
           "    <div style='border-top:1px solid #EAD9BE;margin-top:3px'></div>",
           "  </div>",
           "  <div class='grid grid-cols-3 gap-5 pl-12 pr-24 mt-8 relative z-10'>",
-          "    <div class='rounded-[8px] px-6 py-5' style='background:rgba(234,88,12,.05);border:1px solid #EFE0C4;border-top:4px solid #EA580C' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='2.4' data-end='2.9' data-translate-y='14,0'>",
+          "    <div class='rounded-[8px] px-6 py-5' style='background:#FFFFFF;border:1px solid #EFE0C4;border-top:3px solid #EA580C' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='2.4' data-end='2.9' data-translate-y='14,0'>",
           "      <div class='t-di text-[23px]'>天気予報</div>",
-          "      <p class='text-[15px] leading-relaxed mt-2' style='color:#7C5E3C'>3時間ごとに自動更新。行く街の空がわかる</p>",
+          "      <p class='text-[15px] leading-relaxed mt-2' style='color:#7C5E3C'>予定表とつながって、傘の要る朝がわかる</p>",
           "    </div>",
-          "    <div class='rounded-[8px] px-6 py-5' style='background:#FFFFFF;border:1px solid #EFE0C4;border-top:3px solid #EA580C' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='2.65' data-end='3.15' data-translate-y='14,0'>",
+          "    <div class='rounded-[8px] px-6 py-5' style='background:rgba(234,88,12,.05);border:1px solid #EFE0C4;border-top:4px solid #EA580C' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='2.65' data-end='3.15' data-translate-y='14,0'>",
           "      <div class='t-di text-[23px]'>外食ガイド</div>",
           "      <p class='text-[15px] leading-relaxed mt-2' style='color:#7C5E3C'>行った店・行きたい店が、記録するほど育つ</p>",
           "    </div>",
@@ -148,7 +148,7 @@
           "    </div>",
           "  </div>",
           "  <div class='pl-12 pr-24 mt-6 relative z-10 text-right'>",
-          "    <span class='t-ha text-[19px]' style='color:#EA580C' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='10.4' data-end='10.9'>どれも、頼んだら生まれた「その人専用アプリ」</span>",
+          "    <span class='t-ha text-[19px]' style='color:#EA580C' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='12.9' data-end='13.4'>どれも、頼んだら生まれた「その人専用アプリ」</span>",
           "  </div>",
           "  <div class='absolute left-12 right-12 bottom-0 z-20'>",
           "    <div style='border-top:1px solid #EAD9BE'></div>",
