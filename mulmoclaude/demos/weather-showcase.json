@@ -546,7 +546,7 @@
           "          <span class='t-di text-[20px]' style='color:#EA580C'>旅のしおり ・ 水曜</span>",
           "          <span class='text-[13px] px-2 py-[2px] rounded-full' style='border:1px solid #EA580C;color:#EA580C'>書き換わりました</span>",
           "        </div>",
-          "        <div class='flex items-center gap-4 pt-4 pb-[9px]'><span class='t-mo text-[15px] w-[52px]' style='color:#EA580C'>7:15</span><span class='text-[16px]' style='color:#5C4128'>羽田発 ・ 飛行機で伊丹へ（予定どおり）</span></div>",
+          "        <div class='flex items-center gap-4 pt-4 pb-[9px]'><span class='t-mo text-[15px] w-[52px]' style='color:#EA580C'>7:15</span><span class='text-[16px]' style='color:#5C4128'>羽田発 ・ 飛行機で伊丹へ</span></div>",
           "        <div class='flex items-center gap-4 py-[9px]' style='border-top:1px solid #F7ECD8'><span class='t-mo text-[15px] w-[52px]' style='color:#EA580C'>14:00</span><span class='text-[16px]' style='color:#5C4128'>打ち合わせ（水曜に前倒しで確定）</span></div>",
           "        <div class='flex items-center gap-4 py-[9px]' style='border-top:1px solid #F7ECD8'><span class='t-mo text-[15px] w-[52px]' style='color:#EA580C'>16:33</span><span class='text-[16px]' style='color:#5C4128'>新大阪発 ・ 新幹線で東京へ</span></div>",
           "        <div class='flex items-center gap-4 pt-[9px]' style='border-top:1px solid #F7ECD8'><span class='t-mo text-[15px] w-[52px]' style='color:#EA580C'>18:57</span><span class='text-[16px]' style='color:#5C4128'>東京着 ・ 夜には帰宅</span></div>",
