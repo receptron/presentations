@@ -112,7 +112,7 @@
           "    <div class='relative'>",
           "      <img src='connected-collections-assets/demo-02-collections-index.png' class='rounded-xl shadow-2xl' style='max-height:510px;object-fit:contain' />",
           "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='bottom:-3%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'>",
-          "        <span class='text-xl' style='color:#431407'>🎬 作り方は、別の動画「コレクションを作る」で紹介しています</span>",
+          "        <span class='text-xl' style='color:#431407'>🎬 作り方は、別の動画「コレクション作成デモ」で紹介しています</span>",
           "      </div>",
           "    </div>",
           "  </div>",
