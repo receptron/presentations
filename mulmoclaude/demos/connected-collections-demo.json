@@ -265,7 +265,7 @@
       }
     },
     {
-      "text": "バックリンクで、つながりが見える。ロールアップで、合計がいつも見える。そしてAIが、データ全体を理解する。しかも中身は、専用のデータベースではなく、ふつうのテキストファイルのままです。ぜんぶ、会話で頼んだだけ。ぜひ、試してみてください。ご視聴、ありがとうございました。",
+      "text": "バックリンクで、つながりが見える。ロールアップで、合計がいつも見える。そしてAIが、データ全体を理解する。しかも中身は、専用のデータベースではなく、ふつうのテキストファイルのままです。ぜんぶ、会話で頼んだだけ。ぜひ、試してみてください。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -274,21 +274,21 @@
           "  <div class='flex flex-col items-center justify-center h-full px-24'>",
           "    <h1 class='text-5xl font-bold mb-10'>まとめ</h1>",
           "    <div class='w-full space-y-4'>",
-          "      <div class='flex items-center gap-6 rounded-2xl px-8 py-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='0:0.0' data-start='0.29' data-end='0.79' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 6px 16px rgba(67,20,7,.06)'>",
+          "      <div class='flex items-center gap-6 rounded-2xl px-8 py-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='0:0.0' data-start='0.34' data-end='0.84' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 6px 16px rgba(67,20,7,.06)'>",
           "        <span class='text-3xl'>🔗</span><span class='text-3xl font-bold'>つながりが、見える</span>",
           "        <span class='text-2xl ml-auto' style='color:#7C5E3C'>バックリンク</span>",
           "      </div>",
-          "      <div class='flex items-center gap-6 rounded-2xl px-8 py-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='2.32' data-end='2.82' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 6px 16px rgba(67,20,7,.06)'>",
+          "      <div class='flex items-center gap-6 rounded-2xl px-8 py-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='3.37' data-end='3.87' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 6px 16px rgba(67,20,7,.06)'>",
           "        <span class='text-3xl'>🧮</span><span class='text-3xl font-bold'>合計が、いつも見える</span>",
           "        <span class='text-2xl ml-auto' style='color:#7C5E3C'>ロールアップ</span>",
           "      </div>",
-          "      <div class='flex items-center gap-6 rounded-2xl px-8 py-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='5.16' data-end='5.66' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 6px 16px rgba(67,20,7,.06)'>",
+          "      <div class='flex items-center gap-6 rounded-2xl px-8 py-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='4.99' data-end='5.49' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 6px 16px rgba(67,20,7,.06)'>",
           "        <span class='text-3xl'>🗺️</span><span class='text-3xl font-bold'>AI が、全体を理解する</span>",
           "        <span class='text-2xl ml-auto' style='color:#7C5E3C'>データ全体の地図</span>",
           "      </div>",
           "    </div>",
-          "    <p class='text-2xl mt-10' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='3:0.0' data-start='8.75' data-end='9.25' style='color:#7C5E3C'>中身は、ふつうのテキストファイルのまま。ぜんぶ、会話で頼んだだけ。</p>",
-          "    <p class='text-xl mt-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='5:0.0' data-start='16.3' data-end='16.8' style='color:#A08B6E'>🌱 コレクションは、作った後も育てられる — ぜひ、試してみてください！</p>",
+          "    <p class='text-2xl mt-10' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='3:0.0' data-start='8.48' data-end='8.98' style='color:#7C5E3C'>中身は、ふつうのテキストファイルのまま。ぜんぶ、会話で頼んだだけ。</p>",
+          "    <p class='text-xl mt-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='5:0.0' data-start='16.52' data-end='17.02' style='color:#A08B6E'>🌱 コレクションは、作った後も育てられる — ぜひ、試してみてください！</p>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>9 / 9</div>",
           "</div>"
