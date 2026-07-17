@@ -109,7 +109,7 @@
           "  <div class='flex justify-center mt-2'>",
           "    <div class='relative'>",
           "      <img src='record-buttons-assets/demo-01-chat-agent-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
-          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='0:0.15' data-start='1.88' data-end='2.38' style='top:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 「銘柄のページに、価格を更新ボタンを付けて」</span></div>",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='0:0.15' data-start='1.88' data-end='2.38' style='bottom:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 「銘柄のページに価格を更新ボタンを付けて、押したら株価を調べて書き換えてね」</span></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>3 / 8</div>",
@@ -152,7 +152,7 @@
       }
     },
     {
-      "text": "もうひとつは、AIを使わないボタン。請求書に、入金済みにするボタンを付けて。AI無しで、一瞬で終わるやつ。決まりきった変更なら、これで十分です。",
+      "text": "もうひとつは、AIを使わないボタン。請求書に、入金済みにするボタンを付けて。AIは使わずに、と頼みます。決まりきった変更なら、これで十分です。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -168,7 +168,7 @@
           "  <div class='flex justify-center mt-2'>",
           "    <div class='relative'>",
           "      <img src='record-buttons-assets/demo-04-chat-mutate-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
-          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.0' data-start='3.19' data-end='3.69' style='top:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 「入金済みにするボタンを付けて。AI 無しで一瞬のやつ」</span></div>",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.0' data-start='3.48' data-end='3.98' style='bottom:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 「入金済みにするボタンを付けて。AI は使わずに」</span></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>5 / 8</div>",
