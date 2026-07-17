@@ -50,7 +50,7 @@
   "lang": "ja",
   "beats": [
     {
-      "text": "株価を最新にして。入金があったから記録して。そんな毎日の決まりきったお願い、毎回チャットで頼んでいませんか？マルモクロードでは、よくある操作を、データのページのボタンにできます。",
+      "text": "こんにちは。今日は、マルモクロードのコレクションに最近加わった、データのページに付けられるボタンをご紹介します。株価の更新や入金の記録のような、よくある操作が、ボタンひと押しで済むようになりました。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -59,23 +59,24 @@
           "  <div class='px-10 pt-6 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>新機能</span>",
-          "      <h2 class='text-4xl font-bold' style='color:#431407'>そのお願い、毎回チャットで頼んでいませんか？</h2>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>よくある操作が、ボタンになりました</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color:#7C5E3C'>よくある操作は、データのページのボタンになる</p>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>株価の更新も、入金の記録も、ページのボタンひと押しで</p>",
           "  </div>",
           "  <div class='flex justify-center mt-8'>",
           "    <div class='relative'>",
           "      <img src='record-buttons-assets/demo-02-portfolio-before.png' class='rounded-xl shadow-2xl' style='max-height:500px;object-fit:contain' />",
-          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='bottom:-5%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 押すだけで、AI が最新の株価に書き換えてくれる</span></div>",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.4' data-start='11.91' data-end='12.41' style='bottom:-5%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 押すだけで、AI が最新の株価に書き換えてくれる</span></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>1 / 8</div>",
           "</div>"
-        ]
+        ],
+        "animation": true
       }
     },
     {
-      "text": "今日は、コレクションに加わった、2種類のボタンをご紹介します。AIが裏で働くボタンと、AIを使わない一瞬のボタン。どちらも、会話で頼むだけで作れます。",
+      "text": "ボタンは、2種類あります。AIが裏で働くボタンと、AIを使わない一瞬のボタン。どちらも、会話で頼むだけで作れます。実際に、作りながら見ていきましょう。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -108,12 +109,13 @@
           "  <div class='flex justify-center mt-2'>",
           "    <div class='relative'>",
           "      <img src='record-buttons-assets/demo-01-chat-agent-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
-          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='top:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 「銘柄のページに、価格を更新ボタンを付けて」</span></div>",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='0:0.15' data-start='0.99' data-end='1.49' style='top:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 「銘柄のページに、価格を更新ボタンを付けて」</span></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>3 / 8</div>",
           "</div>"
-        ]
+        ],
+        "animation": true
       }
     },
     {
@@ -136,8 +138,8 @@
           "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:9%;left:48.5%;width:16.5%;height:9.5%'></div>",
           "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#7C5E3C'>「価格を更新」を押すだけ</div>",
           "    </div>",
-          "    <div class='text-5xl font-bold shrink-0' style='color:#EA580C'>→</div>",
-          "    <div class='relative'>",
+          "    <div class='text-5xl font-bold shrink-0' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.0' data-start='6.69' data-end='7.19' style='color:#EA580C'>→</div>",
+          "    <div class='relative' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.15' data-start='7.46' data-end='7.96'>",
           "      <img src='record-buttons-assets/demo-03-portfolio-after.png' class='rounded-xl shadow-2xl' style='width:552px' />",
           "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:39%;left:6%;width:26%;height:29%'></div>",
           "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#EA580C'>AI が最新の株価に書き換えた</div>",
@@ -145,7 +147,8 @@
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>4 / 8</div>",
           "</div>"
-        ]
+        ],
+        "animation": true
       }
     },
     {
@@ -165,12 +168,13 @@
           "  <div class='flex justify-center mt-2'>",
           "    <div class='relative'>",
           "      <img src='record-buttons-assets/demo-04-chat-mutate-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
-          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='top:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 「入金済みにするボタンを付けて。AI 無しで一瞬のやつ」</span></div>",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.0' data-start='3.19' data-end='3.69' style='top:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 「入金済みにするボタンを付けて。AI 無しで一瞬のやつ」</span></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>5 / 8</div>",
           "</div>"
-        ]
+        ],
+        "animation": true
       }
     },
     {
@@ -193,8 +197,8 @@
           "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:6.5%;left:43.5%;width:20.5%;height:9.5%'></div>",
           "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#7C5E3C'>「入金済みにする」を押すだけ</div>",
           "    </div>",
-          "    <div class='text-5xl font-bold shrink-0' style='color:#EA580C'>→</div>",
-          "    <div class='relative'>",
+          "    <div class='text-5xl font-bold shrink-0' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.3' data-start='4.04' data-end='4.54' style='color:#EA580C'>→</div>",
+          "    <div class='relative' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.45' data-start='4.8' data-end='5.3'>",
           "      <img src='record-buttons-assets/demo-06-invoice-after.png' class='rounded-xl shadow-2xl' style='width:552px' />",
           "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:63.5%;left:47%;width:23%;height:12.5%'></div>",
           "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#EA580C'>一瞬で「入金済み」に</div>",
@@ -202,7 +206,8 @@
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>6 / 8</div>",
           "</div>"
-        ]
+        ],
+        "animation": true
       }
     },
     {
@@ -220,13 +225,13 @@
           "    <p class='text-2xl' style='color:#7C5E3C'>迷ったら「AI の判断が要るかどうか」で選ぶ</p>",
           "  </div>",
           "  <div class='flex items-stretch justify-center gap-8 mt-12 px-16'>",
-          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #EA580C'>",
+          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='2.12' data-end='2.62' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #EA580C'>",
           "      <div class='text-5xl mb-4'>🤖</div>",
           "      <div class='text-3xl font-bold mb-2'>AI のボタン</div>",
           "      <div class='text-xl mb-5' style='color:#EA580C'>エージェントアクション</div>",
           "      <div class='text-2xl leading-relaxed' style='color:#7C5E3C'>調べる・判断する仕事<br>例:「価格を更新」</div>",
           "    </div>",
-          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #0284C7'>",
+          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='6.41' data-end='6.91' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #0284C7'>",
           "      <div class='text-5xl mb-4'>⚡</div>",
           "      <div class='text-3xl font-bold mb-2'>普通のボタン</div>",
           "      <div class='text-xl mb-5' style='color:#0284C7'>ミューテートアクション</div>",
@@ -235,7 +240,8 @@
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>7 / 8</div>",
           "</div>"
-        ]
+        ],
+        "animation": true
       }
     },
     {
@@ -248,12 +254,13 @@
           "  <div class='flex flex-col items-center justify-center h-full text-center px-20'>",
           "    <h1 class='text-5xl font-bold leading-[1.5]'>毎日の操作が、<br>チャットを開かずに終わっていく</h1>",
           "    <div class='w-24 mt-9 mb-9' style='border-top:4px solid #EA580C'></div>",
-          "    <p class='text-2xl leading-relaxed' style='color:#7C5E3C'>よく頼む操作をひとつ、ボタンにしてみてください。<br>「〜するボタンを付けて」と、会話で頼むだけ。</p>",
-          "    <p class='text-xl mt-8' style='color:#A08B6E'>🌱 コレクションは、作った後も育てられる — ぜひ、試してみてください！</p>",
+          "    <p class='text-2xl leading-relaxed' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='4.1' data-end='4.6' style='color:#7C5E3C'>よく頼む操作をひとつ、ボタンにしてみてください。<br>「〜するボタンを付けて」と、会話で頼むだけ。</p>",
+          "    <p class='text-xl mt-8' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='10.05' data-end='10.55' style='color:#A08B6E'>🌱 コレクションは、作った後も育てられる — ぜひ、試してみてください！</p>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>8 / 8</div>",
           "</div>"
-        ]
+        ],
+        "animation": true
       }
     }
   ]
