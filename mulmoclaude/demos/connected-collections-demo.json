@@ -1,0 +1,300 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "プレゼンター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "明るく温かい、希望に満ちたトーンで話してください。大切なものを友人に楽しそうに紹介するような、優しくて前向きな語り口。決して暗く平板にならず、穏やかなエネルギーを保ってください。"
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "title": "バラバラのデータが、つながる",
+  "description": "MulmoClaude コレクションの新機能を作りながら紹介：顧客リスト・請求書・作業時間を例に、バックリンクとロールアップを会話で頼んで足し、つながったデータに AI がコレクション横断で答えるまでを実際の画面で。",
+  "lang": "ja",
+  "beats": [
+    {
+      "text": "こんにちは。今日は、マルモクロードのコレクションに最近加わった、データをつなげる新機能をご紹介します。顧客のページを開くと、請求書の一覧も、未請求の作業時間の合計も、そこに揃っている。こんな眺めが、会話で頼むだけで作れるようになりました。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>新機能</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>データが、つながるようになりました</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>顧客のページに、請求書も未請求の時間も揃う — ぜんぶ会話で足したもの</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-8'>",
+          "    <div class='relative'>",
+          "      <img src='connected-collections-assets/demo-01-client-detail-hero.png' class='rounded-xl shadow-2xl' style='max-height:530px;object-fit:contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.3' data-start='11.44' data-end='11.94' style='bottom:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 ひとつのページに、関連データが集まってくる</span></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>1 / 9</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "新機能は、バックリンクと、ロールアップ。別々に管理してきたデータが、意味のあるひとまとまりになります。今日は、実際に作りながら、順番に見ていきましょう。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='flex flex-col items-center justify-center h-full text-center px-16'>",
+          "    <div class='text-[15px] font-semibold tracking-[.35em] mb-6' style='color:#EA580C'>MulmoClaude コレクションの新機能</div>",
+          "    <h1 class='text-[64px] font-bold leading-[1.35]'>バラバラのデータが、<br>つながる</h1>",
+          "    <div class='w-24 mt-8 mb-8' style='border-top:4px solid #EA580C'></div>",
+          "    <p class='text-2xl leading-relaxed' style='color:#7C5E3C'>バックリンク ・ ロールアップ ・ データの地図</p>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "コレクションというのは、顧客リストや請求書のような、一覧表で管理したいデータのための、専用の置き場所です。会話するだけで作れます。詳しい作り方は、別の動画で紹介しています。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>前提</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>コレクションとは</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>一覧表で管理したいデータの、専用の置き場所。会話するだけで作れる</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='connected-collections-assets/demo-02-collections-index.png' class='rounded-xl shadow-2xl' style='max-height:510px;object-fit:contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.0' data-start='10.32' data-end='10.82' style='bottom:-3%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-xl' style='color:#431407'>🎬 作り方は、別の動画「コレクション作成デモ」で紹介しています</span></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>3 / 9</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "例として、顧客リスト、請求書、作業時間の、3つのコレクションを考えてみましょう。請求書には、どの顧客宛てかというリンクが入っています。でも今までは、逆方向、つまり顧客側から請求書の一覧を見ることはできませんでした。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>前提</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>3つのコレクション</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>リンクは「請求書 → 顧客」の片方向だけ。逆から見る手段がなかった</p>",
+          "  </div>",
+          "  <div class='grid items-center justify-center mt-10' style='grid-template-columns:auto auto auto;column-gap:36px;row-gap:32px'>",
+          "    <div class='rounded-2xl px-10 py-7 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='0:0.28' data-start='2.21' data-end='2.71' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);grid-column:1;grid-row:1'>",
+          "      <div class='text-4xl mb-2'>🧾</div><div class='text-3xl font-bold'>請求書</div>",
+          "      <div class='text-lg mt-1' style='color:#7C5E3C'>¥210,000（6月30日 発行）</div>",
+          "    </div>",
+          "    <div class='flex flex-col items-center gap-1' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.3' data-start='8.4' data-end='8.9' style='grid-column:2;grid-row:1'><span class='text-lg font-bold px-4 py-1 rounded-full' style='background:rgba(234,88,12,.10);color:#EA580C'>宛先: サクラデザイン</span><span class='text-5xl font-bold leading-none' style='color:#EA580C'>→</span></div>",
+          "    <div class='rounded-2xl px-12 py-14 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='0:0.12' data-start='1.14' data-end='1.64' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #EA580C;grid-column:3;grid-row:1 / span 2'>",
+          "      <div class='text-5xl mb-3'>🏢</div><div class='text-4xl font-bold'>顧客リスト</div>",
+          "      <div class='text-xl mt-2' style='color:#7C5E3C'><span class='font-bold' style='color:#EA580C'>サクラデザイン</span><br>田中商事<br>みどり出版</div>",
+          "    </div>",
+          "    <div class='rounded-2xl px-10 py-7 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='0:0.42' data-start='3.15' data-end='3.65' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);grid-column:1;grid-row:2'>",
+          "      <div class='text-4xl mb-2'>⏱️</div><div class='text-3xl font-bold'>作業時間</div>",
+          "      <div class='text-lg mt-1' style='color:#7C5E3C'>バナー制作（3.5 時間）</div>",
+          "    </div>",
+          "    <div class='flex flex-col items-center gap-1' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.45' data-start='9.08' data-end='9.58' style='grid-column:2;grid-row:2'><span class='text-lg font-bold px-4 py-1 rounded-full' style='background:rgba(234,88,12,.10);color:#EA580C'>顧客: サクラデザイン</span><span class='text-5xl font-bold leading-none' style='color:#EA580C'>→</span></div>",
+          "  </div>",
+          "  <div class='flex items-center justify-center gap-4 mt-9' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.1' data-start='12.31' data-end='12.81'>",
+          "    <span class='text-5xl font-bold' style='color:#D9C9A8'>←</span>",
+          "    <span class='text-2xl font-semibold' style='color:#A08B6E'>逆方向は、たどれなかった — サクラデザインのページから、請求書の一覧は見えない</span>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>4 / 9</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "作り方は、頼むだけ。顧客のページから、請求書の一覧も見えるようにして、とお願いすると、AIが設定を書き足してくれます。データのファイル自体には、何も書き込まれません。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 1</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>バックリンクを、頼む</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>「見えるようにして」のひとことで、AI が設定を書き足してくれる</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='connected-collections-assets/demo-03-chat-backlink-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.0' data-start='2.5' data-end='3.0' style='bottom:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 「顧客のページから、請求書の一覧も見えるようにして」</span></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>5 / 9</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "顧客のページを開くと、その顧客宛ての請求書が、自動で一覧になっていました。これがバックリンクです。請求書から顧客への片方向だったリンクが、逆からたどれるようになりました。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 1</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>バックリンクが、できた</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>参照される側(顧客)から、参照している側(請求書)が見える</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='connected-collections-assets/demo-04-client-detail-backlinks.png' class='rounded-xl shadow-2xl' style='max-height:545px;object-fit:contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='0:0.35' data-start='2.43' data-end='2.93' style='top:55.5%;left:26.5%;width:47.5%;height:20.5%'></div>",
+          "      <div class='absolute text-red-600 text-2xl font-bold whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='0:0.5' data-start='3.33' data-end='3.83' style='top:78%;left:31%'>↑ この顧客宛ての請求書が、自動で並ぶ</div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>6 / 9</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "続けて、まだ請求していない作業時間の合計も表示して、とひとこと。一覧表に、未請求時間の列が生まれました。これがロールアップ。元の作業時間が変わると、合計も自動で更新されます。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 2</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>ロールアップを、頼む</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>「合計も表示して」のひとことで、自動集計の列が生まれる</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='connected-collections-assets/demo-05-chat-rollup-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='0:0.1' data-start='0.83' data-end='1.33' style='bottom:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 「まだ請求していない作業時間の合計も表示して」</span></div>",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.2' data-start='6.44' data-end='6.94' style='top:21%;left:75.3%;width:8.7%;height:28%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>7 / 9</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "データがつながると、AIは、データ全体の地図を受け取れるようになります。オントロジーと呼ばれる仕組みです。だから、未払いの請求書がある顧客は、といった、コレクションをまたぐ質問にも、その場で答えてくれます。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>仕上げ</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>つながったデータは、AI の地図になる</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>コレクションをまたぐ質問に、AI がその場で答える</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='connected-collections-assets/demo-06-chat-ontology.png' class='rounded-xl shadow-2xl' style='max-height:530px;object-fit:contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.3' data-start='10.27' data-end='10.77' style='top:68.5%;left:32.5%;width:26.5%;height:6.8%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>8 / 9</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "バックリンクで、つながりが見える。ロールアップで、合計がいつも見える。そしてAIが、データ全体を理解する。ぜんぶ、会話で頼んだだけ。ぜひ、試してみてください。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='flex flex-col items-center justify-center h-full px-24'>",
+          "    <h1 class='text-5xl font-bold mb-10'>まとめ</h1>",
+          "    <div class='w-full space-y-4'>",
+          "      <div class='flex items-center gap-6 rounded-2xl px-8 py-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='0:0.0' data-start='0.29' data-end='0.79' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 6px 16px rgba(67,20,7,.06)'>",
+          "        <span class='text-3xl'>🔗</span><span class='text-3xl font-bold'>つながりが、見える</span>",
+          "        <span class='text-2xl ml-auto' style='color:#7C5E3C'>バックリンク</span>",
+          "      </div>",
+          "      <div class='flex items-center gap-6 rounded-2xl px-8 py-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='2.29' data-end='2.79' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 6px 16px rgba(67,20,7,.06)'>",
+          "        <span class='text-3xl'>🧮</span><span class='text-3xl font-bold'>合計が、いつも見える</span>",
+          "        <span class='text-2xl ml-auto' style='color:#7C5E3C'>ロールアップ</span>",
+          "      </div>",
+          "      <div class='flex items-center gap-6 rounded-2xl px-8 py-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='4.76' data-end='5.26' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 6px 16px rgba(67,20,7,.06)'>",
+          "        <span class='text-3xl'>🗺️</span><span class='text-3xl font-bold'>AI が、全体を理解する</span>",
+          "        <span class='text-2xl ml-auto' style='color:#7C5E3C'>データ全体の地図</span>",
+          "      </div>",
+          "    </div>",
+          "    <p class='text-2xl mt-10' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='3:0.0' data-start='7.79' data-end='8.29' style='color:#7C5E3C'>ぜんぶ、会話で頼んだだけ。</p>",
+          "    <p class='text-xl mt-4' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='4:0.0' data-start='9.77' data-end='10.27' style='color:#A08B6E'>🌱 コレクションは、作った後も育てられる — ぜひ、試してみてください！</p>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>9 / 9</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    }
+  ]
+}

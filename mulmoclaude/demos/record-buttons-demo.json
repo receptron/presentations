@@ -1,0 +1,267 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "プレゼンター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "明るく温かい、希望に満ちたトーンで話してください。大切なものを友人に楽しそうに紹介するような、優しくて前向きな語り口。決して暗く平板にならず、穏やかなエネルギーを保ってください。"
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "title": "押すだけの仕事は、ボタンにする",
+  "description": "MulmoClaude コレクションの新機能：レコードに付けられる 2 種類のボタンを実演。AI が裏で株価を調べて書き換えるエージェントアクションと、AI を使わず一瞬で終わるミューテートアクション。作り方は会話で頼むだけ。",
+  "lang": "ja",
+  "beats": [
+    {
+      "text": "こんにちは。今日は、マルモクロードのコレクションに最近加わった、データのページに付けられるボタンをご紹介します。株価の更新や入金の記録のような、よくある操作が、ボタンひと押しで済むようになりました。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>新機能</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>よくある操作が、ボタンになりました</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>株価の更新も、入金の記録も、ページのボタンひと押しで</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-8'>",
+          "    <div class='relative'>",
+          "      <img src='record-buttons-assets/demo-02-portfolio-before.png' class='rounded-xl shadow-2xl' style='max-height:500px;object-fit:contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.4' data-start='11.91' data-end='12.41' style='bottom:-5%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 押すだけで、AI が最新の株価に書き換えてくれる</span></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>1 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "ボタンは、2種類あります。AIが裏で働くボタンと、AIを使わないボタン。どちらも、会話で頼むだけで作れます。実際に、作りながら見ていきましょう。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='flex flex-col items-center justify-center h-full text-center px-16'>",
+          "    <div class='text-[15px] font-semibold tracking-[.35em] mb-6' style='color:#EA580C'>MulmoClaude コレクションの新機能</div>",
+          "    <h1 class='text-[64px] font-bold leading-[1.35]'>押すだけの仕事は、<br>ボタンにする</h1>",
+          "    <div class='w-24 mt-8 mb-8' style='border-top:4px solid #EA580C'></div>",
+          "    <p class='text-2xl leading-relaxed' style='color:#7C5E3C'>AI が裏で働くボタン ・ AI を使わないボタン</p>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "持ち株のコレクションで、銘柄のページに価格を更新ボタンを付けて、押したらAIが最新の株価を調べて書き換えてね、とお願いします。言葉で伝えるだけで、ボタンが生まれました。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 1</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>AI のボタンを、頼む</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>「価格を更新ボタンを付けて」のひとことで、ボタンが生まれる</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='record-buttons-assets/demo-01-chat-agent-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='0:0.15' data-start='1.88' data-end='2.38' style='bottom:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-xl' style='color:#431407'>💬 「銘柄のページに価格を更新ボタンを付けて、押したらAIが最新の株価を調べて書き換えてね」</span></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>3 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "ボタンを押すと、AIが裏側で静かに仕事をします。チャット画面は開きません。しばらくすると、株価と評価額が最新の値に変わっていました。これが、エージェントアクションです。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 1</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>押すと、AI が裏側で働く</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>チャットは開かない。気づいたら、最新の株価に変わっている</p>",
+          "  </div>",
+          "  <div class='flex items-center justify-center gap-4 mt-16 px-8'>",
+          "    <div class='relative'>",
+          "      <img src='record-buttons-assets/demo-02-portfolio-before.png' class='rounded-xl shadow-2xl' style='width:552px' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:9%;left:48.5%;width:16.5%;height:9.5%'></div>",
+          "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#7C5E3C'>「価格を更新」を押すだけ</div>",
+          "    </div>",
+          "    <div class='text-5xl font-bold shrink-0' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.0' data-start='6.69' data-end='7.19' style='color:#EA580C'>→</div>",
+          "    <div class='relative' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.15' data-start='7.46' data-end='7.96'>",
+          "      <img src='record-buttons-assets/demo-03-portfolio-after.png' class='rounded-xl shadow-2xl' style='width:552px' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:39%;left:6%;width:26%;height:29%'></div>",
+          "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#EA580C'>AI が最新の株価に書き換えた</div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>4 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "もうひとつは、AIを使わないボタン。今度は、このようにお願いしてみます。決まりきった変更は、AIに頼むまでもありません。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 2</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>普通のボタンを、頼む</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>決まりきった変更は、AI を使わないボタンで十分</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='record-buttons-assets/demo-04-chat-mutate-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.2' data-start='4.0' data-end='4.5' style='bottom:0%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-xl block text-center leading-relaxed' style='color:#431407'>💬 「請求書のページに「入金済みにする」ボタンを付けて。AIは使わず押したら一瞬で状態が変わるやつ。<br>送付済みの請求書にだけ出るようにして」</span></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>5 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "入金があったら、ボタンをひと押し。判断もAIも要らないので、待ち時間ゼロ、その場で入金済みに変わります。これが、ミューテートアクションです。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 2</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>押すと、すぐに終わる</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>待ち時間ゼロ。その場で「入金済み」に変わる</p>",
+          "  </div>",
+          "  <div class='flex items-center justify-center gap-4 mt-16 px-8'>",
+          "    <div class='relative'>",
+          "      <img src='record-buttons-assets/demo-05-invoice-before.png' class='rounded-xl shadow-2xl' style='width:552px' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:6.5%;left:43.5%;width:20.5%;height:9.5%'></div>",
+          "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#7C5E3C'>「入金済みにする」を押すだけ</div>",
+          "    </div>",
+          "    <div class='text-5xl font-bold shrink-0' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.3' data-start='4.04' data-end='4.54' style='color:#EA580C'>→</div>",
+          "    <div class='relative' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.45' data-start='4.8' data-end='5.3'>",
+          "      <img src='record-buttons-assets/demo-06-invoice-after.png' class='rounded-xl shadow-2xl' style='width:552px' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:63.5%;left:47%;width:23%;height:12.5%'></div>",
+          "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#EA580C'>その場で「入金済み」に</div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>6 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "使い分けはシンプルです。調べたり判断したりが要る仕事は、AIのボタン。決まりきった変更は、普通のボタン。どちらも、欲しくなったときに、後から会話で足せます。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>使い分け</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>2種類のボタン、どちらを頼む？</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>迷ったら「AI の判断が要るかどうか」で選ぶ</p>",
+          "  </div>",
+          "  <div class='flex items-stretch justify-center gap-8 mt-12 px-16'>",
+          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='2.12' data-end='2.62' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #EA580C'>",
+          "      <div class='text-5xl mb-4'>🤖</div>",
+          "      <div class='text-3xl font-bold mb-2'>AI のボタン</div>",
+          "      <div class='text-xl mb-5' style='color:#EA580C'>エージェントアクション</div>",
+          "      <div class='text-2xl leading-relaxed' style='color:#7C5E3C'>調べる・判断する仕事<br>例:「価格を更新」</div>",
+          "    </div>",
+          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='6.41' data-end='6.91' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #0284C7'>",
+          "      <div class='text-5xl mb-4'>⚡</div>",
+          "      <div class='text-3xl font-bold mb-2'>普通のボタン</div>",
+          "      <div class='text-xl mb-5' style='color:#0284C7'>ミューテートアクション</div>",
+          "      <div class='text-2xl leading-relaxed' style='color:#7C5E3C'>決まりきった変更<br>例:「入金済みにする」</div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>7 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "毎日の操作が、チャットを開かずに終わっていく。コレクションは、あなたの使い方に合わせて、ボタンひとつから育てていけます。まずはよく頼む操作をひとつ、ボタンにしてみてください。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='flex flex-col items-center justify-center h-full text-center px-20'>",
+          "    <h1 class='text-5xl font-bold leading-[1.5]'>毎日の操作が、<br>チャットを開かずに終わっていく</h1>",
+          "    <div class='w-24 mt-9 mb-9' style='border-top:4px solid #EA580C'></div>",
+          "    <p class='text-2xl leading-relaxed' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='4.02' data-end='4.52' style='color:#7C5E3C'>よく頼む操作をひとつ、ボタンにしてみてください。<br>「〜するボタンを付けて」と、会話で頼むだけ。</p>",
+          "    <p class='text-xl mt-8' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='9.61' data-end='10.11' style='color:#A08B6E'>🌱 コレクションは、作った後も育てられる — ぜひ、試してみてください！</p>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>8 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    }
+  ]
+}
