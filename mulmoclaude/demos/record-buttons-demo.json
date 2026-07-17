@@ -76,7 +76,7 @@
       }
     },
     {
-      "text": "ボタンは、2種類あります。AIが裏で働くボタンと、AIを使わない一瞬のボタン。どちらも、会話で頼むだけで作れます。実際に、作りながら見ていきましょう。",
+      "text": "ボタンは、2種類あります。AIが裏で働くボタンと、AIを使わないボタン。どちらも、会話で頼むだけで作れます。実際に、作りながら見ていきましょう。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -109,7 +109,7 @@
           "  <div class='flex justify-center mt-2'>",
           "    <div class='relative'>",
           "      <img src='record-buttons-assets/demo-01-chat-agent-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
-          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='0:0.15' data-start='1.88' data-end='2.38' style='bottom:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 「銘柄のページに価格を更新ボタンを付けて、押したら株価を調べて書き換えてね」</span></div>",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='0:0.15' data-start='1.88' data-end='2.38' style='bottom:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-xl' style='color:#431407'>💬 「銘柄のページに価格を更新ボタンを付けて、押したらAIが最新の株価を調べて書き換えてね」</span></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>3 / 8</div>",
@@ -187,7 +187,7 @@
           "  <div class='px-10 pt-6 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 2</span>",
-          "      <h2 class='text-4xl font-bold' style='color:#431407'>押すと、一瞬で終わる</h2>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>押すと、すぐに終わる</h2>",
           "    </div>",
           "    <p class='text-2xl' style='color:#7C5E3C'>待ち時間ゼロ。その場で「入金済み」に変わる</p>",
           "  </div>",
@@ -201,7 +201,7 @@
           "    <div class='relative' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.45' data-start='4.8' data-end='5.3'>",
           "      <img src='record-buttons-assets/demo-06-invoice-after.png' class='rounded-xl shadow-2xl' style='width:552px' />",
           "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:63.5%;left:47%;width:23%;height:12.5%'></div>",
-          "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#EA580C'>一瞬で「入金済み」に</div>",
+          "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#EA580C'>その場で「入金済み」に</div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>6 / 8</div>",
