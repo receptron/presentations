@@ -83,7 +83,7 @@
           "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
           "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
           "  <div class='flex flex-col items-center justify-center h-full text-center px-16'>",
-          "    <div class='text-[15px] font-semibold tracking-[.35em] mb-6' style='color:#EA580C'>MULMOCLAUDE コレクションの新機能</div>",
+          "    <div class='text-[15px] font-semibold tracking-[.35em] mb-6' style='color:#EA580C'>MulmoClaude コレクションの新機能</div>",
           "    <h1 class='text-[64px] font-bold leading-[1.35]'>押すだけの仕事は、<br>ボタンにする</h1>",
           "    <div class='w-24 mt-8 mb-8' style='border-top:4px solid #EA580C'></div>",
           "    <p class='text-2xl leading-relaxed' style='color:#7C5E3C'>AI が裏で働くボタン ・ AI を使わない一瞬のボタン</p>",
@@ -245,7 +245,7 @@
       }
     },
     {
-      "text": "毎日の操作が、チャットを開かずに終わっていく。コレクションは、あなたの使い方に合わせて、ボタンひとつから育てていけます。まずはよく頼む操作をひとつ、ボタンにしてみてください。ご視聴、ありがとうございました。",
+      "text": "毎日の操作が、チャットを開かずに終わっていく。コレクションは、あなたの使い方に合わせて、ボタンひとつから育てていけます。まずはよく頼む操作をひとつ、ボタンにしてみてください。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -254,8 +254,8 @@
           "  <div class='flex flex-col items-center justify-center h-full text-center px-20'>",
           "    <h1 class='text-5xl font-bold leading-[1.5]'>毎日の操作が、<br>チャットを開かずに終わっていく</h1>",
           "    <div class='w-24 mt-9 mb-9' style='border-top:4px solid #EA580C'></div>",
-          "    <p class='text-2xl leading-relaxed' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='4.1' data-end='4.6' style='color:#7C5E3C'>よく頼む操作をひとつ、ボタンにしてみてください。<br>「〜するボタンを付けて」と、会話で頼むだけ。</p>",
-          "    <p class='text-xl mt-8' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='10.05' data-end='10.55' style='color:#A08B6E'>🌱 コレクションは、作った後も育てられる — ぜひ、試してみてください！</p>",
+          "    <p class='text-2xl leading-relaxed' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='4.02' data-end='4.52' style='color:#7C5E3C'>よく頼む操作をひとつ、ボタンにしてみてください。<br>「〜するボタンを付けて」と、会話で頼むだけ。</p>",
+          "    <p class='text-xl mt-8' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='9.61' data-end='10.11' style='color:#A08B6E'>🌱 コレクションは、作った後も育てられる — ぜひ、試してみてください！</p>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>8 / 8</div>",
           "</div>"
