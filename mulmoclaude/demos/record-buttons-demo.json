@@ -152,7 +152,7 @@
       }
     },
     {
-      "text": "もうひとつは、AIを使わないボタン。請求書に、入金済みにするボタンを付けて。AIは使わずに、と頼みます。決まりきった変更なら、これで十分です。",
+      "text": "もうひとつは、AIを使わないボタン。今度は、このようにお願いしてみます。決まりきった変更は、AIに頼むまでもありません。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -168,7 +168,7 @@
           "  <div class='flex justify-center mt-2'>",
           "    <div class='relative'>",
           "      <img src='record-buttons-assets/demo-04-chat-mutate-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
-          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.0' data-start='3.48' data-end='3.98' style='bottom:0%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-xl block text-center leading-relaxed' style='color:#431407'>💬 「請求書のページに「入金済みにする」ボタンを付けて。AIは使わず押したら一瞬で状態が変わるやつ。<br>送付済みの請求書にだけ出るようにして」</span></div>",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.2' data-start='4.0' data-end='4.5' style='bottom:0%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-xl block text-center leading-relaxed' style='color:#431407'>💬 「請求書のページに「入金済みにする」ボタンを付けて。AIは使わず押したら一瞬で状態が変わるやつ。<br>送付済みの請求書にだけ出るようにして」</span></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>5 / 8</div>",
