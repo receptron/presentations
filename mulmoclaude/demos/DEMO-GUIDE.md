@@ -1,6 +1,6 @@
 # デモスクリプト制作ガイド
 
-`mulmoclaude/demos/` 配下のデモ（What/How コンテンツ）を作るためのパターン集。特に同一内容で多言語する際に利用する。 `collection-creation-demo.json` をベースに作成した。新しいデモを書くときは、このガイドと実例の両方を参照する。
+`mulmoclaude/demos/` 配下のデモ（What/How コンテンツ）を作るためのパターン集。特に同一内容で多言語する際に利用する。 `collection-creation-demo_ja.json` をベースに作成した。新しいデモを書くときは、このガイドと実例の両方を参照する。
 
 デモを増やすにあたって改善は適宜行う。
 
@@ -22,7 +22,7 @@
 
 ## 新機能紹介デモ（作り方形式）
 
-既存ユーザー向けの新機能紹介は、チュートリアルの型と次の点で異なる（2026-07 のコレクション新機能デモ 2 本のレビューより。実例: `connected-collections-demo.json` / `record-buttons-demo.json`）。
+既存ユーザー向けの新機能紹介は、チュートリアルの型と次の点で異なる（2026-07 のコレクション新機能デモ 2 本のレビューより。実例: `connected-collections-demo_ja.json` / `record-buttons-demo_ja.json`）。
 
 - **冒頭は告知トーン**: 「〜していませんか？」の問いかけは、いまの使い方への駄目出しに聞こえて失礼。「こんにちは。今日は、◯◯に最近加わった△△をご紹介します」「〜できるようになりました」で入る（配信 transcript・既存デッキと同じ型）
 - **機能は「頼む → できる → 使う」で見せる**: 完成形のスクショを並べるだけだと「ただの書き換え」に見える。①チャットで頼む実演 ②できた画面 ③使っている画面、の順で 1 機能を構成する
@@ -33,7 +33,7 @@
 
 ## デザインルール
 
-- **配色は warm sunrise テーマ**（明るい暖色。palette はリポジトリの CLAUDE.md、実例は `mulmoclaude/vision/the-assistant-you-nurture_ja.json`）。`collection-creation-demo.json` は旧ダークネイビーのままなので、構成は実例として参照しつつ配色は本ガイドのスニペットを正とする
+- **配色は warm sunrise テーマ**（明るい暖色。palette はリポジトリの CLAUDE.md、実例は `mulmoclaude/vision/the-assistant-you-nurture_ja.json`）。`collection-creation-demo_ja.json` は旧ダークネイビーのままなので、構成は実例として参照しつつ配色は本ガイドのスニペットを正とする
 - **キャプチャ領域（差し替え対象の画像・モック）は静止**を維持する。キャプチャビートでも対話テキスト側だけなら「長いビート対策」（下記）の A 方式でアニメ化してよい
 - 上部バーは 2 段: 1 段目 = バッジ（`text-lg`）+ タイトル（`text-4xl`）、2 段目 = サブタイトル（`text-2xl`、色は textMuted `#7C5E3C`）
 - 画像は `max-height: 560px`（2 段バーとの組で 720px に収まる）
@@ -52,7 +52,7 @@
 ### A. 1 音声のまま、ナレーションに同期して要素を出す（html_tailwind + data-animation）
 
 - 同じレイアウト内で要素を段階表示できるならこちらが第一候補。TTS を分割しないので音声キャッシュと韻律の連続性が保たれる
-- 仕組みは `collection-creation-demo.json` と同じ: `image.animation: true` + 要素に `data-animation='animate'` `data-opacity='0,1'` `data-start`/`data-end`（秒）`data-easing='easeOut'`
+- 仕組みは `collection-creation-demo_ja.json` と同じ: `image.animation: true` + 要素に `data-animation='animate'` `data-opacity='0,1'` `data-start`/`data-end`（秒）`data-easing='easeOut'`
 - animated ビートはナレーション尺の mp4 としてレンダリングされるため、`data-start` の秒がそのまま「そのビートの音声開始からの秒」になる
 - 実測〜`data-start` 書き込みは Claude Code の `/mulmo-finalize` skill で自動化できる（要素に `data-sync='<文番号>:<文内位置>'` を書いておくと retime スクリプトが `data-start`/`data-end` を計算・書き込みする）。以下は skill を使わない場合の手動手順
 - タイミングは推測ではなく実測する:
@@ -64,7 +64,7 @@
   - 最初のビートだけ `audioParams.introPadding`（既定 1 秒）ぶん映像が音声に先行するので、要素タイミングに +introPadding する。完成 mp4 冒頭の無音を silencedetect で実測すれば確認できる
   - 「。」で文分割する際、ナレーション引用内の「。」（『〜考えて。』等）でも分割される点に注意
   - キャプチャビートでは対話テキストだけをアニメ化し、キャプチャ領域は静止のまま維持する（差し替え作業を単純に保つ）
-- 実例: `collections-showcase.json`（タイトルで「レシピ、買い物リスト、家計簿」の単語ごとにカードが 1 枚ずつ出る）、`connected-collections-demo.json` / `record-buttons-demo.json`（吹き出しは依頼を読み上げる文、赤枠は結果を述べる文、before/after のアフター画像は「変わっていました」の文に `data-sync` で同期。retiming は `/mulmo-finalize`）
+- 実例: `collections-showcase_ja.json`（タイトルで「レシピ、買い物リスト、家計簿」の単語ごとにカードが 1 枚ずつ出る）、`connected-collections-demo_ja.json` / `record-buttons-demo_ja.json`（吹き出しは依頼を読み上げる文、赤枠は結果を述べる文、before/after のアフター画像は「変わっていました」の文に `data-sync` で同期。retiming は `/mulmo-finalize`）
 
 ### B. スピルオーバー（1 音声に複数スライド）
 
@@ -126,7 +126,7 @@
 <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 16</div>
 ```
 
-画像は `collection-demo-assets/xxx.png` のような **JSON からの相対パス**で参照する（mulmocast が file:// に解決する）。
+画像は `collection-demo-assets-ja/xxx.png` のような **JSON からの相対パス**で参照する（mulmocast が file:// に解決する）。アセットディレクトリは言語別（下記「多言語展開の要点」の命名規則）。
 
 ## キャプチャ規約
 
@@ -252,6 +252,9 @@ mulmo pdf -g --pdf_mode handout mulmoclaude/demos/<name>.json  # ハンドアウ
 
 ## 多言語展開の要点
 
-- キャプチャは言語ごとに撮り直す（言語別 workspace と UI 言語を切り替えて起動し — 上記「デモ用 workspace とアプリ起動」参照 — 上記キャプチャ台本と同じ流れで同じ構図を再現）。アセットは `collection-demo-assets-en/` のように言語別ディレクトリに分ける
+- **ファイル命名は vision デッキと同じ規則**: 無印 = 英語版（正式名。例: `collection-creation-demo.json`）、`_ja` suffix = 日本語版（`collection-creation-demo_ja.json`）。アセットディレクトリも同様に、無印 = 英語（`collection-demo-assets/`）、`-ja` suffix = 日本語（`collection-demo-assets-ja/`）
+- 制作フローは日本語が先: `_ja` で作ってレビューを通し、それを英語版（無印）へ翻訳する
+- 英語版は mulmocast の `-l` オプション（ナレーション言語切替）ではなく、スライド内テキスト・ナレーション・キャプチャをすべて英語にした別スクリプトとして作る
+- キャプチャは言語ごとに撮り直す（言語別 workspace と UI 言語を切り替えて起動し — 上記「デモ用 workspace とアプリ起動」参照 — 上記キャプチャ台本と同じ流れで同じ構図を再現）
 - スクリプトはコピーして `lang`・`voiceId`・ナレーション・スライド内テキストを差し替え、赤枠・吹き出し座標を対象言語 UI に合わせて微調整する
 - 英語 TTS なら「マルモクロード」表記は不要（MulmoClaude のままで読める）
