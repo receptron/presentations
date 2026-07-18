@@ -1,37 +1,73 @@
 {
-  "$mulmocast": { "version": "1.1" },
-  "canvasSize": { "width": 1280, "height": 720 },
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
   "speechParams": {
     "speakers": {
       "Presenter": {
-        "displayName": { "en": "Presenter" },
-        "voiceId": "Kore", "isDefault": true, "provider": "gemini",
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
         "speechOptions": {
           "instruction": "Speak in a bright, warm, hopeful tone — like happily introducing something you love to a friend. Gentle, positive energy throughout; never dark or flat."
         }
       }
     }
   },
-  "imageParams": { "provider": "openai", "images": {} },
-  "movieParams": { "provider": "replicate" },
-  "soundEffectParams": { "provider": "replicate" },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
   "slideParams": {
     "theme": {
       "colors": {
-        "bg": "FFFBF2", "bgCard": "FFF3DC", "bgCardAlt": "FCE8C8",
-        "text": "431407", "textMuted": "7C5E3C", "textDim": "A08B6E",
-        "primary": "EA580C", "accent": "F59E0B", "success": "65A30D",
-        "warning": "B45309", "danger": "DC2626", "info": "0284C7", "highlight": "DB2777"
+        "bg": "FFFBF2",
+        "bgCard": "FFF3DC",
+        "bgCardAlt": "FCE8C8",
+        "text": "431407",
+        "textMuted": "7C5E3C",
+        "textDim": "A08B6E",
+        "primary": "EA580C",
+        "accent": "F59E0B",
+        "success": "65A30D",
+        "warning": "B45309",
+        "danger": "DC2626",
+        "info": "0284C7",
+        "highlight": "DB2777"
       },
-      "fonts": { "title": "Georgia", "body": "Helvetica", "mono": "Menlo", "accent": "Outfit" },
+      "fonts": {
+        "title": "Georgia",
+        "body": "Helvetica",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
       "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)",
       "titleGradient": "linear-gradient(100deg, #431407, #B45309 55%, #EA580C)",
       "cardStyle": "glass"
     }
   },
   "audioParams": {
-    "padding": 0.3, "introPadding": 1, "closingPadding": 0.8, "outroPadding": 1,
-    "bgmVolume": 0.2, "audioVolume": 1, "suppressSpeech": false, "concurrency": 1
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.2,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
   },
   "title": "Collection Creation Demo — Weather Collection",
   "description": "Building a weather collection from scratch with MulmoClaude's Collections feature, using nothing but conversation.",
@@ -65,11 +101,18 @@
         "type": "slide",
         "slide": {
           "layout": "title",
-          "eyebrow": { "label": "Collection Creation Demo" },
-          "titleSize": "hero", "subtitleSize": "lead",
+          "eyebrow": {
+            "label": "Collection Creation Demo"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
           "title": "A Weather Collection",
           "subtitle": "Build your own weather tracker, {primary:just by talking}",
-          "chips": ["☁️ Forecasts fetched automatically", "📍 Every location at a glance", "🗺️ Trip timeline"]
+          "chips": [
+            "☁️ Forecasts fetched automatically",
+            "📍 Every location at a glance",
+            "🗺️ Trip timeline"
+          ]
         }
       }
     },
@@ -81,8 +124,8 @@
         "html": [
           "<div class='relative flex items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <div class='text-center space-y-10 px-12'>",
-          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold' style='color: #431407'>How to launch</h2>",
-          "    <div data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.5' data-end='1.2' data-easing='easeOut' class='bg-gray-950 rounded-2xl p-10 border border-gray-700 max-w-2xl mx-auto shadow-2xl'>",
+          "    <h2 data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold' style='color: #431407'>How to launch</h2>",
+          "    <div data-animation='animate' data-sync='0:0.20' data-opacity='0,1' data-scale='0.95,1' data-start='1.78' data-end='2.28' data-easing='easeOut' class='bg-gray-950 rounded-2xl p-10 border border-gray-700 max-w-2xl mx-auto shadow-2xl'>",
           "      <div class='flex items-center gap-2 mb-5'>",
           "        <div class='w-3.5 h-3.5 rounded-full bg-red-500'></div>",
           "        <div class='w-3.5 h-3.5 rounded-full bg-yellow-500'></div>",
@@ -91,10 +134,10 @@
           "      </div>",
           "      <div class='text-left font-mono'>",
           "        <span class='text-green-400 text-xl'>$</span>",
-          "        <span data-animation='animate' data-opacity='0,1' data-start='1.0' data-end='1.5' data-easing='easeOut' class='text-cyan-300 text-3xl ml-3'>npx mulmoclaude@latest</span>",
+          "        <span data-animation='animate' data-sync='0:0.34' data-opacity='0,1' data-start='2.82' data-end='3.32' data-easing='easeOut' class='text-cyan-300 text-3xl ml-3'>npx mulmoclaude@latest</span>",
           "      </div>",
           "    </div>",
-          "    <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='1.8' data-end='2.3' data-easing='easeOut' class='text-2xl' style='color: #7C5E3C'>No complicated setup — this one line is all it takes.</p>",
+          "    <p data-animation='animate' data-sync='0:0.75' data-opacity='0,1' data-translate-y='10,0' data-start='5.84' data-end='6.34' data-easing='easeOut' class='text-2xl' style='color: #7C5E3C'>No complicated setup — this one line is all it takes.</p>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 16</div>",
           "</div>"
@@ -307,20 +350,20 @@
         "html": [
           "<div class='relative flex items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <div class='max-w-4xl mx-auto space-y-8 px-12'>",
-          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold text-center' style='color: #431407'>We want finer-grained weather</h2>",
+          "    <h2 data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold text-center' style='color: #431407'>We want finer-grained weather</h2>",
           "    <div class='grid grid-cols-2 gap-8 mt-8'>",
-          "      <div data-animation='animate' data-opacity='0,1' data-translate-x='-40,0' data-start='0.5' data-end='1.0' data-easing='easeOut' class='backdrop-blur rounded-2xl p-8' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "      <div data-animation='animate' data-sync='0:0.18' data-opacity='0,1' data-translate-x='-40,0' data-start='2.95' data-end='3.45' data-easing='easeOut' class='backdrop-blur rounded-2xl p-8' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
           "        <div class='text-sky-600 font-semibold text-xl mb-4'>Japan's weather agency</div>",
           "        <div class='text-4xl font-bold mb-2' style='color: #431407'>Daily forecasts</div>",
           "        <div class='text-xl' style='color: #7C5E3C'>A rich weekly outlook</div>",
           "      </div>",
-          "      <div data-animation='animate' data-opacity='0,1' data-translate-x='40,0' data-start='0.8' data-end='1.3' data-easing='easeOut' class='backdrop-blur rounded-2xl p-8' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "      <div data-animation='animate' data-sync='0:0.58' data-opacity='0,1' data-translate-x='40,0' data-start='8.81' data-end='9.31' data-easing='easeOut' class='backdrop-blur rounded-2xl p-8' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
           "        <div class='text-lime-700 font-semibold text-xl mb-4'>+ a global weather service</div>",
           "        <div class='text-4xl font-bold mb-2' style='color: #431407'>3-hourly forecasts</div>",
           "        <div class='text-xl' style='color: #7C5E3C'>Temperature, rain, and wind too</div>",
           "      </div>",
           "    </div>",
-          "    <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='1.5' data-end='2.0' data-easing='easeOut' class='text-center text-2xl mt-4' style='color: #7C5E3C'>→ Even after it's built, you can combine the best of both!</p>",
+          "    <p data-animation='animate' data-sync='0:0.80' data-opacity='0,1' data-translate-y='10,0' data-start='12.03' data-end='12.53' data-easing='easeOut' class='text-center text-2xl mt-4' style='color: #7C5E3C'>→ Even after it's built, you can combine the best of both!</p>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>12 / 16</div>",
           "</div>"
@@ -381,40 +424,40 @@
         "animation": true,
         "html": [
           "<div class='relative flex flex-col items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
-          "  <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold mb-12' style='color: #431407'>Built with conversation alone</h2>",
+          "  <h2 data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold mb-12' style='color: #431407'>Built with conversation alone</h2>",
           "  <div class='w-full max-w-5xl space-y-5 px-12'>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='0.4' data-end='0.8' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='0:0.30' data-opacity='0,1' data-translate-x='-30,0' data-start='4.18' data-end='4.68' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-sky-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 1</span>",
           "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Open Collections</span>",
           "      <span class='text-2xl' style='color: #7C5E3C'>From the toolbar button</span>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='0.6' data-end='1.0' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='0:0.36' data-opacity='0,1' data-translate-x='-30,0' data-start='4.96' data-end='5.46' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-violet-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 2</span>",
           "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Start a new one</span>",
           "      <span class='text-2xl' style='color: #7C5E3C'>\"+ Collection\", top right</span>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='0.8' data-end='1.2' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='0:0.42' data-opacity='0,1' data-translate-x='-30,0' data-start='5.74' data-end='6.24' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-lime-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 3</span>",
           "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Choose guided setup</span>",
           "      <span class='text-2xl' style='color: #7C5E3C'>Just answer questions</span>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='1.0' data-end='1.4' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='0:0.48' data-opacity='0,1' data-translate-x='-30,0' data-start='6.52' data-end='7.02' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-cyan-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 4</span>",
           "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Say what you want</span>",
           "      <span class='text-2xl' style='color: #7C5E3C'>\"Weather for my trips, at a glance\"</span>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='1.2' data-end='1.6' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='0:0.54' data-opacity='0,1' data-translate-x='-30,0' data-start='7.3' data-end='7.8' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-rose-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 5</span>",
           "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Fetch the weather</span>",
           "      <span class='text-2xl' style='color: #7C5E3C'>Three cities, fetched automatically</span>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='1.4' data-end='1.8' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='0:0.60' data-opacity='0,1' data-translate-x='-30,0' data-start='8.08' data-end='8.58' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-amber-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 6</span>",
           "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Grow it freely</span>",
           "      <span class='text-2xl' style='color: #7C5E3C'>3-hourly forecasts, the timeline</span>",
           "    </div>",
           "  </div>",
-          "  <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='2.0' data-end='2.5' data-easing='easeOut' class='text-2xl mt-12' style='color: #7C5E3C'>No code. And it keeps growing — through conversation.</p>",
+          "  <p data-animation='animate' data-sync='0:0.82' data-opacity='0,1' data-translate-y='10,0' data-start='10.94' data-end='11.44' data-easing='easeOut' class='text-2xl mt-12' style='color: #7C5E3C'>No code. And it keeps growing — through conversation.</p>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>15 / 16</div>",
           "</div>"
         ]
@@ -427,30 +470,30 @@
         "animation": true,
         "html": [
           "<div class='relative flex flex-col items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
-          "  <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.6' data-easing='easeOut' class='text-5xl font-bold mb-12' style='color: #431407'>Where it goes from here</h2>",
+          "  <h2 data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold mb-12' style='color: #431407'>Where it goes from here</h2>",
           "  <div class='grid grid-cols-2 gap-6 max-w-5xl px-12'>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='0.6' data-end='1.1' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "    <div data-animation='animate' data-sync='0:0.05' data-opacity='0,1' data-translate-y='30,0' data-start='0.98' data-end='1.48' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
           "      <div class='text-4xl'>📍</div>",
           "      <div>",
           "        <div class='font-semibold text-3xl' style='color: #431407'>Weather for your usual places</div>",
           "        <div class='text-xl mt-2' style='color: #7C5E3C'>Home, office, and travel spots, checked daily</div>",
           "      </div>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='0.9' data-end='1.4' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "    <div data-animation='animate' data-sync='0:0.25' data-opacity='0,1' data-translate-y='30,0' data-start='4.91' data-end='5.41' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
           "      <div class='text-4xl'>📅</div>",
           "      <div>",
           "        <div class='font-semibold text-3xl' style='color: #431407'>Connect your calendar</div>",
           "        <div class='text-xl mt-2' style='color: #7C5E3C'>Weather fetched for wherever your plans are</div>",
           "      </div>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='1.2' data-end='1.7' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "    <div data-animation='animate' data-sync='0:0.37' data-opacity='0,1' data-translate-y='30,0' data-start='7.27' data-end='7.77' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
           "      <div class='text-4xl'>⏰</div>",
           "      <div>",
           "        <div class='font-semibold text-3xl' style='color: #431407'>A 6 a.m. digest</div>",
           "        <div class='text-xl mt-2' style='color: #7C5E3C'>Today's destinations and their weather, delivered</div>",
           "      </div>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='1.5' data-end='2.0' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "    <div data-animation='animate' data-sync='0:0.60' data-opacity='0,1' data-translate-y='30,0' data-start='11.79' data-end='12.29' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
           "      <div class='text-4xl'>🌱</div>",
           "      <div>",
           "        <div class='font-semibold text-3xl' style='color: #431407'>Still growable after it's built</div>",
@@ -458,7 +501,7 @@
           "      </div>",
           "    </div>",
           "  </div>",
-          "  <p data-animation='animate' data-opacity='0,1' data-scale='0.9,1' data-start='2.2' data-end='3.0' data-easing='easeOut' class='text-center text-4xl font-bold mt-12' style='color: #EA580C'>Give it a try!</p>",
+          "  <p data-animation='animate' data-sync='0:0.96' data-opacity='0,1' data-scale='0.9,1' data-start='18.86' data-end='19.36' data-easing='easeOut' class='text-center text-4xl font-bold mt-12' style='color: #EA580C'>Give it a try!</p>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>16 / 16</div>",
           "</div>"
         ]
