@@ -130,6 +130,31 @@
 
 ## キャプチャ規約
 
+### デモ用 workspace とアプリ起動（en / ja）
+
+- キャプチャは専用のデモ workspace で撮る。実運用 workspace は実データ・個人情報が写り込むため使わない
+- workspace は言語別に 2 つ用意している: `demo-workspace-en`（英語データ・正）と `demo-workspace-ja`（日本語データ・en から派生）。デモデータを直すときはまず en に入れ、同じ変更を ja にも反映する
+- アプリは mulmoclaude リポジトリの checkout から、workspace パス（`MULMOCLAUDE_WORKSPACE_PATH`）と UI 言語（`VITE_LOCALE`）を指定して起動する。UI は `http://localhost:5173`
+
+英語収録:
+
+```bash
+cd <mulmoclaude-repo>
+MULMOCLAUDE_WORKSPACE_PATH=<workspaces-dir>/demo-workspace-en VITE_LOCALE=en yarn dev
+```
+
+日本語収録:
+
+```bash
+cd <mulmoclaude-repo>
+MULMOCLAUDE_WORKSPACE_PATH=<workspaces-dir>/demo-workspace-ja VITE_LOCALE=ja yarn dev
+```
+
+- `<mulmoclaude-repo>` は mulmoclaude 本体の checkout、`<workspaces-dir>` はデモ workspace 2 つを置いた親ディレクトリ。ローカルの実パス入りコマンドは各自のスニペットツール（Raycast 等）に登録し、この docs には書かない
+- 言語コードは `ja`（`jp` は locale 解決されず OS 言語にフォールバックする）
+- 言語の切り替え = env を変えて dev サーバーを再起動する。2 言語を同時に立てたい場合だけポートを分ける
+- `demo-workspace-ja` にはチャット履歴を入れていない。チャット画面が写るビートは収録時にその場で日本語のやりとりを作る
+
 ### ブラウザ操作（Playwright MCP）
 
 - Playwright MCP は内蔵 Chromium を使う（システムの Chrome を指定しない）。`.mcp.json` はシンプルに:
@@ -227,6 +252,6 @@ mulmo pdf -g --pdf_mode handout mulmoclaude/demos/<name>.json  # ハンドアウ
 
 ## 多言語展開の要点
 
-- キャプチャは言語ごとに撮り直す（UI 言語を切り替え、上記キャプチャ台本と同じ流れで同じ構図を再現）。アセットは `collection-demo-assets-en/` のように言語別ディレクトリに分ける
+- キャプチャは言語ごとに撮り直す（言語別 workspace と UI 言語を切り替えて起動し — 上記「デモ用 workspace とアプリ起動」参照 — 上記キャプチャ台本と同じ流れで同じ構図を再現）。アセットは `collection-demo-assets-en/` のように言語別ディレクトリに分ける
 - スクリプトはコピーして `lang`・`voiceId`・ナレーション・スライド内テキストを差し替え、赤枠・吹き出し座標を対象言語 UI に合わせて微調整する
 - 英語 TTS なら「マルモクロード」表記は不要（MulmoClaude のままで読める）
