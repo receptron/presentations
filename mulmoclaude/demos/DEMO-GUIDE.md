@@ -152,6 +152,7 @@ MULMOCLAUDE_WORKSPACE_PATH=<workspaces-dir>/demo-workspace-ja VITE_LOCALE=ja yar
 
 - `<mulmoclaude-repo>` は mulmoclaude 本体の checkout、`<workspaces-dir>` はデモ workspace 2 つを置いた親ディレクトリ。ローカルの実パス入りコマンドは各自のスニペットツール（Raycast 等）に登録し、この docs には書かない
 - 言語コードは `ja`（`jp` は locale 解決されず OS 言語にフォールバックする）
+- `VITE_LOCALE` が変えるのは **UI の言語だけ**。チャットエージェントの返答・presentForm・生成スキーマの言語は、各 workspace 直下の `CLAUDE.md` の言語指示で強制している（グローバル `~/.claude/CLAUDE.md` の「日本語で会話」指示や親ディレクトリの CLAUDE.md をエージェントが読み込むため、workspace 側で明示的に上書きする。2026-07 の en 収録で英語 UI なのに返答が日本語になる事象が発生、この方式で解決）
 - 言語の切り替え = env を変えて dev サーバーを再起動する。2 言語を同時に立てたい場合だけポートを分ける
 - `demo-workspace-ja` にはチャット履歴を入れていない。チャット画面が写るビートは収録時にその場で日本語のやりとりを作る
 
