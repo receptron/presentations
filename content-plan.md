@@ -194,7 +194,7 @@ JSON にはコメントが書けないため、どの beat を実キャプチャ
 | 8 | 次にやること(コレクション → 自動化 → リモート) | — |
 | 9 | クロージング(T1 への導線) | — |
 
-### demos/what-is-mulmoclaude.json(D1 / What / ファネル入口 = ローンチのコアセット)
+### demos/what-is-mulmoclaude_ja.json(D1 / What / ファネル入口 = ローンチのコアセット)
 
 2026-07-12 に実ユーザー事例入りの「実例カタログ」として全面リニューアル(what-materials.md の A 案)。旧・汎用説明版(ダークネイビー)は破棄。デザインは D3 と同じ warm「生活ノート」調 html_tailwind、全ビートともナレーション同期アニメーション(無音検出で実測 retiming 済み)。
 
@@ -229,7 +229,7 @@ JSON にはコメントが書けないため、どの beat を実キャプチャ
 | 8 | ビフォー / アフター(対比) | — |
 | 9 | クロージング(CTA) | — |
 
-### demos/collections-showcase.json(D3 / What)
+### demos/collections-showcase_ja.json(D3 / What)
 
 | beat | 内容 | 差し替え | animation |
 |---|---|---|---|

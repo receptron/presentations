@@ -8,7 +8,9 @@ A collection of MulmoCast presentation scripts (JSON) about MulmoClaude/MulmoTer
 
 Scripts live under `mulmoclaude/`, organized by intent: `vision/` (Why), plus planned `demos/` (What) and `tutorials/` (How).
 
-For demo scripts with app screenshots (`mulmoclaude/demos/`), follow `mulmoclaude/demos/DEMO-GUIDE.md` — beat structure, HTML slide snippets, capture conventions, and narration rules distilled from the reviewed `collection-creation-demo.json`.
+File naming across all script directories: the unsuffixed name is the English version (canonical, e.g. `collection-creation-demo.json`), `_ja` is the Japanese version. Demo asset directories follow the same rule (`collection-demo-assets/` = English captures, `collection-demo-assets-ja/` = Japanese). Decks are authored in Japanese first (`_ja`), then translated into the unsuffixed English version with slides, narration, and captures all in English.
+
+For demo scripts with app screenshots (`mulmoclaude/demos/`), follow `mulmoclaude/demos/DEMO-GUIDE.md` — beat structure, HTML slide snippets, capture conventions, and narration rules distilled from the reviewed `collection-creation-demo_ja.json`.
 
 ## Commands
 

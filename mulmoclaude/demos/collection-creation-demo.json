@@ -1,55 +1,91 @@
 {
-  "$mulmocast": { "version": "1.1" },
-  "canvasSize": { "width": 1280, "height": 720 },
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
   "speechParams": {
     "speakers": {
       "Presenter": {
-        "displayName": { "ja": "プレゼンター" },
-        "voiceId": "Kore", "isDefault": true, "provider": "gemini",
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
         "speechOptions": {
-          "instruction": "明るく温かい、希望に満ちたトーンで話してください。大切なものを友人に楽しそうに紹介するような、優しくて前向きな語り口。決して暗く平板にならず、穏やかなエネルギーを保ってください。"
+          "instruction": "Speak in a bright, warm, hopeful tone — like happily introducing something you love to a friend. Gentle, positive energy throughout; never dark or flat."
         }
       }
     }
   },
-  "imageParams": { "provider": "openai", "images": {} },
-  "movieParams": { "provider": "replicate" },
-  "soundEffectParams": { "provider": "replicate" },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
   "slideParams": {
     "theme": {
       "colors": {
-        "bg": "FFFBF2", "bgCard": "FFF3DC", "bgCardAlt": "FCE8C8",
-        "text": "431407", "textMuted": "7C5E3C", "textDim": "A08B6E",
-        "primary": "EA580C", "accent": "F59E0B", "success": "65A30D",
-        "warning": "B45309", "danger": "DC2626", "info": "0284C7", "highlight": "DB2777"
+        "bg": "FFFBF2",
+        "bgCard": "FFF3DC",
+        "bgCardAlt": "FCE8C8",
+        "text": "431407",
+        "textMuted": "7C5E3C",
+        "textDim": "A08B6E",
+        "primary": "EA580C",
+        "accent": "F59E0B",
+        "success": "65A30D",
+        "warning": "B45309",
+        "danger": "DC2626",
+        "info": "0284C7",
+        "highlight": "DB2777"
       },
-      "fonts": { "title": "'Hiragino Sans', 'Helvetica Neue', Helvetica, sans-serif", "body": "'Hiragino Sans', Helvetica, sans-serif", "mono": "Menlo", "accent": "Outfit" },
+      "fonts": {
+        "title": "Georgia",
+        "body": "Helvetica",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
       "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)",
       "titleGradient": "linear-gradient(100deg, #431407, #B45309 55%, #EA580C)",
       "cardStyle": "glass"
     }
   },
   "audioParams": {
-    "padding": 0.3, "introPadding": 1, "closingPadding": 0.8, "outroPadding": 1,
-    "bgmVolume": 0.2, "audioVolume": 1, "suppressSpeech": false, "concurrency": 1
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.2,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
   },
-  "title": "コレクション作成デモ — 天気予報コレクション",
-  "description": "マルモクロードのコレクション機能を使って天気予報コレクションを作成するデモ。",
-  "lang": "ja",
+  "title": "Collection Creation Demo — Weather Collection",
+  "description": "Building a weather collection from scratch with MulmoClaude's Collections feature, using nothing but conversation.",
+  "lang": "en",
   "beats": [
     {
-      "text": "出張で複数の場所を移動するとき、行き先ごとの天気を調べるの、結構大変ですよね。移動のたびにそれぞれの天気を調べて、時間帯ごとに整理して。マルモクロードなら、こんな出張タイムラインが会話だけで作れます。",
+      "text": "Every business trip, you end up checking the weather for each destination — city by city, hour by hour. With MulmoClaude, one conversation builds you this trip timeline.",
       "image": {
         "type": "html_tailwind",
         "html": [
           "<div class='relative flex h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <div class='w-2/5 flex flex-col justify-center px-10 space-y-6'>",
-          "    <h2 class='text-4xl font-semibold leading-snug' style='color: #431407'>出張のたびに、<br/>行き先ごとの天気を<br/>調べていませんか？</h2>",
+          "    <h2 class='text-4xl font-semibold leading-snug' style='color: #431407'>Traveling for work,<br/>still checking the weather<br/>city by city?</h2>",
           "    <div class='rounded-xl p-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
-          "      <div class='text-base mb-2 font-semibold' style='color: #EA580C'>入力したプロンプト</div>",
-          "      <p class='text-xl leading-relaxed' style='color: #431407'>「出張スケジュールに合わせて、各地点の天気を時間ごとに並べて見たい」</p>",
+          "      <div class='text-base mb-2 font-semibold' style='color: #EA580C'>The prompt we typed</div>",
+          "      <p class='text-xl leading-relaxed' style='color: #431407'>\"Show the weather as a timeline that follows my travel schedule.\"</p>",
           "    </div>",
-          "    <p class='text-xl' style='color: #7C5E3C'>→ 会話だけでこの画面が作れます</p>",
+          "    <p class='text-xl' style='color: #7C5E3C'>→ One conversation builds this screen</p>",
           "  </div>",
           "  <div class='w-3/5 flex items-center justify-center p-4'>",
           "    <img src='collection-demo-assets/demo-31-timeline-hero-1280.png' class='rounded-xl shadow-2xl' style='max-height: 640px; object-fit: contain' />",
@@ -60,29 +96,36 @@
       }
     },
     {
-      "text": "これを、マルモクロードの「コレクション」機能でゼロから作る流れを解説します。",
+      "text": "In this demo, we'll build it from scratch with MulmoClaude's Collections feature.",
       "image": {
         "type": "slide",
         "slide": {
           "layout": "title",
-          "eyebrow": { "label": "コレクション作成デモ" },
-          "titleSize": "hero", "subtitleSize": "lead",
-          "title": "天気予報コレクション",
-          "subtitle": "{primary:会話だけ}で、天気チェックの仕組みを作る",
-          "chips": ["☁️ 天気予報を自動取得", "📍 複数地点を一覧表示", "🗺️ 出張タイムライン"]
+          "eyebrow": {
+            "label": "Collection Creation Demo"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "A Weather Collection",
+          "subtitle": "Build your own weather tracker, {primary:just by talking}",
+          "chips": [
+            "☁️ Forecasts fetched automatically",
+            "📍 Every location at a glance",
+            "🗺️ Trip timeline"
+          ]
         }
       }
     },
     {
-      "text": "マルモクロードの起動はとても簡単です。ターミナルを開いて、画面のこの一行を入力するだけ。ブラウザが自動で開いて、すぐに使い始めることができます。",
+      "text": "Getting started is easy. Open a terminal, type the one line on screen, and your browser opens with MulmoClaude ready to go.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='relative flex items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <div class='text-center space-y-10 px-12'>",
-          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold' style='color: #431407'>起動方法</h2>",
-          "    <div data-animation='animate' data-opacity='0,1' data-scale='0.95,1' data-start='0.5' data-end='1.2' data-easing='easeOut' class='bg-gray-950 rounded-2xl p-10 border border-gray-700 max-w-2xl mx-auto shadow-2xl'>",
+          "    <h2 data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold' style='color: #431407'>How to launch</h2>",
+          "    <div data-animation='animate' data-sync='1:0' data-opacity='0,1' data-scale='0.95,1' data-start='1.94' data-end='2.44' data-easing='easeOut' class='bg-gray-950 rounded-2xl p-10 border border-gray-700 max-w-2xl mx-auto shadow-2xl'>",
           "      <div class='flex items-center gap-2 mb-5'>",
           "        <div class='w-3.5 h-3.5 rounded-full bg-red-500'></div>",
           "        <div class='w-3.5 h-3.5 rounded-full bg-yellow-500'></div>",
@@ -91,10 +134,10 @@
           "      </div>",
           "      <div class='text-left font-mono'>",
           "        <span class='text-green-400 text-xl'>$</span>",
-          "        <span data-animation='animate' data-opacity='0,1' data-start='1.0' data-end='1.5' data-easing='easeOut' class='text-cyan-300 text-3xl ml-3'>npx mulmoclaude@latest</span>",
+          "        <span data-animation='animate' data-sync='1:0.17' data-opacity='0,1' data-start='2.92' data-end='3.42' data-easing='easeOut' class='text-cyan-300 text-3xl ml-3'>npx mulmoclaude@latest</span>",
           "      </div>",
           "    </div>",
-          "    <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='1.8' data-end='2.3' data-easing='easeOut' class='text-2xl' style='color: #7C5E3C'>面倒な設定は不要。この一行だけで始められます。</p>",
+          "    <p data-animation='animate' data-sync='1:0.55' data-opacity='0,1' data-translate-y='10,0' data-start='5.1' data-end='5.6' data-easing='easeOut' class='text-2xl' style='color: #7C5E3C'>No complicated setup — this one line is all it takes.</p>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 16</div>",
           "</div>"
@@ -102,7 +145,7 @@
       }
     },
     {
-      "text": "では早速作っていきましょう。マルモクロードの機能は、画面上部のツールバーに並んでいます。この中の「コレクション」ボタンをクリックすると、コレクションの画面が開きます。",
+      "text": "Let's get building. MulmoClaude's features line up in the toolbar at the top of the screen. Click the Collections button there, and the collections screen opens.",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -110,20 +153,20 @@
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 1</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>ツールバーから「コレクション」を開く</h2>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>Open Collections from the toolbar</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>機能はすべて画面上部のツールバーに並んでいます</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>Every feature lives in the toolbar at the top</p>",
           "  </div>",
           "  <div class='flex-1 flex flex-col items-center justify-center px-6 pb-4'>",
           "    <div class='relative mb-12'>",
           "      <img src='collection-demo-assets/demo-19-toolbar-zoom.png' class='rounded-xl shadow-2xl' style='width: 1000px' />",
-          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 4%; left: 57.5%; width: 5.6%; height: 88%'></div>",
-          "      <div class='absolute text-red-600 text-2xl font-bold whitespace-nowrap' style='top: 118%; left: 50%'>↑ この「コレクション」ボタンをクリック</div>",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 4%; left: 57.6%; width: 5.6%; height: 88%'></div>",
+          "      <div class='absolute text-red-600 text-2xl font-bold whitespace-nowrap' style='top: 118%; left: 44%'>↑ Click this Collections button</div>",
           "    </div>",
           "    <div class='relative mt-10'>",
           "      <img src='collection-demo-assets/demo-28-collections-1280.png' class='rounded-xl shadow-2xl' style='max-height: 320px; object-fit: contain' />",
-          "      <div class='absolute border-2 border-sky-600 rounded-lg' style='top: 0%; left: 0%; width: 60.5%; height: 7.4%'></div>",
-          "      <div class='absolute text-sky-600 text-xl font-semibold whitespace-nowrap' style='top: -13%; left: 18%'>⬆ この部分を拡大しています</div>",
+          "      <div class='absolute border-2 border-sky-600 rounded-lg' style='top: 0%; left: 0%; width: 61.7%; height: 7.8%'></div>",
+          "      <div class='absolute text-sky-600 text-xl font-semibold whitespace-nowrap' style='top: -13%; left: 18%'>⬆ Zoomed in on this strip</div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 16</div>",
@@ -132,7 +175,7 @@
       }
     },
     {
-      "text": "コレクションの一覧画面が開きました。新しく作るには、右上の「＋ コレクション」ボタンをクリックします。",
+      "text": "Here's the collections screen. To create a new one, click the plus-Collection button in the top right.",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -140,14 +183,14 @@
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 2</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>「＋ コレクション」をクリック</h2>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>Click \"+ Collection\"</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>一覧画面の右上にあります</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>Top right of the collections screen</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
           "      <img src='collection-demo-assets/demo-28-collections-1280.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "      <div class='absolute border-2 border-red-600 rounded-lg' style='top: 9%; left: 74.4%; width: 11.4%; height: 7%'></div>",
+          "      <div class='absolute border-2 border-red-600 rounded-lg' style='top: 10%; left: 76.2%; width: 9.1%; height: 5.6%'></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 16</div>",
@@ -156,7 +199,7 @@
       }
     },
     {
-      "text": "新しいコレクションの作成方法を選ぶ画面が表示されました。一番上の「ガイド付きセットアップ」を選びます。何を管理したいかを、質問形式で聞いてくれるモードです。",
+      "text": "A screen appears asking how you'd like to create it. Pick Guided setup at the top — it asks you, question by question, what you want to keep track of.",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -164,14 +207,14 @@
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 3</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>ガイド付きセットアップを選ぶ</h2>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>Choose \"Guided setup\"</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>質問に答えるだけでコレクションができます</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>Answer a few questions and the collection builds itself</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
           "      <img src='collection-demo-assets/demo-32-guided-modal-bg.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "      <div class='absolute border-2 border-red-600 rounded-lg' style='top: 17.5%; left: 24.4%; width: 26%; height: 16.5%'></div>",
+          "      <div class='absolute border-2 border-red-600 rounded-lg' style='top: 18.5%; left: 24.8%; width: 25.2%; height: 12.2%'></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 16</div>",
@@ -180,25 +223,25 @@
       }
     },
     {
-      "text": "ガイド付きセットアップを選ぶと、画面はこう変わります。左側がAIとの会話。そして、やり取りの結果がすぐ右横に表示される仕組みです。今回は、何を管理したいかを聞くフォームが出てきました。作業はぜんぶ、この一つの画面で完結します。",
+      "text": "Choosing guided setup changes the screen to this. On the left, your conversation with the AI. Whatever comes out of it shows up immediately on the right — this time, a form asking what we want to track. Everything happens in this one screen.",
       "image": {
         "type": "html_tailwind",
         "html": [
           "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
-          "      <span class='bg-sky-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>画面の見方</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>左で会話すると、右に画面が出る</h2>",
+          "      <span class='bg-sky-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>How to read the screen</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>Talk on the left, results on the right</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>やり取りはぜんぶ、この一つの画面で完結します</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>The whole exchange happens in this one screen</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
           "      <img src='collection-demo-assets/demo-33-chat-form-1280.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
           "      <div class='absolute border-4 border-sky-600 rounded-lg' style='top: 14.5%; left: 0.4%; width: 24.6%; height: 84%'></div>",
-          "      <div class='absolute bg-sky-600 text-white text-xl font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg' style='top: 10.5%; left: 1.5%'>① 左で会話</div>",
-          "      <div class='absolute border-4 border-lime-600 rounded-lg' style='top: 14.5%; left: 26.2%; width: 73%; height: 84%'></div>",
-          "      <div class='absolute bg-lime-600 text-white text-xl font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg' style='top: 10.5%; left: 27.5%'>② 結果がすぐ横に表示される</div>",
+          "      <div class='absolute bg-sky-600 text-white text-xl font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg' style='top: 10.5%; left: 1.5%'>① Chat on the left</div>",
+          "      <div class='absolute border-4 border-lime-600 rounded-lg' style='top: 14.5%; left: 25.4%; width: 74%; height: 84%'></div>",
+          "      <div class='absolute bg-lime-600 text-white text-xl font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg' style='top: 10.5%; left: 26.8%'>② Results appear right beside it</div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 16</div>",
@@ -207,7 +250,7 @@
       }
     },
     {
-      "text": "このフォームに、やりたいことを書いていきます。コレクション名は「天気予報」。内容は、場所ごと・時間帯ごとの天気を管理したい。出張で移動するので、複数の場所の天気を一覧で確認したい。これだけです。",
+      "text": "We fill in what we want: the weather for the places we travel to for work — Tsuchiura, Tokyo, Morioka — all in one view, organized by time of day. That's all it takes.",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -215,9 +258,9 @@
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 4</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>やりたいことをフォームに書く</h2>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>Write what you want in the form</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>「出張で移動するので、複数の場所の天気を一覧で確認したい」と記入</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>\"I travel for work, so I want the weather for several cities at a glance\"</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <img src='collection-demo-assets/demo-22-form-panel.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
@@ -228,23 +271,23 @@
       }
     },
     {
-      "text": "すると、天気予報に必要な項目が自動で用意されました。地点名、今日の天気、気温、降水確率、複数日の予報。全部AIが考えてくれます。しかも一番下を見てください。次にやることまで、AIのほうから提案してくれました。",
+      "text": "And with that, everything a weather collection needs was designed automatically — each city's conditions, highs and lows, and the chance of rain by time of day. The AI thought it all through. Now look at the bottom: it even suggests what to do next.",
       "image": {
         "type": "html_tailwind",
         "html": [
           "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
-          "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>自動生成</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>必要な項目が自動で完成</h2>",
+          "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>Auto-generated</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>All the pieces, designed for you</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>項目の設計から、次のステップの提案までおまかせ</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>From the data design to the next step, it's all suggested</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
           "      <img src='collection-demo-assets/demo-26-created-fields.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "      <div class='absolute border-2 border-red-600 rounded-lg' style='top: 83%; left: 1.5%; width: 96%; height: 11.5%'></div>",
-          "      <div class='absolute bg-red-600 text-white text-lg font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow-lg' style='top: 79%; right: 3%'>AIからの提案</div>",
+          "      <div class='absolute border-2 border-red-600 rounded-lg' style='top: 81.8%; left: 0.8%; width: 98.4%; height: 17%'></div>",
+          "      <div class='absolute bg-red-600 text-white text-lg font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow-lg' style='top: 77.8%; right: 3%'>The AI's suggestion</div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>9 / 16</div>",
@@ -253,7 +296,7 @@
       }
     },
     {
-      "text": "この提案に「はい、お願いします」と答えるだけ。すると3地点の天気を自動で取得して、一覧にまとめてくれました。",
+      "text": "We just answer, \"Yes, please!\" The weather for all three cities is fetched automatically and lined up in a table.",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -261,15 +304,15 @@
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 5</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>「はい、お願いします」と答えるだけ</h2>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>Just answer \"Yes, please!\"</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>AIの提案に乗るだけで、3地点の天気が一覧になりました</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>Ride along with the suggestion, and three cities line up</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
           "      <img src='collection-demo-assets/demo-29-weather-table-1280.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
           "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='top: 58%; left: 50%; transform: translateX(-50%); background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
-          "        <span class='text-2xl' style='color: #431407'>💬 「はい、お願いします！」</span>",
+          "        <span class='text-2xl' style='color: #431407'>💬 \"Yes, please!\"</span>",
           "      </div>",
           "    </div>",
           "  </div>",
@@ -279,17 +322,17 @@
       }
     },
     {
-      "text": "各地点をクリックすると、7日間の週間予報も確認できます。盛岡の画面では、日付ごとの天気、気温、降水確率がきれいに並んでいますね。",
+      "text": "Click any city to see its details. Here's Morioka — a full week of forecasts, with the weather, temperatures, and rain chances neatly lined up.",
       "image": {
         "type": "html_tailwind",
         "html": [
           "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
-          "      <span class='bg-violet-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>詳細表示</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>各地点の詳細を確認</h2>",
+          "      <span class='bg-violet-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>Details</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>Check each city in detail</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>7日間の週間予報も自動で取得されています</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>A 7-day forecast is fetched automatically too</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <img src='collection-demo-assets/demo-24-detail-modal.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
@@ -300,27 +343,27 @@
       }
     },
     {
-      "text": "でも出張中は、日ごとの予報だけでなく、時間帯ごとの天気も知りたいですよね。作った後でも大丈夫。「3時間ごとの天気も出せる？」と聞いたら、別の天気サービスも組み合わせて、もっと細かいデータを取ってくれました。",
+      "text": "But when you're traveling, daily forecasts aren't enough — you want the weather hour by hour. Even after it's built, no problem. We asked, \"Can you add 3-hourly forecasts?\" — and it brought in another weather service to fetch the finer data.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='relative flex items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <div class='max-w-4xl mx-auto space-y-8 px-12'>",
-          "    <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold text-center' style='color: #431407'>もっと細かい天気が知りたい</h2>",
+          "    <h2 data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold text-center' style='color: #431407'>We want finer-grained weather</h2>",
           "    <div class='grid grid-cols-2 gap-8 mt-8'>",
-          "      <div data-animation='animate' data-opacity='0,1' data-translate-x='-40,0' data-start='0.5' data-end='1.0' data-easing='easeOut' class='backdrop-blur rounded-2xl p-8' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
-          "        <div class='text-sky-600 font-semibold text-xl mb-4'>気象庁</div>",
-          "        <div class='text-4xl font-bold mb-2' style='color: #431407'>日ごとの天気</div>",
-          "        <div class='text-xl' style='color: #7C5E3C'>週間予報が充実</div>",
+          "      <div data-animation='animate' data-sync='0:0.3' data-opacity='0,1' data-translate-x='-40,0' data-start='2.04' data-end='2.54' data-easing='easeOut' class='backdrop-blur rounded-2xl p-8' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "        <div class='text-sky-600 font-semibold text-xl mb-4'>Japan's weather agency</div>",
+          "        <div class='text-4xl font-bold mb-2' style='color: #431407'>Daily forecasts</div>",
+          "        <div class='text-xl' style='color: #7C5E3C'>A rich weekly outlook</div>",
           "      </div>",
-          "      <div data-animation='animate' data-opacity='0,1' data-translate-x='40,0' data-start='0.8' data-end='1.3' data-easing='easeOut' class='backdrop-blur rounded-2xl p-8' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
-          "        <div class='text-lime-700 font-semibold text-xl mb-4'>+ 海外天気サービス</div>",
-          "        <div class='text-4xl font-bold mb-2' style='color: #431407'>3時間ごとの天気</div>",
-          "        <div class='text-xl' style='color: #7C5E3C'>気温・降水・風速も</div>",
+          "      <div data-animation='animate' data-sync='2:0.15' data-opacity='0,1' data-translate-x='40,0' data-start='8.72' data-end='9.22' data-easing='easeOut' class='backdrop-blur rounded-2xl p-8' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "        <div class='text-lime-700 font-semibold text-xl mb-4'>+ a global weather service</div>",
+          "        <div class='text-4xl font-bold mb-2' style='color: #431407'>3-hourly forecasts</div>",
+          "        <div class='text-xl' style='color: #7C5E3C'>Temperature, rain, and wind too</div>",
           "      </div>",
           "    </div>",
-          "    <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='1.5' data-end='2.0' data-easing='easeOut' class='text-center text-2xl mt-4' style='color: #7C5E3C'>→ 作った後でも、両方組み合わせていいとこ取り！</p>",
+          "    <p data-animation='animate' data-sync='2:0.6' data-opacity='0,1' data-translate-y='10,0' data-start='12.02' data-end='12.52' data-easing='easeOut' class='text-center text-2xl mt-4' style='color: #7C5E3C'>→ Even after it's built, you can combine the best of both!</p>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>12 / 16</div>",
           "</div>"
@@ -328,17 +371,17 @@
       }
     },
     {
-      "text": "3時間ごとの天気予報が追加されました。3地点すべてに、今日と明日の細かい予報データが入っています。一度作ったコレクションも、こうやって会話だけで育てていけます。",
+      "text": "The 3-hourly forecast is in. All three cities now carry detailed data for today and tomorrow. A collection you've already built keeps growing like this — through conversation alone.",
       "image": {
         "type": "html_tailwind",
         "html": [
           "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
-          "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>後から拡張</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>3時間ごとの予報を追加</h2>",
+          "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>Grow it later</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>3-hourly forecasts added</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>できあがった後でも、頼めばすぐに反映されます</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>Ask after the fact, and it's reflected right away</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <img src='collection-demo-assets/demo-25-hourly-modal.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
@@ -349,7 +392,7 @@
       }
     },
     {
-      "text": "最後に「出張の移動に合わせて、時間ごとの天気を並べて見たい」と伝えたら、最初にお見せした出張タイムラインが完成しました。朝7時に土浦を出て、8時半に東京着。15時に東京を出て、18時に盛岡着。各時間帯の天気がひと目でわかります。",
+      "text": "Finally we said, \"Show the weather as a timeline that follows my travel schedule\" — and there it is, the trip timeline from the start of this video. Leave Tsuchiura at seven, reach Tokyo by eight thirty. Leave Tokyo at three, arrive in Morioka at six. The weather for every leg, at a glance.",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -357,15 +400,15 @@
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 6</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>タイムライン完成！</h2>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>Timeline complete!</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>作った後の追加リクエストで、ここまで育ちました</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>Follow-up requests grew it this far</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
           "      <img src='collection-demo-assets/demo-30-timeline-1280.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
           "      <div class='absolute rounded-2xl px-6 py-4 shadow-xl' style='top: 38%; left: 71%; width: 27%; background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
-          "        <span class='text-2xl leading-relaxed' style='color: #431407'>💬 「出張の移動に合わせて、時間ごとの天気を並べて見たい」</span>",
+          "        <span class='text-2xl leading-relaxed' style='color: #431407'>💬 \"Show the weather as a timeline that follows my travel schedule\"</span>",
           "      </div>",
           "    </div>",
           "  </div>",
@@ -375,90 +418,90 @@
       }
     },
     {
-      "text": "ここまでの作業、全部会話だけで完了しました。やりたいことを伝える、結果を確認する、追加の要望を言う。この繰り返しだけで、天気チェックの仕組みが完成しました。コードは一行も書いていません。",
+      "text": "Everything you just watched happened through conversation alone. Say what you want, check the result, ask for a little more. That loop is all it took to build a weather tracker — without writing a single line of code.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='relative flex flex-col items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
-          "  <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold mb-12' style='color: #431407'>会話だけで完成</h2>",
+          "  <h2 data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold mb-12' style='color: #431407'>Built with conversation alone</h2>",
           "  <div class='w-full max-w-5xl space-y-5 px-12'>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='0.4' data-end='0.8' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='1:0' data-opacity='0,1' data-translate-x='-30,0' data-start='4.15' data-end='4.65' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-sky-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 1</span>",
-          "      <span class='text-3xl font-semibold w-80' style='color: #431407'>コレクションを開く</span>",
-          "      <span class='text-2xl' style='color: #7C5E3C'>ツールバーのボタンから</span>",
+          "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Open Collections</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>From the toolbar button</span>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='0.6' data-end='1.0' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='1:0.17' data-opacity='0,1' data-translate-x='-30,0' data-start='4.79' data-end='5.29' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-violet-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 2</span>",
-          "      <span class='text-3xl font-semibold w-80' style='color: #431407'>新規作成を始める</span>",
-          "      <span class='text-2xl' style='color: #7C5E3C'>右上の「＋ コレクション」から</span>",
+          "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Start a new one</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>\"+ Collection\", top right</span>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='0.8' data-end='1.2' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='1:0.33' data-opacity='0,1' data-translate-x='-30,0' data-start='5.4' data-end='5.9' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-lime-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 3</span>",
-          "      <span class='text-3xl font-semibold w-80' style='color: #431407'>ガイド付きを選ぶ</span>",
-          "      <span class='text-2xl' style='color: #7C5E3C'>質問に答えるだけ</span>",
+          "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Choose guided setup</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>Just answer questions</span>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='1.0' data-end='1.4' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='1:0.5' data-opacity='0,1' data-translate-x='-30,0' data-start='6.05' data-end='6.55' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-cyan-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 4</span>",
-          "      <span class='text-3xl font-semibold w-80' style='color: #431407'>やりたいことを伝える</span>",
-          "      <span class='text-2xl' style='color: #7C5E3C'>「出張先の天気を一覧で見たい」</span>",
+          "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Say what you want</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>\"Weather for my trips, at a glance\"</span>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='1.2' data-end='1.6' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='1:0.67' data-opacity='0,1' data-translate-x='-30,0' data-start='6.7' data-end='7.2' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-rose-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 5</span>",
-          "      <span class='text-3xl font-semibold w-80' style='color: #431407'>天気を取得</span>",
-          "      <span class='text-2xl' style='color: #7C5E3C'>3地点の天気を自動で取ってくる</span>",
+          "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Fetch the weather</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>Three cities, fetched automatically</span>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-x='-30,0' data-start='1.4' data-end='1.8' data-easing='easeOut' class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-sync='1:0.83' data-opacity='0,1' data-translate-x='-30,0' data-start='7.31' data-end='7.81' data-easing='easeOut' class='flex items-center gap-6'>",
           "      <span class='bg-amber-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 6</span>",
-          "      <span class='text-3xl font-semibold w-80' style='color: #431407'>後から自由に拡張</span>",
-          "      <span class='text-2xl' style='color: #7C5E3C'>3時間ごとの予報も、タイムラインも</span>",
+          "      <span class='text-3xl font-semibold w-96' style='color: #431407'>Grow it freely</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>3-hourly forecasts, the timeline</span>",
           "    </div>",
           "  </div>",
-          "  <p data-animation='animate' data-opacity='0,1' data-translate-y='10,0' data-start='2.0' data-end='2.5' data-easing='easeOut' class='text-2xl mt-12' style='color: #7C5E3C'>コード不要。作った後も、会話で育てられます。</p>",
+          "  <p data-animation='animate' data-sync='2:0.5' data-opacity='0,1' data-translate-y='10,0' data-start='10.62' data-end='11.12' data-easing='easeOut' class='text-2xl mt-12' style='color: #7C5E3C'>No code. And it keeps growing — through conversation.</p>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>15 / 16</div>",
           "</div>"
         ]
       }
     },
     {
-      "text": "出張によく行く場所の天気を毎日自動チェック。Googleカレンダーの予定を見て、行き先の天気を自動で取得。毎朝6時にまとめて通知。こういったことが全部できるようになります。コレクションは作って終わりではありません。会話しながら、いくらでも育てていけます。作ってからが本番です。ぜひ、皆さんも試してみてください。",
+      "text": "Check the weather for the places you visit most, automatically, every day. Pull destinations from your calendar. Get a summary at six every morning. All of that is within reach. A collection isn't finished when it's built — it keeps growing as you talk with it. That's when the fun really starts. Give it a try!",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='relative flex flex-col items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
-          "  <h2 data-animation='animate' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.6' data-easing='easeOut' class='text-5xl font-bold mb-12' style='color: #431407'>さらに広がる使い方</h2>",
+          "  <h2 data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut' class='text-5xl font-bold mb-12' style='color: #431407'>Where it goes from here</h2>",
           "  <div class='grid grid-cols-2 gap-6 max-w-5xl px-12'>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='0.6' data-end='1.1' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "    <div data-animation='animate' data-sync='0:0.15' data-opacity='0,1' data-translate-y='30,0' data-start='0.72' data-end='1.22' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
           "      <div class='text-4xl'>📍</div>",
           "      <div>",
-          "        <div class='font-semibold text-3xl' style='color: #431407'>よく行く場所の天気</div>",
-          "        <div class='text-xl mt-2' style='color: #7C5E3C'>出張先・自宅・職場を登録して自動チェック</div>",
+          "        <div class='font-semibold text-3xl' style='color: #431407'>Weather for your usual places</div>",
+          "        <div class='text-xl mt-2' style='color: #7C5E3C'>Home, office, and travel spots, checked daily</div>",
           "      </div>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='0.9' data-end='1.4' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "    <div data-animation='animate' data-sync='1:0' data-opacity='0,1' data-translate-y='30,0' data-start='4.78' data-end='5.28' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
           "      <div class='text-4xl'>📅</div>",
           "      <div>",
-          "        <div class='font-semibold text-3xl' style='color: #431407'>カレンダーと連携</div>",
-          "        <div class='text-xl mt-2' style='color: #7C5E3C'>予定の場所から天気を自動で取得</div>",
+          "        <div class='font-semibold text-3xl' style='color: #431407'>Connect your calendar</div>",
+          "        <div class='text-xl mt-2' style='color: #7C5E3C'>Weather fetched for wherever your plans are</div>",
           "      </div>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='1.2' data-end='1.7' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "    <div data-animation='animate' data-sync='2:0' data-opacity='0,1' data-translate-y='30,0' data-start='7.04' data-end='7.54' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
           "      <div class='text-4xl'>⏰</div>",
           "      <div>",
-          "        <div class='font-semibold text-3xl' style='color: #431407'>毎朝6時に通知</div>",
-          "        <div class='text-xl mt-2' style='color: #7C5E3C'>今日の出張先の天気をまとめてお届け</div>",
+          "        <div class='font-semibold text-3xl' style='color: #431407'>A 6 a.m. digest</div>",
+          "        <div class='text-xl mt-2' style='color: #7C5E3C'>Today's destinations and their weather, delivered</div>",
           "      </div>",
           "    </div>",
-          "    <div data-animation='animate' data-opacity='0,1' data-translate-y='30,0' data-start='1.5' data-end='2.0' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "    <div data-animation='animate' data-sync='4:0' data-opacity='0,1' data-translate-y='30,0' data-start='11.72' data-end='12.22' data-easing='easeOut' class='backdrop-blur rounded-2xl p-7 flex items-start gap-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
           "      <div class='text-4xl'>🌱</div>",
           "      <div>",
-          "        <div class='font-semibold text-3xl' style='color: #431407'>作った後も、育てられる</div>",
-          "        <div class='text-xl mt-2' style='color: #7C5E3C'>項目もビューも、会話ひとつで</div>",
+          "        <div class='font-semibold text-3xl' style='color: #431407'>Still growable after it's built</div>",
+          "        <div class='text-xl mt-2' style='color: #7C5E3C'>Fields and views alike — one conversation away</div>",
           "      </div>",
           "    </div>",
           "  </div>",
-          "  <p data-animation='animate' data-opacity='0,1' data-scale='0.9,1' data-start='2.2' data-end='3.0' data-easing='easeOut' class='text-center text-4xl font-bold mt-12' style='color: #EA580C'>ぜひ、試してみてください！</p>",
+          "  <p data-animation='animate' data-sync='6:0' data-opacity='0,1' data-scale='0.9,1' data-start='18.75' data-end='19.25' data-easing='easeOut' class='text-center text-4xl font-bold mt-12' style='color: #EA580C'>Give it a try!</p>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>16 / 16</div>",
           "</div>"
         ]

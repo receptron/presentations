@@ -69,7 +69,7 @@
 
 ## 素材 2: ブレスト由来の仮想ジャーニー案(要実機確認)
 
-- キッチン: レシピ → 買い物リスト → 家計簿がひとつの会話でつながる(**collections-showcase.json で採用済み**)。
+- キッチン: レシピ → 買い物リスト → 家計簿がひとつの会話でつながる(**collections-showcase_ja.json で採用済み**)。
 - 旅行: プラン → 持ち物・予算 → 当日 → 思い出アルバム(同上、1 ビートで採用済み)。
 - 学習・資格: 計画 → 進捗記録 → 弱点分析。
 - 健康・運動: 食事・体調ログ → 週次の変化 → 食事管理とキッチンジャーニーの連携。
@@ -82,9 +82,9 @@
 
 | ファイル | 位置づけ | 状態 |
 |---|---|---|
-| demos/what-is-mulmoclaude.json | D1: 入口の実例カタログ(ローンチ用 What = A 案) | 2026-07-12 に実例入りで全面リニューアル済み(warm 生活ノート調 + ナレーション同期アニメーション) |
+| demos/what-is-mulmoclaude_ja.json | D1: 入口の実例カタログ(ローンチ用 What = A 案) | 2026-07-12 に実例入りで全面リニューアル済み(warm 生活ノート調 + ナレーション同期アニメーション) |
 | demos/daily-workflow.json | D2: 1 日の流れ | 叩き台あり。旧ネイビー配色 |
-| demos/collections-showcase.json | D3: つながるジャーニー実例集 | 叩き台完成(warm「生活ノート」調 html_tailwind + animation)。仮想例ベース |
+| demos/collections-showcase_ja.json | D3: つながるジャーニー実例集 | 叩き台完成(warm「生活ノート」調 html_tailwind + animation)。仮想例ベース |
 
 ## 提案 A/B/C と content-plan のマッピング
 
