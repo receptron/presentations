@@ -45,7 +45,7 @@
     "suppressSpeech": false,
     "concurrency": 1
   },
-  "title": "コレクションでつながる暮らし",
+  "title": "コレクション実例集 — 暮らしのアプリが、ひとつの会話でつながる",
   "description": "MulmoClaude のコレクション実例集：レシピ→買い物リスト→家計簿がひとつの会話でつながる台所の一連の流れを中心に、旅行・学び・家族の実例を3分で紹介。",
   "lang": "ja",
   "beats": [
