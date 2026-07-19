@@ -26,6 +26,24 @@
 
 ja の mp4/PDF は旧キャプチャ前提のため、ja キャプチャ撮り直し後に finalize し直す。
 
+## タイトル・参照名の管理
+
+動画内の相互参照（「〜という動画で」）と YouTube 等の公開タイトルのズレを防ぐための正はこの表。
+参照名 = 他デッキのナレーション・スライドから言及するときの呼び名で、**必ずこの表の表記をそのまま使う**。YouTube タイトルは公開時に決めて記入する。
+
+| デッキ | スクリプト title（ja） | 参照名 | YouTube タイトル |
+|---|---|---|---|
+| tutorials/collection-creation-demo | コレクション作成デモ — 天気予報コレクション | コレクション作成デモ | 未定 |
+| tutorials/kitchen-trio-tutorial | 台所の三点セットを、会話で作る | 台所の三点セットを、会話で作る | 未定 |
+| tutorials/pantry-list-tutorial | コレクションは、使いながら育てる — 常備品リスト編 | 常備品リスト編 | 未定 |
+| demos/collections-showcase | コレクションでつながる暮らし | コレクションでつながる暮らし | 未定 |
+| demos/what-is-mulmoclaude | MulmoClaude で何ができる？ | — | 未定 |
+| demos/weather-showcase | 明日の天気は、もう予定に入っている | — | 未定 |
+| demos/connected-collections-demo | バラバラのデータが、つながる | — | 未定 |
+| demos/record-buttons-demo | 押すだけの仕事は、ボタンにする | — | 未定 |
+
+相互参照の現状（2026-07-19 検証）: kitchen beat 3・15 →「コレクション作成デモ」「コレクションでつながる暮らし」／ pantry beat 10 →「台所の三点セットを、会話で作る」＋お買い物モード（未制作の予告）。いずれも表と一致。
+
 ## モック差し替えバックログ
 
 方針決定（2026-07-19）: **collections-showcase のみ実キャプチャに差し替え。what-is / weather はモックのまま（What はイメージと割り切る）**。
