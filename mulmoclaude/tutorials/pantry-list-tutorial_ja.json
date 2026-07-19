@@ -256,7 +256,7 @@
       }
     },
     {
-      "text": "買い物リスト側には、常備品切れのメモ付きで醤油が並びました。いつものお買い物モードにも、ちゃんと出てきます。切らしたものを覚えておくのは、もうあなたの仕事ではありません。",
+      "text": "買い物リスト側には、常備品切れのメモ付きで醤油が並びました。買えなかったパセリと唐辛子も一緒に、次回のお買い物としてまとまっています。切らしたものを覚えておくのは、もうあなたの仕事ではありません。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -267,12 +267,12 @@
           "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>できた</span>",
           "      <h2 class='text-4xl font-bold' style='color: #431407'>リストに、醤油が自動で</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>「常備品切れ」のメモ付き。お買い物モードにも並ぶ</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>「常備品切れ」のメモ付きで、次回のお買い物へ</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
           "      <img src='pantry-list-assets-ja/demo-05-shopping-shoyu.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='0:0.4' data-start='2.02' data-end='2.52' data-opacity='0,1' data-easing='easeOut' style='top: 54.5%; left: 34.5%; width: 31%; height: 13%'></div>",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='0:0.4' data-start='2.02' data-end='2.52' data-opacity='0,1' data-easing='easeOut' style='top: 61.5%; left: 35.5%; width: 29%; height: 11.5%'></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>8 / 10</div>",
