@@ -95,13 +95,13 @@
           "  <div class='w-3/5 flex items-center justify-center p-4'>",
           "    <img src='kitchen-trio-assets-ja/demo-09-budget-hero.png' class='rounded-xl shadow-2xl' style='max-height: 620px; object-fit: contain' />",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>1 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>1 / 14</div>",
           "</div>"
         ]
       }
     },
     {
-      "text": "今日は、レシピ帳、買い物リスト、家計簿の三点セットを、会話だけで作っていきます。途中からは、コレクション同士が勝手につながりはじめます。それでは、始めましょう。",
+      "text": "今日は、レシピ帳、買い物リスト、家計簿の三点セットを、会話だけで作っていきます。途中からは、コレクション同士がつながりはじめます。それでは、始めましょう。",
       "image": {
         "type": "slide",
         "slide": {
@@ -152,7 +152,7 @@
           "  <div class='pb-8 text-center'>",
           "    <span class='text-xl' style='color: #A08B6E' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-start='10.41' data-end='10.91' data-easing='easeOut'>🎬 1つをじっくり作る流れは「コレクション作成デモ」でどうぞ</span>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 14</div>",
           "</div>"
         ]
       }
@@ -179,7 +179,7 @@
           "      </div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 14</div>",
           "</div>"
         ]
       }
@@ -204,7 +204,7 @@
           "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='2:0.3' data-opacity='0,1' data-start='9.39' data-end='9.89' data-easing='easeOut' style='top: 44.3%; left: 0.8%; width: 55%; height: 7%'></div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 14</div>",
           "</div>"
         ]
       }
@@ -231,7 +231,7 @@
           "      </div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 14</div>",
           "</div>"
         ]
       }
@@ -253,7 +253,7 @@
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <img src='kitchen-trio-assets-ja/demo-04-shopping-list.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 14</div>",
           "</div>"
         ]
       }
@@ -289,7 +289,7 @@
           "      </div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>8 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>8 / 14</div>",
           "</div>"
         ]
       }
@@ -316,7 +316,7 @@
           "      </div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>9 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>9 / 14</div>",
           "</div>"
         ]
       }
@@ -341,29 +341,7 @@
           "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='3:0.2' data-opacity='0,1' data-start='12.93' data-end='13.43' data-easing='easeOut' style='top: 35.5%; left: 6%; width: 20.5%; height: 44.5%'></div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>10 / 15</div>",
-          "</div>"
-        ]
-      }
-    },
-    {
-      "text": "ここで、答え合わせです。お店でタップしたのは、6品まででした。残りはAIがレシートと照らし合わせて、リストは16品が購入済みに。買えなかったパセリと唐辛子だけが、未購入で残っています。",
-      "image": {
-        "type": "html_tailwind",
-        "animation": true,
-        "html": [
-          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
-          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
-          "    <div class='flex items-center gap-4'>",
-          "      <span class='bg-sky-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>つながる</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>頼んでいないのに、リストが購入済みに</h2>",
-          "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>レシートと買い物リストを、AI が照らし合わせてくれた</p>",
-          "  </div>",
-          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
-          "    <img src='kitchen-trio-assets-ja/demo-08-shopping-after.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>11 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>10 / 14</div>",
           "</div>"
         ]
       }
@@ -388,7 +366,7 @@
           "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='2:0.3' data-opacity='0,1' data-start='10.21' data-end='10.71' data-easing='easeOut' style='top: 30.5%; left: 1.5%; width: 97%; height: 24%'></div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>12 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>11 / 14</div>",
           "</div>"
         ]
       }
@@ -418,7 +396,7 @@
           "    </div>",
           "  </div>",
           "  <p class='text-2xl mt-14' style='color: #7C5E3C' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-translate-y='10,0' data-start='8.71' data-end='9.21' data-easing='easeOut'>アプリを行き来しない。会話の流れが、そのまま連携になる。</p>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>13 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>12 / 14</div>",
           "</div>"
         ]
       }
@@ -445,11 +423,11 @@
           "    <div class='flex items-center gap-6' data-animation='animate' data-sync='1:0.7' data-opacity='0,1' data-translate-x='-30,0' data-start='5.99' data-end='6.49' data-easing='easeOut'>",
           "      <span class='bg-lime-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 3</span>",
           "      <span class='text-3xl font-semibold w-72' style='color: #431407'>レシートを送る</span>",
-          "      <span class='text-2xl' style='color: #7C5E3C'>家計簿とリストが同時に片づく</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>写真1枚で、記帳まで完了</span>",
           "    </div>",
           "  </div>",
           "  <p class='text-2xl mt-12' style='color: #7C5E3C' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-translate-y='10,0' data-start='7.27' data-end='7.77' data-easing='easeOut'>それだけで、台所の道具一式。コードは一行も書いていません。</p>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>14 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>13 / 14</div>",
           "</div>"
         ]
       }
@@ -466,7 +444,7 @@
           "  <p class='text-2xl leading-relaxed' style='color: #7C5E3C' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-translate-y='10,0' data-start='5.32' data-end='5.82' data-easing='easeOut'>まずは今晩の献立から、頼んでみてください。</p>",
           "  <p class='text-4xl font-bold mt-8' style='color: #EA580C' data-animation='animate' data-sync='1:0.5' data-opacity='0,1' data-scale='0.9,1' data-start='7.42' data-end='7.92' data-easing='easeOut'>🌱 ぜひ、試してみてください！</p>",
           "  <p class='text-xl mt-10' style='color: #A08B6E' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-translate-y='10,0' data-start='11.06' data-end='11.56' data-easing='easeOut'>🎬 作り方の基本は「コレクション作成デモ」 ・ 暮らしの実例は「コレクション実例集」</p>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>15 / 15</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>14 / 14</div>",
           "</div>"
         ]
       }
