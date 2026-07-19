@@ -463,9 +463,9 @@
           "<div class='relative flex flex-col items-center justify-center h-full text-center px-20' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <h2 class='text-5xl font-bold leading-snug' style='color: #431407' data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut'>作って終わりではなく、<br/>使いながら育てる</h2>",
           "  <div class='w-24 mt-9 mb-9' style='border-top: 4px solid #EA580C'></div>",
-          "  <p class='text-2xl leading-relaxed' style='color: #7C5E3C' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-translate-y='10,0' data-start='4.98' data-end='5.48' data-easing='easeOut'>まずは今晩の献立から、頼んでみてください。</p>",
-          "  <p class='text-4xl font-bold mt-8' style='color: #EA580C' data-animation='animate' data-sync='1:0.5' data-opacity='0,1' data-scale='0.9,1' data-start='6.88' data-end='7.38' data-easing='easeOut'>🌱 ぜひ、試してみてください！</p>",
-          "  <p class='text-xl mt-10' style='color: #A08B6E' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-translate-y='10,0' data-start='10.27' data-end='10.77' data-easing='easeOut'>🎬 作り方の基本は「コレクション作成デモ」 ・ 暮らしの実例は「コレクション実例集」</p>",
+          "  <p class='text-2xl leading-relaxed' style='color: #7C5E3C' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-translate-y='10,0' data-start='5.32' data-end='5.82' data-easing='easeOut'>まずは今晩の献立から、頼んでみてください。</p>",
+          "  <p class='text-4xl font-bold mt-8' style='color: #EA580C' data-animation='animate' data-sync='1:0.5' data-opacity='0,1' data-scale='0.9,1' data-start='7.42' data-end='7.92' data-easing='easeOut'>🌱 ぜひ、試してみてください！</p>",
+          "  <p class='text-xl mt-10' style='color: #A08B6E' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-translate-y='10,0' data-start='11.06' data-end='11.56' data-easing='easeOut'>🎬 作り方の基本は「コレクション作成デモ」 ・ 暮らしの実例は「コレクション実例集」</p>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>15 / 15</div>",
           "</div>"
         ]
