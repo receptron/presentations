@@ -1,0 +1,267 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Speak in a bright, warm, hopeful tone — like happily introducing something you love to a friend. Gentle, positive energy throughout; never dark or flat."
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "title": "Turn Routine Work into Buttons",
+  "description": "A new MulmoClaude collections feature, demonstrated live: two kinds of buttons you can put on a record's page — an agent action where the AI looks up the latest stock price behind the scenes, and a mutate action that flips an invoice to Paid instantly with no AI. Both built just by asking.",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "Hello! Today I'd like to show you buttons — a recent addition to MulmoClaude collections that you can put right on a data page. Everyday operations like refreshing a stock price or recording a payment now finish with a single press.",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>New features</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>Everyday operations are now buttons</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>Refresh a stock price or record a payment — one press, right on the page</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-8'>",
+          "    <div class='relative'>",
+          "      <img src='record-buttons-assets/demo-02-portfolio-before.png' class='rounded-xl shadow-2xl' style='max-height:500px;object-fit:contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.4' data-start='11.91' data-end='12.41' style='bottom:-5%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-2xl' style='color:#431407'>💬 One press, and the AI writes in the latest price</span></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>1 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "There are two kinds: a button where the AI works behind the scenes, and a button that doesn't use AI at all. Both are made just by asking. Let's build them and see.",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='flex flex-col items-center justify-center h-full text-center px-16'>",
+          "    <div class='text-[15px] font-semibold tracking-[.35em] mb-6' style='color:#EA580C'>NEW IN MULMOCLAUDE COLLECTIONS</div>",
+          "    <h1 class='text-[64px] font-bold leading-[1.35]'>Turn routine work<br>into buttons</h1>",
+          "    <div class='w-24 mt-8 mb-8' style='border-top:4px solid #EA580C'></div>",
+          "    <p class='text-2xl leading-relaxed' style='color:#7C5E3C'>A button backed by AI · A button with no AI</p>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "In the portfolio collection, we ask: add a Refresh Price button to each stock's page, and when it's pressed, have the AI look up the latest price and update the record. Words alone — and the button is born.",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 1</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>Ask for the AI button</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>One sentence — \"add a Refresh Price button\" — and it exists</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='record-buttons-assets/demo-01-chat-agent-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='0:0.15' data-start='1.88' data-end='2.38' style='bottom:-4%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-lg' style='color:#431407'>💬 \"Add a Refresh Price button to each stock's page — the AI should look up the latest share price and update the record\"</span></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>3 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "Press the button, and the AI quietly goes to work behind the scenes. No chat window opens. A little later, the price and market value had changed to the latest figures. This is an agent action.",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 1</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>Press it, and the AI works backstage</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>No chat opens. Next time you look, the price is current</p>",
+          "  </div>",
+          "  <div class='flex items-center justify-center gap-4 mt-16 px-8'>",
+          "    <div class='relative'>",
+          "      <img src='record-buttons-assets/demo-02-portfolio-before.png' class='rounded-xl shadow-2xl' style='width:552px' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:4.5%;left:41.5%;width:22%;height:10%'></div>",
+          "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#7C5E3C'>Just press \"Refresh Price\"</div>",
+          "    </div>",
+          "    <div class='text-5xl font-bold shrink-0' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.0' data-start='6.69' data-end='7.19' style='color:#EA580C'>→</div>",
+          "    <div class='relative' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='2:0.15' data-start='7.46' data-end='7.96'>",
+          "      <img src='record-buttons-assets/demo-03-portfolio-after.png' class='rounded-xl shadow-2xl' style='width:552px' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:35%;left:4.5%;width:63%;height:14.5%'></div>",
+          "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#EA580C'>The AI wrote in the latest price</div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>4 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "The other kind is a button that doesn't use AI. This time, we ask like this. For routine changes, there's no need to bring the AI in at all.",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 2</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>Ask for the plain button</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>For routine changes, a button with no AI is plenty</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='record-buttons-assets/demo-04-chat-mutate-request.png' class='rounded-xl shadow-2xl' style='max-height:520px;object-fit:contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.2' data-start='4.0' data-end='4.5' style='bottom:0%;left:50%;transform:translateX(-50%);background:#FFF3DC;border:1px solid rgba(234,88,12,.45)'><span class='text-lg block text-center leading-relaxed' style='color:#431407'>💬 \"Add a Mark as Paid button to invoice pages. No AI involved — pressing it should just flip the status instantly.<br>Only show it on invoices that have already been sent\"</span></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>5 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "When a payment arrives, one press. No judgment and no AI needed — zero wait, and the status flips to Paid on the spot. This is a mutate action.",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 2</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>Press it, and it's done</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>Zero wait — the status flips to \"Paid\" on the spot</p>",
+          "  </div>",
+          "  <div class='flex items-center justify-center gap-4 mt-16 px-8'>",
+          "    <div class='relative'>",
+          "      <img src='record-buttons-assets/demo-05-invoice-before.png' class='rounded-xl shadow-2xl' style='width:552px' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:4.5%;left:44%;width:21%;height:10%'></div>",
+          "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#7C5E3C'>Just press \"Mark as Paid\"</div>",
+          "    </div>",
+          "    <div class='text-5xl font-bold shrink-0' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.3' data-start='4.04' data-end='4.54' style='color:#EA580C'>→</div>",
+          "    <div class='relative' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-sync='1:0.45' data-start='4.8' data-end='5.3'>",
+          "      <img src='record-buttons-assets/demo-06-invoice-after.png' class='rounded-xl shadow-2xl' style='width:552px' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top:63.5%;left:47%;width:20%;height:12%'></div>",
+          "      <div class='absolute -bottom-10 left-0 w-full text-center text-xl font-semibold' style='color:#EA580C'>Instantly \"Paid\"</div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>6 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "Choosing between them is simple. Work that needs looking things up or judgment: the AI button. Routine, fixed changes: the plain button. And either one can be added later, in conversation, the moment you want it.",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-10 pt-6 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>Which one?</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>Two kinds of buttons — which to ask for?</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>When in doubt: does it need the AI's judgment?</p>",
+          "  </div>",
+          "  <div class='flex items-stretch justify-center gap-8 mt-12 px-16'>",
+          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='2.12' data-end='2.62' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #EA580C'>",
+          "      <div class='text-5xl mb-4'>🤖</div>",
+          "      <div class='text-3xl font-bold mb-2'>The AI button</div>",
+          "      <div class='text-xl mb-5' style='color:#EA580C'>Agent action</div>",
+          "      <div class='text-2xl leading-relaxed' style='color:#7C5E3C'>Looks things up, weighs them<br>e.g. \"Refresh Price\"</div>",
+          "    </div>",
+          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='6.41' data-end='6.91' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #0284C7'>",
+          "      <div class='text-5xl mb-4'>⚡</div>",
+          "      <div class='text-3xl font-bold mb-2'>The plain button</div>",
+          "      <div class='text-xl mb-5' style='color:#0284C7'>Mutate action</div>",
+          "      <div class='text-2xl leading-relaxed' style='color:#7C5E3C'>Fixed, routine changes<br>e.g. \"Mark as Paid\"</div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>7 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    },
+    {
+      "text": "Your everyday operations start finishing without ever opening a chat. A collection grows to fit the way you work — one button at a time. Pick one thing you often ask for, and make it a button.",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='flex flex-col items-center justify-center h-full text-center px-20'>",
+          "    <h1 class='text-5xl font-bold leading-[1.5]'>Everyday operations,<br>done without opening a chat</h1>",
+          "    <div class='w-24 mt-9 mb-9' style='border-top:4px solid #EA580C'></div>",
+          "    <p class='text-2xl leading-relaxed' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='4.02' data-end='4.52' style='color:#7C5E3C'>Pick one operation you often ask for, and make it a button.<br>Just say, \"add a button that does ...\" — in conversation.</p>",
+          "    <p class='text-xl mt-8' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='9.61' data-end='10.11' style='color:#A08B6E'>🌱 Collections keep growing after they're built — give it a try!</p>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>8 / 8</div>",
+          "</div>"
+        ],
+        "animation": true
+      }
+    }
+  ]
+}
