@@ -251,6 +251,16 @@ mulmo pdf -g --pdf_mode handout mulmoclaude/demos/<name>.json  # ハンドアウ
 - クロップの px 座標は言語・データで変わるため、この表の「対象」を目安に毎回実測する
 - 撮り終えたら「写り込み NG 集」（上記キャプチャ規約）を全アセットに対して最終チェックする
 
+## モック差し替えと demo workspace の固定資産
+
+showcase 系デッキ（weather-showcase / collections-showcase / what-is-mulmoclaude）には「※ 実際の画面キャプチャに差し替え予定」注記付きのモックが残っている（枚数と状態は `PROGRESS.md`）。実キャプチャ化の方針:
+
+- **作り方デッキを先に収録する** — 差し替え用コレクションを黙って作らない。ライブ作成（頼む→できる）を作り方デッキとして撮影し、その完成状態を正規化して golden に commit → showcase 側の差し替えキャプチャは golden から撮る。先に差し替えると、作り方デッキ収録時に設定を剥がして作成フローを再演する羽目になる
+- **台所三点セットは新規 slug で作る**（例: `recipe-book` / `shopping-list` / `household-ledger`）。既存の `cooking` データディレクトリには触れない
+- **ダッシュボード用の固定資産（`todo` / `projects` / `movie-log` / `book-log` / `cooking`）は変更しない** — ダッシュボードデモの見た目が変わるため。撮影で一時的に変えたい場合は「一時変更 → 撮影 → `git restore`」で必ず戻す
+- **通知・メール下書き系のモック**（weather-showcase の朝の通知・メール下書き・旅のしおり等）は、コレクション画面ではなくエージェント出力の演出。実キャプチャ化するか演出モックのまま残すかは、台所セット完了後に 1 枚ずつ判断する
+- 順序の原則: スクリプトは `_ja` 先行 → 英語へ翻訳（上記「多言語展開の要点」）。**データの正は en workspace** → 翻訳して ja に反映。チャットの写るキャプチャは言語ごとにライブ再演する
+
 ## 多言語展開の要点
 
 - **ファイル命名は vision デッキと同じ規則**: 無印 = 英語版（正式名。例: `collection-creation-demo.json`）、`_ja` suffix = 日本語版（`collection-creation-demo_ja.json`）。アセットディレクトリも同様に、無印 = 英語（`collection-demo-assets/`）、`-ja` suffix = 日本語（`collection-demo-assets-ja/`）
