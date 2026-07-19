@@ -272,7 +272,7 @@
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
           "      <img src='pantry-list-assets-ja/demo-05-shopping-shoyu.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='0:0.4' data-start='2.02' data-end='2.52' data-opacity='0,1' data-easing='easeOut' style='top: 61.5%; left: 35.5%; width: 29%; height: 11.5%'></div>",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='0:0.4' data-start='2.13' data-end='2.63' data-opacity='0,1' data-easing='easeOut' style='top: 61.5%; left: 35.5%; width: 29%; height: 11.5%'></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>8 / 10</div>",
