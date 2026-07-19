@@ -237,7 +237,7 @@
       }
     },
     {
-      "text": "4日分の材料が、18品のリストになりました。キャベツと基本の調味料は、ちゃんと除かれています。お店では、スマホでこのリストにチェックを入れながら買えます。",
+      "text": "4日分の材料が、18品のリストになりました。キャベツと基本の調味料は除外ずみ。豆板醤のような特別な調味料は、「家にあれば不要」のメモ付きで残す判断です。お店では、スマホでチェックしながら買えます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -246,9 +246,9 @@
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>できた</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>18品のリスト、家にあるものは除いて</h2>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>18品の買い物リスト</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color: #7C5E3C'>お店ではスマホでチェックしながら買える</p>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>基本の調味料は除外。特別な調味料は「家にあれば不要」のメモ付き</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <img src='kitchen-trio-assets-ja/demo-04-shopping-list.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
