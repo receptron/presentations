@@ -1,0 +1,393 @@
+{
+  "$mulmocast": { "version": "1.1" },
+  "canvasSize": { "width": 1280, "height": 720 },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": { "ja": "プレゼンター" },
+        "voiceId": "Kore", "isDefault": true, "provider": "gemini",
+        "speechOptions": {
+          "instruction": "明るく温かい、希望に満ちたトーンで話してください。大切なものを友人に楽しそうに紹介するような、優しくて前向きな語り口。決して暗く平板にならず、穏やかなエネルギーを保ってください。"
+        }
+      }
+    }
+  },
+  "imageParams": { "provider": "openai", "images": {} },
+  "movieParams": { "provider": "replicate" },
+  "soundEffectParams": { "provider": "replicate" },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "FFFBF2", "bgCard": "FFF3DC", "bgCardAlt": "FCE8C8",
+        "text": "431407", "textMuted": "7C5E3C", "textDim": "A08B6E",
+        "primary": "EA580C", "accent": "F59E0B", "success": "65A30D",
+        "warning": "B45309", "danger": "DC2626", "info": "0284C7", "highlight": "DB2777"
+      },
+      "fonts": { "title": "'Hiragino Sans', 'Helvetica Neue', Helvetica, sans-serif", "body": "'Hiragino Sans', Helvetica, sans-serif", "mono": "Menlo", "accent": "Outfit" },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)",
+      "titleGradient": "linear-gradient(100deg, #431407, #B45309 55%, #EA580C)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "bgm": { "kind": "path", "path": "../../resources/bgms/morning001.mp3" },
+    "padding": 0.3, "introPadding": 1, "closingPadding": 0.8, "outroPadding": 3,
+    "bgmVolume": 0.12, "audioVolume": 1, "suppressSpeech": false, "concurrency": 1
+  },
+  "title": "台所の三点セットを、会話で作る",
+  "description": "MulmoClaude のチュートリアル：レシピ帳・買い物リスト・家計簿の3つのコレクションを、ひとつの会話で作っていく。レシートを送ると買い物リストが自動更新され、予算ビューまで育つところまで、実際の画面で。",
+  "lang": "ja",
+  "beats": [
+    {
+      "text": "夕飯の献立を考えて、買い物リストに書き写して、レシートを家計簿へ。つなぐのは、いつも自分の仕事でした。マルモクロードなら、この台所の一式が、ひとつの会話で生まれます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-10 space-y-6'>",
+          "    <h2 class='text-4xl font-semibold leading-snug' style='color: #431407'>献立も、買い物も、<br/>家計簿も、<br/>別のアプリでしたか？</h2>",
+          "    <div class='rounded-xl p-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "      <div class='text-base mb-2 font-semibold' style='color: #EA580C'>今日つくるもの</div>",
+          "      <p class='text-xl leading-relaxed' style='color: #431407'>🍳 レシピ帳 ・ 🛒 買い物リスト ・ 📒 家計簿</p>",
+          "    </div>",
+          "    <p class='text-xl' style='color: #7C5E3C' data-animation='animate' data-sync='2:0.3' data-opacity='0,1' data-start='10.0' data-end='10.5' data-easing='easeOut'>→ ひとつの会話で、ぜんぶ生まれます</p>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <img src='kitchen-trio-assets-ja/demo-09-budget-hero.png' class='rounded-xl shadow-2xl' style='max-height: 620px; object-fit: contain' />",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>1 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "今日は、レシピ帳、買い物リスト、家計簿の三点セットを、会話だけで作っていきます。途中からは、コレクション同士が勝手につながりはじめます。それでは、始めましょう。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": { "label": "コレクション作成チュートリアル" },
+          "titleSize": "hero", "subtitleSize": "lead",
+          "title": "台所の三点セットを、会話で作る",
+          "subtitle": "レシピ帳 ・ 買い物リスト ・ 家計簿が、{primary:ひとつの会話}でつながる",
+          "chips": ["🍳 献立を頼む", "🛒 リストを頼む", "📒 レシートを送る"]
+        }
+      }
+    },
+    {
+      "text": "コレクションは、頼むだけで生まれる、一覧表付きの自分専用ミニアプリです。今日はこれを、3つ続けて作ります。1つをじっくり作る流れは、別の動画「コレクション作成デモ」で紹介しています。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>前提</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>コレクションとは</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>頼むだけで生まれる、一覧表付きの自分専用ミニアプリ</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center gap-8 px-16'>",
+          "    <div class='flex-1 rounded-2xl px-8 py-10 text-center' data-animation='animate' data-sync='1:0.1' data-opacity='0,1' data-translate-y='14,0' data-start='5.0' data-end='5.5' data-easing='easeOut' style='background: #FFFFFF; border: 1px solid #EAD9BE; box-shadow: 0 10px 24px rgba(67,20,7,.08)'>",
+          "      <div class='text-5xl mb-3'>🍳</div><div class='text-3xl font-bold' style='color: #431407'>レシピ帳</div>",
+          "      <div class='text-xl mt-2' style='color: #7C5E3C'>献立と作り方</div>",
+          "    </div>",
+          "    <div class='flex-1 rounded-2xl px-8 py-10 text-center' data-animation='animate' data-sync='1:0.35' data-opacity='0,1' data-translate-y='14,0' data-start='5.8' data-end='6.3' data-easing='easeOut' style='background: #FFFFFF; border: 1px solid #EAD9BE; box-shadow: 0 10px 24px rgba(67,20,7,.08)'>",
+          "      <div class='text-5xl mb-3'>🛒</div><div class='text-3xl font-bold' style='color: #431407'>買い物リスト</div>",
+          "      <div class='text-xl mt-2' style='color: #7C5E3C'>チェックして買う</div>",
+          "    </div>",
+          "    <div class='flex-1 rounded-2xl px-8 py-10 text-center' data-animation='animate' data-sync='1:0.6' data-opacity='0,1' data-translate-y='14,0' data-start='6.6' data-end='7.1' data-easing='easeOut' style='background: #FFFFFF; border: 1px solid #EAD9BE; box-shadow: 0 10px 24px rgba(67,20,7,.08)'>",
+          "      <div class='text-5xl mb-3'>📒</div><div class='text-3xl font-bold' style='color: #431407'>家計簿</div>",
+          "      <div class='text-xl mt-2' style='color: #7C5E3C'>レシートと予算</div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='pb-8 text-center'>",
+          "    <span class='text-xl' style='color: #A08B6E' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-start='11.0' data-end='11.5' data-easing='easeOut'>🎬 1つをじっくり作る流れは「コレクション作成デモ」でどうぞ</span>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "まずはレシピ帳です。今週の夕飯を4日分考えて、コレクションにまとめて、とお願いします。冷蔵庫にあるものも、ひとこと添えておきましょう。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 1</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>レシピ帳を、頼む</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>献立の相談から、コレクションづくりが始まる</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='kitchen-trio-assets-ja/demo-01-chat-recipes.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl' data-animation='animate' data-sync='1:0.1' data-opacity='0,1' data-start='3.5' data-end='4.0' data-easing='easeOut' style='bottom: -4%; left: 50%; transform: translateX(-50%); width: 92%; background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "        <span class='text-xl block text-center leading-relaxed' style='color: #431407'>💬 「今週の夕飯を4日分考えて、「レシピ帳」のコレクションにまとめて。冷蔵庫に鶏肉とキャベツがあるよ」</span>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "4日分の献立が、材料と作り方つきで並びました。冷蔵庫の鶏肉とキャベツを使い切る構成です。リクエストどおり、木曜は洋風になっていますね。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>できた</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>献立4日分、材料と作り方つき</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>鶏肉とキャベツを使い切る構成。木曜はリクエストどおり洋風</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='kitchen-trio-assets-ja/demo-02-recipe-book.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='2:0.3' data-opacity='0,1' data-start='11.0' data-end='11.5' data-easing='easeOut' style='top: 42.3%; left: 0.8%; width: 55%; height: 6.8%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "続けて、この献立の分の買い物リストをお願いします。家にあるものは除いてね、のひとことも忘れずに。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 2</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>買い物リストを、頼む</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>献立から材料を拾うのは、AI の仕事</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='kitchen-trio-assets-ja/demo-03-chat-shopping.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-sync='0:0.2' data-opacity='0,1' data-start='1.5' data-end='2.0' data-easing='easeOut' style='bottom: -4%; left: 50%; transform: translateX(-50%); background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "        <span class='text-xl' style='color: #431407'>💬 「この分の買い物リストを作って、別のコレクションにして。家にあるものは除いてね」</span>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "4日分の材料が、18品のリストになりました。キャベツと基本の調味料は、ちゃんと除かれています。お店では、スマホでこのリストにチェックを入れながら買えます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>できた</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>18品のリスト、家にあるものは除いて</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>お店ではスマホでチェックしながら買える</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <img src='kitchen-trio-assets-ja/demo-04-shopping-list.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "最後は家計簿です。買い物から帰ったら、レシートを写真に撮って送るだけ。家計簿のコレクションを作って、つけておいてね、とお願いします。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 3</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>レシートを、送る</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>写真を1枚送るだけで、家計簿が生まれる</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='kitchen-trio-assets-ja/demo-05-chat-receipt.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-sync='2:0.1' data-opacity='0,1' data-start='8.0' data-end='8.5' data-easing='easeOut' style='bottom: -4%; left: 50%; transform: translateX(-50%); background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "        <span class='text-xl' style='color: #431407'>💬 「買い物してきたよ。今日のレシート送るね。「家計簿」のコレクションを作って、つけておいて」</span>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>8 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "レシートが読み取られて、家計簿が生まれました。合計3,280円、品目の明細つきです。日付もお店の名前も、写真から入りました。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>できた</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>写真1枚で、記帳完了</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>日付・お店・金額・明細まで、レシートから自動で</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='kitchen-trio-assets-ja/demo-06-ledger-first.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.2' data-opacity='0,1' data-start='5.5' data-end='6.0' data-easing='easeOut' style='top: 21.5%; left: 0.5%; width: 75%; height: 8%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>9 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "ここで、頼んでいないことが起きています。買い物リストの16品が、購入済みに変わっていました。レシートとリストを、AIが照らし合わせてくれたのです。買えなかったパセリと唐辛子だけが、未購入で残っています。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-sky-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>つながる</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>頼んでいないのに、リストが購入済みに</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>レシートと買い物リストを、AI が照らし合わせてくれた</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <img src='kitchen-trio-assets-ja/demo-08-shopping-after.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>10 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "コレクションは、作った後も育てられます。今月の食費の残り2件と、月の予算55,000円をお願いしました。すると、進捗バー付きの予算ビューまで生まれました。記帳するたびに、リアルタイムで更新されます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>後から拡張</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>予算を伝えたら、ビューまで育った</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>「予算は月55,000円。ひと目でわかるようにして」のひとことで</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='kitchen-trio-assets-ja/demo-07-budget-view.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='2:0.3' data-opacity='0,1' data-start='11.5' data-end='12.0' data-easing='easeOut' style='top: 30.5%; left: 1.5%; width: 97%; height: 24%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>11 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "ここまで、ぜんぶ同じひとつの会話です。レシピ帳から買い物リストへ、レシートから家計簿へ。コレクション同士が、会話の流れの中でつながっていきました。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <h2 class='text-5xl font-bold mb-14' style='color: #431407' data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut'>ひとつの会話が、ぜんぶをつなぐ</h2>",
+          "  <div class='flex items-center gap-6 px-16'>",
+          "    <div class='rounded-2xl px-10 py-8 text-center' data-animation='animate' data-sync='1:0.05' data-opacity='0,1' data-translate-y='12,0' data-start='4.5' data-end='5.0' data-easing='easeOut' style='background: #FFFFFF; border: 2px solid #EA580C; box-shadow: 0 10px 24px rgba(67,20,7,.08)'>",
+          "      <div class='text-5xl mb-2'>🍳</div><div class='text-3xl font-bold' style='color: #431407'>レシピ帳</div>",
+          "      <div class='text-lg mt-1' style='color: #7C5E3C'>献立4日分</div>",
+          "    </div>",
+          "    <div class='flex flex-col items-center' data-animation='animate' data-sync='1:0.25' data-opacity='0,1' data-start='5.3' data-end='5.8' data-easing='easeOut'><span class='text-base font-bold px-3 py-1 rounded-full mb-1' style='background: rgba(234,88,12,.1); color: #EA580C'>この分の材料</span><span class='text-5xl font-bold' style='color: #EA580C'>→</span></div>",
+          "    <div class='rounded-2xl px-10 py-8 text-center' data-animation='animate' data-sync='1:0.4' data-opacity='0,1' data-translate-y='12,0' data-start='6.0' data-end='6.5' data-easing='easeOut' style='background: #FFFFFF; border: 2px solid #EA580C; box-shadow: 0 10px 24px rgba(67,20,7,.08)'>",
+          "      <div class='text-5xl mb-2'>🛒</div><div class='text-3xl font-bold' style='color: #431407'>買い物リスト</div>",
+          "      <div class='text-lg mt-1' style='color: #7C5E3C'>18品・自動チェック</div>",
+          "    </div>",
+          "    <div class='flex flex-col items-center' data-animation='animate' data-sync='1:0.6' data-opacity='0,1' data-start='6.8' data-end='7.3' data-easing='easeOut'><span class='text-base font-bold px-3 py-1 rounded-full mb-1' style='background: rgba(234,88,12,.1); color: #EA580C'>レシート1枚</span><span class='text-5xl font-bold' style='color: #EA580C'>→</span></div>",
+          "    <div class='rounded-2xl px-10 py-8 text-center' data-animation='animate' data-sync='1:0.75' data-opacity='0,1' data-translate-y='12,0' data-start='7.5' data-end='8.0' data-easing='easeOut' style='background: #FFFFFF; border: 2px solid #EA580C; box-shadow: 0 10px 24px rgba(67,20,7,.08)'>",
+          "      <div class='text-5xl mb-2'>📒</div><div class='text-3xl font-bold' style='color: #431407'>家計簿</div>",
+          "      <div class='text-lg mt-1' style='color: #7C5E3C'>予算ビュー付き</div>",
+          "    </div>",
+          "  </div>",
+          "  <p class='text-2xl mt-14' style='color: #7C5E3C' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-translate-y='10,0' data-start='11.5' data-end='12.0' data-easing='easeOut'>アプリを行き来しない。会話の流れが、そのまま連携になる。</p>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>12 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "振り返ると、やったのは3回のお願いだけです。献立、リスト、レシート。それだけで、台所の道具一式が揃いました。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <h2 class='text-5xl font-bold mb-12' style='color: #431407' data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.5' data-easing='easeOut'>お願いは、3回だけ</h2>",
+          "  <div class='w-full max-w-4xl space-y-6 px-12'>",
+          "    <div class='flex items-center gap-6' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-translate-x='-30,0' data-start='4.5' data-end='4.9' data-easing='easeOut'>",
+          "      <span class='bg-orange-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 1</span>",
+          "      <span class='text-3xl font-semibold w-72' style='color: #431407'>献立を頼む</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>レシピ帳が生まれる</span>",
+          "    </div>",
+          "    <div class='flex items-center gap-6' data-animation='animate' data-sync='1:0.35' data-opacity='0,1' data-translate-x='-30,0' data-start='5.2' data-end='5.6' data-easing='easeOut'>",
+          "      <span class='bg-sky-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 2</span>",
+          "      <span class='text-3xl font-semibold w-72' style='color: #431407'>リストを頼む</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>献立から材料を拾ってくれる</span>",
+          "    </div>",
+          "    <div class='flex items-center gap-6' data-animation='animate' data-sync='1:0.7' data-opacity='0,1' data-translate-x='-30,0' data-start='5.9' data-end='6.3' data-easing='easeOut'>",
+          "      <span class='bg-lime-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 3</span>",
+          "      <span class='text-3xl font-semibold w-72' style='color: #431407'>レシートを送る</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>家計簿とリストが同時に片づく</span>",
+          "    </div>",
+          "  </div>",
+          "  <p class='text-2xl mt-12' style='color: #7C5E3C' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-translate-y='10,0' data-start='8.5' data-end='9.0' data-easing='easeOut'>それだけで、台所の道具一式。コードは一行も書いていません。</p>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>13 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "コレクションは、作って終わりではなく、使いながら育てるものです。まずは今晩の献立から、頼んでみてください。作り方の基本は「コレクション作成デモ」、暮らしの実例は「コレクションでつながる暮らし」でどうぞ。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col items-center justify-center h-full text-center px-20' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <h2 class='text-5xl font-bold leading-snug' style='color: #431407' data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0' data-end='0.6' data-easing='easeOut'>作って終わりではなく、<br/>使いながら育てる</h2>",
+          "  <div class='w-24 mt-9 mb-9' style='border-top: 4px solid #EA580C'></div>",
+          "  <p class='text-2xl leading-relaxed' style='color: #7C5E3C' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-translate-y='10,0' data-start='5.5' data-end='6.0' data-easing='easeOut'>まずは今晩の献立から、頼んでみてください。</p>",
+          "  <p class='text-4xl font-bold mt-8' style='color: #EA580C' data-animation='animate' data-sync='1:0.5' data-opacity='0,1' data-scale='0.9,1' data-start='7.5' data-end='8.2' data-easing='easeOut'>🌱 ぜひ、試してみてください！</p>",
+          "  <p class='text-xl mt-10' style='color: #A08B6E' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-translate-y='10,0' data-start='10.5' data-end='11.0' data-easing='easeOut'>🎬 作り方の基本は「コレクション作成デモ」 ・ 暮らしの実例は「コレクションでつながる暮らし」</p>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>14 / 14</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
