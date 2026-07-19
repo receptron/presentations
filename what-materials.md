@@ -80,7 +80,7 @@
 
 ## What 資産の現状マップ
 
-| ファイル | 位置づけ | 状態 |
+| ファイル | 位置づけ | 状態(企画時点のメモ。現況は mulmoclaude/PROGRESS.md) |
 |---|---|---|
 | demos/what-is-mulmoclaude_ja.json | D1: 入口の実例カタログ(ローンチ用 What = A 案) | 2026-07-12 に実例入りで全面リニューアル済み(warm 生活ノート調 + ナレーション同期アニメーション) |
 | demos/daily-workflow.json | D2: 1 日の流れ | 叩き台あり。旧ネイビー配色 |
