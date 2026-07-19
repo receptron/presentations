@@ -22,7 +22,7 @@
 | demos/daily-workflow | D2 | 📝 未 commit（旧ネイビー） | — | 未着手 | — | — |
 | tutorials/getting-started | T2 | 📝 未 commit | — | 未着手 | — | — |
 | tutorials/building-a-collection | （旧 T1 下書き） | 📝 未 commit。kitchen-trio が T1 を実装、下書きの扱いは要判断 | — | — | — | — |
-| tutorials/pantry-list-tutorial | 番号外（育てる編・kitchen 続編） | ✅ 10 ビート | ✅ 7 枚（ja workspace ライブ） | 未着手 | 未着手 | —（ja mp4/PDF は ✅） |
+| tutorials/pantry-list-tutorial | 番号外（育てる編・kitchen 続編） | ✅ 9 ビート（在庫管理否定の設計ビートは削除し、STEP1 のナレーション一言に縮約） | ✅ 7 枚（ja workspace ライブ） | 未着手 | 未着手 | —（ja mp4/PDF は ✅） |
 | tutorials/csv-collection-tutorial | 番号外（新機能 How・CSVデータコレクション） | ✅ 12 ビート（未 commit） | ✅ 9 枚（ja workspace ライブ。素材 CSV は assets の source/ に保存） | 未着手 | 未着手 | —（ja mp4/PDF は ✅） |
 
 ja の mp4/PDF は旧キャプチャ前提のため、ja キャプチャ撮り直し後に finalize し直す。
