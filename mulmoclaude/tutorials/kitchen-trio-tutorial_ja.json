@@ -201,7 +201,7 @@
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
           "      <img src='kitchen-trio-assets-ja/demo-02-recipe-book.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='2:0.3' data-opacity='0,1' data-start='9.39' data-end='9.89' data-easing='easeOut' style='top: 42.3%; left: 0.8%; width: 55%; height: 6.8%'></div>",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='2:0.3' data-opacity='0,1' data-start='9.39' data-end='9.89' data-easing='easeOut' style='top: 44.3%; left: 0.8%; width: 55%; height: 7%'></div>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 15</div>",
