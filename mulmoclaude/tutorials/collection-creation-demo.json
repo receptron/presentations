@@ -60,11 +60,15 @@
     }
   },
   "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
     "padding": 0.3,
     "introPadding": 1,
     "closingPadding": 0.8,
     "outroPadding": 1,
-    "bgmVolume": 0.2,
+    "bgmVolume": 0.12,
     "audioVolume": 1,
     "suppressSpeech": false,
     "concurrency": 1
