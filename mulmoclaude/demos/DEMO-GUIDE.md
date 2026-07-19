@@ -1,6 +1,6 @@
 # デモスクリプト制作ガイド
 
-`mulmoclaude/demos/` 配下のデモ（What/How コンテンツ）を作るためのパターン集。特に同一内容で多言語する際に利用する。 `collection-creation-demo_ja.json` をベースに作成した。新しいデモを書くときは、このガイドと実例の両方を参照する。
+`mulmoclaude/demos/`（What）と `mulmoclaude/tutorials/`（How）のアプリ画面付きデッキを作るためのパターン集。特に同一内容で多言語する際に利用する。 `tutorials/collection-creation-demo_ja.json` をベースに作成した。新しいデッキを書くときは、このガイドと実例の両方を参照する。
 
 デモを増やすにあたって改善は適宜行う。
 
@@ -253,7 +253,7 @@ mulmo pdf -g --pdf_mode handout mulmoclaude/demos/<name>.json  # ハンドアウ
 
 ## モック差し替えと demo workspace の固定資産
 
-showcase 系デッキ（weather-showcase / collections-showcase / what-is-mulmoclaude）には「※ 実際の画面キャプチャに差し替え予定」注記付きのモックが残っている（枚数と状態は `PROGRESS.md`）。実キャプチャ化の方針:
+showcase 系デッキ（weather-showcase / collections-showcase / what-is-mulmoclaude）には「※ 実際の画面キャプチャに差し替え予定」注記付きのモックが残っている（枚数と状態は `../PROGRESS.md`）。実キャプチャ化の方針:
 
 - **作り方デッキを先に収録する** — 差し替え用コレクションを黙って作らない。ライブ作成（頼む→できる）を作り方デッキとして撮影し、その完成状態を正規化して golden に commit → showcase 側の差し替えキャプチャは golden から撮る。先に差し替えると、作り方デッキ収録時に設定を剥がして作成フローを再演する羽目になる
 - **台所三点セットは新規 slug で作る**（例: `recipe-book` / `shopping-list` / `household-ledger`）。既存の `cooking` データディレクトリには触れない
