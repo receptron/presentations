@@ -158,7 +158,7 @@
       }
     },
     {
-      "text": "まずはレシピ帳です。今週の夕飯を4日分考えて、コレクションにまとめて、とお願いします。冷蔵庫にあるものも、ひとこと添えておきましょう。",
+      "text": "まずはレシピ帳です。今週の夕飯を4日分考えて、コレクションにまとめて、とお願いします。冷蔵庫にあるものと、木曜は洋風がいいな、という気分も、ひとこと添えておきましょう。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -175,7 +175,7 @@
           "    <div class='relative'>",
           "      <img src='kitchen-trio-assets-ja/demo-01-chat-recipes.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
           "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl' data-animation='animate' data-sync='1:0.1' data-opacity='0,1' data-start='2.25' data-end='2.75' data-easing='easeOut' style='bottom: -4%; left: 50%; transform: translateX(-50%); width: 92%; background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
-          "        <span class='text-xl block text-center leading-relaxed' style='color: #431407'>💬 「今週の夕飯を4日分考えて、「レシピ帳」のコレクションにまとめて。冷蔵庫に鶏肉とキャベツがあるよ」</span>",
+          "        <span class='text-xl block text-center leading-relaxed' style='color: #431407'>💬 「今週の夕飯を4日分考えて、「レシピ帳」のコレクションにまとめて。冷蔵庫に鶏肉とキャベツがあるよ。木曜は洋風だとうれしい」</span>",
           "      </div>",
           "    </div>",
           "  </div>",
