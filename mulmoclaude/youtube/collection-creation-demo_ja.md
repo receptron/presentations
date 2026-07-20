@@ -33,6 +33,13 @@ https://github.com/receptron/mulmoclaude
 #MulmoClaude #AIアシスタント #ノーコード #AIエージェント #ClaudeCode
 ```
 
+## Playlist
+
+- A. コアセット導線（What→Why→How）の How スロット — 未作成
+- B. コレクションの作り方シリーズの基礎（先頭）— 未作成
+
+playlist 作成後に `&list=<ID>` と説明文リンクをここに追記する（運用は `README.md` 参照）。
+
 ## Thumbnail
 
 `output/collection-creation-demo_ja/images/0p.png`（beat 1 のフック画面）
