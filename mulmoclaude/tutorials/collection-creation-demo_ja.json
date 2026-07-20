@@ -1,37 +1,77 @@
 {
-  "$mulmocast": { "version": "1.1" },
-  "canvasSize": { "width": 1280, "height": 720 },
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
   "speechParams": {
     "speakers": {
       "Presenter": {
-        "displayName": { "ja": "プレゼンター" },
-        "voiceId": "Kore", "isDefault": true, "provider": "gemini",
+        "displayName": {
+          "ja": "プレゼンター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
         "speechOptions": {
           "instruction": "明るく温かい、希望に満ちたトーンで話してください。大切なものを友人に楽しそうに紹介するような、優しくて前向きな語り口。決して暗く平板にならず、穏やかなエネルギーを保ってください。"
         }
       }
     }
   },
-  "imageParams": { "provider": "openai", "images": {} },
-  "movieParams": { "provider": "replicate" },
-  "soundEffectParams": { "provider": "replicate" },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
   "slideParams": {
     "theme": {
       "colors": {
-        "bg": "FFFBF2", "bgCard": "FFF3DC", "bgCardAlt": "FCE8C8",
-        "text": "431407", "textMuted": "7C5E3C", "textDim": "A08B6E",
-        "primary": "EA580C", "accent": "F59E0B", "success": "65A30D",
-        "warning": "B45309", "danger": "DC2626", "info": "0284C7", "highlight": "DB2777"
+        "bg": "FFFBF2",
+        "bgCard": "FFF3DC",
+        "bgCardAlt": "FCE8C8",
+        "text": "431407",
+        "textMuted": "7C5E3C",
+        "textDim": "A08B6E",
+        "primary": "EA580C",
+        "accent": "F59E0B",
+        "success": "65A30D",
+        "warning": "B45309",
+        "danger": "DC2626",
+        "info": "0284C7",
+        "highlight": "DB2777"
       },
-      "fonts": { "title": "'Hiragino Sans', 'Helvetica Neue', Helvetica, sans-serif", "body": "'Hiragino Sans', Helvetica, sans-serif", "mono": "Menlo", "accent": "Outfit" },
+      "fonts": {
+        "title": "'Hiragino Sans', 'Helvetica Neue', Helvetica, sans-serif",
+        "body": "'Hiragino Sans', Helvetica, sans-serif",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
       "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)",
       "titleGradient": "linear-gradient(100deg, #431407, #B45309 55%, #EA580C)",
       "cardStyle": "glass"
     }
   },
   "audioParams": {
-    "padding": 0.3, "introPadding": 1, "closingPadding": 0.8, "outroPadding": 1,
-    "bgmVolume": 0.2, "audioVolume": 1, "suppressSpeech": false, "concurrency": 1
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
   },
   "title": "コレクション作成デモ — 天気予報コレクション",
   "description": "マルモクロードのコレクション機能を使って天気予報コレクションを作成するデモ。",
@@ -65,11 +105,18 @@
         "type": "slide",
         "slide": {
           "layout": "title",
-          "eyebrow": { "label": "コレクション作成デモ" },
-          "titleSize": "hero", "subtitleSize": "lead",
+          "eyebrow": {
+            "label": "コレクション作成デモ"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
           "title": "天気予報コレクション",
           "subtitle": "{primary:会話だけ}で、天気チェックの仕組みを作る",
-          "chips": ["☁️ 天気予報を自動取得", "📍 複数地点を一覧表示", "🗺️ 出張タイムライン"]
+          "chips": [
+            "☁️ 天気予報を自動取得",
+            "📍 複数地点を一覧表示",
+            "🗺️ 出張タイムライン"
+          ]
         }
       }
     },

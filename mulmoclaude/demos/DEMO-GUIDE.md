@@ -33,6 +33,10 @@
 
 ## デザインルール
 
+- **背景スタイルは What / How で使い分ける**（2026-07-19 確認・意図的な設計）:
+  - **What（demos/: collections-showcase・what-is・weather）** = 方眼罫線入りの誌面（実例集）スタイル。縦書きの章タブ・進行ドットなどエディトリアル要素を持つ
+  - **How（tutorials/: kitchen-trio・pantry-list・collection-creation）** = 罫線なしの暖色グラデ + バッジ付き 2 段バーのチュートリアルスタイル
+  - 新デッキは所属ディレクトリ（What/How）のスタイルに合わせる
 - **配色は warm sunrise テーマ**（明るい暖色。palette はリポジトリの CLAUDE.md、実例は `mulmoclaude/vision/the-assistant-you-nurture_ja.json`）。`collection-creation-demo_ja.json` は旧ダークネイビーのままなので、構成は実例として参照しつつ配色は本ガイドのスニペットを正とする
 - **キャプチャ領域（差し替え対象の画像・モック）は静止**を維持する。キャプチャビートでも対話テキスト側だけなら「長いビート対策」（下記）の A 方式でアニメ化してよい
 - 上部バーは 2 段: 1 段目 = バッジ（`text-lg`）+ タイトル（`text-4xl`）、2 段目 = サブタイトル（`text-2xl`、色は textMuted `#7C5E3C`）
