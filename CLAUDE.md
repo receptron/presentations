@@ -12,6 +12,8 @@ File naming across all script directories: the unsuffixed name is the English ve
 
 For decks with app screenshots (`mulmoclaude/demos/` and `mulmoclaude/tutorials/`), follow `mulmoclaude/demos/DEMO-GUIDE.md` — beat structure, HTML slide snippets, capture conventions, and narration rules distilled from the reviewed `tutorials/collection-creation-demo_ja.json`.
 
+Publishing a rendered deck to YouTube (title/description/chapters/thumbnail conventions, playlist strategy, per-publish checklist) is documented in `mulmoclaude/youtube/README.md`; that folder also holds the published-video metadata files. The `/record-youtube-publish` skill runs that workflow. Chapter timelines come from `npm run chapters -- <deck>` (`scripts/youtube-chapters.js`).
+
 ## Commands
 
 Videos are generated with the `mulmocast` CLI (installed globally, v2.7.x — not a package.json dependency). `mulmo` and `mulmocast` are aliases for the same binary; `mulmo-mcp` is its MCP server:
