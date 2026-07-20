@@ -1,0 +1,433 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "プレゼンター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "明るく温かい、希望に満ちたトーンで話してください。大切なものを友人に楽しそうに紹介するような、優しくて前向きな語り口。決して暗く平板にならず、穏やかなエネルギーを保ってください。"
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "FFFBF2",
+        "bgCard": "FFF3DC",
+        "bgCardAlt": "FCE8C8",
+        "text": "431407",
+        "textMuted": "7C5E3C",
+        "textDim": "A08B6E",
+        "primary": "EA580C",
+        "accent": "F59E0B",
+        "success": "65A30D",
+        "warning": "B45309",
+        "danger": "DC2626",
+        "info": "0284C7",
+        "highlight": "DB2777"
+      },
+      "fonts": {
+        "title": "'Hiragino Sans', 'Helvetica Neue', Helvetica, sans-serif",
+        "body": "'Hiragino Sans', Helvetica, sans-serif",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)",
+      "titleGradient": "linear-gradient(100deg, #431407, #B45309 55%, #EA580C)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "title": "CSVは、置くだけでいい",
+  "description": "MulmoClaude のチュートリアル：外から届いた 1,000 行の商品カタログ CSV を、取り込まずにそのまま読み取り専用コレクションへ。カンバン表示、AI への集計質問、グラフ付きダッシュボード、ファイル差し替えでの自動更新、スマホからの閲覧までを、実際の画面で。",
+  "lang": "ja",
+  "beats": [
+    {
+      "text": "外から届いたCSVファイルを、そのままコレクションにする新機能。今日は、1,000行の商品カタログを例に、ファイルを置いてから、グラフのダッシュボードができるまでを、実際の画面でご覧いただきます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='w-2/5 flex flex-col justify-center px-8 space-y-6'>",
+          "    <h2 class='text-[36px] font-semibold leading-snug whitespace-nowrap' style='color: #431407'>届いたCSV、<br/>そのままアプリに。</h2>",
+          "    <div class='rounded-xl p-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)'>",
+          "      <div class='text-base mb-2 font-semibold' style='color: #EA580C'>今日の材料</div>",
+          "      <p class='text-xl leading-loose' style='color: #431407'>📄 商品カタログ.csv<br/>1,000行 ・ 6列</p>",
+          "    </div>",
+          "    <p class='text-xl' style='color: #7C5E3C' data-animation='animate' data-sync='1:0.3' data-opacity='0,1' data-start='8.5' data-end='9.0' data-easing='easeOut'>→ 置いてから、ダッシュボードまで</p>",
+          "  </div>",
+          "  <div class='w-3/5 flex items-center justify-center p-4'>",
+          "    <img src='csv-collection-assets-ja/demo-09-dashboard.png' class='rounded-xl shadow-2xl' style='max-height: 620px; object-fit: contain' />",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>1 / 13</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "使うのは、1,000行の商品カタログのCSVファイル。取り込みも、変換も、専用ツールの契約もいりません。それでは、始めましょう。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "新機能チュートリアル"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "CSVは、置くだけでいい",
+          "subtitle": "外から届いたデータが、{primary:そのまま}コレクションになる",
+          "chips": [
+            "📄 CSVを置く",
+            "💬 AIに聞く",
+            "🔄 差し替えは自動反映"
+          ]
+        }
+      }
+    },
+    {
+      "text": "CSVファイルをチャットに添付して、置き場所といっしょに、コレクションとして管理したい、とお願いします。頼みごとは、この一文だけです。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 1</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>CSVを置いて、頼む</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>添付して、置き場所とひとこと</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='csv-collection-assets-ja/demo-01-attach-request.png' class='rounded-xl shadow-2xl' style='max-height: 530px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-red-600 rounded-lg' style='bottom: 2%; left: 0.5%; width: 24%; height: 24%'></div>",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl' data-animation='animate' data-sync='0:0.45' data-opacity='0,1' data-start='3.19' data-end='3.69' data-easing='easeOut' style='bottom: -6%; left: 50%; transform: translateX(-50%); width: 92%; background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "        <span class='text-xl block text-center leading-relaxed' style='color: #431407'>💬 「この CSV を downloads/data/商品カタログ.csv として置いて、コレクションとして管理したい」</span>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 13</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "AIがファイルの中身をのぞいて、列の意味を読み取り、一覧表に仕立ててくれました。1,000個の商品が、そのまま並んでいます。よく見ると、読み取り専用のマーク。データの実体は、置いたCSVファイルのままです。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>1,000商品が、一覧表に</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>データの実体は、CSVファイルのまま</p>",
+          "  </div>",
+          "  <div class='flex-1 flex flex-col items-center justify-center px-6 pb-4 gap-3'>",
+          "    <div class='relative' data-animation='animate' data-sync='2:0.0' data-opacity='0,1' data-start='9.43' data-end='9.93' data-easing='easeOut'>",
+          "      <img src='csv-collection-assets-ja/demo-03-readonly-chip.png' class='rounded-xl shadow-2xl' style='width: 900px' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 8%; left: 18.5%; width: 45%; height: 70%'></div>",
+          "    </div>",
+          "    <div class='relative'>",
+          "      <img src='csv-collection-assets-ja/demo-02-setup-complete.png' class='rounded-xl shadow-2xl' style='max-height: 400px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-sky-600 rounded-lg' style='top: 1%; left: 27%; width: 38%; height: 12%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 13</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "できたコレクションは、ふつうのコレクションと同じに使えます。ボタンひとつで、在庫状況ごとのカンバン表示に。仕入れの状況が、ひと目でわかります。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>ふつうのコレクションと、同じに使える</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>ボタンひとつで、カンバン表示</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='csv-collection-assets-ja/demo-04-kanban.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.1' data-opacity='0,1' data-start='4.57' data-end='5.07' data-easing='easeOut' style='top: 14%; left: 72.3%; width: 8.5%; height: 5.2%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 13</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "ここから、育てていきます。在庫が5個以下の商品に、要補充のマークを付けて、とお願いすると、自動で判定される新しい列が生まれました。CSVファイルには、手を加えていません。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-sky-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 2</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>会話で、育てる</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>新しいマークも、ひとことで生まれる</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='csv-collection-assets-ja/demo-06-flag-added.png' class='rounded-xl shadow-2xl' style='max-height: 530px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.5' data-opacity='0,1' data-start='6.2' data-end='6.7' data-easing='easeOut' style='top: 21%; left: 89%; width: 9.5%; height: 77%'></div>",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-start='2.0' data-end='2.5' data-easing='easeOut' style='bottom: -5%; left: 50%; transform: translateX(-50%); width: 80%; background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "        <span class='text-lg block text-center leading-relaxed whitespace-nowrap' style='color: #431407'>💬 「在庫が5個以下の商品に「要補充」のマークを付けて、一覧で絞り込めるようにしたい」</span>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 13</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "一覧の絞り込みボタンから、要補充だけに絞れば、そのまま発注リストになります。1,000個の中から、いま気にするべき89個だけが並びました。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>絞り込めば、発注リスト</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>1,000個の中から、要注意の89個だけ</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='csv-collection-assets-ja/demo-07-flag-filtered.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.2' data-opacity='0,1' data-start='7.02' data-end='7.52' data-easing='easeOut' style='top: 13.5%; left: 87.5%; width: 12%; height: 5.5%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 13</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "次は、分析です。在庫切れは何件、と聞くだけで、AIが1,000行を全部数え切って、正確な数字で答えます。39件、いちばん多いのはバス・洗面でした。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 3</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>聞けば、数えてくれる</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>1,000行を、切らずに数え切る</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='csv-collection-assets-ja/demo-08-aggregate-answer.png' class='rounded-xl shadow-2xl' style='max-height: 500px; object-fit: contain' />",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-start='1.92' data-end='2.42' data-easing='easeOut' style='top: -6%; left: 50%; transform: translateX(-50%); background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "        <span class='text-xl block text-center leading-relaxed whitespace-nowrap' style='color: #431407'>💬 「在庫切れの商品は何件ある？カテゴリ別の内訳も教えて」</span>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>8 / 13</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "カテゴリ別の平均価格と、在庫の内訳をダッシュボードで見たい。そう頼むと、グラフ付きの画面がその場で組み上がりました。これも切り替えボタンで、いつでも呼び出せます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-amber-500 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 4</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>ダッシュボードも、頼むだけ</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>グラフ付きの画面が、その場で組み上がる</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='csv-collection-assets-ja/demo-09-dashboard.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "      <div class='absolute' data-animation='animate' data-sync='0:0.1' data-opacity='0,1' data-start='0.78' data-end='1.28' data-easing='easeOut' style='bottom: -5%; left: 50%; transform: translateX(-50%); width: 88%'>",
+          "        <div class='rounded-2xl px-6 py-3 shadow-xl' data-animation='animate' data-sync='1:0.45' data-opacity='1,0' data-start='7.1' data-end='7.6' data-easing='easeOut' style='background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "          <span class='text-xl block text-center leading-relaxed' style='color: #431407'>💬 「カテゴリ別の平均価格と、在庫状況の内訳をダッシュボードで。内訳はドーナツグラフがいいな」</span>",
+          "        </div>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>9 / 13</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "月が変わったら、新しいCSVをチャットで渡して、上書きをお願いするだけ。開いたままのダッシュボードが、自動で最新に切り替わりました。更新はいつもファイルの側、表示はいつも画面の側、という分担です。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-violet-500 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 5</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>更新も、頼むだけ</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>開いたままの画面が、自動で最新になる</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='csv-collection-assets-ja/demo-09-dashboard.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "      <img src='csv-collection-assets-ja/demo-10-dashboard-updated.png' class='absolute inset-0 rounded-xl shadow-2xl' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-start='5.8' data-end='6.3' data-easing='easeOut' style='max-height: 540px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.3' data-opacity='0,1' data-start='7.32' data-end='7.82' data-easing='easeOut' style='top: 22.5%; left: 1.2%; width: 97.2%; height: 13.5%'></div>",
+          "      <div class='absolute' data-animation='animate' data-sync='0:0.1' data-opacity='0,1' data-start='0.58' data-end='1.08' data-easing='easeOut' style='bottom: -5%; left: 50%; transform: translateX(-50%); width: 70%'>",
+          "        <div class='rounded-2xl px-6 py-3 shadow-xl' data-animation='animate' data-sync='1:0.0' data-opacity='1,0' data-start='5.8' data-end='6.3' data-easing='easeOut' style='background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "          <span class='text-xl block text-center leading-relaxed whitespace-nowrap' style='color: #431407'>💬 「新しい版が届きました。同じ場所に上書きしてください」</span>",
+          "        </div>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>10 / 13</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "スマホで見たい、とひとことお願いすると、スマホ用の商品一覧ビューもできました。外出先でも、お店の棚の前でも、最新のカタログが手のひらに。もちろんこちらも読み取り専用だから、安心です。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>スマホ用ビューも、ひとことで</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>最新の一覧が、手のひらに</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center gap-14 px-10 pb-4'>",
+          "    <img src='csv-collection-assets-ja/demo-11-phone.png' class='rounded-2xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "    <div class='space-y-6' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-translate-y='10,0' data-start='6.5' data-end='7.0' data-easing='easeOut'>",
+          "      <p class='text-2xl' style='color: #431407'>📱 いつもの一覧が、スマホサイズに</p>",
+          "      <p class='text-2xl' style='color: #431407'>🔍 検索も、カテゴリの絞り込みも</p>",
+          "      <p class='text-2xl' style='color: #431407'>🔒 スマホからも、読み取り専用で安心</p>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>11 / 13</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "振り返ると、キーボードで打ったのは、短いお願いだけでした。むずかしい操作は、ひとつもありません。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <h2 class='text-5xl font-bold mb-10' style='color: #431407' data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut'>やったことは、5つだけ</h2>",
+          "  <div class='w-full max-w-4xl space-y-4 px-12'>",
+          "    <div class='flex items-center gap-6' data-animation='animate' data-sync='0:0.2' data-opacity='0,1' data-translate-x='-30,0' data-start='1.41' data-end='1.91' data-easing='easeOut'>",
+          "      <span class='bg-orange-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 1</span>",
+          "      <span class='text-3xl font-semibold w-72' style='color: #431407'>置いて、頼む</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>コレクションが生まれる</span>",
+          "    </div>",
+          "    <div class='flex items-center gap-6' data-animation='animate' data-sync='0:0.35' data-opacity='0,1' data-translate-x='-30,0' data-start='2.1' data-end='2.6' data-easing='easeOut'>",
+          "      <span class='bg-sky-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 2</span>",
+          "      <span class='text-3xl font-semibold w-72' style='color: #431407'>マークを、足す</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>要補充が自動で付く</span>",
+          "    </div>",
+          "    <div class='flex items-center gap-6' data-animation='animate' data-sync='0:0.5' data-opacity='0,1' data-translate-x='-30,0' data-start='2.8' data-end='3.3' data-easing='easeOut'>",
+          "      <span class='bg-lime-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 3</span>",
+          "      <span class='text-3xl font-semibold w-72' style='color: #431407'>数を、聞く</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>全行を数え切って即答</span>",
+          "    </div>",
+          "    <div class='flex items-center gap-6' data-animation='animate' data-sync='0:0.65' data-opacity='0,1' data-translate-x='-30,0' data-start='3.49' data-end='3.99' data-easing='easeOut'>",
+          "      <span class='bg-amber-500 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 4</span>",
+          "      <span class='text-3xl font-semibold w-72' style='color: #431407'>ダッシュボード</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>グラフもその場で組み上がる</span>",
+          "    </div>",
+          "    <div class='flex items-center gap-6' data-animation='animate' data-sync='0:0.8' data-opacity='0,1' data-translate-x='-30,0' data-start='4.19' data-end='4.69' data-easing='easeOut'>",
+          "      <span class='bg-violet-500 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 5</span>",
+          "      <span class='text-3xl font-semibold w-72' style='color: #431407'>差し替える</span>",
+          "      <span class='text-2xl' style='color: #7C5E3C'>開いた画面が自動で最新に</span>",
+          "    </div>",
+          "  </div>",
+          "  <p class='text-2xl mt-10' style='color: #7C5E3C' data-animation='animate' data-sync='1:0.1' data-opacity='0,1' data-translate-y='10,0' data-start='5.35' data-end='5.85' data-easing='easeOut'>どれも、ふだんの会話のひとことです。</p>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>12 / 13</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "読み取り専用だから、元のファイルはいつも無事。名簿でも、売上データでも、同じように使えます。次にCSVが届いたら、そのままワークスペースに置いてみてください。ぜひ、試してみてください！",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col items-center justify-center h-full text-center px-20' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <h2 class='text-5xl font-bold leading-snug' style='color: #431407' data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut'>真実はいつも、<br/>ファイルの側に</h2>",
+          "  <div class='w-24 mt-8 mb-8' style='border-top: 4px solid #EA580C'></div>",
+          "  <div class='flex gap-4 justify-center' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-translate-y='10,0' data-start='3.71' data-end='4.21' data-easing='easeOut'>",
+          "    <span class='rounded-full px-6 py-2 text-xl' style='background: #FFF3DC; color: #431407; border: 1px solid rgba(234, 88, 12, .3)'>🏫 学校の名簿</span>",
+          "    <span class='rounded-full px-6 py-2 text-xl' style='background: #FFF3DC; color: #431407; border: 1px solid rgba(234, 88, 12, .3)'>🧾 売上のエクスポート</span>",
+          "    <span class='rounded-full px-6 py-2 text-xl' style='background: #FFF3DC; color: #431407; border: 1px solid rgba(234, 88, 12, .3)'>📈 ダウンロードした統計</span>",
+          "  </div>",
+          "  <p class='text-2xl mt-8 leading-relaxed' style='color: #7C5E3C' data-animation='animate' data-sync='2:0.0' data-opacity='0,1' data-translate-y='10,0' data-start='7.84' data-end='8.34' data-easing='easeOut'>次にCSVが届いたら、そのまま置いてみてください。</p>",
+          "  <p class='text-4xl font-bold mt-7' style='color: #EA580C' data-animation='animate' data-sync='3:0.0' data-opacity='0,1' data-scale='0.9,1' data-start='12.92' data-end='13.42' data-easing='easeOut'>🌱 ぜひ、試してみてください！</p>",
+          "  <p class='text-xl mt-9' style='color: #A08B6E'>🎬 コレクションの基本は「コレクション作成デモ」</p>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>13 / 13</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
