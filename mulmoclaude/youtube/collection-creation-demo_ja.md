@@ -33,12 +33,6 @@ https://github.com/receptron/mulmoclaude
 #MulmoClaude #AIアシスタント #ノーコード #AIエージェント #ClaudeCode
 ```
 
-## Tags
-
-```
-MulmoClaude,コレクション,AIアシスタント,ノーコード,AIエージェント,Claude Code,天気予報,パーソナルAI
-```
-
 ## Thumbnail
 
 `output/collection-creation-demo_ja/images/0p.png`（beat 1 のフック画面）
