@@ -37,4 +37,5 @@ playlist は目的で2種類に分ける:
 セクションは Title / Description / Playlist / Thumbnail / URL。
 
 - **Description** — 冒頭で何の動画かのフック → 製品一行紹介 → チャプター → GitHub リンク（https://github.com/receptron/mulmoclaude）→ 末尾にハッシュタグ。
+  - 所属 playlist があれば、冒頭フックの直後に `▶ 順番に見る（<playlist 名>）: https://www.youtube.com/playlist?list=<ID>` を置く。playlist が無い間は省略し、**作成後に説明文へ追記**する（公開済み動画は YouTube Studio で説明文を編集）。
 - **Playlist** — 所属予定/所属済みの playlist 名と `&list=` URL（未作成なら「未作成」と書く）。

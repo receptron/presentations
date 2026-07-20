@@ -38,7 +38,7 @@ https://github.com/receptron/mulmoclaude
 - A. コアセット導線（What→Why→How）の How スロット — 未作成
 - B. コレクションの作り方シリーズの基礎（先頭）— 未作成
 
-playlist 作成後に `&list=<ID>` と説明文リンクをここに追記する（運用は `README.md` 参照）。
+**将来 to-do**: playlist 作成後に `&list=<ID>` をここへ記入し、上の Description と **YouTube 上の公開済み説明文の両方**に `▶ 順番に見る` リンクを追記する（この動画は公開済みのため Studio で説明文を編集する。運用は `README.md` 参照）。
 
 ## Thumbnail
 
