@@ -19,7 +19,8 @@
     "preview": "node scripts/preview.js",
     "validate": "mulmo tool complete -o /dev/null",
     "viewer": "mulmo viewer -g",
-    "movie": "mulmo movie -g"
+    "movie": "mulmo movie -g",
+    "chapters": "node scripts/youtube-chapters.js"
   },
   "devDependencies": {
     "mulmocast": "^2.7.2"
