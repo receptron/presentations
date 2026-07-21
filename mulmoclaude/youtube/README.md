@@ -18,7 +18,7 @@ playlist は目的で2種類に分ける:
   - 基礎（汎用の作り方）: `tutorials/collection-creation-demo` → 応用（テーマ別実演）: `kitchen-trio` → `pantry` → `csv-collection`
   - `collection-creation-demo` は「コレクションの作り方」の汎用基礎なので、テーマ(天気)に関わらず**先頭の入口**として入れる。テーマごとに作り方動画を作り直さない。
 
-見せる順・相互 CTA の方針は `content-plan.md`（コアセット定義・What→Why→How）を正とする。
+見せる順・相互 CTA の方針は `../content-roadmap.md`（コアセット定義・What→Why→How）を正とする。
 
 ## 公開時チェックリスト
 
