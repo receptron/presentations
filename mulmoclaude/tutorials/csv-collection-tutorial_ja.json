@@ -74,7 +74,7 @@
     "concurrency": 1
   },
   "title": "CSVは、置くだけでいい",
-  "description": "MulmoClaude のチュートリアル：外から届いた 1,000 行の商品カタログ CSV を、取り込まずにそのまま読み取り専用コレクションへ。カンバン表示、AI への集計質問、グラフ付きダッシュボード、ファイル差し替えでの自動更新、スマホからの閲覧までを、実際の画面で。",
+  "description": "MulmoClaude のチュートリアル：外から届いた 1,000 行の商品カタログ CSV を、取り込まずにそのまま読み取り専用コレクションへ。カンバン表示、AI への集計質問、グラフ付きダッシュボード、CSVアップデートでの自動反映、スマホからの閲覧までを、実際の画面で。",
   "lang": "ja",
   "beats": [
     {
@@ -116,7 +116,7 @@
           "chips": [
             "📄 CSVを置く",
             "💬 AIに聞く",
-            "🔄 差し替えは自動反映"
+            "🔄 アップデートで自動反映"
           ]
         }
       }
@@ -319,17 +319,17 @@
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='bg-violet-500 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 5</span>",
-          "      <h2 class='text-4xl font-bold' style='color: #431407'>ファイルを差し替えれば、自動反映</h2>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>アップデートすれば、自動反映</h2>",
           "    </div>",
           "    <p class='text-2xl' style='color: #7C5E3C'>CSVが変われば、コレクションも変わる</p>",
           "  </div>",
           "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
           "    <div class='relative'>",
           "      <img src='csv-collection-assets-ja/demo-09-dashboard.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
-          "      <img src='csv-collection-assets-ja/demo-10-dashboard-updated.png' class='absolute inset-0 rounded-xl shadow-2xl' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-start='5.4' data-end='5.9' data-easing='easeOut' style='max-height: 540px; object-fit: contain' />",
-          "      <div class='absolute border-2 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.3' data-opacity='0,1' data-start='6.49' data-end='6.99' data-easing='easeOut' style='top: 22.5%; left: 1.2%; width: 97.2%; height: 13.5%'></div>",
-          "      <div class='absolute' data-animation='animate' data-sync='0:0.1' data-opacity='0,1' data-start='0.54' data-end='1.04' data-easing='easeOut' style='bottom: -5%; left: 50%; transform: translateX(-50%); width: 70%'>",
-          "        <div class='rounded-2xl px-6 py-3 shadow-xl' data-animation='animate' data-sync='1:0.0' data-opacity='1,0' data-start='5.4' data-end='5.9' data-easing='easeOut' style='background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "      <img src='csv-collection-assets-ja/demo-10-dashboard-updated.png' class='absolute inset-0 rounded-xl shadow-2xl' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-start='5.57' data-end='6.07' data-easing='easeOut' style='max-height: 540px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.3' data-opacity='0,1' data-start='6.76' data-end='7.26' data-easing='easeOut' style='top: 22.5%; left: 1.2%; width: 97.2%; height: 13.5%'></div>",
+          "      <div class='absolute' data-animation='animate' data-sync='0:0.1' data-opacity='0,1' data-start='0.82' data-end='1.32' data-easing='easeOut' style='bottom: -5%; left: 50%; transform: translateX(-50%); width: 70%'>",
+          "        <div class='rounded-2xl px-6 py-3 shadow-xl' data-animation='animate' data-sync='1:0.0' data-opacity='1,0' data-start='5.57' data-end='6.07' data-easing='easeOut' style='background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
           "          <span class='text-xl block text-center leading-relaxed whitespace-nowrap' style='color: #431407'>📄 商品カタログ.csv を上書き → コレクションが自動更新</span>",
           "        </div>",
           "      </div>",
@@ -397,7 +397,7 @@
           "    </div>",
           "    <div class='flex items-center gap-6' data-animation='animate' data-sync='0:0.8' data-opacity='0,1' data-translate-x='-30,0' data-start='3.73' data-end='4.23' data-easing='easeOut'>",
           "      <span class='bg-violet-500 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 5</span>",
-          "      <span class='text-3xl font-semibold w-72' style='color: #431407'>ファイルを差し替え</span>",
+          "      <span class='text-3xl font-semibold w-72' style='color: #431407'>ファイルを上書き</span>",
           "      <span class='text-2xl' style='color: #7C5E3C'>コレクションが自動で最新に</span>",
           "    </div>",
           "  </div>",
