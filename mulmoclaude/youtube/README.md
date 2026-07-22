@@ -8,17 +8,17 @@
 
 - **少数・固定**。公開のたびに新しく作るのではなく、既存 playlist に**足すだけ**にする（毎回の手間を最小化するため）。
 - **番号(N/M)は振らない**。「1/3」等の絶対位置はタイトルにも説明文にも入れない — 間に1本足しただけで全動画の書き直しになるため。順序は playlist 自身が持つ。
-- **1本の動画は複数 playlist に所属してよい**。マスターとシリーズの両方に入れられる。
+- **1本の動画は複数 playlist に所属してよい**。マスターとトピックの両方に入れられる。
+- **ja / en は playlist を分ける**。en 動画の公開が始まったら「MulmoClaude (English)」等を別途作る（ja に混ぜない）。
 
-playlist は目的で2種類に分ける:
+ja の playlist は 4 本。所属ルールは「**全動画 → マスター ＋ トピック playlist のどれか 1 つ**」で機械的に決める:
 
-- **A. コアセット導線（What→Why→How）** — 初見が順番に見る王道。Why(=vision)は代表1本だけ入れる（vision エッセイ群を全部は入れない）。
-  - What: `demos/what-is-mulmoclaude` ／ Why: `vision/the-assistant-you-nurture` ／ How: `tutorials/collection-creation-demo`
-- **B. トピック/How シリーズ** — 「作り方」をまとめて見る受け皿。vision は入れない。
-  - 基礎（汎用の作り方）: `tutorials/collection-creation-demo` → 応用（テーマ別実演）: `kitchen-trio` → `pantry` → `csv-collection`
-  - `collection-creation-demo` は「コレクションの作り方」の汎用基礎なので、テーマ(天気)に関わらず**先頭の入口**として入れる。テーマごとに作り方動画を作り直さない。
+- **MulmoClaude**（マスター・既存） — 全動画を入れる。中島聡氏の vision 動画「自分で育てるAIアシスタント」を含む、メルマガ読者の入口。並び順は導線として管理する: vision → what-is → showcase → 作り方 → 機能紹介。
+- **MulmoClaude でできること** — 総論（`what-is-mulmoclaude`）とテーマ別 showcase（`collections-showcase`, `weather-showcase`, …）。初見の人に見せる棚。
+- **コレクションの作り方** — How 連続講座。基礎 `collection-creation-demo` → `kitchen-trio` → `pantry` → `csv-collection`。「▶ 順番に見る」リンクはこれを張る。`collection-creation-demo` は汎用基礎なのでテーマ(天気)に関わらず先頭の入口。テーマごとに作り方動画を作り直さない。
+- **機能紹介** — 機能単位の解説と新機能告知（`connected-collections-demo`, `record-buttons-demo`、今後: フィード、wiki、Skills 等）。すでに使っている人向けの棚。
 
-見せる順・相互 CTA の方針は `../content-roadmap.md`（コアセット定義・What→Why→How）を正とする。
+コンテンツの階層（総論 → showcase → How）と制作パイプラインは `../content-roadmap.md` を正とする。
 
 ## 公開時チェックリスト
 

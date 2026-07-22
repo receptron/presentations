@@ -14,8 +14,8 @@
 |---|---|---|---|---|---|---|
 | tutorials/kitchen-trio-tutorial | T1（フラッグシップ） | ✅ 14 ビート（答え合わせビートは削除 — スマホチェックと矛盾のため。demo-08 は未使用アセットとして保持） | ✅ 10 枚（ja workspace ライブ + 実機スマホ 1 枚） | 未着手 | 未着手（en ライブ再演） | —（ja mp4/PDF は ✅） |
 | tutorials/collection-creation-demo | コアセットの How | ✅（旧ネイビー配色） | 🔁 旧混合 workspace 産。ja workspace で撮り直し | ✅ | ✅ 11 枚 | ✅ |
-| demos/connected-collections-demo | 番号外（新機能告知） | ✅ | 🔁 同上 | ✅ | ✅ 6 枚（ライブ再演） | ✅ |
-| demos/record-buttons-demo | 番号外（新機能告知） | ✅ | 🔁 同上 | ✅ | ✅ 6 枚（ライブ再演） | ✅ |
+| demos/connected-collections-demo | 番号外（新機能告知） | ✅ | ✅ 公開可（2026-07-22 全 6 枚確認。実害は beat 3 のコレクション一覧 1 枚のみ＝英語名コレクション混在。en 再演時に ja も撮り直す） | ✅ | ✅ 6 枚（ライブ再演） | ✅ |
+| demos/record-buttons-demo | 番号外（新機能告知） | ✅ | ✅ 公開可（2026-07-22 全 6 枚確認。撮り直し不要） | ✅ | ✅ 6 枚（ライブ再演） | ✅ |
 | demos/weather-showcase | 番号外（showcase 追加分） | ✅ | —（流用アセット 2 点のみ） | ✅ | —（同左） | ✅ |
 | demos/collections-showcase | D3 | ✅ | ✅ 3 枚（kitchen golden のクロップ） | ✅ | —（モックのまま。en 差し替えは en 再演後） | ✅ |
 | demos/what-is-mulmoclaude | D1 | ✅ | —（モックのみ） | ✅ | —（同左） | ✅ |
