@@ -2,12 +2,12 @@
 
 デッキ: `tutorials/collection-creation-demo`（ja）
 動画: `output/collection-creation-demo_ja/collection-creation-demo_ja_ja.mp4`（3:53）
-公開日: 2026-07-20
+公開日: 2026-07-20（説明文更新: 2026-07-23 — playlist リンク追加・製品紹介の統一）
 
 ## Title
 
 ```
-会話だけで「天気予報アプリ」を作る — MulmoClaude コレクション作成デモ
+天気予報コレクションを会話で作る — MulmoClaude コレクション作成デモ
 ```
 
 ## Description
@@ -15,7 +15,10 @@
 ```
 出張先ごとの天気チェック、毎回手作業でやっていませんか？MulmoClaude（マルモクロード）の「コレクション」機能を使って、会話だけで天気予報の仕組みをゼロから作るデモです。やりたいことを伝える→結果を確認する→追加の要望を言う。この繰り返しだけで、3地点の天気一覧、週間予報、3時間ごとの予報、そして出張タイムラインまで完成します。コードは一行も書きません。
 
-MulmoClaudeは、自分のパソコンの上でAIアシスタントを育てる、オープンソースのソフトウェアです。
+▶ 順番に見る（MulmoClaude コレクションの作り方）：
+https://www.youtube.com/playlist?list=PLYPiiR7YGHJI
+
+MulmoClaudeは「AIアシスタント育成ツール」で、オープンソースで公開されています。AIエンジンには Claude Code を使っています。ぜひ、自分だけのAIアシスタントをあなたのパソコンの上で育ててください。
 
 チャプター：
 0:00 完成形——出張タイムライン
@@ -35,10 +38,8 @@ https://github.com/receptron/mulmoclaude
 
 ## Playlist
 
-- MulmoClaude（マスター）— 所属済み（`&list=` ID は未記入）
-- コレクションの作り方 — 基礎として先頭に置く。playlist 未作成
-
-**将来 to-do**: playlist 作成後に `&list=<ID>` をここへ記入し、上の Description と **YouTube 上の公開済み説明文の両方**に `▶ 順番に見る` リンクを追記する（この動画は公開済みのため Studio で説明文を編集する。運用は `README.md` 参照）。
+- MulmoClaude（日本語）: https://www.youtube.com/playlist?list=PLPS3_Hl0r6Ic
+- MulmoClaude コレクションの作り方（基礎・先頭）: https://www.youtube.com/playlist?list=PLYPiiR7YGHJI
 
 ## Thumbnail
 

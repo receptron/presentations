@@ -1,0 +1,58 @@
+# YouTube Upload Info — collections-showcase（日本語）
+
+デッキ: `demos/collections-showcase`（ja）
+動画: `output/collections-showcase_ja/collections-showcase_ja_ja.mp4`（3:00）
+公開日: 未公開
+
+## Title
+
+```
+暮らしのアプリが、ひとつの会話でつながる — MulmoClaude コレクション実例集
+```
+
+## Description
+
+```
+レシピはレシピアプリ、買い物リストはメモ、家計簿は表計算——アプリの間をつなぐのは、いつも自分の手作業でした。MulmoClaude（マルモクロード）の「コレクション」は、頼むだけで生まれる自分専用のミニアプリ。ひとりのAIがぜんぶのコレクションを持っているから、会話だけでつながります。台所の一日から旅行まで、実例を3分でご紹介します。
+
+▶ 順番に見る（MulmoClaude でできること）：
+https://www.youtube.com/playlist?list=PLPFzwVwcieOI
+
+MulmoClaudeは「AIアシスタント育成ツール」で、オープンソースで公開されています。AIエンジンには Claude Code を使っています。ぜひ、自分だけのAIアシスタントをあなたのパソコンの上で育ててください。
+
+チャプター：
+0:00 頼むだけで生まれる、あなた専用のミニアプリ
+0:20 アプリの間をつなぐのは、いつも自分だった
+0:40 コレクションとは
+0:57 夕飯の相談から、レシピコレクションが生まれる
+1:17 買い物リストは、ひとことで
+1:33 レシートを送るだけで、家計簿に
+1:50 旅行でも、同じこと
+2:08 暮らしの数だけ、使いみち
+2:24 使うほど、育つ
+2:44 まずはひとつ、頼んでみる
+
+作り方はこちら：
+▶ MulmoClaude コレクションの作り方：
+https://www.youtube.com/playlist?list=PLYPiiR7YGHJI
+
+MulmoClaude（オープンソース）：
+https://github.com/receptron/mulmoclaude
+
+#MulmoClaude #AIアシスタント #ノーコード #コレクション #AIエージェント #ClaudeCode
+```
+
+## Playlist
+
+- MulmoClaude（日本語）: https://www.youtube.com/playlist?list=PLPS3_Hl0r6Ic
+- MulmoClaude でできること: https://www.youtube.com/playlist?list=PLPFzwVwcieOI
+
+## Thumbnail
+
+`output/collections-showcase_ja/images/0p.png`（beat 1 のフック画面）
+
+## URL
+
+```
+未公開
+```
