@@ -2,7 +2,7 @@
 
 デッキ: `tutorials/kitchen-trio-tutorial`（ja）
 動画: `output/kitchen-trio-tutorial_ja/kitchen-trio-tutorial_ja_ja.mp4`（3:21）
-公開日: 未公開
+公開日: 2026-07-23
 
 ## Title
 
@@ -58,5 +58,5 @@ https://github.com/receptron/mulmoclaude
 ## URL
 
 ```
-未公開
+https://youtu.be/s7wbM32vLL4
 ```

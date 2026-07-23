@@ -2,7 +2,7 @@
 
 デッキ: `demos/collections-showcase`（ja）
 動画: `output/collections-showcase_ja/collections-showcase_ja_ja.mp4`（3:00）
-公開日: 未公開
+公開日: 2026-07-23
 
 ## Title
 
@@ -54,5 +54,5 @@ https://github.com/receptron/mulmoclaude
 ## URL
 
 ```
-未公開
+https://youtu.be/Q5HKzDUhs1g
 ```

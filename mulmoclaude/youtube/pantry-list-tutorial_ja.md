@@ -2,7 +2,7 @@
 
 デッキ: `tutorials/pantry-list-tutorial`（ja）
 動画: `output/pantry-list-tutorial_ja/pantry-list-tutorial_ja_ja.mp4`（2:26）
-公開日: 未公開（Slack で確認中・2026-07-23 依頼）
+公開日: 2026-07-23
 
 ## Title
 
@@ -53,5 +53,5 @@ https://github.com/receptron/mulmoclaude
 ## URL
 
 ```
-未公開
+https://youtu.be/b_SlGYyWToU
 ```
