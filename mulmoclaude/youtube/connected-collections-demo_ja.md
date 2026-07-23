@@ -59,7 +59,7 @@ https://youtu.be/6XJywDCJ7V0
 ## X 投稿（日本語）
 
 添付: `output/connected-collections-demo_ja/connected-collections-demo_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
-Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 4 日目・夜。
+Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 4 日目 — 推奨 2026-07-28（火）20:30 JST。
 
 ```
 顧客リスト・請求書・作業時間を別々の表で管理していると、「この顧客の未請求ぶんは？」のたびに探し回ることになります。

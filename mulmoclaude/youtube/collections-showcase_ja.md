@@ -60,7 +60,7 @@ https://youtu.be/Q5HKzDUhs1g
 ## X 投稿（日本語）
 
 添付: `output/collections-showcase_ja/collections-showcase_ja_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
-Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 1 日目・夜。
+Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 1 日目 — 推奨 2026-07-23（木）20:30 JST。
 
 ```
 レシピはレシピアプリ、買い物リストはメモ、家計簿は表計算。アプリの間をつなぐのは、いつも自分の手作業でした。
