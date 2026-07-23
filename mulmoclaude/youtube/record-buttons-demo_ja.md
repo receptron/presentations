@@ -58,7 +58,7 @@ https://youtu.be/VaZur8HDjI4
 ## X 投稿（日本語）
 
 添付: `output/record-buttons-demo_ja/record-buttons-demo_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
-Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 5 日目 — 推奨 2026-07-27（月）20:30 JST。
+Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 5 日目 — 推奨 2026-07-28（火）20:30 JST。
 
 ```
 株価の更新、入金の記録。毎回チャットで頼むほどでもない操作、ありますよね。

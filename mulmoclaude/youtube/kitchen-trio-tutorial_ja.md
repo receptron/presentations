@@ -67,7 +67,7 @@ https://youtu.be/s7wbM32vLL4
 ## X 投稿（日本語）
 
 添付: `output/kitchen-trio-tutorial_ja/kitchen-trio-tutorial_ja_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
-Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 2 日目 — 推奨 2026-07-24（金）20:30 JST。
+Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 2 日目 — 推奨 2026-07-25（土）20:30 JST。
 
 ```
 「今週の夕飯4日分考えて。冷蔵庫に鶏肉とキャベツがあるよ」
