@@ -46,7 +46,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 セクションは Title / Description / Playlist / Thumbnail / URL / X 投稿（日本語・任意）。
 
-- **Description** — 冒頭で何の動画かのフック → 製品一行紹介 → チャプター → GitHub リンク（https://github.com/receptron/mulmoclaude）→ 末尾にハッシュタグ。
+- **Description** — 冒頭で何の動画かのフック → 製品一行紹介 → チャプター → 起動 1 行（`始めるのは、ターミナルにこの1行だけ：npx mulmoclaude@latest`）→ GitHub リンク（https://github.com/receptron/mulmoclaude）→ 末尾にハッシュタグ。X 投稿も同じ起動 1 行を GitHub リンクの直前に入れる（リンクを増やさず行動導線を作る）。
   - 所属 playlist があれば、冒頭フックの直後に `▶ 順番に見る（<playlist 名>）: https://www.youtube.com/playlist?list=<ID>` を置く。playlist が無い間は省略し、**作成後に説明文へ追記**する（公開済み動画は YouTube Studio で説明文を編集）。
 - **Playlist** — 所属予定/所属済みの playlist 名と `&list=` URL（未作成なら「未作成」と書く）。
 
