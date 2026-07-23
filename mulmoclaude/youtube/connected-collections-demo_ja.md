@@ -55,3 +55,27 @@ https://github.com/receptron/mulmoclaude
 ```
 https://youtu.be/6XJywDCJ7V0
 ```
+
+## X 投稿（日本語）
+
+添付: `output/connected-collections-demo_ja/connected-collections-demo_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
+Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 4 日目・夜。
+
+```
+顧客リスト・請求書・作業時間を別々の表で管理していると、「この顧客の未請求ぶんは？」のたびに探し回ることになります。
+
+MulmoClaude（自分のパソコンの上でAIアシスタントを育てる、オープンソースのツール）の新機能で、顧客のページを開くだけで、その顧客宛ての請求書一覧と未請求時間の合計が見えるようになりました。仕組みは「バックリンク」と「ロールアップ」。設定は「顧客のページから請求書も見えるようにして」と会話で頼むだけです。
+
+2分20秒のデモ動画です。音声ありでどうぞ。
+
+▶ 続きは再生リスト「MulmoClaude 機能紹介」：
+https://www.youtube.com/playlist?list=PLEN0vGL7IeUQ
+
+GitHub: https://github.com/receptron/mulmoclaude
+
+みなさんが「つなげたい」データの組み合わせも、ぜひ教えてください。
+
+#MulmoClaude #AI #VibeCrafting
+```
+
+投稿後: X ポスト URL —（未投稿）

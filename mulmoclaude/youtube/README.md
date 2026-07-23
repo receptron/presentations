@@ -44,8 +44,16 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 ## メタデータファイルの形式
 
-セクションは Title / Description / Playlist / Thumbnail / URL。
+セクションは Title / Description / Playlist / Thumbnail / URL / X 投稿（日本語・任意）。
 
 - **Description** — 冒頭で何の動画かのフック → 製品一行紹介 → チャプター → GitHub リンク（https://github.com/receptron/mulmoclaude）→ 末尾にハッシュタグ。
   - 所属 playlist があれば、冒頭フックの直後に `▶ 順番に見る（<playlist 名>）: https://www.youtube.com/playlist?list=<ID>` を置く。playlist が無い間は省略し、**作成後に説明文へ追記**する（公開済み動画は YouTube Studio で説明文を編集）。
 - **Playlist** — 所属予定/所属済みの playlist 名と `&list=` URL（未作成なら「未作成」と書く）。
+
+## X 告知の運用
+
+- X 原案（日本語）は各動画のメタデータファイルの `## X 投稿（日本語）` 節が**正本**。投稿後は同節の「投稿後」行に X ポスト URL を記入する
+- 動画は YouTube リンクではなく **mp4 をネイティブ添付**する（video_view・滞在時間が X の予測対象のため。日本語アカウントは課金済みで長尺可）。本文には YouTube 動画リンクを入れず、所属 playlist のリンクと GitHub リンクで導線を作る
+- 文面ルール: 初見でも分かる製品の一文紹介 / ユーザー価値から文章化（機能名先行・箇条書き羅列は NG）/ 末尾に返信を促す CTA / 煽り語を避けた誠実なトーン / タグは `#MulmoClaude #AI #VibeCrafting`
+- **提示・投稿前に Codex クロスチェック必須**（`codex exec --sandbox read-only` に文面ルールを埋め込んでレビューさせ、MUST FIX ゼロにする。mulmoclaude ワークスペースの `mulmo-beta-announcements` スキルの運用に準拠）
+- ペース: 1 日 1 本・夜枠・週末スキップ（同一話題の連投は減衰するため）

@@ -56,3 +56,27 @@ https://github.com/receptron/mulmoclaude
 ```
 https://youtu.be/Q5HKzDUhs1g
 ```
+
+## X 投稿（日本語）
+
+添付: `output/collections-showcase_ja/collections-showcase_ja_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
+Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 1 日目・夜。
+
+```
+レシピはレシピアプリ、買い物リストはメモ、家計簿は表計算。アプリの間をつなぐのは、いつも自分の手作業でした。
+
+MulmoClaude（マルモクロード）は、自分のパソコンの上でAIアシスタントを育てる、オープンソースのツールです。「コレクション」は、会話で頼むだけで生まれる、一覧表付きの自分専用ミニアプリ。同じAIアシスタントがすべてのコレクションを扱うので、レシピ帳→買い物リスト→家計簿が、ひとつの会話の中でつながります。
+
+レシピ、買い物、家計簿から旅行の準備まで、実例を3分の動画にまとめました。音声ありでどうぞ。
+
+▶ 続きは再生リスト「MulmoClaude でできること」：
+https://www.youtube.com/playlist?list=PLPFzwVwcieOI
+
+GitHub: https://github.com/receptron/mulmoclaude
+
+あなたなら、まず何をコレクションにしますか？
+
+#MulmoClaude #AI #VibeCrafting
+```
+
+投稿後: X ポスト URL —（未投稿）

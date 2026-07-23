@@ -54,3 +54,27 @@ https://github.com/receptron/mulmoclaude
 ```
 https://youtu.be/VaZur8HDjI4
 ```
+
+## X 投稿（日本語）
+
+添付: `output/record-buttons-demo_ja/record-buttons-demo_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
+Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 5 日目・夜。
+
+```
+株価の更新、入金の記録。毎回チャットで頼むほどでもない操作、ありますよね。
+
+MulmoClaude（自分のパソコンの上でAIアシスタントを育てる、オープンソースのツール）の新機能「レコードボタン」は、コレクションの各レコードのページに置けるボタンです。押すと株価などをAIが調べてそのレコードの値を更新するボタンと、AIの応答を待たずにその場で値が書き換わるボタンの2種類。どちらも「このページに価格更新ボタンを付けて」と会話で頼むだけで作れます。
+
+1分50秒のデモ動画です。音声ありでどうぞ。
+
+▶ 続きは再生リスト「MulmoClaude 機能紹介」：
+https://www.youtube.com/playlist?list=PLEN0vGL7IeUQ
+
+GitHub: https://github.com/receptron/mulmoclaude
+
+ボタンにしたい「決まりきった操作」、何が思い浮かびますか？
+
+#MulmoClaude #AI #VibeCrafting
+```
+
+投稿後: X ポスト URL —（未投稿）

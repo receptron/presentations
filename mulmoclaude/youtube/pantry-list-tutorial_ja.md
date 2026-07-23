@@ -55,3 +55,27 @@ https://github.com/receptron/mulmoclaude
 ```
 https://youtu.be/b_SlGYyWToU
 ```
+
+## X 投稿（日本語）
+
+添付: `output/pantry-list-tutorial_ja/pantry-list-tutorial_ja_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
+Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 3 日目・夜。
+
+```
+ふつうにAIに買い物リストを頼むと「豆板醤（家にあれば不要）」のような推測メモが付きます。家にあるものをAIが知っていれば、リストはもっと実用的になります。
+
+MulmoClaude（自分のパソコンの上でAIアシスタントを育てる、オープンソースのツール）なら、常備品リストのコレクションを1つ足すだけ。次からの買い物リストは、「家にあるか」を常備品リストのデータで確かめて作られます。醤油が切れたら、ひとこと言えば次のリストに反映。使うほど正確になっていきます。
+
+「コレクションは、作って終わりではなく使いながら育てる」の実演を2分半の動画にしました。音声ありでどうぞ。
+
+▶ 続きは再生リスト「MulmoClaude コレクションの作り方」：
+https://www.youtube.com/playlist?list=PLYPiiR7YGHJI
+
+GitHub: https://github.com/receptron/mulmoclaude
+
+切らして困ったもの、ありますか？私は醤油でした。
+
+#MulmoClaude #AI #VibeCrafting
+```
+
+投稿後: X ポスト URL —（未投稿）
