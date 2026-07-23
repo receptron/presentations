@@ -11,12 +11,22 @@
 - **1本の動画は複数 playlist に所属してよい**。マスターとトピックの両方に入れられる。
 - **ja / en は playlist を分ける**。en 動画の公開が始まったら「MulmoClaude (English)」等を別途作る（ja に混ぜない）。
 
-ja の playlist は 4 本。所属ルールは「**全動画 → マスター ＋ トピック playlist のどれか 1 つ**」で機械的に決める:
+ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**全動画 → マスター ＋ トピック playlist のどれか 1 つ**」で機械的に決める:
 
-- **MulmoClaude**（マスター・既存） — 全動画を入れる。中島聡氏の vision 動画「自分で育てるAIアシスタント」を含む、メルマガ読者の入口。並び順は導線として管理する: vision → what-is → showcase → 作り方 → 機能紹介。
+- **MulmoClaude（日本語）**（マスター） — 全動画を入れる。中島聡氏の vision 動画「自分で育てるAIアシスタント」を含む、メルマガ読者の入口。並び順は導線として管理する: vision → what-is → showcase → 作り方 → 機能紹介。
+  - https://www.youtube.com/playlist?list=PLPS3_Hl0r6Ic
 - **MulmoClaude でできること** — 総論（`what-is-mulmoclaude`）とテーマ別 showcase（`collections-showcase`, `weather-showcase`, …）。初見の人に見せる棚。
-- **コレクションの作り方** — How 連続講座。基礎 `collection-creation-demo` → `kitchen-trio` → `pantry` → `csv-collection`。「▶ 順番に見る」リンクはこれを張る。`collection-creation-demo` は汎用基礎なのでテーマ(天気)に関わらず先頭の入口。テーマごとに作り方動画を作り直さない。
-- **機能紹介** — 機能単位の解説と新機能告知（`connected-collections-demo`, `record-buttons-demo`、今後: フィード、wiki、Skills 等）。すでに使っている人向けの棚。
+  - https://www.youtube.com/playlist?list=PLPFzwVwcieOI
+- **MulmoClaude コレクションの作り方** — How 連続講座。基礎 `collection-creation-demo` → `kitchen-trio` → `pantry` → `csv-collection`。「▶ 順番に見る」リンクはこれを張る。`collection-creation-demo` は汎用基礎なのでテーマ(天気)に関わらず先頭の入口。テーマごとに作り方動画を作り直さない。
+  - https://www.youtube.com/playlist?list=PLYPiiR7YGHJI
+- **MulmoClaude 機能紹介** — 機能単位の解説と新機能告知（`connected-collections-demo`, `record-buttons-demo`、今後: フィード、wiki、Skills 等）。すでに使っている人向けの棚。
+  - https://www.youtube.com/playlist?list=PLEN0vGL7IeUQ
+
+説明文の共通ブロック（製品紹介）は全動画・全 playlist で次の文に統一する（中島聡氏の表現に準拠）:
+
+> MulmoClaudeは「AIアシスタント育成ツール」で、オープンソースで公開されています。AIエンジンには Claude Code を使っています。ぜひ、自分だけのAIアシスタントをあなたのパソコンの上で育ててください。
+
+ハッシュタグには `#ClaudeCode` を必ず含める（Claude Code は検索起点として MulmoClaude より圧倒的に強いため）。
 
 コンテンツの階層（総論 → showcase → How）と制作パイプラインは `../content-roadmap.md` を正とする。
 
