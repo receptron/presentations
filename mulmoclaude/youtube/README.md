@@ -22,6 +22,52 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 - **MulmoClaude 機能紹介** — 機能単位の解説と新機能告知（`connected-collections-demo`, `record-buttons-demo`、今後: フィード、wiki、Skills 等）。すでに使っている人向けの棚。
   - https://www.youtube.com/playlist?list=PLEN0vGL7IeUQ
 
+### playlist の並び順（YouTube 上の並びの正本）
+
+動画を追加・公開したらここを更新し、YouTube 側の並びをこの順に合わせる。
+手動並べ替えを使うのは**マスターのみ**。他はソート設定で自動的にこの順になる（各 playlist に記載）。
+
+<details><summary>MulmoClaude（日本語） — ソート: YouTube 内で手動</summary>
+
+1. 自分で育てるAIアシスタント（中島聡氏・Life is Beautiful）
+2. できることは、暮らしの数だけ — MulmoClaude 3分ツアー
+3. 暮らしのアプリが、ひとつの会話でつながる — MulmoClaude コレクション実例集
+4. 天気予報コレクションを会話で作る — MulmoClaude コレクション作成デモ
+5. 台所の三点セットを、会話で作る — MulmoClaude チュートリアル
+6. コレクションは、使いながら育てる — MulmoClaude 常備品リスト編
+7. CSVは、置くだけでいい — MulmoClaude CSVコレクション
+8. バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ
+9. 押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン
+
+（weather-showcase 公開後は 3 の次に挿入）
+
+</details>
+
+<details><summary>MulmoClaude でできること — ソート: 公開日（新しい順）</summary>
+
+1. できることは、暮らしの数だけ — MulmoClaude 3分ツアー
+2. 暮らしのアプリが、ひとつの会話でつながる — MulmoClaude コレクション実例集
+
+（weather-showcase を公開すると「新しい順」では先頭に来てしまうため、公開時に「YouTube 内で手動」へ切り替えて上記順に直す）
+
+</details>
+
+<details><summary>MulmoClaude コレクションの作り方 — ソート: 公開日（古い順）</summary>
+
+1. 天気予報コレクションを会話で作る — MulmoClaude コレクション作成デモ（基礎・入口）
+2. 台所の三点セットを、会話で作る — MulmoClaude チュートリアル
+3. コレクションは、使いながら育てる — MulmoClaude 常備品リスト編
+4. CSVは、置くだけでいい — MulmoClaude CSVコレクション
+
+</details>
+
+<details><summary>MulmoClaude 機能紹介 — ソート: 公開日（古い順）</summary>
+
+1. バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ
+2. 押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン
+
+</details>
+
 説明文の共通ブロック（製品紹介）は全動画・全 playlist で次の文に統一する（中島聡氏の表現に準拠）:
 
 > MulmoClaudeは「AIアシスタント育成ツール」で、オープンソースで公開されています。AIエンジンには Claude Code を使っています。ぜひ、自分だけのAIアシスタントをあなたのパソコンの上で育ててください。
