@@ -24,9 +24,10 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 ### playlist の並び順（YouTube 上の並びの正本）
 
-動画を追加・公開したらここを更新し、YouTube 側（再生リストの「並べ替え: 手動」）をこの順に合わせる。
+動画を追加・公開したらここを更新し、YouTube 側の並びをこの順に合わせる。
+手動並べ替えを使うのは**マスターのみ**。他はソート設定で自動的にこの順になる（各 playlist に記載）。
 
-<details><summary>MulmoClaude（日本語）</summary>
+<details><summary>MulmoClaude（日本語） — ソート: YouTube 内で手動</summary>
 
 1. 自分で育てるAIアシスタント（中島聡氏・Life is Beautiful）
 2. できることは、暮らしの数だけ — MulmoClaude 3分ツアー
@@ -42,16 +43,16 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 </details>
 
-<details><summary>MulmoClaude でできること</summary>
+<details><summary>MulmoClaude でできること — ソート: 公開日（新しい順）</summary>
 
 1. できることは、暮らしの数だけ — MulmoClaude 3分ツアー
 2. 暮らしのアプリが、ひとつの会話でつながる — MulmoClaude コレクション実例集
 
-（weather-showcase 公開後は末尾に追加）
+（weather-showcase を公開すると「新しい順」では先頭に来てしまうため、公開時に「YouTube 内で手動」へ切り替えて上記順に直す）
 
 </details>
 
-<details><summary>MulmoClaude コレクションの作り方</summary>
+<details><summary>MulmoClaude コレクションの作り方 — ソート: 公開日（古い順）</summary>
 
 1. 天気予報コレクションを会話で作る — MulmoClaude コレクション作成デモ（基礎・入口）
 2. 台所の三点セットを、会話で作る — MulmoClaude チュートリアル
@@ -60,7 +61,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 </details>
 
-<details><summary>MulmoClaude 機能紹介</summary>
+<details><summary>MulmoClaude 機能紹介 — ソート: 公開日（古い順）</summary>
 
 1. バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ
 2. 押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン
