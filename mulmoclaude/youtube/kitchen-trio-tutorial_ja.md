@@ -43,6 +43,9 @@ https://youtu.be/b_SlGYyWToU
 天気予報コレクションを会話で作る — MulmoClaude コレクション作成デモ
 https://youtu.be/VJMlTwRz6z4
 
+始めるのは、ターミナルにこの1行だけ：
+npx mulmoclaude@latest
+
 MulmoClaude（オープンソース）：
 https://github.com/receptron/mulmoclaude
 
@@ -63,3 +66,30 @@ https://github.com/receptron/mulmoclaude
 ```
 https://youtu.be/s7wbM32vLL4
 ```
+
+## X 投稿（日本語）
+
+添付: `output/kitchen-trio-tutorial_ja/kitchen-trio-tutorial_ja_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
+Codex クロスチェック済み（2026-07-23・MUST FIX ゼロ）。投稿枠: バッチ 2 日目 — 推奨 2026-07-25（土）20:30 JST。
+
+```
+「今週の夕飯4日分考えて。冷蔵庫に鶏肉とキャベツがあるよ」
+
+MulmoClaude（自分のパソコンの上でAIアシスタントを育てる、オープンソースのツール）では、このひとことからレシピ帳が生まれます。続けて頼めば買い物リストがまとまり、レシートは写真を送るだけで家計簿に記録されます。ぜんぶ同じひとつの会話で、コードは一行も書きません。
+
+レシピ帳・買い物リスト・家計簿の三点セットを作る過程を、実際の画面で3分にまとめました。音声ありでどうぞ。
+
+▶ 続きは再生リスト「MulmoClaude コレクションの作り方」：
+https://www.youtube.com/playlist?list=PLYPiiR7YGHJI
+
+始めるのは、ターミナルにこの1行だけ：
+npx mulmoclaude@latest
+
+GitHub: https://github.com/receptron/mulmoclaude
+
+みなさんの台所仕事で、いちばん面倒な「書き写し」はどれですか？
+
+#MulmoClaude #AI #VibeCrafting
+```
+
+投稿後: X ポスト URL —（未投稿）
