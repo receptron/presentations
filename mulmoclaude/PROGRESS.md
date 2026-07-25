@@ -77,7 +77,7 @@ Why/What/How の分類（vision = Why / demos = What / tutorials = How）に対�
 ja 8 本の YouTube 公開・playlist 整備・Discord 告知・X 予約 5 本（7/24〜28 の 20:30）までは完了。残り:
 
 1. **X 予約の追加 2 本** — what-is（7/29 20:30）と csv（7/30 20:30）。文面・mp4・.srt は `youtube/<deck>_ja.md` の「X 投稿（日本語）」節にあり（Codex チェック済み）
-2. **X 公開ごとの URL 記帳** — 各メタデータファイルの「投稿後」行に記入。記帳済みは実例集（7/24）のみ。台所 7/25 → 常備品 7/26 → バックリンク 7/27 → ボタン 7/28 → what-is / csv と続く
+2. **X 公開ごとの URL 記帳** — 各メタデータファイルの「投稿後」行に記入。記帳済みは実例集（7/24）・台所（7/25）。常備品 7/26 → バックリンク 7/27 → ボタン 7/28 → what-is / csv と続く
 3. **weather-showcase** — Slack で確認依頼中（2026-07-25）。承認後: 公開一式の提示 → 公開 → 「できること」playlist を手動ソートへ切替 + マスター並び順の更新（`youtube/README.md` の並び順節が正本）→ メタデータ作成・本ファイルのタイトル表記帳 → X 予約（7/31 枠）
 4. 任意: mulmoclaude ワークスペースの `mulmo-beta-announcements` スキルへ「動画シェアの型」を追記する提案 / 生成済み .srt の YouTube 字幕アップ
 
