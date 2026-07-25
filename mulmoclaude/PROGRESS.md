@@ -19,7 +19,7 @@
 | demos/weather-showcase | 番号外（showcase 追加分） | ✅ | —（流用アセット 2 点のみ） | ✅ | —（同左） | ✅ |
 | demos/collections-showcase | D3 | ✅ | ✅ 3 枚（kitchen golden のクロップ） | ✅ | —（モックのまま。en 差し替えは en 再演後） | ✅ |
 | demos/what-is-mulmoclaude | D1 | ✅ | —（モックのみ） | ✅ | —（同左） | ✅ |
-| demos/daily-workflow | D2 | 📝 未 commit（旧ネイビー） | — | 未着手 | — | — |
+| demos/calendar-showcase | D2 | 未着手（企画のみ — 4 段構成は content-roadmap.md の「D2 Calendar Showcase の構成」参照。旧 D2「A Day with MulmoClaude」を吸収して改題） | — | 未着手 | — | — |
 | tutorials/getting-started | T2 | 📝 未 commit | — | 未着手 | — | — |
 | tutorials/building-a-collection | （旧 T1 下書き） | 📝 未 commit。kitchen-trio が T1 を実装、下書きの扱いは要判断 | — | — | — | — |
 | tutorials/pantry-list-tutorial | 番号外（育てる編・kitchen 続編） | ✅ 9 ビート（在庫管理否定の設計ビートは削除し、STEP1 のナレーション一言に縮約） | ✅ 7 枚（ja workspace ライブ） | 未着手 | 未着手 | —（ja mp4/PDF は ✅） |
@@ -71,6 +71,7 @@ Why/What/How の分類（vision = Why / demos = What / tutorials = How）に対�
 1. ✅ **collection-creation-demo を tutorials/ へ移動**（対応済み）— content-plan がコアセットの How と呼んでいるとおり中身は How のため。connected-collections / record-buttons は「新機能の告知」なので What として demos/ に残す
 2. **台所三点セットの作り方デッキは最初から tutorials/ に、T1（Building a Collection フラッグシップ）として作る** — 「多段階でコレクションを作っていく過程」という content-plan の重要テーマに充当。既存の T1 下書き `tutorials/building-a-collection.json`（未 commit）はテーマが重なるため、置き換えるか別テーマで残すか要判断
 3. ✅ **制作状態の単一ソースをこの PROGRESS.md に一本化**（対応済み）— ファイルを `mulmoclaude/PROGRESS.md` に移動し、企画 md 側は状態をここへの参照に切り替え、デッキ表に企画# 列を追加
+4. **旧 D2 下書き `demos/daily-workflow.json`（未 commit・旧ネイビー配色）の扱い** — D2 は calendar-showcase へ改題・吸収したため役割終了。破棄するか別テーマで残すか要判断（`tutorials/building-a-collection.json` と同じ扱い）
 
 ## YouTube / X 公開の残作業（2026-07-25 時点）
 
