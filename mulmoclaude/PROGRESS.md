@@ -17,7 +17,7 @@
 | demos/connected-collections-demo | 番号外（新機能告知） | ✅ | ✅ 公開可（2026-07-22 全 6 枚確認。実害は beat 3 のコレクション一覧 1 枚のみ＝英語名コレクション混在。en 再演時に ja も撮り直す） | ✅ | ✅ 6 枚（ライブ再演） | ✅ |
 | demos/record-buttons-demo | 番号外（新機能告知） | ✅ | ✅ 公開可（2026-07-22 全 6 枚確認。撮り直し不要） | ✅ | ✅ 6 枚（ライブ再演） | ✅ |
 | demos/weather-showcase | 番号外（showcase 追加分） | ✅ | —（流用アセット 2 点のみ） | ✅ | —（同左） | ✅ |
-| demos/collections-showcase | D3 | ✅ | ✅ 3 枚（kitchen golden のクロップ） | ✅ | —（モックのまま。en 差し替えは en 再演後） | ✅ |
+| demos/collections-showcase | D3 | ✅ | ✅ 3 枚（kitchen golden のクロップ） | ✅ | ✅ 3 枚（en workspace の実キャプチャ。2026-07-26 差し替え） | ✅ |
 | demos/what-is-mulmoclaude | D1 | ✅ | —（モックのみ） | ✅ | —（同左） | ✅ |
 | demos/calendar-showcase | D2 | 未着手（企画のみ — 4 段構成は content-roadmap.md の「D2 Calendar Showcase の構成」参照。旧 D2「A Day with MulmoClaude」を吸収して改題） | — | 未着手 | — | — |
 | tutorials/getting-started | T2 | 📝 未 commit | — | 未着手 | — | — |
@@ -60,7 +60,7 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 
 | デッキ | 枚数 | 中身 | 状態 |
 |---|---|---|---|
-| demos/collections-showcase | 3 | レシピ帳 / 買い物リスト / 家計簿 | ja ✅ kitchen golden のクロップで差し替え済み。en は en workspace 再演後に同様に差し替え |
+| demos/collections-showcase | 3 | レシピ帳 / 買い物リスト / 家計簿 | ja ✅ kitchen golden のクロップで差し替え済み。en ✅ en workspace の実キャプチャに差し替え済み（2026-07-26） |
 | demos/what-is-mulmoclaude | 1 | 来週の予定 | モックのまま確定。スライド上の「※差し替え予定」注記は撤去済み（2026-07-22、ja/en・weather・collections-showcase(en) 含む全デッキ） |
 | demos/weather-showcase | 6 | 天気×予定カード / やることリスト×2 / 持ち物リスト / メール下書き / 旅のしおり | モックのまま確定。同上 |
 
@@ -81,6 +81,21 @@ ja 8 本の YouTube 公開・playlist 整備・Discord 告知・X 予約 7 本�
 2. **X 公開ごとの URL 記帳** — 各メタデータファイルの「投稿後」行に記入。記帳済みは実例集（7/24）・台所（7/25）。常備品 7/26 → バックリンク 7/27 → ボタン 7/28 → what-is 7/29 → csv 7/30 と続く（いずれも予約済みなので、公開後に URL を拾って記入するだけ）
 3. **weather-showcase** — Slack で確認依頼中（2026-07-25）。承認後: 公開一式の提示 → 公開 → 「できること」playlist を手動ソートへ切替 + マスター並び順の更新（`youtube/README.md` の並び順節が正本）→ メタデータ作成・本ファイルのタイトル表記帳 → X 予約（7/31 枠）
 4. 任意: mulmoclaude ワークスペースの `mulmo-beta-announcements` スキルへ「動画シェアの型」を追記する提案 / 生成済み .srt の YouTube 字幕アップ
+
+## 英語版の公開準備（2026-07-26 時点）
+
+**mp4 の鮮度**: en の mp4 は 6 本すべて 7/19 レンダのままで、その後のスクリプト変更（`ac99759` の「※差し替え予定」注記削除・アニメ retiming）が反映されていなかった。2026-07-26 に what-is / weather / connected-collections / record-buttons / collections-showcase を finalize し直して解消（collection-creation-demo は元から mp4 がスクリプトより新しく、対象外）。旧生成物は各 `output/<deck>/old/` へ退避。
+
+**キャプチャ**: 7/19 のライブ再演分（connected-collections 6 枚・record-buttons 6 枚・collection-demo 11 枚）は撮り直し不要と判断。アプリは 7/19 以降 560 コミット進んでいるが、実差分はコレクション一覧の `Map` タブ追加とレコードボタンのアイコン字形のみで、内容が誤りになるものではない。ボタン定義（`data/skills/invoice/schema.json` の `actions`）も en workspace に残っている。
+
+**公開前に残っているもの**:
+
+1. **en のメタデータファイルが未作成**（`youtube/` は `*_ja.md` のみ）— title / description / チャプターを en 用に起こす必要がある
+2. **en の playlist が未作成** — `youtube/README.md` の方針どおり ja に混ぜず別立て（「MulmoClaude (English)」等）
+3. **講座の続きが en 未着手** — kitchen-trio / pantry / csv の en。「コレクションの作り方」は現状 collection-creation-demo の 1 本のみ
+4. weather-showcase は ja が Slack 承認待ちのため、en を先行公開しない
+
+**en workspace の台所データ**: `demo-workspace-en` に recipes / shopping-list / ledger を英訳して投入済み（同リポジトリ commit `da090f1`）。家計簿の slug は en=`ledger`（デッキ本文が "the ledger collection" と呼ぶため）。お買い物モードのビューは現行実装だとチェック済みの品が一覧から消えるため、進捗は見出しの `N / 19 done` で見せる。
 
 ## 次のアクション
 
