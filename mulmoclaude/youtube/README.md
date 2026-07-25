@@ -87,6 +87,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
    - 該当する playlist がまだ無ければ、**新規作成**するよう伝える。
 4. **新規 playlist を作った場合** — その playlist に入るべき**過去の動画**（例: `collection-creation-demo`）も追加するよう、あわせてユーザーに伝える。新規 playlist は最新1本だけでは順序が成立しないため。
 5. **説明文リンク** — playlist ができたら、ユーザーから `&list=<ID>` を受け取り、説明文に `▶ 順番に見る（<playlist 名>）: https://www.youtube.com/watch?v=<動画ID>&list=<ID>` を追記し、メタデータファイルの Playlist 欄にも反映する。
+6. **生成物の片付け** — YouTube 公開と X 投稿（mp4 添付・予約含む）まで済んだデッキは、`output/<deck>/` を `output/done/<deck>/` へ移す。メタデータファイル内の `output/<deck>/…` という記載は書き換えず、公開済みは `output/done/` 配下と読み替える（再 finalize するときは元の位置に戻すと生成キャッシュが効く）。
 
 ## メタデータファイルの形式
 
