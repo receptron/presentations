@@ -13,7 +13,7 @@
 | デッキ | 企画# | ja スクリプト | ja キャプチャ | en スクリプト | en キャプチャ | en mp4/PDF |
 |---|---|---|---|---|---|---|
 | tutorials/kitchen-trio-tutorial | T1（フラッグシップ） | ✅ 14 ビート（答え合わせビートは削除 — スマホチェックと矛盾のため。demo-08 は未使用アセットとして保持） | ✅ 10 枚（ja workspace ライブ + 実機スマホ 1 枚） | 未着手 | 未着手（en ライブ再演） | —（ja mp4/PDF は ✅） |
-| tutorials/collection-creation-demo | コアセットの How | ✅（旧ネイビー配色） | 🔁 旧混合 workspace 産。ja workspace で撮り直し | ✅ | ✅ 11 枚 | ✅ |
+| tutorials/collection-creation-demo | コアセットの How | ✅（旧ネイビー配色） | ✅ 据え置き（2026-07-27 判断）— 旧混合 workspace 産でコレクション名が英語のまま（`demo-28-collections-1280.png` 等）だが、ja は公開済みのため撮り直さない | ✅ | ✅ 11 枚 | ✅ |
 | demos/connected-collections-demo | 番号外（新機能告知） | ✅ | ✅ 公開可（2026-07-22 全 6 枚確認。実害は beat 3 のコレクション一覧 1 枚のみ＝英語名コレクション混在。en 再演時に ja も撮り直す） | ✅ | ✅ 6 枚（ライブ再演） | ✅ |
 | demos/record-buttons-demo | 番号外（新機能告知） | ✅ | ✅ 公開可（2026-07-22 全 6 枚確認。撮り直し不要） | ✅ | ✅ 6 枚（ライブ再演） | ✅ |
 | demos/weather-showcase | 番号外（showcase 追加分） | ✅ | —（流用アセット 2 点のみ） | ✅ | —（同左） | ✅ |
@@ -96,7 +96,7 @@ ja 8 本の YouTube 公開・playlist 整備・Discord 告知・X 予約 7 本�
 3. **講座の続きが en 未着手** — kitchen-trio / pantry / csv の en。「コレクションの作り方」は現状 collection-creation-demo の 1 本のみ
 4. weather-showcase は ja が Slack 承認待ちのため、en を先行公開しない
 
-**翻訳レビュー（2026-07-26）**: en 6 本を Codex に通した（ja/en 対照＋レンダリング済みスライドの添付＋`demos/DEMO-GUIDE.md` の翻訳ルールを前提として渡す）。意味の破綻・数値の食い違い・レイアウト崩れの指摘はゼロ。英語として壊れていた 6 件とトーンが強すぎた 4 件を修正済み。積み残し 2 件: (a) `collection-creation-demo` beat 8 の en キャプチャがファイルパス（`data/skills/weather/schema.json` 等）を写しており ja のフィールド表より技術寄り — ja 側も 🔁 撮り直し予定なのでまとめて対応 (b) `collections-showcase` 締めのバッジが ja「育」/ en 🌱（他デッキでは ja も 🌱 なので破綻はしていない）。
+**翻訳レビュー（2026-07-26）**: en 6 本を Codex に通した（ja/en 対照＋レンダリング済みスライドの添付＋`demos/DEMO-GUIDE.md` の翻訳ルールを前提として渡す）。意味の破綻・数値の食い違い・レイアウト崩れの指摘はゼロ。英語として壊れていた 6 件とトーンが強すぎた 4 件を修正済み。積み残し 2 件: (a) `collection-creation-demo` beat 8 の en キャプチャがファイルパス（`data/skills/weather/schema.json` 等）を写しており ja のフィールド表より技術寄り — ja のキャプチャ据え置きを決めたため、単独で撮り直すほどではないと判断して保留 (b) `collections-showcase` 締めのバッジが ja「育」/ en 🌱（他デッキでは ja も 🌱 なので破綻はしていない）。
 
 **ja に残っている既知のズレ（公開済みのため据え置き）**: `collections-showcase_ja` / `kitchen-trio-tutorial_ja` の献立は、買い物リストのメモが「月・火・水・木」で書かれているのに日付が 2026-07-21〜24（火〜金）になっており、ナレーションの「木曜は洋風」が画面の日付と 1 日ずれている。曜日名は画面に出ないため実害は小さいと判断し、公開済み動画は差し替えない。en は未公開だったので 7/27〜30（月〜木）に直した（`demo-workspace-en` の `a96749a`）。ja の台所データを撮り直す機会があればそのとき合わせる。
 
