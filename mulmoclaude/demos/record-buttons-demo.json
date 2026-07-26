@@ -161,7 +161,7 @@
           "  <div class='px-10 pt-6 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>STEP 2</span>",
-          "      <h2 class='text-4xl font-bold' style='color:#431407'>Ask for the plain button</h2>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>Ask for the regular button</h2>",
           "    </div>",
           "    <p class='text-2xl' style='color:#7C5E3C'>For routine changes, a button with no AI is plenty</p>",
           "  </div>",
@@ -211,7 +211,7 @@
       }
     },
     {
-      "text": "Choosing between them is simple. Work that needs looking things up or judgment: the AI button. Routine, fixed changes: the plain button. And either one can be added later, in conversation, the moment you want it.",
+      "text": "Choosing between them is simple. Work that needs looking things up or judgment: the AI button. Routine, fixed changes: the regular button. And either one can be added later, in conversation, the moment you want it.",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -225,15 +225,15 @@
           "    <p class='text-2xl' style='color:#7C5E3C'>When in doubt: does it need the AI's judgment?</p>",
           "  </div>",
           "  <div class='flex items-stretch justify-center gap-8 mt-12 px-16'>",
-          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='2.55' data-end='3.05' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #EA580C'>",
+          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='2.38' data-end='2.88' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #EA580C'>",
           "      <div class='text-5xl mb-4'>🤖</div>",
           "      <div class='text-3xl font-bold mb-2'>The AI button</div>",
           "      <div class='text-xl mb-5' style='color:#EA580C'>Agent action</div>",
           "      <div class='text-2xl leading-relaxed' style='color:#7C5E3C'>Looks things up, weighs them<br>e.g. \"Refresh Price\"</div>",
           "    </div>",
-          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='6.41' data-end='6.91' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #0284C7'>",
+          "    <div class='flex-1 rounded-2xl px-10 py-10 text-center' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='6.48' data-end='6.98' style='background:#FFFFFF;border:1px solid #EAD9BE;box-shadow:0 10px 24px rgba(67,20,7,.08);border:2px solid #0284C7'>",
           "      <div class='text-5xl mb-4'>⚡</div>",
-          "      <div class='text-3xl font-bold mb-2'>The plain button</div>",
+          "      <div class='text-3xl font-bold mb-2'>The regular button</div>",
           "      <div class='text-xl mb-5' style='color:#0284C7'>Mutate action</div>",
           "      <div class='text-2xl leading-relaxed' style='color:#7C5E3C'>Fixed, routine changes<br>e.g. \"Mark as Paid\"</div>",
           "    </div>",

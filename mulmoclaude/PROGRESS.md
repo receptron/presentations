@@ -95,6 +95,8 @@ ja 8 本の YouTube 公開・playlist 整備・Discord 告知・X 予約 7 本�
 3. **講座の続きが en 未着手** — kitchen-trio / pantry / csv の en。「コレクションの作り方」は現状 collection-creation-demo の 1 本のみ
 4. weather-showcase は ja が Slack 承認待ちのため、en を先行公開しない
 
+**翻訳レビュー（2026-07-26）**: en 6 本を Codex に通した（ja/en 対照＋レンダリング済みスライドの添付＋`demos/DEMO-GUIDE.md` の翻訳ルールを前提として渡す）。意味の破綻・数値の食い違い・レイアウト崩れの指摘はゼロ。英語として壊れていた 6 件とトーンが強すぎた 4 件を修正済み。積み残し 2 件: (a) `collection-creation-demo` beat 8 の en キャプチャがファイルパス（`data/skills/weather/schema.json` 等）を写しており ja のフィールド表より技術寄り — ja 側も 🔁 撮り直し予定なのでまとめて対応 (b) `collections-showcase` 締めのバッジが ja「育」/ en 🌱（他デッキでは ja も 🌱 なので破綻はしていない）。
+
 **ja に残っている既知のズレ（公開済みのため据え置き）**: `collections-showcase_ja` / `kitchen-trio-tutorial_ja` の献立は、買い物リストのメモが「月・火・水・木」で書かれているのに日付が 2026-07-21〜24（火〜金）になっており、ナレーションの「木曜は洋風」が画面の日付と 1 日ずれている。曜日名は画面に出ないため実害は小さいと判断し、公開済み動画は差し替えない。en は未公開だったので 7/27〜30（月〜木）に直した（`demo-workspace-en` の `a96749a`）。ja の台所データを撮り直す機会があればそのとき合わせる。
 
 **en workspace の台所データ**: `demo-workspace-en` に recipes / shopping-list / ledger を英訳して投入済み（同リポジトリ commit `da090f1`）。家計簿の slug は en=`ledger`（デッキ本文が "the ledger collection" と呼ぶため）。お買い物モードのビューは、タップした品が一覧から消えて買い物の途中経過が見えなくなっていたため修正した（カテゴリ内の「購入済 / Bought」区切りの下に残す・件数を「済 / 全体」表示に戻す）。en `8212a9b` / ja `c0c2311` で両ワークスペースに適用済み。
