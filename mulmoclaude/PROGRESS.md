@@ -95,7 +95,7 @@ ja 8 本の YouTube 公開・playlist 整備・Discord 告知・X 予約 7 本�
 3. **講座の続きが en 未着手** — kitchen-trio / pantry / csv の en。「コレクションの作り方」は現状 collection-creation-demo の 1 本のみ
 4. weather-showcase は ja が Slack 承認待ちのため、en を先行公開しない
 
-**en workspace の台所データ**: `demo-workspace-en` に recipes / shopping-list / ledger を英訳して投入済み（同リポジトリ commit `da090f1`）。家計簿の slug は en=`ledger`（デッキ本文が "the ledger collection" と呼ぶため）。お買い物モードのビューは現行実装だとチェック済みの品が一覧から消えるため、進捗は見出しの `N / 19 done` で見せる。
+**en workspace の台所データ**: `demo-workspace-en` に recipes / shopping-list / ledger を英訳して投入済み（同リポジトリ commit `da090f1`）。家計簿の slug は en=`ledger`（デッキ本文が "the ledger collection" と呼ぶため）。お買い物モードのビューは、タップした品が一覧から消えて買い物の途中経過が見えなくなっていたため修正した（カテゴリ内の「購入済 / Bought」区切りの下に残す・件数を「済 / 全体」表示に戻す）。en `8212a9b` / ja `c0c2311` で両ワークスペースに適用済み。
 
 ## 次のアクション
 
