@@ -162,7 +162,7 @@
       }
     },
     {
-      "text": "A collection is your own personal mini-app, born from a spoken request. It comes with friendly views — tables, calendars, galleries — and collections connect to each other through conversation. And it isn't finished at creation: it keeps growing as you talk.",
+      "text": "A collection is your own personal mini-app, born from a spoken request. It comes with friendly views — tables, calendars, galleries — and collections connect to each other through conversation. And it isn't finished at creation: you keep nurturing it as you talk.",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -185,19 +185,19 @@
           "    <div style='border-top:1px solid #EAD9BE;margin-top:3px'></div>",
           "  </div>",
           "  <div class='grid grid-cols-2 pl-12 pr-24 mt-8 relative z-10'>",
-          "    <div class='py-12 pr-9' style='border-right:1px solid #EAD9BE;border-bottom:1px solid #EAD9BE' data-animation='animate' data-sync='0:0.3' data-easing='easeOut' data-opacity='0,1' data-start='1.68' data-end='2.18' data-translate-y='20,0'>",
+          "    <div class='py-12 pr-9' style='border-right:1px solid #EAD9BE;border-bottom:1px solid #EAD9BE' data-animation='animate' data-sync='0:0.3' data-easing='easeOut' data-opacity='0,1' data-start='1.34' data-end='1.84' data-translate-y='20,0'>",
           "      <div class='flex items-center gap-3'><span class='inline-block w-[8px] h-[8px]' style='background:#EA580C'></span><h3 class='t-di text-[28px]'>Born from a request</h3></div>",
           "      <p class='text-[20px] leading-[1.9] mt-3' style='color:#7C5E3C'>No template hunting, no setup. Just say what you want, in your own words.</p>",
           "    </div>",
-          "    <div class='py-12 pl-9' style='border-bottom:1px solid #EAD9BE' data-animation='animate' data-sync='1:0' data-easing='easeOut' data-opacity='0,1' data-start='4.89' data-end='5.39' data-translate-y='20,0'>",
+          "    <div class='py-12 pl-9' style='border-bottom:1px solid #EAD9BE' data-animation='animate' data-sync='1:0' data-easing='easeOut' data-opacity='0,1' data-start='4.46' data-end='4.96' data-translate-y='20,0'>",
           "      <div class='flex items-center gap-3'><span class='inline-block w-[8px] h-[8px]' style='background:#EA580C'></span><h3 class='t-di text-[28px]'>Friendly views included</h3></div>",
           "      <p class='text-[20px] leading-[1.9] mt-3' style='color:#7C5E3C'>Table, calendar, gallery — the AI picks a view that fits the content.</p>",
           "    </div>",
-          "    <div class='py-12 pr-9' style='border-right:1px solid #EAD9BE' data-animation='animate' data-sync='1:0.5' data-easing='easeOut' data-opacity='0,1' data-start='8.39' data-end='8.89' data-translate-y='20,0'>",
+          "    <div class='py-12 pr-9' style='border-right:1px solid #EAD9BE' data-animation='animate' data-sync='1:0.5' data-easing='easeOut' data-opacity='0,1' data-start='8.28' data-end='8.78' data-translate-y='20,0'>",
           "      <div class='flex items-center gap-3'><span class='inline-block w-[8px] h-[8px]' style='background:#EA580C'></span><h3 class='t-di text-[28px]'>They connect to each other</h3></div>",
           "      <p class='text-[20px] leading-[1.9] mt-3' style='color:#7C5E3C'>Recipes to shopping list, receipts to ledger — conversation makes the link.</p>",
           "    </div>",
-          "    <div class='py-12 pl-9' data-animation='animate' data-sync='2:0' data-easing='easeOut' data-opacity='0,1' data-start='11.9' data-end='12.4' data-translate-y='20,0'>",
+          "    <div class='py-12 pl-9' data-animation='animate' data-sync='2:0' data-easing='easeOut' data-opacity='0,1' data-start='12.1' data-end='12.6' data-translate-y='20,0'>",
           "      <div class='flex items-center gap-3'><span class='inline-block w-[8px] h-[8px]' style='background:#EA580C'></span><h3 class='t-di text-[28px]'>They grow by talking</h3></div>",
           "      <p class='text-[20px] leading-[1.9] mt-3' style='color:#7C5E3C'>Say \"make it so\", and it changes on the spot. The more you use it, the more it's yours.</p>",
           "    </div>",
@@ -215,7 +215,7 @@
       }
     },
     {
-      "text": "Let's watch it happen. One evening you ask: \"Plan four dinners for this week. There's chicken and cabbage in the fridge\". A recipe collection appears with the menu lined up — drawing on the family tastes you've shared and last week's records.",
+      "text": "Let's watch it happen. One evening you ask: \"Plan four dinners for this week. There's chicken and cabbage in the fridge\" — and you add that you'd like Thursday to be Western-style. A recipe collection appears with the menu lined up. It uses up what's in the fridge, and Thursday is Western-style, just as asked.",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -247,10 +247,10 @@
           "  <div class='flex gap-12 pl-12 pr-24 mt-11 relative z-10'>",
           "    <div class='w-[44%] pt-1'>",
           "      <div class='text-[13px] tracking-[.3em] mb-3' style='color:#A08B6E'>YOU</div>",
-          "      <p class='t-ha text-[28px] leading-[1.8]' data-animation='animate' data-sync='1:0' data-easing='easeOut' data-opacity='0,1' data-start='1.9' data-end='2.4' data-translate-y='10,0'><span style='background:linear-gradient(transparent 64%,rgba(234,88,12,.16) 64%)'>\"Plan four dinners for this week.</span><br><span style='background:linear-gradient(transparent 64%,rgba(234,88,12,.16) 64%)'>There's chicken and cabbage in the fridge\"</span></p>",
-          "      <div class='mt-8 pl-5' style='border-left:3px solid #EA580C' data-animation='animate' data-sync='3:0' data-easing='easeOut' data-opacity='0,1' data-start='8.25' data-end='8.75' data-translate-y='10,0'>",
+          "      <p class='t-ha text-[28px] leading-[1.8]' data-animation='animate' data-sync='1:0' data-easing='easeOut' data-opacity='0,1' data-start='1.55' data-end='2.05' data-translate-y='10,0'><span style='background:linear-gradient(transparent 64%,rgba(234,88,12,.16) 64%)'>\"Plan four dinners for this week.</span><br><span style='background:linear-gradient(transparent 64%,rgba(234,88,12,.16) 64%)'>There's chicken and cabbage in the fridge.</span><br><span style='background:linear-gradient(transparent 64%,rgba(234,88,12,.16) 64%)'>I'd like Thursday to be Western-style\"</span></p>",
+          "      <div class='mt-8 pl-5' style='border-left:3px solid #EA580C' data-animation='animate' data-sync='3:0' data-easing='easeOut' data-opacity='0,1' data-start='10.16' data-end='10.66' data-translate-y='10,0'>",
           "        <div class='text-[13px] tracking-[.3em] font-semibold' style='color:#EA580C'>MulmoClaude</div>",
-          "        <p class='text-[20px] leading-[1.9] mt-2' style='color:#5C4128'>Added four dinners to the recipe book. Thursday goes Western-style, so it won't repeat last week.</p>",
+          "        <p class='text-[20px] leading-[1.9] mt-2' style='color:#5C4128'>Added four dinners to the recipe book. As requested, Thursday is Western-style.</p>",
           "      </div>",
           "    </div>",
           "    <div class='flex-1'>",
@@ -580,7 +580,7 @@
       }
     },
     {
-      "text": "A collection isn't finished when it's made. It's something you raise in conversation, shaped to your life. Start with one — the thing you've always meant to organize — and ask MulmoClaude.",
+      "text": "A collection isn't finished when it's made. It's something you nurture in conversation, shaped to your life. Start with one — the thing you've always meant to organize — and ask MulmoClaude.",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -596,11 +596,11 @@
           "  <div class='relative z-10 flex flex-col items-center justify-center' style='height:645px'>",
           "    <div class='text-[14px] tracking-[.4em] mb-9' style='color:#EA580C' data-animation='animate' data-sync='abs:0' data-easing='easeOut' data-opacity='0,1' data-start='0.0' data-end='0.5'>IN CLOSING</div>",
           "    <div class='relative'>",
-          "      <p class='t-di text-[52px] leading-[1.6] text-center' data-animation='animate' data-sync='abs:0.5' data-easing='easeOut' data-opacity='0,1' data-start='0.5' data-end='1.0' data-translate-y='14,0'>Not finished when made —<br>an app you keep raising.</p>",
-          "      <div class='absolute flex items-center justify-center w-[84px] h-[84px] rounded-full' style='right:-124px;top:6px;border:3px solid #DC2626;opacity:.88' data-animation='animate' data-sync='1:0.3' data-easing='easeOut' data-opacity='0,0.88' data-scale='1.7,1' data-start='3.78' data-end='4.28'><span class='t-di text-[38px]' style='color:#DC2626;display:inline-block;transform:rotate(9deg)'>🌱</span></div>",
+          "      <p class='t-di text-[52px] leading-[1.6] text-center' data-animation='animate' data-sync='abs:0.5' data-easing='easeOut' data-opacity='0,1' data-start='0.5' data-end='1.0' data-translate-y='14,0'>Not finished when made —<br>an app you keep nurturing.</p>",
+          "      <div class='absolute flex items-center justify-center w-[84px] h-[84px] rounded-full' style='right:-124px;top:6px;border:3px solid #DC2626;opacity:.88' data-animation='animate' data-sync='1:0.3' data-easing='easeOut' data-opacity='0,0.88' data-scale='1.7,1' data-start='4.05' data-end='4.55'><span class='t-di text-[38px]' style='color:#DC2626;display:inline-block;transform:rotate(9deg)'>🌱</span></div>",
           "    </div>",
-          "    <p class='text-[21px] mt-9' style='color:#7C5E3C' data-animation='animate' data-sync='2:0' data-easing='easeOut' data-opacity='0,1' data-start='6.45' data-end='6.95' data-translate-y='10,0'>Start with one — the thing you've always meant to organize.</p>",
-          "    <p class='text-[16px] tracking-[.08em] mt-6' style='color:#EA580C' data-animation='animate' data-sync='2:0.6' data-easing='easeOut' data-opacity='0,1' data-start='9.41' data-end='9.91'>For example, one line: \"help me organize the books I've read\" (how-to in the \"Collection Creation Demo\")</p>",
+          "    <p class='text-[21px] mt-9' style='color:#7C5E3C' data-animation='animate' data-sync='2:0' data-easing='easeOut' data-opacity='0,1' data-start='6.8' data-end='7.3' data-translate-y='10,0'>Start with one — the thing you've always meant to organize.</p>",
+          "    <p class='text-[16px] tracking-[.08em] mt-6' style='color:#EA580C' data-animation='animate' data-sync='2:0.6' data-easing='easeOut' data-opacity='0,1' data-start='9.68' data-end='10.18'>For example, one line: \"help me organize the books I've read\" (how-to in the \"Collection Creation Demo\")</p>",
           "  </div>",
           "  <div class='absolute left-12 right-12 bottom-0 z-20'>",
           "    <div style='border-top:1px solid #EAD9BE'></div>",
