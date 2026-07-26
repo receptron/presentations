@@ -245,7 +245,7 @@
       }
     },
     {
-      "text": "Your everyday operations start finishing without ever opening a chat. A collection grows to fit the way you work — one button at a time. Pick one thing you often ask for, and make it a button.",
+      "text": "Your everyday operations start finishing without ever opening a chat. You can nurture a collection to fit the way you work — one button at a time. Pick one thing you often ask for, and make it a button.",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -254,8 +254,8 @@
           "  <div class='flex flex-col items-center justify-center h-full text-center px-20'>",
           "    <h1 class='text-5xl font-bold leading-[1.5]'>Everyday operations,<br>done without opening a chat</h1>",
           "    <div class='w-24 mt-9 mb-9' style='border-top:4px solid #EA580C'></div>",
-          "    <p class='text-2xl leading-relaxed' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='4.83' data-end='5.33' style='color:#7C5E3C'>Pick one operation you often ask for, and make it a button.<br>Just say, \"add a button that does ...\" — in conversation.</p>",
-          "    <p class='text-xl mt-8' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='9.54' data-end='10.04' style='color:#A08B6E'>🌱 Collections keep growing after they're built — give it a try!</p>",
+          "    <p class='text-2xl leading-relaxed' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='1:0.0' data-start='4.33' data-end='4.83' style='color:#7C5E3C'>Pick one operation you often ask for, and make it a button.<br>Just say, \"add a button that does ...\" — in conversation.</p>",
+          "    <p class='text-xl mt-8' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='10,0' data-sync='2:0.0' data-start='8.97' data-end='9.47' style='color:#A08B6E'>🌱 You can keep nurturing a collection after it's built — give it a try!</p>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color:rgba(160,139,110,.6)'>8 / 8</div>",
           "</div>"
