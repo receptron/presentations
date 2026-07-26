@@ -1,0 +1,79 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "プレゼンター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "明るく温かい、希望に満ちたトーンで話してください。大切なものを友人に楽しそうに紹介するような、優しくて前向きな語り口。決して暗く平板にならず、穏やかなエネルギーを保ってください。"
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 0.5,
+    "closingPadding": 0.3,
+    "outroPadding": 0.5,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "title": "コレクションのつながりが、一枚の図になる",
+  "description": "10秒クリップ: コレクション一覧のマップタブ。コレクション同士の参照関係をグラフで見わたせる。",
+  "lang": "ja",
+  "beats": [
+    {
+      "text": "つながりは、マップタブで。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden flex items-center justify-center' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='text-center space-y-5'>",
+          "    <span class='inline-block text-white text-xl font-bold px-6 py-2 rounded-full' style='background:#EA580C'>新機能</span>",
+          "    <h1 class='text-6xl font-bold' style='color:#431407'>つながりが、一枚の図に</h1>",
+          "    <p class='text-3xl' style='color:#7C5E3C'>コレクション一覧の「マップ」タブ</p>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "切り替えると、コレクション同士の参照関係が、一枚の図になります。",
+      "image": {
+        "type": "movie",
+        "source": {
+          "kind": "path",
+          "path": "collection-map-assets-ja/map-switch.mp4"
+        }
+      }
+    }
+  ]
+}
