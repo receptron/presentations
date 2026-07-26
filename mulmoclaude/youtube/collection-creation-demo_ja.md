@@ -53,3 +53,30 @@ https://github.com/receptron/mulmoclaude
 ```
 https://youtu.be/VJMlTwRz6z4
 ```
+
+## X 投稿（日本語）
+
+添付: `output/done/collection-creation-demo_ja/collection-creation-demo_ja_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
+Codex クロスチェック済み（2026-07-27・MUST FIX ゼロ）。投稿枠: バッチの積み残し — 推奨 2026-07-31（金）20:30 JST。
+
+```
+出張で何か所か回る週、行き先ごとの天気を1つずつ調べて、時間帯まで見比べる。地味に手間のかかる作業です。
+
+MulmoClaude（自分のパソコンの上でAIアシスタントを育てる、オープンソースのツール）なら、「出張で移動するので、複数の場所の天気を一覧で確認したい」とフォームに書くだけ。必要な項目はAIが考えて、天気の取得まで自動で進みます。あとから「3時間ごとの天気も出せる？」と頼めば、その場でもっと細かい予報になります。
+
+ゼロから作りはじめて、移動に合わせた出張タイムラインになるまでを、実際の画面で4分弱にまとめました。音声ありでどうぞ。
+
+▶ 続きは再生リスト「MulmoClaude コレクションの作り方」：
+https://www.youtube.com/playlist?list=PLYPiiR7YGHJI
+
+始めるのは、ターミナルにこの1行だけ：
+npx mulmoclaude@latest
+
+GitHub: https://github.com/receptron/mulmoclaude
+
+みなさんが「毎回同じように調べ直している情報」は何ですか？
+
+#MulmoClaude #AI #VibeCrafting
+```
+
+投稿後: X ポスト URL —（未投稿）
