@@ -112,16 +112,17 @@
 - 置き場所は `demos/clips/`。10 秒クリップは What（機能紹介）なので、意図で切った木の下にぶら下げる。How のクリップが要るときは `tutorials/clips/`
 - 命名は既存規約どおり。`<feature>.json` = 英語版 / `<feature>_ja.json` = 日本語版、録画は `<feature>-assets/` と `<feature>-assets-ja/`
 - **MulmoScript を作る**。ja/en の出し分けが `-l` / `-c` で済み、`slideParams.theme` を共有するので見た目が本編と揃い、何を出したかが JSON として repo に残る。素の mp4 だけ置くと `demos/clips/` が管理外の置き場になる
-- ただし**最小構成で作る**。X はミュート自動再生でナレーションが効かず、画像生成と TTS はビートごとに課金される。10 秒に構成もナレーションも要らないので、「タイトルカード 1 ビート + 画面録画 1 ビート」で足りる
+- ただし**最小構成で作る**。X はミュート自動再生でナレーションが効かず、画像生成と TTS はビートごとに課金される。標準形は**スライド埋め込みの 1 ビート**: `html_tailwind` + `animation: {movie: true}` のスライドに、見出し・`<video>`（画面録画）・`data-animation` のテロップを同居させる。0 秒時点から文字と動きが同時に立ち、無音再生でも伝わる（タイトルカード先行・録画単独ビート・エンドカードの 3 案と比較して 2026-07-27 に採用。`animation.movie` 経路は HTML をリアルタイム再生しながら screencast するので、`<video>` はスライド内でそのまま再生される）
 - **画面録画は Playwright で撮る**。`mulmo-live-record` の借り物 Playwright に `recordVideo: {dir, size}` を渡すだけで webm が録れる（ffmpeg で mp4 化・頭の静止時間をトリム）。macOS の画面収録などは不要
-- 録画 mp4 は `{"image": {"type": "movie", "source": {"kind": "path", "path": "..."}}}` でビートに直接載せられる
 - 例外として作らないのは、**日本語のみ・テロップ不要・1 カットで伝わる**ものを、リリース当日など速度優先で出すとき。この場合は使い捨てと割り切り、`demos/clips/` には残さない
 
-第 1 号は `demos/clips/collection-map_ja.json`（マップタブ、10.6 秒）。作って分かった罠:
+第 1 号は `demos/clips/collection-map_ja.json`（マップタブ、8.5 秒）。作って分かった罠:
 
 - **BGM の相対パス**: デッキから `audioParams` を流用すると `../../resources/...` が `clips/` の階層ぶんずれて movie 生成が落ちる。`../../../resources/...` に直す
-- **余韻の詰め**: デッキ用の `outroPadding: 3` / `introPadding: 1` のままだと 10 秒に収まらない。クリップでは intro/outro とも 0.5 に詰める
-- **movie ビートの尺は録画の長さが勝つ**。ナレーションを録画より短く書き、録画側を ffmpeg で 7 秒程度に刈り込んでから載せる
+- **余韻の詰め**: デッキ用の `outroPadding: 3` / `introPadding: 1` のままだと 10 秒に収まらない。クリップでは introPadding 0.5 / **outroPadding 0** にする
+- **アニメ付き `html_tailwind` ビートには `duration` を明示する**（例: `duration: 8`）。未指定だと映像がナレーション長ぶんしか録画されず、末尾の padding が黒コマになる（`combine_audio_files_agent` は「explicit duration があるときだけ」動画的ビートとして扱う）
+- **outroPadding は音声だけ伸ばす**ので、動画ビートで終わるクリップでは黒コマになる。上の outroPadding 0 はこのため
+- **埋め込む録画は `duration` より長くしておく**（duration 8 なら録画 8.4 秒程度）。短いと再生が終わって止まる
 
 未確定: 10 秒クリップの提供フロー（置き場所・頻度・どの機能を優先するか）は制作プランの確認事項 8 のまま残っている。運用を始める前にそこを詰める。
 
