@@ -95,7 +95,8 @@ ja 8 本の YouTube 公開・playlist 整備・Discord 告知・X 予約 7 本�
 2. ✅ **en の playlist**（対応済み・2026-07-27）— 4 本作成。ID と並び順・ソート方法は `youtube/README.md` の「英語版の playlist」節が正本
 3. **講座の続きが en 未着手** — kitchen-trio / pantry / csv の en。「コレクションの作り方」は現状 collection-creation-demo の 1 本のみ
 4. weather-showcase は ja が Slack 承認待ちのため、en を先行公開しない
-5. ✅ **en 5 本の公開**（2026-07-27 完了）— what-is / collections-showcase / collection-creation-demo / connected-collections / record-buttons。URL は各メタデータとタイトル管理表に記帳済み。残: collections-showcase の説明文に基礎編の URL を Studio で追記 / playlist への追加とマスターの手動並べ替え
+5. ✅ **en 5 本の公開**（2026-07-27 完了）— what-is / collections-showcase / collection-creation-demo / connected-collections / record-buttons。URL は各メタデータとタイトル管理表に記帳済み。playlist への追加とマスターの手動並べ替えも完了。**残**: collections-showcase の説明文に基礎編の URL `https://youtu.be/D-937j0jkyo` を Studio で追記（公開時点では基礎編が未公開で URL が無かったため）
+6. **vision の en 動画は据え置き**（2026-07-27 判断）— [An AI Assistant Is Something You Nurture, Not Something You Buy](https://youtu.be/Wonr3eOPww4) は playlist を作る前に公開したため、説明文に `▶ Watch in order` が無く、`youtube/` にメタデータファイルも無い（チャプターも無し）。マスターの先頭に置く動画なので、余力があるときにメタデータ作成と説明文の差し替えを行う
 
 **翻訳レビュー（2026-07-26）**: en 6 本を Codex に通した（ja/en 対照＋レンダリング済みスライドの添付＋`demos/DEMO-GUIDE.md` の翻訳ルールを前提として渡す）。意味の破綻・数値の食い違い・レイアウト崩れの指摘はゼロ。英語として壊れていた 6 件とトーンが強すぎた 4 件を修正済み。積み残し 2 件: (a) `collection-creation-demo` beat 8 の en キャプチャがファイルパス（`data/skills/weather/schema.json` 等）を写しており ja のフィールド表より技術寄り — ja のキャプチャ据え置きを決めたため、単独で撮り直すほどではないと判断して保留 (b) `collections-showcase` 締めのバッジが ja「育」/ en 🌱（他デッキでは ja も 🌱 なので破綻はしていない）。
 
