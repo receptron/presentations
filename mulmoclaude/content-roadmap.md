@@ -14,33 +14,35 @@
 
 - **what-is / showcase はモック HTML のまま公開まで行く**（What はイメージと割り切る）。実画面はキャプチャ必須の How の担当。モックに「※差し替え予定」等の注記は入れない。
 - **How は対応する What（showcase）をベースに作る**。画像は実キャプチャ。
+- **デッキの MulmoScript から ss web 記事を派生させる**（`mulmo markdown`）。設定系 How（T6・T7 等）は必ず記事も出す — 「どう設定するのか」は検索で来る質問のため
 - **CTA は階層に沿って張る**: what-is → showcase → How と誘導し、How の末尾から showcase（実例）へ戻す。How が未制作の showcase は CTA がそのまま How のバックログになる（How 公開後に YouTube の説明文へリンクを追記する）。
 
 ## コンテンツマトリクス（What + How 12 本）
 
-優先度: P0 = 7 月着手 / P1 = 8 月 / P2 = 9 月以降。
+**作る順番は下の「制作キュー」が正本**（時期ラベルは持たない。上から順に着手し、終わったら行を消す）。
 
 ### Tutorials（How）
 
-| # | テーマ | 尺 | capture | 優先度 |
-|---|---|---|---|---|
-| T1 | Building a Collection with AI（多段階でコレクションを育てる） | 5-6 分 | 必須 | **P0** |
-| T2 | Getting Started（セットアップ〜最初の会話） | 4 分 | 必須 | P0 |
-| T3 | Feeds & Automations（定期タスク・情報収集を任せる） | 4 分 | 必須 | P1 |
-| T4 | Skills（自分の手順を教えて自動化） | 4 分 | 必須 | P1 |
-| T5 | Custom Views 深掘り（コレクションにリッチ UI を付ける） | 5 分 | 必須 | P2 |
-| T6 | Remote Access & Bridges（スマホ・LINE から使う） | 4 分 | 必須 | P2 |
+| # | テーマ | 尺 | capture |
+|---|---|---|---|
+| T1 | Building a Collection with AI（多段階でコレクションを育てる） | 5-6 分 | 必須 |
+| T2 | Getting Started（セットアップ〜最初の会話） | 4 分 | 必須 |
+| T3 | Feeds & Automations（定期タスク・情報収集を任せる） | 4 分 | 必須 |
+| T4 | Skills（自分の手順を教えて自動化） | 4 分 | 必須 |
+| T5 | Custom Views 深掘り（コレクションにリッチ UI を付ける） | 5 分 | 必須 |
+| T6 | Remote Access & Bridges（スマホから使う設定 — QR 接続・PWA・Web Push まで） | 4 分 | 必須 |
+| T7 | Google カレンダーとつなぐ（接続設定 → 同期の挙動 → 編集・削除に確認が入るまで） | 2-3 分 | 必須 |
 
 ### Demos（What）
 
-| # | テーマ | 尺 | capture | 優先度 |
-|---|---|---|---|---|
-| D1 | What is MulmoClaude?（3 分ツアー） | 3 分 | 必須 | **P0** |
-| D2 | Calendar Showcase（リストが予定になる・予定が段取りを決める） | 3-4 分 | モック（showcase 方針） | P1 |
-| D3 | Collections Showcase（実例コレクション集） | 3 分 | 必須 | P1 |
-| D4 | チャットからプレゼン動画を作る（MulmoCast 連携） | 3 分 | 必須 | P2 |
-| D5 | Remote Access デモ（外出先から自宅の workspace） | 2-3 分 | 必須 | P2 |
-| D6 | 実ユーザーの応用例紹介（ショーケース） | 3-4 分 | 必須 | P1 |
+| # | テーマ | 尺 | capture |
+|---|---|---|---|
+| D1 | What is MulmoClaude?（3 分ツアー） | 3 分 | 必須 |
+| D2 | Calendar Showcase（リストが予定になる・予定が段取りを決める） | 3-4 分 | モック（showcase 方針） |
+| D3 | Collections Showcase（実例コレクション集） | 3 分 | 必須 |
+| D4 | チャットからプレゼン動画を作る（MulmoCast 連携） | 3 分 | 必須 |
+| D5 | Remote Access デモ（外出先から自宅の workspace） | 2-3 分 | 必須 |
+| D6 | 実ユーザーの応用例紹介（ショーケース） | 3-4 分 | 必須 |
 
 #### D2 Calendar Showcase の構成（2026-07-25 決定）
 
@@ -77,6 +79,24 @@
 ### Vision（Why）
 
 既存試作 3 本（Software for an Audience of One / GUI Chat Protocol / DSLs as Harnesses）の仕上げ。
+
+## 制作キュー（作る順番）
+
+ja 制作の順番。上から着手し、**終わったら行を消す**（PROGRESS と同じ運用）。並び替えは自由 — このリストの並びが常に正。
+並行トラック（このキューとは独立に進む）: en 展開（公開済みデッキの英語再演）/ 10 秒クリップ（在庫 8 件の消化）/ 毎日の定常便。
+
+1. 週次リリースノート動画の試作 1 本（フォーマットをここで詰める）
+2. T7 Google カレンダーとつなぐ — D2 の「予定を動かす」の前提を先に揃える
+3. D2 Calendar Showcase
+4. T6 Remote Access & Bridges（スマホから使う設定）
+5. T3 Feeds & Automations
+6. T2 Getting Started — ss web の準備記事群と役割分担を決めてから（下書きの扱い判断とセット）
+7. D6 実ユーザーの応用例紹介
+8. T4 Skills
+9. D4 チャットからプレゼン動画を作る
+10. D5 Remote Access デモ（T6 と素材共用）
+11. T5 Custom Views 深掘り
+12. Vision 試作 3 本の仕上げ
 
 ## 制作フォーマット（本編と 10 秒クリップ）— 2026-07-27 決定
 
