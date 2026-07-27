@@ -5,7 +5,7 @@
 作業のルールと撮り方は `demos/DEMO-GUIDE.md` を参照。
 更新タイミング: デッキの追加・キャプチャ撮影・finalize・モック差し替えを行ったとき。
 
-**このファイルは現在の状態だけを持つ**。完了した項目は ✅ を付けずに行ごと削除する（経緯の正本は commit / PR）。決定・方針は content-roadmap.md へ。日付付きのスナップショット節は作らない。
+**このファイルは現在の状態だけを持つ**。残作業・バックログの完了項目は ✅ を付けずに行ごと削除する（経緯の正本は commit / PR。デッキ表・タイトル表は現在の状態として保持）。決定・方針は content-roadmap.md へ。日付付きのスナップショット節は作らない。
 
 ## デッキ別ステータス
 
@@ -14,7 +14,7 @@
 
 | デッキ | 企画# | ja スクリプト | ja キャプチャ | en スクリプト | en キャプチャ | en mp4/PDF |
 |---|---|---|---|---|---|---|
-| tutorials/collection-creation-demo | コアセットの How | 済（旧ネイビー配色） | 済・据え置き（英語名コレクション混在だが公開済みのため撮り直さない） | 済 | 済 11 枚 | 済 |
+| tutorials/collection-creation-demo | 番号外（コアセットの How） | 済（旧ネイビー配色） | 済・据え置き（英語名コレクション混在だが公開済みのため撮り直さない） | 済 | 済 11 枚 | 済 |
 | tutorials/kitchen-trio-tutorial | tutorials #1（フラッグシップ） | 済 14 ビート | 済 10 枚 | 未着手 | 未着手（en ライブ再演） | — |
 | tutorials/pantry-list-tutorial | 番号外（育てる編・kitchen 続編） | 済 9 ビート | 済 7 枚 | 未着手 | 未着手 | — |
 | tutorials/csv-collection-tutorial | 番号外（新機能 How・CSV） | 済 13 ビート | 済 10 枚（素材 CSV は assets の source/） | 未着手 | 未着手 | — |
@@ -27,7 +27,6 @@
 | tutorials/getting-started | tutorials #2 | 📝 未 commit | — | 未着手 | — | — |
 | tutorials/building-a-collection | （旧 tutorials #1 下書き） | 📝 未 commit。kitchen-trio が tutorials #1 を実装、扱いは要判断 | — | — | — | — |
 
-ja の mp4/PDF は旧キャプチャ前提のため、ja キャプチャ撮り直し後に finalize し直す。
 
 ## タイトル・参照名の管理
 
