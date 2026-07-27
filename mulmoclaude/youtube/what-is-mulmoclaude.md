@@ -2,7 +2,7 @@
 
 デッキ: `demos/what-is-mulmoclaude`（en）
 動画: `output/what-is-mulmoclaude/what-is-mulmoclaude_en.mp4`（2:45）
-公開日: 未公開
+公開日: 2026-07-27
 
 ## Title
 
@@ -57,5 +57,5 @@ https://github.com/receptron/mulmoclaude
 ## URL
 
 ```
-未公開
+https://youtu.be/yogapAc9nds
 ```
