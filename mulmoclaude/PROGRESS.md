@@ -15,17 +15,17 @@
 | デッキ | 企画# | ja スクリプト | ja キャプチャ | en スクリプト | en キャプチャ | en mp4/PDF |
 |---|---|---|---|---|---|---|
 | tutorials/collection-creation-demo | コアセットの How | 済（旧ネイビー配色） | 済・据え置き（英語名コレクション混在だが公開済みのため撮り直さない） | 済 | 済 11 枚 | 済 |
-| tutorials/kitchen-trio-tutorial | T1（フラッグシップ） | 済 14 ビート | 済 10 枚 | 未着手 | 未着手（en ライブ再演） | — |
+| tutorials/kitchen-trio-tutorial | チュートリアル1（フラッグシップ） | 済 14 ビート | 済 10 枚 | 未着手 | 未着手（en ライブ再演） | — |
 | tutorials/pantry-list-tutorial | 番号外（育てる編・kitchen 続編） | 済 9 ビート | 済 7 枚 | 未着手 | 未着手 | — |
 | tutorials/csv-collection-tutorial | 番号外（新機能 How・CSV） | 済 13 ビート | 済 10 枚（素材 CSV は assets の source/） | 未着手 | 未着手 | — |
-| demos/what-is-mulmoclaude | D1 | 済 | —（モック確定） | 済 | —（同左） | 済 |
-| demos/collections-showcase | D3 | 済 | 済 3 枚 | 済 | 済 3 枚 | 済 |
+| demos/what-is-mulmoclaude | デモ1 | 済 | —（モック確定） | 済 | —（同左） | 済 |
+| demos/collections-showcase | デモ3 | 済 | 済 3 枚 | 済 | 済 3 枚 | 済 |
 | demos/weather-showcase | 番号外（showcase 追加分） | 済 | —（流用アセット 2 点のみ） | 済 | —（同左） | 済 |
 | demos/connected-collections-demo | 番号外（新機能告知） | 済 | 済・beat 3 の一覧 1 枚のみ英語名混在（en 再演時に ja も撮り直す） | 済 | 済 6 枚 | 済 |
 | demos/record-buttons-demo | 番号外（新機能告知） | 済 | 済 | 済 | 済 6 枚 | 済 |
-| demos/calendar-showcase | D2 | 未着手（企画は content-roadmap.md「D2 Calendar Showcase の構成」） | — | 未着手 | — | — |
-| tutorials/getting-started | T2 | 📝 未 commit | — | 未着手 | — | — |
-| tutorials/building-a-collection | （旧 T1 下書き） | 📝 未 commit。kitchen-trio が T1 を実装、扱いは要判断 | — | — | — | — |
+| demos/calendar-showcase | デモ2 | 未着手（企画は content-roadmap.md「デモ2 Calendar Showcase の構成」） | — | 未着手 | — | — |
+| tutorials/getting-started | チュートリアル2 | 📝 未 commit | — | 未着手 | — | — |
+| tutorials/building-a-collection | （旧 チュートリアル1 下書き） | 📝 未 commit。kitchen-trio が チュートリアル1 を実装、扱いは要判断 | — | — | — | — |
 
 ja の mp4/PDF は旧キャプチャ前提のため、ja キャプチャ撮り直し後に finalize し直す。
 
@@ -59,8 +59,8 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 1. **X の URL 記帳** — 状態の正本は各メタデータの「投稿枠」「投稿後」行。一覧は書き写さず `mulmo-x-status` スキルで導出する（`node ~/.claude/skills/mulmo-x-status/scripts/x-status.mjs`）
 2. **weather-showcase** — Slack で確認依頼中（2026-07-25〜）。承認後: 公開一式の提示 → 公開 → 「できること」playlist を手動ソートへ切替 + マスター並び順の更新（`youtube/README.md` が正本）→ メタデータ作成・タイトル表記帳 → X 予約（8/1 枠）
 3. **講座 3 本の en**（kitchen-trio → pantry → csv）— kitchen の ja golden データは en workspace へ英訳投入済み。次は en workspace での英語ライブ再演・収録 → en スクリプト作成・finalize
-4. **calendar-showcase（D2）の制作着手** — 企画は content-roadmap.md
-5. **未 commit 下書き 3 本の扱い判断** — `tutorials/getting-started` / `tutorials/building-a-collection` / `demos/daily-workflow`（D2 吸収により役割終了）。破棄か別テーマか
+4. **calendar-showcase（デモ2）の制作着手** — 企画は content-roadmap.md
+5. **未 commit 下書き 3 本の扱い判断** — `tutorials/getting-started` / `tutorials/building-a-collection` / `demos/daily-workflow`（デモ2 吸収により役割終了）。破棄か別テーマか
 6. **未決**: en X（@mulmocast）の動画告知 5 本の文面と開始日
 7. **週次リリースノート動画の試作 1 本** — content-roadmap の 3 レーン構成参照。フォーマット（1 機能 1 ビート・2 分前後・ss web 記事の派生まで）をここで詰める
 8. 任意: 生成済み .srt の YouTube 字幕アップ / 新デッキ企画「お買い物モードを会話で作る」（素材: ja workspace セッション a0627168。kitchen-trio ビート 8 が予告済み）/ csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
