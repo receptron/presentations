@@ -2,7 +2,7 @@
 
 デッキ: `demos/collections-showcase`（en）
 動画: `output/collections-showcase/collections-showcase_en.mp4`（2:44）
-公開日: 未公開
+公開日: 2026-07-27
 
 ## Title
 
@@ -34,6 +34,7 @@ Chapters:
 
 How to build one, step by step:
 Build a Weather Collection by Talking — MulmoClaude Collection Creation Demo
+https://youtu.be/D-937j0jkyo
 
 Getting started is one line in your terminal:
 npx mulmoclaude@latest
@@ -56,5 +57,5 @@ https://github.com/receptron/mulmoclaude
 ## URL
 
 ```
-未公開
+https://youtu.be/2D-R7MpCB_I
 ```

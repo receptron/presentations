@@ -2,7 +2,7 @@
 
 デッキ: `demos/record-buttons-demo`（en）
 動画: `output/record-buttons-demo/record-buttons-demo_en.mp4`（1:45）
-公開日: 未公開
+公開日: 2026-07-27
 
 ## Title
 
@@ -32,6 +32,7 @@ Chapters:
 
 How to build a collection from scratch:
 Build a Weather Collection by Talking — MulmoClaude Collection Creation Demo
+https://youtu.be/D-937j0jkyo
 
 Getting started is one line in your terminal:
 npx mulmoclaude@latest
@@ -54,5 +55,5 @@ https://github.com/receptron/mulmoclaude
 ## URL
 
 ```
-未公開
+https://youtu.be/81oYVOYDbik
 ```

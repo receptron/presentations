@@ -35,15 +35,15 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 
 | デッキ | スクリプト title（ja） | タイトルページの表記 | 参照名 | YouTube タイトル |
 |---|---|---|---|---|
-| tutorials/collection-creation-demo | コレクション作成デモ — 天気予報コレクション | eyebrow「コレクション作成デモ」+ 題「天気予報コレクション」 | コレクション作成デモ | ja: [天気予報コレクションを会話で作る — MulmoClaude コレクション作成デモ](https://youtu.be/VJMlTwRz6z4)（メタデータ: youtube/collection-creation-demo_ja.md） |
+| tutorials/collection-creation-demo | コレクション作成デモ — 天気予報コレクション | eyebrow「コレクション作成デモ」+ 題「天気予報コレクション」 | コレクション作成デモ | ja: [天気予報コレクションを会話で作る — MulmoClaude コレクション作成デモ](https://youtu.be/VJMlTwRz6z4)（メタデータ: youtube/collection-creation-demo_ja.md）<br>en: [Build a Weather Collection by Talking — MulmoClaude Collection Creation Demo](https://youtu.be/D-937j0jkyo)（メタデータ: youtube/collection-creation-demo.md） |
 | tutorials/kitchen-trio-tutorial | 台所の三点セットを、会話で作る | 同左 | 台所の三点セットを、会話で作る | ja: [台所の三点セットを、会話で作る — MulmoClaude チュートリアル](https://youtu.be/s7wbM32vLL4)（メタデータ: youtube/kitchen-trio-tutorial_ja.md） |
 | tutorials/pantry-list-tutorial | コレクションは、使いながら育てる — 常備品リスト編 | 題「使いながら、育てる」 | 常備品リスト編（使いながら、育てる） | ja: [コレクションは、使いながら育てる — MulmoClaude 常備品リスト編](https://youtu.be/b_SlGYyWToU)（メタデータ: youtube/pantry-list-tutorial_ja.md） |
 | tutorials/csv-collection-tutorial | CSVは、置くだけでいい | 同左 | CSVは、置くだけでいい | ja: [CSVは、置くだけでいい — MulmoClaude CSVコレクション](https://youtu.be/c6CkrgYWC2M)（メタデータ: youtube/csv-collection-tutorial_ja.md） |
-| demos/collections-showcase | コレクション実例集 — 暮らしのアプリが、ひとつの会話でつながる | 「コレクション実例集」+ 見出し「暮らしのアプリが、ひとつの会話でつながる。」 | コレクション実例集 | ja: [暮らしのアプリが、ひとつの会話でつながる — MulmoClaude コレクション実例集](https://youtu.be/Q5HKzDUhs1g)（メタデータ: youtube/collections-showcase_ja.md） |
-| demos/what-is-mulmoclaude | MulmoClaude で何ができる？ | 見出し「できることは、暮らしの数だけ。」 | — | ja: [できることは、暮らしの数だけ — MulmoClaude 3分ツアー](https://youtu.be/TDzy0KcHuag)（メタデータ: youtube/what-is-mulmoclaude_ja.md） |
+| demos/collections-showcase | コレクション実例集 — 暮らしのアプリが、ひとつの会話でつながる | 「コレクション実例集」+ 見出し「暮らしのアプリが、ひとつの会話でつながる。」 | コレクション実例集 | ja: [暮らしのアプリが、ひとつの会話でつながる — MulmoClaude コレクション実例集](https://youtu.be/Q5HKzDUhs1g)（メタデータ: youtube/collections-showcase_ja.md）<br>en: [Your Everyday Apps, Connected by One Conversation — MulmoClaude Collections](https://youtu.be/2D-R7MpCB_I)（メタデータ: youtube/collections-showcase.md） |
+| demos/what-is-mulmoclaude | MulmoClaude で何ができる？ | 見出し「できることは、暮らしの数だけ。」 | — | ja: [できることは、暮らしの数だけ — MulmoClaude 3分ツアー](https://youtu.be/TDzy0KcHuag)（メタデータ: youtube/what-is-mulmoclaude_ja.md）<br>en: [As Many Uses as There Are Lives — A 3-Minute Tour of MulmoClaude](https://youtu.be/yogapAc9nds)（メタデータ: youtube/what-is-mulmoclaude.md） |
 | demos/weather-showcase | 明日の天気は、もう予定に入っている | 同左 | — | 未定 |
-| demos/connected-collections-demo | バラバラのデータが、つながる | — | — | ja: [バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ](https://youtu.be/6XJywDCJ7V0)（メタデータ: youtube/connected-collections-demo_ja.md） |
-| demos/record-buttons-demo | 押すだけの仕事は、ボタンにする | — | — | ja: [押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン](https://youtu.be/VaZur8HDjI4)（メタデータ: youtube/record-buttons-demo_ja.md） |
+| demos/connected-collections-demo | バラバラのデータが、つながる | — | — | ja: [バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ](https://youtu.be/6XJywDCJ7V0)（メタデータ: youtube/connected-collections-demo_ja.md）<br>en: [Scattered Data, Connected — Backlinks & Rollups in MulmoClaude](https://youtu.be/FmQ9HVirrf8)（メタデータ: youtube/connected-collections-demo.md） |
+| demos/record-buttons-demo | 押すだけの仕事は、ボタンにする | — | — | ja: [押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン](https://youtu.be/VaZur8HDjI4)（メタデータ: youtube/record-buttons-demo_ja.md）<br>en: [Turn Routine Work into Buttons — Record Buttons in MulmoClaude](https://youtu.be/81oYVOYDbik)（メタデータ: youtube/record-buttons-demo.md） |
 
 相互参照の現状（2026-07-19 検証）: kitchen beat 3・15 →「コレクション作成デモ」✅／kitchen beat 15 →「コレクション実例集」（旧「コレクションでつながる暮らし」から修正済み）／pantry beat 10 →「台所の三点セットを、会話で作る」✅＋お買い物モード（未制作の予告）。
 
@@ -91,10 +91,11 @@ ja 8 本の YouTube 公開・playlist 整備・Discord 告知・X 予約 7 本�
 
 **公開前に残っているもの**:
 
-1. **en のメタデータファイルが未作成**（`youtube/` は `*_ja.md` のみ）— title / description / チャプターを en 用に起こす必要がある
-2. **en の playlist が未作成** — `youtube/README.md` の方針どおり ja に混ぜず別立て（「MulmoClaude (English)」等）
+1. ✅ **en のメタデータファイル**（対応済み・2026-07-27）— 5 本ぶんを `youtube/<deck>.md`（無印 = 英語版）に作成。チャプターはレンダリング済み音声から算出
+2. ✅ **en の playlist**（対応済み・2026-07-27）— 4 本作成。ID と並び順・ソート方法は `youtube/README.md` の「英語版の playlist」節が正本
 3. **講座の続きが en 未着手** — kitchen-trio / pantry / csv の en。「コレクションの作り方」は現状 collection-creation-demo の 1 本のみ
 4. weather-showcase は ja が Slack 承認待ちのため、en を先行公開しない
+5. ✅ **en 5 本の公開**（2026-07-27 完了）— what-is / collections-showcase / collection-creation-demo / connected-collections / record-buttons。URL は各メタデータとタイトル管理表に記帳済み。残: collections-showcase の説明文に基礎編の URL を Studio で追記 / playlist への追加とマスターの手動並べ替え
 
 **翻訳レビュー（2026-07-26）**: en 6 本を Codex に通した（ja/en 対照＋レンダリング済みスライドの添付＋`demos/DEMO-GUIDE.md` の翻訳ルールを前提として渡す）。意味の破綻・数値の食い違い・レイアウト崩れの指摘はゼロ。英語として壊れていた 6 件とトーンが強すぎた 4 件を修正済み。積み残し 2 件: (a) `collection-creation-demo` beat 8 の en キャプチャがファイルパス（`data/skills/weather/schema.json` 等）を写しており ja のフィールド表より技術寄り — ja のキャプチャ据え置きを決めたため、単独で撮り直すほどではないと判断して保留 (b) `collections-showcase` 締めのバッジが ja「育」/ en 🌱（他デッキでは ja も 🌱 なので破綻はしていない）。
 
