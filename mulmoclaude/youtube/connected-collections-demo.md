@@ -2,7 +2,7 @@
 
 デッキ: `demos/connected-collections-demo`（en）
 動画: `output/connected-collections-demo/connected-collections-demo_en.mp4`（2:07）
-公開日: 未公開
+公開日: 2026-07-27
 
 ## Title
 
@@ -56,5 +56,5 @@ https://github.com/receptron/mulmoclaude
 ## URL
 
 ```
-未公開
+https://youtu.be/FmQ9HVirrf8
 ```
