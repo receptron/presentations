@@ -76,6 +76,61 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 コンテンツの階層（総論 → showcase → How）と制作パイプラインは `../content-roadmap.md` を正とする。
 
+### 英語版の playlist（2026-07-27 起案・未作成）
+
+ja と同じ 4 本立て・同じ所属ルール（**全動画 → マスター ＋ トピック playlist のどれか 1 つ**）。ja には混ぜない。
+YouTube 側で作成したら、各 `&list=<ID>` をここに記入する。
+
+| 役割 | en 名 | ja の対応 |
+|---|---|---|
+| マスター | MulmoClaude (English) | MulmoClaude（日本語） |
+| 総論・showcase | What MulmoClaude Can Do | MulmoClaude でできること |
+| How 連続講座 | Building Collections with MulmoClaude | MulmoClaude コレクションの作り方 |
+| 機能紹介 | MulmoClaude Feature Demos | MulmoClaude 機能紹介 |
+
+説明文の共通ブロック（英語）— 全動画・全 playlist で統一する。ja の「AIアシスタント育成ツール」に対応し、デッキで統一した nurture を使う:
+
+```
+MulmoClaude is an "AI assistant nurturing tool", released as open source. It uses Claude Code as its AI engine. Nurture an AI assistant of your own, on your own computer.
+```
+
+playlist の説明文（この共通ブロックと `https://github.com/receptron/mulmoclaude` を各説明文の末尾に付ける）:
+
+```
+MulmoClaude (English)
+Everything about MulmoClaude, in English. Start here: what it can do, how to build your first collection, and what each feature looks like in use.
+```
+
+```
+What MulmoClaude Can Do
+Real examples of what people build with MulmoClaude — personal apps for records, plans and the weather, all born from ordinary conversation. Watch these first if you are new here.
+```
+
+```
+Building Collections with MulmoClaude
+A short course on building collections by talking. Start with the weather collection, then follow the kitchen, pantry and CSV episodes as they are published.
+```
+
+```
+MulmoClaude Feature Demos
+One feature at a time: backlinks and rollups, record buttons, and more as they ship. For people already using MulmoClaude.
+```
+
+初回公開ぶんの所属と並び順（マスターは手動ソート）:
+
+1. what-is-mulmoclaude → What MulmoClaude Can Do
+2. collections-showcase → What MulmoClaude Can Do
+3. collection-creation-demo → Building Collections with MulmoClaude
+4. connected-collections-demo → MulmoClaude Feature Demos
+5. record-buttons-demo → MulmoClaude Feature Demos
+
+`weather-showcase` は ja が承認待ちのため初回に含めない。承認・公開後に 2 の次へ挿入する。
+
+**タイトルの制約**: en のスライドは他の動画をタイトルで名指ししている。参照が外れないよう、YouTube タイトルは次を満たすこと。
+
+- `collection-creation-demo` のタイトルに **Collection Creation Demo** を含める（what-is / collections-showcase / weather-showcase の締めが参照）
+- what-is の締めは **An AI Assistant Nurturing Tool**（vision デッキ `the-assistant-you-nurture` の en）を参照している。en 版は未公開なので、公開順の判断が要る
+
 ## 公開時チェックリスト
 
 動画を公開したら、Claude は次を行う／ユーザーに伝える:
