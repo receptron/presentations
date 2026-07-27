@@ -2,7 +2,7 @@
 
 デッキ: `demos/record-buttons-demo`（en）
 動画: `output/record-buttons-demo/record-buttons-demo_en.mp4`（1:45）
-公開日: 未公開
+公開日: 2026-07-27
 
 ## Title
 
@@ -55,5 +55,5 @@ https://github.com/receptron/mulmoclaude
 ## URL
 
 ```
-未公開
+https://youtu.be/81oYVOYDbik
 ```
