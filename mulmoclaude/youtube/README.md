@@ -118,18 +118,19 @@ One feature at a time: backlinks and rollups, record buttons, and more as they s
 
 初回公開ぶんの所属と並び順（マスターは手動ソート）:
 
-1. what-is-mulmoclaude → What MulmoClaude Can Do
-2. collections-showcase → What MulmoClaude Can Do
-3. collection-creation-demo → Building Collections with MulmoClaude
-4. connected-collections-demo → MulmoClaude Feature Demos
-5. record-buttons-demo → MulmoClaude Feature Demos
+1. [An AI Assistant Is Something You Nurture, Not Something You Buy](https://www.youtube.com/watch?v=Wonr3eOPww4)（vision `the-assistant-you-nurture` の en・公開済み）— マスターのみ
+2. what-is-mulmoclaude → What MulmoClaude Can Do
+3. collections-showcase → What MulmoClaude Can Do
+4. collection-creation-demo → Building Collections with MulmoClaude
+5. connected-collections-demo → MulmoClaude Feature Demos
+6. record-buttons-demo → MulmoClaude Feature Demos
 
 `weather-showcase` は ja が承認待ちのため初回に含めない。承認・公開後に 2 の次へ挿入する。
 
 **タイトルの制約**: en のスライドは他の動画をタイトルで名指ししている。参照が外れないよう、YouTube タイトルは次を満たすこと。
 
 - `collection-creation-demo` のタイトルに **Collection Creation Demo** を含める（what-is / collections-showcase / weather-showcase の締めが参照）
-- what-is の締めは **An AI Assistant Nurturing Tool**（vision デッキ `the-assistant-you-nurture` の en）を参照している。en 版は未公開なので、公開順の判断が要る
+- vision の en は公開済みだが、**公開タイトルがデッキの `title` と違う**（デッキ: `An AI Assistant Nurturing Tool` / 公開: `An AI Assistant Is Something You Nurture, Not Something You Buy`）。what-is の締めの参照を公開タイトルに合わせて修正済み（2026-07-27）。以後もデッキ側を公開タイトルに合わせる
 
 ## 公開時チェックリスト
 
