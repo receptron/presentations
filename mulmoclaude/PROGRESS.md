@@ -13,7 +13,7 @@
 | デッキ | 企画# | ja スクリプト | ja キャプチャ | en スクリプト | en キャプチャ | en mp4/PDF |
 |---|---|---|---|---|---|---|
 | tutorials/kitchen-trio-tutorial | T1（フラッグシップ） | ✅ 14 ビート（答え合わせビートは削除 — スマホチェックと矛盾のため。demo-08 は未使用アセットとして保持） | ✅ 10 枚（ja workspace ライブ + 実機スマホ 1 枚） | 未着手 | 未着手（en ライブ再演） | —（ja mp4/PDF は ✅） |
-| tutorials/collection-creation-demo | コアセットの How | ✅（旧ネイビー配色） | 🔁 旧混合 workspace 産。ja workspace で撮り直し | ✅ | ✅ 11 枚 | ✅ |
+| tutorials/collection-creation-demo | コアセットの How | ✅（旧ネイビー配色） | ✅ 据え置き（2026-07-27 判断）— 旧混合 workspace 産でコレクション名が英語のまま（`demo-28-collections-1280.png` 等）だが、ja は公開済みのため撮り直さない | ✅ | ✅ 11 枚 | ✅ |
 | demos/connected-collections-demo | 番号外（新機能告知） | ✅ | ✅ 公開可（2026-07-22 全 6 枚確認。実害は beat 3 のコレクション一覧 1 枚のみ＝英語名コレクション混在。en 再演時に ja も撮り直す） | ✅ | ✅ 6 枚（ライブ再演） | ✅ |
 | demos/record-buttons-demo | 番号外（新機能告知） | ✅ | ✅ 公開可（2026-07-22 全 6 枚確認。撮り直し不要） | ✅ | ✅ 6 枚（ライブ再演） | ✅ |
 | demos/weather-showcase | 番号外（showcase 追加分） | ✅ | —（流用アセット 2 点のみ） | ✅ | —（同左） | ✅ |
@@ -78,9 +78,10 @@ Why/What/How の分類（vision = Why / demos = What / tutorials = How）に対�
 ja 8 本の YouTube 公開・playlist 整備・Discord 告知・X 予約 7 本（7/24〜30 の 20:30）までは完了。残り:
 
 1. ✅ **X 予約の追加 2 本**（対応済み）— what-is（7/29 20:30）と csv（7/30 20:30）を予約済み。文面は `youtube/<deck>_ja.md` の「X 投稿（日本語）」節どおり
-2. **X 公開ごとの URL 記帳** — 各メタデータファイルの「投稿後」行に記入。記帳済みは実例集（7/24）・台所（7/25）。常備品 7/26 → バックリンク 7/27 → ボタン 7/28 → what-is 7/29 → csv 7/30 と続く（いずれも予約済みなので、公開後に URL を拾って記入するだけ）
-3. **weather-showcase** — Slack で確認依頼中（2026-07-25）。承認後: 公開一式の提示 → 公開 → 「できること」playlist を手動ソートへ切替 + マスター並び順の更新（`youtube/README.md` の並び順節が正本）→ メタデータ作成・本ファイルのタイトル表記帳 → X 予約（7/31 枠）
-4. 任意: mulmoclaude ワークスペースの `mulmo-beta-announcements` スキルへ「動画シェアの型」を追記する提案 / 生成済み .srt の YouTube 字幕アップ
+2. **X 公開ごとの URL 記帳** — 状態の正本は各メタデータファイル `youtube/<deck>_ja.md` の「投稿枠」「投稿後」行。**このファイルに一覧を書き写さない**（更新漏れで陳腐化するため）。現況は `mulmo-x-status` スキルで導出する（`node ~/.claude/skills/mulmo-x-status/scripts/x-status.mjs`）。公開時刻を過ぎたのに未記帳のものと、文面が無いデッキだけを出す
+3. ✅ **基礎編 `collection-creation-demo` の X 予約が抜けていた**（2026-07-27 発覚・同日対応）— 公開済み ja 8 本のうちこの 1 本だけ X 投稿の文面が未作成だった（メタデータに `## X 投稿` 節そのものが無かった）。文面を作成（Codex チェック済み）し、mp4 と .srt を添えて 7/31 20:30 枠に予約済み。「コレクションの作り方」playlist の入口動画なので、他の作り方動画から張った導線の先が X で紹介されていない状態になっていた
+4. **weather-showcase** — Slack で確認依頼中（2026-07-25）。承認後: 公開一式の提示 → 公開 → 「できること」playlist を手動ソートへ切替 + マスター並び順の更新（`youtube/README.md` の並び順節が正本）→ メタデータ作成・本ファイルのタイトル表記帳 → X 予約（基礎編が 7/31 に入るため 8/1 枠）
+5. 任意: mulmoclaude ワークスペースの `mulmo-beta-announcements` スキルへ「動画シェアの型」を追記する提案 / 生成済み .srt の YouTube 字幕アップ
 
 ## 英語版の公開準備（2026-07-26 時点）
 
@@ -95,7 +96,7 @@ ja 8 本の YouTube 公開・playlist 整備・Discord 告知・X 予約 7 本�
 3. **講座の続きが en 未着手** — kitchen-trio / pantry / csv の en。「コレクションの作り方」は現状 collection-creation-demo の 1 本のみ
 4. weather-showcase は ja が Slack 承認待ちのため、en を先行公開しない
 
-**翻訳レビュー（2026-07-26）**: en 6 本を Codex に通した（ja/en 対照＋レンダリング済みスライドの添付＋`demos/DEMO-GUIDE.md` の翻訳ルールを前提として渡す）。意味の破綻・数値の食い違い・レイアウト崩れの指摘はゼロ。英語として壊れていた 6 件とトーンが強すぎた 4 件を修正済み。積み残し 2 件: (a) `collection-creation-demo` beat 8 の en キャプチャがファイルパス（`data/skills/weather/schema.json` 等）を写しており ja のフィールド表より技術寄り — ja 側も 🔁 撮り直し予定なのでまとめて対応 (b) `collections-showcase` 締めのバッジが ja「育」/ en 🌱（他デッキでは ja も 🌱 なので破綻はしていない）。
+**翻訳レビュー（2026-07-26）**: en 6 本を Codex に通した（ja/en 対照＋レンダリング済みスライドの添付＋`demos/DEMO-GUIDE.md` の翻訳ルールを前提として渡す）。意味の破綻・数値の食い違い・レイアウト崩れの指摘はゼロ。英語として壊れていた 6 件とトーンが強すぎた 4 件を修正済み。積み残し 2 件: (a) `collection-creation-demo` beat 8 の en キャプチャがファイルパス（`data/skills/weather/schema.json` 等）を写しており ja のフィールド表より技術寄り — ja のキャプチャ据え置きを決めたため、単独で撮り直すほどではないと判断して保留 (b) `collections-showcase` 締めのバッジが ja「育」/ en 🌱（他デッキでは ja も 🌱 なので破綻はしていない）。
 
 **ja に残っている既知のズレ（公開済みのため据え置き）**: `collections-showcase_ja` / `kitchen-trio-tutorial_ja` の献立は、買い物リストのメモが「月・火・水・木」で書かれているのに日付が 2026-07-21〜24（火〜金）になっており、ナレーションの「木曜は洋風」が画面の日付と 1 日ずれている。曜日名は画面に出ないため実害は小さいと判断し、公開済み動画は差し替えない。en は未公開だったので 7/27〜30（月〜木）に直した（`demo-workspace-en` の `a96749a`）。ja の台所データを撮り直す機会があればそのとき合わせる。
 
