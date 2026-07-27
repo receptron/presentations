@@ -61,9 +61,8 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 3. **講座 3 本の en**（kitchen-trio → pantry → csv）— kitchen の ja golden データは en workspace へ英訳投入済み。次は en workspace での英語ライブ再演・収録 → en スクリプト作成・finalize
 4. **calendar-showcase（D2）の制作着手** — 企画は content-roadmap.md
 5. **未 commit 下書き 3 本の扱い判断** — `tutorials/getting-started` / `tutorials/building-a-collection` / `demos/daily-workflow`（D2 吸収により役割終了）。破棄か別テーマか
-6. **vision en 動画のメタデータ整備**（据え置き中） — [An AI Assistant Is Something You Nurture, Not Something You Buy](https://youtu.be/Wonr3eOPww4) は playlist 以前の公開で、説明文に Watch in order が無く `youtube/` メタデータも無い。余力があるときに作成と説明文差し替え
-7. **未決**: ja X の 20:30 リリース告知枠（テキスト）を廃止するか併存させるか（content-roadmap の scope 分割参照）/ en X（@mulmocast）の動画告知 5 本の文面と開始日
-8. 任意: mulmoclaude ワークスペースの `mulmo-beta-announcements` スキルの scope を Slack/Discord に絞る変更 / 生成済み .srt の YouTube 字幕アップ / 新デッキ企画「お買い物モードを会話で作る」（素材: ja workspace セッション a0627168。kitchen-trio ビート 8 が予告済み）/ csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
+6. **未決**: ja X の 20:30 リリース告知枠（テキスト）を廃止するか併存させるか（content-roadmap の scope 分割参照）/ en X（@mulmocast）の動画告知 5 本の文面と開始日
+7. 任意: mulmoclaude ワークスペースの `mulmo-beta-announcements` スキルの scope を Slack/Discord に絞る変更 / 生成済み .srt の YouTube 字幕アップ / 新デッキ企画「お買い物モードを会話で作る」（素材: ja workspace セッション a0627168。kitchen-trio ビート 8 が予告済み）/ csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
 
 ## 既知のズレ（据え置き）
 
