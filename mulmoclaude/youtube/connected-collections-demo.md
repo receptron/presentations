@@ -15,6 +15,9 @@ Scattered Data, Connected — Backlinks & Rollups in MulmoClaude
 ```
 An invoice knows which client it belongs to, but until now the client's page could not show you its invoices. Backlinks and rollups fix that: open a client and their invoices are listed, with the unbilled hours totalled next to them. Both are built by asking for them in conversation, and nothing is written into your data files.
 
+▶ Watch in order (MulmoClaude Feature Demos):
+https://www.youtube.com/playlist?list=PLRMyMyvS-8tA
+
 MulmoClaude is an "AI assistant nurturing tool", released as open source. It uses Claude Code as its AI engine. Nurture an AI assistant of your own, on your own computer.
 
 Chapters:
@@ -42,8 +45,8 @@ https://github.com/receptron/mulmoclaude
 
 ## Playlist
 
-- MulmoClaude (English): 未作成
-- MulmoClaude Feature Demos: 未作成
+- MulmoClaude (English): https://www.youtube.com/playlist?list=PLK5YLxSUugRA
+- MulmoClaude Feature Demos: https://www.youtube.com/playlist?list=PLRMyMyvS-8tA
 
 ## Thumbnail
 

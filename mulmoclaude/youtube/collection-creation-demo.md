@@ -15,6 +15,9 @@ Build a Weather Collection by Talking — MulmoClaude Collection Creation Demo
 ```
 Every business trip, you end up checking the weather city by city, hour by hour. This demo builds that check from scratch in MulmoClaude, using nothing but conversation: say what you want, look at the result, ask for a little more. By the end there is a three-city table, a week of forecasts, 3-hourly data and a timeline that follows your travel schedule — without a single line of code.
 
+▶ Watch in order (Building Collections with MulmoClaude):
+https://www.youtube.com/playlist?list=PLVyZ79Q40gCY
+
 MulmoClaude is an "AI assistant nurturing tool", released as open source. It uses Claude Code as its AI engine. Nurture an AI assistant of your own, on your own computer.
 
 Chapters:
@@ -40,8 +43,8 @@ https://github.com/receptron/mulmoclaude
 
 ## Playlist
 
-- MulmoClaude (English): 未作成
-- Building Collections with MulmoClaude: 未作成
+- MulmoClaude (English): https://www.youtube.com/playlist?list=PLK5YLxSUugRA
+- Building Collections with MulmoClaude: https://www.youtube.com/playlist?list=PLVyZ79Q40gCY
 
 ## Thumbnail
 

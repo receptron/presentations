@@ -15,6 +15,9 @@ Your Everyday Apps, Connected by One Conversation — MulmoClaude Collections
 ```
 Recipes in a recipe app, the shopping list in a memo, the ledger in a spreadsheet — and you doing all the copying between them. In MulmoClaude one AI holds all of your collections, so a single conversation connects them. Watch a week in the kitchen go from menu to shopping list to ledger, then the same idea applied to travel and the rest of life.
 
+▶ Watch in order (What MulmoClaude Can Do):
+https://www.youtube.com/playlist?list=PLbWRoQApuX14
+
 MulmoClaude is an "AI assistant nurturing tool", released as open source. It uses Claude Code as its AI engine. Nurture an AI assistant of your own, on your own computer.
 
 Chapters:
@@ -43,8 +46,8 @@ https://github.com/receptron/mulmoclaude
 
 ## Playlist
 
-- MulmoClaude (English): 未作成
-- What MulmoClaude Can Do: 未作成
+- MulmoClaude (English): https://www.youtube.com/playlist?list=PLK5YLxSUugRA
+- What MulmoClaude Can Do: https://www.youtube.com/playlist?list=PLbWRoQApuX14
 
 ## Thumbnail
 

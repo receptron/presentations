@@ -76,19 +76,18 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 コンテンツの階層（総論 → showcase → How）と制作パイプラインは `../content-roadmap.md` を正とする。
 
-### 英語版の playlist（2026-07-27 起案・未作成）
+### 英語版の playlist（2026-07-27 作成済み）
 
 en の playlist も 4 本。所属ルールは ja と同じ「**全動画 → マスター ＋ トピック playlist のどれか 1 つ**」。ja には混ぜない。
-作成したら各 `list=<ID>` をここに記入する。
 
 - **MulmoClaude (English)**（マスター） — 全動画を入れる。公開済みの vision 動画 [An AI Assistant Is Something You Nurture, Not Something You Buy](https://www.youtube.com/watch?v=Wonr3eOPww4) を先頭に置く入口。並び順は導線として管理する: vision → what-is → showcase → 作り方 → 機能紹介。
-  - 未作成
+  - https://www.youtube.com/playlist?list=PLK5YLxSUugRA
 - **What MulmoClaude Can Do** — 総論（`what-is-mulmoclaude`）とテーマ別 showcase（`collections-showcase`, `weather-showcase`, …）。初見の人に見せる棚。
-  - 未作成
+  - https://www.youtube.com/playlist?list=PLbWRoQApuX14
 - **Building Collections with MulmoClaude** — How 連続講座。基礎 `collection-creation-demo` → `kitchen-trio` → `pantry` → `csv-collection`。「▶ 順番に見る」リンクはこれを張る。
-  - 未作成
+  - https://www.youtube.com/playlist?list=PLVyZ79Q40gCY
 - **MulmoClaude Feature Demos** — 機能単位の解説と新機能告知（`connected-collections-demo`, `record-buttons-demo`、今後: フィード、wiki、Skills 等）。すでに使っている人向けの棚。
-  - 未作成
+  - https://www.youtube.com/playlist?list=PLRMyMyvS-8tA
 
 #### 英語版 playlist の並び順（YouTube 上の並びの正本）
 

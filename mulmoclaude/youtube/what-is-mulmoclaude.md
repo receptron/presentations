@@ -15,6 +15,9 @@ As Many Uses as There Are Lives — A 3-Minute Tour of MulmoClaude
 ```
 A dining guide, a World Cup match tracker, double-entry books, a summer nature journal kept with the kids. Every one of these is a personal app that exists because someone asked for it in conversation. Here is a three-minute tour of what people actually build with MulmoClaude.
 
+▶ Watch in order (What MulmoClaude Can Do):
+https://www.youtube.com/playlist?list=PLbWRoQApuX14
+
 MulmoClaude is an "AI assistant nurturing tool", released as open source. It uses Claude Code as its AI engine. Nurture an AI assistant of your own, on your own computer.
 
 Chapters:
@@ -44,8 +47,8 @@ https://github.com/receptron/mulmoclaude
 
 ## Playlist
 
-- MulmoClaude (English): 未作成
-- What MulmoClaude Can Do: 未作成
+- MulmoClaude (English): https://www.youtube.com/playlist?list=PLK5YLxSUugRA
+- What MulmoClaude Can Do: https://www.youtube.com/playlist?list=PLbWRoQApuX14
 
 ## Thumbnail
 
