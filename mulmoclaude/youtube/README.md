@@ -76,6 +76,94 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 コンテンツの階層（総論 → showcase → How）と制作パイプラインは `../content-roadmap.md` を正とする。
 
+### 英語版の playlist（2026-07-27 作成済み）
+
+en の playlist も 4 本。所属ルールは ja と同じ「**全動画 → マスター ＋ トピック playlist のどれか 1 つ**」。ja には混ぜない。
+
+- **MulmoClaude (English)**（マスター） — 全動画を入れる。公開済みの vision 動画 [An AI Assistant Is Something You Nurture, Not Something You Buy](https://www.youtube.com/watch?v=Wonr3eOPww4) を先頭に置く入口。並び順は導線として管理する: vision → what-is → showcase → 作り方 → 機能紹介。
+  - https://www.youtube.com/playlist?list=PLK5YLxSUugRA
+- **What MulmoClaude Can Do** — 総論（`what-is-mulmoclaude`）とテーマ別 showcase（`collections-showcase`, `weather-showcase`, …）。初見の人に見せる棚。
+  - https://www.youtube.com/playlist?list=PLbWRoQApuX14
+- **Building Collections with MulmoClaude** — How 連続講座。基礎 `collection-creation-demo` → `kitchen-trio` → `pantry` → `csv-collection`。「▶ 順番に見る」リンクはこれを張る。
+  - https://www.youtube.com/playlist?list=PLVyZ79Q40gCY
+- **MulmoClaude Feature Demos** — 機能単位の解説と新機能告知（`connected-collections-demo`, `record-buttons-demo`、今後: フィード、wiki、Skills 等）。すでに使っている人向けの棚。
+  - https://www.youtube.com/playlist?list=PLRMyMyvS-8tA
+
+#### 英語版 playlist の並び順（YouTube 上の並びの正本）
+
+ja と同じ運用。動画を追加・公開したらここを更新し、YouTube 側の並びをこの順に合わせる。
+手動並べ替えを使うのは**マスターのみ**。他はアップロード順＝この順になるようにして、ソート設定「公開日（古い順）」で維持する。
+
+<details><summary>MulmoClaude (English) — ソート: YouTube 内で手動</summary>
+
+1. An AI Assistant Is Something You Nurture, Not Something You Buy（公開済み・vision）
+2. As Many Uses as There Are Lives — A 3-Minute Tour of MulmoClaude
+3. Your Everyday Apps, Connected by One Conversation — MulmoClaude Collections
+4. Build a Weather Collection by Talking — MulmoClaude Collection Creation Demo
+5. Scattered Data, Connected — Backlinks & Rollups in MulmoClaude
+6. Turn Routine Work into Buttons — Record Buttons in MulmoClaude
+
+（weather-showcase の en を公開したら 3 の次に挿入）
+
+</details>
+
+<details><summary>What MulmoClaude Can Do — ソート: 公開日（古い順）</summary>
+
+1. As Many Uses as There Are Lives — A 3-Minute Tour of MulmoClaude
+2. Your Everyday Apps, Connected by One Conversation — MulmoClaude Collections
+
+（この順にアップロードすれば「古い順」で維持できる。崩れたら「YouTube 内で手動」へ切り替える）
+
+</details>
+
+<details><summary>Building Collections with MulmoClaude — ソート: 公開日（古い順）</summary>
+
+1. Build a Weather Collection by Talking — MulmoClaude Collection Creation Demo
+
+（kitchen-trio → pantry → csv-collection の en が揃うたびに末尾へ追加される）
+
+</details>
+
+<details><summary>MulmoClaude Feature Demos — ソート: 公開日（古い順）</summary>
+
+1. Scattered Data, Connected — Backlinks & Rollups in MulmoClaude
+2. Turn Routine Work into Buttons — Record Buttons in MulmoClaude
+
+</details>
+
+説明文の共通ブロック（英語）は全動画・全 playlist で次の文に統一する。ja の「AIアシスタント育成ツール」に対応し、デッキで統一した nurture を使う:
+
+> MulmoClaude is an "AI assistant nurturing tool", released as open source. It uses Claude Code as its AI engine. Nurture an AI assistant of your own, on your own computer.
+
+ハッシュタグには ja と同じく `#ClaudeCode` を必ず含める。
+
+playlist 作成時に貼る説明文（各末尾に上の共通ブロックと `https://github.com/receptron/mulmoclaude` を付ける）:
+
+```
+MulmoClaude (English)
+Everything about MulmoClaude, in English. Start here: what it can do, how to build your first collection, and what each feature looks like in use.
+```
+
+```
+What MulmoClaude Can Do
+Real examples of what people build with MulmoClaude — personal apps for records, plans and the weather, all born from ordinary conversation. Watch these first if you are new here.
+```
+
+```
+Building Collections with MulmoClaude
+A short course on building collections by talking. Start with the weather collection, then follow the kitchen, pantry and CSV episodes as they are published.
+```
+
+```
+MulmoClaude Feature Demos
+One feature at a time: backlinks and rollups, record buttons, and more as they ship. For people already using MulmoClaude.
+```
+
+**タイトルの制約**: en のスライドは他の動画をタイトルで名指ししている。参照が外れないよう、YouTube タイトルは次を満たすこと。
+
+- `collection-creation-demo` のタイトルに **Collection Creation Demo** を含める（what-is / collections-showcase / weather-showcase の締めが参照）
+- vision の en は公開済みだが、**公開タイトルがデッキの `title` と違う**（デッキ: `An AI Assistant Nurturing Tool` / 公開: `An AI Assistant Is Something You Nurture, Not Something You Buy`）。what-is の締めの参照を公開タイトルに合わせて修正済み（2026-07-27）。以後もデッキ側を公開タイトルに合わせる
+
 ## 公開時チェックリスト
 
 動画を公開したら、Claude は次を行う／ユーザーに伝える:
