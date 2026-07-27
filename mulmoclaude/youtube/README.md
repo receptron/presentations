@@ -78,23 +78,67 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 ### 英語版の playlist（2026-07-27 起案・未作成）
 
-ja と同じ 4 本立て・同じ所属ルール（**全動画 → マスター ＋ トピック playlist のどれか 1 つ**）。ja には混ぜない。
-YouTube 側で作成したら、各 `&list=<ID>` をここに記入する。
+en の playlist も 4 本。所属ルールは ja と同じ「**全動画 → マスター ＋ トピック playlist のどれか 1 つ**」。ja には混ぜない。
+作成したら各 `list=<ID>` をここに記入する。
 
-| 役割 | en 名 | ja の対応 |
-|---|---|---|
-| マスター | MulmoClaude (English) | MulmoClaude（日本語） |
-| 総論・showcase | What MulmoClaude Can Do | MulmoClaude でできること |
-| How 連続講座 | Building Collections with MulmoClaude | MulmoClaude コレクションの作り方 |
-| 機能紹介 | MulmoClaude Feature Demos | MulmoClaude 機能紹介 |
+- **MulmoClaude (English)**（マスター） — 全動画を入れる。公開済みの vision 動画 [An AI Assistant Is Something You Nurture, Not Something You Buy](https://www.youtube.com/watch?v=Wonr3eOPww4) を先頭に置く入口。並び順は導線として管理する: vision → what-is → showcase → 作り方 → 機能紹介。
+  - 未作成
+- **What MulmoClaude Can Do** — 総論（`what-is-mulmoclaude`）とテーマ別 showcase（`collections-showcase`, `weather-showcase`, …）。初見の人に見せる棚。
+  - 未作成
+- **Building Collections with MulmoClaude** — How 連続講座。基礎 `collection-creation-demo` → `kitchen-trio` → `pantry` → `csv-collection`。「▶ 順番に見る」リンクはこれを張る。
+  - 未作成
+- **MulmoClaude Feature Demos** — 機能単位の解説と新機能告知（`connected-collections-demo`, `record-buttons-demo`、今後: フィード、wiki、Skills 等）。すでに使っている人向けの棚。
+  - 未作成
 
-説明文の共通ブロック（英語）— 全動画・全 playlist で統一する。ja の「AIアシスタント育成ツール」に対応し、デッキで統一した nurture を使う:
+#### 英語版 playlist の並び順（YouTube 上の並びの正本）
 
-```
-MulmoClaude is an "AI assistant nurturing tool", released as open source. It uses Claude Code as its AI engine. Nurture an AI assistant of your own, on your own computer.
-```
+ja と同じ運用。動画を追加・公開したらここを更新し、YouTube 側の並びをこの順に合わせる。
+手動並べ替えを使うのは**マスターのみ**。他はアップロード順＝この順になるようにして、ソート設定「公開日（古い順）」で維持する。
 
-playlist の説明文（この共通ブロックと `https://github.com/receptron/mulmoclaude` を各説明文の末尾に付ける）:
+<details><summary>MulmoClaude (English) — ソート: YouTube 内で手動</summary>
+
+1. An AI Assistant Is Something You Nurture, Not Something You Buy（公開済み・vision）
+2. As Many Uses as There Are Lives — A 3-Minute Tour of MulmoClaude
+3. Your Everyday Apps, Connected by One Conversation — MulmoClaude Collections
+4. Build a Weather Collection by Talking — MulmoClaude Collection Creation Demo
+5. Scattered Data, Connected — Backlinks & Rollups in MulmoClaude
+6. Turn Routine Work into Buttons — Record Buttons in MulmoClaude
+
+（weather-showcase の en を公開したら 3 の次に挿入）
+
+</details>
+
+<details><summary>What MulmoClaude Can Do — ソート: 公開日（古い順）</summary>
+
+1. As Many Uses as There Are Lives — A 3-Minute Tour of MulmoClaude
+2. Your Everyday Apps, Connected by One Conversation — MulmoClaude Collections
+
+（この順にアップロードすれば「古い順」で維持できる。崩れたら「YouTube 内で手動」へ切り替える）
+
+</details>
+
+<details><summary>Building Collections with MulmoClaude — ソート: 公開日（古い順）</summary>
+
+1. Build a Weather Collection by Talking — MulmoClaude Collection Creation Demo
+
+（kitchen-trio → pantry → csv-collection の en が揃うたびに末尾へ追加される）
+
+</details>
+
+<details><summary>MulmoClaude Feature Demos — ソート: 公開日（古い順）</summary>
+
+1. Scattered Data, Connected — Backlinks & Rollups in MulmoClaude
+2. Turn Routine Work into Buttons — Record Buttons in MulmoClaude
+
+</details>
+
+説明文の共通ブロック（英語）は全動画・全 playlist で次の文に統一する。ja の「AIアシスタント育成ツール」に対応し、デッキで統一した nurture を使う:
+
+> MulmoClaude is an "AI assistant nurturing tool", released as open source. It uses Claude Code as its AI engine. Nurture an AI assistant of your own, on your own computer.
+
+ハッシュタグには ja と同じく `#ClaudeCode` を必ず含める。
+
+playlist 作成時に貼る説明文（各末尾に上の共通ブロックと `https://github.com/receptron/mulmoclaude` を付ける）:
 
 ```
 MulmoClaude (English)
@@ -115,17 +159,6 @@ A short course on building collections by talking. Start with the weather collec
 MulmoClaude Feature Demos
 One feature at a time: backlinks and rollups, record buttons, and more as they ship. For people already using MulmoClaude.
 ```
-
-初回公開ぶんの所属と並び順（マスターは手動ソート）:
-
-1. [An AI Assistant Is Something You Nurture, Not Something You Buy](https://www.youtube.com/watch?v=Wonr3eOPww4)（vision `the-assistant-you-nurture` の en・公開済み）— マスターのみ
-2. what-is-mulmoclaude → What MulmoClaude Can Do
-3. collections-showcase → What MulmoClaude Can Do
-4. collection-creation-demo → Building Collections with MulmoClaude
-5. connected-collections-demo → MulmoClaude Feature Demos
-6. record-buttons-demo → MulmoClaude Feature Demos
-
-`weather-showcase` は ja が承認待ちのため初回に含めない。承認・公開後に 2 の次へ挿入する。
 
 **タイトルの制約**: en のスライドは他の動画をタイトルで名指ししている。参照が外れないよう、YouTube タイトルは次を満たすこと。
 
