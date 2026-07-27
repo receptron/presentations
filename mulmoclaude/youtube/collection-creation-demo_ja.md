@@ -57,7 +57,7 @@ https://youtu.be/VJMlTwRz6z4
 ## X 投稿（日本語）
 
 添付: `output/done/collection-creation-demo_ja/collection-creation-demo_ja_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
-Codex クロスチェック済み（2026-07-27・MUST FIX ゼロ）。投稿枠: バッチの積み残し — 推奨 2026-07-31（金）20:30 JST。
+Codex クロスチェック済み（2026-07-27・MUST FIX ゼロ）。投稿枠: バッチの積み残し — 2026-07-31（金）20:30 JST に予約済み。
 
 ```
 出張で何か所か回る週、行き先ごとの天気を1つずつ調べて、時間帯まで見比べる。地味に手間のかかる作業です。
