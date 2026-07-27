@@ -32,6 +32,7 @@ Chapters:
 
 How to build a collection from scratch:
 Build a Weather Collection by Talking — MulmoClaude Collection Creation Demo
+https://youtu.be/D-937j0jkyo
 
 Getting started is one line in your terminal:
 npx mulmoclaude@latest

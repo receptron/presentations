@@ -35,7 +35,7 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 
 | デッキ | スクリプト title（ja） | タイトルページの表記 | 参照名 | YouTube タイトル |
 |---|---|---|---|---|
-| tutorials/collection-creation-demo | コレクション作成デモ — 天気予報コレクション | eyebrow「コレクション作成デモ」+ 題「天気予報コレクション」 | コレクション作成デモ | ja: [天気予報コレクションを会話で作る — MulmoClaude コレクション作成デモ](https://youtu.be/VJMlTwRz6z4)（メタデータ: youtube/collection-creation-demo_ja.md） |
+| tutorials/collection-creation-demo | コレクション作成デモ — 天気予報コレクション | eyebrow「コレクション作成デモ」+ 題「天気予報コレクション」 | コレクション作成デモ | ja: [天気予報コレクションを会話で作る — MulmoClaude コレクション作成デモ](https://youtu.be/VJMlTwRz6z4)（メタデータ: youtube/collection-creation-demo_ja.md）<br>en: [Build a Weather Collection by Talking — MulmoClaude Collection Creation Demo](https://youtu.be/D-937j0jkyo)（メタデータ: youtube/collection-creation-demo.md） |
 | tutorials/kitchen-trio-tutorial | 台所の三点セットを、会話で作る | 同左 | 台所の三点セットを、会話で作る | ja: [台所の三点セットを、会話で作る — MulmoClaude チュートリアル](https://youtu.be/s7wbM32vLL4)（メタデータ: youtube/kitchen-trio-tutorial_ja.md） |
 | tutorials/pantry-list-tutorial | コレクションは、使いながら育てる — 常備品リスト編 | 題「使いながら、育てる」 | 常備品リスト編（使いながら、育てる） | ja: [コレクションは、使いながら育てる — MulmoClaude 常備品リスト編](https://youtu.be/b_SlGYyWToU)（メタデータ: youtube/pantry-list-tutorial_ja.md） |
 | tutorials/csv-collection-tutorial | CSVは、置くだけでいい | 同左 | CSVは、置くだけでいい | ja: [CSVは、置くだけでいい — MulmoClaude CSVコレクション](https://youtu.be/c6CkrgYWC2M)（メタデータ: youtube/csv-collection-tutorial_ja.md） |
