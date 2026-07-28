@@ -144,7 +144,7 @@
           "    <p class='text-2xl' style='color:#7C5E3C'>押したときだけ、Googleに書き込む</p>",
           "  </div>",
           "  <div class='flex flex-col items-center mt-2 gap-4'>",
-          "    <img src='release-v1.7.2-assets-ja/demo-02-google-week.png' class='rounded-xl shadow-2xl' style='max-height: 490px; object-fit: contain' />",
+          "    <div class='relative'><img src='release-v1.7.2-assets-ja/demo-02-google-week.png' class='rounded-xl shadow-2xl' style='max-height: 490px; object-fit: contain' /><div class='absolute border-4 border-red-600 rounded-lg' style='top: 47.5%; left: 77%; width: 11%; height: 9%'></div></div>",
           "    <div class='rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
           "      <span class='text-2xl font-bold' style='color:#431407'>書き出した予定が、Google カレンダーにも</span>",
           "    </div>",
