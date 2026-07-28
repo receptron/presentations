@@ -45,7 +45,7 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 | demos/weather-showcase | 明日の天気は、もう予定に入っている | 同左 | — | 未定 |
 | demos/connected-collections-demo | バラバラのデータが、つながる | — | — | ja: [バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ](https://youtu.be/6XJywDCJ7V0)（メタデータ: youtube/connected-collections-demo_ja.md）<br>en: [Scattered Data, Connected — Backlinks & Rollups in MulmoClaude](https://youtu.be/FmQ9HVirrf8)（メタデータ: youtube/connected-collections-demo.md） |
 | demos/record-buttons-demo | 押すだけの仕事は、ボタンにする | — | — | ja: [押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン](https://youtu.be/VaZur8HDjI4)（メタデータ: youtube/record-buttons-demo_ja.md）<br>en: [Turn Routine Work into Buttons — Record Buttons in MulmoClaude](https://youtu.be/81oYVOYDbik)（メタデータ: youtube/record-buttons-demo.md） |
-| demos/release-notes/release-v1.7.2 | MulmoClaude v1.7 アップデート — 予定が、Googleへ帰っていく | eyebrow「リリースノート」+ 題「MulmoClaude v1.7 アップデート」 | — | ja: [予定が、Googleへ帰っていく — MulmoClaude v1.7 アップデート](https://youtu.be/bk3wkcXI1j4)（メタデータ: youtube/release-v1.7.2_ja.md） |
+| demos/release-notes/release-v1.7.2 | MulmoClaude v1.7 アップデート — 予定が、Googleへ帰っていく | eyebrow「リリースノート」+ 題「MulmoClaude v1.7 アップデート」 | — | ja: [一方通行が、終わる — MulmoClaude v1.7 新機能 Googleへ書き出し](https://youtu.be/bk3wkcXI1j4)（メタデータ: youtube/release-v1.7.2_ja.md） |
 
 ### 見た目スタイルの使い分け
 

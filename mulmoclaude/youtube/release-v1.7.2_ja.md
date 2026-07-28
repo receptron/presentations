@@ -7,7 +7,7 @@
 ## Title
 
 ```
-予定が、Googleへ帰っていく — MulmoClaude v1.7 アップデート
+一方通行が、終わる — MulmoClaude v1.7 新機能 Googleへ書き出し
 ```
 
 ## Description

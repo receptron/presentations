@@ -38,7 +38,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 7. CSVは、置くだけでいい — MulmoClaude CSVコレクション
 8. バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ
 9. 押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン
-10. 予定が、Googleへ帰っていく — MulmoClaude v1.7 アップデート
+10. 一方通行が、終わる — MulmoClaude v1.7 新機能 Googleへ書き出し
 
 （weather-showcase 公開後は 3 の次に挿入）
 
@@ -66,7 +66,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 1. バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ
 2. 押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン
-3. 予定が、Googleへ帰っていく — MulmoClaude v1.7 アップデート
+3. 一方通行が、終わる — MulmoClaude v1.7 新機能 Googleへ書き出し
 
 </details>
 
