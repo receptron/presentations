@@ -77,7 +77,7 @@
       }
     },
     {
-      "text": "Googleカレンダーとつないだコレクションは、これまで、Googleから読み込む一方通行でした。アプリの側で予定を足しても、Googleには届かない。画面の右の列も、空のままでした。",
+      "text": "Googleカレンダーとつなぐと、予定は自動でアプリに入ってきます。ただし、これまでは一方通行。アプリの側で足した予定は、Googleには届きませんでした。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -88,22 +88,49 @@
           "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>これまで</span>",
           "      <h2 class='text-4xl font-bold' style='color:#431407'>アプリで足した予定は、アプリの中だけだった</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color:#7C5E3C'>読み込みは自動、でも書き込む手段がなかった</p>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>入ってくるのは自動、出ていく手段がなかった</p>",
           "  </div>",
-          "  <div class='flex justify-center mt-2'>",
+          "  <div class='flex flex-col items-center mt-2 gap-4'>",
           "    <div class='relative'>",
-          "      <img src='release-v1.7.2-assets-ja/demo-01-three-records.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
-          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 18%; left: 63%; width: 34%; height: 25%'></div>",
-          "      <div class='absolute text-red-600 text-2xl font-bold whitespace-nowrap' style='top: 45%; left: 66%'>リンクは空のまま</div>",
+          "      <img src='release-v1.7.2-assets-ja/demo-05-before-haircut.png' class='rounded-xl shadow-2xl' style='max-height: 500px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 30.5%; left: 1%; width: 98%; height: 8.5%'></div>",
+          "      ",
           "    </div>",
+          "    <div class='rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='background: #FFF3DC; border: 1px solid rgba(220, 38, 38, .45)'><span class='text-2xl font-bold' style='color:#DC2626'>足した「美容院」は、リンクが空のまま</span></div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>2 / 7</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>2 / 8</div>",
           "</div>"
         ]
       }
     },
     {
-      "text": "そこで新しく付いたのが、Googleへ書き出しボタンです。押すと、手元で足した予定が、Googleカレンダー本体に作られます。書き込むのは、ボタンを押したときだけ。勝手に送ることはありません。",
+      "text": "そこで新機能、Googleへ書き出しボタンです。押すと、手元で足した予定が、Googleカレンダーに作られます。続けて同期を押せば、Googleで開くリンクも付きました。",
+      "duration": 13,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>実演</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>押して、書き出す</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>書き出し → 1件作成 → 同期でリンクが付く</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <video src='release-v1.7.2-assets-ja/push-sync.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height: 560px'></video>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 8</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Googleカレンダー本体にも、この通り。書き込むのは、ボタンを押したときだけ。勝手に送ることはありません。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -112,17 +139,17 @@
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
           "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>新機能</span>",
-          "      <h2 class='text-4xl font-bold' style='color:#431407'>「Googleへ書き出し」ボタン</h2>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>Googleカレンダー側でも、この通り</h2>",
           "    </div>",
           "    <p class='text-2xl' style='color:#7C5E3C'>押したときだけ、Googleに書き込む</p>",
           "  </div>",
           "  <div class='flex flex-col items-center mt-2 gap-4'>",
           "    <img src='release-v1.7.2-assets-ja/demo-02-google-week.png' class='rounded-xl shadow-2xl' style='max-height: 490px; object-fit: contain' />",
           "    <div class='rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
-          "      <span class='text-2xl font-bold' style='color:#431407'>Google カレンダー本体に、3件できました</span>",
+          "      <span class='text-2xl font-bold' style='color:#431407'>書き出した予定が、Google カレンダーにも</span>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 7</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 8</div>",
           "</div>"
         ]
       }
@@ -152,7 +179,7 @@
           "      <p class='text-3xl font-bold'>🔁 順番はこれだけ</p><p class='text-xl mt-2' style='color:#7C5E3C'>「書き出し」が先、「同期」が後 — 逆だと手元の編集が上書きされる</p>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 7</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 8</div>",
           "</div>"
         ]
       }
@@ -184,7 +211,7 @@
           "    <div class='text-3xl self-center' style='color:#EA580C'>→</div>",
           "    <div class='rounded-xl px-6 py-4 text-center shadow' style='background:#FFF3DC'><p class='text-2xl font-bold'>3. 残ったものだけ報告</p></div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 7</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 8</div>",
           "</div>"
         ]
       }
@@ -216,7 +243,7 @@
           "      <p class='text-2xl'>🔔 <b>GEMINI_API_KEY</b> は、シェル側の値が使われています</p>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 7</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 8</div>",
           "</div>"
         ]
       }
@@ -244,7 +271,7 @@
           "  <div class='text-center mt-10'>",
           "    <p class='text-3xl font-bold' style='color:#EA580C'>ぜひ、試してみてください！</p>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 7</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>8 / 8</div>",
           "</div>"
         ]
       }
