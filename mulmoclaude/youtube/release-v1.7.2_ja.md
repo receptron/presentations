@@ -15,6 +15,8 @@
 ```
 アプリの中で足した予定が、Googleカレンダーに届くようになりました。v1.7 アップデート（v1.7.0〜v1.7.2）の目玉「Googleへ書き出し」ボタンを、実際の画面でご覧ください。ほかに、「バグ？設定？」をまず一緒に調べる相談窓口と、シェルの設定に隠れて効かない .env を名指しで知らせるお知らせも入っています。
 
+押す順番だけ覚えてください。手元で足した・直した予定は「Googleへ書き出し」が先、「同期」が後です。
+
 ▶ 順番に見る（MulmoClaude 機能紹介）：
 https://www.youtube.com/playlist?list=PLEN0vGL7IeUQ
 
@@ -58,7 +60,7 @@ https://youtu.be/bk3wkcXI1j4
 
 添付: `output/release-v1.7.2_ja/release-v1.7.2_ja_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
 投稿枠: リリースノート動画の専用枠（枠の定義は `../content-roadmap.md` が正本）— 2026-07-29（水）12:30 JST に予約済み。
-Codex クロスチェック: 未実施。
+Codex クロスチェック済み（2026-07-29・MUST FIX「末尾の CTA が無い」を反映。「Googleへ書き出し」がボタン名として曖昧という指摘は、実 UI の表記（collection-plugin `ja.ts` の `pushCalendar`）と一致させるため見送り）。
 
 ```
 アプリの中で足した予定を、Googleカレンダーへ。
@@ -76,6 +78,8 @@ https://www.youtube.com/playlist?list=PLEN0vGL7IeUQ
 npx mulmoclaude@latest
 
 GitHub: https://github.com/receptron/mulmoclaude
+
+カレンダー、アプリとGoogleのどちらで予定を足すことが多いですか？
 
 #MulmoClaude #AI #VibeCrafting
 ```
