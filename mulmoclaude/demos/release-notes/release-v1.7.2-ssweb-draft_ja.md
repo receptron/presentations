@@ -1,4 +1,4 @@
-# MulmoClaude v1.7 アップデート — 予定が、Googleへ帰っていく
+# MulmoClaude v1.7 アップデート — カレンダーの一方通行が、終わる
 
 <!-- ss web リリースノート記事の下書き（デッキ release-v1.7.2_ja から派生）。
      画像はデッキのスライド（output/release-v1.7.2_ja/images/Np.png）に対応。
