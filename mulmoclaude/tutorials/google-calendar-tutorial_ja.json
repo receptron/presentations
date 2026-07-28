@@ -1,0 +1,342 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "プレゼンター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "明るく温かい、希望に満ちたトーンで話してください。大切なものを友人に楽しそうに紹介するような、優しくて前向きな語り口。決して暗く平板にならず、穏やかなエネルギーを保ってください。"
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "title": "Google カレンダーとつなぐ — 接続から書き出しまで",
+  "description": "MulmoClaude と Google カレンダーのつなぎ方チュートリアル。設定画面でのログイン、会話でのコレクション作成、自動同期、予定の追加、「Googleへ書き出し」までを実画面で解説。",
+  "lang": "ja",
+  "beats": [
+    {
+      "text": "Googleカレンダーの予定を、いつものアプリの中でも見たい、と思うことはありませんか。マルモクロードとつなぐと、この画面ができあがります。今日は、そのつなぎ方を最初からご紹介します。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>できあがり</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>Googleカレンダーの予定が、アプリの中に</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>読み込みは自動、足した予定はボタンひとつでGoogleへ</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <img src='google-calendar-assets-ja/demo-01-calendar-view.png' class='rounded-xl shadow-2xl' style='max-height: 545px; object-fit: contain' />",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>1 / 12</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "マルモクロードと、Googleカレンダーをつなぎます。接続から、同期、そして書き出しまで。順番にやっていきましょう。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden flex items-center justify-center' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='text-center space-y-6'>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>MulmoClaude チュートリアル</p>",
+          "    <h1 class='text-7xl font-bold' style='color:#431407'>Google カレンダーとつなぐ</h1>",
+          "    <p class='text-3xl mt-4' style='color:#7C5E3C'>接続 → 同期 → 書き出し</p>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "準備はひとつだけです。設定画面のGoogleを開いて、Googleアカウントでログインします。難しい設定はありません。済むと、このように連携済みと表示されます。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 1</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>Googleアカウントでログインする</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>設定 → Google — 面倒な準備はいりません</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='google-calendar-assets-ja/demo-02-settings-google.png' class='rounded-xl shadow-2xl' style='max-height: 545px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 66.9%; left: 18.3%; width: 13%; height: 4.6%'></div>",
+          "      <div class='absolute border-2 border-sky-600 rounded-lg' style='top: 26.5%; left: 32.5%; width: 13%; height: 5.5%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 12</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "あとは、チャットで頼むだけです。つなぎたいカレンダーの名前を添えて、このアプリでも見られるようにしたい、とお願いします。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 2</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>チャットで頼む</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>カレンダーの名前を添えるのがコツ</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='google-calendar-assets-ja/demo-03-prompt-composed.png' class='rounded-xl shadow-2xl' style='max-height: 545px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 81%; left: 0.5%; width: 21%; height: 17%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 12</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "アシスタントが、カレンダー専用のコレクションを作ってくれます。できあがると最初の同期がその場で走って、Googleに入っていた3件の予定が、もう並んでいます。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 3</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>できあがり — 予定はもう入っている</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>作成と同時に、最初の同期が走ります</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <img src='google-calendar-assets-ja/demo-04-created-synced.png' class='rounded-xl shadow-2xl' style='max-height: 545px; object-fit: contain' />",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 12</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "アプリの側で予定を足すのも、頼むだけです。8月8日に美容院の予約を入れて、とお願いしてみます。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 4</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>アプリの側で、予定を足す</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>これも会話ひとつ</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='google-calendar-assets-ja/demo-05-add-composed.png' class='rounded-xl shadow-2xl' style='max-height: 545px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 80.6%; left: 0.6%; width: 20.5%; height: 16.5%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 12</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "新しい予定が、コレクションに入りました。ただし、この時点ではまだアプリの中だけ。Googleカレンダーで開くリンクの欄も、空のままです。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#0284C7'>ここに注目</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>まだ、アプリの中だけ</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>足した予定は、リンクが空のまま</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='google-calendar-assets-ja/demo-06-before-push.png' class='rounded-xl shadow-2xl' style='max-height: 545px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 31.3%; left: 25.5%; width: 74%; height: 5.6%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 12</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Googleへ書き出しボタンを押すと、足した予定がGoogleカレンダーに作られます。続けて同期を押せば、Googleで開くリンクも付きました。これで往復がつながります。",
+      "duration": 13,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 5</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>Googleへ書き出す</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>書き出し → 1件作成 → 同期でリンクが付く</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'><video src='google-calendar-assets-ja/push-sync.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height: 560px'></video><div class='absolute border-4 border-red-600 rounded-lg' style='top: 8.3%; left: 60.4%; width: 13%; height: 5.6%'></div><div class='absolute bg-red-600 text-white text-lg font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow' style='top: 2%; left: 62.5%'>① 書き出し</div><div class='absolute border-4 border-sky-600 rounded-lg' style='top: 8.3%; left: 54.7%; width: 4.9%; height: 5.6%'></div><div class='absolute bg-sky-600 text-white text-lg font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow' style='top: 15%; left: 50.5%'>② 同期</div></div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>8 / 12</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "カレンダー表示に切り替えると、月ごとの眺めになります。Googleにあった予定も、アプリで足した予定も、同じ画面に並びました。ここから先は、1時間ごとに自動で最新に保たれます。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#0284C7'>画面の見方</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>カレンダー表示で、ひと目</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>1時間ごとに自動更新 ・ 「同期」でその場更新</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='google-calendar-assets-ja/demo-01-calendar-view.png' class='rounded-xl shadow-2xl' style='max-height: 545px; object-fit: contain' />",
+          "      <div class='absolute border-2 border-sky-600 rounded-lg' style='top: 16.4%; left: 73.9%; width: 8.6%; height: 4.9%'></div>",
+          "      <div class='absolute border-2 border-sky-600 rounded-lg' style='top: 8.6%; left: 60.6%; width: 6%; height: 4.8%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>9 / 12</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "仕組みは、これだけ覚えれば大丈夫です。Googleからアプリへは、自動。同期にAIを使わないので、利用料もかかりません。アプリからGoogleへは、ボタンを押したときだけ。勝手に書き込まない設計です。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>仕組み</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>覚えることは、3つだけ</h2>",
+          "    </div>",
+          "  </div>",
+          "  <div class='px-12 mt-8 space-y-6'>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='1:0.1' data-sync-dur='0.5' class='rounded-2xl px-8 py-6 shadow' style='background:#FFF3DC;border:1px solid rgba(234,88,12,.35)'>",
+          "      <p class='text-3xl font-bold'>🔄 読み込みは、自動</p><p class='text-xl mt-2' style='color:#7C5E3C'>1時間ごとに Google の予定を追いかける。急ぐときは「同期」ボタン</p>",
+          "    </div>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='2:0.1' data-sync-dur='0.5' class='rounded-2xl px-8 py-6 shadow' style='background:#FFF3DC;border:1px solid rgba(245,158,11,.35)'>",
+          "      <p class='text-3xl font-bold'>🆓 同期に、AIの利用料はかからない</p><p class='text-xl mt-2' style='color:#7C5E3C'>取り込みはアプリの土台が直接行う</p>",
+          "    </div>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='3:0.1' data-sync-dur='0.5' class='rounded-2xl px-8 py-6 shadow' style='background:#FFF3DC;border:1px solid rgba(245,158,11,.35)'>",
+          "      <p class='text-3xl font-bold'>🔒 書き出しは、押したときだけ</p><p class='text-xl mt-2' style='color:#7C5E3C'>削除はしない。勝手に書き込まない</p>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>10 / 12</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "今日の流れを、まとめます。ログインして、頼んで、あとは自動。足した予定は、ボタンひとつでGoogleへ。これだけです。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-12 pt-10'>",
+          "    <h2 class='text-5xl font-bold' style='color:#431407'>まとめ</h2>",
+          "  </div>",
+          "  <div class='px-12 mt-8 space-y-4'>",
+          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>1</span>設定画面から、Googleでログイン</p>",
+          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>2</span>カレンダーの名前を添えて、チャットで頼む</p>",
+          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>3</span>できあがり — 以後は自動で最新に</p>",
+          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>4</span>予定を足すのも、会話で</p>",
+          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>5</span>「Googleへ書き出し」でGoogleにも反映</p>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>11 / 12</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "カレンダーがコレクションになると、買い物リストや家計簿と同じ場所に、予定が並びます。暮らしの記録とつながる実例は、コレクション実例集という動画でご覧いただけます。ぜひ、試してみてください！",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-12 pt-12 text-center'>",
+          "    <h2 class='text-5xl font-bold' style='color:#431407'>予定も、暮らしの記録のひとつに</h2>",
+          "  </div>",
+          "  <div class='px-16 mt-10 flex justify-center gap-6'>",
+          "    <div class='rounded-2xl px-8 py-6 shadow text-center' style='background:#FFF3DC'><p class='text-4xl'>🛒</p><p class='text-2xl font-bold mt-2'>買い物リストと同じ場所に</p></div>",
+          "    <div class='rounded-2xl px-8 py-6 shadow text-center' style='background:#FFF3DC'><p class='text-4xl'>📒</p><p class='text-2xl font-bold mt-2'>家計簿と並べて</p></div>",
+          "    <div class='rounded-2xl px-8 py-6 shadow text-center' style='background:#FFF3DC'><p class='text-4xl'>🌱</p><p class='text-2xl font-bold mt-2'>作った後も、育てられる</p></div>",
+          "  </div>",
+          "  <div class='text-center mt-12'>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>実例は「コレクション実例集」で</p>",
+          "    <p class='text-4xl font-bold mt-4' style='color:#EA580C'>ぜひ、試してみてください！</p>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>12 / 12</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
