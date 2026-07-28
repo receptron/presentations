@@ -62,18 +62,19 @@
           "    <p class='text-2xl mt-3' style='color:#7C5E3C'>v1.7.1 / v1.7.2 — 2026年7月27日</p>",
           "  </div>",
           "  <div class='px-12 mt-10 space-y-5'>",
-          "    <div class='flex items-center gap-5 rounded-2xl px-8 py-5 shadow' style='background:#FFF3DC;border:1px solid rgba(234,88,12,.35)'>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='2:0.25' data-sync-dur='0.5' data-start='6.9' data-end='7.4' class='flex items-center gap-5 rounded-2xl px-8 py-5 shadow' style='background:#FFF3DC;border:1px solid rgba(234,88,12,.35)'>",
           "      <span class='text-4xl'>📤</span><div><p class='text-3xl font-bold'>Googleへ書き出し</p><p class='text-xl mt-1' style='color:#7C5E3C'>アプリで足した予定が、Googleカレンダーに届く</p></div>",
           "    </div>",
-          "    <div class='flex items-center gap-5 rounded-2xl px-8 py-5 shadow' style='background:#FFF3DC;border:1px solid rgba(245,158,11,.35)'>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='2:0.6' data-sync-dur='0.5' data-start='8.87' data-end='9.37' class='flex items-center gap-5 rounded-2xl px-8 py-5 shadow' style='background:#FFF3DC;border:1px solid rgba(245,158,11,.35)'>",
           "      <span class='text-4xl'>🙋</span><div><p class='text-3xl font-bold'>困ったときの相談窓口</p><p class='text-xl mt-1' style='color:#7C5E3C'>「バグ？設定？」を、まず一緒に調べる</p></div>",
           "    </div>",
-          "    <div class='flex items-center gap-5 rounded-2xl px-8 py-5 shadow' style='background:#FFF3DC;border:1px solid rgba(245,158,11,.35)'>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='2:0.85' data-sync-dur='0.5' data-start='10.27' data-end='10.77' class='flex items-center gap-5 rounded-2xl px-8 py-5 shadow' style='background:#FFF3DC;border:1px solid rgba(245,158,11,.35)'>",
           "      <span class='text-4xl'>🔔</span><div><p class='text-3xl font-bold'>効かない .env に警告</p><p class='text-xl mt-1' style='color:#7C5E3C'>シェルの設定が勝っていたら、名指しでお知らせ</p></div>",
           "    </div>",
           "  </div>",
           "</div>"
-        ]
+        ],
+        "animation": true
       }
     },
     {
@@ -122,7 +123,7 @@
           "    <p class='text-2xl' style='color:#7C5E3C'>書き出し → 1件作成 → 同期でリンクが付く</p>",
           "  </div>",
           "  <div class='flex justify-center mt-2'>",
-          "    <video src='release-v1.7.2-assets-ja/push-sync.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height: 560px'></video>",
+          "    <div class='relative'><video src='release-v1.7.2-assets-ja/push-sync.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height: 560px'></video><div class='absolute border-4 border-red-600 rounded-lg' style='top: 8.3%; left: 60.4%; width: 13%; height: 5.6%'></div><div class='absolute bg-red-600 text-white text-lg font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow' style='top: 2%; left: 62.5%'>① 書き出し</div><div class='absolute border-4 border-sky-600 rounded-lg' style='top: 8.3%; left: 54.7%; width: 4.9%; height: 5.6%'></div><div class='absolute bg-sky-600 text-white text-lg font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow' style='top: 15%; left: 50.5%'>② 同期</div></div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 8</div>",
           "</div>"
@@ -169,19 +170,20 @@
           "    <p class='text-2xl' style='color:#7C5E3C'>カレンダーは、他の人も見ている場所だから</p>",
           "  </div>",
           "  <div class='px-12 mt-8 space-y-6'>",
-          "    <div class='rounded-2xl px-8 py-6 shadow' style='background:#FFF3DC;border:1px solid rgba(234,88,12,.35)'>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='0:0.1' data-sync-dur='0.5' data-start='0.47' data-end='0.97' class='rounded-2xl px-8 py-6 shadow' style='background:#FFF3DC;border:1px solid rgba(234,88,12,.35)'>",
           "      <p class='text-3xl font-bold'>🚫 消さない</p><p class='text-xl mt-2' style='color:#7C5E3C'>書き出しは作成と更新だけ。削除は Google 側でだけ行う</p>",
           "    </div>",
-          "    <div class='rounded-2xl px-8 py-6 shadow' style='background:#FFF3DC;border:1px solid rgba(245,158,11,.35)'>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='2:0.05' data-sync-dur='0.5' data-start='5.86' data-end='6.36' class='rounded-2xl px-8 py-6 shadow' style='background:#FFF3DC;border:1px solid rgba(245,158,11,.35)'>",
           "      <p class='text-3xl font-bold'>🤝 勝手に選ばない</p><p class='text-xl mt-2' style='color:#7C5E3C'>両方で直した予定は、上書きせずスキップして知らせる</p>",
           "    </div>",
-          "    <div class='rounded-2xl px-8 py-6 shadow' style='background:#FFF3DC;border:1px solid rgba(245,158,11,.35)'>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='3:0.1' data-sync-dur='0.5' data-start='11.15' data-end='11.65' class='rounded-2xl px-8 py-6 shadow' style='background:#FFF3DC;border:1px solid rgba(245,158,11,.35)'>",
           "      <p class='text-3xl font-bold'>🔁 順番はこれだけ</p><p class='text-xl mt-2' style='color:#7C5E3C'>「書き出し」が先、「同期」が後 — 逆だと手元の編集が上書きされる</p>",
           "    </div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 8</div>",
           "</div>"
-        ]
+        ],
+        "animation": true
       }
     },
     {
@@ -198,26 +200,27 @@
           "    </div>",
           "    <p class='text-2xl' style='color:#7C5E3C'>「バグ？設定？」を、まず一緒に調べる</p>",
           "  </div>",
-          "  <div class='flex justify-center mt-6'>",
-          "    <div class='relative'>",
-          "      <img src='release-v1.7.2-assets-ja/demo-04-consult-chip.png' class='rounded-xl shadow-2xl' style='width: 1000px' />",
-          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 52%; left: 1%; width: 98%; height: 45%'></div>",
+          "  <div class='flex flex-col items-center mt-8 gap-3'>",
+          "    <p class='text-xl' style='color:#7C5E3C'>チャットの質問候補に、この入口が増えました</p>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='1:0.3' data-sync-dur='0.6' data-start='2.94' data-end='3.54' class='rounded-2xl shadow-2xl' style='border: 4px solid #DC2626; padding: 4px; background: white'>",
+          "      <img src='release-v1.7.2-assets-ja/demo-04-consult-chip.png' style='width: 980px' />",
           "    </div>",
           "  </div>",
-          "  <div class='px-12 mt-10 flex justify-center gap-6'>",
-          "    <div class='rounded-xl px-6 py-4 text-center shadow' style='background:#FFF3DC'><p class='text-2xl font-bold'>1. 症状を聞く</p></div>",
+          "  <div class='px-12 mt-12 flex justify-center gap-6'>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='2:0.05' data-sync-dur='0.5' data-start='7.49' data-end='7.99' class='rounded-xl px-6 py-4 text-center shadow' style='background:#FFF3DC'><p class='text-2xl font-bold'>1. 症状を聞く</p></div>",
           "    <div class='text-3xl self-center' style='color:#EA580C'>→</div>",
-          "    <div class='rounded-xl px-6 py-4 text-center shadow' style='background:#FFF3DC'><p class='text-2xl font-bold'>2. 設定・仕様を調べる</p></div>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='2:0.35' data-sync-dur='0.5' data-start='9.33' data-end='9.83' class='rounded-xl px-6 py-4 text-center shadow' style='background:#FFF3DC'><p class='text-2xl font-bold'>2. 設定・仕様を調べる</p></div>",
           "    <div class='text-3xl self-center' style='color:#EA580C'>→</div>",
-          "    <div class='rounded-xl px-6 py-4 text-center shadow' style='background:#FFF3DC'><p class='text-2xl font-bold'>3. 残ったものだけ報告</p></div>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='3:0.15' data-sync-dur='0.5' data-start='13.86' data-end='14.36' class='rounded-xl px-6 py-4 text-center shadow' style='background:#FFF3DC'><p class='text-2xl font-bold'>3. 残ったものだけ報告</p></div>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 8</div>",
           "</div>"
-        ]
+        ],
+        "animation": true
       }
     },
     {
-      "text": "直したはずの設定が、なぜか効かない。原因がシェル側に残った古い設定だったとき、アプリがそれに気づいて、お知らせで名指しするようになりました。何が勝っているのかが、見えるようになります。",
+      "text": "直したはずの設定が、なぜか効かない。そんなときは、シェル側に残った古い設定が優先されているのかもしれません。この状態になったときだけ、アプリがお知らせで名指しして教えてくれます。ふだんの使い方では、何も出ません。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -228,24 +231,26 @@
           "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#EA580C'>v1.7.2</span>",
           "      <h2 class='text-4xl font-bold' style='color:#431407'>効かない .env に、気づける</h2>",
           "    </div>",
-          "    <p class='text-2xl' style='color:#7C5E3C'>負けている設定を、お知らせが名指しする</p>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>使われていない設定を、お知らせが名指しする</p>",
           "  </div>",
-          "  <div class='px-16 mt-10 space-y-5'>",
-          "    <div class='flex items-center gap-6'>",
-          "      <div class='rounded-xl px-6 py-4 shadow' style='background:#FFF3DC'><p class='text-xl font-mono'>.env</p><p class='text-2xl font-mono mt-1 whitespace-nowrap'>GEMINI_API_KEY=新しいキー</p></div>",
-          "      <p class='text-2xl font-bold' style='color:#DC2626'>× 負け（何度直しても効かない）</p>",
+          "  <div class='px-16 mt-8 space-y-4'>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='1:0.1' data-sync-dur='0.5' data-start='4.03' data-end='4.53' class='flex items-center gap-6'>",
+          "      <div class='rounded-xl px-6 py-4 shadow' style='background:#FFF3DC'><p class='text-xl font-mono'>.env（直した設定）</p><p class='text-2xl font-mono mt-1 whitespace-nowrap'>GEMINI_API_KEY=新しいキー</p></div>",
+          "      <p class='text-2xl font-bold whitespace-nowrap' style='color:#DC2626'>使われていません</p>",
           "    </div>",
-          "    <div class='flex items-center gap-6'>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='1:0.5' data-sync-dur='0.5' data-start='6.13' data-end='6.63' class='flex items-center gap-6'>",
           "      <div class='rounded-xl px-6 py-4 shadow' style='background:#FCE8C8'><p class='text-xl font-mono'>~/.zshrc（忘れた頃の設定）</p><p class='text-2xl font-mono mt-1 whitespace-nowrap'>export GEMINI_API_KEY=…</p></div>",
-          "      <p class='text-2xl font-bold' style='color:#EA580C'>○ 勝ち（こちらが使われる）</p>",
+          "      <p class='text-2xl font-bold whitespace-nowrap' style='color:#7C5E3C'>こちらが優先されています</p>",
           "    </div>",
-          "    <div class='rounded-2xl px-8 py-5 shadow-xl mt-6' style='background:#FFFBF2;border:2px solid rgba(234,88,12,.5)'>",
-          "      <p class='text-2xl'>🔔 <b>GEMINI_API_KEY</b> は、シェル側の値が使われています</p>",
+          "    <div data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='2:0.2' data-sync-dur='0.6' data-start='9.73' data-end='10.33' class='rounded-2xl px-8 py-5 shadow-xl mt-4' style='background:#FFFBF2;border:2px solid rgba(234,88,12,.5)'>",
+          "      <p class='text-2xl'>🔔 <b>GEMINI_API_KEY</b> は、シェル側の設定が使われています</p>",
           "    </div>",
+          "    <p data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='3:0.2' data-sync-dur='0.5' data-start='14.19' data-end='14.69' class='text-xl mt-3' style='color:#7C5E3C'>※ お知らせが出るのは、両方に同じ設定があるときだけ。ふつうに .env が効いているときは何も出ません</p>",
           "  </div>",
           "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 8</div>",
           "</div>"
-        ]
+        ],
+        "animation": true
       }
     },
     {
