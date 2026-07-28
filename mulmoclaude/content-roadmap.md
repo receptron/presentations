@@ -87,16 +87,15 @@
 
 1. tutorials #5 Custom Views 深掘り — 題材は**お買い物モード（スマホ用カスタムビュー）を会話で作る**。kitchen-trio beat 7〜8 と pantry beat 10 が「作り方は別の動画で」と予告済み（導線の回収）。素材は ja workspace セッション a0627168
 2. en 展開 — 講座 3 本（kitchen-trio → pantry → csv）の英語ライブ再演・finalize（詳細は PROGRESS 残作業）
-3. tutorials #7 Google カレンダーとつなぐ — demos #2 の「予定を動かす」の前提を先に揃える（How は設定と手順、価値の見せ場は demos #2 に譲る）
-4. demos #2 Calendar Showcase
-5. tutorials #6 Remote Access & Bridges（スマホから使う設定）
-6. tutorials #3 Feeds & Automations
-7. tutorials #2 Getting Started — ss web の準備記事群と役割分担を決めてから（下書きの扱い判断とセット）
-8. demos #6 実ユーザーの応用例紹介
-9. tutorials #4 Skills
-10. demos #4 チャットからプレゼン動画を作る
-11. demos #5 Remote Access デモ（tutorials #6 と素材共用）
-12. Vision 試作 3 本の仕上げ
+3. demos #2 Calendar Showcase
+4. tutorials #6 Remote Access & Bridges（スマホから使う設定）
+5. tutorials #3 Feeds & Automations
+6. tutorials #2 Getting Started — ss web の準備記事群と役割分担を決めてから（下書きの扱い判断とセット）
+7. demos #6 実ユーザーの応用例紹介
+8. tutorials #4 Skills
+9. demos #4 チャットからプレゼン動画を作る
+10. demos #5 Remote Access デモ（tutorials #6 と素材共用）
+11. Vision 試作 3 本の仕上げ
 
 ## 制作フォーマット（本編と 10 秒クリップ）— 2026-07-27 決定
 
