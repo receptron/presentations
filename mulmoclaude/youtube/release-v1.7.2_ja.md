@@ -2,7 +2,7 @@
 
 デッキ: `demos/release-notes/release-v1.7.2`（ja）
 動画: `output/release-v1.7.2_ja/release-v1.7.2_ja_ja.mp4`（1:50）
-公開日: （未定）
+公開日: 2026-07-29
 
 ## Title
 
@@ -51,7 +51,7 @@ https://github.com/receptron/mulmoclaude
 ## URL
 
 ```
-（未投稿）
+https://youtu.be/bk3wkcXI1j4
 ```
 
 ## X 投稿（日本語）

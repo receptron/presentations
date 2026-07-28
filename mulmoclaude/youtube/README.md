@@ -19,7 +19,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
   - https://www.youtube.com/playlist?list=PLPFzwVwcieOI
 - **MulmoClaude コレクションの作り方** — How 連続講座。基礎 `collection-creation-demo` → `kitchen-trio` → `pantry` → `csv-collection`。「▶ 順番に見る」リンクはこれを張る。`collection-creation-demo` は汎用基礎なのでテーマ(天気)に関わらず先頭の入口。テーマごとに作り方動画を作り直さない。
   - https://www.youtube.com/playlist?list=PLYPiiR7YGHJI
-- **MulmoClaude 機能紹介** — 機能単位の解説と新機能告知（`connected-collections-demo`, `record-buttons-demo`、今後: フィード、wiki、Skills 等）。すでに使っている人向けの棚。
+- **MulmoClaude 機能紹介** — 機能単位の解説と新機能告知、リリースノート動画（`connected-collections-demo`, `record-buttons-demo`, `release-notes/*`、今後: フィード、wiki、Skills 等）。すでに使っている人向けの棚。
   - https://www.youtube.com/playlist?list=PLEN0vGL7IeUQ
 
 ### playlist の並び順（YouTube 上の並びの正本）
@@ -38,6 +38,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 7. CSVは、置くだけでいい — MulmoClaude CSVコレクション
 8. バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ
 9. 押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン
+10. 予定が、Googleへ帰っていく — MulmoClaude v1.7 アップデート
 
 （weather-showcase 公開後は 3 の次に挿入）
 
@@ -65,6 +66,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 1. バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ
 2. 押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン
+3. 予定が、Googleへ帰っていく — MulmoClaude v1.7 アップデート
 
 </details>
 
