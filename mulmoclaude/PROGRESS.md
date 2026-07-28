@@ -62,7 +62,7 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 4. **calendar-showcase（demos #2）の制作着手** — 企画は content-roadmap.md
 5. **未 commit 下書き 3 本の扱い判断** — `tutorials/getting-started` / `tutorials/building-a-collection` / `demos/daily-workflow`（demos #2 吸収により役割終了）。破棄か別テーマか
 6. **未決**: en X（@mulmocast）の動画告知 5 本の文面と開始日
-7. **リリースノート動画 `release-v1.7.2_ja` の後処理** — YouTube 公開済み（2026-07-29）。残り: X 文面の Codex クロスチェック → 専用枠 7/30 12:30 JST に mp4 添付で投稿 → 投稿後に `output/release-v1.7.2_ja/` を `output/done/` へ移動 → ss web 記事（下書き `demos/release-notes/release-v1.7.2-ssweb-draft_ja.md` を ss_website へ移植・動画埋め込みと画像パスを差し替え）
+7. **リリースノート動画 `release-v1.7.2_ja` の ss web 記事** — YouTube 公開済み（2026-07-29）、X は予約済み（枠と URL の状態は残作業 1 と同じくメタデータが正本）。残り: 下書き `demos/release-notes/release-v1.7.2-ssweb-draft_ja.md` を ss_website へ移植（動画埋め込みと画像パスを差し替え。画像は `output/done/release-v1.7.2_ja/images/`）
 8. 任意: 生成済み .srt の YouTube 字幕アップ / csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
 
 ## 既知のズレ（据え置き）
