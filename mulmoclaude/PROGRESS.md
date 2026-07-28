@@ -61,8 +61,8 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 4. **calendar-showcase（demos #2）の制作着手** — 企画は content-roadmap.md
 5. **未 commit 下書き 3 本の扱い判断** — `tutorials/getting-started` / `tutorials/building-a-collection` / `demos/daily-workflow`（demos #2 吸収により役割終了）。破棄か別テーマか
 6. **未決**: en X（@mulmocast）の動画告知 5 本の文面と開始日
-7. **週次リリースノート動画の試作 1 本** — content-roadmap の 3 レーン構成参照。フォーマット（1 機能 1 ビート・2 分前後・ss web 記事の派生まで）をここで詰める
-8. 任意: 生成済み .srt の YouTube 字幕アップ / 新デッキ企画「お買い物モードを会話で作る」（素材: ja workspace セッション a0627168。kitchen-trio ビート 8 が予告済み）/ csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
+7. **リリースノート動画の試作 1 本**（題材: v1.7 系のまとめ） — content-roadmap の 3 レーン構成参照（リリース起点・タグの翌日 20:30）。フォーマット（1 機能 1 ビート・ss web 記事の派生まで）をここで詰める
+8. 任意: 生成済み .srt の YouTube 字幕アップ / csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
 
 ## 既知のズレ（据え置き）
 
