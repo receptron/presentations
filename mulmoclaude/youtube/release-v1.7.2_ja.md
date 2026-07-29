@@ -84,4 +84,4 @@ GitHub: https://github.com/receptron/mulmoclaude
 #MulmoClaude #AI #VibeCrafting
 ```
 
-投稿後: X ポスト URL —（未投稿）
+投稿後: X ポスト URL — https://x.com/SingularitySoci/status/2082307629867565416（2026-07-29 12:30 公開）
