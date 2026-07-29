@@ -66,7 +66,7 @@
           "  <div class='flex justify-center mt-2'>",
           "    <img src='google-calendar-assets-ja/demo-01-calendar-view.png' class='rounded-xl shadow-2xl' style='max-height: 545px; object-fit: contain' />",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>1 / 12</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>1 / 14</div>",
           "</div>"
         ]
       }
@@ -108,7 +108,36 @@
           "      <div class='absolute border-2 border-sky-600 rounded-lg' style='top: 26.5%; left: 32.5%; width: 13%; height: 5.5%'></div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 12</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "チャットのロールを、パーソナルに切り替えます。カレンダーやToDoといった、暮らしまわりの道具を持っているロールです。左上のロール名から、選ぶだけです。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 2</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>ロールを、パーソナルに切り替える</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>カレンダーやToDoを扱う、暮らしまわりの担当</p>",
+          "  </div>",
+          "  <div class='flex justify-center items-start mt-4 gap-10'>",
+          "    <div class='relative'>",
+          "      <img src='google-calendar-assets-ja/demo-08-role-menu.png' class='rounded-xl shadow-2xl' style='height: 500px' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 16.2%; left: 4%; width: 66%; height: 8%'></div>",
+          "    </div>",
+          "    <div class='self-center space-y-4' style='max-width: 480px'>",
+          "      <p class='text-2xl'>チャット左上のロール名をクリックして、<b>Personal</b> を選びます。</p>",
+          "      <p class='text-xl' style='color:#7C5E3C'>ロールは会話の担当分け。パーソナルは予定・ToDo・写真など、暮らしの道具を持っています。</p>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 14</div>",
           "</div>"
         ]
       }
@@ -122,7 +151,7 @@
           "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
-          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 2</span>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 3</span>",
           "      <h2 class='text-4xl font-bold' style='color:#431407'>チャットで頼む</h2>",
           "    </div>",
           "    <p class='text-2xl' style='color:#7C5E3C'>カレンダーの名前を添えるのがコツ</p>",
@@ -133,7 +162,7 @@
           "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 81%; left: 0.5%; width: 21%; height: 17%'></div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 12</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 14</div>",
           "</div>"
         ]
       }
@@ -147,7 +176,7 @@
           "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
-          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 3</span>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 4</span>",
           "      <h2 class='text-4xl font-bold' style='color:#431407'>できあがり — 予定はもう入っている</h2>",
           "    </div>",
           "    <p class='text-2xl' style='color:#7C5E3C'>作成と同時に、最初の同期が走ります</p>",
@@ -155,7 +184,7 @@
           "  <div class='flex justify-center mt-2'>",
           "    <img src='google-calendar-assets-ja/demo-04-created-synced.png' class='rounded-xl shadow-2xl' style='max-height: 545px; object-fit: contain' />",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 12</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 14</div>",
           "</div>"
         ]
       }
@@ -169,7 +198,7 @@
           "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
-          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 4</span>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 5</span>",
           "      <h2 class='text-4xl font-bold' style='color:#431407'>アプリの側で、予定を足す</h2>",
           "    </div>",
           "    <p class='text-2xl' style='color:#7C5E3C'>これも会話ひとつ</p>",
@@ -180,7 +209,7 @@
           "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 80.6%; left: 0.6%; width: 20.5%; height: 16.5%'></div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 12</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 14</div>",
           "</div>"
         ]
       }
@@ -205,7 +234,7 @@
           "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 31.3%; left: 25.5%; width: 74%; height: 5.6%'></div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 12</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>8 / 14</div>",
           "</div>"
         ]
       }
@@ -223,7 +252,7 @@
           "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
           "  <div class='px-8 pt-5 pb-3 space-y-1'>",
           "    <div class='flex items-center gap-4'>",
-          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 5</span>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 6</span>",
           "      <h2 class='text-4xl font-bold' style='color:#431407'>Googleへ書き出す</h2>",
           "    </div>",
           "    <p class='text-2xl' style='color:#7C5E3C'>書き出し → 1件作成 → 同期でリンクが付く</p>",
@@ -231,7 +260,7 @@
           "  <div class='flex justify-center mt-2'>",
           "    <div class='relative'><video src='google-calendar-assets-ja/push-sync.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height: 560px'></video><div class='absolute border-4 border-red-600 rounded-lg' style='top: 8.3%; left: 60.4%; width: 13%; height: 5.6%'></div><div class='absolute bg-red-600 text-white text-lg font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow' style='top: 2%; left: 62.5%'>① 書き出し</div><div class='absolute border-4 border-sky-600 rounded-lg' style='top: 8.3%; left: 54.7%; width: 4.9%; height: 5.6%'></div><div class='absolute bg-sky-600 text-white text-lg font-bold px-3 py-0.5 rounded-full whitespace-nowrap shadow' style='top: 15%; left: 50.5%'>② 同期</div></div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>8 / 12</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>9 / 14</div>",
           "</div>"
         ]
       }
@@ -257,7 +286,35 @@
           "      <div class='absolute border-2 border-sky-600 rounded-lg' style='top: 8.6%; left: 60.6%; width: 6%; height: 4.8%'></div>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>9 / 12</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>10 / 14</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "見え方そのものも、会話で作れます。今後の予定を、1件ずつ大きなカードで見せて、とお願いすると、専用のビューができて、表示切替に加わりました。見たい形は、言葉で頼むだけです。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<style>.t-bo{font-family:'Hiragino Sans','Helvetica Neue',Helvetica,sans-serif}</style>",
+          "<div class='t-bo relative w-[1280px] h-[720px] overflow-hidden' style='background:linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='text-white text-lg font-bold px-5 py-1.5 rounded-full' style='background:#F59E0B'>応用</span>",
+          "      <h2 class='text-4xl font-bold' style='color:#431407'>見え方も、会話で作れる</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color:#7C5E3C'>頼んだ形の「カスタムビュー」が表示切替に増える</p>",
+          "  </div>",
+          "  <div class='flex justify-center mt-2'>",
+          "    <div class='relative'>",
+          "      <img src='google-calendar-assets-ja/demo-09-custom-view.png' class='rounded-xl shadow-2xl' style='max-height: 520px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' style='top: 11%; left: 85.8%; width: 13.6%; height: 5.6%'></div>",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' style='bottom: 3%; left: 50%; transform: translateX(-50%); background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "        <span class='text-2xl' style='color:#431407'>💬 「今後の予定を、1件ずつ大きなカードで見せて」</span>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>11 / 14</div>",
           "</div>"
         ]
       }
@@ -287,13 +344,13 @@
           "      <p class='text-3xl font-bold'>🔒 書き出しは、押したときだけ</p><p class='text-xl mt-2' style='color:#7C5E3C'>削除はしない。勝手に書き込まない</p>",
           "    </div>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>10 / 12</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>12 / 14</div>",
           "</div>"
         ]
       }
     },
     {
-      "text": "今日の流れを、まとめます。ログインして、頼んで、あとは自動。足した予定は、ボタンひとつでGoogleへ。これだけです。",
+      "text": "今日の流れを、まとめます。ログインして、ロールを切り替えて、頼む。あとは自動です。足した予定は、ボタンひとつでGoogleへ。これだけです。",
       "image": {
         "type": "html_tailwind",
         "html": [
@@ -304,12 +361,12 @@
           "  </div>",
           "  <div class='px-12 mt-8 space-y-4'>",
           "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>1</span>設定画面から、Googleでログイン</p>",
-          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>2</span>カレンダーの名前を添えて、チャットで頼む</p>",
-          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>3</span>できあがり — 以後は自動で最新に</p>",
-          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>4</span>予定を足すのも、会話で</p>",
-          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>5</span>「Googleへ書き出し」でGoogleにも反映</p>",
+          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>2</span>ロールを、パーソナルに切り替える</p>\n    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>3</span>カレンダーの名前を添えて、チャットで頼む</p>",
+          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>4</span>できあがり — 以後は自動で最新に</p>",
+          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>5</span>予定を足すのも、会話で</p>",
+          "    <p class='text-3xl'><span class='bg-orange-600 text-white text-xl font-bold px-4 py-1 rounded-full mr-4'>6</span>「Googleへ書き出し」でGoogleにも反映</p>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>11 / 12</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>13 / 14</div>",
           "</div>"
         ]
       }
@@ -333,7 +390,7 @@
           "    <p class='text-2xl' style='color:#7C5E3C'>実例は「コレクション実例集」で</p>",
           "    <p class='text-4xl font-bold mt-4' style='color:#EA580C'>ぜひ、試してみてください！</p>",
           "  </div>",
-          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>12 / 12</div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>14 / 14</div>",
           "</div>"
         ]
       }
