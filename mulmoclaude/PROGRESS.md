@@ -45,6 +45,7 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 | demos/weather-showcase | 明日の天気は、もう予定に入っている | 同左 | — | 未定 |
 | demos/connected-collections-demo | バラバラのデータが、つながる | — | — | ja: [バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ](https://youtu.be/6XJywDCJ7V0)（メタデータ: youtube/connected-collections-demo_ja.md）<br>en: [Scattered Data, Connected — Backlinks & Rollups in MulmoClaude](https://youtu.be/FmQ9HVirrf8)（メタデータ: youtube/connected-collections-demo.md） |
 | demos/record-buttons-demo | 押すだけの仕事は、ボタンにする | — | — | ja: [押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン](https://youtu.be/VaZur8HDjI4)（メタデータ: youtube/record-buttons-demo_ja.md）<br>en: [Turn Routine Work into Buttons — Record Buttons in MulmoClaude](https://youtu.be/81oYVOYDbik)（メタデータ: youtube/record-buttons-demo.md） |
+| demos/release-notes/release-v1.7.2 | MulmoClaude v1.7 アップデート — 予定が、Googleへ帰っていく | eyebrow「リリースノート」+ 題「MulmoClaude v1.7 アップデート」 | — | ja: [一方通行が、終わる — MulmoClaude v1.7 新機能 Googleへ書き出し](https://youtu.be/bk3wkcXI1j4)（メタデータ: youtube/release-v1.7.2_ja.md） |
 
 ### 見た目スタイルの使い分け
 
@@ -61,7 +62,7 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 4. **calendar-showcase（demos #2）の制作着手** — 企画は content-roadmap.md
 5. **未 commit 下書き 3 本の扱い判断** — `tutorials/getting-started` / `tutorials/building-a-collection` / `demos/daily-workflow`（demos #2 吸収により役割終了）。破棄か別テーマか
 6. **未決**: en X（@mulmocast）の動画告知 5 本の文面と開始日
-7. **リリースノート動画 `release-v1.7.2_ja` の公開** — デッキ・mp4・PDF は制作済み（作り方は content-roadmap「リリースノート動画の作り方」に記帳済み）。残り: 試聴（TTS の読み確認）→ youtube メタデータ・X 文面 → 公開 → ss web 記事下書き（`mulmo markdown`）
+7. **リリースノート動画 `release-v1.7.2_ja` の ss web 記事** — YouTube 公開済み（2026-07-29）、X は予約済み（枠と URL の状態は残作業 1 と同じくメタデータが正本）。残り: 下書き `demos/release-notes/release-v1.7.2-ssweb-draft_ja.md` を ss_website へ移植（動画埋め込みと画像パスを差し替え。画像は `output/done/release-v1.7.2_ja/images/`）
 8. 任意: 生成済み .srt の YouTube 字幕アップ / csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
 
 ## 既知のズレ（据え置き）
