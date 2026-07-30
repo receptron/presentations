@@ -1,8 +1,9 @@
 # MulmoClaude v1.7 アップデート — カレンダーの一方通行が、終わる
 
-<!-- ss web リリースノート記事の下書き（デッキ release-v1.7.2_ja から派生）。
-     画像はデッキのスライド（output/release-v1.7.2_ja/images/Np.png）に対応。
-     ss_website への移植時に、動画埋め込み（YouTube 公開後の URL）と画像パスを差し替える。 -->
+<!-- ss web リリースノート記事の引き渡し版（デッキ release-v1.7.2_ja から派生）。
+     mulmo markdown の出力に体裁を整えたところまでが presentations 側の担当。
+     画像はデッキのスライド（output/done/release-v1.7.2_ja/images/Np.png）に対応。
+     公開記事の正本は ss_website リポジトリにあり、以後の更新はそちらが持つ。 -->
 
 対象リリース: v1.7.0 〜 v1.7.2
 
