@@ -19,7 +19,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
   - https://www.youtube.com/playlist?list=PLPFzwVwcieOI
 - **MulmoClaude コレクションの作り方** — How 連続講座。基礎 `collection-creation-demo` → `kitchen-trio` → `pantry` → `csv-collection`。「▶ 順番に見る」リンクはこれを張る。`collection-creation-demo` は汎用基礎なのでテーマ(天気)に関わらず先頭の入口。テーマごとに作り方動画を作り直さない。
   - https://www.youtube.com/playlist?list=PLYPiiR7YGHJI
-- **MulmoClaude 機能紹介** — 機能単位の解説と新機能告知（`connected-collections-demo`, `record-buttons-demo`、今後: フィード、wiki、Skills 等）。すでに使っている人向けの棚。
+- **MulmoClaude 機能紹介** — 機能単位の解説と新機能告知、リリースノート動画（`connected-collections-demo`, `record-buttons-demo`, `release-notes/*`、今後: フィード、wiki、Skills 等）。すでに使っている人向けの棚。
   - https://www.youtube.com/playlist?list=PLEN0vGL7IeUQ
 
 ### playlist の並び順（YouTube 上の並びの正本）
@@ -38,6 +38,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 7. CSVは、置くだけでいい — MulmoClaude CSVコレクション
 8. バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ
 9. 押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン
+10. 一方通行が、終わる — MulmoClaude v1.7 新機能 Googleへ書き出し
 
 （weather-showcase 公開後は 3 の次に挿入）
 
@@ -65,6 +66,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 
 1. バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ
 2. 押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン
+3. 一方通行が、終わる — MulmoClaude v1.7 新機能 Googleへ書き出し
 
 </details>
 
@@ -168,14 +170,11 @@ One feature at a time: backlinks and rollups, record buttons, and more as they s
 
 動画を公開したら、Claude は次を行う／ユーザーに伝える:
 
-1. **メタデータファイル記入** — `mulmoclaude/youtube/<deck>_<lang>.md` を作成し、Title / Description（末尾にハッシュタグ）/ Playlist / Thumbnail / URL を埋める。タグは説明文のハッシュタグに集約し、独立した Tags 欄は作らない。
+1. **メタデータファイル記入** — `mulmoclaude/youtube/<deck>_<lang>.md` を作成し、Title / Description（末尾にハッシュタグ）/ Playlist / Thumbnail / URL を埋める。所属 playlist は Playlist 欄に書けば伝わる（YouTube へのアップロード時に投稿者が一緒に設定するので、公開のたびに追加を依頼しない）。タグは説明文のハッシュタグに集約し、独立した Tags 欄は作らない。
 2. **PROGRESS.md 記入** — タイトル管理表の該当行「YouTube タイトル」列に、タイトル＋動画 URL をリンク形式で記入。
-3. **playlist をユーザーに依頼（YouTube 側の操作は Claude にはできない）**:
-   - この動画を所属 playlist（A / B）に**追加**するよう伝える。
-   - 該当する playlist がまだ無ければ、**新規作成**するよう伝える。
-4. **新規 playlist を作った場合** — その playlist に入るべき**過去の動画**（例: `collection-creation-demo`）も追加するよう、あわせてユーザーに伝える。新規 playlist は最新1本だけでは順序が成立しないため。
-5. **説明文リンク** — playlist ができたら、ユーザーから `&list=<ID>` を受け取り、説明文に `▶ 順番に見る（<playlist 名>）: https://www.youtube.com/watch?v=<動画ID>&list=<ID>` を追記し、メタデータファイルの Playlist 欄にも反映する。
-6. **生成物の片付け** — YouTube 公開と X 投稿（mp4 添付・予約含む）まで済んだデッキは、`output/<deck>/` を `output/done/<deck>/` へ移す。メタデータファイル内の `output/<deck>/…` という記載は書き換えず、公開済みは `output/done/` 配下と読み替える（再 finalize するときは元の位置に戻すと生成キャッシュが効く）。
+3. **新規 playlist を作った場合** — その playlist に入るべき**過去の動画**（例: `collection-creation-demo`）も追加するよう、あわせてユーザーに伝える。新規 playlist は最新1本だけでは順序が成立しないため。
+4. **説明文リンク** — playlist ができたら、ユーザーから `&list=<ID>` を受け取り、説明文に `▶ 順番に見る（<playlist 名>）: https://www.youtube.com/watch?v=<動画ID>&list=<ID>` を追記し、メタデータファイルの Playlist 欄にも反映する。
+5. **生成物の片付け** — YouTube 公開と X 投稿（mp4 添付・予約含む）まで済んだデッキは、`output/<deck>/` を `output/done/<deck>/` へ移す。メタデータファイル内の `output/<deck>/…` という記載は書き換えず、公開済みは `output/done/` 配下と読み替える（再 finalize するときは元の位置に戻すと生成キャッシュが効く）。
 
 ## メタデータファイルの形式
 
