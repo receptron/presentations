@@ -43,7 +43,7 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 | tutorials/csv-collection-tutorial | CSVは、置くだけでいい | 同左 | CSVは、置くだけでいい | ja: [CSVは、置くだけでいい — MulmoClaude CSVコレクション](https://youtu.be/c6CkrgYWC2M)（メタデータ: youtube/csv-collection-tutorial_ja.md） |
 | demos/collections-showcase | コレクション実例集 — 暮らしのアプリが、ひとつの会話でつながる | 「コレクション実例集」+ 見出し「暮らしのアプリが、ひとつの会話でつながる。」 | コレクション実例集 | ja: [暮らしのアプリが、ひとつの会話でつながる — MulmoClaude コレクション実例集](https://youtu.be/Q5HKzDUhs1g)（メタデータ: youtube/collections-showcase_ja.md）<br>en: [Your Everyday Apps, Connected by One Conversation — MulmoClaude Collections](https://youtu.be/2D-R7MpCB_I)（メタデータ: youtube/collections-showcase.md） |
 | demos/what-is-mulmoclaude | MulmoClaude で何ができる？ | 見出し「できることは、暮らしの数だけ。」 | — | ja: [できることは、暮らしの数だけ — MulmoClaude 3分ツアー](https://youtu.be/TDzy0KcHuag)（メタデータ: youtube/what-is-mulmoclaude_ja.md）<br>en: [As Many Uses as There Are Lives — A 3-Minute Tour of MulmoClaude](https://youtu.be/yogapAc9nds)（メタデータ: youtube/what-is-mulmoclaude.md） |
-| demos/weather-showcase | 明日の天気は、もう予定に入っている | 同左 | — | 未定 |
+| demos/weather-showcase | 明日の天気は、もう予定に入っている | 同左 | — | ja: [明日の天気は、もう予定に入っている — MulmoClaude 天気予報コレクション実例集](https://youtu.be/6tvk4lsW8Lc)（メタデータ: youtube/weather-showcase_ja.md） |
 | demos/connected-collections-demo | バラバラのデータが、つながる | — | — | ja: [バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ](https://youtu.be/6XJywDCJ7V0)（メタデータ: youtube/connected-collections-demo_ja.md）<br>en: [Scattered Data, Connected — Backlinks & Rollups in MulmoClaude](https://youtu.be/FmQ9HVirrf8)（メタデータ: youtube/connected-collections-demo.md） |
 | demos/record-buttons-demo | 押すだけの仕事は、ボタンにする | — | — | ja: [押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン](https://youtu.be/VaZur8HDjI4)（メタデータ: youtube/record-buttons-demo_ja.md）<br>en: [Turn Routine Work into Buttons — Record Buttons in MulmoClaude](https://youtu.be/81oYVOYDbik)（メタデータ: youtube/record-buttons-demo.md） |
 | demos/release-notes/release-v1.7.2 | MulmoClaude v1.7 アップデート — 予定が、Googleへ帰っていく | eyebrow「リリースノート」+ 題「MulmoClaude v1.7 アップデート」 | — | ja: [一方通行が、終わる — MulmoClaude v1.7 新機能 Googleへ書き出し](https://youtu.be/bk3wkcXI1j4)（メタデータ: youtube/release-v1.7.2_ja.md） |
@@ -58,7 +58,7 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 ## 残作業
 
 1. **X の URL 記帳** — 状態の正本は各メタデータの「投稿枠」「投稿後」行。一覧は書き写さず `mulmo-x-status` スキルで導出する（`node ~/.claude/skills/mulmo-x-status/scripts/x-status.mjs`）
-2. **weather-showcase** — Slack で確認依頼中（2026-07-25〜）。承認後: 公開一式の提示 → 公開 → 「できること」playlist を手動ソートへ切替 + マスター並び順の更新（`youtube/README.md` が正本）→ メタデータ作成・タイトル表記帳 → X 予約（8/1 枠）
+2. **weather-showcase** — ja 公開済み（2026-07-31、[動画](https://youtu.be/6tvk4lsW8Lc)・メタデータ: youtube/weather-showcase_ja.md）。残: YouTube 側の playlist 反映確認（「できること」の手動ソート切替＋マスターの並び — 順序の正本は `youtube/README.md`）→ X 予約（8/1 20:30 JST 枠 — 文面はメタデータの X 節が正本）→ 投稿後の URL 記帳 → `output/done/` へ片付け
 3. **講座 3 本の en**（kitchen-trio → pantry → csv）— kitchen の ja golden データは en workspace へ英訳投入済み。次は en workspace での英語ライブ再演・収録 → en スクリプト作成・finalize
 4. **calendar-showcase（demos #2）の制作着手** — 企画は content-roadmap.md
 5. **未 commit 下書き 3 本の扱い判断** — `tutorials/getting-started` / `tutorials/building-a-collection` / `demos/daily-workflow`（demos #2 吸収により役割終了）。破棄か別テーマか
