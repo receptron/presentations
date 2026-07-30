@@ -170,14 +170,11 @@ One feature at a time: backlinks and rollups, record buttons, and more as they s
 
 動画を公開したら、Claude は次を行う／ユーザーに伝える:
 
-1. **メタデータファイル記入** — `mulmoclaude/youtube/<deck>_<lang>.md` を作成し、Title / Description（末尾にハッシュタグ）/ Playlist / Thumbnail / URL を埋める。タグは説明文のハッシュタグに集約し、独立した Tags 欄は作らない。
+1. **メタデータファイル記入** — `mulmoclaude/youtube/<deck>_<lang>.md` を作成し、Title / Description（末尾にハッシュタグ）/ Playlist / Thumbnail / URL を埋める。所属 playlist は Playlist 欄に書けば伝わる（YouTube へのアップロード時に投稿者が一緒に設定するので、公開のたびに追加を依頼しない）。タグは説明文のハッシュタグに集約し、独立した Tags 欄は作らない。
 2. **PROGRESS.md 記入** — タイトル管理表の該当行「YouTube タイトル」列に、タイトル＋動画 URL をリンク形式で記入。
-3. **playlist をユーザーに依頼（YouTube 側の操作は Claude にはできない）**:
-   - この動画を所属 playlist（A / B）に**追加**するよう伝える。
-   - 該当する playlist がまだ無ければ、**新規作成**するよう伝える。
-4. **新規 playlist を作った場合** — その playlist に入るべき**過去の動画**（例: `collection-creation-demo`）も追加するよう、あわせてユーザーに伝える。新規 playlist は最新1本だけでは順序が成立しないため。
-5. **説明文リンク** — playlist ができたら、ユーザーから `&list=<ID>` を受け取り、説明文に `▶ 順番に見る（<playlist 名>）: https://www.youtube.com/watch?v=<動画ID>&list=<ID>` を追記し、メタデータファイルの Playlist 欄にも反映する。
-6. **生成物の片付け** — YouTube 公開と X 投稿（mp4 添付・予約含む）まで済んだデッキは、`output/<deck>/` を `output/done/<deck>/` へ移す。メタデータファイル内の `output/<deck>/…` という記載は書き換えず、公開済みは `output/done/` 配下と読み替える（再 finalize するときは元の位置に戻すと生成キャッシュが効く）。
+3. **新規 playlist を作った場合** — その playlist に入るべき**過去の動画**（例: `collection-creation-demo`）も追加するよう、あわせてユーザーに伝える。新規 playlist は最新1本だけでは順序が成立しないため。
+4. **説明文リンク** — playlist ができたら、ユーザーから `&list=<ID>` を受け取り、説明文に `▶ 順番に見る（<playlist 名>）: https://www.youtube.com/watch?v=<動画ID>&list=<ID>` を追記し、メタデータファイルの Playlist 欄にも反映する。
+5. **生成物の片付け** — YouTube 公開と X 投稿（mp4 添付・予約含む）まで済んだデッキは、`output/<deck>/` を `output/done/<deck>/` へ移す。メタデータファイル内の `output/<deck>/…` という記載は書き換えず、公開済みは `output/done/` 配下と読み替える（再 finalize するときは元の位置に戻すと生成キャッシュが効く）。
 
 ## メタデータファイルの形式
 
