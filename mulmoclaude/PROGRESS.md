@@ -18,6 +18,7 @@
 | tutorials/kitchen-trio-tutorial | tutorials #1（フラッグシップ） | 済 14 ビート | 済 10 枚 | 未着手 | 未着手（en ライブ再演） | — |
 | tutorials/pantry-list-tutorial | 番号外（育てる編・kitchen 続編） | 済 9 ビート | 済 7 枚 | 未着手 | 未着手 | — |
 | tutorials/csv-collection-tutorial | 番号外（新機能 How・CSV） | 済 13 ビート | 済 10 枚（素材 CSV は assets の source/） | 未着手 | 未着手 | — |
+| tutorials/google-calendar-tutorial | tutorials #7 | 済 14 ビート（レビュー前） | 済 9 枚 + 書き出し実演の録画（release-v1.7.2 と共用） | 未着手 | 未着手 | — |
 | demos/what-is-mulmoclaude | demos #1 | 済 | —（モック確定） | 済 | —（同左） | 済 |
 | demos/collections-showcase | demos #3 | 済 | 済 3 枚 | 済 | 済 3 枚 | 済 |
 | demos/weather-showcase | 番号外（showcase 追加分） | 済 | —（流用アセット 2 点のみ） | 済 | —（同左） | 済 |
@@ -62,7 +63,8 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 4. **calendar-showcase（demos #2）の制作着手** — 企画は content-roadmap.md
 5. **未 commit 下書き 3 本の扱い判断** — `tutorials/getting-started` / `tutorials/building-a-collection` / `demos/daily-workflow`（demos #2 吸収により役割終了）。破棄か別テーマか
 6. **未決**: en X（@mulmocast）の動画告知 5 本の文面と開始日
-7. 任意: 生成済み .srt の YouTube 字幕アップ / csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
+7. **tutorials #7 `google-calendar-tutorial_ja` のレビューと公開** — デッキ・mp4・PDF は制作済み（収録セッションのキャプチャ流用）。残り: レビュー（読みと構成）→ youtube メタデータ・X 文面 → 公開 → ss web 記事下書き（設定系 How は記事必須）
+8. 任意: 生成済み .srt の YouTube 字幕アップ / csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
 
 ## 既知のズレ（据え置き）
 
