@@ -64,7 +64,7 @@ https://youtu.be/6tvk4lsW8Lc
 ## X 投稿（日本語）
 
 添付: `output/weather-showcase_ja/weather-showcase_ja_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
-Codex クロスチェック済み（2026-07-31・MUST FIX ゼロ）。投稿枠: 2026-08-01（土）20:30 JST（7/31 の夜枠は collection-creation-demo が予約済みのため翌日）。
+Codex クロスチェック済み（2026-07-31・MUST FIX ゼロ）。投稿枠: 2026-08-01（土）20:30 JST に予約済み（7/31 の夜枠は collection-creation-demo が予約済みのため翌日）。
 
 ```
 天気予報は毎朝見ているのに、傘を持つか、水やりをどうするか、決めるのはいつも自分。予報と予定を照らし合わせる仕事は、AIが先回りしてくれます。
