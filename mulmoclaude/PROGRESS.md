@@ -19,6 +19,7 @@
 | tutorials/pantry-list-tutorial | 番号外（育てる編・kitchen 続編） | 済 9 ビート | 済 7 枚 | 未着手 | 未着手 | — |
 | tutorials/csv-collection-tutorial | 番号外（新機能 How・CSV） | 済 13 ビート | 済 10 枚（素材 CSV は assets の source/） | 未着手 | 未着手 | — |
 | tutorials/google-calendar-tutorial | tutorials #7 | 済 14 ビート（レビュー前） | 済 9 枚 + 書き出し実演の録画（release-v1.7.2 と共用） | 未着手 | 未着手 | — |
+| tutorials/shopping-mode-tutorial | tutorials #5 | 済 11 ビート（レビュー前） | 済 8 枚（demo-workspace-ja ライブ再演） | 未着手 | 未着手 | — |
 | demos/what-is-mulmoclaude | demos #1 | 済 | —（モック確定） | 済 | —（同左） | 済 |
 | demos/collections-showcase | demos #3 | 済 | 済 3 枚 | 済 | 済 3 枚 | 済 |
 | demos/weather-showcase | 番号外（showcase 追加分） | 済 | —（流用アセット 2 点のみ） | 済 | —（同左） | 済 |
@@ -41,6 +42,7 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 | tutorials/kitchen-trio-tutorial | 台所の三点セットを、会話で作る | 同左 | 台所の三点セットを、会話で作る | ja: [台所の三点セットを、会話で作る — MulmoClaude チュートリアル](https://youtu.be/s7wbM32vLL4)（メタデータ: youtube/kitchen-trio-tutorial_ja.md） |
 | tutorials/pantry-list-tutorial | コレクションは、使いながら育てる — 常備品リスト編 | 題「使いながら、育てる」 | 常備品リスト編（使いながら、育てる） | ja: [コレクションは、使いながら育てる — MulmoClaude 常備品リスト編](https://youtu.be/b_SlGYyWToU)（メタデータ: youtube/pantry-list-tutorial_ja.md） |
 | tutorials/csv-collection-tutorial | CSVは、置くだけでいい | 同左 | CSVは、置くだけでいい | ja: [CSVは、置くだけでいい — MulmoClaude CSVコレクション](https://youtu.be/c6CkrgYWC2M)（メタデータ: youtube/csv-collection-tutorial_ja.md） |
+| tutorials/shopping-mode-tutorial | お買い物モードを、会話で作る | eyebrow「カスタムビュー チュートリアル」+ 題「お買い物モードを、会話で作る」 | お買い物モードを、会話で作る | 未定 |
 | demos/collections-showcase | コレクション実例集 — 暮らしのアプリが、ひとつの会話でつながる | 「コレクション実例集」+ 見出し「暮らしのアプリが、ひとつの会話でつながる。」 | コレクション実例集 | ja: [暮らしのアプリが、ひとつの会話でつながる — MulmoClaude コレクション実例集](https://youtu.be/Q5HKzDUhs1g)（メタデータ: youtube/collections-showcase_ja.md）<br>en: [Your Everyday Apps, Connected by One Conversation — MulmoClaude Collections](https://youtu.be/2D-R7MpCB_I)（メタデータ: youtube/collections-showcase.md） |
 | demos/what-is-mulmoclaude | MulmoClaude で何ができる？ | 見出し「できることは、暮らしの数だけ。」 | — | ja: [できることは、暮らしの数だけ — MulmoClaude 3分ツアー](https://youtu.be/TDzy0KcHuag)（メタデータ: youtube/what-is-mulmoclaude_ja.md）<br>en: [As Many Uses as There Are Lives — A 3-Minute Tour of MulmoClaude](https://youtu.be/yogapAc9nds)（メタデータ: youtube/what-is-mulmoclaude.md） |
 | demos/weather-showcase | 明日の天気は、もう予定に入っている | 同左 | — | ja: [明日の天気は、もう予定に入っている — MulmoClaude 天気予報コレクション実例集](https://youtu.be/6tvk4lsW8Lc)（メタデータ: youtube/weather-showcase_ja.md） |
@@ -59,12 +61,13 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 
 1. **X の URL 記帳** — 状態の正本は各メタデータの「投稿枠」「投稿後」行。一覧は書き写さず `mulmo-x-status` スキルで導出する（`node ~/.claude/skills/mulmo-x-status/scripts/x-status.mjs`）
 2. **weather-showcase** — ja 公開済み（2026-07-31、[動画](https://youtu.be/6tvk4lsW8Lc)・メタデータ: youtube/weather-showcase_ja.md）。X は 8/1 20:30 JST に予約済み・生成物は `output/done/` へ片付け済み。残: YouTube 側の playlist 反映確認（「できること」の手動ソート切替＋マスターの並び — 順序の正本は `youtube/README.md`）→ 投稿後の URL 記帳（8/1 20:30 公開後）
-3. **講座 3 本の en**（kitchen-trio → pantry → csv）— kitchen の ja golden データは en workspace へ英訳投入済み。次は en workspace での英語ライブ再演・収録 → en スクリプト作成・finalize
+3. **講座 4 本の en**（kitchen-trio → pantry → csv → shopping-mode）— kitchen の ja golden データは en workspace へ英訳投入済み。次は en workspace での英語ライブ再演・収録 → en スクリプト作成・finalize
 4. **calendar-showcase（demos #2）の制作着手** — 企画は content-roadmap.md
 5. **未 commit 下書き 3 本の扱い判断** — `tutorials/getting-started` / `tutorials/building-a-collection` / `demos/daily-workflow`（demos #2 吸収により役割終了）。破棄か別テーマか
 6. **未決**: en X（@mulmocast）の動画告知 5 本の文面と開始日
 7. **tutorials #7 `google-calendar-tutorial_ja` のレビューと公開** — デッキ・mp4・PDF は制作済み（収録セッションのキャプチャ流用）。残り: レビュー（読みと構成）→ youtube メタデータ・X 文面 → 公開 → ss web 記事下書き（設定系 How は記事必須）
-8. 任意: 生成済み .srt の YouTube 字幕アップ / csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
+8. **tutorials #5 `shopping-mode-tutorial_ja` のレビューと公開** — デッキ・mp4・PDF は制作済み（demo-workspace-ja でライブ再演収録。収録で使った要件フォームは AI が提示したもの）。残り: レビュー（読みと構成）→ youtube メタデータ・X 文面 → 公開
+9. 任意: 生成済み .srt の YouTube 字幕アップ / csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
 
 ## 既知のズレ（据え置き）
 
