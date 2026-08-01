@@ -1,0 +1,370 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "プレゼンター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "明るく温かい、希望に満ちたトーンで話してください。大切なものを友人に楽しそうに紹介するような、優しくて前向きな語り口。決して暗く平板にならず、穏やかなエネルギーを保ってください。"
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "FFFBF2",
+        "bgCard": "FFF3DC",
+        "bgCardAlt": "FCE8C8",
+        "text": "431407",
+        "textMuted": "7C5E3C",
+        "textDim": "A08B6E",
+        "primary": "EA580C",
+        "accent": "F59E0B",
+        "success": "65A30D",
+        "warning": "B45309",
+        "danger": "DC2626",
+        "info": "0284C7",
+        "highlight": "DB2777"
+      },
+      "fonts": {
+        "title": "'Hiragino Sans', 'Helvetica Neue', Helvetica, sans-serif",
+        "body": "'Hiragino Sans', Helvetica, sans-serif",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(253,224,71,.30), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%), linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)",
+      "titleGradient": "linear-gradient(100deg, #431407, #B45309 55%, #EA580C)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "title": "お買い物モードを、会話で作る",
+  "description": "MulmoClaude のチュートリアル：買い物リストにスマホ用の画面「お買い物モード」を会話だけで作る。＋ボタンでスマホビューを選ぶと AI のほうから要件を聞いてくれて、フォームに答えるだけで画面が完成。お店でタップしてチェック、足りない表示はひとことで育てるところまで、実際の画面で。",
+  "lang": "ja",
+  "beats": [
+    {
+      "text": "お店でリストを眺めながら、次はどれだっけ、と迷っていませんか。マルモクロードの買い物リストには、スマホ用のお買い物モードを足せます。今日はこの画面そのものを、会話だけで作っていきます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='w-1/2 flex flex-col justify-center px-10 space-y-6'>",
+          "    <h2 class='text-[34px] font-semibold leading-snug whitespace-nowrap' style='color: #431407'>買い物リスト、お店では<br/>使いにくくありませんか？</h2>",
+          "    <div class='rounded-xl p-5' style='background: rgba(255, 255, 255, .6); border: 1px solid rgba(234, 88, 12, .2)' data-animation='animate' data-sync='1:0.2' data-opacity='0,1' data-translate-y='12,0' data-start='8.9' data-end='9.4' data-easing='easeOut'>",
+          "      <div class='text-base mb-2 font-semibold' style='color: #EA580C'>今日つくるもの</div>",
+          "      <p class='text-xl leading-loose' style='color: #431407'>📱 スマホ用の画面「お買い物モード」<br/>🥬 売り場ごとに並ぶ<br/>✅ カゴに入れたら、タップ</p>",
+          "    </div>",
+          "    <p class='text-xl' style='color: #7C5E3C' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-start='15.8' data-end='16.3' data-easing='easeOut'>→ 会話だけで、できあがります</p>",
+          "  </div>",
+          "  <div class='w-1/2 flex items-center justify-center p-4'>",
+          "    <img src='shopping-mode-assets-ja/demo-08-mobile-hero.png' class='rounded-2xl shadow-2xl' style='max-height: 620px; object-fit: contain' />",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>1 / 11</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "今日は、買い物リストに、スマホ用のお買い物モードを足していきます。選んで、答えて、お店で使う。育てるところまで、実際の画面でどうぞ。それでは、始めましょう。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "カスタムビュー チュートリアル"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "お買い物モードを、会話で作る",
+          "subtitle": "買い物リストに、{primary:スマホ用の画面}を足す",
+          "chips": [
+            "➕ スマホビューを選ぶ",
+            "📝 フォームに答える",
+            "🛒 お店でタップ"
+          ]
+        }
+      }
+    },
+    {
+      "text": "舞台は、『台所の三点セットを、会話で作る』で生まれた買い物リストです。今週の材料、19品が並んでいます。この一覧表に、お店で使うためのスマホ用の画面を、あとから足していきます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>前提</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>買い物リストは、もうある</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>「台所の三点セットを、会話で作る」の続きから</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-2'>",
+          "    <img src='shopping-mode-assets-ja/demo-01-shopping-table.png' class='rounded-xl shadow-2xl' style='max-height: 520px; object-fit: contain' />",
+          "  </div>",
+          "  <div class='pb-6 text-center'>",
+          "    <span class='text-xl' style='color: #A08B6E' data-animation='animate' data-sync='0:0.3' data-opacity='0,1' data-start='2.2' data-end='2.7' data-easing='easeOut'>🎬 このリストの作り方は「台所の三点セットを、会話で作る」でどうぞ</span>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>3 / 11</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "作り方は、頼み方から考えなくて大丈夫です。一覧表の右上、ビュー切り替えの隣にあるプラスを押して、スマホビューを選びます。これだけで、ちょうどいい会話が始まります。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 1</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>＋を押して、スマホビューを選ぶ</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>頼み方の言葉は、覚えなくていい</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='shopping-mode-assets-ja/demo-02-view-picker.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.4' data-opacity='0,1' data-start='7.5' data-end='8.0' data-easing='easeOut' style='top: 15.5%; left: 86.4%; width: 12.4%; height: 18%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>4 / 11</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "すると、何をしたいですか、と、AIのほうから聞いてくれました。タップで、購入済みのチェックを切り替えたい。売り場ごとに、まとまっていてほしい。名前は、お買い物モード。選んで書くだけで、注文の完成です。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 2</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>AIの質問に、答えるだけ</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>タップでチェック ・ 売り場ごと ・ 名前は「お買い物モード」</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='shopping-mode-assets-ja/demo-03-request-form.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.3' data-opacity='0,1' data-start='8.5' data-end='9.0' data-easing='easeOut' style='top: 34.5%; left: 9.5%; width: 81%; height: 9.5%'></div>",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='2:0.3' data-opacity='0,1' data-start='11.5' data-end='12.0' data-easing='easeOut' style='top: 83.5%; left: 9.5%; width: 81%; height: 9.5%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>5 / 11</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "送信して、しばらく待ちます。できあがりました。ビューの切り替えボタンに、お買い物モードが増えています。一覧表はそのままに、同じデータを見る画面がひとつ育ちました。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>できた</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>切り替えボタンに、お買い物モード</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>一覧表はそのまま。見る画面が、ひとつ増えた</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='shopping-mode-assets-ja/demo-04-view-created.png' class='rounded-xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='2:0.3' data-opacity='0,1' data-start='7.8' data-end='8.3' data-easing='easeOut' style='top: 11.5%; left: 71.8%; width: 15%; height: 6.8%'></div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>6 / 11</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "スマホに持ち出す前に、その場で確かめられます。画面は、スマホと同じ形のプレビューで開きました。肉類、野菜、と売り場ごとにまとまって、上から順に回れる並びです。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-sky-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>プレビュー</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>スマホと同じ画面で、その場で確認</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>売り場ごとに、カゴに入れる順で並ぶ</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center px-6 pb-4'>",
+          "    <img src='shopping-mode-assets-ja/demo-05-preview-desktop.png' class='rounded-xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>7 / 11</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "お店では、カゴに入れたら、その場でタップ。買った品にはチェックと打ち消し線が付いて、まだの品との区別が、ひと目で付きます。ここでは、19品のうち6品まで進んだところです。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-orange-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>STEP 3</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>お店では、カゴに入れたらタップ</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>買った品は打ち消し線。残りとの区別がひと目</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center gap-14 px-6 pb-4'>",
+          "    <img src='shopping-mode-assets-ja/demo-06-mobile-progress.png' class='rounded-2xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "    <div class='space-y-5' style='max-width: 460px'>",
+          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='0:0.3' data-start='1.5' data-end='2.0'>",
+          "        <p class='text-2xl font-bold' style='color: #431407'>🛒 行ぜんぶが、タップの的</p>",
+          "        <p class='text-xl mt-1' style='color: #7C5E3C'>カゴに入れたら、ポンと押すだけ</p>",
+          "      </div>",
+          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='1:0.3' data-start='6.5' data-end='7.0'>",
+          "        <p class='text-2xl font-bold' style='color: #431407'>✓ 買った品は、打ち消し線</p>",
+          "        <p class='text-xl mt-1' style='color: #7C5E3C'>まだの品と、もう迷わない</p>",
+          "      </div>",
+          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='2:0.4' data-start='14.5' data-end='15.0'>",
+          "        <p class='text-2xl font-bold' style='color: #431407'>🤔 あと何品かは、まだ見えない</p>",
+          "        <p class='text-xl mt-1' style='color: #7C5E3C'>この続きは、次のステップで</p>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>8 / 11</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "使ってみると、気づくことがあります。残りが何品か、ひと目で知りたい。そんなときは、そのまま伝えるだけです。数量とメモも添えて、あと何品かも出して。それだけで、画面が育ちます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <div class='px-8 pt-5 pb-3 space-y-1'>",
+          "    <div class='flex items-center gap-4'>",
+          "      <span class='bg-lime-600 text-white text-lg font-bold px-5 py-1.5 rounded-full'>後から拡張</span>",
+          "      <h2 class='text-4xl font-bold' style='color: #431407'>気づいたことは、伝えるだけ</h2>",
+          "    </div>",
+          "    <p class='text-2xl' style='color: #7C5E3C'>「数量とメモも添えて、『あと何品』も出して」のひとことで</p>",
+          "  </div>",
+          "  <div class='flex-1 flex items-center justify-center gap-14 px-6 pb-4'>",
+          "    <div class='relative'>",
+          "      <img src='shopping-mode-assets-ja/demo-07-mobile-upgraded.png' class='rounded-2xl shadow-2xl' style='max-height: 540px; object-fit: contain' />",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='4:0.3' data-opacity='0,1' data-start='31.0' data-end='31.5' data-easing='easeOut' style='top: 6%; left: 3%; width: 94%; height: 8%'></div>",
+          "    </div>",
+          "    <div class='space-y-5' style='max-width: 460px'>",
+          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='1:0.2' data-start='4.5' data-end='5.0'>",
+          "        <p class='text-2xl font-bold' style='color: #431407'>🤔 品名だけだと、心細い</p>",
+          "        <p class='text-xl mt-1' style='color: #7C5E3C'>あと何品かも、知りたくなった</p>",
+          "      </div>",
+          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: #FFF3DC; border: 1px solid rgba(234,88,12,.45)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='3:0.1' data-start='18.0' data-end='18.5'>",
+          "        <p class='text-2xl' style='color: #431407'>💬 「数量とメモも添えて、<br/>『あと何品』も出して」</p>",
+          "      </div>",
+          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='4:0.2' data-start='30.0' data-end='30.5'>",
+          "        <p class='text-2xl font-bold' style='color: #431407'>🌱 そのひとことで、画面が育つ</p>",
+          "        <p class='text-xl mt-1' style='color: #7C5E3C'>残りサマリーと、数量・メモ付きに</p>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>9 / 11</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "おさらいします。プラスから、スマホビューを選ぶ。AIの質問に、答える。お店では、タップするだけ。足りないところは、あとから伝えれば育ちます。コードは一行も書いていません。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col items-center justify-center h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <h2 class='text-5xl font-bold mb-12' style='color: #431407' data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut'>やることは、3つだけ</h2>",
+          "  <div class='w-full max-w-5xl space-y-6 px-12'>",
+          "    <div class='flex items-center gap-6' data-animation='animate' data-sync='1:0.0' data-opacity='0,1' data-translate-x='-30,0' data-start='3.4' data-end='3.9' data-easing='easeOut'>",
+          "      <span class='bg-orange-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 1</span>",
+          "      <span class='text-3xl font-semibold whitespace-nowrap flex-shrink-0' style='color: #431407; width: 26rem'>＋で、スマホビューを選ぶ</span>",
+          "      <span class='text-2xl whitespace-nowrap' style='color: #7C5E3C'>会話が自動で始まる</span>",
+          "    </div>",
+          "    <div class='flex items-center gap-6' data-animation='animate' data-sync='2:0.0' data-opacity='0,1' data-translate-x='-30,0' data-start='6.5' data-end='7.0' data-easing='easeOut'>",
+          "      <span class='bg-sky-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 2</span>",
+          "      <span class='text-3xl font-semibold whitespace-nowrap flex-shrink-0' style='color: #431407; width: 26rem'>AIの質問に、答える</span>",
+          "      <span class='text-2xl whitespace-nowrap' style='color: #7C5E3C'>画面ができあがる</span>",
+          "    </div>",
+          "    <div class='flex items-center gap-6' data-animation='animate' data-sync='3:0.0' data-opacity='0,1' data-translate-x='-30,0' data-start='9.3' data-end='9.8' data-easing='easeOut'>",
+          "      <span class='bg-lime-600 text-white text-xl font-bold px-5 py-1.5 rounded-full whitespace-nowrap'>Step 3</span>",
+          "      <span class='text-3xl font-semibold whitespace-nowrap flex-shrink-0' style='color: #431407; width: 26rem'>お店で、タップする</span>",
+          "      <span class='text-2xl whitespace-nowrap' style='color: #7C5E3C'>買った品に、その場でしるし</span>",
+          "    </div>",
+          "  </div>",
+          "  <p class='text-2xl mt-12' style='color: #7C5E3C' data-animation='animate' data-sync='4:0.1' data-opacity='0,1' data-translate-y='10,0' data-start='12.5' data-end='13.0' data-easing='easeOut'>気づいたら、伝えるだけで育つ。コードは一行も書いていません。</p>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>10 / 11</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "スマホ用の画面は、買い物リストだけのものではありません。献立にも、常備品にも、どのコレクションにも足せて、作った後も会話で育てられます。まずは、よく使う一覧表から頼んでみてください。作り方の基本は、『コレクション作成デモ』でどうぞ。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='relative flex flex-col items-center justify-center h-full text-center px-20' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
+          "  <h2 class='text-5xl font-bold leading-snug' style='color: #431407' data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='20,0' data-start='0.0' data-end='0.5' data-easing='easeOut'>画面も、作って終わりではなく、<br/>使いながら育てる</h2>",
+          "  <div class='w-24 mt-9 mb-9' style='border-top: 4px solid #EA580C'></div>",
+          "  <p class='text-2xl leading-relaxed' style='color: #7C5E3C' data-animation='animate' data-sync='2:0.0' data-opacity='0,1' data-translate-y='10,0' data-start='16.0' data-end='16.5' data-easing='easeOut'>まずは、よく使う一覧表から頼んでみてください。</p>",
+          "  <p class='text-4xl font-bold mt-8' style='color: #EA580C' data-animation='animate' data-sync='2:0.5' data-opacity='0,1' data-scale='0.9,1' data-start='18.5' data-end='19.0' data-easing='easeOut'>🌱 ぜひ、試してみてください！</p>",
+          "  <p class='text-xl mt-10' style='color: #A08B6E' data-animation='animate' data-sync='3:0.1' data-opacity='0,1' data-translate-y='10,0' data-start='21.5' data-end='22.0' data-easing='easeOut'>🎬 はじまりは「台所の三点セットを、会話で作る」 ・ 作り方の基本は「コレクション作成デモ」</p>",
+          "  <div class='absolute bottom-3 right-6 text-lg' style='color: rgba(160, 139, 110, .6)'>11 / 11</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
