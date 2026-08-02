@@ -2,7 +2,7 @@
 
 デッキ: `tutorials/google-calendar-tutorial`（ja）
 動画: `output/google-calendar-tutorial_ja/google-calendar-tutorial_ja_ja.mp4`（2:52）
-公開日: 2026-08-02（予定・未アップロード）
+公開日: 2026-08-02
 
 ## Title
 
@@ -63,7 +63,7 @@ https://github.com/receptron/mulmoclaude
 ## URL
 
 ```
-（未公開）
+https://youtu.be/bwWd4FkTfn8
 ```
 
 ## X 投稿（日本語）
