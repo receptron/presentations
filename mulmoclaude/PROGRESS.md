@@ -58,7 +58,7 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 ## 残作業
 
 1. **X の URL 記帳** — 状態の正本は各メタデータの「投稿枠」「投稿後」行。一覧は書き写さず `mulmo-x-status` スキルで導出する（`node ~/.claude/skills/mulmo-x-status/scripts/x-status.mjs`）
-2. **weather-showcase** — ja 公開済み（2026-07-31、[動画](https://youtu.be/6tvk4lsW8Lc)・メタデータ: youtube/weather-showcase_ja.md）。X は 8/1 20:30 JST に予約済み・生成物は `output/done/` へ片付け済み。残: YouTube 側の playlist 反映確認（「できること」の手動ソート切替＋マスターの並び — 順序の正本は `youtube/README.md`）→ 投稿後の URL 記帳（8/1 20:30 公開後）
+2. **weather-showcase** — ja 公開済み（2026-07-31、[動画](https://youtu.be/6tvk4lsW8Lc)・メタデータ: youtube/weather-showcase_ja.md）。X 投稿済み（2026-08-01・URL 記帳済み）・生成物は `output/done/` へ片付け済み。残: YouTube 側の playlist 反映確認（「できること」の手動ソート切替＋マスターの並び — 順序の正本は `youtube/README.md`）
 3. **講座 3 本の en**（kitchen-trio → pantry → csv）— kitchen の ja golden データは en workspace へ英訳投入済み。次は en workspace での英語ライブ再演・収録 → en スクリプト作成・finalize
 4. **calendar-showcase（demos #2）の制作着手** — 企画は content-roadmap.md
 5. **未 commit 下書き 3 本の扱い判断** — `tutorials/getting-started` / `tutorials/building-a-collection` / `demos/daily-workflow`（demos #2 吸収により役割終了）。破棄か別テーマか
