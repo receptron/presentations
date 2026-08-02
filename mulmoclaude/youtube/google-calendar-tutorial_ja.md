@@ -2,7 +2,7 @@
 
 デッキ: `tutorials/google-calendar-tutorial`（ja）
 動画: `output/google-calendar-tutorial_ja/google-calendar-tutorial_ja_ja.mp4`（2:52）
-公開日: 2026-08-02（予定・未アップロード）
+公開日: 2026-08-02
 
 ## Title
 
@@ -63,13 +63,13 @@ https://github.com/receptron/mulmoclaude
 ## URL
 
 ```
-（未公開）
+https://youtu.be/bwWd4FkTfn8
 ```
 
 ## X 投稿（日本語）
 
 添付: `output/google-calendar-tutorial_ja/google-calendar-tutorial_ja_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
-投稿枠: 2026-08-02（日）20:30 JST 推奨（未予約）。テキストの定常便が同日 20:30 に出る場合は動画側を 12:15 JST にずらす。
+投稿枠: 2026-08-02（日）20:30 JST — 投稿済み。
 Codex クロスチェック済み（2026-08-02・MUST FIX ゼロ）。初稿の指摘 3 点を反映済み: ロール切替の手順が抜けていた / 「利用料がかからない」の範囲が製品全体に読めた / 「このアプリ」の指す先が初見に曖昧だった。
 
 ```
@@ -94,4 +94,4 @@ GitHub: https://github.com/receptron/mulmoclaude
 #MulmoClaude #AI #VibeCrafting
 ```
 
-投稿後: X ポスト URL — （未投稿）
+投稿後: X ポスト URL — https://x.com/SingularitySoci/status/2083877974441394203（2026-08-02 20:30 JST）
