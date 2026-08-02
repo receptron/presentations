@@ -58,6 +58,8 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 3. コレクションは、使いながら育てる — MulmoClaude 常備品リスト編
 4. CSVは、置くだけでいい — MulmoClaude CSVコレクション
 
+（google-calendar-tutorial 公開後は 5 として末尾に追加）
+
 </details>
 
 <details><summary>MulmoClaude 機能紹介 — ソート: 公開日（古い順）</summary>
