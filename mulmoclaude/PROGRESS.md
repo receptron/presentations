@@ -64,7 +64,7 @@ YouTube 公開時の手順（メタデータ記入・playlist の作成/追加�
 4. **calendar-showcase（demos #2）の制作着手** — 企画は content-roadmap.md
 5. **未 commit 下書き 3 本の扱い判断** — `tutorials/getting-started` / `tutorials/building-a-collection` / `demos/daily-workflow`（demos #2 吸収により役割終了）。破棄か別テーマか
 6. **未決**: en X（@mulmocast）の動画告知 5 本の文面と開始日
-7. **tutorials #7 `google-calendar-tutorial_ja` の公開後作業** — YouTube 公開済み（2026-08-02・URL 記帳済み）。残り: playlist 反映（作り方 = 自動ソートで追加のみ / マスター = 手動並べ替え）→ X 投稿（枠はメタデータ参照）・URL 記帳 → ss web 記事下書き（設定系 How は記事必須）
+7. **tutorials #7 `google-calendar-tutorial_ja` の ss web 記事下書き** — YouTube 公開・playlist 反映・X 投稿と URL 記帳まで完了（2026-08-02）。残りは記事下書きのみ（設定系 How は記事必須。`mulmo markdown` から派生）
 8. 任意: 生成済み .srt の YouTube 字幕アップ / csv 分析ビートに「発注先」列を足す改良（en 版収録か続編で）
 
 ## 既知のズレ（据え置き）
