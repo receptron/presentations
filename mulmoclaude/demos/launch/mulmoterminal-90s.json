@@ -1,0 +1,234 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Calm, confident, measured — short declarative sentences, like a good product keynote. No exclamation marks in delivery, no salesy energy. Let the pauses between sentences breathe."
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "title": "MulmoTerminal — a cockpit for parallel agents (90s demo)",
+  "description": "DRAFT. Launch demo per capture-guide.md §6-2. Every beat marked PLACEHOLDER awaits real footage (B-roll / grid recording / A-2 phone video) — see mulmoterminal-90s-NOTES.md beside this file for the material status and the replacement procedure.",
+  "lang": "en",
+  "beats": [
+    {
+      "text": "One terminal. One agent. You wait.",
+      "duration": 8,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-900 flex flex-col relative'>",
+          "  <div class='absolute top-4 left-4 border-2 border-dashed border-amber-400 rounded-lg px-4 py-2 text-amber-300 font-bold text-lg'>PLACEHOLDER 1/11 — 差し替え予定</div>",
+          "  <div class='flex-1 flex flex-col items-center justify-center gap-3 text-slate-400'>",
+          "    <div class='text-2xl font-bold text-slate-200'>0:00–0:08 — B-roll（未撮影）</div>",
+          "    <div class='text-xl'>通常のターミナルでタブを何枚も切り替えて探し回る（イライラする画）</div>",
+          "    <div class='text-lg text-slate-500'>§6-3 の 1（B-roll 10 秒）→ ./mulmoterminal-90s-assets/broll-tabs.mp4</div>",
+          "  </div>",
+          "  <div class='pb-10 flex justify-center'><div class='bg-black/70 text-white text-2xl px-6 py-2 rounded'>One terminal. One agent. You wait.</div></div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Run five agents and you lose track of all of them.",
+      "duration": 6,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-900 flex flex-col relative'>",
+          "  <div class='absolute top-4 left-4 border-2 border-dashed border-amber-400 rounded-lg px-4 py-2 text-amber-300 font-bold text-lg'>PLACEHOLDER 2/11 — 差し替え予定</div>",
+          "  <div class='flex-1 flex flex-col items-center justify-center gap-3 text-slate-400'>",
+          "    <div class='text-2xl font-bold text-slate-200'>0:08–0:14 — B-roll 続き（未撮影）</div>",
+          "    <div class='text-xl'>タブを行ったり来たり。同じ B-roll の後半を使う</div>",
+          "    <div class='text-lg text-slate-500'>§6-3 の 1 → broll-tabs.mp4 の後半区間</div>",
+          "  </div>",
+          "  <div class='pb-10 flex justify-center'><div class='bg-black/70 text-white text-2xl px-6 py-2 rounded'>Run five agents and you lose track of all of them.</div></div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "MulmoTerminal — a cockpit for parallel agents.",
+      "duration": 8,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-900 flex flex-col relative'>",
+          "  <div class='absolute top-4 left-4 border-2 border-dashed border-amber-400 rounded-lg px-4 py-2 text-amber-300 font-bold text-lg'>PLACEHOLDER 3/11 — 差し替え予定</div>",
+          "  <div class='flex-1 flex flex-col items-center justify-center gap-3 text-slate-400'>",
+          "    <div class='text-2xl font-bold text-slate-200'>0:14–0:22 — 決め画（未撮影）</div>",
+          "    <div class='text-xl'>グリッドがバッと開く。デモ環境（mt-demo 9 セル）の長回しから切り出す</div>",
+          "    <div class='text-lg text-slate-500'>§6-3 の 2（グリッド本編 3 分回しっぱなし）→ grid-open.mp4</div>",
+          "  </div>",
+          "  <div class='pb-10 flex justify-center'><div class='bg-black/70 text-white text-2xl px-6 py-2 rounded'>MulmoTerminal — a cockpit for parallel agents.</div></div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Blue means working. Amber means it needs you. One glance, not five tabs.",
+      "duration": 13,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-900 flex flex-col relative'>",
+          "  <div class='absolute top-4 left-4 border-2 border-dashed border-amber-400 rounded-lg px-4 py-2 text-amber-300 font-bold text-lg'>PLACEHOLDER 4/11 — 差し替え予定</div>",
+          "  <div class='flex-1 flex flex-col items-center justify-center gap-3 text-slate-400'>",
+          "    <div class='text-2xl font-bold text-slate-200'>0:22–0:35 — グリッド本編（未撮影）</div>",
+          "    <div class='text-xl'>4 セルが同時に動く。色が変わる瞬間に自動ズームで寄る</div>",
+          "    <div class='text-lg text-slate-500'>§6-3 の 2 → grid-states.mp4（青→アンバーの変化フレームを含む区間）</div>",
+          "  </div>",
+          "  <div class='pb-10 flex justify-center'><div class='bg-black/70 text-white text-2xl px-6 py-2 rounded'>Blue = working. Amber = needs you. One glance, not five tabs.</div></div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Answer the one that called you. Ignore the rest.",
+      "duration": 10,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-900 flex flex-col relative'>",
+          "  <div class='absolute top-4 left-4 border-2 border-dashed border-amber-400 rounded-lg px-4 py-2 text-amber-300 font-bold text-lg'>PLACEHOLDER 5/11 — 差し替え予定</div>",
+          "  <div class='flex-1 flex flex-col items-center justify-center gap-3 text-slate-400'>",
+          "    <div class='text-2xl font-bold text-slate-200'>0:35–0:45 — グリッド本編（未撮影）</div>",
+          "    <div class='text-xl'>アンバーのセルを開いて答える → 青に戻る</div>",
+          "    <div class='text-lg text-slate-500'>§6-3 の 2 → amber-answer.mp4</div>",
+          "  </div>",
+          "  <div class='pb-10 flex justify-center'><div class='bg-black/70 text-white text-2xl px-6 py-2 rounded'>Answer the one that called you. Ignore the rest.</div></div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Walk away. Your phone taps you on the shoulder.",
+      "duration": 13,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-900 flex flex-col relative'>",
+          "  <div class='absolute top-4 left-4 border-2 border-dashed border-red-400 rounded-lg px-4 py-2 text-red-300 font-bold text-lg'>PLACEHOLDER 6/11 — 差し替え予定（A-2 待ち）</div>",
+          "  <div class='flex-1 flex flex-col items-center justify-center gap-3 text-slate-400'>",
+          "    <div class='text-2xl font-bold text-slate-200'>0:45–0:58 — スマホ実写（未撮影・カメラ必要）</div>",
+          "    <div class='text-xl'>Mac から離れる → スマホのロック画面に通知。素材 2（A-2）の実写を流用</div>",
+          "    <div class='text-lg text-slate-500'>capture-guide §5。A-2 が撮れるまでこの 2 ビートは埋まらない → phone-notify.mp4</div>",
+          "  </div>",
+          "  <div class='pb-10 flex justify-center'><div class='bg-black/70 text-white text-2xl px-6 py-2 rounded'>Walk away. Your phone taps you on the shoulder.</div></div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Answer from your phone. Yes. No. Continue.",
+      "duration": 10,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-900 flex flex-col relative'>",
+          "  <div class='absolute top-4 left-4 border-2 border-dashed border-red-400 rounded-lg px-4 py-2 text-red-300 font-bold text-lg'>PLACEHOLDER 7/11 — 差し替え予定（A-2 待ち）</div>",
+          "  <div class='flex-1 flex flex-col items-center justify-center gap-3 text-slate-400'>",
+          "    <div class='text-2xl font-bold text-slate-200'>0:58–1:08 — スマホ実写 続き（未撮影・カメラ必要）</div>",
+          "    <div class='text-xl'>スマホから yes をタップ → Mac が動き出す</div>",
+          "    <div class='text-lg text-slate-500'>capture-guide §5 → phone-tap.mp4</div>",
+          "  </div>",
+          "  <div class='pb-10 flex justify-center'><div class='bg-black/70 text-white text-2xl px-6 py-2 rounded'>Answer from your phone. Yes / no / continue.</div></div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Each agent in its own worktree. Commit, push, open a pull request — from the grid.",
+      "duration": 10,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-900 flex flex-col relative'>",
+          "  <div class='absolute top-4 left-4 border-2 border-dashed border-amber-400 rounded-lg px-4 py-2 text-amber-300 font-bold text-lg'>PLACEHOLDER 8/11 — 差し替え予定</div>",
+          "  <div class='flex-1 flex flex-col items-center justify-center gap-3 text-slate-400'>",
+          "    <div class='text-2xl font-bold text-slate-200'>1:08–1:18 — グリッド本編（未撮影）</div>",
+          "    <div class='text-xl'>worktree 隔離 → diff → PR ボタン（ここもズーム）</div>",
+          "    <div class='text-lg text-slate-500'>§6-3 の 2 → worktree-pr.mp4</div>",
+          "  </div>",
+          "  <div class='pb-10 flex justify-center'><div class='bg-black/70 text-white text-2xl px-6 py-2 rounded'>Each agent in its own worktree. Commit, push, open a PR — from the grid.</div></div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Model, context, and cost — per session.",
+      "duration": 8,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-900 flex flex-col relative'>",
+          "  <div class='absolute top-4 left-4 border-2 border-dashed border-amber-400 rounded-lg px-4 py-2 text-amber-300 font-bold text-lg'>PLACEHOLDER 9/11 — 差し替え予定</div>",
+          "  <div class='flex-1 flex flex-col items-center justify-center gap-3 text-slate-400'>",
+          "    <div class='text-2xl font-bold text-slate-200'>1:18–1:26 — グリッド本編（未撮影）</div>",
+          "    <div class='text-xl'>コスト・context% のチップに寄る</div>",
+          "    <div class='text-lg text-slate-500'>§6-3 の 2 → cost-chips.mp4</div>",
+          "  </div>",
+          "  <div class='pb-10 flex justify-center'><div class='bg-black/70 text-white text-2xl px-6 py-2 rounded'>Model, context, and cost — per session.</div></div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Local. Open source. No Electron.",
+      "duration": 6,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex flex-col items-center justify-center gap-8'>",
+          "  <div class='font-mono text-4xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <div class='text-2xl text-slate-300 tracking-wide'>Local. Open source. No Electron.</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "",
+      "duration": 3,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex items-center justify-center'>",
+          "  <div class='font-mono text-3xl text-slate-200'>github.com/receptron/mulmoterminal</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
