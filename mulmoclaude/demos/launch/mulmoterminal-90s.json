@@ -84,16 +84,9 @@
       "duration": 8,
       "image": {
         "type": "html_tailwind",
+        "animation": { "movie": true },
         "html": [
-          "<div class='w-full h-full bg-slate-900 flex flex-col relative'>",
-          "  <div class='absolute top-4 left-4 border-2 border-dashed border-amber-400 rounded-lg px-4 py-2 text-amber-300 font-bold text-lg'>PLACEHOLDER 3/11 — 差し替え予定</div>",
-          "  <div class='flex-1 flex flex-col items-center justify-center gap-3 text-slate-400'>",
-          "    <div class='text-2xl font-bold text-slate-200'>0:14–0:22 — 決め画（未撮影）</div>",
-          "    <div class='text-xl'>グリッドがバッと開く。デモ環境（mt-demo 9 セル）の長回しから切り出す</div>",
-          "    <div class='text-lg text-slate-500'>§6-3 の 2（グリッド本編 3 分回しっぱなし）→ grid-open.mp4</div>",
-          "  </div>",
-          "  <div class='pb-10 flex justify-center'><div class='bg-black/70 text-white text-2xl px-6 py-2 rounded'>MulmoTerminal — a cockpit for parallel agents.</div></div>",
-          "</div>"
+          "<video src='./mulmoterminal-90s-assets/grid-open.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>"
         ]
       }
     },
@@ -102,16 +95,9 @@
       "duration": 13,
       "image": {
         "type": "html_tailwind",
+        "animation": { "movie": true },
         "html": [
-          "<div class='w-full h-full bg-slate-900 flex flex-col relative'>",
-          "  <div class='absolute top-4 left-4 border-2 border-dashed border-amber-400 rounded-lg px-4 py-2 text-amber-300 font-bold text-lg'>PLACEHOLDER 4/11 — 差し替え予定</div>",
-          "  <div class='flex-1 flex flex-col items-center justify-center gap-3 text-slate-400'>",
-          "    <div class='text-2xl font-bold text-slate-200'>0:22–0:35 — グリッド本編（未撮影）</div>",
-          "    <div class='text-xl'>4 セルが同時に動く。色が変わる瞬間に自動ズームで寄る</div>",
-          "    <div class='text-lg text-slate-500'>§6-3 の 2 → grid-states.mp4（青→アンバーの変化フレームを含む区間）</div>",
-          "  </div>",
-          "  <div class='pb-10 flex justify-center'><div class='bg-black/70 text-white text-2xl px-6 py-2 rounded'>Blue = working. Amber = needs you. One glance, not five tabs.</div></div>",
-          "</div>"
+          "<video src='./mulmoterminal-90s-assets/grid-states.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>"
         ]
       }
     },
