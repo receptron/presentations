@@ -107,22 +107,24 @@
     },
     {
       "text": "Blue means working. Amber means it needs you. One glance, not five tabs.",
-      "duration": 13,
+      "duration": 8,
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
-          "<video src='./mulmoterminal-90s-assets/grid-states.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "  <div class='relative' style='max-height:640px'>",
+          "    <img src='./mulmoterminal-90s-assets/grid-states-still.png' class='rounded-xl shadow-2xl' style='max-height:640px' />",
+          "    <div class='absolute rounded-xl ring-4 ring-sky-400' style='left:33.5%;top:6.5%;width:32%;height:30%' data-animation='animate' data-opacity='0,1' data-start='0.6' data-end='1.1' data-easing='easeOut'></div>",
+          "    <div class='absolute rounded-xl ring-4 ring-amber-400' style='left:33.5%;top:67%;width:32%;height:30%' data-animation='animate' data-opacity='0,1' data-start='2.4' data-end='2.9' data-easing='easeOut'></div>",
+          "  </div>",
           "</div>"
         ]
       }
     },
     {
       "text": "Answer the one that called you. Ignore the rest.",
-      "duration": 9,
+      "duration": 8,
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -137,7 +139,7 @@
     },
     {
       "text": "Walk away. Your phone taps you on the shoulder.",
-      "duration": 7,
+      "duration": 6,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -202,9 +204,13 @@
         },
         "html": [
           "<div class='w-full h-full bg-slate-950 flex items-center justify-center relative'>",
+          "<div class='relative'>",
           "<video src='./mulmoterminal-90s-assets/worktree-pr.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
-          "<div class='absolute left-1/2 -translate-x-1/2 bottom-24 rounded-xl overflow-hidden ring-2 ring-indigo-400 shadow-2xl' data-animation='animate' data-opacity='1,0' data-start='3.4' data-end='3.9'>",
+          "<div class='absolute rounded-md ring-2 ring-indigo-400' style='left:27%;top:36%;width:46%;height:18%' data-animation='animate' data-opacity='1,0' data-start='3.4' data-end='3.9'></div>",
+          "</div>",
+          "<div class='absolute left-1/2 -translate-x-1/2 top-8 rounded-xl overflow-hidden ring-2 ring-indigo-400 shadow-2xl' data-animation='animate' data-opacity='1,0' data-start='3.4' data-end='3.9'>",
           "<video src='./mulmoterminal-90s-assets/worktree-zoom.mp4' autoplay muted playsinline style='width:640px'></video>",
+          "<div class='absolute top-1 right-2 rounded bg-indigo-500 px-1.5 text-[11px] font-bold text-white'>2&#215;</div>",
           "</div>",
           "</div>"
         ]
