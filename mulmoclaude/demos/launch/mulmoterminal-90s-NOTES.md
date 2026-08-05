@@ -14,7 +14,7 @@ mulmoterminal-marketing の `assets/capture-guide.md` §6-2（英文は 2026-07-
 | 5 | 0:35–0:45 | `amber-answer.mp4` | アンバーを開いて答える → 青へ | **撮影済み・埋め込み済み（2026-08-05）** — タイル→api 拡大→picker に回答（Structured JSON…）→働き出す→タイル復帰。検品合格 |
 | 6 | 0:45–0:58 | `phone-notify.mp4` | ロック画面に通知（実写） | **UI モックで仮埋め（2026-08-05）** — ロック画面＋通知カードのアニメ。実写（A-2）はカメラ待ち |
 | 7 | 0:58–1:08 | `phone-tap.mp4` | スマホから yes → Mac が動く | **UI モックで仮埋め（2026-08-05）** — quick reply の yes 点灯 → resumed 表示。実写（A-2）はカメラ待ち |
-| 8 | 1:08–1:18 | `worktree-pr.mp4` | worktree → diff → PR ボタン | 未撮影 — 自動化3テイク失敗（ランチャーのフォーム操作: チップ選択が no-op / dir 編集後に worktree 欄が消える）。**次回はフォーム操作だけ手動＋録画は自動**が確実 |
+| 8 | 1:08–1:18 | `worktree-pr.mp4` | worktree → diff → PR ボタン | **撮影済み・埋め込み済み（2026-08-06）** — ⎇ fix-login 行から起動 → +1 バッジ → Changes vs main パネル（Commit/Push/Open PR）。10テイク目。起動は worktree 行クリック経路が確実（create-and-launch 経路はセルが出ないことがある） |
 | 9 | 1:18–1:26 | `cost-chips.mp4` | コスト・context% チップに寄る | **UI モック採用** — 実写は製品バグでブロック: symlink の cwd（/tmp/mt-demo/…）だと GET /api/session/:id が model/ctx/usage を返さない（realpath なら返る）。起票予定 |
 | 10 | 1:26–1:32 | —（HTML カードで完成） | `npx mulmoterminal@latest` | **完成** |
 | 11 | 1:32–1:35 | —（HTML カードで完成） | GitHub URL | **完成** |
