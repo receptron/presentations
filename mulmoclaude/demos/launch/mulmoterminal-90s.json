@@ -45,7 +45,7 @@
   "beats": [
     {
       "text": "One terminal. One agent. You wait.",
-      "duration": 6,
+      "duration": 5,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -92,7 +92,7 @@
     },
     {
       "text": "MulmoTerminal — a cockpit for parallel agents.",
-      "duration": 8,
+      "duration": 6,
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -137,7 +137,7 @@
     },
     {
       "text": "Walk away. Your phone taps you on the shoulder.",
-      "duration": 10,
+      "duration": 7,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -149,7 +149,7 @@
           "      <div class='text-6xl font-light'>9:41</div>",
           "      <div class='text-sm mt-1 text-slate-400'>Tuesday, August 5</div>",
           "    </div>",
-          "    <div class='mx-3 mt-10 rounded-2xl bg-slate-800/90 p-4 shadow-xl' data-animation='animate' data-opacity='0,1' data-start='5' data-end='5.6' data-easing='easeOut'>",
+          "    <div class='mx-3 mt-10 rounded-2xl bg-slate-800/90 p-4 shadow-xl' data-animation='animate' data-opacity='0,1' data-start='2.2' data-end='2.8' data-easing='easeOut'>",
           "      <div class='flex items-center gap-2'>",
           "        <div class='w-8 h-8 rounded-lg bg-indigo-500 flex items-center justify-center text-white font-bold text-sm'>MT</div>",
           "        <div class='text-slate-200 text-sm font-semibold'>MulmoTerminal</div>",
@@ -201,15 +201,18 @@
           "movie": true
         },
         "html": [
-          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center relative'>",
           "<video src='./mulmoterminal-90s-assets/worktree-pr.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "<div class='absolute left-1/2 -translate-x-1/2 bottom-24 rounded-xl overflow-hidden ring-2 ring-indigo-400 shadow-2xl' data-animation='animate' data-opacity='1,0' data-start='3.4' data-end='3.9'>",
+          "<video src='./mulmoterminal-90s-assets/worktree-zoom.mp4' autoplay muted playsinline style='width:640px'></video>",
+          "</div>",
           "</div>"
         ]
       }
     },
     {
       "text": "Model, context, and cost — per session.",
-      "duration": 7,
+      "duration": 6,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -217,12 +220,12 @@
           "<div class='w-full h-full bg-slate-950 flex flex-col items-center justify-center gap-10 relative'>",
           "  <div class='w-[1000px] rounded-xl bg-slate-900 border border-slate-700 shadow-2xl px-6 py-4 flex items-center gap-4 font-mono text-xl'>",
           "    <span class='w-3 h-3 rounded-full bg-emerald-400'></span>",
-          "    <span class='px-3 py-1 rounded bg-slate-800 text-slate-300 relative'>&#9095; main &#9679;2<span class='absolute -inset-1 rounded ring-4 ring-indigo-400' data-animation='animate' data-opacity='0,1' data-start='1.2' data-end='1.6' data-easing='easeOut'></span></span>",
-          "    <span class='px-3 py-1 rounded bg-slate-800 text-slate-300 relative'>Sonnet &#183; ctx 8%<span class='absolute -inset-1 rounded ring-4 ring-indigo-400' data-animation='animate' data-opacity='0,1' data-start='2.4' data-end='2.8' data-easing='easeOut'></span></span>",
-          "    <span class='px-3 py-1 rounded bg-slate-800 text-slate-300 relative'>&#8673;1.3M &#8675;5.9k<span class='absolute -inset-1 rounded ring-4 ring-indigo-400' data-animation='animate' data-opacity='0,1' data-start='3.6' data-end='4' data-easing='easeOut'></span></span>",
+          "    <span class='px-3 py-1 rounded bg-slate-800 text-slate-300 relative'>&#9095; main &#9679;2</span>",
+          "    <span class='relative inline-flex gap-4'><span class='px-3 py-1 rounded bg-slate-800 text-slate-300'>Sonnet &#183; ctx 8%</span>",
+          "    <span class='px-3 py-1 rounded bg-slate-800 text-slate-300'>&#8673;1.3M &#8675;5.9k</span><span class='absolute -inset-2 rounded-lg ring-4 ring-indigo-400' data-animation='animate' data-opacity='0,1' data-start='1.6' data-end='2.1' data-easing='easeOut'></span></span>",
           "    <span class='text-slate-500 text-base truncate'>Unit tests for route 404 fallback…</span>",
           "  </div>",
-          "  <div class='w-[1000px] rounded-xl bg-slate-900 border border-slate-700 px-6 py-4 font-mono text-lg text-slate-400 flex gap-10' data-animation='animate' data-opacity='0,1' data-start='5' data-end='5.5' data-easing='easeOut'>",
+          "  <div class='w-[1000px] rounded-xl bg-slate-900 border border-slate-700 px-6 py-4 font-mono text-lg text-slate-400 flex gap-10' data-animation='animate' data-opacity='0,1' data-start='4' data-end='4.5' data-easing='easeOut'>",
           "    <span>Estimated cost</span><span class='text-slate-200'>Session $0.84</span><span class='text-slate-200'>Today $6.12</span><span class='text-slate-200'>Month $41.07</span>",
           "  </div>",
           "  <div class='absolute bottom-3 right-4 text-slate-700 text-xs'>UI mock — 実写差し替え予定</div>",
