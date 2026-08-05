@@ -264,16 +264,6 @@
       "delimiters": [
         ". "
       ]
-    },
-    "styles": [
-      "font-family: 'Helvetica Neue', Helvetica, sans-serif",
-      "font-size: 30px",
-      "font-weight: 600",
-      "color: white",
-      "background: rgba(0,0,0,0.55)",
-      "padding: 6px 18px",
-      "border-radius: 8px"
-    ],
-    "bottomOffset": 40
+    }
   }
 }
