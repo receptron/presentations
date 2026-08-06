@@ -28,7 +28,7 @@
   "audioParams": {
     "bgm": {
       "kind": "path",
-      "path": "../../../resources/bgms/morning001.mp3"
+      "path": "../../resources/bgms/morning001.mp3"
     },
     "padding": 0.3,
     "introPadding": 1,
@@ -45,7 +45,7 @@
   "beats": [
     {
       "text": "One terminal. One agent. You wait.",
-      "duration": 5,
+      "duration": 6.5,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -71,7 +71,7 @@
     },
     {
       "text": "Run five agents and you lose track of all of them.",
-      "duration": 6,
+      "duration": 5.0,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -107,7 +107,7 @@
     },
     {
       "text": "Blue means working. Amber means it needs you. Green means done. One glance, not five tabs.",
-      "duration": 12,
+      "duration": 11.5,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -140,7 +140,7 @@
     },
     {
       "text": "Walk away. Your phone taps you on the shoulder.",
-      "duration": 7,
+      "duration": 5.5,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -233,7 +233,7 @@
     },
     {
       "text": "Model, context, and cost — per session.",
-      "duration": 6,
+      "duration": 6.5,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -256,7 +256,7 @@
     },
     {
       "text": "Local. Open source. No Electron.",
-      "duration": 9,
+      "duration": 8.5,
       "image": {
         "type": "html_tailwind",
         "html": [

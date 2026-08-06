@@ -2,15 +2,19 @@ const fs = require("fs");
 const path = require("path");
 const { mulmoScriptSchema } = require("mulmocast");
 
-const root = path.join(__dirname, "..", "mulmoclaude");
-const files = fs
-  .readdirSync(root, { recursive: true })
-  .filter((f) => f.endsWith(".json"))
-  .map((f) => path.join(root, f))
+const roots = ["mulmoclaude", "mulmoterminal"].map((d) => path.join(__dirname, "..", d));
+const files = roots
+  .filter((root) => fs.existsSync(root))
+  .flatMap((root) =>
+    fs
+      .readdirSync(root, { recursive: true })
+      .filter((f) => f.endsWith(".json"))
+      .map((f) => path.join(root, f)),
+  )
   .sort();
 
 if (files.length === 0) {
-  console.error("No MulmoScript files found under mulmoclaude/");
+  console.error("No MulmoScript files found under mulmoclaude/ or mulmoterminal/");
   process.exit(1);
 }
 

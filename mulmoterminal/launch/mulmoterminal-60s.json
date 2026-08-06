@@ -28,7 +28,7 @@
   "audioParams": {
     "bgm": {
       "kind": "path",
-      "path": "../../../resources/bgms/morning001.mp3"
+      "path": "../../resources/bgms/morning001.mp3"
     },
     "padding": 0.3,
     "introPadding": 1,
@@ -85,7 +85,7 @@
     },
     {
       "text": "Blue is working. Amber is waiting on you — and only amber chimes. Green is done.",
-      "duration": 11,
+      "duration": 11.5,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -118,7 +118,7 @@
     },
     {
       "text": "Claude, Codex, Antigravity — one cockpit for all of them.",
-      "duration": 8,
+      "duration": 7.5,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -149,7 +149,7 @@
     },
     {
       "text": "And when you walk away, your phone taps you on the shoulder.",
-      "duration": 7,
+      "duration": 5.5,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -180,7 +180,7 @@
     },
     {
       "text": "Local. Open source. No Electron.",
-      "duration": 6,
+      "duration": 7.0,
       "image": {
         "type": "html_tailwind",
         "html": [

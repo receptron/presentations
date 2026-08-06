@@ -1,0 +1,440 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "プレゼンター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini"
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "movieParams": {
+    "provider": "replicate"
+  },
+  "soundEffectParams": {
+    "provider": "replicate"
+  },
+  "slideParams": {
+    "theme": {
+      "colors": {
+        "bg": "0A0F24",
+        "bgCard": "111A3A",
+        "bgCardAlt": "16224D",
+        "text": "EEF2FF",
+        "textMuted": "9FB0D8",
+        "textDim": "6F7FA0",
+        "primary": "38BDF8",
+        "accent": "818CF8",
+        "success": "34D399",
+        "warning": "FBBF24",
+        "danger": "FB7185",
+        "info": "22D3EE",
+        "highlight": "F0ABFC"
+      },
+      "fonts": {
+        "title": "Georgia",
+        "body": "Helvetica",
+        "mono": "Menlo",
+        "accent": "Outfit"
+      },
+      "bgGradient": "radial-gradient(1200px 700px at 12% -10%, rgba(56,189,248,.16), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(129,140,248,.16), transparent 55%), linear-gradient(160deg, #0A0F24, #111A3A 55%, #16224D)",
+      "titleGradient": "linear-gradient(100deg, #FFFFFF, #38BDF8 60%, #818CF8)",
+      "cardStyle": "glass"
+    }
+  },
+  "audioParams": {
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 1,
+    "bgmVolume": 0.2,
+    "audioVolume": 1,
+    "suppressSpeech": false
+  },
+  "title": "MulmoClaude と過ごす一日",
+  "description": "ある普通の一日をアシスト付きで。朝食には一日のダイジェストが待っていて、ランチではスマホからさっと記録。午後は議事録が勝手に整理され、夜には「今週何を約束したっけ？」にちゃんと答えてくれる。",
+  "lang": "ja",
+  "beats": [
+    {
+      "text": "MulmoClaude と暮らすって、実際どんな感じなんでしょう？今日はある普通の一日を追いかけます。デモでもセットアップでもなく、ただ使っているだけのリズムです。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "title",
+          "eyebrow": {
+            "label": "デモ · 日常ワークフロー"
+          },
+          "titleSize": "hero",
+          "subtitleSize": "lead",
+          "title": "MulmoClaude と過ごす一日",
+          "subtitle": "ある普通の一日を、{primary:さりげなくアシスト}",
+          "chips": [
+            "☕ 朝のダイジェスト",
+            "📱 どこからでも記録",
+            "🗂️ 勝手に整理される",
+            "🌙 誠実な夜の振り返り"
+          ]
+        }
+      }
+    },
+    {
+      "text": "一日の流れはこうです。朝食にダイジェスト、外出先でさっと記録、午後はメモが勝手に整理されて、夜にはちゃんとした答えが返ってくる。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "timeline",
+          "accentColor": "primary",
+          "eyebrow": {
+            "label": "一日の全体像"
+          },
+          "title": "4つの瞬間",
+          "subtitle": "どれも「整理しよう」と座り込む必要がない",
+          "items": [
+            {
+              "date": "07:30",
+              "title": "コーヒーと一緒にダイジェスト",
+              "description": "夜の間に届いたフィード、天気、\n今日の予定",
+              "color": "primary",
+              "done": true
+            },
+            {
+              "date": "12:30",
+              "title": "ランチ先で記録",
+              "description": "覚えておきたいお店を\nスマホからさっと追加",
+              "color": "accent"
+            },
+            {
+              "date": "15:00",
+              "title": "メモが勝手に整理される",
+              "description": "雑な議事録を投げ込むだけで\n整理されたプロジェクト記録に",
+              "color": "info"
+            },
+            {
+              "date": "21:00",
+              "title": "正直な問いかけ",
+              "description": "「今週、何を約束\nしたっけ？」",
+              "color": "success",
+              "hot": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "text": "7時半。あなたが寝ている間にフィードが回っていました。朝食と一緒に一枚のダイジェストが届いています。フォローしているニュース、天気、そして今日あなたに求められていること。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "accentColor": "primary",
+          "eyebrow": {
+            "label": "07:30 · 朝"
+          },
+          "left": {
+            "title": "あなたより先にダイジェストが準備されていた",
+            "label": "画面キャプチャ",
+            "accentColor": "primary",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "選んだフィードが夜のうちに取得済み",
+                  "リンクの羅列ではなく、要約されている",
+                  "今日のスケジュールと未達の約束が一番上に"
+                ]
+              },
+              {
+                "type": "callout",
+                "text": "設定はたった一度、一言だけ：「毎朝ブリーフィングして」",
+                "style": "info"
+              }
+            ],
+            "ratio": 45
+          },
+          "right": {
+            "title": "朝のブリーフィング",
+            "content": [
+              {
+                "type": "code",
+                "code": "朝のブリーフィング — 火曜日\n\n☀ 24°C、夕方まで晴れ\n\n▸ フォロー中のAIツール関連記事 3件\n▸ 返信が必要：土曜の会場の件\n▸ 14:00 デザインレビュー（メモ準備済み）\n▸ 図書館の本、木曜が返却期限"
+              }
+            ],
+            "dark": true,
+            "ratio": 55
+          }
+        }
+      }
+    },
+    {
+      "text": "12時半、ランチに出かけています。いいお店でした。スマホで30秒、お店がプレイスコレクションに追加されます。また来たくなる料理のメモ付きで。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "accentColor": "accent",
+          "eyebrow": {
+            "label": "12:30 · 外出先"
+          },
+          "left": {
+            "title": "記録は記憶に勝る",
+            "label": "画面キャプチャ · スマホ",
+            "accentColor": "accent",
+            "content": [
+              {
+                "type": "text",
+                "value": "同じワークスペースに**スマホからアクセス** — ノートPCも専用アプリも不要。",
+                "bold": true
+              },
+              {
+                "type": "bullets",
+                "items": [
+                  "写真を撮って、一言添えるだけ",
+                  "正しいコレクションに自動で振り分け",
+                  "何ヶ月後でもすぐ見つかる"
+                ]
+              }
+            ],
+            "ratio": 45
+          },
+          "right": {
+            "title": "スマホから",
+            "content": [
+              {
+                "type": "code",
+                "code": "あなた:\n  このお店をレストランに追加して —\n  サバの塩焼き定食が当たりだった。\n  （写真添付）\n\nClaude:\n  プレイス · ランチスポットに保存、\n  「再訪」タグ付き。オフィス近くの\n  登録は3件目です。"
+              }
+            ],
+            "dark": true,
+            "ratio": 55
+          }
+        }
+      }
+    },
+    {
+      "text": "3時、デザインレビューのあと。雑なメモをそのまま貼り付けて、あとは放っておくだけ。整理されて、紐付けされて、次に使える状態で出てきます。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "columns",
+          "accentColor": "info",
+          "title": "雑なメモを入れると、プロジェクト記録が出てくる",
+          "stepLabel": "15:00 · 画面キャプチャ",
+          "subtitle": "ナレッジワークで誰もやりたくない部分",
+          "columns": [
+            {
+              "title": "とりあえず投げ込む",
+              "accentColor": "primary",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "会議のメモをそのまま貼り付ける — 誤字も断片もそのままで。"
+                }
+              ],
+              "num": 1
+            },
+            {
+              "title": "勝手に整理される",
+              "accentColor": "accent",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "要約され、プロジェクト配下に格納。決定事項とアクションアイテムも抽出される。"
+                }
+              ],
+              "num": 2
+            },
+            {
+              "title": "つながりが生まれる",
+              "accentColor": "success",
+              "content": [
+                {
+                  "type": "text",
+                  "value": "先週のレビューとリンクされ、約束事はトラッカーに自動で反映される。"
+                }
+              ],
+              "num": 3
+            }
+          ],
+          "showArrows": true
+        }
+      }
+    },
+    {
+      "text": "夜の9時。以前なら20分かけてタブを漁り回していた問いかけ — 今週何を約束したっけ？ 今は一つの質問で、ちゃんとした答えが返ってきます。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "split",
+          "accentColor": "success",
+          "eyebrow": {
+            "label": "21:00 · 夜"
+          },
+          "left": {
+            "title": "本当にそばにいたアシスタント",
+            "label": "画面キャプチャ",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  "あなたと同じメモを読んでいた",
+                  "あなたが交わした約束を覚えていた",
+                  "雰囲気ではなく、あなたのファイルから答える"
+                ]
+              }
+            ],
+            "ratio": 45
+          },
+          "right": {
+            "title": "チャットにて",
+            "content": [
+              {
+                "type": "code",
+                "code": "あなた:\n  今週、何を約束したっけ？\n\nClaude:\n  まだ完了していないものが3つ:\n  ▸ ケンジにドラフトを送る（火曜の\n    レビューで — 金曜まで）\n  ▸ 土曜の会場を予約する\n  ▸ 図書館の本を返す（木曜）\n  ケンジへのメッセージ、\n  今から下書きしましょうか？"
+              }
+            ],
+            "dark": true,
+            "ratio": 55
+          }
+        }
+      }
+    },
+    {
+      "text": "そしてこの一日の裏側では、あなたが目にしなかった仕組みが動いていました。スケジュール、ウォッチャー、フィード — ワークスペースを静かに最新に保ち続けていたのです。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "grid",
+          "accentColor": "accent",
+          "eyebrow": {
+            "label": "舞台裏"
+          },
+          "title": "あなたが見なかった仕事",
+          "subtitle": "画面キャプチャ：これらが動いているスケジュールパネル",
+          "gridColumns": 4,
+          "items": [
+            {
+              "title": "スケジュール",
+              "description": "朝のブリーフィング、週次レビュー — 毎回、時間通りに",
+              "accentColor": "primary",
+              "icon": "⏰"
+            },
+            {
+              "title": "ウォッチャー",
+              "description": "新しいファイルや転送されたメッセージを、届いた瞬間に格納",
+              "accentColor": "accent",
+              "icon": "👀"
+            },
+            {
+              "title": "フィード",
+              "description": "フォローしているソースを夜のうちに取得・要約",
+              "accentColor": "info",
+              "icon": "📡"
+            },
+            {
+              "title": "リマインダー",
+              "description": "約束は、期限がきたタイミングでちゃんと浮かび上がる",
+              "accentColor": "success",
+              "icon": "🔔"
+            }
+          ],
+          "footer": "どれも「お願い」の一言で作ったもの — 設定画面は一切不要。"
+        }
+      }
+    },
+    {
+      "text": "同じ一日を、二つのバージョンで。片方は付箋と開きっぱなしのタブと罪悪感で回っている。もう片方は、覚えていてくれるワークスペースで回っている。違いはアシスタントが一つあるかどうか、それだけです。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "comparison",
+          "eyebrow": {
+            "label": "ビフォー / アフター"
+          },
+          "title": "同じ火曜日を、二度",
+          "left": {
+            "title": "なしの場合",
+            "accentColor": "danger",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "朝：タブを漁って追いつくのに20分",
+                    "icon": "no"
+                  },
+                  {
+                    "text": "あの美味しいお店？金曜には忘れてる",
+                    "icon": "no"
+                  },
+                  {
+                    "text": "「週末にメモ整理しよう」（しない）",
+                    "icon": "warn"
+                  }
+                ]
+              }
+            ]
+          },
+          "right": {
+            "title": "MulmoClaude ありの場合",
+            "accentColor": "success",
+            "content": [
+              {
+                "type": "bullets",
+                "items": [
+                  {
+                    "text": "朝：ブリーフィングが一枚、もう読んである",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "すべてが起きたその瞬間に記録されている",
+                    "icon": "ok"
+                  },
+                  {
+                    "text": "整理は誰の仕事でもない — 勝手に起きる",
+                    "icon": "ok"
+                  }
+                ]
+              }
+            ]
+          },
+          "callout": {
+            "text": "目標は生産性パフォーマンスを増やすことじゃない。{primary:こぼれ落ちるものを減らす}こと。",
+            "label": "大事なこと",
+            "color": "info",
+            "leftBar": true
+          }
+        }
+      }
+    },
+    {
+      "text": "最高のアシスタントとは、一番気の利いた答えを返すやつじゃない。あなたのメモをずっと取ってくれていたやつです。今夜セットアップすれば、明日の朝にはブリーフィングが待っています。",
+      "image": {
+        "type": "slide",
+        "slide": {
+          "layout": "bigQuote",
+          "eyebrow": {
+            "label": "一緒に暮らしてみよう"
+          },
+          "quote": "最高のアシスタントとは、{primary:**ずっとメモを取ってくれていた**}存在のこと。",
+          "author": "MulmoClaude",
+          "role": "今夜セットアップすれば、明日の朝にはブリーフィングが待っている ☕"
+        }
+      }
+    }
+  ]
+}
