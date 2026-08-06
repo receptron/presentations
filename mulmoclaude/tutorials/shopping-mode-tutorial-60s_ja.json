@@ -78,7 +78,7 @@
   "lang": "ja",
   "beats": [
     {
-      "text": "お店で使う買い物リストの画面、実は会話だけで作れます。マルモクロードの、お買い物モードです。",
+      "text": "お店で使う買い物リストの画面、実は会話だけで作れます。マルモクロードの、お買い物モードです。今日は60秒で、作り方をお見せします。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -86,7 +86,7 @@
           "<div class='relative flex h-full' style='background: linear-gradient(160deg, #FFFBF2, #FFF3DC 55%, #FCE8C8)'>",
           "  <div class='w-1/2 flex flex-col justify-center px-12 space-y-8'>",
           "    <h2 class='text-5xl font-bold leading-snug whitespace-nowrap' style='color: #431407'>この画面、<br/>会話だけで作れます</h2>",
-          "    <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-sync='1:0.2' data-opacity='0,1' data-translate-y='14,0' data-start='6.5' data-end='7.0' data-easing='easeOut'>",
+          "    <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-sync='1:0.2' data-opacity='0,1' data-translate-y='14,0' data-start='5.89' data-end='6.39' data-easing='easeOut'>",
           "      <p class='text-3xl font-bold' style='color: #EA580C'>📱 お買い物モード</p>",
           "      <p class='text-xl mt-1' style='color: #7C5E3C'>買い物リストの、スマホ用の画面</p>",
           "    </div>",
@@ -99,7 +99,7 @@
       }
     },
     {
-      "text": "一覧表のプラスで、スマホビューを選ぶと、AIのほうから、何をしたいか聞いてくれます。フォームに答えたら、注文の完成です。",
+      "text": "作り方は、覚えなくて大丈夫です。一覧表のプラスで、スマホビューを選ぶと、AIのほうから、何をしたいか聞いてくれます。フォームに答えたら、注文の完成です。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -114,11 +114,11 @@
           "  <div class='flex-1 flex items-center justify-center gap-8 px-8 pb-6'>",
           "    <div class='relative'>",
           "      <img src='shopping-mode-assets-ja/demo-09-picker-zoom.png' class='rounded-xl shadow-2xl' style='max-width: 560px; object-fit: contain' />",
-          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='0:0.15' data-opacity='0,1' data-start='1.8' data-end='2.3' data-easing='easeOut' style='top: 13%; left: 67.5%; width: 30%; height: 43%'></div>",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.1' data-opacity='0,1' data-start='3.43' data-end='3.93' data-easing='easeOut' style='top: 13%; left: 67.5%; width: 30%; height: 43%'></div>",
           "    </div>",
           "    <div class='relative'>",
           "      <img src='shopping-mode-assets-ja/demo-03-request-form.png' class='rounded-xl shadow-2xl' style='max-height: 470px; max-width: 620px; object-fit: contain' />",
-          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-sync='1:0.2' data-opacity='0,1' data-start='11.0' data-end='11.5' data-easing='easeOut' style='bottom: -3%; left: 50%; transform: translateX(-50%); background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
+          "      <div class='absolute rounded-2xl px-6 py-3 shadow-xl whitespace-nowrap' data-animation='animate' data-sync='2:0.2' data-opacity='0,1' data-start='9.85' data-end='10.35' data-easing='easeOut' style='bottom: -3%; left: 50%; transform: translateX(-50%); background: #FFF3DC; border: 1px solid rgba(234, 88, 12, .45)'>",
           "        <span class='text-2xl font-bold' style='color: #431407'>📝 答えるだけで、注文完成</span>",
           "      </div>",
           "    </div>",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "text": "できあがった画面は、売り場ごとの並びです。お店でカゴに入れたら、タップでチェック。買った品は、打ち消し線で分かります。",
+      "text": "できあがった画面は、売り場ごとの並びです。お店でカゴに入れたら、タップでチェック。買った品は、打ち消し線で分かります。ここでは、19品のうち6品まで進みました。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -143,11 +143,11 @@
           "  <div class='flex-1 flex items-center justify-center gap-14 px-6 pb-6'>",
           "    <img src='shopping-mode-assets-ja/demo-06-mobile-progress.png' class='rounded-2xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
           "    <div class='space-y-5' style='max-width: 440px'>",
-          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='0:0.3' data-start='1.5' data-end='2.0'>",
+          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='0:0.3' data-start='1.22' data-end='1.72'>",
           "        <p class='text-2xl font-bold' style='color: #431407'>🥬 売り場ごとの並び</p>",
           "        <p class='text-xl mt-1' style='color: #7C5E3C'>カゴに入れる順に、上から</p>",
           "      </div>",
-          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='1:0.3' data-start='6.5' data-end='7.0'>",
+          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='1:0.3' data-start='4.12' data-end='4.62'>",
           "        <p class='text-2xl font-bold' style='color: #431407'>✓ タップで、その場でしるし</p>",
           "        <p class='text-xl mt-1' style='color: #7C5E3C'>買った品は、打ち消し線</p>",
           "      </div>",
@@ -173,13 +173,13 @@
           "  <div class='flex-1 flex items-center justify-center gap-14 px-6 pb-6'>",
           "    <div class='relative'>",
           "      <img src='shopping-mode-assets-ja/demo-07-mobile-upgraded.png' class='rounded-2xl shadow-2xl' style='max-height: 560px; object-fit: contain' />",
-          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.4' data-opacity='0,1' data-start='7.0' data-end='7.5' data-easing='easeOut' style='top: 6%; left: 3%; width: 94%; height: 8%'></div>",
+          "      <div class='absolute border-4 border-red-600 rounded-lg' data-animation='animate' data-sync='1:0.4' data-opacity='0,1' data-start='4.74' data-end='5.24' data-easing='easeOut' style='top: 6%; left: 3%; width: 94%; height: 8%'></div>",
           "    </div>",
           "    <div class='space-y-5' style='max-width: 440px'>",
-          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: #FFF3DC; border: 1px solid rgba(234,88,12,.45)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='0:0.3' data-start='1.5' data-end='2.0'>",
+          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: #FFF3DC; border: 1px solid rgba(234,88,12,.45)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='0:0.3' data-start='1.2' data-end='1.7'>",
           "        <p class='text-2xl' style='color: #431407'>💬 「数量とメモも添えて、<br/>『あと何品』も出して」</p>",
           "      </div>",
-          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='2:0.2' data-start='9.5' data-end='10.0'>",
+          "      <div class='rounded-2xl px-7 py-5 shadow-lg' style='background: rgba(255,255,255,.78); border: 1px solid rgba(234,88,12,.15)' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='14,0' data-sync='2:0.2' data-start='7.36' data-end='7.86'>",
           "        <p class='text-2xl font-bold' style='color: #431407'>🌱 使いながら、育てる</p>",
           "        <p class='text-xl mt-1' style='color: #7C5E3C'>そのひとことで、残りサマリー付きに</p>",
           "      </div>",
@@ -190,7 +190,7 @@
       }
     },
     {
-      "text": "作り方の全編は、『お買い物モードを、会話で作る』でどうぞ。ぜひ、試してみてください。",
+      "text": "作り方の全編は、『お買い物モードを、会話で作る』でどうぞ。あなたの買い物リストにも、同じように足せます。ぜひ、試してみてください。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -199,7 +199,7 @@
           "  <p class='text-2xl' style='color: #7C5E3C' data-animation='animate' data-sync='abs:0' data-opacity='0,1' data-translate-y='10,0' data-start='0.0' data-end='0.5' data-easing='easeOut'>作り方の全編は</p>",
           "  <h2 class='text-5xl font-bold leading-snug mt-4' style='color: #431407' data-animation='animate' data-sync='abs:0.3' data-opacity='0,1' data-translate-y='20,0' data-start='0.3' data-end='0.8' data-easing='easeOut'>「お買い物モードを、会話で作る」</h2>",
           "  <div class='w-24 mt-9 mb-9' style='border-top: 4px solid #EA580C'></div>",
-          "  <p class='text-4xl font-bold' style='color: #EA580C' data-animation='animate' data-sync='1:0.1' data-opacity='0,1' data-scale='0.9,1' data-start='7.0' data-end='7.5' data-easing='easeOut'>🌱 ぜひ、試してみてください！</p>",
+          "  <p class='text-4xl font-bold' style='color: #EA580C' data-animation='animate' data-sync='2:0.1' data-opacity='0,1' data-scale='0.9,1' data-start='7.8' data-end='8.3' data-easing='easeOut'>🌱 ぜひ、試してみてください！</p>",
           "</div>"
         ]
       }
