@@ -54,7 +54,7 @@
   "lang": "en",
   "beats": [
     {
-      "duration": 5,
+      "duration": 8,
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -69,7 +69,7 @@
       "text": "Nine agents are working. One just turned amber — it needs a human."
     },
     {
-      "duration": 7,
+      "duration": 8,
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -85,7 +85,7 @@
     },
     {
       "text": "Blue is working. Amber is waiting on you — and only amber chimes. Green is done.",
-      "duration": 8,
+      "duration": 11,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -118,7 +118,7 @@
     },
     {
       "text": "Claude, Codex, Antigravity — one cockpit for all of them.",
-      "duration": 7,
+      "duration": 8,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -133,7 +133,7 @@
       }
     },
     {
-      "duration": 6,
+      "duration": 8,
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -149,7 +149,7 @@
     },
     {
       "text": "And when you walk away, your phone taps you on the shoulder.",
-      "duration": 6,
+      "duration": 7,
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -180,7 +180,7 @@
     },
     {
       "text": "Local. Open source. No Electron.",
-      "duration": 5,
+      "duration": 6,
       "image": {
         "type": "html_tailwind",
         "html": [
