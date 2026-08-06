@@ -1,0 +1,207 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Calm, confident, measured — short declarative sentences, like a good product keynote. No exclamation marks in delivery, no salesy energy. Let the pauses between sentences breathe."
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "captionParams": {
+    "lang": "en",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        ". "
+      ]
+    }
+  },
+  "title": "MulmoTerminal — a cockpit for parallel agents (60s demo)",
+  "description": "DRAFT of the launch-show-hn.md §4 structure: the fixed two-beat opening (an amber cell, answered while the rest keep running), then the §3 key messages in order. The narration is DRAFT copy — the 60s cut has no confirmed lines. Shares the 90s deck's assets; see mulmoterminal-60s-NOTES.md.",
+  "lang": "en",
+  "beats": [
+    {
+      "duration": 5,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-90s-assets/open-grid.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "text": "Nine agents are working. One just turned amber — it needs a human."
+    },
+    {
+      "duration": 7,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-90s-assets/amber-answer.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "text": "Click it, answer, move on. The rest never stopped."
+    },
+    {
+      "text": "Blue is working. Amber is waiting on you — and only amber chimes. Green is done.",
+      "duration": 8,
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "  <div class='relative' style='max-height:640px'>",
+          "    <img src='./mulmoterminal-90s-assets/grid-states-still.png' class='rounded-xl shadow-2xl' style='max-height:640px' />",
+          "    <div class='absolute rounded-xl ring-4 ring-sky-400' style='left:33.5%;top:6.5%;width:32%;height:30%' data-animation='animate' data-opacity='0,1' data-start='0.5' data-end='1.0' data-easing='easeOut'></div>",
+          "    <div class='absolute rounded-xl ring-4 ring-amber-400' style='left:33.5%;top:67%;width:32%;height:30%' data-animation='animate' data-opacity='0,1' data-start='1.9' data-end='2.4' data-easing='easeOut'></div>",
+          "    <div class='absolute rounded-xl ring-4 ring-emerald-400' style='left:0.8%;top:6.5%;width:32%;height:30%' data-animation='animate' data-opacity='0,1' data-start='4.6' data-end='5.1' data-easing='easeOut'></div>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "duration": 9,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-90s-assets/grid-states.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "text": "Zoom into one without losing the rest — the roster keeps every session in view."
+    },
+    {
+      "text": "Claude, Codex, Antigravity — one cockpit for all of them.",
+      "duration": 7,
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "  <div class='relative' style='max-height:640px'>",
+          "    <img src='./mulmoterminal-90s-assets/agent-tabs-still.png' class='rounded-xl shadow-2xl' style='max-height:640px' />",
+          "    <div class='absolute rounded-lg ring-4 ring-indigo-400' style='left:36.5%;top:14.2%;width:27%;height:5.2%' data-animation='animate' data-opacity='0,1' data-start='1.2' data-end='1.7' data-easing='easeOut'></div>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "duration": 6,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-90s-assets/grid-open.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "text": "Restart the server, close the laptop — the sessions survive and reattach."
+    },
+    {
+      "text": "And when you walk away, your phone taps you on the shoulder.",
+      "duration": 6,
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center relative'>",
+          "  <div class='w-[320px] h-[640px] rounded-[44px] bg-gradient-to-b from-indigo-950 to-slate-900 border-[6px] border-slate-700 shadow-2xl relative overflow-hidden'>",
+          "    <div class='absolute top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-full'></div>",
+          "    <div class='mt-24 text-center text-slate-200'>",
+          "      <div class='text-6xl font-light'>9:41</div>",
+          "      <div class='text-sm mt-1 text-slate-400'>Tuesday, August 5</div>",
+          "    </div>",
+          "    <div class='mx-3 mt-10 rounded-2xl bg-slate-200/95 p-3 shadow-xl' data-animation='animate' data-opacity='0,1' data-start='1.6' data-end='2.2' data-easing='easeOut'>",
+          "      <div class='flex items-start gap-2'>",
+          "        <div class='w-9 h-9 rounded-[9px] bg-pink-600 flex items-center justify-center text-white font-bold text-lg flex-none'>M</div>",
+          "        <div class='min-w-0'>",
+          "          <div class='text-slate-900 text-sm font-semibold'>&#10067; acme-api</div>",
+          "          <div class='text-slate-600 text-xs'>from MulmoServer</div>",
+          "          <div class='mt-1 text-slate-800 text-sm'>Claude is waiting for your input</div>",
+          "        </div>",
+          "        <div class='ml-auto text-slate-500 text-xs flex-none'>now</div>",
+          "      </div>",
+          "    </div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-4 text-slate-700 text-xs'>UI mock &#8212; MulmoServer push</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Local. Open source. No Electron.",
+      "duration": 5,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex flex-col items-center justify-center gap-8'>",
+          "  <div class='font-mono text-4xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <div class='text-2xl text-slate-300 tracking-wide'>Local. Open source. No Electron.</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "",
+      "duration": 3,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex items-center justify-center'>",
+          "  <div class='font-mono text-3xl text-slate-200'>github.com/receptron/mulmoterminal</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
