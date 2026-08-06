@@ -16,6 +16,21 @@
 | 7 | 永続（再接続リプレイ） | 実写流用 |
 | 8-9 | npx / URL カード | 完成 |
 
+## ナレーション対訳（英語＝ドラフト原稿 / 日本語＝意味確認用・画面には出さない）
+
+capture-guide §6-2 と同じ形式。英文は positioning.md「用途別の一言」を種にした**ドラフト**（確定レビュー前）。
+
+| # | 英語 | 日本語 |
+|---|---|---|
+| 1 | tmux was built for terminals that don't ask questions. | tmux は、質問してこないターミナルのために作られた |
+| 2 | This is a terminal with agents in it. A dev server, a system monitor, and Claude — every cell is a real pty. | これはエージェントが入っているターミナル。dev サーバも、システムモニタも、Claude も — セルは全部本物の pty |
+| 3 | The agents are the ones that ask questions. Amber means one needs you — and only amber chimes. | 質問してくるのはエージェント。琥珀色は「あなたを待っている」の印 — 鳴るのは琥珀だけ |
+| 4 | Answer it, and everything keeps moving. Even one to three agents is where this pays off. | 答えれば、全部が動き続ける。並列が1〜3体でも元が取れる |
+| 5 | Each agent works in its own worktree — and the dev server runs right beside it. | エージェントはそれぞれ自分の worktree で作業する — dev サーバはそのすぐ隣で回せる |
+| 6 | Claude, Codex, Antigravity — one grid, same rules. | Claude も Codex も Antigravity も — 同じグリッド、同じルール |
+| 7 | Restart the server — every session survives and reattaches. | サーバを再起動しても — 全セッションが生き残って繋ぎ直される |
+| 8 | Local. Open source. No Electron. | ローカル。オープンソース。Electron 不使用 |
+
 ## 撮影メモ（axis 通し撮り、2026-08-06）
 
 - **staging と録画は同一ブラウザで一気通貫にすること** — ターン未消化の claude セルと
