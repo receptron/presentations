@@ -1,0 +1,194 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Calm, confident, measured — short declarative sentences, like a good product keynote. No exclamation marks in delivery, no salesy energy. Let the pauses between sentences breathe."
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "captionParams": {
+    "lang": "en",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        ". "
+      ]
+    }
+  },
+  "lang": "en",
+  "title": "MulmoTerminal — a terminal with agents in it (60s, terminal-axis draft)",
+  "description": "DRAFT of the 2026-08-04 terminal-axis positioning. Copy is draft (positioning.md's 用途別の一言 seeded the lines). Mixed-grid footage: real top, a real python http.server, log tail beside Claude cells. See mulmoterminal-90s-v2-NOTES.md.",
+  "beats": [
+    {
+      "text": "tmux was built for terminals that don't ask questions.",
+      "duration": 6,
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center relative'>",
+          "  <div class='w-[880px] rounded-xl overflow-hidden shadow-2xl border border-slate-700 relative'>",
+          "<div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div>",
+          "    <div class='bg-black p-6 font-mono text-lg h-[380px] text-slate-400'>agent-1: * Thinking… was it waiting on me?</div>",
+          "<div class='absolute inset-0 rounded-xl overflow-hidden' data-animation='animate' data-opacity='0,1' data-start='1.0' data-end='1.2'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black p-6 font-mono text-lg h-[380px] text-slate-400'>agent-3: ? Which file should I edit — src/a.ts or src/b.ts?</div></div>",
+          "<div class='absolute inset-0 rounded-xl overflow-hidden' data-animation='animate' data-opacity='0,1' data-start='2.0' data-end='2.2'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black p-6 font-mono text-lg h-[380px] text-slate-400'>agent-2: * Running tests… (4m 02s)</div></div>",
+          "<div class='absolute inset-0 rounded-xl overflow-hidden' data-animation='animate' data-opacity='0,1' data-start='3.0' data-end='3.2'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-5</span></div><div class='bg-black p-6 font-mono text-lg h-[380px] text-slate-400'>agent-5: ! Permission needed to run npm install</div></div>",
+          "<div class='absolute inset-0 rounded-xl overflow-hidden' data-animation='animate' data-opacity='0,1' data-start='3.9' data-end='4.1'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black p-6 font-mono text-lg h-[380px] text-slate-400'>agent-4: …which one was asking again?</div></div>",
+          "  </div>",
+          "  <div class='absolute bottom-3 right-4 text-slate-700 text-xs'>UI mock — 実写差し替え予定</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "duration": 10.5,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-90s-assets/axis-grid6.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "text": "This is a terminal with agents in it. A dev server, a system monitor, and Claude — every cell is a real pty."
+    },
+    {
+      "duration": 9.0,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-90s-assets/axis-amber-zoom.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "text": "The agents are the ones that ask questions. Amber means one needs you — and only amber chimes."
+    },
+    {
+      "duration": 9,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-90s-assets/axis-answer4.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "text": "Answer it, and everything keeps moving. Even one to three agents is where this pays off."
+    },
+    {
+      "duration": 9,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-90s-assets/worktree-pr.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "text": "Each agent works in its own worktree — and the dev server runs right beside it."
+    },
+    {
+      "text": "Claude, Codex, Antigravity — one grid, same rules.",
+      "duration": 8.5,
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "  <div class='relative' style='max-height:640px'>",
+          "    <img src='./mulmoterminal-90s-assets/agent-tabs-still.png' class='rounded-xl shadow-2xl' style='max-height:640px' />",
+          "    <div class='absolute rounded-lg ring-4 ring-indigo-400' style='left:36.5%;top:14.2%;width:27%;height:5.2%' data-animation='animate' data-opacity='0,1' data-start='1.2' data-end='1.7' data-easing='easeOut'></div>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "duration": 7.5,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-90s-assets/grid-open.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "text": "Restart the server — every session survives and reattaches."
+    },
+    {
+      "text": "Local. Open source. No Electron.",
+      "duration": 5.5,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex flex-col items-center justify-center gap-8'>",
+          "  <div class='font-mono text-4xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <div class='text-2xl text-slate-300 tracking-wide'>Local. Open source. No Electron.</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "",
+      "duration": 3,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex items-center justify-center'>",
+          "  <div class='font-mono text-3xl text-slate-200'>github.com/receptron/mulmoterminal</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
