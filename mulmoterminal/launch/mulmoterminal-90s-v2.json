@@ -120,7 +120,7 @@
       "text": "Answer it, and everything keeps moving. Even one to three agents is where this pays off."
     },
     {
-      "duration": 4.5,
+      "duration": 4,
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -136,7 +136,22 @@
     },
     {
       "text": "",
-      "duration": 4.5,
+      "duration": 5,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-90s-assets/worktree-badge.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "",
+      "duration": 3.5,
       "image": {
         "type": "html_tailwind",
         "html": [
