@@ -90,7 +90,7 @@
       "text": "This is a terminal with agents in it. A dev server, a system monitor, and Claude — every cell is a real pty."
     },
     {
-      "duration": 9.0,
+      "duration": 9,
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -98,7 +98,7 @@
         },
         "html": [
           "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
-          "<video src='./mulmoterminal-90s-assets/axis-amber-zoom.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "<video src='./mulmoterminal-90s-assets/axis-amber-kb.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
           "</div>"
         ]
       },
@@ -150,16 +150,19 @@
       }
     },
     {
-      "text": "",
-      "duration": 3.5,
+      "duration": 5.5,
       "image": {
         "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
         "html": [
           "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
-          "<img src='./mulmoterminal-90s-assets/worktree-diff-closeup.png' class='rounded-xl shadow-2xl' style='width:92%' />",
+          "<video src='./mulmoterminal-90s-assets/worktree-panel-kb.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
           "</div>"
         ]
-      }
+      },
+      "text": ""
     },
     {
       "text": "Claude, Codex, Antigravity — one grid, same rules.",
