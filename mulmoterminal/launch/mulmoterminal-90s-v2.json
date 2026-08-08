@@ -113,7 +113,7 @@
         },
         "html": [
           "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
-          "<video src='./mulmoterminal-90s-assets/axis-answer4.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "<video src='./mulmoterminal-90s-assets/axis-answer-zoom.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
           "</div>"
         ]
       },
