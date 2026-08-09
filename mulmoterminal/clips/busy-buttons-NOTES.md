@@ -6,8 +6,10 @@
 | | |
 |---|---|
 | 題材 | 4.7.3 — `+ New worktree` が押した回数だけ worktree を作っていた問題（#1549）と、削除中のセルの表示（#1551） |
-| 尺 | 英語 15.0 秒 / 日本語 14.6 秒 |
+| 尺 | 英語 14.8 秒 / 日本語 14.2 秒 |
 | 出典 | mulmoterminal `docs/guide/{en,ja}/v4.7.3.md`、`docs/ChangeLog.md` の 4.7.3 |
+| ビート 1 | HTML のみ（問題の説明） |
+| ビート 2・3 | 実写クリップ。原素材は `mt-demo-home/footage/2026-08-10/` |
 
 ## リポジトリ規約からの意図的な逸脱
 
@@ -15,8 +17,7 @@
 規約（リポジトリ CLAUDE.md）は「`_ja` 先行 → 英語版へ翻訳、スライドも撮影素材も両方作る」だが、
 MulmoTerminal のクリップはこの方針を取らない。したがって:
 
-- 素材ディレクトリは `busy-buttons-assets/` **1 つだけ**（`-assets-ja` は作らない）。
-  日本語版のスライドが存在しないので、日本語用の素材も存在しない
+- 素材ディレクトリは `busy-buttons-assets/` **1 つだけ**（`-assets-ja` は作らない）
 - 2 ファイルの `beats[].image` は**完全に一致させる**。差し替えるのは `text` と `lang`、
   `captionParams.lang` / `textSplit`、話者の `instruction`、`title` / `description` だけ
 
@@ -53,31 +54,47 @@ X はミュート自動再生なので焼き込み前提。`captionParams` に `
 （既定の 0 だと日本語の字幕が下端に張り付く。ローンチデッキ `mulmoterminal-90s-v2.json` は
 まだ 0 のまま）。`textSplit` の区切りは英語 `". "` / 日本語 `"。"`。
 
-## 素材
+## 素材の作り方
 
-`busy-buttons-assets/` の中身と作り方（元は mulmoterminal の `docs/guide/images/`）:
+撮影は `probe-busy-window.mjs`（`footage/2026-08-10/` に同梱）。capture-server.sh の :34599 に
+対して、preset チップ → `fix-login` を打鍵 → `+ New worktree` → 起動、そのセルを閉じて
+worktree ごと削除、までを 1 ブラウザで通す。`page.screencast` は **2880×1800（retina 2x）**で
+録れるので、クロップで寄っても解像度が足りる。
 
-| ファイル | 元 | 加工 |
-|---|---|---|
-| `worktree-creating.png` | `v4.7.3-worktree-creating.png` | 上端の切れた行を落とす `crop=580:97:0:12` |
-| `cell-removing.png` | `v4.7.3-cell-removing.png` | 無加工。下 2 つの切り出し元として置いてある（デッキからは参照していない） |
-| `removing-header.png` | 同上 | `crop=988:78:0:8` |
-| `removing-spinner.png` | 同上 | `crop=530:82:230:285` |
+切り出し（原素材はいずれも `footage/2026-08-10/acme-web-{create,remove}.mp4`）:
 
-**ビート 3 でセル全体を出すのはやめた。** 988×649 のセルを 1280×720 のキャンバスに収めると
-`Removing acme-web (fix-login)…` が実質 9px になって読めない（skill の「俯瞰と読ませの使い分け」）。
-`camera-move.mjs` のプッシュインも試したが、このセルは削除中で中身が空なので、寄り切った先が
-ただの暗い矩形になり文脈が消える。採用したのは 90s-v2 NOTES にある**縦積みの静止クローズアップ** —
-減光したヘッダー帯（等倍）と、スピナー帯（1.6 倍、ズームであることを示す枠付き）を重ねる。
+```sh
+# worktree-creating.mp4 — 打鍵 → Creating… の worktree 行だけを切り、0.75 倍速、末尾をフリーズ
+ffmpeg -i acme-web-create.mp4 -ss 1.40 -t 2.60 -an create-trim.mp4
+ffmpeg -i create-trim.mp4 -vf "crop=1160:210:860:678,setpts=1.33*PTS,tpad=stop_mode=clone:stop_duration=4.6,fps=60" -an worktree-creating.mp4
+
+# cell-removing.mp4 — 確認ダイアログ → 減光したセル、そこからスピナーへプッシュイン
+ffmpeg -i acme-web-remove.mp4 -ss 1.15 -t 0.72 -an remove-trim.mp4
+ffmpeg -i remove-trim.mp4 -vf "crop=2840:1319:20:345,fps=60" -an remove-crop2.mp4
+node ~/.claude/skills/mulmoterminal-video/camera-move.mjs remove-crop2.mp4 cell-removing.mp4 \
+  --target 820,276,1200,558 --hold 1.1 --push 1.2 --tail 2.5 --canvas 1120x520
+```
 
 ## 引っかかったところ
 
-- **Gemini TTS が 1 ビートで 116 秒の音声を返した。** 日本語ビート 1 の
-  「押すたびに、ワークツリーができていました。同じものが、三つ。」で発生。体言止めの短い断片が
-  引き金と見て、1 文にまとめ直したら 5.3 秒に収まった。音声は内容ハッシュでキャッシュされるので、
-  暴走した音声は**本文を変えるか `-f`** で取り直す（同じ本文の再実行では戻ってこない）
-- **TTS は単発で落ちることがある。** 日本語の初回レンダーが `ttsGeminiAgent` のエラーで止まり、
-  同じコマンドの再実行で通った
+- **「小さいリポジトリでは busy 状態が一瞬で終わる」は誤りだった。** これを未検証の前提にして、
+  `git worktree add` が 5-8 秒かかる 97,340 ファイルのフィクスチャリポジトリ（419MB）を rig に
+  作りかけた。実測すると 7 ファイルの acme-web で **`Creating…` が 122 フレーム・2,017ms**
+  出ていた（ボタンが握られている窓は git の所要時間ではなく、サーバー往復・MCP 登録・セッション
+  起動まで含むため）。フィクスチャは破棄した。
+  **`Removing…` は 6 フレーム・83ms しかないが、それでも足りる** — 尺は編集で作るもので、
+  `camera-move.mjs --hold`（`tpad=stop_mode=clone`）が一瞬をそのまま伸ばす。
+  ビートの長さぶん状態が続いている必要はない。
+- **ビートに `duration` を書かない。** TTS の長さは再生成のたびに変わる（英語ビート 1 で
+  5.30 → 4.80 秒、日本語ビート 0 で 5.59 → 6.07 秒）。固定値を入れたら英語ビート 3 が
+  音声 3.67 秒に対し 3.30 秒で切られた。**クリップ側の末尾フリーズを音声より長く取り、
+  尺は音声に決めさせる**（クリップが余ればビート終端で切られるだけ）。
+- **`camera-move.mjs` はアスペクト不一致を拒否する**（`--canvas` を勝手に合わせない）。
+  縦を詰めたいときはソースを先にクロップしてからキャンバスを合わせる。
+- **Gemini TTS が 1 ビートで 116 秒の音声を返した。** 日本語ビート 1 の体言止め
+  （「…同じものが、三つ。」）で発生。1 文にまとめ直したら 5.3 秒に収まった。音声は内容ハッシュで
+  キャッシュされるので、暴走したら**本文を変えるか `-f`** で取り直す。TTS はほかにも単発で
+  落ちて、同じコマンドの再実行で通った。
 - **`scripts/validate-all.js` は `mulmoclaude/` しか走査していない。** `mulmoterminal/` 配下は
   `npm test` の対象外なので、このクリップも launch デッキ 3 本も CI では検証されない。
-  検証は個別に `npm run validate -- <file>` を回す必要がある（走査対象の修正は別 PR）
+  検証は個別に `npm run validate -- <file>` を回す必要がある（走査対象の修正は別 PR）。

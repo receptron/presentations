@@ -77,15 +77,14 @@
       "text": "いまは自分をロックして、何をしているかを表示します。",
       "image": {
         "type": "html_tailwind",
-        "animation": true,
+        "animation": {
+          "movie": true
+        },
         "html": [
           "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-12 px-16'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
           "  <div class='text-5xl font-semibold text-slate-100 text-center'>Now the button says so.</div>",
-          "  <div class='relative'>",
-          "    <img src='./busy-buttons-assets/worktree-creating.png' class='rounded-lg shadow-2xl' style='width:1000px' />",
-          "    <div class='absolute rounded-md ring-4 ring-indigo-400' style='left:76%;top:57%;width:23%;height:35%' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='1.6' data-end='2.1'></div>",
-          "  </div>",
+          "  <video src='./busy-buttons-assets/worktree-creating.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:1120px'></video>",
           "</div>"
         ]
       }
@@ -94,17 +93,14 @@
       "text": "閉じるときも、そう見えます。",
       "image": {
         "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
         "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-8 px-16'>",
+          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-10 px-16'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
           "  <div class='text-5xl font-semibold text-slate-100 text-center'>Closing one, too.</div>",
-          "  <div class='flex flex-col items-center gap-5'>",
-          "    <img src='./busy-buttons-assets/removing-header.png' class='rounded-lg shadow-2xl' style='width:1080px' />",
-          "    <div class='rounded-lg ring-1 ring-slate-700 bg-[#191c30] px-10 py-5 shadow-2xl'>",
-          "      <img src='./busy-buttons-assets/removing-spinner.png' style='width:860px' />",
-          "    </div>",
-          "  </div>",
-          "  <div class='font-mono text-3xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <video src='./busy-buttons-assets/cell-removing.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1120px'></video>",
           "</div>"
         ]
       }
