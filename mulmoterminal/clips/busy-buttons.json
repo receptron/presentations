@@ -55,33 +55,65 @@
   "description": "Short feature clip (~15s) for MulmoTerminal 4.7.3. A worktree button that took six seconds and showed nothing got pressed again, making one worktree per click; it now locks itself and reports progress, and a cell being removed looks like it. Slides are English in both language versions — see busy-buttons-NOTES.md.",
   "beats": [
     {
-      "text": "Start a worktree, and the button locks itself and says what it is doing.",
+      "text": "Every task can have a worktree of its own.",
       "image": {
         "type": "html_tailwind",
         "animation": {
           "movie": true
         },
         "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-10 px-16'>",
+          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>The button says what it&rsquo;s doing.</div>",
-          "  <video src='./busy-buttons-assets/worktree-creating.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1120px'></video>",
+          "  <div class='text-5xl font-semibold text-slate-100 text-center'>A worktree of its own.</div>",
+          "  <video src='./busy-buttons-assets/01-name-the-task.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:450px'></video>",
           "</div>"
         ]
       }
     },
     {
-      "text": "Close it, and the whole cell does the same.",
+      "text": "Name it and press once: the button locks itself and says what it is doing.",
       "image": {
         "type": "html_tailwind",
         "animation": {
           "movie": true
         },
         "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-10 px-16'>",
+          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>And so does the cell.</div>",
-          "  <video src='./busy-buttons-assets/cell-removing.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1120px'></video>",
+          "  <div class='text-5xl font-semibold text-slate-100 text-center'>The button says what it&rsquo;s doing.</div>",
+          "  <video src='./busy-buttons-assets/02-creating.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1120px'></video>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Closing it asks first.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
+          "  <div class='text-5xl font-semibold text-slate-100 text-center'>Closing it asks first.</div>",
+          "  <video src='./busy-buttons-assets/03-close-confirm.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:450px'></video>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Then the whole cell dims, and tells you what it is removing.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
+          "  <div class='text-5xl font-semibold text-slate-100 text-center'>Then the cell says what it&rsquo;s removing.</div>",
+          "  <video src='./busy-buttons-assets/04-removing.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:450px'></video>",
           "</div>"
         ]
       }
