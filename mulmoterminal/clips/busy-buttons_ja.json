@@ -1,0 +1,113 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "プレゼンター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "落ち着いた、確信のある、抑えたトーンで話してください。短い断定的な文を、良いプロダクトのキーノートのように。感嘆や売り込みの熱量は要りません。文と文のあいだの間を十分に取ってください。"
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 0.5,
+    "closingPadding": 0.3,
+    "outroPadding": 0,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "captionParams": {
+    "lang": "ja",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        "。"
+      ]
+    },
+    "bottomOffset": 4
+  },
+  "lang": "ja",
+  "title": "MulmoTerminal 4.7.3 — 働いていると言うボタン",
+  "description": "MulmoTerminal 4.7.3 の機能紹介クリップ（約15秒・日本語ナレーション）。6秒かかるのに何も表示しなかった worktree のボタンが押し増され、押した回数だけ worktree ができていた問題。いまはボタンが自分をロックして進行を表示し、削除中のセルも削除中に見える。スライドは英語版と共通の英語 — busy-buttons-NOTES.md 参照。",
+  "beats": [
+    {
+      "text": "押すたびにワークツリーができて、同じものが三つ並んでいました。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-12 px-16'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
+          "  <div class='text-5xl font-semibold text-slate-100 text-center leading-snug'>Six seconds. No spinner.<br/>So you press it again.</div>",
+          "  <div class='flex items-center gap-5 font-mono text-2xl'>",
+          "    <span class='px-6 py-3 rounded-lg bg-slate-800 text-slate-300 border border-slate-700'>agent/fix-login</span>",
+          "    <span class='px-6 py-3 rounded-lg bg-slate-800 text-rose-300 border border-rose-500/60' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='12,0' data-start='1.4' data-end='1.9'>agent/fix-login-2</span>",
+          "    <span class='px-6 py-3 rounded-lg bg-slate-800 text-rose-300 border border-rose-500/60' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='12,0' data-start='2.0' data-end='2.5'>agent/fix-login-3</span>",
+          "  </div>",
+          "  <div class='text-2xl text-slate-400' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='2.9' data-end='3.4'>three identical worktrees</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "いまは自分をロックして、何をしているかを表示します。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-12 px-16'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
+          "  <div class='text-5xl font-semibold text-slate-100 text-center'>Now the button says so.</div>",
+          "  <div class='relative'>",
+          "    <img src='./busy-buttons-assets/worktree-creating.png' class='rounded-lg shadow-2xl' style='width:1000px' />",
+          "    <div class='absolute rounded-md ring-4 ring-indigo-400' style='left:76%;top:57%;width:23%;height:35%' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='1.6' data-end='2.1'></div>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "閉じるときも、そう見えます。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-8 px-16'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
+          "  <div class='text-5xl font-semibold text-slate-100 text-center'>Closing one, too.</div>",
+          "  <div class='flex flex-col items-center gap-5'>",
+          "    <img src='./busy-buttons-assets/removing-header.png' class='rounded-lg shadow-2xl' style='width:1080px' />",
+          "    <div class='rounded-lg ring-1 ring-slate-700 bg-[#191c30] px-10 py-5 shadow-2xl'>",
+          "      <img src='./busy-buttons-assets/removing-spinner.png' style='width:860px' />",
+          "    </div>",
+          "  </div>",
+          "  <div class='font-mono text-3xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}

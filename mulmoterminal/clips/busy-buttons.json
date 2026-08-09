@@ -1,0 +1,111 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Calm, confident, measured — short declarative sentences, like a good product keynote. No exclamation marks in delivery, no salesy energy. Let the pauses between sentences breathe."
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 0.5,
+    "closingPadding": 0.3,
+    "outroPadding": 0,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "captionParams": {
+    "lang": "en",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [". "]
+    },
+    "bottomOffset": 4
+  },
+  "lang": "en",
+  "title": "MulmoTerminal 4.7.3 — buttons that say they are working",
+  "description": "Short feature clip (~15s) for MulmoTerminal 4.7.3. A worktree button that took six seconds and showed nothing got pressed again, making one worktree per click; it now locks itself and reports progress, and a cell being removed looks like it. Slides are English in both language versions — see busy-buttons-NOTES.md.",
+  "beats": [
+    {
+      "text": "Every press made a worktree. Three of them, all the same.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-12 px-16'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
+          "  <div class='text-5xl font-semibold text-slate-100 text-center leading-snug'>Six seconds. No spinner.<br/>So you press it again.</div>",
+          "  <div class='flex items-center gap-5 font-mono text-2xl'>",
+          "    <span class='px-6 py-3 rounded-lg bg-slate-800 text-slate-300 border border-slate-700'>agent/fix-login</span>",
+          "    <span class='px-6 py-3 rounded-lg bg-slate-800 text-rose-300 border border-rose-500/60' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='12,0' data-start='1.4' data-end='1.9'>agent/fix-login-2</span>",
+          "    <span class='px-6 py-3 rounded-lg bg-slate-800 text-rose-300 border border-rose-500/60' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-translate-y='12,0' data-start='2.0' data-end='2.5'>agent/fix-login-3</span>",
+          "  </div>",
+          "  <div class='text-2xl text-slate-400' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='2.9' data-end='3.4'>three identical worktrees</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Now it locks, spins, and says what it is doing.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-12 px-16'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
+          "  <div class='text-5xl font-semibold text-slate-100 text-center'>Now the button says so.</div>",
+          "  <div class='relative'>",
+          "    <img src='./busy-buttons-assets/worktree-creating.png' class='rounded-lg shadow-2xl' style='width:1000px' />",
+          "    <div class='absolute rounded-md ring-4 ring-indigo-400' style='left:76%;top:57%;width:23%;height:35%' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='1.6' data-end='2.1'></div>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Closing one looks like closing one, too.",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-8 px-16'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
+          "  <div class='text-5xl font-semibold text-slate-100 text-center'>Closing one, too.</div>",
+          "  <div class='flex flex-col items-center gap-5'>",
+          "    <img src='./busy-buttons-assets/removing-header.png' class='rounded-lg shadow-2xl' style='width:1080px' />",
+          "    <div class='rounded-lg ring-1 ring-slate-700 bg-[#191c30] px-10 py-5 shadow-2xl'>",
+          "      <img src='./busy-buttons-assets/removing-spinner.png' style='width:860px' />",
+          "    </div>",
+          "  </div>",
+          "  <div class='font-mono text-3xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
