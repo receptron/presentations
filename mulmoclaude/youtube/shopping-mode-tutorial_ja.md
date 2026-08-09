@@ -67,17 +67,17 @@ https://github.com/receptron/mulmoclaude
 
 ## X 投稿（日本語）
 
-添付: `output/shopping-mode-tutorial-60s_ja/shopping-mode-tutorial-60s_ja_ja.mp4`（60秒ダイジェスト版）をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
-Codex クロスチェック済み（2026-08-09・MUST FIX ゼロ）。投稿枠: 未定（YouTube 公開後、動画枠 20:30 JST に設定）。
+添付: `output/shopping-mode-tutorial_ja/shopping-mode-tutorial_ja_ja.mp4` をネイティブ添付（YouTube 動画リンクは本文に入れず、再生リストリンクで導線を作る）。
+Codex クロスチェック済み（2026-08-09・本編添付版で再チェックし MUST FIX ゼロ）。投稿枠: 未定（YouTube 公開後、動画枠 20:30 JST に設定）。
 
 ```
 「お店でカゴに入れながら、大きなチェックボックスでポンポン消していける画面がほしい」
 
 MulmoClaude（自分のパソコンの上でAIアシスタントを育てる、オープンソースのツール）なら、この画面そのものを会話で作れます。買い物リストの＋ボタンで「スマホビュー」を選ぶと、AIのほうから何をしたいか聞いてくれるので、フォームに答えるだけ。お店ではカゴに入れたらタップ、足りない表示はひとことで育ちます。
 
-作る過程を、実際の画面で60秒にまとめました。音声ありでどうぞ。
+作る過程を、実際の画面で3分弱にまとめました。音声ありでどうぞ。
 
-▶ フル版（2分47秒）と関連動画は再生リスト「MulmoClaude コレクションの作り方」：
+▶ 続きは再生リスト「MulmoClaude コレクションの作り方」：
 https://www.youtube.com/playlist?list=PLYPiiR7YGHJI
 
 始めるのは、ターミナルにこの1行だけ：
