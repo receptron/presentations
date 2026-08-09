@@ -57,7 +57,7 @@ Consult these files (not memory or the web) for available beat fields, slide lay
 npm run validate -- mulmoclaude/vision/<name>.json   # = mulmo tool complete -o /dev/null <file>
 ```
 
-`npm test` validates every script under `mulmoclaude/` at once (`scripts/validate-all.js`, using the local devDependency's `mulmoScriptSchema` — reports all invalid files with full Zod issue paths).
+`npm test` validates every script under `mulmoclaude/` and `mulmoterminal/` (skipping either root if absent) at once (`scripts/validate-all.js`, using the local devDependency's `mulmoScriptSchema` — reports all invalid files with full Zod issue paths).
 
 The CLI has no dedicated `validate` command; `tool complete` parses the script against the full schema first, prints `Validation errors:` with field paths and exits 1 on failure, exits 0 on success. The `-o /dev/null` discards the completed-script output (otherwise it writes `<name>_completed.json` next to the file).
 
