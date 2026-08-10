@@ -128,7 +128,7 @@
 
 ### 10 秒クリップの作り方
 
-- 置き場所は `demos/clips/`。10 秒クリップは What（機能紹介）なので、意図で切った木の下にぶら下げる。How のクリップが要るときは `tutorials/clips/`
+- 置き場所は `demos/clips/`（MulmoClaude のクリップ）。10 秒クリップは What（機能紹介）なので、意図で切った木の下にぶら下げる。How のクリップが要るときは `tutorials/clips/`。**MulmoTerminal のクリップは `mulmoterminal/clips/`** — launch デッキ（`mulmoterminal/launch/`）と同じく製品ルート配下に置く（前例 busy-buttons）。`mulmoterminal/` 配下は `validate-all` / `yarn test` の走査外なので、対象ファイルを個別に検証する
 - 命名は既存規約どおり。`<feature>.json` = 英語版 / `<feature>_ja.json` = 日本語版、録画は `<feature>-assets/` と `<feature>-assets-ja/`
 - **MulmoScript を作る**。ja/en の出し分けが `-l` / `-c` で済み、`slideParams.theme` を共有するので見た目が本編と揃い、何を出したかが JSON として repo に残る。素の mp4 だけ置くと `demos/clips/` が管理外の置き場になる
 - ただし**最小構成で作る**。X はミュート自動再生でナレーションが効かず、画像生成と TTS はビートごとに課金される。標準形は**スライド埋め込みの 1 ビート**: `html_tailwind` + `animation: {movie: true}` のスライドに、見出し・`<video>`（画面録画）・`data-animation` のテロップを同居させる。0 秒時点から文字と動きが同時に立ち、無音再生でも伝わる（タイトルカード先行・録画単独ビート・エンドカードの 3 案と比較して 2026-07-27 に採用。`animation.movie` 経路は HTML をリアルタイム再生しながら screencast するので、`<video>` はスライド内でそのまま再生される）
