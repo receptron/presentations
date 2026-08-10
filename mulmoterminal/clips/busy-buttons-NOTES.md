@@ -78,8 +78,9 @@ preset チップ → 打鍵 → `+ New worktree` → 起動、そのセルを閉
 
 ```sh
 # 01 フォーム → worktree 行へ寄る → Creating… → 引いて起動したセルへ（1 続き）
-#    寄って戻る動きは camera-move.mjs（片方向）では出せないので zoompan を直接書く。
-#    式は footage/2026-08-10/01-press-once-zoompan.txt に保存してある
+#    寄って戻る動きは、この収録時点の camera-move.mjs（片方向のみ）では出せず zoompan を直接書いた
+#    （式は footage/2026-08-10/01-press-once-zoompan.txt に保存）。2026-08-11 に --back / --rest として
+#    スクリプトに入ったので、次からは camera-move.mjs で出す
 ffmpeg -i acme-web-create-v3.mp4 -ss 0.00 -t 6.60 -an s1src.mp4
 ffmpeg -i s1src.mp4 -vf "crop=2840:1136:20:110,fps=60" -an s1crop.mp4
 ffmpeg -i s1crop.mp4 -vf "$(cat 01-press-once-zoompan.txt)" -t 8.6 -an 01-press-once.mp4
@@ -182,9 +183,7 @@ flex の中央寄せだと中身の高さで見出しとクリップが場面ご
   ズーム率では空のセル内部しか画角に入らないので黒い。引きを速くして（0.7 秒）**空の間は
   セルの枠が見える俯瞰に居させる**。残る 0.3 秒ほどはカメラが動いている最中なので、穴ではなく
   遷移として読める。
-- **寄って戻る動きは `camera-move.mjs` では出せない**（hold → push → tail の片方向のみ）。
-  zoompan の式を直接書く。イージングは smoothstep を 2 つ掛けて `e = s1*(1-s2)` にする
-  （s1 が寄り、s2 が引き）。式は `footage/2026-08-10/01-press-once-zoompan.txt`。
+- **寄って戻る動きは、この収録時点の `camera-move.mjs` では出せなかった**（hold → push → tail の片方向のみ）ので、zoompan の式を直接書いた — smoothstep を 2 つ掛けて `e = s1*(1-s2)`（s1 が寄り、s2 が引き）。式は `footage/2026-08-10/01-press-once-zoompan.txt`。このイージングは 2026-08-11 に `--back` / `--rest` として camera-move.mjs に一般化した — 次からはそちらを使う。
 - **引いた先の画角は次の場面と一致させる。** 場面 1 の引き終わりを場面 2 のクロップと同じに
   してあるので、カットではリングだけが現れる。同じ絵のまま注意だけが移る。
 - **同じ UI の寄り引きはカットではなくズームでつなぐ。** 起動フォームから worktree の行への
