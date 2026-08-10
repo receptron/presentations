@@ -104,7 +104,7 @@ flex の中央寄せだと中身の高さで見出しとクリップが場面ご
 `closingPadding` は名前に反して**最後の 1 つ前**のビートに掛かる（`isClosingGap = index === length - 2`）
 ので、ここでは効かない。`outroPadding` は `add_bgm_agent.js` で
 `totalDuration = speech + intro + outro` を作り、最後の `outro` 秒に `afade=t=out` を掛ける。
-**mulmocast 2.8.1 では映像も一緒に伸び、最後のフレームを保持する**（実測。`mulmoclaude/content-roadmap.md`
+**mulmocast 2.9.2 では映像も一緒に伸び、最後のフレームを保持する**（実測。`mulmoclaude/content-roadmap.md`
 にある「outroPadding は音声だけ伸ばすので動画ビートで終わるクリップは黒コマになる」は、
 この版・この構成では再現しない）。最後のビートに `audioParams.padding` を個別指定する手も
 あり、そちらも映像ごと伸びる。
