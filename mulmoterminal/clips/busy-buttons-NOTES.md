@@ -1,6 +1,6 @@
 # busy-buttons — MulmoTerminal 4.7.3 の機能紹介クリップ
 
-22 秒・4 場面。MulmoTerminal のリリースごとに短尺クリップを出すための 1 本目で、
+20 秒・3 場面。MulmoTerminal のリリースごとに短尺クリップを出すための 1 本目で、
 `mulmoclaude/demos/clips/collection-map_ja.json`（10 秒・1 ビート）の続き。
 
 制作フォーマットの正本は `mulmoclaude/content-roadmap.md` の
@@ -10,9 +10,9 @@
 | | |
 |---|---|
 | 題材 | 4.7.3 — worktree のコントロールが処理中に進行を出すようになった（#1549）ことと、削除中のセルの表示（#1551） |
-| 尺 | 英語 22.2 秒 / 日本語 21.0 秒 |
+| 尺 | 英語 19.5 秒 / 日本語 21.0 秒 |
 | 出典 | mulmoterminal `docs/guide/{en,ja}/v4.7.3.md`、`docs/ChangeLog.md` の 4.7.3 |
-| 構成 | 4 場面すべて実写。①フォーム→worktree 行へズームイン→`Creating…`→引いて起動したセルへ ②セルと閉じるボタン ③確認ダイアログ ④減光→削除中→セルが消える |
+| 構成 | 3 場面すべて実写。①フォーム→worktree 行へ寄る→`Creating…`→引いて起動したセルへ ②セルと閉じるボタン（×にリング）③× のあとダイアログ→寄る→`Remove worktree`にリング→引きながら削除→セルが消える |
 | 原素材 | `mt-demo-home/footage/2026-08-10/acme-web-{create,close}-v3.mp4` |
 
 **直した不具合の説明はしない。** できるようになったことだけを見せる。初稿は
@@ -84,17 +84,15 @@ ffmpeg -i acme-web-create-v3.mp4 -ss 0.80 -t 5.80 -an s1src.mp4
 ffmpeg -i s1src.mp4 -vf "crop=2840:1136:20:110,fps=60" -an s1crop.mp4
 ffmpeg -i s1crop.mp4 -vf "$(cat 01-press-once-zoompan.txt)" -t 8.6 -an 01-press-once.mp4
 
-# 02 生きているセル。× に静的なリングを重ねる
+# 02 生きているセル（俯瞰）。× のリングはクリップに焼く
 ffmpeg -i acme-web-create-v3.mp4 -ss 8.00 -t 2.00 -an s2src.mp4
-ffmpeg -i s2src.mp4 -vf "crop=2840:1136:20:110,tpad=stop_mode=clone:stop_duration=6.6,fps=60" -an 02-close-button.mp4
+ffmpeg -i s2src.mp4 -vf "crop=2840:1136:20:110,drawbox=x=2722:y=10:w=68:h=68:color=0x818cf8:t=6,tpad=stop_mode=clone:stop_duration=6.6,fps=60,scale=1120:448:flags=lanczos" -an 02-close-button.mp4
 
-# 03 確認ダイアログ。Remove worktree に静的なリング
-ffmpeg -i acme-web-close-v3.mp4 -ss 0.55 -t 2.00 -an s3src.mp4
-ffmpeg -i s3src.mp4 -vf "crop=1600:640:641:626,setpts=1.20*PTS,tpad=stop_mode=clone:stop_duration=6.2,fps=60" -an 03-it-asks.mp4
-
-# 04 減光 → 削除中 → セルが消える。実時間 1.6 秒しかないので 3.5 倍に伸ばす
-ffmpeg -i acme-web-close-v3.mp4 -ss 2.55 -t 1.60 -an s4src.mp4
-ffmpeg -i s4src.mp4 -vf "crop=1600:640:641:626,setpts=3.50*PTS,tpad=stop_mode=clone:stop_duration=3.0,fps=60" -an 04-removing.mp4
+# 03 ダイアログ登場（俯瞰）→ 寄る → Remove worktree → 引きながら削除 → セルが消える（1 続き）
+#    リングはダイアログが出ている間だけ描く。式は 03-ask-then-remove-zoompan.txt
+ffmpeg -i acme-web-close-v3.mp4 -ss 0.30 -t 3.80 -an s3src.mp4
+ffmpeg -i s3src.mp4 -vf "crop=2840:1136:20:110,drawbox=x=1356:y=810:w=260:h=72:color=0x818cf8:t=6:enable='between(t,0.32,2.38)',setpts=1.80*PTS,fps=60" -an s3mid.mp4
+ffmpeg -i s3mid.mp4 -vf "$(cat 03-ask-then-remove-zoompan.txt)" -t 9.0 -an 03-ask-then-remove.mp4
 ```
 
 **スライドは全場面で同じ絶対座標**（見出し `top:84px`、クリップ `top:180px` の 1060px 幅）。
@@ -106,15 +104,18 @@ flex の中央寄せだと中身の高さで見出しとクリップが場面ご
 
 | ファイル | 中身 |
 |---|---|
-| `01-press-once.mp4` | 1120×448 — フォーム → worktree 行へのズームイン |
-| `02-close-button.mp4` | 2840×1136 — 生きているセル。× にリング |
-| `03-it-asks.mp4` | 1600×640 — 確認ダイアログ。Remove worktree にリング |
-| `04-removing.mp4` | 1600×640 — 減光 → 削除中 → セルが消える |
+| `01-press-once.mp4` | 1120×448 — フォーム → 行へ寄る → `Creating…` → 引いて起動したセル |
+| `02-close-button.mp4` | 1120×448 — 生きているセル。× にリング |
+| `03-ask-then-remove.mp4` | 1120×448 — ダイアログ → 寄る → Remove にリング → 引きながら削除 → 消える |
 
-**「どのボタンから削除に行くのか」は場面 3 のリングだけが答えている。** 入口はセル自身の
-閉じるボタン（ヘッダー右端の ×）で、worktree のセルだと押した先が確認ダイアログになる。
-クリップは押す瞬間を映せない（スクリーンキャストにポインタが写らず、そもそも JS click している）ので、
-`<video>` を `relative` なラッパーに入れて % 座標のリングを `data-animation` で重ねる。
+**「どのボタンを押すのか」はリングだけが答えている。** 入口はセル自身の閉じるボタン
+（ヘッダー右端の ×）で、worktree のセルだと押した先が確認ダイアログになる。クリップは押す瞬間を
+映せない（スクリーンキャストにポインタが写らず、そもそも JS click している）ので、リングで指す。
+
+**リングは HTML オーバーレイではなく、クリップに焼き込む**（`drawbox`、ソース座標）。
+絶対配置の div は `<video>` **要素**を基準に置かれるので、カメラが動くと中身だけが動いて
+リングが取り残される。% 座標での指定も外しやすく、実際 × のリングが 1 段下の
+アイコン列を囲っていた。ソース座標で `drawbox` すれば、寄りでも引きでも同じ場所を指し続ける。
 
 **寄りの画角はクリップ側で決める。** 一度 1120×640 のクリップをスライドで 665px 幅に縮めて
 置いたことがあり、`camera-move.mjs` で稼いだ拡大がその縮小でそのまま相殺された。
@@ -152,10 +153,13 @@ flex の中央寄せだと中身の高さで見出しとクリップが場面ご
 - **xterm はキャンバス描画なので、端末の中身は DOM に出ない。** `.xterm-rows` の innerText を
   待つ検査は、正常に起動しているセルに対してタイムアウトする。DOM で判るのは
   「起動フォームが消えた」ことと「接続状態のピルが無い」ことまで。
-- **リングは `data-animation` で出さない。** クリップの再生時刻とアニメーションの時刻がずれて、
-  1〜3 秒遅れて出る。確認ダイアログを指すリングが、ダイアログが消えたあとに現れて空中に浮いた。
-  場面いっぱい出しっぱなしの静的なリングにする（そのぶん、リングが指すものが画面から消える
-  場面では切って別の場面にする）。
+- **リングを `data-animation` で出そうとすると遅れる。** クリップの再生時刻とアニメーションの
+  時刻が揃っておらず、1〜3 秒遅れて出た。ダイアログを指すリングが、ダイアログが消えたあとに
+  現れて空中に浮いた。焼き込みに変えると、そもそも時刻を合わせる問題自体が消える。
+- **寄りは「どこの話か」が分かる範囲まで。** ダイアログと削除中をそれぞれ 1600×640 に切って
+  別々の場面にしていたら、寄りすぎて画面のどこの話か分からなくなった。**セルの画角
+  （2840×1136）を基準に置き、寄りはその中で 1.775 倍まで**にすると、ダイアログが読める一方で
+  周りのセルも見えている。カメラで寄る/引くので、クロップを変えて場面を切る必要がない。
 - **空白は切って避けるのではなく、カメラで覆う。** `Creating…` のクリップがフォーム消滅後まで
   伸びていて末尾のフリーズが空の矩形になっていた。最初はトリムを手前に詰めて回避したが、
   実測するとフォームが消えてからセルにバナーが出るまでの空白は **4.7 → 5.8 秒の約 1 秒だけ**で、
