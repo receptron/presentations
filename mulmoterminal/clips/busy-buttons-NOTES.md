@@ -1,6 +1,6 @@
 # busy-buttons — MulmoTerminal 4.7.3 の機能紹介クリップ
 
-20 秒・3 場面。MulmoTerminal のリリースごとに短尺クリップを出すための 1 本目で、
+21 秒・3 場面。MulmoTerminal のリリースごとに短尺クリップを出すための 1 本目で、
 `mulmoclaude/demos/clips/collection-map_ja.json`（10 秒・1 ビート）の続き。
 
 制作フォーマットの正本は `mulmoclaude/content-roadmap.md` の
@@ -10,7 +10,7 @@
 | | |
 |---|---|
 | 題材 | 4.7.3 — worktree のコントロールが処理中に進行を出すようになった（#1549）ことと、削除中のセルの表示（#1551） |
-| 尺 | 英語 19.5 秒 / 日本語 21.0 秒 |
+| 尺 | 英語 22.0 秒 / 日本語 20.8 秒（末尾に `outroPadding` 2.5 秒を含む） |
 | 出典 | mulmoterminal `docs/guide/{en,ja}/v4.7.3.md`、`docs/ChangeLog.md` の 4.7.3 |
 | 構成 | 3 場面すべて実写。①フォーム→worktree 行へ寄る→`Creating…`→引いて起動したセルへ ②セルと閉じるボタン（×にリング）③× のあとダイアログ→寄る→`Remove worktree`にリング→引きながら削除→セルが消える |
 | 原素材 | `mt-demo-home/footage/2026-08-10/acme-web-{create,close}-v3.mp4` |
@@ -99,7 +99,17 @@ ffmpeg -i s3mid.mp4 -vf "$(cat 03-ask-then-remove-zoompan.txt)" -t 9.0 -an 03-as
 flex の中央寄せだと中身の高さで見出しとクリップが場面ごとに動き、切り替わるたびに画面が
 揺れて見える。クリップ側も全部 2.5:1 に揃えて、変わるのは画角の中身だけにする。
 
-**クリップは音声より長く作る（各 8.5 秒）。** 尺はナレーションが決めるので、クリップが短いと
+**終わりは `outroPadding` で作る（2.5 秒）。** `combine_audio_files_agent.js` の `getPadding()` は
+**最後のビートに限って padding 0 を返す**ので、既定ではナレーションが終わった瞬間に映像が切れる。
+`closingPadding` は名前に反して**最後の 1 つ前**のビートに掛かる（`isClosingGap = index === length - 2`）
+ので、ここでは効かない。`outroPadding` は `add_bgm_agent.js` で
+`totalDuration = speech + intro + outro` を作り、最後の `outro` 秒に `afade=t=out` を掛ける。
+**mulmocast 2.8.1 では映像も一緒に伸び、最後のフレームを保持する**（実測。`mulmoclaude/content-roadmap.md`
+にある「outroPadding は音声だけ伸ばすので動画ビートで終わるクリップは黒コマになる」は、
+この版・この構成では再現しない）。最後のビートに `audioParams.padding` を個別指定する手も
+あり、そちらも映像ごと伸びる。
+
+**クリップは音声より長く作る（各 8.5 秒。最終場面は 13 秒）。** 尺はナレーションが決めるので、クリップが短いと
 末尾が凍る。長いぶんはビート終端で切られるだけで害がない。
 
 | ファイル | 中身 |

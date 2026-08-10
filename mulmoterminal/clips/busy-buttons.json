@@ -33,7 +33,7 @@
     "padding": 0.3,
     "introPadding": 0.5,
     "closingPadding": 0.3,
-    "outroPadding": 0,
+    "outroPadding": 2.5,
     "bgmVolume": 0.12,
     "audioVolume": 1,
     "suppressSpeech": false,
