@@ -138,9 +138,10 @@
 第 1 号は `demos/clips/collection-map_ja.json`（マップタブ、8.5 秒）。作って分かった罠:
 
 - **BGM の相対パス**: デッキから `audioParams` を流用すると `../../resources/...` が `clips/` の階層ぶんずれて movie 生成が落ちる。`../../../resources/...` に直す
-- **余韻の詰め**: デッキ用の `outroPadding: 3` / `introPadding: 1` のままだと 10 秒に収まらない。クリップでは introPadding 0.5 / **outroPadding 0** にする
-- **アニメ付き `html_tailwind` ビートには `duration` を明示する**（例: `duration: 8`）。未指定だと映像がナレーション長ぶんしか録画されず、末尾の padding が黒コマになる（`combine_audio_files_agent` は「explicit duration があるときだけ」動画的ビートとして扱う）
-- **outroPadding は音声だけ伸ばす**ので、動画ビートで終わるクリップでは黒コマになる。上の outroPadding 0 はこのため
+- **余韻の詰め**: デッキ用の `introPadding: 1` のままだと 10 秒に収まらない。クリップでは introPadding 0.5 にする（`outroPadding` は下 2 行のとおり、末尾を作るために 2〜3 秒入れる）
+- **アニメ付き `html_tailwind` ビートには `duration` を明示する**（例: `duration: 8`）。未指定だと映像がナレーション長ぶんしか録画されない（`combine_audio_files_agent` は「explicit duration があるときだけ」動画的ビートとして扱う）
+- **最後のビートには padding が付かない** — `combine_audio_files_agent.js` の `getPadding()` が最終 index に 0 を返す。ナレーションが終わった瞬間に映像が切れるので、末尾は `outroPadding` で作る。`closingPadding` は名前に反して**最後の 1 つ前**のビートに掛かる（`isClosingGap = index === length - 2`）ので、ここには効かない
+- **`outroPadding` は映像も一緒に伸ばし、最後のフレームを保持する** — mulmocast **2.9.2** で実測（`outroPadding: 2.5`、3 ビートのクリップで beats 19.03 秒 + intro 0.5 + outro 2.5 = 映像 22.03 秒、末尾のフレームは黒ではなく最終フレーム）。`add_bgm_agent.js` が `totalDuration = speech + intro + outro` を作り、最後の `outro` 秒に `afade=t=out` を掛ける。2026-07-27 時点のここには「outroPadding は音声だけ伸ばすので動画ビートで終わるクリップでは黒コマになる」とあったが、**2.9.2 では再現しない**（`duration` 未指定のアニメ付き `html_tailwind` ビートで終わる構成で確認。2026-08-11 に修正）。10 秒に収めたいときは、この 2〜3 秒を尺の予算に入れて逆算する
 - **埋め込む録画は `duration` より長くしておく**（duration 8 なら録画 8.4 秒程度）。短いと再生が終わって止まる
 
 決まっていること / 残っていること:
