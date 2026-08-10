@@ -55,33 +55,19 @@
   "description": "MulmoTerminal 4.7.3 の機能紹介クリップ（約15秒・日本語ナレーション）。6秒かかるのに何も表示しなかった worktree のボタンが押し増され、押した回数だけ worktree ができていた問題。いまはボタンが自分をロックして進行を表示し、削除中のセルも削除中に見える。スライドは英語版と共通の英語 — busy-buttons-NOTES.md 参照。",
   "beats": [
     {
-      "text": "タスクに専用のワークツリーを用意します。名前を入れて、押すだけです。",
+      "text": "タスク名を入れて一度押せば、ボタンは自分をロックして、いま何をしているかを表示します。",
       "image": {
         "type": "html_tailwind",
         "animation": {
           "movie": true
         },
         "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
+          "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>A worktree of its own.</div>",
-          "  <video src='./busy-buttons-assets/01-name-the-task.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:450px'></video>",
-          "</div>"
-        ]
-      }
-    },
-    {
-      "text": "ボタンは自分をロックして、いま何をしているかを表示します。",
-      "image": {
-        "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
-        "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
-          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>The button says what it&rsquo;s doing.</div>",
-          "  <video src='./busy-buttons-assets/02-creating.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1120px'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>The button says what it&rsquo;s doing.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./busy-buttons-assets/01-press-once.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "  </div>",
           "</div>"
         ]
       }
@@ -94,12 +80,12 @@
           "movie": true
         },
         "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
+          "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>Closing starts here.</div>",
-          "  <div class='relative'>",
-          "    <video src='./busy-buttons-assets/03-the-close-button.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:450px'></video>",
-          "    <div class='absolute rounded-md ring-4 ring-indigo-400' style='left:95.2%;top:2.7%;width:3.0%;height:4.4%' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='0.8' data-end='1.3'></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Closing starts here.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./busy-buttons-assets/02-close-button.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "    <div class='absolute rounded-md ring-4 ring-indigo-400' style='left:95.2%;top:3.4%;width:3.0%;height:6.4%'></div>",
           "  </div>",
           "</div>"
         ]
@@ -113,26 +99,31 @@
           "movie": true
         },
         "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
+          "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>It asks before it removes.</div>",
-          "  <video src='./busy-buttons-assets/04-close-confirm.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:450px'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>It asks before it removes.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./busy-buttons-assets/03-it-asks.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "    <div class='absolute rounded-md ring-4 ring-indigo-400' style='left:46.6%;top:47.6%;width:15.0%;height:11.0%'></div>",
+          "  </div>",
           "</div>"
         ]
       }
     },
     {
-      "text": "セル全体が減光して、何を削除しているかを伝えます。",
+      "text": "削除を選ぶと、セル全体が減光し、何を削除しているかを伝えてから消えます。",
       "image": {
         "type": "html_tailwind",
         "animation": {
           "movie": true
         },
         "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
+          "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>Then it says what it&rsquo;s removing.</div>",
-          "  <video src='./busy-buttons-assets/05-removing.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1120px'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Then it says what it&rsquo;s removing.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./busy-buttons-assets/04-removing.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "  </div>",
           "</div>"
         ]
       }

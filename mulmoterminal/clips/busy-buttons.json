@@ -55,51 +55,37 @@
   "description": "Short feature clip (~15s) for MulmoTerminal 4.7.3. A worktree button that took six seconds and showed nothing got pressed again, making one worktree per click; it now locks itself and reports progress, and a cell being removed looks like it. Slides are English in both language versions — see busy-buttons-NOTES.md.",
   "beats": [
     {
-      "text": "Give a task its own worktree — name it, and press.",
+      "text": "Name a task, press once — and the button locks itself and says what it is doing.",
       "image": {
         "type": "html_tailwind",
         "animation": {
           "movie": true
         },
         "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
+          "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>A worktree of its own.</div>",
-          "  <video src='./busy-buttons-assets/01-name-the-task.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:450px'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>The button says what it&rsquo;s doing.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./busy-buttons-assets/01-press-once.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "  </div>",
           "</div>"
         ]
       }
     },
     {
-      "text": "The button locks itself and says what it is doing.",
+      "text": "You close it from the cell's own close button.",
       "image": {
         "type": "html_tailwind",
         "animation": {
           "movie": true
         },
         "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
+          "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>The button says what it&rsquo;s doing.</div>",
-          "  <video src='./busy-buttons-assets/02-creating.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1120px'></video>",
-          "</div>"
-        ]
-      }
-    },
-    {
-      "text": "It closes from the cell's own close button.",
-      "image": {
-        "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
-        "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
-          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>Closing starts here.</div>",
-          "  <div class='relative'>",
-          "    <video src='./busy-buttons-assets/03-the-close-button.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:450px'></video>",
-          "    <div class='absolute rounded-md ring-4 ring-indigo-400' style='left:95.2%;top:2.7%;width:3.0%;height:4.4%' data-animation='animate' data-easing='easeOut' data-opacity='0,1' data-start='0.8' data-end='1.3'></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Closing starts here.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./busy-buttons-assets/02-close-button.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "    <div class='absolute rounded-md ring-4 ring-indigo-400' style='left:95.2%;top:3.4%;width:3.0%;height:6.4%'></div>",
           "  </div>",
           "</div>"
         ]
@@ -113,26 +99,31 @@
           "movie": true
         },
         "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
+          "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>It asks before it removes.</div>",
-          "  <video src='./busy-buttons-assets/04-close-confirm.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:450px'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>It asks before it removes.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./busy-buttons-assets/03-it-asks.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "    <div class='absolute rounded-md ring-4 ring-indigo-400' style='left:46.6%;top:47.6%;width:15.0%;height:11.0%'></div>",
+          "  </div>",
           "</div>"
         ]
       }
     },
     {
-      "text": "Then the whole cell dims, and tells you what it is removing.",
+      "text": "Choose remove, and the whole cell dims, says what it is removing, and goes.",
       "image": {
         "type": "html_tailwind",
         "animation": {
           "movie": true
         },
         "html": [
-          "<div class='w-full h-full bg-slate-950 relative flex flex-col items-center justify-center gap-9 px-16'>",
+          "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
-          "  <div class='text-5xl font-semibold text-slate-100 text-center'>Then it says what it&rsquo;s removing.</div>",
-          "  <video src='./busy-buttons-assets/05-removing.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1120px'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Then it says what it&rsquo;s removing.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./busy-buttons-assets/04-removing.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "  </div>",
           "</div>"
         ]
       }

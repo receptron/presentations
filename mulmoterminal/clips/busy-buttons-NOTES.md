@@ -1,6 +1,6 @@
 # busy-buttons — MulmoTerminal 4.7.3 の機能紹介クリップ
 
-23 秒・5 場面。MulmoTerminal のリリースごとに短尺クリップを出すための 1 本目で、
+22 秒・4 場面。MulmoTerminal のリリースごとに短尺クリップを出すための 1 本目で、
 `mulmoclaude/demos/clips/collection-map_ja.json`（10 秒・1 ビート）の続き。
 
 制作フォーマットの正本は `mulmoclaude/content-roadmap.md` の
@@ -10,10 +10,10 @@
 | | |
 |---|---|
 | 題材 | 4.7.3 — worktree のコントロールが処理中に進行を出すようになった（#1549）ことと、削除中のセルの表示（#1551） |
-| 尺 | 英語 23.1 秒 / 日本語 22.9 秒 |
+| 尺 | 英語 22.2 秒 / 日本語 21.0 秒 |
 | 出典 | mulmoterminal `docs/guide/{en,ja}/v4.7.3.md`、`docs/ChangeLog.md` の 4.7.3 |
-| 構成 | 5 場面すべて実写。俯瞰（起動フォーム）→ 寄り（ボタン）→ 俯瞰（セルと閉じるボタン）→ 寄り（確認ダイアログ）→ 寄り（削除中） |
-| 原素材 | `mt-demo-home/footage/2026-08-10/acme-web-{create,close}-v2.mp4` |
+| 構成 | 4 場面すべて実写。①フォーム→worktree 行へズームイン→`Creating…` ②セルと閉じるボタン ③確認ダイアログ ④減光→削除中→セルが消える |
+| 原素材 | `mt-demo-home/footage/2026-08-10/acme-web-{create,close}-v3.mp4` |
 
 **直した不具合の説明はしない。** できるようになったことだけを見せる。初稿は
 「6 秒かかるのに無反応だったので押し増され、worktree が 3 本できた」を 1 ビート目に置いたが、
@@ -69,47 +69,46 @@ X はミュート自動再生なので焼き込み前提。`captionParams` に `
 
 ## 素材の作り方
 
-撮影は `reshoot-worktree.mjs`（take A: 作成）と `reshoot-close.mjs`（take B: 閉じる）。
-どちらも `footage/2026-08-10/` に同梱。capture-server.sh の :34599 に対して、preset チップ →
-打鍵 → `+ New worktree` → 起動、いったんブラウザを閉じて worktree 行から復帰 → 閉じる →
-削除、を撮る。`page.screencast` は **2880×1800（retina 2x）**で録れるので、クロップで寄っても
+撮影は `shoot-v3.mjs`（`footage/2026-08-10/` に同梱）。capture-server.sh の :34599 に対して、
+preset チップ → 打鍵 → `+ New worktree` → 起動、そのセルを閉じて worktree ごと削除、までを
+1 ブラウザで通す。`page.screencast` は **2880×1800（retina 2x）**なので、クロップで寄っても
 解像度が足りる。
 
-切り出し（原素材は `footage/2026-08-10/acme-web-{create,close}-v2.mp4`）。
-**2 テイクから 5 場面を作っている** — 2x なので、クロップの取り方だけで俯瞰と寄りを作り分けられる:
+切り出し（原素材は `footage/2026-08-10/acme-web-{create,close}-v3.mp4`）:
 
 ```sh
-# 01 俯瞰: 起動フォーム全体（読ませない。worktree の行がここにあると分かればよい）
-ffmpeg -i acme-web-create-v2.mp4 -ss 0.80 -t 1.50 -an c1.mp4
-ffmpeg -i c1.mp4 -vf "crop=1700:1000:600:200,setpts=1.30*PTS,tpad=stop_mode=clone:stop_duration=6.6,fps=60" -an 01-name-the-task.mp4
+# 01 フォーム → worktree 行へズームイン（カットで切り替えない）。Creating… で着地する
+ffmpeg -i acme-web-create-v3.mp4 -ss 0.80 -t 3.60 -an s1src.mp4
+ffmpeg -i s1src.mp4 -vf "crop=1700:680:600:380,fps=60" -an s1crop.mp4
+node ~/.claude/skills/mulmoterminal-video/camera-move.mjs s1crop.mp4 01-press-once.mp4 \
+  --target 260,171,1160,464 --hold 1.5 --push 1.3 --tail 6.0 --canvas 1120x448
 
-# 02 寄り: 打鍵 → New worktree → Creating… の行だけ
-ffmpeg -i acme-web-create-v2.mp4 -ss 1.90 -t 2.70 -an c2.mp4
-ffmpeg -i c2.mp4 -vf "crop=1160:210:860:678,setpts=1.15*PTS,tpad=stop_mode=clone:stop_duration=5.4,fps=60" -an 02-creating.mp4
+# 02 生きているセル。× に静的なリングを重ねる
+ffmpeg -i acme-web-create-v3.mp4 -ss 8.00 -t 2.00 -an s2src.mp4
+ffmpeg -i s2src.mp4 -vf "crop=2840:1136:20:110,tpad=stop_mode=clone:stop_duration=6.6,fps=60" -an 02-close-button.mp4
 
-# 03 俯瞰: 生きているセル。× にリングを重ねるので、ヘッダーの上に余白を残して切る
-ffmpeg -i acme-web-close-v2.mp4 -ss 0.20 -t 2.20 -an c3.mp4
-ffmpeg -i c3.mp4 -vf "crop=2840:1650:20:80,tpad=stop_mode=clone:stop_duration=6.3,fps=60" -an 03-the-close-button.mp4
+# 03 確認ダイアログ。Remove worktree に静的なリング
+ffmpeg -i acme-web-close-v3.mp4 -ss 0.55 -t 2.00 -an s3src.mp4
+ffmpeg -i s3src.mp4 -vf "crop=1600:640:641:626,setpts=1.20*PTS,tpad=stop_mode=clone:stop_duration=6.2,fps=60" -an 03-it-asks.mp4
 
-# 04 寄り: 確認ダイアログ（ダイアログが消える前で切って、そのフレームで止める）
-ffmpeg -i acme-web-close-v2.mp4 -ss 2.70 -t 1.30 -an c4.mp4
-ffmpeg -i c4.mp4 -vf "crop=1600:740:641:576,setpts=1.30*PTS,tpad=stop_mode=clone:stop_duration=6.8,fps=60" -an 04-close-confirm.mp4
-
-# 05 寄り: 削除中
-ffmpeg -i acme-web-close-v2.mp4 -ss 4.30 -t 1.30 -an c5.mp4
-ffmpeg -i c5.mp4 -vf "crop=1700:790:578:522,setpts=1.30*PTS,tpad=stop_mode=clone:stop_duration=6.8,fps=60" -an 05-removing.mp4
+# 04 減光 → 削除中 → セルが消える。実時間 1.6 秒しかないので 3.5 倍に伸ばす
+ffmpeg -i acme-web-close-v3.mp4 -ss 2.55 -t 1.60 -an s4src.mp4
+ffmpeg -i s4src.mp4 -vf "crop=1600:640:641:626,setpts=3.50*PTS,tpad=stop_mode=clone:stop_duration=3.0,fps=60" -an 04-removing.mp4
 ```
+
+**スライドは全場面で同じ絶対座標**（見出し `top:84px`、クリップ `top:180px` の 1060px 幅）。
+flex の中央寄せだと中身の高さで見出しとクリップが場面ごとに動き、切り替わるたびに画面が
+揺れて見える。クリップ側も全部 2.5:1 に揃えて、変わるのは画角の中身だけにする。
 
 **クリップは音声より長く作る（各 8.5 秒）。** 尺はナレーションが決めるので、クリップが短いと
 末尾が凍る。長いぶんはビート終端で切られるだけで害がない。
 
 | ファイル | 中身 |
 |---|---|
-| `01-name-the-task.mp4` | 1700×1000 — 起動フォーム（俯瞰） |
-| `02-creating.mp4` | 1160×210 — worktree の行（寄り） |
-| `03-the-close-button.mp4` | 2840×1650 — 生きているセル（俯瞰）。× にリングを重ねる |
-| `04-close-confirm.mp4` | 1600×740 — 閉じる確認ダイアログ（寄り） |
-| `05-removing.mp4` | 1700×790 — 削除中のセル（寄り） |
+| `01-press-once.mp4` | 1120×448 — フォーム → worktree 行へのズームイン |
+| `02-close-button.mp4` | 2840×1136 — 生きているセル。× にリング |
+| `03-it-asks.mp4` | 1600×640 — 確認ダイアログ。Remove worktree にリング |
+| `04-removing.mp4` | 1600×640 — 減光 → 削除中 → セルが消える |
 
 **「どのボタンから削除に行くのか」は場面 3 のリングだけが答えている。** 入口はセル自身の
 閉じるボタン（ヘッダー右端の ×）で、worktree のセルだと押した先が確認ダイアログになる。
@@ -152,6 +151,18 @@ ffmpeg -i c5.mp4 -vf "crop=1700:790:578:522,setpts=1.30*PTS,tpad=stop_mode=clone
 - **xterm はキャンバス描画なので、端末の中身は DOM に出ない。** `.xterm-rows` の innerText を
   待つ検査は、正常に起動しているセルに対してタイムアウトする。DOM で判るのは
   「起動フォームが消えた」ことと「接続状態のピルが無い」ことまで。
+- **リングは `data-animation` で出さない。** クリップの再生時刻とアニメーションの時刻がずれて、
+  1〜3 秒遅れて出る。確認ダイアログを指すリングが、ダイアログが消えたあとに現れて空中に浮いた。
+  場面いっぱい出しっぱなしの静的なリングにする（そのぶん、リングが指すものが画面から消える
+  場面では切って別の場面にする）。
+- **状態が消える前で切る。** `Creating…` のクリップを「フォームが消えたあと」まで伸ばしていて、
+  末尾のフリーズが空の矩形になり、2 秒ほど何も映らなかった。トリムの終わりは必ず
+  「見せたい状態がまだ出ている」フレームにする。
+- **同じ UI の寄り引きはカットではなくズームでつなぐ。** 起動フォームから worktree の行への
+  切り替えをカットにしていたら、同じ画面が突然大きさだけ変わって見えた。`camera-move.mjs` の
+  プッシュインにすると、どこを見ればいいかが動きで伝わる。
+- **一瞬で終わる状態は伸ばす。** 削除の減光〜消滅は実時間 1.6 秒しかなく、そのまま置くと
+  ビートの大半が「消えたあとの空のフォーム」になる。`setpts=3.5*PTS` で伸ばす。
 - **話者の `instruction` が尺を動かす。** 日本語版に「文と文のあいだの間を十分に取ってください」と
   書いていたら、1 文のビートが 10.8 秒まで伸びた。「テンポよく」に替えて 5.8 秒。
   英語版の同じ趣旨の一文（`Let the pauses between sentences breathe.`）はローンチデッキ由来で、
