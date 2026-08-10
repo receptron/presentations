@@ -12,7 +12,7 @@
 | 題材 | 4.7.3 — worktree のコントロールが処理中に進行を出すようになった（#1549）ことと、削除中のセルの表示（#1551） |
 | 尺 | 英語 22.2 秒 / 日本語 21.0 秒 |
 | 出典 | mulmoterminal `docs/guide/{en,ja}/v4.7.3.md`、`docs/ChangeLog.md` の 4.7.3 |
-| 構成 | 4 場面すべて実写。①フォーム→worktree 行へズームイン→`Creating…` ②セルと閉じるボタン ③確認ダイアログ ④減光→削除中→セルが消える |
+| 構成 | 4 場面すべて実写。①フォーム→worktree 行へズームイン→`Creating…`→引いて起動したセルへ ②セルと閉じるボタン ③確認ダイアログ ④減光→削除中→セルが消える |
 | 原素材 | `mt-demo-home/footage/2026-08-10/acme-web-{create,close}-v3.mp4` |
 
 **直した不具合の説明はしない。** できるようになったことだけを見せる。初稿は
@@ -77,11 +77,12 @@ preset チップ → 打鍵 → `+ New worktree` → 起動、そのセルを閉
 切り出し（原素材は `footage/2026-08-10/acme-web-{create,close}-v3.mp4`）:
 
 ```sh
-# 01 フォーム → worktree 行へズームイン（カットで切り替えない）。Creating… で着地する
-ffmpeg -i acme-web-create-v3.mp4 -ss 0.80 -t 3.60 -an s1src.mp4
-ffmpeg -i s1src.mp4 -vf "crop=1700:680:600:380,fps=60" -an s1crop.mp4
-node ~/.claude/skills/mulmoterminal-video/camera-move.mjs s1crop.mp4 01-press-once.mp4 \
-  --target 260,171,1160,464 --hold 1.5 --push 1.3 --tail 6.0 --canvas 1120x448
+# 01 フォーム → worktree 行へ寄る → Creating… → 引いて起動したセルへ（1 続き）
+#    寄って戻る動きは camera-move.mjs（片方向）では出せないので zoompan を直接書く。
+#    式は footage/2026-08-10/01-press-once-zoompan.txt に保存してある
+ffmpeg -i acme-web-create-v3.mp4 -ss 0.80 -t 5.80 -an s1src.mp4
+ffmpeg -i s1src.mp4 -vf "crop=2840:1136:20:110,fps=60" -an s1crop.mp4
+ffmpeg -i s1crop.mp4 -vf "$(cat 01-press-once-zoompan.txt)" -t 8.6 -an 01-press-once.mp4
 
 # 02 生きているセル。× に静的なリングを重ねる
 ffmpeg -i acme-web-create-v3.mp4 -ss 8.00 -t 2.00 -an s2src.mp4
@@ -155,9 +156,16 @@ flex の中央寄せだと中身の高さで見出しとクリップが場面ご
   1〜3 秒遅れて出る。確認ダイアログを指すリングが、ダイアログが消えたあとに現れて空中に浮いた。
   場面いっぱい出しっぱなしの静的なリングにする（そのぶん、リングが指すものが画面から消える
   場面では切って別の場面にする）。
-- **状態が消える前で切る。** `Creating…` のクリップを「フォームが消えたあと」まで伸ばしていて、
-  末尾のフリーズが空の矩形になり、2 秒ほど何も映らなかった。トリムの終わりは必ず
-  「見せたい状態がまだ出ている」フレームにする。
+- **空白は切って避けるのではなく、カメラで覆う。** `Creating…` のクリップがフォーム消滅後まで
+  伸びていて末尾のフリーズが空の矩形になっていた。最初はトリムを手前に詰めて回避したが、
+  実測するとフォームが消えてからセルにバナーが出るまでの空白は **4.7 → 5.8 秒の約 1 秒だけ**で、
+  そこに**引き（zoom out）を重ねると空白がそのまま「起動したセルの登場」になる**。
+  1 場面で 寄る → 保つ → 引く まで通すので、カットが 1 つ減って意味が 1 つ増える。
+- **寄って戻る動きは `camera-move.mjs` では出せない**（hold → push → tail の片方向のみ）。
+  zoompan の式を直接書く。イージングは smoothstep を 2 つ掛けて `e = s1*(1-s2)` にする
+  （s1 が寄り、s2 が引き）。式は `footage/2026-08-10/01-press-once-zoompan.txt`。
+- **引いた先の画角は次の場面と一致させる。** 場面 1 の引き終わりを場面 2 のクロップと同じに
+  してあるので、カットではリングだけが現れる。同じ絵のまま注意だけが移る。
 - **同じ UI の寄り引きはカットではなくズームでつなぐ。** 起動フォームから worktree の行への
   切り替えをカットにしていたら、同じ画面が突然大きさだけ変わって見えた。`camera-move.mjs` の
   プッシュインにすると、どこを見ればいいかが動きで伝わる。
