@@ -91,7 +91,7 @@
       }
     },
     {
-      "text": "グループを選べば、その節がそのまま出てきます。通知音も、ひとクリックです。",
+      "text": "グループを選べば、その節がまるごと出てきます。どの音を鳴らすか、それが何の音かまで。",
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -100,7 +100,7 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.5</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Pick a group, get the section.</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Pick a group, get the whole section.</div>",
           "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
           "    <video src='./settings-you-can-find-assets/02-one-section.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
           "  </div>",
