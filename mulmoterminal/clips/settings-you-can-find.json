@@ -51,11 +51,11 @@
     "bottomOffset": 4
   },
   "lang": "en",
-  "title": "MulmoTerminal 4.7.5 — settings you can find, in a language you read",
-  "description": "Short feature clip for MulmoTerminal 4.7.5. Settings was one scroll of twenty-four English headings; it is now a sidebar of nine groups showing one section at a time, and the whole modal reads in Japanese. Slides are English in both language versions — see 4.7.5-clips-NOTES.md.",
+  "title": "MulmoTerminal 4.7.5 — what you can change, and where it lives",
+  "description": "Short feature clip for MulmoTerminal 4.7.5. Where the settings live and what is in them: one gear in the toolbar, nine groups, one section at a time, and the whole panel in Japanese if you want it. Slides are English in both language versions — see 4.7.5-clips-NOTES.md.",
   "beats": [
     {
-      "text": "Settings used to be one scroll of twenty-four headings. It is a sidebar of nine groups now.",
+      "text": "Everything you can change about MulmoTerminal is behind one gear in the toolbar.",
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -64,7 +64,25 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.5</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Nine groups, not one scroll.</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>It all lives behind the gear.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./settings-you-can-find-assets/00-where-it-lives.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Nine groups of settings: how it looks, your projects, input, models, notifications, integrations, sessions.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.5</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Nine groups of settings.</div>",
           "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
           "    <video src='./settings-you-can-find-assets/01-nine-groups.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
           "  </div>",
@@ -73,7 +91,7 @@
       }
     },
     {
-      "text": "Pick a group, and that one section is what you get.",
+      "text": "Pick a group and you get that one section. Notification sounds is one click in.",
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -82,7 +100,7 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.5</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>One section at a time.</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Pick a group, get the section.</div>",
           "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
           "    <video src='./settings-you-can-find-assets/02-one-section.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
           "  </div>",
@@ -100,7 +118,7 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.5</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>And it reads in Japanese.</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Or read it in Japanese.</div>",
           "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
           "    <video src='./settings-you-can-find-assets/03-japanese.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
           "  </div>",

@@ -51,11 +51,11 @@
     "bottomOffset": 4
   },
   "lang": "en",
-  "title": "MulmoTerminal 4.7.5 — a skill button that says what it will do",
-  "description": "Short feature clip for MulmoTerminal 4.7.5. A Settings button that used to start an agent session the instant it was pressed now says what it will do, names the agent, and can be cancelled. Slides are English in both language versions — see 4.7.5-clips-NOTES.md.",
+  "title": "MulmoTerminal 4.7.5 — the settings that write themselves",
+  "description": "Short feature clip for MulmoTerminal 4.7.5. Some of MulmoTerminal's settings are written for you by an agent: the button says so before you press it, names the agent, and can be cancelled. Slides are English in both language versions — see 4.7.5-clips-NOTES.md.",
   "beats": [
     {
-      "text": "Some settings hand the work to an agent. The line under the button says so, before you press it.",
+      "text": "Everything you can change about MulmoTerminal is behind one gear in the toolbar.",
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -64,7 +64,25 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.5</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>It says so before you press.</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>It all lives behind the gear.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./skill-asks-first-assets/00-where-it-lives.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Some of these settings write themselves. An agent does it, and the line under the button says so.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.5</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Some of it writes itself.</div>",
           "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
           "    <video src='./skill-asks-first-assets/01-it-tells-you.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
           "  </div>",
@@ -73,7 +91,7 @@
       }
     },
     {
-      "text": "Press it and it asks first. Which agent starts, that one terminal opens, and how to end it. Cancel, and you are exactly where you were.",
+      "text": "It asks first: which agent, one new terminal, and how to stop it. Cancel, and nothing has happened.",
       "image": {
         "type": "html_tailwind",
         "animation": {
