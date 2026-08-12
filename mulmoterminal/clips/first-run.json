@@ -53,7 +53,7 @@
   },
   "lang": "en",
   "title": "MulmoTerminal — your first run",
-  "description": "First-run walkthrough (~60s), v2 after the 2026-08-12 review: a truly clean start (no preset chips), typed path, fast-forward-and-pause work montage, same-repo chip relaunch, worktree, end card. Footage: mt-demo-home/footage/2026-08-12/first-run-t7/.",
+  "description": "First-run walkthrough (~73s, v7 after the 2026-08-12 review rounds): clean start (no preset chips), typed path with a launch-button ring, fast-forward-and-pause PR montage, same-repo chip relaunch showing the Claude startup screen, worktree form zoomed then pulled out to two cells, third project, end card. Footage: mt-demo-home/footage/2026-08-12/first-run-t9/ (cut recipes in its cut*.sh / concat*.sh).",
   "beats": [
     {
       "text": "One command — and your terminal opens in the browser.",
