@@ -61,7 +61,7 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>Your first run.</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:120px'>Your first run.</div>",
           "  <div class='absolute rounded-xl bg-slate-900 shadow-2xl border border-slate-800' style='top:300px;left:240px;width:800px;height:150px' data-animation='animate' data-opacity='0,1' data-start='0.2' data-end='0.8' data-easing='easeOut'>",
           "    <div class='font-mono text-4xl text-emerald-300' style='padding:52px 0 0 60px'>$ npx mulmoterminal@latest</div>",
           "  </div>",
@@ -81,9 +81,9 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>Pick an agent. Pick a folder.</div>",
-          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
-          "    <video src='./mt-first-run-assets/01-launch.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Pick an agent. Pick a folder.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/01-launch.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
@@ -100,9 +100,9 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>Just ask.</div>",
-          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
-          "    <video src='./mt-first-run-assets/02-ask.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Just ask.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/02-ask.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
@@ -119,9 +119,9 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>Commit. Push. PR. Merged.</div>",
-          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
-          "    <video src='./mt-first-run-assets/03-merged.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Commit. Push. PR. Merged.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/03-merged.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
@@ -138,9 +138,9 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>Round two is one click.</div>",
-          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
-          "    <video src='./mt-first-run-assets/04-second.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Round two is one click.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/04-second.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
@@ -156,9 +156,9 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>Same repo? New worktree.</div>",
-          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
-          "    <video src='./mt-first-run-assets/05-worktree.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Same repo? New worktree.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/05-worktree.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
@@ -175,9 +175,9 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>Now there are two.</div>",
-          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
-          "    <video src='./mt-first-run-assets/06-two.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Now there are two.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/06-two.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
@@ -193,9 +193,9 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>The grid grows with you.</div>",
-          "  <div class='absolute' style='top:128px;left:250px;width:780px'>",
-          "    <video src='./mt-first-run-assets/07-grid.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:780px;display:block'></video>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>The grid grows with you.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/07-grid.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
