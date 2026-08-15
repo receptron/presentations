@@ -1,0 +1,112 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Calm, confident, measured — short declarative sentences, like a good product keynote. No exclamation marks in delivery, no salesy energy. Let the pauses between sentences breathe."
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 0.5,
+    "closingPadding": 0.3,
+    "outroPadding": 2.5,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "captionParams": {
+    "lang": "en",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        ". "
+      ]
+    },
+    "bottomOffset": 4
+  },
+  "lang": "en",
+  "title": "MulmoTerminal — two agents on one repository, in their own worktrees",
+  "description": "Short feature clip. A git worktree per task, made from the launcher in one click: the agent starts inside it, a second agent keeps working in the main checkout at the same time, and closing the cell asks before it discards anything. Slides are English in both language versions.",
+  "beats": [
+    {
+      "text": "Name a task and press once. MulmoTerminal cuts a git worktree for it and starts an agent inside.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>Worktree</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>One click, one worktree.</div>",
+          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
+          "    <video src='./mt-worktree-assets/01-create.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Two agents, one repository, side by side. Neither one is standing on the other's files.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>Worktree</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>Two agents, one repo.</div>",
+          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
+          "    <video src='./mt-worktree-assets/02-parallel.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Close it and it asks first, naming what would be lost. Say remove, and the worktree and the cell go together.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>Worktree</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>It asks before it removes.</div>",
+          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
+          "    <video src='./mt-worktree-assets/03-remove.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}

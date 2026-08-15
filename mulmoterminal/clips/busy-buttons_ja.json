@@ -1,0 +1,112 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "プレゼンター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "落ち着いた、確信のある、抑えたトーンで話してください。短い断定的な文を、良いプロダクトのキーノートのように、テンポよく。感嘆や売り込みの熱量は要りません。"
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 0.5,
+    "closingPadding": 0.3,
+    "outroPadding": 2.5,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "captionParams": {
+    "lang": "ja",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        "。"
+      ]
+    },
+    "bottomOffset": 4
+  },
+  "lang": "ja",
+  "title": "MulmoTerminal 4.7.3 — 働いていると言うボタン",
+  "description": "MulmoTerminal 4.7.3 の機能紹介クリップ（約15秒・日本語ナレーション）。6秒かかるのに何も表示しなかった worktree のボタンが押し増され、押した回数だけ worktree ができていた問題。いまはボタンが自分をロックして進行を表示し、削除中のセルも削除中に見える。スライドは英語版と共通の英語 — busy-buttons-NOTES.md 参照。",
+  "beats": [
+    {
+      "text": "タスク名を入れて一度押せば、ボタンは自分をロックして、いま何をしているかを表示します。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>The button says what it&rsquo;s doing.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./busy-buttons-assets/01-press-once.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "閉じるのは、セル自身の閉じるボタンです。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Closing starts here.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./busy-buttons-assets/02-close-button.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "ワークツリーなので、まず確認します。削除を選ぶと、何を削除しているかを伝えてから消えます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal 4.7.3</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>It asks, then removes.</div>",
+          "  <div class='absolute' style='top:180px;left:110px;width:1060px'>",
+          "    <video src='./busy-buttons-assets/03-ask-then-remove.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1060px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}

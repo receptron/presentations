@@ -37,9 +37,10 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 6. 台所の三点セットを、会話で作る — MulmoClaude チュートリアル
 7. コレクションは、使いながら育てる — MulmoClaude 常備品リスト編
 8. CSVは、置くだけでいい — MulmoClaude CSVコレクション
-9. バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ
-10. 押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン
-11. 一方通行が、終わる — MulmoClaude v1.7 新機能 Googleへ書き出し
+9. Googleカレンダーと、つなぐ — MulmoClaude チュートリアル
+10. バラバラのデータが、つながる — MulmoClaude 新機能 バックリンク＆ロールアップ
+11. 押すだけの仕事は、ボタンにする — MulmoClaude 新機能 レコードボタン
+12. 一方通行が、終わる — MulmoClaude v1.7 新機能 Googleへ書き出し
 
 </details>
 
@@ -57,6 +58,7 @@ ja の playlist は 4 本（2026-07-22 作成済み）。所属ルールは「**
 2. 台所の三点セットを、会話で作る — MulmoClaude チュートリアル
 3. コレクションは、使いながら育てる — MulmoClaude 常備品リスト編
 4. CSVは、置くだけでいい — MulmoClaude CSVコレクション
+5. Googleカレンダーと、つなぐ — MulmoClaude チュートリアル
 
 </details>
 

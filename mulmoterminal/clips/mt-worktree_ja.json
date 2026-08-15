@@ -1,0 +1,112 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "ナレーター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "落ち着いた、確信のある口調で。短い断定文を、製品キーノートのようにテンポよく読む。感嘆や売り込みの熱量は入れない。"
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 0.5,
+    "closingPadding": 0.3,
+    "outroPadding": 2.5,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "captionParams": {
+    "lang": "ja",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        "。"
+      ]
+    },
+    "bottomOffset": 4
+  },
+  "lang": "ja",
+  "title": "MulmoTerminal — 同じリポジトリに2体、それぞれの worktree で",
+  "description": "機能紹介の短尺クリップ。タスクごとの git worktree をランチャーから一度のクリックで作り、その中でエージェントが立ち上がる。本体のチェックアウトでは別のエージェントが同時に動き、セルを閉じるときは何が失われるかを先に伝える。スライドは日英とも英語。",
+  "beats": [
+    {
+      "text": "タスク名を入れて一度押すだけ。MulmoTerminal が git worktree を切って、その中でエージェントを立ち上げます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>Worktree</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>One click, one worktree.</div>",
+          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
+          "    <video src='./mt-worktree-assets/01-create.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "同じリポジトリに2体が並んで走ります。互いのファイルを踏むことはありません。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>Worktree</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>Two agents, one repo.</div>",
+          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
+          "    <video src='./mt-worktree-assets/02-parallel.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "閉じるときは、何が失われるかを名指しで確認します。削除を選べば、worktree とセルが一緒に消えます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>Worktree</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:64px'>It asks before it removes.</div>",
+          "  <div class='absolute' style='top:128px;left:40px;width:1200px'>",
+          "    <video src='./mt-worktree-assets/03-remove.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:1200px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
