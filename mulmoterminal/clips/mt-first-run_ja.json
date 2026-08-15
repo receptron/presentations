@@ -1,0 +1,218 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "ナレーター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "落ち着いた、確信のある、抑えたトーンで話してください。短い断定的な文を、良いプロダクトのキーノートのように、テンポよく。感嘆や売り込みの熱量は要りません。"
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 0.5,
+    "closingPadding": 0.3,
+    "outroPadding": 2.5,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "captionParams": {
+    "lang": "ja",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        "。"
+      ]
+    },
+    "bottomOffset": 4
+  },
+  "lang": "ja",
+  "title": "MulmoTerminal — はじめての一回",
+  "description": "MulmoTerminal を初めて起動してから、最初のプルリクエストがマージされるまでを追う紹介クリップ（約73秒・日本語ナレーション）。エージェントとフォルダを選んで依頼し、コミットからマージまで見届けたあと、チップからの再開と、同じリポジトリをワークツリーで分ける2体目まで。スライドは英語版と共通の英語 — first-run-NOTES.md 参照。素材は英語版と同じ first-run-assets/。",
+  "beats": [
+    {
+      "text": "コマンドひとつで、ターミナルがブラウザで開きます。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:120px'>Your first run.</div>",
+          "  <div class='absolute rounded-xl bg-slate-900 shadow-2xl border border-slate-800' style='top:300px;left:240px;width:800px;height:150px' data-animation='animate' data-opacity='0,1' data-start='0.2' data-end='0.8' data-easing='easeOut'>",
+          "    <div class='font-mono text-4xl text-emerald-300' style='padding:52px 0 0 60px'>$ npx mulmoterminal@latest</div>",
+          "  </div>",
+          "  <div class='absolute left-0 right-0 text-center text-xl text-slate-500' style='top:500px' data-animation='animate' data-opacity='0,1' data-start='0.8' data-end='1.4' data-easing='easeOut'>Node 22.9+ &middot; MIT &middot; runs locally</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "エージェントは Claude でも Codex でも、ふだん使っているものを。開きたいフォルダのパスを入力して、起動します。",
+      "duration": 9.5,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Pick an agent. Pick a folder.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/01-launch.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "あとは、やってほしいことを普通の言葉で書くだけ。同僚に仕事を頼むときと同じです。",
+      "duration": 8.7,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Just ask.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/02-ask.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "コードを書き、テストを走らせます。コミット、プッシュ、プルリクエスト、そしてマージ。枠が緑に変われば完了、レビュー待ちの合図です。",
+      "duration": 12.5,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Commit. Push. PR. Merged.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/03-merged.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "二回目からは、フォルダがチップとして残っています。ワンクリックで、パスを打たずに始められます。",
+      "duration": 7.2,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Round two is one click.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/04-second.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "同じリポジトリに、もう一つエージェントを。作業名を入れると、専用のワークツリーとセルが用意されます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Same repo? New worktree.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/05-worktree.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "エージェントが二つ。同じリポジトリで、ぶつからずに並走します。",
+      "duration": 9.4,
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>Now there are two.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/06-two.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "次のプロジェクトも同じ手順で。こうしてグリッドが育っていきます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-8 left-10 text-base tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal — first run</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:84px'>The grid grows with you.</div>",
+          "  <div class='absolute' style='top:150px;left:200px;width:880px'>",
+          "    <video src='./mt-first-run-assets/07-grid.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "試すのは、コマンドひとつ。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex flex-col items-center justify-center gap-8'>",
+          "  <div class='font-mono text-4xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <div class='text-2xl text-slate-300 tracking-wide'>Local. Open source. No Electron.</div>",
+          "  <div class='font-mono text-xl text-slate-500' data-animation='animate' data-opacity='0,1' data-start='1.2' data-end='1.8' data-easing='easeOut'>github.com/receptron/mulmoterminal</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
