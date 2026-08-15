@@ -183,6 +183,7 @@ One feature at a time: backlinks and rollups, record buttons, and more as they s
 - **Description** — 冒頭で何の動画かのフック → 製品一行紹介 → チャプター → 起動 1 行（`始めるのは、ターミナルにこの1行だけ：npx mulmoclaude@latest`）→ GitHub リンク（https://github.com/receptron/mulmoclaude）→ 末尾にハッシュタグ。X 投稿も同じ起動 1 行を GitHub リンクの直前に入れる（リンクを増やさず行動導線を作る）。
   - 所属 playlist があれば、冒頭フックの直後に `▶ 順番に見る（<playlist 名>）: https://www.youtube.com/playlist?list=<ID>` を置く。playlist が無い間は省略し、**作成後に説明文へ追記**する（公開済み動画は YouTube Studio で説明文を編集）。
 - **Playlist** — 所属予定/所属済みの playlist 名と `&list=` URL（未作成なら「未作成」と書く）。
+- メタデータファイルは**公開前にドラフトとして作ってよい**。その場合、冒頭の公開日と URL 欄は「未公開（公開後に記入）」、X 投稿の投稿枠は「未定」と書く — 公開時はチェックリストどおり各欄を埋め直す。文面の有無・記帳漏れは `mulmo-x-status` がこのファイルから導出するので、下書き段階から置いておくと検出対象に乗る（前例: shopping-mode-tutorial）。
 
 ## X 告知の運用
 
