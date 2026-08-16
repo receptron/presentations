@@ -1,0 +1,192 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Calm, confident, measured — short declarative sentences, like a good product keynote. No exclamation marks in delivery, no salesy energy. Let the pauses between sentences breathe."
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 3,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "captionParams": {
+    "lang": "en",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        ". "
+      ]
+    }
+  },
+  "lang": "en",
+  "title": "MulmoTerminal — answer the amber one (v4, reshot on 4.8.5)",
+  "description": "v4. Every live-action beat reshot on 4.8.5 with the launch plan's fixed opening: the top-middle cell turns amber ON CAMERA and the app's own preset chime sounds on that frame, the camera pushes into it in one continuous move, and the answer lands before ten seconds. See mulmoterminal-60s-v4-NOTES.md.",
+  "beats": [
+    {
+      "text": "",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-60s-v4-assets/open-amber-answer.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "duration": 10.0,
+      "audio": {
+        "type": "audio",
+        "source": {
+          "kind": "path",
+          "path": "./mulmoterminal-60s-v4-assets/chime-waiting.mp3"
+        }
+      }
+    },
+    {
+      "text": "This is a terminal with agents in it. A dev server, a system monitor, and Claude — every cell is a real pty.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-60s-v4-assets/grid6-wide.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "duration": 10.6
+    },
+    {
+      "text": "The agents are the ones that ask questions. Amber means one needs you — and only amber chimes. Even one to three agents is where this pays off.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-60s-v4-assets/grid6-amber.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "duration": 11.6
+    },
+    {
+      "text": "Each agent works in its own worktree — and the dev server runs right beside it.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-60s-v4-assets/worktree-create.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "duration": 5.9
+    },
+    {
+      "text": "",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-60s-v4-assets/worktree-diff.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "duration": 8.0
+    },
+    {
+      "text": "Claude, Codex, Antigravity, Grok, Muse — one grid, same rules.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<img src='./mulmoterminal-60s-v4-assets/agent-picker.png' class='rounded-xl shadow-2xl' style='max-width:86%'>",
+          "</div>"
+        ]
+      },
+      "duration": 7.9
+    },
+    {
+      "text": "Restart the server — every session survives and reattaches.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-60s-v4-assets/grid9.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "duration": 5.4
+    },
+    {
+      "text": "Local. Open source. No Electron.",
+      "duration": 5.2,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex flex-col items-center justify-center gap-8'>",
+          "  <div class='font-mono text-4xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <div class='text-2xl text-slate-300 tracking-wide'>Local. Open source. No Electron.</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "",
+      "duration": 3.0,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex items-center justify-center'>",
+          "  <div class='font-mono text-3xl text-slate-200'>github.com/receptron/mulmoterminal</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
