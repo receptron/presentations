@@ -1,0 +1,229 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 2.0,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "ナレーター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "落ち着いた、確信のある、抑えたトーンで話してください。短い断定的な文を、良いプロダクトのキーノートのように、テンポよく。感嘆や売り込みの熱量は要りません。「琥珀は、あなたを待っています」だけ、わずかにゆっくり。"
+        }
+      }
+    }
+  },
+  "captionParams": {
+    "lang": "ja",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        "。"
+      ]
+    },
+    "bottomOffset": 4
+  },
+  "lang": "ja",
+  "title": "MulmoTerminal — あなたがボトルネックになった日（v8）",
+  "description": "mulmoterminal-launch-v8.json の日本語版。ナレーションだけ日本語（直訳ではない）、画面上の見出しは英語のまま。流れの確認用。",
+  "beats": [
+    {
+      "text": "コーディングエージェントを 1 体だけ動かしていた頃、いちばん遅かったのはエージェントでした。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-black flex items-center justify-center relative'>",
+          "  <div class='font-mono text-6xl text-slate-300' data-animation='blink' data-interval='0.55'>▍</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "5 体になった今、いちばん遅いのは — たぶん、あなたです。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:56px' data-animation='animate' data-opacity='0,1' data-start='5.2' data-end='5.7' data-easing='easeOut'>the slowest thing is you</div>",
+          "<div class='absolute rounded-xl overflow-hidden shadow-2xl border border-slate-700' style='top:108px;left:250px;width:760px'>",
+          "<div class='relative' style='width:760px'>",
+          "<div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div>",
+          "<div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-web.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div>",
+          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='1.2' data-end='1.3199999999999998'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-mobile.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div></div>",
+          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='2.4' data-end='2.52'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-docs.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div></div>",
+          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='3.6' data-end='3.72'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-auth.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div></div>",
+          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='4.8' data-end='4.92'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-5</span></div><div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-api.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div></div>",
+          "</div>",
+          "</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "どれか 1 体は、必ず止まっています。許可待ち。質問待ち。気づくのは 4 分後 — その 4 分間、そのエージェントは何もしていません。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:56px' data-animation='animate' data-opacity='0,1' data-start='10.4' data-end='10.9' data-easing='easeOut'>4:12 — time this agent spent doing nothing</div>",
+          "<div class='absolute rounded-xl overflow-hidden shadow-2xl border border-slate-700' style='top:108px;left:250px;width:760px'>",
+          "<div class='relative' style='width:760px'>",
+          "<div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-5</span></div>",
+          "<div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-api.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div>",
+          "</div>",
+          "</div>",
+          "<div class='absolute' style='left:290px;top:160px'>",
+          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='3.5' data-end='3.65'>waiting 0:00</div>",
+          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='4.25' data-end='4.4'>waiting 0:31</div>",
+          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='5.0' data-end='5.15'>waiting 1:04</div>",
+          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='5.75' data-end='5.9'>waiting 1:37</div>",
+          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='6.5' data-end='6.65'>waiting 2:10</div>",
+          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='7.25' data-end='7.4'>waiting 2:43</div>",
+          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='8.0' data-end='8.15'>waiting 3:16</div>",
+          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='8.75' data-end='8.9'>waiting 3:49</div>",
+          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='9.5' data-end='9.65'>waiting 4:12</div>",
+          "</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "MulmoTerminal は、すべてのセッションを 1 画面に並べます。青は作業中。緑は完了。琥珀は、あなたを待っています。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:56px'>working / done / <b>needs you</b></div>",
+          "<div class='absolute' style='top:108px;left:160px;width:960px'>",
+          "<video src='./mulmoterminal-launch-v8-assets/grid.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:960px;display:block'></video>",
+          "</div>",
+          "</div>"
+        ]
+      },
+      "duration": 16.5
+    },
+    {
+      "text": "探すのをやめて、光っているところへ行くだけ。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
+          "<div class='absolute' style='top:108px;left:160px;width:960px'>",
+          "<video src='./mulmoterminal-launch-v8-assets/light.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:960px;display:block'></video>",
+          "</div>",
+          "</div>"
+        ]
+      },
+      "duration": 11.9
+    },
+    {
+      "text": "もう 1 つの遅さは、「これ、何を頼んだんだっけ」。ロスターはセッションごとに 1 行 — 頼んだことと、返ってきたこと。覚えておくものは、もうありません。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:56px'>remembering → 0 seconds</div>",
+          "<div class='absolute' style='top:108px;left:160px;width:960px'>",
+          "<video src='./mulmoterminal-launch-v8-assets/roster.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:960px;display:block'></video>",
+          "</div>",
+          "</div>"
+        ]
+      },
+      "duration": 30.8
+    },
+    {
+      "text": "答えれば、次のが光ります。探しに行くことはもうない — ロスターが教えてくれます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:56px'>the next one lights up</div>",
+          "<div class='absolute' style='top:108px;left:160px;width:960px'>",
+          "<video src='./mulmoterminal-launch-v8-assets/loop.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:960px;display:block'></video>",
+          "</div>",
+          "</div>"
+        ]
+      },
+      "duration": 19.0
+    },
+    {
+      "text": "そのために MulmoTerminal を作りました — エージェントを眺めるためではなく、さばくために。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
+          "<div class='absolute' style='top:108px;left:160px;width:960px'>",
+          "<video src='./mulmoterminal-launch-v8-assets/close.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:960px;display:block'></video>",
+          "</div>",
+          "</div>"
+        ]
+      },
+      "duration": 12.0
+    },
+    {
+      "text": "インストールは、これだけです。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex flex-col items-center justify-center gap-6'>",
+          "  <div class='font-mono text-4xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <div class='font-mono text-lg text-slate-500'>MIT · receptron.github.io/mulmoterminal</div>",
+          "</div>"
+        ]
+      },
+      "duration": 5.5
+    }
+  ]
+}
