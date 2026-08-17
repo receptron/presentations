@@ -14,30 +14,33 @@ v6（60 秒・冒頭 2 拍）とは別の系統。中島さんの 2026-08-16 台
 
 ## beat と素材
 
+レイアウトは `mulmoterminal/clips/mt-first-run.json` に合わせた: 左上にキッカー（MulmoTerminal）、上に見出し（台本の "On-screen text" をそのまま。text-4xl）、その下に映像（top 128px・幅 900px）。見出しの無いカット（0:00 / 0:48 / 1:44 後半）は映像だけ。字幕（ナレーション）は下端中央。
+
 | # | 台本の時刻 | 素材 | 種別 |
 |---|---|---|---|
-| 0 | 0:00 | 黒画面 + カーソル | **mock**（html） |
-| 1 | 0:08 | agent-1〜5 のタブを手で切り替える | **mock**（90s v1 の beat 1 を英語化・リタイム） |
-| 2 | 0:18 | `amber-slow.mp4` = `open-amber-answer.mp4` 1.6〜3.3 s を 3 倍スロー → 末尾フレームで 15 s までホールド。チャイムは `chime-amber-slow.mp3`（4.27 s、amber と同期） | 既存 footage の派生 |
+| 0 | 0:00 | 黒画面 + 点滅カーソル（mulmocast の `data-animation='blink'`） | mock（html） |
+| 1 | 0:08 | agent-1〜5 のタブを手で切り替える。**各タブの中身は本物** — 8/17 の 2x テイク（`mt-demo-home/footage/2026-08-17/choreo6d/take-choreo6d.webm` 8〜17 s）から 5 セルの端末部分（ヘッダを除く上半分）を切り出した `tab-web / api / auth / mobile / worker.mp4`（880×420） | mock の枠 + 実写 |
+| 2 | 0:18 | `amber-slow.mp4` = `open-amber-answer.mp4` 1.6〜3.3 s を 3 倍スロー → 末尾フレームで 17 s までホールド。**amber セルの上にタイマーバッジ**（`waiting 0:00` → `4:12`、5.0〜10.8 s に 9 段階で早送り）を重ね、見出し `4:12 — time this agent spent doing nothing` は 11.6 s に出す | 既存 footage の派生 + html |
 | 3 | 0:32 | `grid6-colors.mp4` = `grid6-amber.mp4` + ホールド（13.5 s） | 既存 footage の派生 |
 | 4 | 0:48 | `enlarge-answer.mp4` = `open-amber-answer.mp4` 3.4 s〜末尾（寄り→質問→打鍵で回答） | 既存 footage の派生 |
-| 5 | 0:58 | `roster-hold.mp4` = `expand-diff.mp4` 0〜5.8 s（拡大→roster）+ ホールド（16.5 s）。roster 列に HTML リング（6.5 s〜） | 既存 footage の派生 |
-| 6 | 1:14 | `worktree-diff-pr.mp4` = `worktree-create.mp4`（5 s）+ `worktree-diff.mp4` 0〜3.4 s + ホールド（計 15 s）。`Open PR` ボタンに HTML リング（10.5 s〜） | 既存 footage の派生 |
-| 7 | 1:28 | スマホのロック画面通知（Yes / No / Continue のチップ、タップ後に "Sent."） | **mock**（html） |
-| 8a | 1:44 | サーバを ^C → `npx mulmoterminal@latest` → "reattached 6 tmux sessions" | **mock**（html） |
-| 8b | 1:44 | `mixed-grid-hold.mp4` = `axis-grid6.mp4`（system monitor・dev サーバ・Claude の混成グリッド、2026-08-06 撮影）+ ホールド（12 s） | 既存 footage の派生（**UI が 1 世代前**） |
+| 5 | 0:58 | `roster-hold.mp4` = `expand-diff.mp4` 0〜5.8 s（拡大→roster）+ ホールド（16.5 s）。roster 列に HTML リング（6.5 s〜、幅は**レンダー結果から測り直して 24.8%**） | 既存 footage の派生 |
+| 6 | 1:14 | `worktree-diff-pr.mp4` = `worktree-create.mp4`（5 s）+ `worktree-diff.mp4` 0〜3.4 s + ホールド（計 16.5 s）。`Open PR` に HTML リング（10.5 s〜） | 既存 footage の派生 |
+| 7a | 1:28 | ロック画面の push（`mulmoterminal-90s.json` beat 5 のモックをそのまま流用） | mock（html・承認済み） |
+| 7b | 1:28 | mulmoserver PWA の Terminal 画面: 端末カード + `yes / no / ok / continue / stop` のチップ（yes にリング）+ `Type a command…` + 送信（`mulmoterminal-90s.json` beat 6 のモックを流用。UI の英語文言は `receptron/mulmoserver` の `src/i18n/en.ts` と一致） | mock（html・承認済み） |
+| 8a | 1:44 | サーバを ^C → `npx mulmoterminal@latest` → "reattached 6 tmux sessions" | mock（html） |
+| 8b | 1:44 | `mixed-grid-hold.mp4` = `axis-grid6.mp4` + ホールド（12 s）。**2026-08-06 の terminal-axis テイクの使い回し**（UI が 1 世代前）。**撮り直し対象** | 既存 footage の派生 |
 | 9 | 1:54 | `npx mulmoterminal@latest` + MIT · URL | html |
 
-派生素材の作り方は全部 ffmpeg 1 行（trim / setpts / tpad / concat）で、元は `mulmoterminal-60s-v4-assets/` と `mulmoterminal-90s-assets/`。scratchpad の中間物は残していない。
+派生素材の作り方は全部 ffmpeg 1 行（trim / setpts / tpad / concat / crop）で、元は `mulmoterminal-60s-v4-assets/`・`mulmoterminal-90s-assets/`・`mt-demo-home/footage/2026-08-17/choreo6d/`。
 
-台本の "On-screen text" 列は、各 beat の左下に同じスタイルの字幕（`font-mono` の帯）で焼いた: `the slowest thing is you` / `4:12 — time this agent spent doing nothing` / `working / done / needs you` / `remembering → 0 seconds` / `worktree → diff → PR` / `walk away.` / `restart is not loss`。絵文字は使っていない（台本の指定）。
+**`_ja.json` は同じ HTML で `text`（ナレーション）だけ日本語**（直訳ではなく日本語として自然な言い回し。画面上の見出しは英語のまま — mt-first-run_ja と同じ方針）。流れの確認用で、英語版と尺は一致させていない。**HTML を直すときは en / ja の両方に同じ変更を入れる。**
 
 ## mock を実写に差し替えるときの撮り物（= 未撮影のもの）
 
-1. **0:08 タブ往復** — 素のターミナル（何でもよい。iTerm 限定ではない）に 5 タブ、1 つは許可待ちが裏に隠れている。手で 2 往復。5〜10 秒
+1. **0:08 タブ往復** — いまは 2x テイクから切り出した実セルをタブ枠に埋めている。撮り直すなら 4 分割グリッドの 1 セルを撮って同じ枠に入れる（枠は残してよい）
 2. **0:18 amber スロー** — いまは v6 の take を 3 倍スロー＋静止で代用。台本は「他のセルは動き続ける」なので、**長回しの実写に置き換える**。字幕の `4:12` は**実測にする** — amber になった時刻と答えた時刻の差を rig のタイムスタンプから取り、字幕とナレーションの "four minutes" をその値に揃える（現状はプレースホルダ）
 3. **1:28 スマホ実写** — 屋外・物理カメラ（marketing `assets/capture-guide.md` §5 の手順）。台本の 3 本柱（0:08 / 0:32 / 1:28）の 1 つなので落とせない
-4. **1:44 kill → 再起動 → htop が生きている** — 台本は「実際に kill しろ」。現状は kill を mock、混成グリッドを 08-06 の take で代用。撮り直しは 4.8.x の UI で、htop・dev サーバ・エージェントを 1 グリッドに
+4. **1:44 kill → 再起動 → htop が生きている** — 台本は「実際に kill しろ」。現状は kill を mock、混成グリッド（1:33 付近）は **08-06 の take の使い回し**。撮り直しは 4.8.x の UI で、htop・dev サーバ・エージェントを 1 グリッドに（撮影は capture-server の枠が要るので、着手前に合意を取る）
 5. **0:32 の "Green is done"** — 製品 README は「done, unreviewed（blue）」と「finished は green」が混在（roster は green）。**現行ビルドのグリッド枠で「完了」が何色かをカメラで確認してから**この 1 文を確定する
 
 ## 撮影 rig の制約で台本と違うところ

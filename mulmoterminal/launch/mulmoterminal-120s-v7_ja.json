@@ -28,35 +28,34 @@
     "speakers": {
       "Presenter": {
         "displayName": {
-          "en": "Presenter"
+          "ja": "ナレーター"
         },
         "voiceId": "Kore",
         "isDefault": true,
         "provider": "gemini",
         "speechOptions": {
-          "instruction": "Read it flat and unhurried, like a good product keynote — the lines are already the argument, so do not perform them. Short declarative sentences, no exclamation, no salesy energy. Let the pauses between sentences breathe. The one place to slow down slightly is 'Amber is waiting on you.'"
+          "instruction": "落ち着いた、確信のある、抑えたトーンで話してください。短い断定的な文を、良いプロダクトのキーノートのように、テンポよく。感嘆や売り込みの熱量は要りません。「琥珀は、あなたを待っています」だけ、わずかにゆっくり。"
         }
       }
     }
   },
   "captionParams": {
-    "lang": "en",
+    "lang": "ja",
     "captionSplit": "estimate",
     "textSplit": {
       "type": "delimiters",
       "delimiters": [
-        ". ",
-        " — "
+        "。"
       ]
     },
     "bottomOffset": 4
   },
-  "lang": "en",
-  "title": "MulmoTerminal — The day you became the bottleneck (v7)",
-  "description": "v7 of the 2-minute launch video, built from the 2026-08-16 script (ten shots, WHY first). Layout follows mt-first-run (kicker, title, footage below). Shots 0:00 / 1:28 / 1:44 are html mocks (the phone ones are the 90s deck's), 0:08 embeds real cells cropped from the 2x take, the rest is cut from existing footage. See mulmoterminal-120s-v7-NOTES.md.",
+  "lang": "ja",
+  "title": "MulmoTerminal — あなたがボトルネックになった日（v7）",
+  "description": "mulmoterminal-120s-v7.json の日本語版。ナレーションは直訳ではなく日本語として自然な言い回しに寄せ、画面上の文字（タイトル・字幕以外）は英語のまま。流れの確認用で、英語版と尺は一致しない。",
   "beats": [
     {
-      "text": "When you ran one coding agent, the slowest thing in the room was the agent.",
+      "text": "コーディングエージェントを 1 体だけ動かしていた頃、いちばん遅かったのはエージェントでした。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -68,7 +67,7 @@
       }
     },
     {
-      "text": "Now that you run five, the slowest thing in the room is probably you.",
+      "text": "5 体になった今、いちばん遅いのは — たぶん、あなたです。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -91,7 +90,7 @@
       }
     },
     {
-      "text": "One of them is always stopped. A permission prompt. A question. You find out four minutes later — and those four minutes, it did nothing at all.",
+      "text": "どれか 1 体は、必ず止まっています。許可待ち。質問待ち。気づくのは 4 分後 — その 4 分間、そのエージェントは何もしていません。",
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -120,7 +119,7 @@
       }
     },
     {
-      "text": "MulmoTerminal puts every session on one screen. Blue is working. Green is done. Amber is waiting on you.",
+      "text": "MulmoTerminal は、すべてのセッションを 1 画面に並べます。青は作業中。緑は完了。琥珀は、あなたを待っています。",
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -138,7 +137,7 @@
       }
     },
     {
-      "text": "You stop hunting. You go where the light is.",
+      "text": "探すのをやめて、光っているところへ行くだけ。",
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -156,7 +155,7 @@
       "duration": 6.9
     },
     {
-      "text": "The other kind of slow is: what did I even ask this one? The roster keeps one line per session — what you asked, and what came back. Nothing left to remember.",
+      "text": "もう 1 つの遅さは、「これ、何を頼んだんだっけ」。ロスターはセッションごとに 1 行 — 頼んだことと、返ってきたこと。覚えておくものは、もうありません。",
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -175,7 +174,7 @@
       }
     },
     {
-      "text": "Three agents in the same repository never collide: each one gets its own git worktree. Read the diff, open the pull request, without leaving this screen.",
+      "text": "同じリポジトリで 3 体動かしても、ぶつかりません。1 体ずつ、自分の git worktree を持ちます。diff を読んで、プルリクエストを開くまで、この画面を離れずに。",
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -194,7 +193,7 @@
       }
     },
     {
-      "text": "So walk away. The moment an agent starts waiting on you, your phone knows.",
+      "text": "だから、席を立ってください。エージェントがあなたを待ち始めた瞬間、スマホに届きます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -221,7 +220,7 @@
       }
     },
     {
-      "text": "One tap, and it is moving again.",
+      "text": "ひとつタップすれば、また動き出します。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -252,7 +251,7 @@
       "duration": 5.5
     },
     {
-      "text": "Kill it and nothing is lost.",
+      "text": "サーバを落としても、何も失われません。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -278,7 +277,7 @@
       "duration": 6.5
     },
     {
-      "text": "These are real terminals on top of tmux, so htop, a dev server, and an agent all live in the same place.",
+      "text": "これは tmux の上で動く、本物のターミナルです。だから htop も、開発サーバも、エージェントも、同じ場所に居られます。",
       "image": {
         "type": "html_tailwind",
         "animation": {
@@ -295,7 +294,7 @@
       }
     },
     {
-      "text": "That is the whole install.",
+      "text": "インストールは、これだけです。",
       "image": {
         "type": "html_tailwind",
         "html": [
