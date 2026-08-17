@@ -1,0 +1,189 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Calm, confident, measured — short declarative sentences, like a good product keynote. No exclamation marks in delivery, no salesy energy. Let the pauses between sentences breathe."
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 0.4,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "captionParams": {
+    "lang": "en",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        ". "
+      ]
+    }
+  },
+  "lang": "en",
+  "title": "MulmoTerminal — answer the amber one (v6)",
+  "description": "v6. Opens on the chime: the top-middle cell turns amber and the camera pushes in from that frame, the answer lands inside seven seconds, and the pull-out runs under the first line. The diff is reached the way it is really reached - six cells, enlarge one, open its diff. See mulmoterminal-60s-v6-NOTES.md.",
+  "beats": [
+    {
+      "text": "",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='relative'>",
+          "<video src='./mulmoterminal-60s-v4-assets/open-amber-answer.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>",
+          "</div>"
+        ]
+      },
+      "duration": 11.2,
+      "audio": {
+        "type": "audio",
+        "source": {
+          "kind": "path",
+          "path": "./mulmoterminal-60s-v4-assets/chime-waiting.mp3"
+        }
+      }
+    },
+    {
+      "text": "This is a terminal with agents in it. Six cells, six real ptys — and the agents are the ones that ask questions. Amber means one needs you, and only amber chimes.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='relative'>",
+          "<video src='./mulmoterminal-60s-v4-assets/grid6-wide.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>",
+          "</div>"
+        ]
+      },
+      "duration": 14.0
+    },
+    {
+      "text": "Each agent works in its own worktree, on its own branch.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='relative'>",
+          "<video src='./mulmoterminal-60s-v4-assets/worktree-create.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>",
+          "</div>"
+        ]
+      },
+      "duration": 4.6
+    },
+    {
+      "text": "Enlarge one and the others stay listed beside it — and its diff is one click away.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<video src='./mulmoterminal-60s-v4-assets/expand-diff.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>"
+        ]
+      },
+      "duration": 12.5
+    },
+    {
+      "text": "Claude, Codex — and others besides. One grid, same rules.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='relative'>",
+          "<video src='./mulmoterminal-60s-v4-assets/agent-picker.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>",
+          "</div>"
+        ]
+      },
+      "duration": 8.4
+    },
+    {
+      "text": "Restart the server and every session survives. Even one to three agents is where this pays off.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='relative'>",
+          "<video src='./mulmoterminal-60s-v4-assets/grid9.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>",
+          "</div>"
+        ]
+      },
+      "duration": 9.2
+    },
+    {
+      "text": "Local, open source, no Electron.",
+      "duration": 5.0,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex flex-col items-center justify-center gap-8'>",
+          "  <div class='font-mono text-4xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <div class='text-2xl text-slate-300 tracking-wide'>Local. Open source. No Electron.</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "",
+      "duration": 3.0,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex items-center justify-center'>",
+          "  <div class='font-mono text-3xl text-slate-200'>github.com/receptron/mulmoterminal</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
