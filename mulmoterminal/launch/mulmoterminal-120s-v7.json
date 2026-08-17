@@ -1,0 +1,254 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Read it flat and unhurried, like a good product keynote — the lines are already the argument, so do not perform them. Short declarative sentences, no exclamation, no salesy energy. Let the pauses between sentences breathe. The one place to slow down slightly is 'Amber is waiting on you.'"
+        }
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {}
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 1,
+    "closingPadding": 0.8,
+    "outroPadding": 2.0,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "captionParams": {
+    "lang": "en",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        ". "
+      ]
+    }
+  },
+  "lang": "en",
+  "title": "MulmoTerminal — The day you became the bottleneck (v7)",
+  "description": "v7. Built from the 2-minute launch-video script of 2026-08-16 (ten shots, WHY first). Shots 0:00 / 0:08 / 1:28 / 1:44 are html_tailwind mocks until they are shot; the amber turn, the colour grid, the enlarge-and-answer, the roster, the worktree-diff-PR and the mixed grid are cut from existing footage. See mulmoterminal-120s-v7-NOTES.md.",
+  "beats": [
+    {
+      "text": "When you ran one coding agent, the slowest thing in the room was the agent.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-black flex items-center justify-center relative'>",
+          "  <div class='font-mono text-6xl text-slate-300' data-animation='animate' data-opacity='0,1' data-start='0.3' data-end='0.8' data-easing='easeOut'>▍</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Now that you run five, the slowest thing in the room is probably you.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center relative'>",
+          "  <div class='w-[880px] rounded-xl overflow-hidden shadow-2xl border border-slate-700 relative'>",
+          "<div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div>",
+          "<div class='bg-black p-6 font-mono text-lg h-[380px] text-slate-400'>agent-1: * Thinking… (2m 41s)</div>",
+          "<div class='absolute inset-0 rounded-xl overflow-hidden' data-animation='animate' data-opacity='0,1' data-start='1.3' data-end='1.45'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black p-6 font-mono text-lg h-[380px] text-slate-400'>agent-3: ? Which file should I edit — src/a.ts or src/b.ts?</div></div>",
+          "<div class='absolute inset-0 rounded-xl overflow-hidden' data-animation='animate' data-opacity='0,1' data-start='2.6' data-end='2.75'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black p-6 font-mono text-lg h-[380px] text-slate-400'>agent-2: * Running tests… (4m 02s)</div></div>",
+          "<div class='absolute inset-0 rounded-xl overflow-hidden' data-animation='animate' data-opacity='0,1' data-start='3.9' data-end='4.05'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-5</span></div><div class='bg-black p-6 font-mono text-lg h-[380px] text-slate-400'>agent-5: ! Permission needed to run npm install</div></div>",
+          "<div class='absolute inset-0 rounded-xl overflow-hidden' data-animation='animate' data-opacity='0,1' data-start='4.6' data-end='4.75'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black p-6 font-mono text-lg h-[380px] text-slate-400'>agent-4: * Thinking…</div></div>",
+          "  </div>",
+          "<div class='absolute left-4 top-4 font-mono text-base text-slate-100 bg-slate-900/85 px-3 py-1.5 rounded-md border border-slate-700 ' data-animation='animate' data-opacity='0,1' data-start='5.0' data-end='5.4' data-easing='easeOut'>the slowest thing is you</div>",
+          "<div class='absolute bottom-3 right-4 text-slate-700 text-xs'>mock — footage to come</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "One of them is always stopped. A permission prompt. A question. You find out four minutes later — and those four minutes, it did nothing at all.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='relative'>",
+          "<video src='./mulmoterminal-120s-v7-assets/amber-slow.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "<div class='absolute left-4 top-4 font-mono text-base text-slate-100 bg-slate-900/85 px-3 py-1.5 rounded-md border border-slate-700 ' data-animation='animate' data-opacity='0,1' data-start='7.5' data-end='7.9' data-easing='easeOut'>4:12 — time this agent spent doing nothing</div>",
+          "</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "MulmoTerminal puts every session on one screen. Blue is working. Green is done. Amber is waiting on you.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='relative'>",
+          "<video src='./mulmoterminal-120s-v7-assets/grid6-colors.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "<div class='absolute left-4 top-4 font-mono text-base text-slate-100 bg-slate-900/85 px-3 py-1.5 rounded-md border border-slate-700 ' data-animation='animate' data-opacity='0,1' data-start='4.0' data-end='4.4' data-easing='easeOut'>working / done / <b>needs you</b></div>",
+          "</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "You stop hunting. You go where the light is.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='relative'>",
+          "<video src='./mulmoterminal-120s-v7-assets/enlarge-answer.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>",
+          "</div>"
+        ]
+      },
+      "duration": 6.9
+    },
+    {
+      "text": "The other kind of slow is: what did I even ask this one? The roster keeps one line per session — what you asked, and what came back. Nothing left to remember.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='relative'>",
+          "<video src='./mulmoterminal-120s-v7-assets/roster-hold.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "<div class='absolute rounded-md ring-4 ring-indigo-400' style='left:0.4%;top:4.8%;width:16.6%;height:87.0%' data-animation='animate' data-opacity='0,1' data-start='6.5' data-end='6.9' data-easing='easeOut'></div>",
+          "<div class='absolute left-4 top-4 font-mono text-base text-slate-100 bg-slate-900/85 px-3 py-1.5 rounded-md border border-slate-700 ' data-animation='animate' data-opacity='0,1' data-start='11.0' data-end='11.4' data-easing='easeOut'>remembering → 0 seconds</div>",
+          "</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Three agents in the same repository never collide: each one gets its own git worktree. Read the diff, open the pull request, without leaving this screen.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='relative'>",
+          "<video src='./mulmoterminal-120s-v7-assets/worktree-diff-pr.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "<div class='absolute rounded-md ring-4 ring-amber-400' style='left:14.0%;top:93.6%;width:7.4%;height:4.6%' data-animation='animate' data-opacity='0,1' data-start='10.5' data-end='10.9' data-easing='easeOut'></div>",
+          "<div class='absolute left-4 top-4 font-mono text-base text-slate-100 bg-slate-900/85 px-3 py-1.5 rounded-md border border-slate-700 ' data-animation='animate' data-opacity='0,1' data-start='3.0' data-end='3.4' data-easing='easeOut'>worktree → diff → PR</div>",
+          "</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "So walk away. The moment an agent starts waiting on you, your phone knows. One tap, and it is moving again.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center relative'>",
+          "  <div class='relative w-[330px] h-[660px] rounded-[3rem] border-[10px] border-slate-800 bg-gradient-to-b from-slate-700 to-slate-900 shadow-2xl overflow-hidden'>",
+          "    <div class='absolute top-14 inset-x-0 text-center text-slate-100'><div class='text-6xl font-light tracking-tight'>14:07</div><div class='text-sm text-slate-300 mt-1'>Sunday, August 17</div></div>",
+          "    <div class='absolute left-4 right-4 top-52 rounded-2xl bg-slate-100/95 text-slate-900 p-4 shadow-xl' data-animation='animate' data-opacity='0,1' data-start='1.6' data-end='2.0' data-easing='easeOut'>",
+          "      <div class='flex items-center gap-2 text-xs text-slate-500'><span class='inline-block w-5 h-5 rounded-md bg-indigo-500 text-white text-[10px] font-bold flex items-center justify-center'>MT</span><span class='font-semibold text-slate-700'>MulmoTerminal</span><span class='ml-auto'>now</span></div>",
+          "      <div class='mt-2 font-semibold'>acme-api needs your input</div>",
+          "      <div class='text-sm text-slate-600 mt-0.5'>Run <span class='font-mono'>npm install</span> to add the test dependencies?</div>",
+          "      <div class='mt-3 flex gap-2 text-sm'><span class='px-3 py-1 rounded-full bg-emerald-600 text-white' data-animation='animate' data-opacity='0.5,1' data-start='6.0' data-end='6.3'>Yes</span><span class='px-3 py-1 rounded-full bg-slate-200 text-slate-700'>No</span><span class='px-3 py-1 rounded-full bg-slate-200 text-slate-700'>Continue</span></div>",
+          "    </div>",
+          "    <div class='absolute left-4 right-4 top-[26rem] rounded-2xl bg-slate-100/95 text-slate-900 p-4 shadow-xl text-sm' data-animation='animate' data-opacity='0,1' data-start='7.4' data-end='7.8' data-easing='easeOut'><span class='text-emerald-700 font-semibold'>Sent.</span> acme-api is working again.</div>",
+          "  </div>",
+          "<div class='absolute left-4 top-4 font-mono text-base text-slate-100 bg-slate-900/85 px-3 py-1.5 rounded-md border border-slate-700 ' data-animation='animate' data-opacity='0,1' data-start='0.6' data-end='1.0' data-easing='easeOut'>walk away.</div>",
+          "<div class='absolute bottom-3 right-4 text-slate-700 text-xs'>mock — footage to come</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "Kill it and nothing is lost.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center relative'>",
+          "  <div class='w-[880px] rounded-xl overflow-hidden shadow-2xl border border-slate-700'>",
+          "    <div class='bg-slate-800 px-4 py-2 flex items-center gap-2'><span class='w-3 h-3 rounded-full bg-red-400'></span><span class='w-3 h-3 rounded-full bg-yellow-400'></span><span class='w-3 h-3 rounded-full bg-green-400'></span><span class='ml-3 text-slate-400 text-sm font-mono'>Terminal — zsh — mulmoterminal</span></div>",
+          "    <div class='bg-black p-6 font-mono text-lg leading-relaxed h-[380px]'>",
+          "<div class='text-slate-500'>[mulmoterminal] listening on http://localhost:34567 — 6 sessions</div>",
+          "<div class='text-slate-500'>[mulmoterminal] acme-api · acme-web · acme-auth · acme-mobile · htop · dev-server</div>",
+          "<div class='text-red-300 mt-3' data-animation='animate' data-opacity='0,1' data-start='0.9' data-end='1.1' data-easing='easeOut'>^C</div>",
+          "<div class='text-slate-300 mt-3' data-animation='animate' data-opacity='0,1' data-start='2.0' data-end='2.2' data-easing='easeOut'>$ npx mulmoterminal@latest</div>",
+          "<div class='text-slate-500 mt-2' data-animation='animate' data-opacity='0,1' data-start='3.2' data-end='3.4000000000000004' data-easing='easeOut'>[mulmoterminal] listening on http://localhost:34567</div>",
+          "<div class='text-emerald-300' data-animation='animate' data-opacity='0,1' data-start='4.2' data-end='4.4' data-easing='easeOut'>[mulmoterminal] reattached 6 tmux sessions — nothing lost</div>",
+          "    </div>",
+          "  </div>",
+          "<div class='absolute left-4 top-4 font-mono text-base text-slate-100 bg-slate-900/85 px-3 py-1.5 rounded-md border border-slate-700 ' data-animation='animate' data-opacity='0,1' data-start='4.8' data-end='5.2' data-easing='easeOut'>restart is not loss</div>",
+          "<div class='absolute bottom-3 right-4 text-slate-700 text-xs'>mock — footage to come</div>",
+          "</div>"
+        ]
+      },
+      "duration": 6.5
+    },
+    {
+      "text": "These are real terminals on top of tmux, so htop, a dev server, and an agent all live in the same place.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 flex items-center justify-center'>",
+          "<div class='relative'>",
+          "<video src='./mulmoterminal-120s-v7-assets/mixed-grid-hold.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='max-height:640px'></video>",
+          "</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "That is the whole install.",
+      "duration": 5.5,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex flex-col items-center justify-center gap-6'>",
+          "  <div class='font-mono text-4xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <div class='font-mono text-lg text-slate-500'>MIT · receptron.github.io/mulmoterminal</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
