@@ -68,7 +68,7 @@
           "</div>"
         ]
       },
-      "duration": 6.7,
+      "duration": 5.2,
       "audio": {
         "type": "audio",
         "source": {
@@ -141,7 +141,7 @@
           "</div>"
         ]
       },
-      "duration": 9.4
+      "duration": 8.4
     },
     {
       "text": "Restart the server and every session survives. Even one to three agents is where this pays off.",
@@ -161,8 +161,8 @@
       "duration": 9.2
     },
     {
-      "text": "Local. Open source. No Electron.",
-      "duration": 5.9,
+      "text": "Local, open source, no Electron.",
+      "duration": 5.0,
       "image": {
         "type": "html_tailwind",
         "html": [
