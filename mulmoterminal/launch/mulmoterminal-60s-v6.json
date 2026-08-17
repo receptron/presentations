@@ -33,7 +33,7 @@
     "padding": 0.3,
     "introPadding": 1,
     "closingPadding": 0.8,
-    "outroPadding": 3,
+    "outroPadding": 0.4,
     "bgmVolume": 0.12,
     "audioVolume": 1,
     "suppressSpeech": false,
@@ -68,7 +68,7 @@
           "</div>"
         ]
       },
-      "duration": 5.2,
+      "duration": 11.2,
       "audio": {
         "type": "audio",
         "source": {
@@ -92,7 +92,7 @@
           "</div>"
         ]
       },
-      "duration": 14.1
+      "duration": 14.0
     },
     {
       "text": "Each agent works in its own worktree, on its own branch.",

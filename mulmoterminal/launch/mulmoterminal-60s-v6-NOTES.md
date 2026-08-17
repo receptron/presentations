@@ -45,3 +45,14 @@ v4 / v5 の JSON は同じ絵では再レンダリングできない（完成品
 - **尺 71.7 秒**（指定 60 秒）。削るなら diff の 13 秒 ／ 9 セルの 9.2 秒 ／ エージェント選択の 9.4 秒
 - ナレーションは v5 から 1 行変更（diff ビート: "Enlarge one and the others stay listed beside it —
   and its diff is one click away."）。**要確認**
+
+## 2026-08-17 三巡目
+
+- **上段真ん中は「選択肢を選ぶ」から「3. Type something を選んで打ち込む」へ。** 人が答えを書くところが
+  主題なので、ハイライトが動くだけのキー操作では画にならない。副作用として、Claude Code は選択肢を
+  取らなかったことを `User declined to answer questions` と表示する（実挙動なのでそのまま）
+- **beat 1 に青（working）を出すため、長いタスクは録画開始後に投げる。** ステージングで投げると
+  amber を撮る頃には全部 done（緑）になっている。auto mode の委譲を止める指示はデモ repo の
+  CLAUDE.md 側（プロンプトに書くと画面に写る）
+- **末尾の空白をカット**: `audioParams.outroPadding` を 3 → 0.4
+- 尺は 71.1 秒。打ち込みで答える演出は冒頭に約 6 秒足す — 60 秒に寄せるなら diff か 9 セルを削る
