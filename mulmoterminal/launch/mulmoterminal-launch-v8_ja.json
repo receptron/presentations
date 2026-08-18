@@ -47,9 +47,7 @@
       "text": "コーディングエージェントを 1 体だけ動かしていた頃、いちばん遅かったのはエージェントでした。",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -65,9 +63,7 @@
       "text": "5 体になった今、いちばん遅いのは — たぶん、あなたです。",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -90,9 +86,7 @@
       "text": "どれか 1 体は、必ず止まっています。許可待ち。質問待ち。気づくのは 4 分後 — その 4 分間、そのエージェントは何もしていません。",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -112,9 +106,7 @@
       "text": "MulmoTerminal は、すべてのセッションを 1 画面に並べます。青は作業中。緑は完了。琥珀は、あなたを待っています。",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -135,9 +127,7 @@
       "text": "探すのをやめて、光っているところへ行くだけ。",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -154,9 +144,7 @@
       "text": "もう 1 つの遅さは、「これ、何を頼んだんだっけ」。ロスターはセッションごとに 1 行 — 頼んだことと、返ってきたこと。覚えておくものは、もうありません。",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -171,12 +159,10 @@
       }
     },
     {
-      "text": "終わったら、次の指示はその場で打つ。探すウィンドウも、開くタブもありません。",
+      "text": "終わったものは、ウィンドウを探しに行かない。行をクリックして、次の指示をその場で打つ。",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -187,15 +173,14 @@
           "</div>",
           "</div>"
         ]
-      }
+      },
+      "duration": 14.0
     },
     {
       "text": "答えれば、次のが光ります。探しに行くことはもうない — ロスターが教えてくれます。",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -213,9 +198,7 @@
       "text": "そのために MulmoTerminal を作りました — エージェントを眺めるためではなく、さばくために。",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",

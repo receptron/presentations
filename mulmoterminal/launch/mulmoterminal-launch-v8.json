@@ -47,9 +47,7 @@
       "text": "When you ran one coding agent, the slowest thing in the room was the agent.",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -65,9 +63,7 @@
       "text": "Now that you run five, the slowest thing in the room is probably you.",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -90,9 +86,7 @@
       "text": "One of them is always stopped. A permission prompt. A question. You find out four minutes later — and those four minutes, it did nothing at all.",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -112,9 +106,7 @@
       "text": "MulmoTerminal puts every session on one screen. Blue is working. Green is done. Amber is waiting on you.",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -135,9 +127,7 @@
       "text": "You stop hunting. You go where the light is.",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -154,9 +144,7 @@
       "text": "The other kind of slow is: what did I even ask this one? The roster keeps one line per session — what you asked, and what came back. Nothing left to remember.",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -171,12 +159,10 @@
       }
     },
     {
-      "text": "When it is done, the next order goes in right there — no window to find, no tab to raise.",
+      "text": "When one is done, you don't go looking for its window. Click its row — the next order goes in right there.",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -187,15 +173,14 @@
           "</div>",
           "</div>"
         ]
-      }
+      },
+      "duration": 14.0
     },
     {
       "text": "Answer it, and the next one lights up. You never go looking — the roster tells you.",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -213,9 +198,7 @@
       "text": "We built MulmoTerminal for exactly that: not to watch agents, but to triage them.",
       "image": {
         "type": "html_tailwind",
-        "animation": {
-          "movie": true
-        },
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
