@@ -83,7 +83,7 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
-          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:52px' data-animation='animate' data-opacity='0,1' data-start='4.0' data-end='4.5' data-easing='easeOut'>the slowest thing is you</div>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:52px'>the slowest thing is you</div>",
           "<div class='absolute rounded-xl overflow-hidden shadow-2xl border border-slate-700' style='top:100px;left:190px;width:900px'>",
           "<div class='relative' style='width:900px'>",
           "<div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div>",
