@@ -8,7 +8,8 @@
   },
   "imageParams": {
     "provider": "openai",
-    "images": {}
+    "images": {},
+    "concurrency": 1
   },
   "audioParams": {
     "bgm": {
@@ -115,8 +116,8 @@
           "<div class='relative' style='width:860px'>",
           "<video src='./mulmoterminal-launch-v8-assets/grid.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:860px;display:block'></video>",
           "<div class='absolute rounded-md ring-4 ring-sky-400' style='left:34.2%;top:37.5%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='3.4' data-end='3.8' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-sky-500 text-white'>working</div></div>",
-          "<div class='absolute rounded-md ring-4 ring-amber-400' style='left:1.7%;top:6.9%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='7.8' data-end='8.2' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-amber-400 text-slate-900'>needs you</div></div>",
-          "<div class='absolute rounded-md ring-4 ring-emerald-400' style='left:66.7%;top:6.9%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='5.4' data-end='5.8' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-emerald-500 text-white'>done</div></div>",
+          "<div class='absolute rounded-md ring-4 ring-amber-400' style='left:34.2%;top:6.9%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='7.8' data-end='8.2' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-amber-400 text-slate-900'>needs you</div></div>",
+          "<div class='absolute rounded-md ring-4 ring-emerald-400' style='left:1.7%;top:6.9%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='5.4' data-end='5.8' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-emerald-500 text-white'>done</div></div>",
           "</div>",
           "</div>",
           "</div>"
@@ -144,7 +145,9 @@
       "text": "もう 1 つの遅さは、「これ、何を頼んだんだっけ」。ロスターはセッションごとに 1 行 — 頼んだことと、返ってきたこと。覚えておくものは、もうありません。",
       "image": {
         "type": "html_tailwind",
-        "animation": true,
+        "animation": {
+          "fps": 15
+        },
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -174,7 +177,7 @@
           "</div>"
         ]
       },
-      "duration": 14.0
+      "duration": 13.5
     },
     {
       "text": "答えれば、次のが光ります。探しに行くことはもうない — ロスターが教えてくれます。",

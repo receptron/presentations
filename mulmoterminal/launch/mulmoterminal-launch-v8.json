@@ -8,7 +8,8 @@
   },
   "imageParams": {
     "provider": "openai",
-    "images": {}
+    "images": {},
+    "concurrency": 1
   },
   "audioParams": {
     "bgm": {
@@ -41,7 +42,7 @@
   },
   "lang": "en",
   "title": "MulmoTerminal — The day you became the bottleneck (v8)",
-  "description": "v8 review round 2: one generating agent instead of a bare cursor, wide tab window with real terminal panes, no 4:12 anywhere, full app frame (toolbar included), waits sped up so the picture keeps pace with the narration, click rings burned into the clips (expand button, roster rows), state rings on the grid. Footage: mt-demo-home/footage/2026-08-17/cockpit-n (cockpit) and 2026-08-18/cockpit-2x-f (grid, cockpit, 2x) and cockpit-2x (pain). See mulmoterminal-launch-v8-NOTES.md.",
+  "description": "v8 review round 2: one generating agent instead of a bare cursor, wide tab window with real terminal panes, no 4:12 anywhere, full app frame (toolbar included), waits sped up so the picture keeps pace with the narration, click rings burned into the clips (expand button, roster rows), state rings on the grid. Footage: mt-demo-home/footage/2026-08-17/cockpit-n (cockpit) and 2026-08-18/2026-08-19/cockpit-2x-h (grid, cockpit) and 2026-08-19/pain-wide5 (plain terminals). See mulmoterminal-launch-v8-NOTES.md.",
   "beats": [
     {
       "text": "When you ran one coding agent, the slowest thing in the room was the agent.",
@@ -115,8 +116,8 @@
           "<div class='relative' style='width:860px'>",
           "<video src='./mulmoterminal-launch-v8-assets/grid.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:860px;display:block'></video>",
           "<div class='absolute rounded-md ring-4 ring-sky-400' style='left:34.2%;top:37.5%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='3.4' data-end='3.8' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-sky-500 text-white'>working</div></div>",
-          "<div class='absolute rounded-md ring-4 ring-amber-400' style='left:1.7%;top:6.9%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='7.8' data-end='8.2' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-amber-400 text-slate-900'>needs you</div></div>",
-          "<div class='absolute rounded-md ring-4 ring-emerald-400' style='left:66.7%;top:6.9%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='5.4' data-end='5.8' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-emerald-500 text-white'>done</div></div>",
+          "<div class='absolute rounded-md ring-4 ring-amber-400' style='left:34.2%;top:6.9%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='7.8' data-end='8.2' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-amber-400 text-slate-900'>needs you</div></div>",
+          "<div class='absolute rounded-md ring-4 ring-emerald-400' style='left:1.7%;top:6.9%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='5.4' data-end='5.8' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-emerald-500 text-white'>done</div></div>",
           "</div>",
           "</div>",
           "</div>"
@@ -144,7 +145,9 @@
       "text": "The other kind of slow is: what did I even ask this one? The roster keeps one line per session — what you asked, and what came back. Nothing left to remember.",
       "image": {
         "type": "html_tailwind",
-        "animation": true,
+        "animation": {
+          "fps": 15
+        },
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
@@ -174,7 +177,7 @@
           "</div>"
         ]
       },
-      "duration": 14.0
+      "duration": 13.5
     },
     {
       "text": "Answer it, and the next one lights up. You never go looking — the roster tells you.",

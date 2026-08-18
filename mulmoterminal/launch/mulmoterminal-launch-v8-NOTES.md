@@ -127,3 +127,14 @@ Claude Code が Bash ツールで `cd /Users/<name>/…/mt-demo/acme-api2 && …
 - beat 5（roster、"remembering → 0 seconds"）: api 行を見る → 行を読む → ポインタで done 行（web3）をクリック → その完了結果を読む、まで。打鍵なし
 - **beat 6（新規）**: *"When it is done, the next order goes in right there — no window to find, no tab to raise."*（ja: 「終わったら、次の指示はその場で打つ。探すウィンドウも、開くタブもありません。」）— 追加指示を**等速で**打ち、Enter、Claude が動き出すまで（`next.mp4` = take-cockpit-b 12.4〜22 s、1x）。isamu さんの「expand して状態が変わってどんどん指示する」の 1 文がここに入る
 - 以降は 1 つずつ後ろへ（loop = beat 7、締め = beat 8、npx = beat 9）
+
+## 2026-08-19 レビュー 8〜9 回目の対応
+
+- **スピナーが止まる／打鍵がコマ落ちする**: 原因は mulmocast の `animation: {movie:true}`（実時間 screencast 取り込み。素材 27 fps → beat 動画 9 fps）。全ビートを **`animation: true`（フレーム単位）** に切り替え、素材のコマがそのまま残るようになった。skill にも記録
+- **「結果を読む」ストーリーをやめた**: beat 5 は拡大表示のまま **roster の行を上から順に薄くハイライト**（web → web2 → api → mobile）。セッションは切り替えない
+- **PR / issue の動きを入れた**: 打つ追加指示を *"Open a pull request for this — pick the branch name yourself."*（done 行）と *"Good. File a GitHub issue for the follow-up work you would suggest."*（待ち時間の完了セル）に。GitHub の remote があるのは acme-web だけなので **done 役を acme-web に**、amber1 を acme-web2 に移した（remote は変更しない方針）。撮影中に本当に PR が立った（mt-demos/acme-web #17）。ただし issue の方は api2 の remote がローカルパスなので失敗し、その旨の返答が d-1 末尾のグリッドに写る → 締めは take-grid のコールバックを使用
+- 素材: `footage/2026-08-19/cockpit-2x-h/`（grid / cockpit、2x）と `footage/2026-08-19/pain-wide5/`（痛みの絵。重い仕事を出して 1.5 分後に録画 → 大半がスピナーで動いていて、時計は分単位。1 本は生成中、1 本は質問で停止）
+- クリック注釈は全部「動くポインタ＋クリック時の枠パルス」。beat 4 の ⤢（top-middle セル）、beat 6 の done 行（web = 1 行目）、beat 7 の api 行
+- 撮り直しのたびに変わる座標（⤢ ボタン・roster 行）は、そのテイクのフレームから測り直している（この NOTES に数値は書かない。切り出しコマンドはこの版のものが正本）
+- フレーム単位レンダリングの落とし穴（2026-08-19）: `imageParams.concurrency` 既定 4 だと 4 ビートが同時に puppeteer でコマ撮りして `Page.captureScreenshot timed out` で落ちる → **`concurrency: 1`**。それでも beat 5（ほぼ静止・17 s の ja）だけ落ち続けたので、その beat は `animation: {fps: 15}`（コマ数半分）にした。クリップは beat の尺より **数秒長く**しておく（末尾ぎりぎりまでシークすると止まることがある）
+
