@@ -171,6 +171,25 @@
       }
     },
     {
+      "text": "When it is done, the next order goes in right there — no window to find, no tab to raise.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
+          "<div class='absolute' style='top:92px;left:210px;width:860px'>",
+          "<div class='relative' style='width:860px'>",
+          "<video src='./mulmoterminal-launch-v8-assets/next.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:860px;display:block'></video>",
+          "</div>",
+          "</div>",
+          "</div>"
+        ]
+      }
+    },
+    {
       "text": "Answer it, and the next one lights up. You never go looking — the roster tells you.",
       "image": {
         "type": "html_tailwind",

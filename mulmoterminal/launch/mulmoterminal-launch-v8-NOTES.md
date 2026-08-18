@@ -118,3 +118,12 @@ Claude Code が Bash ツールで `cd /Users/<name>/…/mt-demo/acme-api2 && …
 
 - beat 1 の見出し "the slowest thing is you" が 4.0 s から出るのにナレーションが 5.4 s で終わり、一瞬しか見えなかった → **beat の頭から表示**（他の beat と同じ）
 - クリック注釈を**枠から「動くポインタ」に変更**: アプリ自身の状態枠（amber / 緑 / 青の選択）と白い枠が競合して「状態」か「操作」か分かりにくかった。ポインタ形の矢印 PNG（白＋黒縁、`scratchpad` で生成）を ffmpeg の `overlay` で拡大ペイン側から目的の行／⤢ ボタンへ 0.6〜0.7 s かけて動かし、止まったところで **0.25 s の枠パルス** → 消す。実機のポインタは screencast に写らないので、その代替。座標は 2400×1600 のソース系で `scale` の前に焼く（`light.mp4` = ⤢、`roster.mp4` = web3 行、`loop.mp4` = api 行）
+
+## 2026-08-19 レビュー 7 回目の対応 — 「53 s で止まる」「貼り付けに見える」「TTS と画面が合っていない」
+
+原因は beat 5（roster）の作りにあった: ナレーションは「roster に頼んだこと・返ってきたことが並ぶ」なのに、映像は **done 行をクリックしたあと追加指示を 2 倍速で打っている**（貼り付けに見え、途中で beat が終わって「止まって」見えた）。言葉と絵がずれていた。
+
+対応: **beat を 2 つに割った**。
+- beat 5（roster、"remembering → 0 seconds"）: api 行を見る → 行を読む → ポインタで done 行（web3）をクリック → その完了結果を読む、まで。打鍵なし
+- **beat 6（新規）**: *"When it is done, the next order goes in right there — no window to find, no tab to raise."*（ja: 「終わったら、次の指示はその場で打つ。探すウィンドウも、開くタブもありません。」）— 追加指示を**等速で**打ち、Enter、Claude が動き出すまで（`next.mp4` = take-cockpit-b 12.4〜22 s、1x）。isamu さんの「expand して状態が変わってどんどん指示する」の 1 文がここに入る
+- 以降は 1 つずつ後ろへ（loop = beat 7、締め = beat 8、npx = beat 9）
