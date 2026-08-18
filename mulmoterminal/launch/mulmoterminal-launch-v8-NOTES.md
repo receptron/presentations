@@ -95,3 +95,13 @@ Claude Code が Bash ツールで `cd /Users/<name>/…/mt-demo/acme-api2 && …
 
 - 上の個人パス（公開前）
 - 端末内の文字は 860 px 幅ではまだ小さい（2x で輪郭は締まった）。読ませる場面は拡大ペインに任せる方針のまま
+
+## 2026-08-18 レビュー 4 回目の対応 — 冒頭 3 カットの文字が大きすぎる・見切れる
+
+原因は 2x ではなく切り出し: 5 分割 pain テイクの **375 CSS px 幅のセル**を 900 px に引き伸ばしていた（2.4 倍）。9 分割は全画面を 0.72 倍にしているだけなので正しく、そのまま。
+
+対応: 痛みの絵を **横長で撮り直し**（`footage/2026-08-18/pain-wide3/`）。`MT_WINDOW=1300x560`（roster 約 350 px ＋ペイン約 940 px）で、**nord テーマの予備リポ 5 本（docs / billing / worker / infra / cli）** に Shell → `claude --model sonnet` を立て、**1 ペインずつ拡大して 11〜14 s 録画**（`take-pain-<repo>`）。冒頭用に docs だけプロンプト直後（生成中）にも 1 本（`take-pain-acme-docs-working`）。ペイン本体を `crop=1800:880:736:236 → scale=900:440` で切ると**文字は 1x の実寸・行は丸ごと・輪郭は 2x**。タブ窓とソロ窓は 900×440。
+
+- 最初に `MT_WINDOW=940x560` で撮ったら、拡大ペインの横に roster（固定幅）が付いてペインが 600 px 幅になり 2:1 にならなかった → 1300 幅にして解決（`pain-wide/` は不採用）
+- 止まっている 1 枚は cli（question tool）。worker も CLAUDE.md の nudge で質問して止まったので、タブには使っていない
+- rig: `--only pain` で 9 セルの起動と take-grid を飛ばすようにした（`WANT_NINE`）
