@@ -135,6 +135,7 @@
           "<video src='./mulmoterminal-launch-v8-assets/grid.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:860px;display:block'></video>",
           "<div class='absolute rounded-md ring-4 ring-sky-400' style='left:34.2%;top:37.5%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='3.4' data-end='3.8' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-sky-500 text-white'>working</div></div>",
           "<div class='absolute rounded-md ring-4 ring-amber-400' style='left:1.7%;top:6.9%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='7.8' data-end='8.2' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-amber-400 text-slate-900'>needs you</div></div>",
+          "<div class='absolute rounded-md ring-4 ring-emerald-400' style='left:66.7%;top:6.9%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='5.4' data-end='5.8' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-emerald-500 text-white'>done</div></div>",
           "</div>",
           "</div>",
           "</div>"

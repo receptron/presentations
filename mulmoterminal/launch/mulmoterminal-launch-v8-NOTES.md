@@ -67,8 +67,31 @@ v7（中島さんの 2 分台本を機能カット込みで組んだ版）から
 
 素材の追加: `footage/2026-08-18/cockpit-2x/`（take-grid 2400×1600・16.7 s・amber 9.62 s／take-pain 2400×1600・24 s）。`verify-takes.sh` はここでも FROZEN 判定だが、フレーム差分（2 → 6 → 10 → 14 s で平均差 1.4〜2.5）と目視で LIVE を確認。
 
+### 2026-08-18 レビュー 3 回目の対応（cockpit の 2x 撮り直し）
+
+3 点とも撮り直しで解消した。素材は `footage/2026-08-18/cockpit-2x-f/`（5 回目で完走。a〜e は rig の穴で失敗、下記）。
+
+| 残件 | 対応 |
+|---|---|
+| staging 用プロンプトが写る | amber の 3 本と pain の api を**人が書いた文**に（例: "Before you write anything: should API errors go back to clients as structured JSON or plain text? Ask me, two options, wait for my answer, then implement it."）。question tool の指示は **demo リポの CLAUDE.md** に移した（"ask with your question tool (AskUserQuestion) and wait"、`demo-baseline` に commit）。tmux で 1 本試して picker が出ることを確認してから撮った |
+| "Green is done" のときグリッドに緑が無い | quick done（web3）を**最初に**送り、`waitState(done, is-done)` をロール前のゲートにした。グリッドの beat に **緑のリング＋`done` ラベル**（右上セル）を追加 |
+| cockpit が 1x | **2x で分割録画**: a（拡大→回答）／ b（roster→done 行→追加指示→そのまま amber2 の点灯待ち→クリック→回答、約 67 s）／ d-N（amber3、30 s ごとにローテーション）。長回しを避けたので落ちなかった。クリップは 2400×1600 → 1800×1200 |
+
+roster が 9 行入るように demo-config に `cockpitLines: {summary:1, prompt:1, response:1}`（撮影中は `POST /api/config` で反映）。役割も **押す行・光る行が roster の 1〜5 行目**に来るよう並べ替え（amber1=web、done=web3、amber2=api、amber3=api2）。
+
+撮り直しで踏んだ穴（全部 rig に反映・commit 済み）:
+
+- **idle_prompt の Notification** — 待たせて 60 s 経つと Claude Code が Notification を送り、こちらが行を見た（flag clear）**後**に届くと amber になる。cue 前に「見て clear → 送る」を入れた（`cueWhenFree` の is-blocked 分岐）
+- **点灯の瞬間が chunk の切れ目に落ちた**（b を止めて c を始める 2 秒の隙間）→ b を止めずに待ちへ入り、30 s ごとのローテーションだけにした
+- **`cellState` が dot の色トークンで読めない**ケースがあった → roster 行の状態語（waiting / done / running / idle）を fallback に
+- **ssh のパスフレーズ入力が端末に出た**（`Enter passphrase for key '/Users/…/.ssh/id_ed25519'` が question dialog に重なる）→ 全プロンプトに "Work offline: no git fetch, pull, or push"、demo リポに `core.sshCommand = ssh -o BatchMode=yes`
+- 質問プロンプトの後に "then implement it" を足した（回答後に青へ戻る。放置すると idle_prompt でまた amber になる）
+
+### 🔴 公開前に潰すもの — セルの中に個人パスが写る
+
+Claude Code が Bash ツールで `cd /Users/<name>/…/mt-demo/acme-api2 && …` と**実パスを表示する**ことがあり（`/tmp/mt-demo` は symlink で、realpath はホーム配下）、グリッドのセルにその行が出る（take-grid 2x-f の 36 s 付近 api2 セル、d-1 末尾の mobile2 セル）。860 px 幅の表示ではほぼ読めないが、**公開版では対策が必要**: demo ツリーを symlink でなく `/tmp/mt-demo` の実体にする（capture-guide §3 の元の設計に戻す）か、CLAUDE.md の「絶対パスを出すな」を Bash の cwd 指定にも効くよう強める。今回の v8 は内部レビュー用としてそのまま。
+
 ### まだ残っているもの
 
-- 拡大ペインと roster 行に staging 用プロンプトが写る（前回から変わらず。今回の 2x 撮り直しでは触っていない）
-- "Green is done" のときにグリッドに緑が無い
-- cockpit（light / roster / loop）は 1x のまま
+- 上の個人パス（公開前）
+- 端末内の文字は 860 px 幅ではまだ小さい（2x で輪郭は締まった）。読ませる場面は拡大ペインに任せる方針のまま
