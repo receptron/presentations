@@ -39,17 +39,6 @@
       }
     }
   },
-  "captionParams": {
-    "lang": "ja",
-    "captionSplit": "estimate",
-    "textSplit": {
-      "type": "delimiters",
-      "delimiters": [
-        "。"
-      ]
-    },
-    "bottomOffset": 4
-  },
   "lang": "ja",
   "title": "MulmoTerminal — あなたがボトルネックになった日（v8）",
   "description": "mulmoterminal-launch-v8.json の日本語版（同じ HTML、ナレーションだけ日本語。流れ確認用）。",

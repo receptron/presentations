@@ -39,18 +39,6 @@
       }
     }
   },
-  "captionParams": {
-    "lang": "en",
-    "captionSplit": "estimate",
-    "textSplit": {
-      "type": "delimiters",
-      "delimiters": [
-        ". ",
-        " — "
-      ]
-    },
-    "bottomOffset": 4
-  },
   "lang": "en",
   "title": "MulmoTerminal — The day you became the bottleneck (v8)",
   "description": "v8 review round 2: one generating agent instead of a bare cursor, wide tab window with real terminal panes, no 4:12 anywhere, full app frame (toolbar included), waits sped up so the picture keeps pace with the narration, click rings burned into the clips (expand button, roster rows), state rings on the grid. Footage: mt-demo-home/footage/2026-08-17/cockpit-n (cockpit) and 2026-08-18/cockpit-2x-f (grid, cockpit, 2x) and cockpit-2x (pain). See mulmoterminal-launch-v8-NOTES.md.",
