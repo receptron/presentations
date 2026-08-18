@@ -53,16 +53,22 @@
   },
   "lang": "en",
   "title": "MulmoTerminal — The day you became the bottleneck (v8)",
-  "description": "v8: one message — with many agents running, you can see at a glance which one is waiting on you. WHY (cursor, five tabs, the one that stopped) -> the grid -> expand the amber one -> the roster -> the loop -> triage. Footage: mt-demo-home/footage/2026-08-17/cockpit-n (record-cockpit.mjs, nine checkouts, colour gradient per project). No phone, no worktree/PR, no restart beats (author's call, 2026-08-17). See mulmoterminal-launch-v8-NOTES.md.",
+  "description": "v8 review round 2: one generating agent instead of a bare cursor, wide tab window with real terminal panes, no 4:12 anywhere, full app frame (toolbar included), waits sped up so the picture keeps pace with the narration, click rings burned into the clips (expand button, roster rows), state rings on the grid. Footage: mt-demo-home/footage/2026-08-17/cockpit-n (cockpit) and 2026-08-18/cockpit-2x (grid, pain). See mulmoterminal-launch-v8-NOTES.md.",
   "beats": [
     {
       "text": "When you ran one coding agent, the slowest thing in the room was the agent.",
       "image": {
         "type": "html_tailwind",
-        "animation": true,
+        "animation": {
+          "movie": true
+        },
         "html": [
-          "<div class='w-full h-full bg-black flex items-center justify-center relative'>",
-          "  <div class='font-mono text-6xl text-slate-300' data-animation='blink' data-interval='0.55'>▍</div>",
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
+          "<div class='absolute rounded-xl overflow-hidden shadow-2xl border border-slate-700' style='top:88px;left:190px;width:900px'>",
+          "<div class='bg-slate-800 px-4 py-2 flex items-center gap-2'><span class='w-3 h-3 rounded-full bg-red-400'></span><span class='w-3 h-3 rounded-full bg-yellow-400'></span><span class='w-3 h-3 rounded-full bg-green-400'></span><span class='ml-3 text-slate-400 text-sm font-mono'>agent</span></div>",
+          "<video src='./mulmoterminal-launch-v8-assets/solo.mp4' autoplay muted playsinline style='width:900px;display:block;background:#000'></video>",
+          "</div>",
           "</div>"
         ]
       }
@@ -71,19 +77,21 @@
       "text": "Now that you run five, the slowest thing in the room is probably you.",
       "image": {
         "type": "html_tailwind",
-        "animation": true,
+        "animation": {
+          "movie": true
+        },
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
-          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:56px' data-animation='animate' data-opacity='0,1' data-start='5.2' data-end='5.7' data-easing='easeOut'>the slowest thing is you</div>",
-          "<div class='absolute rounded-xl overflow-hidden shadow-2xl border border-slate-700' style='top:108px;left:250px;width:760px'>",
-          "<div class='relative' style='width:760px'>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:52px' data-animation='animate' data-opacity='0,1' data-start='4.0' data-end='4.5' data-easing='easeOut'>the slowest thing is you</div>",
+          "<div class='absolute rounded-xl overflow-hidden shadow-2xl border border-slate-700' style='top:100px;left:190px;width:900px'>",
+          "<div class='relative' style='width:900px'>",
           "<div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div>",
-          "<div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-web.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div>",
-          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='1.2' data-end='1.3199999999999998'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-mobile.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div></div>",
-          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='2.4' data-end='2.52'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-docs.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div></div>",
-          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='3.6' data-end='3.72'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-auth.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div></div>",
-          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='4.8' data-end='4.92'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-5</span></div><div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-api.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div></div>",
+          "<video src='./mulmoterminal-launch-v8-assets/tab-1.mp4' autoplay muted playsinline style='width:900px;height:450px;display:block;background:#000'></video>",
+          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='1.3' data-end='1.42'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><video src='./mulmoterminal-launch-v8-assets/tab-3.mp4' autoplay muted playsinline style='width:900px;height:450px;display:block;background:#000'></video></div>",
+          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='2.6' data-end='2.72'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><video src='./mulmoterminal-launch-v8-assets/tab-2.mp4' autoplay muted playsinline style='width:900px;height:450px;display:block;background:#000'></video></div>",
+          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='3.9' data-end='4.02'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><video src='./mulmoterminal-launch-v8-assets/tab-4.mp4' autoplay muted playsinline style='width:900px;height:450px;display:block;background:#000'></video></div>",
+          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='5.2' data-end='5.32'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><video src='./mulmoterminal-launch-v8-assets/tab-1.mp4' autoplay muted playsinline style='width:900px;height:450px;display:block;background:#000'></video></div>",
           "</div>",
           "</div>",
           "</div>"
@@ -94,27 +102,19 @@
       "text": "One of them is always stopped. A permission prompt. A question. You find out four minutes later — and those four minutes, it did nothing at all.",
       "image": {
         "type": "html_tailwind",
-        "animation": true,
+        "animation": {
+          "movie": true
+        },
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
-          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:56px'>4:12 — time this agent spent doing nothing</div>",
-          "<div class='absolute rounded-xl overflow-hidden shadow-2xl border border-slate-700' style='top:108px;left:250px;width:760px'>",
-          "<div class='relative' style='width:760px'>",
-          "<div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-5</span></div>",
-          "<div class='bg-black' style='padding:0 10px 10px 10px'><video src='./mulmoterminal-launch-v8-assets/tab-api.mp4' autoplay muted playsinline style='width:740px;height:540px;display:block;background:#000'></video></div>",
+          "<div class='absolute rounded-xl overflow-hidden shadow-2xl border border-slate-700' style='top:100px;left:190px;width:900px'>",
+          "<div class='relative' style='width:900px'>",
+          "<div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div>",
+          "<video src='./mulmoterminal-launch-v8-assets/tab-2.mp4' autoplay muted playsinline style='width:900px;height:450px;display:block;background:#000'></video>",
+          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='1.2' data-end='1.3199999999999998'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-4</span><span class='px-3 py-1 text-slate-500'>agent-5</span></div><video src='./mulmoterminal-launch-v8-assets/tab-4.mp4' autoplay muted playsinline style='width:900px;height:450px;display:block;background:#000'></video></div>",
+          "<div class='absolute inset-0' data-animation='animate' data-opacity='0,1' data-start='2.6' data-end='2.72'><div class='bg-slate-800 px-4 py-2 flex items-center gap-1 font-mono text-sm'><span class='px-3 py-1 text-slate-500'>agent-1</span><span class='px-3 py-1 text-slate-500'>agent-2</span><span class='px-3 py-1 text-slate-500'>agent-3</span><span class='px-3 py-1 text-slate-500'>agent-4</span><span class='px-3 py-1 rounded bg-black text-slate-200'>agent-5</span></div><video src='./mulmoterminal-launch-v8-assets/tab-5.mp4' autoplay muted playsinline style='width:900px;height:450px;display:block;background:#000'></video></div>",
           "</div>",
-          "</div>",
-          "<div class='absolute' style='left:290px;top:160px'>",
-          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='0.5' data-end='0.6'>waiting for 4:12</div>",
-          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='1.5' data-end='1.6'>waiting for 4:13</div>",
-          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='2.5' data-end='2.6'>waiting for 4:14</div>",
-          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='3.5' data-end='3.6'>waiting for 4:15</div>",
-          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='4.5' data-end='4.6'>waiting for 4:16</div>",
-          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='5.5' data-end='5.6'>waiting for 4:17</div>",
-          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='6.5' data-end='6.6'>waiting for 4:18</div>",
-          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='7.5' data-end='7.6'>waiting for 4:19</div>",
-          "<div class='absolute left-0 top-0 whitespace-nowrap font-mono text-base px-2 py-0.5 rounded bg-amber-400 text-slate-900 shadow' data-animation='animate' data-opacity='0,1' data-start='8.5' data-end='8.6'>waiting for 4:20</div>",
           "</div>",
           "</div>"
         ]
@@ -130,14 +130,17 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
-          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:56px'>working / done / <b>needs you</b></div>",
-          "<div class='absolute' style='top:108px;left:160px;width:960px'>",
-          "<video src='./mulmoterminal-launch-v8-assets/grid.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:960px;display:block'></video>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:52px'>working / done / <b>needs you</b></div>",
+          "<div class='absolute' style='top:92px;left:210px;width:860px'>",
+          "<div class='relative' style='width:860px'>",
+          "<video src='./mulmoterminal-launch-v8-assets/grid.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:860px;display:block'></video>",
+          "<div class='absolute rounded-md ring-4 ring-sky-400' style='left:34.2%;top:37.5%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='3.4' data-end='3.8' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-sky-500 text-white'>working</div></div>",
+          "<div class='absolute rounded-md ring-4 ring-amber-400' style='left:1.7%;top:6.9%;width:31.6%;height:29.4%' data-animation='animate' data-opacity='0,1' data-start='7.8' data-end='8.2' data-easing='easeOut'><div class='absolute -top-3 right-2 px-2 py-0.5 rounded text-xs font-semibold bg-amber-400 text-slate-900'>needs you</div></div>",
+          "</div>",
           "</div>",
           "</div>"
         ]
-      },
-      "duration": 16.5
+      }
     },
     {
       "text": "You stop hunting. You go where the light is.",
@@ -149,13 +152,14 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
-          "<div class='absolute' style='top:108px;left:160px;width:960px'>",
-          "<video src='./mulmoterminal-launch-v8-assets/light.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:960px;display:block'></video>",
+          "<div class='absolute' style='top:92px;left:210px;width:860px'>",
+          "<div class='relative' style='width:860px'>",
+          "<video src='./mulmoterminal-launch-v8-assets/light.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:860px;display:block'></video>",
+          "</div>",
           "</div>",
           "</div>"
         ]
-      },
-      "duration": 11.9
+      }
     },
     {
       "text": "The other kind of slow is: what did I even ask this one? The roster keeps one line per session — what you asked, and what came back. Nothing left to remember.",
@@ -167,14 +171,15 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
-          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:56px'>remembering → 0 seconds</div>",
-          "<div class='absolute' style='top:108px;left:160px;width:960px'>",
-          "<video src='./mulmoterminal-launch-v8-assets/roster.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:960px;display:block'></video>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:52px'>remembering → 0 seconds</div>",
+          "<div class='absolute' style='top:92px;left:210px;width:860px'>",
+          "<div class='relative' style='width:860px'>",
+          "<video src='./mulmoterminal-launch-v8-assets/roster.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:860px;display:block'></video>",
+          "</div>",
           "</div>",
           "</div>"
         ]
-      },
-      "duration": 20.0
+      }
     },
     {
       "text": "Answer it, and the next one lights up. You never go looking — the roster tells you.",
@@ -186,14 +191,15 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
-          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:56px'>the next one lights up</div>",
-          "<div class='absolute' style='top:108px;left:160px;width:960px'>",
-          "<video src='./mulmoterminal-launch-v8-assets/loop.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:960px;display:block'></video>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:52px'>the next one lights up</div>",
+          "<div class='absolute' style='top:92px;left:210px;width:860px'>",
+          "<div class='relative' style='width:860px'>",
+          "<video src='./mulmoterminal-launch-v8-assets/loop.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:860px;display:block'></video>",
+          "</div>",
           "</div>",
           "</div>"
         ]
-      },
-      "duration": 19.0
+      }
     },
     {
       "text": "We built MulmoTerminal for exactly that: not to watch agents, but to triage them.",
@@ -205,13 +211,14 @@
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
-          "<div class='absolute' style='top:108px;left:160px;width:960px'>",
-          "<video src='./mulmoterminal-launch-v8-assets/close.mp4' autoplay muted playsinline class='rounded-xl shadow-2xl' style='width:960px;display:block'></video>",
+          "<div class='absolute' style='top:92px;left:210px;width:860px'>",
+          "<div class='relative' style='width:860px'>",
+          "<video src='./mulmoterminal-launch-v8-assets/close.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:860px;display:block'></video>",
+          "</div>",
           "</div>",
           "</div>"
         ]
-      },
-      "duration": 12.0
+      }
     },
     {
       "text": "That is the whole install.",
