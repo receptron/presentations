@@ -138,3 +138,14 @@ Claude Code が Bash ツールで `cd /Users/<name>/…/mt-demo/acme-api2 && …
 - 撮り直しのたびに変わる座標（⤢ ボタン・roster 行）は、そのテイクのフレームから測り直している（この NOTES に数値は書かない。切り出しコマンドはこの版のものが正本）
 - フレーム単位レンダリングの落とし穴（2026-08-19）: `imageParams.concurrency` 既定 4 だと 4 ビートが同時に puppeteer でコマ撮りして `Page.captureScreenshot timed out` で落ちる → **`concurrency: 1`**。それでも beat 5（ほぼ静止・17 s の ja）だけ落ち続けたので、その beat は `animation: {fps: 15}`（コマ数半分）にした。クリップは beat の尺より **数秒長く**しておく（末尾ぎりぎりまでシークすると止まることがある）
 
+
+## 2026-08-19 レビュー 10 回目の対応 — beat 7 の筋を「光っているものから選ぶ」に
+
+- 指摘: 「Answer it, and the next one lights up」は嘘 — 画面は「api が**もう**光っている → クリック → 答える」で、答えた後に光るものは無い。素材（take b）で api が光る瞬間は b 23〜25 s（api2 に issue 起票の指示を打っている最中）にあり、loop クリップ（b 27 s〜）はそれより後から始まる
+- 直し: **筋を「次は光っているものから選ぶ」に**。ナレーション en「Then you pick the next one from whatever is lit. Click, answer, move on. You never go looking — the roster tells you.」/ ja「次は、光っているものから選ぶだけ。クリックして、答えて、次へ。…」、見出し `pick from what is lit`。クリップ冒頭で web2 と api の 2 行が光っていて、そこから api を選ぶ絵になっているので、この筋のほうが映像に合う
+- ついでに確認した 2 点（変更なし）
+  - 52 s の roster で `prompt` 1 行だけの行があるのは MulmoTerminal の仕様 — `summary`（AI 題名）と `reply` は**ターンが 1 回終わった時点**で付く（server/session/registry.ts）。web3 / api2 / api3 / mobile2 は撮影直前に最初の仕事を渡したばかりで、まだ何も返ってきていない
+  - 締めの「No Electron」は 60 秒版（v6）にはあったが、v7 を中島さんの台本どおりに組んだとき（台本の最終カードは「That is the whole install.」+ npx + MIT · URL のみ）に外れ、v8 もそれを引き継いでいる。明示的な「外す」判断ではない。現状維持
+- 1:06 の場面飛び（beat 6 → 7）: take b の 17〜27 s（api2 行をクリック → "Good. File a GitHub issue for the follow-up work you would suggest." を打つ）を丸ごと切っていたのが原因。**速度の規則を変更**: ポインタ操作は等速、**打鍵は 4 倍速**、待ちは 2 倍速（それまでは「打鍵は等速」で、入らない打鍵は切っていた）。loop.mp4 を組み直し: b 17.3〜19.7 等速（ポインタ → api2 行 → クリック）→ 19.7〜27.3 を 4 倍速（issue 指示の打鍵。その間に api 行が amber に変わる）→ 27.3〜30.5 を 2 倍速（ポインタ → 光った api 行）→ 30.5〜31.5 等速（クリック）→ 31.5〜39.2 を 2 倍速（質問に答える）→ 4 s ホールド = 14.8 s。issue 起票の動きも画面に残る
+- beat 6 の PR 指示の打鍵（4.5 s・等速のまま）は未変更 — 同じ規則を当てるなら 4 倍速にする
+

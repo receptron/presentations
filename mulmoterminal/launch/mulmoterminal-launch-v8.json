@@ -180,14 +180,14 @@
       "duration": 13.5
     },
     {
-      "text": "Answer it, and the next one lights up. You never go looking — the roster tells you.",
+      "text": "Then you pick the next one from whatever is lit. Click, answer, move on. You never go looking — the roster tells you.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
-          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:52px'>the next one lights up</div>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:52px'>pick from what is lit</div>",
           "<div class='absolute' style='top:92px;left:210px;width:860px'>",
           "<div class='relative' style='width:860px'>",
           "<video src='./mulmoterminal-launch-v8-assets/loop.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:860px;display:block'></video>",

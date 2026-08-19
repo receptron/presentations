@@ -180,14 +180,14 @@
       "duration": 13.5
     },
     {
-      "text": "答えれば、次のが光ります。探しに行くことはもうない — ロスターが教えてくれます。",
+      "text": "次は、光っているものから選ぶだけ。クリックして、答えて、次へ。探しに行くことはもうない — ロスターが教えてくれます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "<div class='absolute top-8 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>MulmoTerminal</div>",
-          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:52px'>the next one lights up</div>",
+          "<div class='absolute left-0 right-0 text-center text-4xl font-semibold text-slate-100' style='top:52px'>pick from what is lit</div>",
           "<div class='absolute' style='top:92px;left:210px;width:860px'>",
           "<div class='relative' style='width:860px'>",
           "<video src='./mulmoterminal-launch-v8-assets/loop.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:860px;display:block'></video>",
