@@ -84,7 +84,7 @@
       }
     },
     {
-      "text": "One of them is always stopped. A permission prompt. A question. You find out four minutes later — and those four minutes, it did nothing at all.",
+      "text": "One of them is always stopped. A permission prompt. A question. Until you notice, it does nothing at all.",
       "image": {
         "type": "html_tailwind",
         "animation": true,

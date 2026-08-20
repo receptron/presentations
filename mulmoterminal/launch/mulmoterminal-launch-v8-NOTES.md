@@ -149,3 +149,11 @@ Claude Code が Bash ツールで `cd /Users/<name>/…/mt-demo/acme-api2 && …
 - 1:06 の場面飛び（beat 6 → 7）: take b の 17〜27 s（api2 行をクリック → "Good. File a GitHub issue for the follow-up work you would suggest." を打つ）を丸ごと切っていたのが原因。**速度の規則を変更**: ポインタ操作は等速、**打鍵は 4 倍速**、待ちは 2 倍速（それまでは「打鍵は等速」で、入らない打鍵は切っていた）。loop.mp4 を組み直し: b 17.3〜19.7 等速（ポインタ → api2 行 → クリック）→ 19.7〜27.3 を 4 倍速（issue 指示の打鍵。その間に api 行が amber に変わる）→ 27.3〜30.5 を 2 倍速（ポインタ → 光った api 行）→ 30.5〜31.5 等速（クリック）→ 31.5〜39.2 を 2 倍速（質問に答える）→ 4 s ホールド = 14.8 s。issue 起票の動きも画面に残る
 - beat 6 の PR 指示の打鍵（4.5 s・等速のまま）は未変更 — 同じ規則を当てるなら 4 倍速にする
 
+
+## 2026-08-20 レビュー 11 回目の対応 — beat 2 の「4 分」を落とす
+
+- 指摘: beat 2 のナレーションが長くてテンポが悪い。「4 分」の数字を入れず「気づくまで動いていない」趣旨に
+- 直し: en「One of them is always stopped. A permission prompt. A question. Until you notice, it does nothing at all.」/ ja「どれか 1 体は、必ず止まっています。許可待ち。質問待ち。あなたが気づくまで、何もしていません。」（14.5 s → 約 9 s）
+- 副次効果: いまの絵のタイマーは「1m 21s」「1m 34s」で、「four minutes」は映像と食い違っていた。数字を落としてズレも解消
+- 4 倍速バッジ（▶▶ 4×）は**入れない**で確定（レビュー 10 回目の打鍵 4x 区間。バッジまで付けると画面がうるさい）
+- 成果物の置き場整理: 旧キャプション版 mp4（`_en__en` / `_ja_ja__ja`）と assets の迷子 3 本は各ディレクトリの `old/` へ mv。台本レビュー用に `mulmo pdf --pdf_mode handout --pdf_size a4` で en / ja の handout PDF を生成（メイン checkout の output/ に cp）
