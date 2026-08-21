@@ -1,6 +1,6 @@
 # mulmoterminal-launch-v8.json — 「あなたがボトルネックになった日」v8（1 メッセージ版）
 
-v7（中島さんの 2 分台本を機能カット込みで組んだ版）から、作者の判断（2026-08-17 Slack: remote は落とす／細かい機能紹介より「多数を同時に動かしているとき状態が一瞬で分かる」に特化／expand して状態が変わってどんどん指示するシーンが欲しい／動画で active な terminal をカメラで拡大するのは負け／色にメリハリ）に合わせて組み直した。**英語版が canonical**、`_ja` はナレーションだけ日本語（見出しは英語のまま）。
+v7（台本作者の 2 分台本を機能カット込みで組んだ版）から、作者の判断（2026-08-17 Slack: remote は落とす／細かい機能紹介より「多数を同時に動かしているとき状態が一瞬で分かる」に特化／expand して状態が変わってどんどん指示するシーンが欲しい／動画で active な terminal をカメラで拡大するのは負け／色にメリハリ）に合わせて組み直した。**英語版が canonical**、`_ja` はナレーションだけ日本語（見出しは英語のまま）。
 
 ## 構成（9 beat）
 
@@ -16,7 +16,7 @@ v7（中島さんの 2 分台本を機能カット込みで組んだ版）から
 | 7 | 締め（triage） | `close.mp4` = take-cockpit 186〜207 s（amber3 点灯 3.6 s、回答 12.6 s、グリッドへ 15.8 s） | 実写 |
 | 8 | `npx` | html | — |
 
-落としたもの（作者判断）: スマホ（1:28）、worktree→diff→PR（1:14）、kill→再起動→htop（1:44）、「1〜3 体でも効く」の一文。中島さんには「remote を落とした」を伝える必要がある（未）。
+落としたもの（作者判断）: スマホ（1:28）、worktree→diff→PR（1:14）、kill→再起動→htop（1:44）、「1〜3 体でも効く」の一文。remote を落とした判断は 2026-08-20 のレビュー共有時に明記済み。
 
 ## 素材の正本
 
@@ -27,7 +27,7 @@ v7（中島さんの 2 分台本を機能カット込みで組んだ版）から
 - **take-cockpit 85〜111 s は使わない**（api2 に追加指示を打つ区間に Claude Code の hook タイムアウトの赤字が拡大ペインに出る。機械が重かった影響）→ v8 の clip はこの区間を避けている
 - **take-pain の auth セル**は 8〜14 s だけ使う（それ以外の時刻に `find` の出力で個人パスが写る）→ `tab-auth.mp4` はその窓
 - `verify-takes.sh` は grid / cockpit を FROZEN と判定したが、**端末が流れ続ける画では「最終フレーム ≒ 終了後の静止画」が成り立たず誤判定**する。時系列でフレームを抜いて中身が進んでいることを目視で確認した（skill 側の課題として記録）
-- 「Green is done」（beat 3）: take-grid の中では緑が出ない（全部 blue → 1 つ amber）。緑は beat 5〜6 の roster で見える。ナレーションは中島さんの文のまま
+- 「Green is done」（beat 3）: take-grid の中では緑が出ない（全部 blue → 1 つ amber）。緑は beat 5〜6 の roster で見える。ナレーションは台本の文のまま
 
 ## v7 レビューで直したこと（v8 に反映）
 
@@ -87,13 +87,13 @@ roster が 9 行入るように demo-config に `cockpitLines: {summary:1, promp
 - **ssh のパスフレーズ入力が端末に出た**（`Enter passphrase for key '/Users/…/.ssh/id_ed25519'` が question dialog に重なる）→ 全プロンプトに "Work offline: no git fetch, pull, or push"、demo リポに `core.sshCommand = ssh -o BatchMode=yes`
 - 質問プロンプトの後に "then implement it" を足した（回答後に青へ戻る。放置すると idle_prompt でまた amber になる）
 
-### 🔴 公開前に潰すもの — セルの中に個人パスが写る
+### 公開前に潰すもの — セルの中に個人パスが写る（→ レビュー 8〜9 回目の撮り直しで解消済み）
 
 Claude Code が Bash ツールで `cd /Users/<name>/…/mt-demo/acme-api2 && …` と**実パスを表示する**ことがあり（`/tmp/mt-demo` は symlink で、realpath はホーム配下）、グリッドのセルにその行が出る（take-grid 2x-f の 36 s 付近 api2 セル、d-1 末尾の mobile2 セル）。860 px 幅の表示ではほぼ読めないが、**公開版では対策が必要**: demo ツリーを symlink でなく `/tmp/mt-demo` の実体にする（capture-guide §3 の元の設計に戻す）か、CLAUDE.md の「絶対パスを出すな」を Bash の cwd 指定にも効くよう強める。今回の v8 は内部レビュー用としてそのまま。
 
 ### まだ残っているもの
 
-- 上の個人パス（公開前）
+- （解消済み）上の個人パスは 2026-08-19 の撮り直しテイクで再確認して消えた
 - 端末内の文字は 860 px 幅ではまだ小さい（2x で輪郭は締まった）。読ませる場面は拡大ペインに任せる方針のまま
 
 ## 2026-08-18 レビュー 4 回目の対応 — 冒頭 3 カットの文字が大きすぎる・見切れる
@@ -125,7 +125,7 @@ Claude Code が Bash ツールで `cd /Users/<name>/…/mt-demo/acme-api2 && …
 
 対応: **beat を 2 つに割った**。
 - beat 5（roster、"remembering → 0 seconds"）: api 行を見る → 行を読む → ポインタで done 行（web3）をクリック → その完了結果を読む、まで。打鍵なし
-- **beat 6（新規）**: *"When it is done, the next order goes in right there — no window to find, no tab to raise."*（ja: 「終わったら、次の指示はその場で打つ。探すウィンドウも、開くタブもありません。」）— 追加指示を**等速で**打ち、Enter、Claude が動き出すまで（`next.mp4` = take-cockpit-b 12.4〜22 s、1x）。isamu さんの「expand して状態が変わってどんどん指示する」の 1 文がここに入る
+- **beat 6（新規）**: *"When it is done, the next order goes in right there — no window to find, no tab to raise."*（ja: 「終わったら、次の指示はその場で打つ。探すウィンドウも、開くタブもありません。」）— 追加指示を**等速で**打ち、Enter、Claude が動き出すまで（`next.mp4` = take-cockpit-b 12.4〜22 s、1x）。レビューで求められた「expand して状態が変わってどんどん指示する」シーンがここに入る
 - 以降は 1 つずつ後ろへ（loop = beat 7、締め = beat 8、npx = beat 9）
 
 ## 2026-08-19 レビュー 8〜9 回目の対応
@@ -145,7 +145,7 @@ Claude Code が Bash ツールで `cd /Users/<name>/…/mt-demo/acme-api2 && …
 - 直し: **筋を「次は光っているものから選ぶ」に**。ナレーション en「Then you pick the next one from whatever is lit. Click, answer, move on. You never go looking — the roster tells you.」/ ja「次は、光っているものから選ぶだけ。クリックして、答えて、次へ。…」、見出し `pick from what is lit`。クリップ冒頭で web2 と api の 2 行が光っていて、そこから api を選ぶ絵になっているので、この筋のほうが映像に合う
 - ついでに確認した 2 点（変更なし）
   - 52 s の roster で `prompt` 1 行だけの行があるのは MulmoTerminal の仕様 — `summary`（AI 題名）と `reply` は**ターンが 1 回終わった時点**で付く（server/session/registry.ts）。web3 / api2 / api3 / mobile2 は撮影直前に最初の仕事を渡したばかりで、まだ何も返ってきていない
-  - 締めの「No Electron」は 60 秒版（v6）にはあったが、v7 を中島さんの台本どおりに組んだとき（台本の最終カードは「That is the whole install.」+ npx + MIT · URL のみ）に外れ、v8 もそれを引き継いでいる。明示的な「外す」判断ではない。現状維持
+  - 締めの「No Electron」は 60 秒版（v6）にはあったが、v7 を台本どおりに組んだとき（台本の最終カードは「That is the whole install.」+ npx + MIT · URL のみ）に外れ、v8 もそれを引き継いでいる。明示的な「外す」判断ではない。現状維持
 - 1:06 の場面飛び（beat 6 → 7）: take b の 17〜27 s（api2 行をクリック → "Good. File a GitHub issue for the follow-up work you would suggest." を打つ）を丸ごと切っていたのが原因。**速度の規則を変更**: ポインタ操作は等速、**打鍵は 4 倍速**、待ちは 2 倍速（それまでは「打鍵は等速」で、入らない打鍵は切っていた）。loop.mp4 を組み直し: b 17.3〜19.7 等速（ポインタ → api2 行 → クリック）→ 19.7〜27.3 を 4 倍速（issue 指示の打鍵。その間に api 行が amber に変わる）→ 27.3〜30.5 を 2 倍速（ポインタ → 光った api 行）→ 30.5〜31.5 等速（クリック）→ 31.5〜39.2 を 2 倍速（質問に答える）→ 4 s ホールド = 14.8 s。issue 起票の動きも画面に残る
 - beat 6 の PR 指示の打鍵（4.5 s・等速のまま）は未変更 — 同じ規則を当てるなら 4 倍速にする
 

@@ -1,6 +1,6 @@
 # mulmoterminal-120s-v7.json — 2 分ローンチ動画（2026-08-16 台本準拠）の初稿
 
-v6（60 秒・冒頭 2 拍）とは別の系統。中島さんの 2026-08-16 台本（"The day you became the bottleneck"、10 カット・120 秒・WHY 先行）をそのまま beat に落とした。台本の正本は台本 PDF（`mulmoterminal-launch-video-script-2026-08-16.pdf`）で、ここには写さない。ナレーションは台本の英文をそのまま使い、beat 8 だけ 2 文に割った（下記）。
+v6（60 秒・冒頭 2 拍）とは別の系統。台本作者の 2026-08-16 台本（"The day you became the bottleneck"、10 カット・120 秒・WHY 先行）をそのまま beat に落とした。台本の正本は台本 PDF（`mulmoterminal-launch-video-script-2026-08-16.pdf`）で、ここには写さない。ナレーションは台本の英文をそのまま使い、beat 8 だけ 2 文に割った（下記）。
 
 **英語版が canonical**（ローンチ動画の規約どおり）。TTS は v6 と同じ Presenter / Kore、`instruction` に台本の Delivery notes（"Read it flat" / 「Amber is waiting on you.」だけ少し落とす）を反映した。
 
