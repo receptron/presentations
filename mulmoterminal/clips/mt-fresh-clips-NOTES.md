@@ -8,7 +8,7 @@ rig は `mulmoterminal-video` skill 同梱 `record-fresh.mjs`。撮影対象は 
 
 | デッキ | 出た版 | 素材 | 備考 |
 |---|---|---|---|
-| mt-restart | 4.14.0 | fresh-c/take-restart | 冒頭 0〜2.5s に元の会話、クリック後に同じセルで再起動 |
+| mt-restart | 4.14.0 | fresh-c/take-restart | 2 ビート: ①元の会話 → restart クリック（**ボタンに琥珀リング焼き込み** — 2 段目・Skill の右）→ 再起動 ②**opt-in の設定スニペット**（buttons / keymap の両方）。設定の話が無い初版は「ボタンが出てない」と差し戻された |
 | mt-launch-form | 4.11.0 | fresh-b/take-launchform | 拡大中に + → フォームが横 → 隣で 2 本目が起動 |
 | mt-right-click | 4.13.0 | fresh-b/take-rightclick | `read ` の打ちかけに Insert relative path で README.md が入る |
 | mt-shortcut-list | 4.13.0 | fresh-a/40-shortcuts.png | **静止画から camera-move**（下の「Settings は撮らない」） |

@@ -70,6 +70,31 @@
           "</div>"
         ]
       }
+    },
+    {
+      "text": "これは opt-in で、設定するまでどこにも出ません。config に buttons を 1 つ書けばヘッダーに出ます。キー派は terminal-restart を割り当ててください。",
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Supervise</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>Opt-in — one entry in your config</div>",
+          "  <div class='absolute flex flex-col gap-6' style='top:150px;left:180px;width:920px'>",
+          "    <div class='rounded-xl border border-slate-700 bg-slate-900 p-6'>",
+          "      <div class='text-slate-500 text-lg mb-3 font-mono'>~/.mulmoterminal/config.json — a header button</div>",
+          "      <pre class='text-2xl font-mono text-slate-200 leading-relaxed'>\"buttons\": [",
+          "  { \"id\": \"restart\", \"icon\": \"restart_alt\",",
+          "    \"run\": \"action\", \"action\": \"restart\" }",
+          "]</pre>",
+          "    </div>",
+          "    <div class='rounded-xl border border-slate-700 bg-slate-900 p-6'>",
+          "      <div class='text-slate-500 text-lg mb-3 font-mono'>…or a keyboard shortcut</div>",
+          "      <pre class='text-2xl font-mono text-slate-200 leading-relaxed'>\"keymap\": { \"terminal-restart\": \"Ctrl+Alt+R\" }</pre>",
+          "    </div>",
+          "  </div>",
+          "</div>"
+        ]
+      }
     }
   ]
 }
