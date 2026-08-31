@@ -1,0 +1,75 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {},
+    "concurrency": 1
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 0.5,
+    "closingPadding": 0.3,
+    "outroPadding": 2.5,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "ナレーター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "落ち着いた、確信のある口調で。短い断定文を、製品キーノートのようにテンポよく読む。感嘆や売り込みの熱量は入れない。"
+        }
+      }
+    }
+  },
+  "captionParams": {
+    "lang": "ja",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        "。"
+      ]
+    },
+    "bottomOffset": 4
+  },
+  "lang": "ja",
+  "title": "MulmoTerminal — 1 体に入っている間も、残りの 8 体が見えている",
+  "description": "機能紹介の短尺クリップ。ターミナルを拡大している間も、1 行 1 セッションのロスターが横に残る。行が琥珀になったらクリックして答えるだけ。スライドは日英とも英語。",
+  "beats": [
+    {
+      "text": "1 体に入っている間も、残りの 8 体はロスターに見えています。行が琥珀になったら、クリックして答えるだけです。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Supervise</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>Cockpit Roster</div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-cockpit-roster-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}

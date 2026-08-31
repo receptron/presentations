@@ -1,4 +1,4 @@
-# mt-restart / mt-launch-form / mt-right-click / mt-shortcut-list / mt-quit — 制作メモ
+# fresh + stock クリップ (09-01) — 制作メモ
 
 fresh クリップの初回一括（2026-08-31 決定・marketing repo `feature-clips-plan.md` が発注書）。
 1 機能 = 1 クリップ・1 ビート、機能名は焼き込み（フェードインさせない）。素材は
@@ -13,6 +13,20 @@ rig は `mulmoterminal-video` skill 同梱 `record-fresh.mjs`。撮影対象は 
 | mt-right-click | 4.13.0 | fresh-b/take-rightclick | `read ` の打ちかけに Insert relative path で README.md が入る |
 | mt-shortcut-list | 4.13.0 | fresh-a/40-shortcuts.png | **静止画から camera-move**（下の「Settings は撮らない」） |
 | mt-quit | 4.11.0 | fresh-e/take-quit + final.png | 動画（確認 → Stopping…）+ 静止画（has stopped）の継ぎ |
+
+### stock 5 本（09-01 夜間・再撮影なし）
+
+台帳「素材あり」の 5 機能を 08-30 の footage から新しい型で組んだ。切り出しは footage 08-31 の `cut-mt-stock.sh`。
+
+| デッキ | 台帳 # | 素材 |
+|---|---|---|
+| mt-status-colors | #2 | 08-30 cockpit-a/take-grid |
+| mt-cockpit-roster | #3 | 08-30 cockpit-a/take-cockpit-b（ロスター行クリックにポインタ + 直前パルス） |
+| mt-tmux-persist | #11 | 08-30 pty-persist/take-persist |
+| mt-plain-shell | #41 | 08-30 pty-launch/take-shell-launch（Shell チップにポインタ） |
+| mt-launch-commands | #42 | 08-30 pty-grid2/take-mixed-grid |
+
+投稿しないと決めた 08-30 の 3 デッキ（mt-cockpit / mt-any-command / mt-nothing-lost）の素材は、これで全部この形に消化された。
 
 ## 撮影で確定したこと（rig に反映済み）
 

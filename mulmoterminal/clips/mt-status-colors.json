@@ -1,0 +1,75 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {},
+    "concurrency": 1
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 0.5,
+    "closingPadding": 0.3,
+    "outroPadding": 2.5,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Calm, confident, measured — short declarative sentences, like a good product keynote. No exclamation marks in delivery, no salesy energy. Let the pauses between sentences breathe."
+        }
+      }
+    }
+  },
+  "captionParams": {
+    "lang": "en",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        ". "
+      ]
+    },
+    "bottomOffset": 4
+  },
+  "lang": "en",
+  "title": "MulmoTerminal — one of nine is waiting on you; the colors show which",
+  "description": "Short feature clip. Blue is an agent working, green is done, amber is waiting on you — the grid says who needs you without you watching it. Slides are English in both language versions.",
+  "beats": [
+    {
+      "text": "One of nine agents is waiting on you. Blue is working, green is done — amber shows which one needs you.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Supervise</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>Status Colors</div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-status-colors-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
