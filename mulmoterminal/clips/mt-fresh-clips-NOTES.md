@@ -36,6 +36,15 @@ rig は `mulmoterminal-video` skill 同梱 `record-fresh.mjs`。撮影対象は 
 - `mt-restart` beat 2 は**実操作の映像**（Settings → Keyboard shortcuts → Set up shortcuts… → 「Let an agent set this up?」ダイアログで締め）。静止スクショ案は差し戻された
 - 完了待ちは done 状態のポーリングでなく「working を経て working でなくなった」で判定（短い返答の done は一瞬で idle に戻る）
 
+### restart は「同じ会話」を映像で反証した（2026-09-01・上流報告候補 3 件目）
+
+再開後に「What did you say src/index.js exports?」を打ったら、**「I haven't looked at that file
+before in this conversation」と返ってきた**（restart-proof2 テイク）。この環境では restart は会話を
+引き継いでいない — #1918/#1920 と ChangeLog の「same conversation」の主張と食い違う。クリップからは
+会話の主張を落とし、「同じセル・同じディレクトリ・ランチャー往復が不要」の範囲にした。
+pathlink / copyblock と同じく symlink cwd 起因（transcript の解決が外れて --resume が空振り）の
+可能性があり、**実環境での再現確認 → 上流報告**が宿題。
+
 ## 撮影で確定したこと（rig に反映済み）
 
 - **Settings モーダルは録画しない** — `fixed inset-0` で screencast が凍る既知条件そのもの

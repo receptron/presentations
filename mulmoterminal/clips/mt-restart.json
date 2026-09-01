@@ -53,10 +53,10 @@
     "bottomOffset": 4
   },
   "title": "MulmoTerminal — restart the agent in the cell you are looking at",
-  "description": "Short feature clip. Changing an MCP server or the config leaves a running agent with the old view of the world; an opt-in header button restarts it in place — same cell, same directory, same conversation. Slides are English in both language versions.",
+  "description": "Short feature clip. Changing an MCP server or the config leaves a running agent with the old view of the world; an opt-in header button restarts it in place — same cell, same directory. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Changed an MCP server, a plugin, or your config? One button restarts the agent in place — same cell, same conversation.",
+      "text": "Changed an MCP server, a plugin, or your config? One button restarts the agent in place — no trip back through the launcher.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
