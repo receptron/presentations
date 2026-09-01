@@ -56,7 +56,7 @@
   "description": "Short feature clip. The terminal that started the server is often the one window you are not looking at; Settings has a Quit button, and `mulmoterminal stop` works from any terminal. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Stop the server from the browser — one button in Settings, or one command from any terminal.",
+      "text": "The terminal that started the server is the one window you are not looking at. Now you can stop it from the browser — or with one command.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
