@@ -53,7 +53,7 @@
     "bottomOffset": 4
   },
   "title": "MulmoTerminal — one launch form, beside what you are looking at",
-  "description": "Short feature clip. Starting the next agent no longer takes you away: the launch form opens beside the enlarged terminal, and the new session starts next door. Slides are English in both language versions.",
+  "description": "Short feature clip. Starting the next agent no longer takes you away: the launch form opens beside your current view, and the new session starts next to it. Slides are English in both language versions.",
   "beats": [
     {
       "text": "Starting the next session got easier. The launch form opens beside what you are looking at — pick a directory, and the new agent starts next door.",
@@ -62,8 +62,8 @@
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
-          "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Supervise</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>One Launch Form</div>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>One Launch Form</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
           "    <video src='./mt-launch-form-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",

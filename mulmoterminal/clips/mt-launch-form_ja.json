@@ -53,7 +53,7 @@
     "bottomOffset": 4
   },
   "title": "MulmoTerminal — 起動フォームは、見ている場所の横に開く",
-  "description": "機能紹介の短尺クリップ。次のエージェントを立てるのに画面を離れない。起動フォームが拡大中のターミナルの横に開き、新しいセッションが隣で始まる。スライドは日英とも英語。",
+  "description": "機能紹介の短尺クリップ。次のエージェントを起動するときも、いま見ている場所を離れずに済む。起動フォームが今のビューの横に開き、新しいセッションが隣で始まる。スライドは日英とも英語。",
   "beats": [
     {
       "text": "新しいセッションの始め方が使いやすくなりました。起動フォームは見ている場所の横に開き、ディレクトリを選べば次のエージェントは隣で始まります。",
@@ -62,8 +62,8 @@
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
-          "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Supervise</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>One Launch Form</div>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>One Launch Form</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
           "    <video src='./mt-launch-form-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",

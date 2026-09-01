@@ -56,38 +56,38 @@
   "description": "機能紹介の短尺クリップ。MCP や設定を変えても動作中のエージェントは古い設定のまま。opt-in のヘッダーボタンがその場で再起動し、同じセル・同じ会話に戻る。スライドは日英とも英語。",
   "beats": [
     {
-      "text": "MCP やプラグイン、設定を変えた？ ボタン 1 つでその場で再起動。同じセル・同じ会話のままです。",
+      "text": "MCP サーバーやプラグイン、設定を変えたら、ボタン 1 つでその場で再起動。同じセル・同じ会話のままです。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
-          "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Supervise</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>In-Cell Restart</div>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>In-Cell Restart</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
           "    <video src='./mt-restart-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
       },
-      "duration": 11.7
+      "duration": 11.4
     },
     {
-      "text": "これは opt-in です。ヘッダーボタンは config に buttons を 1 つ。キー割当は Settings の Set up shortcuts から、エージェントに書かせるだけです。",
+      "text": "これは opt-in です。ヘッダーボタンは、config の buttons に 1 件追加すると表示されます。キー割当は Settings の Set up shortcuts から、エージェントに書かせられます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
-          "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Supervise</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>Opt-in — button or shortcut</div>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Opt-in — button or shortcut</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
           "    <video src='./mt-restart-assets/clip2.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
       },
-      "duration": 13.3
+      "duration": 12.9
     },
     {
       "text": "",
