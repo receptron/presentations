@@ -69,7 +69,8 @@
           "  </div>",
           "</div>"
         ]
-      }
+      },
+      "duration": 11.7
     },
     {
       "text": "これは opt-in です。ヘッダーボタンは config に buttons を 1 つ。キー割当は Settings の Set up shortcuts から、エージェントに書かせるだけです。",
@@ -85,7 +86,8 @@
           "  </div>",
           "</div>"
         ]
-      }
+      },
+      "duration": 13.3
     },
     {
       "text": "",
