@@ -28,6 +28,14 @@ rig は `mulmoterminal-video` skill 同梱 `record-fresh.mjs`。撮影対象は 
 
 投稿しないと決めた 08-30 の 3 デッキ（mt-cockpit / mt-any-command / mt-nothing-lost）の素材は、これで全部この形に消化された。
 
+### backlog 3 本 + 共通エンドカード（09-01 深夜〜）
+
+- 追加 3 本: `mt-rate-gauge`（ツールチップは**ネイティブ title で screencast に写らない** — 常時表示 + カメラ寄りに変更）／ `mt-run-menu`（acme-web3 に `script.json` + 通るテスト 3 本を仕込み、demo-baseline `ee470cf`〜）／ `mt-split-editor`（追従判定は body 全体でなく**エディタ自身のテキスト**で。中間 20 秒は 6 倍速圧縮）
+- **Path Links / Copy Code Block は rig 環境（symlink cwd）では機能が発火せず撮影不可** — 前者はリンクが形成されない（カーソル掃引でも pointer 化せず）、後者は transcript 参照が外れて「No completed turn yet」。**上流報告の候補**
+- **全クリップ共通のエンドカード**: 黒地 `npx mulmoterminal@latest`（v8 と同じ意匠・TTS なし・duration 1.0）。`outroPadding` 2.0 がフェード窓になり BGM がその上で消えていく
+- `mt-restart` beat 2 は**実操作の映像**（Settings → Keyboard shortcuts → Set up shortcuts… → 「Let an agent set this up?」ダイアログで締め）。静止スクショ案は差し戻された
+- 完了待ちは done 状態のポーリングでなく「working を経て working でなくなった」で判定（短い返答の done は一瞬で idle に戻る）
+
 ## 撮影で確定したこと（rig に反映済み）
 
 - **Settings モーダルは録画しない** — `fixed inset-0` で screencast が凍る既知条件そのもの

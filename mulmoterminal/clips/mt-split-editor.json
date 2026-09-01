@@ -25,7 +25,6 @@
     "suppressSpeech": false,
     "concurrency": 1
   },
-  "lang": "en",
   "speechParams": {
     "speakers": {
       "Presenter": {
@@ -52,20 +51,21 @@
     },
     "bottomOffset": 4
   },
-  "title": "MulmoTerminal — one launch form, beside what you are looking at",
-  "description": "Short feature clip. Starting the next agent no longer takes you away: the launch form opens beside the enlarged terminal, and the new session starts next door. Slides are English in both language versions.",
+  "lang": "en",
+  "title": "MulmoTerminal — the editor follows the agent's edits as they land",
+  "description": "Short feature clip. Enlarging a cell puts a folder toggle in its header: terminal on the left, editor on the right — and when the agent rewrites the open file, the buffer follows. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Starting the next session got easier. The launch form opens beside what you are looking at — pick a directory, and the new agent starts next door.",
+      "text": "Open a file beside the terminal, and the editor follows the agent's edits as they land.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
-          "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Supervise</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>One Launch Form</div>",
+          "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>See</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>Split Editor</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
-          "    <video src='./mt-launch-form-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "    <video src='./mt-split-editor-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]

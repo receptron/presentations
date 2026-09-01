@@ -19,7 +19,7 @@
     "padding": 0.3,
     "introPadding": 0.5,
     "closingPadding": 0.3,
-    "outroPadding": 2.5,
+    "outroPadding": 2.0,
     "bgmVolume": 0.12,
     "audioVolume": 1,
     "suppressSpeech": false,
@@ -67,6 +67,19 @@
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
           "    <video src='./mt-quit-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "",
+      "duration": 1.0,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex flex-col items-center justify-center gap-6'>",
+          "  <div class='font-mono text-4xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <div class='font-mono text-lg text-slate-500'>MIT · receptron.github.io/mulmoterminal</div>",
           "</div>"
         ]
       }

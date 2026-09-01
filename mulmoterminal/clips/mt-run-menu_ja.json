@@ -25,47 +25,47 @@
     "suppressSpeech": false,
     "concurrency": 1
   },
-  "lang": "en",
   "speechParams": {
     "speakers": {
       "Presenter": {
         "displayName": {
-          "en": "Presenter"
+          "ja": "ナレーター"
         },
         "voiceId": "Kore",
         "isDefault": true,
         "provider": "gemini",
         "speechOptions": {
-          "instruction": "Calm, confident, measured — short declarative sentences, like a good product keynote. No exclamation marks in delivery, no salesy energy. Let the pauses between sentences breathe."
+          "instruction": "落ち着いた、確信のある口調で。短い断定文を、製品キーノートのようにテンポよく読む。感嘆や売り込みの熱量は入れない。"
         }
       }
     }
   },
   "captionParams": {
-    "lang": "en",
+    "lang": "ja",
     "captionSplit": "estimate",
     "textSplit": {
       "type": "delimiters",
       "delimiters": [
-        ". "
+        "。"
       ]
     },
     "bottomOffset": 4
   },
-  "title": "MulmoTerminal — one launch form, beside what you are looking at",
-  "description": "Short feature clip. Starting the next agent no longer takes you away: the launch form opens beside the enlarged terminal, and the new session starts next door. Slides are English in both language versions.",
+  "lang": "ja",
+  "title": "MulmoTerminal — 会話を止めずに、スクリプトは隣のセルで",
+  "description": "機能紹介の短尺クリップ。実行中セッションの Run メニューは、script.json のコマンドを隣の空きセルで走らせる。テストが走っている間も会話は続く。スライドは日英とも英語。",
   "beats": [
     {
-      "text": "Starting the next session got easier. The launch form opens beside what you are looking at — pick a directory, and the new agent starts next door.",
+      "text": "会話を止めずにスクリプトを走らせます。行き先は隣の空きセル。テストは green で返ってきます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
-          "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Supervise</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>One Launch Form</div>",
+          "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Automate</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>Run Menu</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
-          "    <video src='./mt-launch-form-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "    <video src='./mt-run-menu-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]

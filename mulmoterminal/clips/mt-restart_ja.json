@@ -19,7 +19,7 @@
     "padding": 0.3,
     "introPadding": 0.5,
     "closingPadding": 0.3,
-    "outroPadding": 2.5,
+    "outroPadding": 2.0,
     "bgmVolume": 0.12,
     "audioVolume": 1,
     "suppressSpeech": false,
@@ -75,27 +75,27 @@
       "text": "これは opt-in です。ヘッダーボタンは config に buttons を 1 つ。キー割当は Settings の Set up shortcuts から、エージェントに書かせるだけです。",
       "image": {
         "type": "html_tailwind",
+        "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Supervise</div>",
           "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>Opt-in — button or shortcut</div>",
-          "  <div class='absolute flex flex-col gap-6' style='top:150px;left:150px;width:980px'>",
-          "    <div class='rounded-xl border border-slate-700 bg-slate-900 p-6'>",
-          "      <div class='text-slate-500 text-lg mb-3 font-mono'>~/.mulmoterminal/config.json — a header button</div>",
-          "      <pre class='text-2xl font-mono text-slate-200 leading-relaxed'>\"buttons\": [",
-          "  { \"id\": \"restart\", \"icon\": \"restart_alt\",",
-          "    \"run\": \"action\", \"action\": \"restart\" }",
-          "]</pre>",
-          "    </div>",
-          "    <div class='rounded-xl border border-slate-700 bg-slate-900 p-6'>",
-          "      <div class='text-slate-500 text-lg mb-3'>…or a keyboard shortcut — no JSON: ask from Settings</div>",
-          "      <div class='flex items-center gap-4 text-2xl text-slate-200'>",
-          "        <span>Settings</span><span class='text-slate-500'>→</span><span>Keyboard shortcuts</span><span class='text-slate-500'>→</span>",
-          "        <span class='px-4 py-1.5 rounded-lg border border-slate-500 bg-slate-800'>⚙ Set up shortcuts…</span>",
-          "      </div>",
-          "      <div class='text-xl text-slate-400 mt-4'>The agent binds <span class='font-mono text-slate-200'>terminal-restart</span> for you — checking your existing keys first.</div>",
-          "    </div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-restart-assets/clip2.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
+          "</div>"
+        ]
+      }
+    },
+    {
+      "text": "",
+      "duration": 1.0,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex flex-col items-center justify-center gap-6'>",
+          "  <div class='font-mono text-4xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <div class='font-mono text-lg text-slate-500'>MIT · receptron.github.io/mulmoterminal</div>",
           "</div>"
         ]
       }
