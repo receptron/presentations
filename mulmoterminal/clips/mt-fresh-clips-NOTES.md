@@ -42,6 +42,12 @@ rig は `mulmoterminal-video` skill 同梱 `record-fresh.mjs`。撮影対象は 
 before in this conversation」と返ってきた**（restart-proof2 テイク）。この環境では restart は会話を
 引き継いでいない — #1918/#1920 と ChangeLog の「same conversation」の主張と食い違う。クリップからは
 会話の主張を落とし、「同じセル・同じディレクトリ・ランチャー往復が不要」の範囲にした。
+**解決（2026-09-01 深夜）**: 実体パス起動（config 差し替え無しの素の `npx` + rig の `MT_DEMO_ROOT`
+オーバーライド）で restart は設計どおり動いた — **会話がまるごと再描画され、続き質問に記憶で答える**。
+最終テイクは「CLAUDE.md に署名ルールを追記 → restart → 同じ会話のまま、次の返事から署名が付く」で、
+**同じ会話 + 設定反映**を 1 画面で証明している（restart-claudemd2）。settings.json の model 変更は
+`--resume` がセッションのモデルを引き継ぐため乗り物として不適（restart-model で実測）。
+
 **根本原因は確定した（2026-09-01 検証）**: サーバの `projectSessionsDir()` は `path.resolve(cwd)` のみで
 realpath しないため、symlink cwd（`/tmp/mt-demo/…`）では `-tmp-mt-demo-*` slug を探すが、claude 自身は
 realpath slug（`-Users-…-mt-demo-home-…`）にしか書かない（`-tmp-*` slug は 1 つも存在しないことを確認）。
