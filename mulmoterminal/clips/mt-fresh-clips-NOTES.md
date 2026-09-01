@@ -42,8 +42,14 @@ rig は `mulmoterminal-video` skill 同梱 `record-fresh.mjs`。撮影対象は 
 before in this conversation」と返ってきた**（restart-proof2 テイク）。この環境では restart は会話を
 引き継いでいない — #1918/#1920 と ChangeLog の「same conversation」の主張と食い違う。クリップからは
 会話の主張を落とし、「同じセル・同じディレクトリ・ランチャー往復が不要」の範囲にした。
-pathlink / copyblock と同じく symlink cwd 起因（transcript の解決が外れて --resume が空振り）の
-可能性があり、**実環境での再現確認 → 上流報告**が宿題。
+**根本原因は確定した（2026-09-01 検証）**: サーバの `projectSessionsDir()` は `path.resolve(cwd)` のみで
+realpath しないため、symlink cwd（`/tmp/mt-demo/…`）では `-tmp-mt-demo-*` slug を探すが、claude 自身は
+realpath slug（`-Users-…-mt-demo-home-…`）にしか書かない（`-tmp-*` slug は 1 つも存在しないことを確認）。
+よって `sessionExistsOnDisk` が常に false → mintId → 新規会話。**同じ根が copyblock の
+「No completed turn yet」も説明する**（transcript 参照系が同じ slug を見る）。証拠: 続き質問が
+新規ファイル・新規 id（`623c62fd…`）の先頭プロンプトになっている。pathlink（リンク不形成）だけは
+別経路の可能性が残り未確定。修正の本筋は実装側の realpath 化＋ docs（header.md の "on the same
+conversation"）の但し書き。非 symlink 環境では正常系のはず。
 
 ## 撮影で確定したこと（rig に反映済み）
 
