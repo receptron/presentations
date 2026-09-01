@@ -56,7 +56,7 @@
   "description": "Short feature clip. Starting the next agent no longer takes you away: the launch form opens beside your current view, and the new session joins the grid while you stay where you are. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Starting the next session got easier. The launch form opens beside what you are looking at — pick a directory, and the next agent starts without you leaving the spot.",
+      "text": "Starting the next session is easier now. The launch form opens beside your current view. Pick a directory, and the next agent starts right there.",
       "image": {
         "type": "html_tailwind",
         "animation": true,

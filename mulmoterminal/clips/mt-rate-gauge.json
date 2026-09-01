@@ -56,7 +56,7 @@
   "description": "Short feature clip. The 5h / 7d windows your Claude and Codex subscriptions share sit in the grid header, always visible — running many agents is what burns them fastest. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Running many agents burns your plan fastest. The 5-hour and 7-day windows sit in the header, always visible.",
+      "text": "Running many agents uses your plan fastest. The 5-hour and 7-day limits stay visible in the header.",
       "image": {
         "type": "html_tailwind",
         "animation": true,

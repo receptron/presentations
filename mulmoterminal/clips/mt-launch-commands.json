@@ -56,7 +56,7 @@
   "description": "Short feature clip. Any interactive command runs as a persistent cell: three agents, a dev server, a tailing log and an editor share one grid. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "A dev server, a tailing log, an editor — persistent cells, right beside the agents.",
+      "text": "A dev server, a live log, an editor — persistent cells, right beside the agents.",
       "image": {
         "type": "html_tailwind",
         "animation": true,

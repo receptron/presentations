@@ -56,7 +56,7 @@
   "description": "Short feature clip. Change your project's CLAUDE.md or an MCP server and the running agent keeps the old view of the world; an opt-in header button restarts it in place — same cell, same conversation, new settings live. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Changed your project's CLAUDE.md, or an MCP server? One button restarts the agent in place. Same conversation — it remembers — and the new rules apply from the very next reply.",
+      "text": "Changed your project's CLAUDE.md, or an MCP server? One button restarts the agent in place. The conversation stays intact, and the new rules apply from the next reply.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -72,7 +72,7 @@
       }
     },
     {
-      "text": "It is opt-in. Add one entry to buttons, and it appears in the header — and for a key, Settings' Set up shortcuts button has the agent write it for you.",
+      "text": "It is opt-in. Add one button entry, and it appears in the header. For a keyboard shortcut, use the Set up shortcuts button in Settings — the agent writes it for you.",
       "image": {
         "type": "html_tailwind",
         "animation": true,

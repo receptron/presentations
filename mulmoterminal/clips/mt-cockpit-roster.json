@@ -56,7 +56,7 @@
   "description": "Short feature clip. While one terminal is enlarged, a one-row-per-session roster stays beside it; when a row turns amber, click it and answer. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Zoomed into one agent, you still see the other eight. When a row turns amber, click it and answer.",
+      "text": "Even when you zoom into one agent, the other eight stay visible. When a row turns amber, click it and answer.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
