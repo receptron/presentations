@@ -56,7 +56,7 @@
   "description": "Short feature clip. Changing an MCP server or the config leaves a running agent with the old view of the world; an opt-in header button restarts it in place — same cell, same directory, same conversation. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Changed your MCP config? One button restarts the agent in place — and the conversation comes back.",
+      "text": "Changed an MCP server, a plugin, or your config? One button restarts the agent in place — same cell, same conversation.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -72,14 +72,14 @@
       }
     },
     {
-      "text": "It is opt-in — nothing appears until you write it in. One buttons entry in your config puts it in the header, or bind terminal-restart to a key.",
+      "text": "It is opt-in. One buttons entry puts it in the header — and for a key, Settings' Set up shortcuts button has the agent write it for you.",
       "image": {
         "type": "html_tailwind",
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute top-6 left-10 text-sm tracking-[0.3em] uppercase text-slate-600'>Supervise</div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>Opt-in — one entry in your config</div>",
-          "  <div class='absolute flex flex-col gap-6' style='top:150px;left:180px;width:920px'>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:40px'>Opt-in — button or shortcut</div>",
+          "  <div class='absolute flex flex-col gap-6' style='top:150px;left:150px;width:980px'>",
           "    <div class='rounded-xl border border-slate-700 bg-slate-900 p-6'>",
           "      <div class='text-slate-500 text-lg mb-3 font-mono'>~/.mulmoterminal/config.json — a header button</div>",
           "      <pre class='text-2xl font-mono text-slate-200 leading-relaxed'>\"buttons\": [",
@@ -88,8 +88,12 @@
           "]</pre>",
           "    </div>",
           "    <div class='rounded-xl border border-slate-700 bg-slate-900 p-6'>",
-          "      <div class='text-slate-500 text-lg mb-3 font-mono'>…or a keyboard shortcut</div>",
-          "      <pre class='text-2xl font-mono text-slate-200 leading-relaxed'>\"keymap\": { \"terminal-restart\": \"Ctrl+Alt+R\" }</pre>",
+          "      <div class='text-slate-500 text-lg mb-3'>…or a keyboard shortcut — no JSON: ask from Settings</div>",
+          "      <div class='flex items-center gap-4 text-2xl text-slate-200'>",
+          "        <span>Settings</span><span class='text-slate-500'>→</span><span>Keyboard shortcuts</span><span class='text-slate-500'>→</span>",
+          "        <span class='px-4 py-1.5 rounded-lg border border-slate-500 bg-slate-800'>⚙ Set up shortcuts…</span>",
+          "      </div>",
+          "      <div class='text-xl text-slate-400 mt-4'>The agent binds <span class='font-mono text-slate-200'>terminal-restart</span> for you — checking your existing keys first.</div>",
           "    </div>",
           "  </div>",
           "</div>"
