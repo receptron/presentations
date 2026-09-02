@@ -122,3 +122,7 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
   iTerm2 風レディメイド: zoom-toggle / zoom-next / zoom-prev / next-attention /
   terminal-new-adjacent）を追加して撮影。以後の Settings 系テイクにもこの 5 本が写る。
   ⚠️ サーバーは config を起動時に読む — demo-config.json を変えたら capture-server の再起動が要る
+- **mt-status-colors**: 「HN 版のように枠を出せないか」→ ナレーションの列挙（青→緑→琥珀）に同期して、
+  該当セルを囲む 4px の枠（`data-animation` の宣言・ビート HTML 側）を積み上げる形に。クリップは
+  1 本のまま en/ja でタイミング差し替え。琥珀セルの遷移時刻（5.5-6.0s）はピクセルサンプリングで確認
+  してから枠時刻（6.5s）を決めた

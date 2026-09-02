@@ -67,6 +67,9 @@
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
           "    <video src='./mt-status-colors-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
+          "  <div class='absolute' style='left:495px;top:321px;width:288px;height:180px;border:4px solid #3b82f6;border-radius:12px;box-shadow:0 0 14px #3b82f666' data-animation='animate' data-opacity='0,1' data-start='3.6' data-end='4.0'></div>",
+          "  <div class='absolute' style='left:209px;top:139px;width:284px;height:180px;border:4px solid #22c55e;border-radius:12px;box-shadow:0 0 14px #22c55e66' data-animation='animate' data-opacity='0,1' data-start='5.0' data-end='5.4'></div>",
+          "  <div class='absolute' style='left:495px;top:139px;width:288px;height:180px;border:4px solid #fbbf24;border-radius:12px;box-shadow:0 0 14px #fbbf2466' data-animation='animate' data-opacity='0,1' data-start='6.5' data-end='6.9'></div>",
           "</div>"
         ]
       },
