@@ -56,7 +56,7 @@
   "description": "Short feature clip. Sessions live in tmux, not in the browser tab: reload, and every agent and terminal reconnects with its scrollback intact. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Reload the page. Every session comes back, still running in tmux instead of the browser tab.",
+      "text": "This grid of agents is just a browser tab. The sessions live in tmux on the server — so reload the page, and every one comes back, still running, scrollback intact.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -70,7 +70,7 @@
           "</div>"
         ]
       },
-      "duration": 10.8
+      "duration": 13.3
     },
     {
       "text": "",
