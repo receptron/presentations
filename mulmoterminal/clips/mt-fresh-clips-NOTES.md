@@ -102,7 +102,10 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
   **チップ実クリックにはプリセットチップに載っている repo が要る**（acme-api2 は非掲載で失敗）
 - **mt-quit**: 「stop コマンドがあるなら画面に出す」→ `mulmoterminal stop` チップ（PIL 生成 PNG）を
   ナレーションの該当タイミングでクリップに焼き込み。**en/ja でタイミングが違うため clip.mp4 /
-  clip-ja.mp4 の 2 変種**。CSS animation（keyframes）はレンダラで走らなかったので使わない。
+  clip-ja.mp4 の 2 変種**。CSS でのフェードインは不発 — 最小ケース 2 本で切り分けた結果、
+  **html_tailwind の animation:true で時間進行するのは埋め込み <video> だけ**で、CSS アニメーション
+  は Tailwind 組み込み（animate-bounce）も custom @keyframes も**要素は描画されるがアニメ時計が
+  進まない**（mulmocast 2.7.2・2026-09-02 実測）。動きが要る注釈はクリップ側に焼き込むこと。
   この ffmpeg は drawtext 非搭載 — テキストは PIL で PNG にして overlay。ja ナレーションは直訳調を
   書き直し（「たいてい見ていないウィンドウです」→ 自然文）
 - **mt-shortcut-list**: 「設定方法が無い」→ beat1「Set up with an agent」を追加（restart の
