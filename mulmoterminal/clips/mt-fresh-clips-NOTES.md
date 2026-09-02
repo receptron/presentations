@@ -89,3 +89,21 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
 - **mt-quit**: ナビ項目を画面外のまま DOM クリックしていたため「突然 Quit に変わる」。rig
   （record-fresh.mjs）にナビの実スクロール（1.6s smoothstep）を実装して撮り直し。素の npx は実
   config を共有しモーダル縁に実ワークスペースが写るため、demo config（capture-server.sh）必須
+
+### 09-02 補修 第2ラウンド（ユーザーレビュー 4 件）
+
+- **全 13 デッキ**: ナレーションがエンドカードに 0.8〜1.2s はみ出していた — mulmo は beat の絵を
+  「音声長 − introPadding」で切るため。**全ナレーションビートに明示 duration（= 音声長 + 0.9）**を
+  入れて解消（実測: 発話終了 → 1s 以上の間 → エンドカード）。**新デッキを作るときも同じ式で
+  duration を入れること**（audio 長は 1 パス目レンダー後の studio.json から取る）
+- **mt-launch-form**: ディレクトリ欄のプログラム書き換え（steer）は「利用者と同じ操作」でないと
+  差し戻し → rig をチップ実クリック経路（cell-chip-main → cell-dir-go、page.mouse.click）に変更して
+  撮り直し（footage `2026-09-02/lf-chip4`）。チップは title 属性（フルパス）の後方一致で当てる。
+  **チップ実クリックにはプリセットチップに載っている repo が要る**（acme-api2 は非掲載で失敗）
+- **mt-quit**: 「stop コマンドがあるなら画面に出す」→ `mulmoterminal stop` チップ（PIL 生成 PNG）を
+  ナレーションの該当タイミングでクリップに焼き込み。**en/ja でタイミングが違うため clip.mp4 /
+  clip-ja.mp4 の 2 変種**。CSS animation（keyframes）はレンダラで走らなかったので使わない。
+  この ffmpeg は drawtext 非搭載 — テキストは PIL で PNG にして overlay。ja ナレーションは直訳調を
+  書き直し（「たいてい見ていないウィンドウです」→ 自然文）
+- **mt-shortcut-list**: 「設定方法が無い」→ beat1「Set up with an agent」を追加（restart の
+  clip2 = Settings 実操作 → 「Let an agent set this up?」を流用、narration は独自）
