@@ -69,7 +69,8 @@
           "  </div>",
           "</div>"
         ]
-      }
+      },
+      "duration": 14.0
     },
     {
       "text": "It is opt-in. Add one button entry, and it appears in the header. For a keyboard shortcut, use the Set up shortcuts button in Settings — the agent writes it for you.",
@@ -85,7 +86,8 @@
           "  </div>",
           "</div>"
         ]
-      }
+      },
+      "duration": 13.7
     },
     {
       "text": "",
