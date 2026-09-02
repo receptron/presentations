@@ -100,12 +100,14 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
   差し戻し → rig をチップ実クリック経路（cell-chip-main → cell-dir-go、page.mouse.click）に変更して
   撮り直し（footage `2026-09-02/lf-chip4`）。チップは title 属性（フルパス）の後方一致で当てる。
   **チップ実クリックにはプリセットチップに載っている repo が要る**（acme-api2 は非掲載で失敗）
-- **mt-quit**: 「stop コマンドがあるなら画面に出す」→ `mulmoterminal stop` チップ（PIL 生成 PNG）を
-  ナレーションの該当タイミングでクリップに焼き込み。**en/ja でタイミングが違うため clip.mp4 /
-  clip-ja.mp4 の 2 変種**。CSS でのフェードインは不発 — 最小ケース 2 本で切り分けた結果、
-  **html_tailwind の animation:true で時間進行するのは埋め込み <video> だけ**で、CSS アニメーション
-  は Tailwind 組み込み（animate-bounce）も custom @keyframes も**要素は描画されるがアニメ時計が
-  進まない**（mulmocast 2.7.2・2026-09-02 実測）。動きが要る注釈はクリップ側に焼き込むこと。
+- **mt-quit**: 「stop コマンドがあるなら画面に出す」→ `mulmoterminal stop` チップをビート HTML に
+  置き、**mulmocast の宣言的アニメーション（`data-animation='animate'` + `data-opacity='0,1'` +
+  `data-start`）**でナレーションと同期してフェードイン（en 8.2s / ja 7.4s — タイミングはデッキ側なので
+  クリップは 1 本のまま）。⚠️ **animation:true はフレームを仮想時刻で描画するため、ネイティブ CSS の
+  keyframes（Tailwind 組み込み animate-* 含む）は時計が進まない**（mulmocast 2.7.2 で最小ケース確認）。
+  動きは MulmoAnimation の data-attribute で書く — 対応プロパティ一覧は cli の
+  `assets/html/js/data_attribute_registration.js` 冒頭、実例は `scripts/test/test_data_animation.json`。
+  ja ナレーションは直訳調を書き直し（「たいてい見ていないウィンドウです」→ 自然文）
   この ffmpeg は drawtext 非搭載 — テキストは PIL で PNG にして overlay。ja ナレーションは直訳調を
   書き直し（「たいてい見ていないウィンドウです」→ 自然文）
 - **mt-shortcut-list**: 「設定方法が無い」→ beat1「Set up with an agent」を追加（restart の

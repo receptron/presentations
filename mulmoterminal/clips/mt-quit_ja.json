@@ -65,8 +65,9 @@
           "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
           "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Quit Button</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
-          "    <video src='./mt-quit-assets/clip-ja.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "    <video src='./mt-quit-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
+          "  <div class='absolute rounded-lg border border-slate-600 bg-slate-900 px-6 py-3 font-mono text-2xl text-emerald-400 shadow-2xl' style='top:500px;left:50%;transform:translateX(-50%)' data-animation='animate' data-opacity='0,1' data-translate-y='8,0' data-start='7.4' data-end='7.9'>mulmoterminal stop</div>",
           "</div>"
         ]
       },
