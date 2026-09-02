@@ -56,7 +56,7 @@
   "description": "機能紹介の短尺クリップ。サーバーを起動したターミナルは、たいてい見ていないウィンドウ。Settings の Quit ボタンか、任意のターミナルからの mulmoterminal stop で止められる。スライドは日英とも英語。",
   "beats": [
     {
-      "text": "サーバーを起動したターミナルは、たいてい見ていないウィンドウです。ブラウザから、またはコマンド一つで止められるようになりました。",
+      "text": "サーバーを起動したターミナルを、探しに戻る必要はもうありません。設定画面の一番下から止められます。ターミナルからなら、コマンド一つです。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -65,11 +65,12 @@
           "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
           "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Quit Button</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
-          "    <video src='./mt-quit-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "    <video src='./mt-quit-assets/clip-ja.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
-      }
+      },
+      "duration": 10.9
     },
     {
       "text": "",
