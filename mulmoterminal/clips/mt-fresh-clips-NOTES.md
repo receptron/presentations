@@ -112,3 +112,13 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
   書き直し（「たいてい見ていないウィンドウです」→ 自然文）
 - **mt-shortcut-list**: 「設定方法が無い」→ beat1「Set up with an agent」を追加（restart の
   clip2 = Settings 実操作 → 「Let an agent set this up?」を流用、narration は独自）
+
+### 09-02 補修 第3ラウンド（mt-shortcut-list）
+
+- 「ズーム後 5 秒静止」の差し戻し → 静止画 + camera-move をやめ、**一覧ペインの実スクロールを録画**
+  （footage `2026-09-02/sl-scroll`。rig の take-shortcuts にスクロール実装、素材はトリムのみで
+  ポインタ注釈なし）
+- 「一つも設定されていないので半分くらい入れて」→ demo-config に **keymap 5 本**（ガイドの
+  iTerm2 風レディメイド: zoom-toggle / zoom-next / zoom-prev / next-attention /
+  terminal-new-adjacent）を追加して撮影。以後の Settings 系テイクにもこの 5 本が写る。
+  ⚠️ サーバーは config を起動時に読む — demo-config.json を変えたら capture-server の再起動が要る
