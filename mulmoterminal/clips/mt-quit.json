@@ -67,9 +67,11 @@
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
           "    <video src='./mt-quit-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
+          "  <div class='absolute rounded-lg border border-slate-600 bg-slate-900 px-6 py-3 font-mono text-2xl text-emerald-400 shadow-2xl' style='top:500px;left:50%;transform:translateX(-50%)' data-animation='animate' data-opacity='0,1' data-translate-y='8,0' data-start='8.2' data-end='8.7'>mulmoterminal stop</div>",
           "</div>"
         ]
-      }
+      },
+      "duration": 11.8
     },
     {
       "text": "",

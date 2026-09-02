@@ -74,3 +74,41 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
   範囲に留めた。**次のウィンドウの宿題**: 再開後に続きの指示を打って「文脈が生きている」を見せるテイク
 - restart 後の tmux セッションは**新しい id** で立つ — capture-pane で検証するときは grid_v2 から
   id を毎回取り直す（rig は反映済み。それでも今回は検証が通らず、目視で合格にした）
+
+### 09-02 補修（ユーザー差し戻し 3 件）
+
+カットの正本は footage `2026-09-02/cut-recuts.sh`（右クリック・launch-form）。
+
+- **mt-right-click**: 出荷版はメニューを開いたまま終わり「パスが挿入されない」— rc-half2 の
+  screencast がメニュー表示中に凍っていた（挿入は撮影後の final.png にのみ残存）。ライブ
+  （クリックまで）+ final.png（メニュー閉・`read README.md` 完成）の継ぎに再カット。メニューは
+  実物もクリックで瞬時に閉じるので、この継ぎは実挙動どおり
+- **mt-launch-form**: パルス（1.73–1.98）とフォーム出現（1.7）が同時で「上部をクリックしていない」
+  ように見えた。先頭 1.0s ホールドを足して + クリック完了 2.55 → フォーム 2.70 に。フォーム内は
+  ディレクトリ欄ホバー → 起動 ▶ パルス（4.50–4.78、フォームは 4.82 に閉じる実測）
+- **mt-quit**: ナビ項目を画面外のまま DOM クリックしていたため「突然 Quit に変わる」。rig
+  （record-fresh.mjs）にナビの実スクロール（1.6s smoothstep）を実装して撮り直し。素の npx は実
+  config を共有しモーダル縁に実ワークスペースが写るため、demo config（capture-server.sh）必須
+
+### 09-02 補修 第2ラウンド（ユーザーレビュー 4 件）
+
+- **全 13 デッキ**: ナレーションがエンドカードに 0.8〜1.2s はみ出していた — mulmo は beat の絵を
+  「音声長 − introPadding」で切るため。**全ナレーションビートに明示 duration（= 音声長 + 0.9）**を
+  入れて解消（実測: 発話終了 → 1s 以上の間 → エンドカード）。**新デッキを作るときも同じ式で
+  duration を入れること**（audio 長は 1 パス目レンダー後の studio.json から取る）
+- **mt-launch-form**: ディレクトリ欄のプログラム書き換え（steer）は「利用者と同じ操作」でないと
+  差し戻し → rig をチップ実クリック経路（cell-chip-main → cell-dir-go、page.mouse.click）に変更して
+  撮り直し（footage `2026-09-02/lf-chip4`）。チップは title 属性（フルパス）の後方一致で当てる。
+  **チップ実クリックにはプリセットチップに載っている repo が要る**（acme-api2 は非掲載で失敗）
+- **mt-quit**: 「stop コマンドがあるなら画面に出す」→ `mulmoterminal stop` チップをビート HTML に
+  置き、**mulmocast の宣言的アニメーション（`data-animation='animate'` + `data-opacity='0,1'` +
+  `data-start`）**でナレーションと同期してフェードイン（en 8.2s / ja 7.4s — タイミングはデッキ側なので
+  クリップは 1 本のまま）。⚠️ **animation:true はフレームを仮想時刻で描画するため、ネイティブ CSS の
+  keyframes（Tailwind 組み込み animate-* 含む）は時計が進まない**（mulmocast 2.7.2 で最小ケース確認）。
+  動きは MulmoAnimation の data-attribute で書く — 対応プロパティ一覧は cli の
+  `assets/html/js/data_attribute_registration.js` 冒頭、実例は `scripts/test/test_data_animation.json`。
+  ja ナレーションは直訳調を書き直し（「たいてい見ていないウィンドウです」→ 自然文）
+  この ffmpeg は drawtext 非搭載 — テキストは PIL で PNG にして overlay。ja ナレーションは直訳調を
+  書き直し（「たいてい見ていないウィンドウです」→ 自然文）
+- **mt-shortcut-list**: 「設定方法が無い」→ beat1「Set up with an agent」を追加（restart の
+  clip2 = Settings 実操作 → 「Let an agent set this up?」を流用、narration は独自）
