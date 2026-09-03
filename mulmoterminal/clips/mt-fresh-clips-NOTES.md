@@ -148,11 +148,11 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
 
 ## 4.15.0 fresh（09-03）— mt-chat-agent-picker
 
-台帳 F8。素材は `mt-demo-home/footage/2026-09-03/picker-b/`（`take-picker.webm` + `64-header-picker.png`、rig `record-mulmo.mjs --only picker`）。切り出しの正本は footage `2026-09-03/cut-mt-chat-agent-picker.sh`。仕込みは demo-workspace-en のコレクション 3 つ（shopping-list / recipes / todo）を `mt-demo/data/` と `mt-demo/data/skills/` にコピー（個人情報なしを grep で確認）。
+台帳 F8。素材は `mt-demo-home/footage/2026-09-03/retake-b/take-picker.webm`（rig `record-mulmo.mjs --only picker`）。切り出しの正本は footage `2026-09-03/cut-mt-chat-agent-picker.sh`。仕込みは demo-workspace-en のコレクション 3 つ（shopping-list / recipes / todo）を `mt-demo/data/` と `mt-demo/data/skills/` にコピー（個人情報なしを grep で確認）。
 
-- 絵: workspace ルート（`/tmp/mt-demo`）の Claude セルで Collections ペインをターミナルの上まで広げ、Shopping List → Chat → モーダルのフッター `LAUNCH WITH: Claude` → Codex に → 閉じるとペインのヘッダにもピッカー。画角はペイン + モーダル（crop 1800×1200 @ (600,66)。ペイン左端 732 で切るとビューポート中央のモーダルが左欠け）
-- **チャットのモーダルは `fixed inset-0` で、閉じる瞬間に screencast が凍る**（既知条件）。ライブは Codex に変えたところまで（素材 7.2s）、閉じた後の「ヘッダにピッカー」は `64-header-picker.png` の静止画（4.8s、リング 0.25〜3.2s）。一覧を読む待ち（素材 2.5〜4.2s）は 4 倍速 — en のナレーション 6.8s の内側に③を乗せるため
-- duration は実測 + 0.9: en 7.7（音声 6.84）/ ja 9.7（音声 8.76）。クリップ 10.43s
-- **Collections ペインの言語は `navigator.language`**（host binding の `localeTag` = `browserLocale()`）。macOS の Chrome は `--lang` を無視するので日本語 OS ではペインだけ日本語になる（picker-a）— rig は `evaluateOnNewDocument` で `navigator.language` を en-US に固定
-- コレクションはセルのディレクトリ基準で解決される（project セルは `<dir>/.claude/skills`、managed workspace = 起動ディレクトリは `data/`）。ルートのセルを起動するとランチャーの MRU に `/tmp/mt-demo` が入り、**同じウィンドウの次の rig 起動は preflight（preset は全部 `/tmp/mt-demo/` 配下）で落ちる** — demo-config.json の `cwdPresets` を `POST /api/config` で入れ直してから回す（picker-b の手順）
-- インデックスのカードは `[data-testid="collections-index-card-<slug>"]`、チャット起動は「Chat」ボタン、モーダルのピッカーは `[data-testid="chat-modal-agent-picker"] select`、ヘッダのピッカーは `[data-testid="launch-agent-picker"]`（いずれも PluginFrame の shadow root 内）
+- 絵: **上部バーの Collections（全画面オーバーレイ）から開く**（09-03 指示 — セルの右ペインだと狭くて crop が要る。picker-b はその版）。Shopping List → Chat → モーダルのフッター `LAUNCH WITH: Claude` を Codex に → **Cancel で閉じる**（Escape はオーバーレイごと閉じる）→ オーバーレイのヘッダ「LAUNCH WITH」が Codex になっている所にリング。crop 無し（2400×1600 → 880×586）
+- オーバーレイでは screencast は凍らなかった（モーダルの Cancel 後も生きている）ので、③まで全部ライブ。一覧を読む待ち（素材 2.5〜4.2s）だけ 4 倍速
+- duration は実測 + 0.9: en 9.9（音声 8.95、字幕 3 行）/ ja 9.7（音声 8.76）。クリップ 10.73s
+- **Collections の UI 言語は `navigator.language`**（host binding の `localeTag` = `browserLocale()`）。macOS の Chrome は `--lang` を無視するので日本語 OS では日本語になる（picker-a）— rig は `evaluateOnNewDocument` で `navigator.language` を en-US に固定
+- 拡大したセルで `Mulmo ˅` からデッキを選ぶと「Canvas is not enabled for this session」で出ない（receptron/mulmoterminal#1965。タイルから選ぶと拡大の切り替わりで表示される）— F6 を「最初から拡大」で撮り直すには launcher の CANVAS (render MCPs) を ON にして起動する必要がある
+- インデックスのカードは `[data-testid="collections-index-card-<slug>"]`、チャット起動は「Chat」ボタン、モーダルのピッカーは `[data-testid="chat-modal-agent-picker"] select`、ヘッダのピッカーは `[data-testid="launch-agent-picker"]`（カードと View は PluginFrame の shadow root 内）
