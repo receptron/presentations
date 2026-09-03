@@ -135,3 +135,35 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
   `userDataDir` オプションを追加した（既定は毎回使い捨てプロファイル）。手順: 仕込み（3 体起動・
   グリッド残置）→ capture-server を Ctrl+C → 再起動 → 同プロファイルで開き直しを録画。
   セルがある状態の reload は beforeunload ガードで止まる — `page.on("dialog", accept)` が要る
+
+## 4.15.0 fresh（09-03）— mt-mulmo-menu
+
+台帳 F6（marketing `feature-videos.md`）。**撮り直し待ち（09-03 判断）**: タイル → 拡大の切り替わりで 2〜3 コマぶれるので最初から拡大した状態で撮り直す。拡大済みセルの `Mulmo ▾` は receptron/mulmoterminal#1965 で Canvas が「not enabled」になるため、直ってから。このデッキは投稿しない。素材は `mt-demo-home/footage/2026-09-03/mulmo-b/take-menu.webm`（rig `record-mulmo.mjs`、仕込みは acme-docs demo-baseline `8f7f540` の `decks/launch.json` + `.mulmoterminal.json` の `decks`）。切り出しの正本は footage `2026-09-03/cut-mt-mulmo-menu.sh`。
+
+- 1 ビート + エンドカード。絵: Claude が返答を流している最中に `Mulmo ˅` → `Launch talk` → セルが拡大して Canvas → Edit タブでスライド。ポインタ 3 本（Mulmo / Launch talk / Edit）+ 直前 0.25s の枠パルス
+- **Media タブ（既定）はリポジトリ内デッキだとビートごとに赤い `File not found` を出す**（receptron/mulmoterminal#1970: plugin View 4.5.2 が named root の `root` を送らない）。その区間（素材 4.35〜5.05s）を 2.5 倍速で 0.28s に詰め、Edit タブのスライド描画で締める。クリップ 10.07s
+- duration は 1 パス目の実測 + 0.9: en 9.5（音声 8.64）/ ja 7.9（音声 7.03）。en は余裕 0.57s で `check-beat-fit` の 0.5 ぎりぎり — TTS を作り直したら測り直す
+- **F7 Deck in the Repo は保留**: 素材 `mulmo-e/take-deckrepo.webm` の 0〜8s（右クリック → Open in the Canvas → Edit タブ）は使えるが、③「編集がリポジトリのファイルに入る」は 4.15.0 では保存されない（#1970）。9.7s 以降の title 編集 → `git diff`（空）は使わない
+- Canvas はプラグイン View が shadow root の中に居るので、rig の DOM 判定は shadow root を降りて探す（`document.querySelectorAll` では見えない）。Shell セルは `cell-dir` の title を持たない（ヘッダー 1 段目にパス）。ツリー行は名前だけの葉要素で引く（行の textContent にはアイコンのリガチャが混ざる）— いずれも `record-mulmo.mjs` に反映済み
+
+## 4.15.0 fresh（09-03）— mt-chat-agent-picker
+
+台帳 F8。素材は `mt-demo-home/footage/2026-09-03/retake-d/take-picker.webm`（rig `record-mulmo.mjs --only picker`。rig は新セルの待ち判定が外れて FAILED を返したが映像は最後まで撮れている — 判定は grid_v2 のセル数に直した）。切り出しの正本は footage `2026-09-03/cut-mt-chat-agent-picker.sh`。仕込みは demo-workspace-en のコレクション 3 つ（shopping-list / recipes / todo）を `mt-demo/data/` と `mt-demo/data/skills/` にコピー（個人情報なしを grep で確認）。
+
+- 絵（v3・09-03 指示「そのまま chat 開始して terminal に遷移するところも」）: **上部バーの Collections（全画面オーバーレイ）から開く**（セルの右ペインだと狭くて crop が要る。picker-b はその版）。Shopping List → Chat → モーダルのフッター `LAUNCH WITH: Claude` を Codex に → 依頼を打って **Start chat** → オーバーレイが閉じて Codex のセルが拡大で開く（Canvas にコレクション）。crop 無し（2400×1600 → 880×586）。**右上の「Launch with」は冒頭（インデックス表示中）にリングで指す** — モーダルが開いている間は背景がぼけて右上が読めないので、モーダル中に指しても意味が無い（09-03 指摘）。ナレーションも「2 か所に出ていて、フッターで変えられる」に留め、「片方を変えれば両方変わる」は絵で見せられないので言わない
+- **素材 12.8s で切る**: 13.0s から Codex の MCP 失敗（橙）と `chatgpt.com/backend-api/codex/responses` の 404（赤）が流れる。この環境の Codex CLI 0.149.1 の接続問題で、製品の話ではない。セルが開いた直後のバナー（OpenAI Codex / model: loading… / Ask Codex to do anything）で締める
+- オーバーレイでは screencast は凍らなかった（モーダルの操作・遷移まで生きている）ので全部ライブ。一覧を読む待ち（素材 2.5〜4.2s）だけ 4 倍速。Escape はオーバーレイごと閉じるので、モーダルを閉じるだけなら Cancel（retake-b）
+- duration は実測 + 0.9（v3 のナレーション「2 か所 + Start the chat」で測り直し。数値は studio.json が正）。クリップ 12.2s
+- **Collections の UI 言語は `navigator.language`**（host binding の `localeTag` = `browserLocale()`）。macOS の Chrome は `--lang` を無視するので日本語 OS では日本語になる（picker-a）— rig は `evaluateOnNewDocument` で `navigator.language` を en-US に固定
+- 拡大したセルで `Mulmo ˅` からデッキを選ぶと「Canvas is not enabled for this session」で出ない（receptron/mulmoterminal#1965。タイルから選ぶと拡大の切り替わりで表示される）— F6 を「最初から拡大」で撮り直すには launcher の CANVAS (render MCPs) を ON にして起動する必要がある
+- インデックスのカードは `[data-testid="collections-index-card-<slug>"]`、チャット起動は「Chat」ボタン、モーダルのピッカーは `[data-testid="chat-modal-agent-picker"] select`、ヘッダのピッカーは `[data-testid="launch-agent-picker"]`（カードと View は PluginFrame の shadow root 内）
+
+## 4.16.0 fresh（09-03）— mt-decks-anywhere
+
+台帳 F9。**撮り直し待ち（09-04 判断）**: Canvas の Media タブに赤い `File not found`（mulmoterminal#1970）が写り、デッキを `artifacts/stories/` に置くと機能の意味が消えるので、#1970 が直ってから撮り直す。このデッキは投稿しない。素材は `mt-demo-home/footage/2026-09-03/anywhere-c/`（`take-anywhere.webm` + `take-anywhere-final.png`、rig `record-mulmo.mjs --only anywhere`）。切り出しの正本は footage `2026-09-03/cut-mt-decks-anywhere.sh`。
+
+- 仕込み: ワークスペース（`/tmp/mt-demo`）の**外**に `mt-demo-home/acme-talks`（`/tmp/acme-talks`、capture-server.sh が symlink を作る）。デッキ `decks/launch.json`（Roadmap talk）+ `.mulmoterminal.json` の `decks`、`.claude/settings.json` は他の demo repo と同じ。demo-config の `cwdPresets` に追加し、rig の preflight もこのパスを通す。**stories root は起動時に読む**ので、プリセットを入れてから capture-server を起動する（4.16.0 #1958）
+- 絵: acme-talks の Claude セル（ヘッダーに `Mulmo ▾` が出ている = 4.16.0 の「How to tell you have it」）を拡大 → Files ペインで `decks/launch.json` を右クリック → Open in the Canvas → Canvas（Media タブの赤字 = mulmoterminal#1970 は 2.5 倍速で詰める）→ Edit タブ。全画面・crop 無し
+- **screencast は Edit タブのクリック直後に凍った**（final.png は Edit タブ、動画は Media のまま）。ライブは 5.9s まで、Edit タブの状態は final.png から camera-move（セル + Canvas へ 1.33 倍・約 6s）
+- **初めて開くフォルダの trust ダイアログは既定が「No, exit」** — rig の Enter がそれを選んで `[exited]` になった（anywhere-a/b）。capture-pane で見て Down → Enter で承認する（rig 反映済み）。承認は `~/.claude.json` に残るので 2 回目以降は出ない
+- 拡大済みセルの `Mulmo ▾` からは #1965 で Canvas が出ないので、ツリー経由で開く
