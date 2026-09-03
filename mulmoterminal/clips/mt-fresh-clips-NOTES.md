@@ -112,3 +112,26 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
   書き直し（「たいてい見ていないウィンドウです」→ 自然文）
 - **mt-shortcut-list**: 「設定方法が無い」→ beat1「Set up with an agent」を追加（restart の
   clip2 = Settings 実操作 → 「Let an agent set this up?」を流用、narration は独自）
+
+### 09-02 補修 第3ラウンド（mt-shortcut-list）
+
+- 「ズーム後 5 秒静止」の差し戻し → 静止画 + camera-move をやめ、**一覧ペインの実スクロールを録画**
+  （footage `2026-09-02/sl-scroll`。rig の take-shortcuts にスクロール実装、素材はトリムのみで
+  ポインタ注釈なし）
+- 「一つも設定されていないので半分くらい入れて」→ demo-config に **keymap 5 本**（ガイドの
+  iTerm2 風レディメイド: zoom-toggle / zoom-next / zoom-prev / next-attention /
+  terminal-new-adjacent）を追加して撮影。以後の Settings 系テイクにもこの 5 本が写る。
+  ⚠️ サーバーは config を起動時に読む — demo-config.json を変えたら capture-server の再起動が要る
+- **mt-status-colors**: 「HN 版のように枠を出せないか」→ ナレーションの列挙（青→緑→琥珀）に同期して、
+  該当セルを囲む 4px の枠（`data-animation` の宣言・ビート HTML 側）を積み上げる形に。クリップは
+  1 本のまま en/ja でタイミング差し替え。琥珀セルの遷移時刻（5.5-6.0s）はピクセルサンプリングで確認
+  してから枠時刻（6.5s）を決めた
+- **mt-tmux-persist beat1（サーバー再起動でもセルが戻る）を追加**（2026-09-03）。最初はランチャーの
+  再開リストで撮ろうとして 2 回失敗 — ①Settings の Sessions that survived a restart は実パスの
+  実セッションが混ざり撮影不可 ②ランチャーの per-directory 再開リストは symlink cwd と realpath
+  transcript の slug 不一致（Path Links / Copy Code Block と同根・3 例目）で行が出ない。
+  **正解は作者指摘の「localStorage に grid が残っていれば、開き直すだけでセルが生存セッションに
+  再接続する」**: 仕込みと撮影を**同じ Chrome プロファイル**で行う必要があり、rig の launchBrowser に
+  `userDataDir` オプションを追加した（既定は毎回使い捨てプロファイル）。手順: 仕込み（3 体起動・
+  グリッド残置）→ capture-server を Ctrl+C → 再起動 → 同プロファイルで開き直しを録画。
+  セルがある状態の reload は beforeunload ガードで止まる — `page.on("dialog", accept)` が要る

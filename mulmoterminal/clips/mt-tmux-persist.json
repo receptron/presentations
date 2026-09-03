@@ -56,7 +56,7 @@
   "description": "Short feature clip. Sessions live in tmux, not in the browser tab: reload, and every agent and terminal reconnects with its scrollback intact. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Reload the page. Every session comes back, still running in tmux instead of the browser tab.",
+      "text": "This grid of agents is just a browser tab. The sessions live in tmux on the server — so reload the page, and every one comes back, still running, scrollback intact.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -70,7 +70,24 @@
           "</div>"
         ]
       },
-      "duration": 10.8
+      "duration": 13.3
+    },
+    {
+      "text": "Even restarting the server does not end them. The sessions keep running in tmux — open the page again, and every cell reattaches, conversation and all.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Tmux Persistence</div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-tmux-persist-assets/clip2.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      },
+      "duration": 12.1
     },
     {
       "text": "",
