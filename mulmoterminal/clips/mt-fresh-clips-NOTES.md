@@ -148,11 +148,12 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
 
 ## 4.15.0 fresh（09-03）— mt-chat-agent-picker
 
-台帳 F8。素材は `mt-demo-home/footage/2026-09-03/retake-b/take-picker.webm`（rig `record-mulmo.mjs --only picker`）。切り出しの正本は footage `2026-09-03/cut-mt-chat-agent-picker.sh`。仕込みは demo-workspace-en のコレクション 3 つ（shopping-list / recipes / todo）を `mt-demo/data/` と `mt-demo/data/skills/` にコピー（個人情報なしを grep で確認）。
+台帳 F8。素材は `mt-demo-home/footage/2026-09-03/retake-d/take-picker.webm`（rig `record-mulmo.mjs --only picker`。rig は新セルの待ち判定が外れて FAILED を返したが映像は最後まで撮れている — 判定は grid_v2 のセル数に直した）。切り出しの正本は footage `2026-09-03/cut-mt-chat-agent-picker.sh`。仕込みは demo-workspace-en のコレクション 3 つ（shopping-list / recipes / todo）を `mt-demo/data/` と `mt-demo/data/skills/` にコピー（個人情報なしを grep で確認）。
 
-- 絵: **上部バーの Collections（全画面オーバーレイ）から開く**（09-03 指示 — セルの右ペインだと狭くて crop が要る。picker-b はその版）。Shopping List → Chat → モーダルのフッター `LAUNCH WITH: Claude` を Codex に → **Cancel で閉じる**（Escape はオーバーレイごと閉じる）→ オーバーレイのヘッダ「LAUNCH WITH」が Codex になっている所にリング。crop 無し（2400×1600 → 880×586）
-- オーバーレイでは screencast は凍らなかった（モーダルの Cancel 後も生きている）ので、③まで全部ライブ。一覧を読む待ち（素材 2.5〜4.2s）だけ 4 倍速
-- duration は実測 + 0.9: en 9.9（音声 8.95、字幕 3 行）/ ja 9.7（音声 8.76）。クリップ 10.73s
+- 絵（v3・09-03 指示「そのまま chat 開始して terminal に遷移するところも」）: **上部バーの Collections（全画面オーバーレイ）から開く**（セルの右ペインだと狭くて crop が要る。picker-b はその版）。Shopping List → Chat → モーダルのフッター `LAUNCH WITH: Claude` を Codex に（右上の「LAUNCH WITH」も Codex になる — リング）→ 依頼を打って **Start chat** → オーバーレイが閉じて Codex のセルが拡大で開く（Canvas にコレクション）。crop 無し（2400×1600 → 880×586）
+- **素材 12.8s で切る**: 13.0s から Codex の MCP 失敗（橙）と `chatgpt.com/backend-api/codex/responses` の 404（赤）が流れる。この環境の Codex CLI 0.149.1 の接続問題で、製品の話ではない。セルが開いた直後のバナー（OpenAI Codex / model: loading… / Ask Codex to do anything）で締める
+- オーバーレイでは screencast は凍らなかった（モーダルの操作・遷移まで生きている）ので全部ライブ。一覧を読む待ち（素材 2.5〜4.2s）だけ 4 倍速。Escape はオーバーレイごと閉じるので、モーダルを閉じるだけなら Cancel（retake-b）
+- duration は実測 + 0.9（v3 のナレーション「2 か所 + Start the chat」で測り直し。数値は studio.json が正）。クリップ 12.2s
 - **Collections の UI 言語は `navigator.language`**（host binding の `localeTag` = `browserLocale()`）。macOS の Chrome は `--lang` を無視するので日本語 OS では日本語になる（picker-a）— rig は `evaluateOnNewDocument` で `navigator.language` を en-US に固定
 - 拡大したセルで `Mulmo ˅` からデッキを選ぶと「Canvas is not enabled for this session」で出ない（receptron/mulmoterminal#1965。タイルから選ぶと拡大の切り替わりで表示される）— F6 を「最初から拡大」で撮り直すには launcher の CANVAS (render MCPs) を ON にして起動する必要がある
 - インデックスのカードは `[data-testid="collections-index-card-<slug>"]`、チャット起動は「Chat」ボタン、モーダルのピッカーは `[data-testid="chat-modal-agent-picker"] select`、ヘッダのピッカーは `[data-testid="launch-agent-picker"]`（カードと View は PluginFrame の shadow root 内）
