@@ -145,3 +145,14 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
 - duration は 1 パス目の実測 + 0.9: en 9.5（音声 8.64）/ ja 7.9（音声 7.03）。en は余裕 0.57s で `check-beat-fit` の 0.5 ぎりぎり — TTS を作り直したら測り直す
 - **F7 Deck in the Repo は保留**: 素材 `mulmo-e/take-deckrepo.webm` の 0〜8s（右クリック → Open in the Canvas → Edit タブ）は使えるが、③「編集がリポジトリのファイルに入る」は 4.15.0 では保存されない（#1970）。9.7s 以降の title 編集 → `git diff`（空）は使わない
 - Canvas はプラグイン View が shadow root の中に居るので、rig の DOM 判定は shadow root を降りて探す（`document.querySelectorAll` では見えない）。Shell セルは `cell-dir` の title を持たない（ヘッダー 1 段目にパス）。ツリー行は名前だけの葉要素で引く（行の textContent にはアイコンのリガチャが混ざる）— いずれも `record-mulmo.mjs` に反映済み
+
+## 4.15.0 fresh（09-03）— mt-chat-agent-picker
+
+台帳 F8。素材は `mt-demo-home/footage/2026-09-03/picker-b/`（`take-picker.webm` + `64-header-picker.png`、rig `record-mulmo.mjs --only picker`）。切り出しの正本は footage `2026-09-03/cut-mt-chat-agent-picker.sh`。仕込みは demo-workspace-en のコレクション 3 つ（shopping-list / recipes / todo）を `mt-demo/data/` と `mt-demo/data/skills/` にコピー（個人情報なしを grep で確認）。
+
+- 絵: workspace ルート（`/tmp/mt-demo`）の Claude セルで Collections ペインをターミナルの上まで広げ、Shopping List → Chat → モーダルのフッター `LAUNCH WITH: Claude` → Codex に → 閉じるとペインのヘッダにもピッカー。画角はペイン + モーダル（crop 1800×1200 @ (600,66)。ペイン左端 732 で切るとビューポート中央のモーダルが左欠け）
+- **チャットのモーダルは `fixed inset-0` で、閉じる瞬間に screencast が凍る**（既知条件）。ライブは Codex に変えたところまで（素材 7.2s）、閉じた後の「ヘッダにピッカー」は `64-header-picker.png` の静止画（4.8s、リング 0.25〜3.2s）。一覧を読む待ち（素材 2.5〜4.2s）は 4 倍速 — en のナレーション 6.8s の内側に③を乗せるため
+- duration は実測 + 0.9: en 7.7（音声 6.84）/ ja 9.7（音声 8.76）。クリップ 10.43s
+- **Collections ペインの言語は `navigator.language`**（host binding の `localeTag` = `browserLocale()`）。macOS の Chrome は `--lang` を無視するので日本語 OS ではペインだけ日本語になる（picker-a）— rig は `evaluateOnNewDocument` で `navigator.language` を en-US に固定
+- コレクションはセルのディレクトリ基準で解決される（project セルは `<dir>/.claude/skills`、managed workspace = 起動ディレクトリは `data/`）。ルートのセルを起動するとランチャーの MRU に `/tmp/mt-demo` が入り、**同じウィンドウの次の rig 起動は preflight（preset は全部 `/tmp/mt-demo/` 配下）で落ちる** — demo-config.json の `cwdPresets` を `POST /api/config` で入れ直してから回す（picker-b の手順）
+- インデックスのカードは `[data-testid="collections-index-card-<slug>"]`、チャット起動は「Chat」ボタン、モーダルのピッカーは `[data-testid="chat-modal-agent-picker"] select`、ヘッダのピッカーは `[data-testid="launch-agent-picker"]`（いずれも PluginFrame の shadow root 内）
