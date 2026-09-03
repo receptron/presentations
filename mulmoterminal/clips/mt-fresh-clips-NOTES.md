@@ -138,7 +138,7 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
 
 ## 4.15.0 fresh（09-03）— mt-mulmo-menu
 
-台帳 F6（marketing `feature-videos.md`）。素材は `mt-demo-home/footage/2026-09-03/mulmo-b/take-menu.webm`（rig `record-mulmo.mjs`、仕込みは acme-docs demo-baseline `8f7f540` の `decks/launch.json` + `.mulmoterminal.json` の `decks`）。切り出しの正本は footage `2026-09-03/cut-mt-mulmo-menu.sh`。
+台帳 F6（marketing `feature-videos.md`）。**撮り直し待ち（09-03 判断）**: タイル → 拡大の切り替わりで 2〜3 コマぶれるので最初から拡大した状態で撮り直す。拡大済みセルの `Mulmo ▾` は receptron/mulmoterminal#1965 で Canvas が「not enabled」になるため、直ってから。このデッキは投稿しない。素材は `mt-demo-home/footage/2026-09-03/mulmo-b/take-menu.webm`（rig `record-mulmo.mjs`、仕込みは acme-docs demo-baseline `8f7f540` の `decks/launch.json` + `.mulmoterminal.json` の `decks`）。切り出しの正本は footage `2026-09-03/cut-mt-mulmo-menu.sh`。
 
 - 1 ビート + エンドカード。絵: Claude が返答を流している最中に `Mulmo ˅` → `Launch talk` → セルが拡大して Canvas → Edit タブでスライド。ポインタ 3 本（Mulmo / Launch talk / Edit）+ 直前 0.25s の枠パルス
 - **Media タブ（既定）はリポジトリ内デッキだとビートごとに赤い `File not found` を出す**（receptron/mulmoterminal#1970: plugin View 4.5.2 が named root の `root` を送らない）。その区間（素材 4.35〜5.05s）を 2.5 倍速で 0.28s に詰め、Edit タブのスライド描画で締める。クリップ 10.07s
