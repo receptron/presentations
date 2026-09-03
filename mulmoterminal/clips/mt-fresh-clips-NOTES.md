@@ -135,3 +135,13 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
   `userDataDir` オプションを追加した（既定は毎回使い捨てプロファイル）。手順: 仕込み（3 体起動・
   グリッド残置）→ capture-server を Ctrl+C → 再起動 → 同プロファイルで開き直しを録画。
   セルがある状態の reload は beforeunload ガードで止まる — `page.on("dialog", accept)` が要る
+
+## 4.15.0 fresh（09-03）— mt-mulmo-menu
+
+台帳 F6（marketing `feature-videos.md`）。素材は `mt-demo-home/footage/2026-09-03/mulmo-b/take-menu.webm`（rig `record-mulmo.mjs`、仕込みは acme-docs demo-baseline `8f7f540` の `decks/launch.json` + `.mulmoterminal.json` の `decks`）。切り出しの正本は footage `2026-09-03/cut-mt-mulmo-menu.sh`。
+
+- 1 ビート + エンドカード。絵: Claude が返答を流している最中に `Mulmo ˅` → `Launch talk` → セルが拡大して Canvas → Edit タブでスライド。ポインタ 3 本（Mulmo / Launch talk / Edit）+ 直前 0.25s の枠パルス
+- **Media タブ（既定）はリポジトリ内デッキだとビートごとに赤い `File not found` を出す**（receptron/mulmoterminal#1970: plugin View 4.5.2 が named root の `root` を送らない）。その区間（素材 4.35〜5.05s）を 2.5 倍速で 0.28s に詰め、Edit タブのスライド描画で締める。クリップ 10.07s
+- duration は 1 パス目の実測 + 0.9: en 9.5（音声 8.64）/ ja 7.9（音声 7.03）。en は余裕 0.57s で `check-beat-fit` の 0.5 ぎりぎり — TTS を作り直したら測り直す
+- **F7 Deck in the Repo は保留**: 素材 `mulmo-e/take-deckrepo.webm` の 0〜8s（右クリック → Open in the Canvas → Edit タブ）は使えるが、③「編集がリポジトリのファイルに入る」は 4.15.0 では保存されない（#1970）。9.7s 以降の title 編集 → `git diff`（空）は使わない
+- Canvas はプラグイン View が shadow root の中に居るので、rig の DOM 判定は shadow root を降りて探す（`document.querySelectorAll` では見えない）。Shell セルは `cell-dir` の title を持たない（ヘッダー 1 段目にパス）。ツリー行は名前だけの葉要素で引く（行の textContent にはアイコンのリガチャが混ざる）— いずれも `record-mulmo.mjs` に反映済み
