@@ -160,7 +160,7 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
 
 ## 4.16.0 fresh（09-03）— mt-decks-anywhere
 
-台帳 F9。素材は `mt-demo-home/footage/2026-09-03/anywhere-c/`（`take-anywhere.webm` + `take-anywhere-final.png`、rig `record-mulmo.mjs --only anywhere`）。切り出しの正本は footage `2026-09-03/cut-mt-decks-anywhere.sh`。
+台帳 F9。**撮り直し待ち（09-04 判断）**: Canvas の Media タブに赤い `File not found`（mulmoterminal#1970）が写り、デッキを `artifacts/stories/` に置くと機能の意味が消えるので、#1970 が直ってから撮り直す。このデッキは投稿しない。素材は `mt-demo-home/footage/2026-09-03/anywhere-c/`（`take-anywhere.webm` + `take-anywhere-final.png`、rig `record-mulmo.mjs --only anywhere`）。切り出しの正本は footage `2026-09-03/cut-mt-decks-anywhere.sh`。
 
 - 仕込み: ワークスペース（`/tmp/mt-demo`）の**外**に `mt-demo-home/acme-talks`（`/tmp/acme-talks`、capture-server.sh が symlink を作る）。デッキ `decks/launch.json`（Roadmap talk）+ `.mulmoterminal.json` の `decks`、`.claude/settings.json` は他の demo repo と同じ。demo-config の `cwdPresets` に追加し、rig の preflight もこのパスを通す。**stories root は起動時に読む**ので、プリセットを入れてから capture-server を起動する（4.16.0 #1958）
 - 絵: acme-talks の Claude セル（ヘッダーに `Mulmo ▾` が出ている = 4.16.0 の「How to tell you have it」）を拡大 → Files ペインで `decks/launch.json` を右クリック → Open in the Canvas → Canvas（Media タブの赤字 = mulmoterminal#1970 は 2.5 倍速で詰める）→ Edit タブ。全画面・crop 無し
