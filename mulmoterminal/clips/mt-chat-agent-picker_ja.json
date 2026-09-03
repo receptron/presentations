@@ -53,10 +53,10 @@
     "bottomOffset": 4
   },
   "title": "MulmoTerminal — see which agent a collection chat will start",
-  "description": "Short feature clip. Starting a chat from a collection names the agent it will launch in two places — the chat modal's footer and the top-right of the Collections view — changing one changes both; starting the chat opens a terminal cell running that agent. Slides are English in both language versions.",
+  "description": "Short feature clip. Starting a chat from a collection names the agent it will launch in two places — the top right of the Collections view and the chat modal's footer, where it can be changed; starting the chat opens a terminal cell running that agent. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "コレクションのチャットがどのエージェントで始まるか、チャットのフッターと右上の 2 か所に出ていて、片方を変えれば両方変わります。そのまま始めると、そのエージェントのターミナルが開きます。",
+      "text": "コレクションのチャットがどのエージェントで始まるか、右上とチャットのフッターの 2 か所に出ていて、フッターで変えられます。そのまま始めると、そのエージェントのターミナルが開きます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -70,7 +70,7 @@
           "</div>"
         ]
       },
-      "duration": 13.3
+      "duration": 11.7
     },
     {
       "text": "",

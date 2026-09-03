@@ -150,7 +150,7 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
 
 台帳 F8。素材は `mt-demo-home/footage/2026-09-03/retake-d/take-picker.webm`（rig `record-mulmo.mjs --only picker`。rig は新セルの待ち判定が外れて FAILED を返したが映像は最後まで撮れている — 判定は grid_v2 のセル数に直した）。切り出しの正本は footage `2026-09-03/cut-mt-chat-agent-picker.sh`。仕込みは demo-workspace-en のコレクション 3 つ（shopping-list / recipes / todo）を `mt-demo/data/` と `mt-demo/data/skills/` にコピー（個人情報なしを grep で確認）。
 
-- 絵（v3・09-03 指示「そのまま chat 開始して terminal に遷移するところも」）: **上部バーの Collections（全画面オーバーレイ）から開く**（セルの右ペインだと狭くて crop が要る。picker-b はその版）。Shopping List → Chat → モーダルのフッター `LAUNCH WITH: Claude` を Codex に（右上の「LAUNCH WITH」も Codex になる — リング）→ 依頼を打って **Start chat** → オーバーレイが閉じて Codex のセルが拡大で開く（Canvas にコレクション）。crop 無し（2400×1600 → 880×586）
+- 絵（v3・09-03 指示「そのまま chat 開始して terminal に遷移するところも」）: **上部バーの Collections（全画面オーバーレイ）から開く**（セルの右ペインだと狭くて crop が要る。picker-b はその版）。Shopping List → Chat → モーダルのフッター `LAUNCH WITH: Claude` を Codex に → 依頼を打って **Start chat** → オーバーレイが閉じて Codex のセルが拡大で開く（Canvas にコレクション）。crop 無し（2400×1600 → 880×586）。**右上の「Launch with」は冒頭（インデックス表示中）にリングで指す** — モーダルが開いている間は背景がぼけて右上が読めないので、モーダル中に指しても意味が無い（09-03 指摘）。ナレーションも「2 か所に出ていて、フッターで変えられる」に留め、「片方を変えれば両方変わる」は絵で見せられないので言わない
 - **素材 12.8s で切る**: 13.0s から Codex の MCP 失敗（橙）と `chatgpt.com/backend-api/codex/responses` の 404（赤）が流れる。この環境の Codex CLI 0.149.1 の接続問題で、製品の話ではない。セルが開いた直後のバナー（OpenAI Codex / model: loading… / Ask Codex to do anything）で締める
 - オーバーレイでは screencast は凍らなかった（モーダルの操作・遷移まで生きている）ので全部ライブ。一覧を読む待ち（素材 2.5〜4.2s）だけ 4 倍速。Escape はオーバーレイごと閉じるので、モーダルを閉じるだけなら Cancel（retake-b）
 - duration は実測 + 0.9（v3 のナレーション「2 か所 + Start the chat」で測り直し。数値は studio.json が正）。クリップ 12.2s
