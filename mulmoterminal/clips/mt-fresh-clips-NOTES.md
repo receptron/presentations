@@ -126,8 +126,12 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
   該当セルを囲む 4px の枠（`data-animation` の宣言・ビート HTML 側）を積み上げる形に。クリップは
   1 本のまま en/ja でタイミング差し替え。琥珀セルの遷移時刻（5.5-6.0s）はピクセルサンプリングで確認
   してから枠時刻（6.5s）を決めた
-- **mt-tmux-persist の「サーバー再起動後の再開」ビートは realpath 修正待ちで棚上げ**（2026-09-03）。
-  生存自体は確認済み（Settings の Sessions that survived a restart にデモ 3 体が載った）が、
-  ①その Settings 一覧は実セッションの実パスが混ざり撮影不可 ②ランチャーの per-directory 再開
-  リストは symlink cwd（/tmp/mt-demo）と realpath 側 transcript の slug 不一致で行が出ない —
-  **Path Links / Copy Code Block と同じ根本原因の 3 例目**。上流修正後に beat1 として追加する
+- **mt-tmux-persist beat1（サーバー再起動でもセルが戻る）を追加**（2026-09-03）。最初はランチャーの
+  再開リストで撮ろうとして 2 回失敗 — ①Settings の Sessions that survived a restart は実パスの
+  実セッションが混ざり撮影不可 ②ランチャーの per-directory 再開リストは symlink cwd と realpath
+  transcript の slug 不一致（Path Links / Copy Code Block と同根・3 例目）で行が出ない。
+  **正解は作者指摘の「localStorage に grid が残っていれば、開き直すだけでセルが生存セッションに
+  再接続する」**: 仕込みと撮影を**同じ Chrome プロファイル**で行う必要があり、rig の launchBrowser に
+  `userDataDir` オプションを追加した（既定は毎回使い捨てプロファイル）。手順: 仕込み（3 体起動・
+  グリッド残置）→ capture-server を Ctrl+C → 再起動 → 同プロファイルで開き直しを録画。
+  セルがある状態の reload は beforeunload ガードで止まる — `page.on("dialog", accept)` が要る
