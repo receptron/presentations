@@ -4,8 +4,8 @@ marketing repo の台帳 #54 / #55（`feature-videos.md` 第 5 節「Agents & ba
 
 | デッキ | 台帳 # | 素材 | ビート |
 |---|---|---|---|
-| mt-agent-picker | #54 | agents-c/take-pick-codex・take-pick-agy、agents-b/take-agents-grid | ①ランチャー → エージェント行の Codex → ▶ → Codex が立つ ②New terminal → Antigravity → ▶ → 立つ ③3 セル並走（俯瞰のまま 10.5 秒保持。寄らない）|
-| mt-any-backend | #55 | agents-c/take-model-launch・30-model-help.png・take-model-launch-final.png | ①ランチャーの Model ピッカーで OpenRouter のプリセット（Kimi K2.7 Code · 3/3）→ ▶ ②設定ビート = Model ピッカー横の help（アプリ自身が `providers` の JSON を表示する）に寄る静止画 ③起動 → バナーの `moonshotai/kimi-k2.7-code … API Usage Billing` に寄る → 質問を打鍵 → 思考（6 倍速）→ 回答 ④回答の寄り（静止画）|
+| mt-agent-picker | #54 | agents-f/take-pick-codex・take-pick-agy、agents-g/take-agents-grid | ①ランチャー → エージェント行の Codex → ▶ → Codex が立つ ②New terminal → Antigravity → ▶ → 立つ ③3 セル並走（俯瞰のまま 10.5 秒保持。寄らない）|
+| mt-any-backend | #55 | agents-e/take-model-launch・agents-c/30-model-help.png | ①ランチャーの Model ピッカーで OpenRouter のプリセット（Kimi K2.7 Code · 3/3）→ ▶ ②設定ビート = Model ピッカー横の help（アプリ自身が `providers` の JSON を表示する）に寄る静止画 ③起動 → バナーの `moonshotai/kimi-k2.7-code`（アンダーライン）に寄る → 質問を打鍵 → 思考（12 倍速）→ 回答が返って緑になるまで |
 
 ## 決めたこと・分かったこと
 
@@ -36,8 +36,8 @@ marketing repo の台帳 #54 / #55（`feature-videos.md` 第 5 節「Agents & ba
 
 | デッキ | beat 1 | beat 2 | beat 3 | beat 4 | クリップ |
 |---|---|---|---|---|---|
-| mt-agent-picker | en 7.3 / ja 7.3 | en 6.4 / ja 5.8 | en 8.7 / ja 7.3 | — | pick-codex 9.2 / pick-agy 7.5 / grid 10.5 |
-| mt-any-backend | en 7.6 / ja 7.8 | en 7.9 / ja 8.0 | en 7.6 / ja 7.9 | en 5.1 / ja 4.5 | pick-model 9.4 / help 10.0 / cell 13.4 / answer 6.6 |
+| mt-agent-picker | en 7.3 / ja 7.3 | en 6.4 / ja 5.8 | en 8.7 / ja 7.3 | — | pick-codex 9.5 / pick-agy 11.0 / grid 10.5 |
+| mt-any-backend | en 7.6 / ja 7.8 | en 7.9 / ja 8.0 | en 7.6 / ja 7.9 | — | pick-model 9.5 / help 10.0 / cell 10.1 |
 
 初回レンダーで grid（8.0s）と help（7.4s）が `check-beat-fit` の OVERRUN、09-05 のナレーション差し替えで pick-model（7.9s）も OVERRUN。いずれも素材側を伸ばした（ナレーションは削らない）。
 
@@ -50,3 +50,23 @@ marketing repo の台帳 #54 / #55（`feature-videos.md` 第 5 節「Agents & ba
 - **Model ピッカーの一覧は録画に写らない**（native `<select>` の一覧は OS のポップアップで、screencast にも `page.screenshot` にも入らない）。一覧を出したいなら OS の `screencapture` で開いた状態を静止画に撮る手がある（未実施・作者判断待ち）
 - **アンダーラインは beat 3 のバナー**（作者指示 09-05）。Claude Code のバナー 2 行目 `moonshotai/kimi-k2.7-code` の下に琥珀の線（4px）を、寄りの窓（バナーのセグメント）の間だけ焼く。beat 1 の Model 行に入れた版は「冒頭の方はいらない」で外した
 - **クリックには全部ポインタ**（作者指摘 09-05）。初版は Codex / Antigravity ボタンと ▶ だけで、ディレクトリ欄（rig は値を直接セットするので画面には「パスが現れる」だけ）と、2 セル目を開く `+`（ツールバーの New terminal）に矢印が無かった。ディレクトリ欄は「欄に寄る → 枠パルス → パスが入る」、`+` は trim を 0.7 秒始まりに戻して「矢印 → パルス → ランチャーが開く」を入れた
+
+## 09-05 撮り直し（agents-e / agents-f）— ディレクトリはチップのクリックで入れる
+
+- 作者指摘: rig が欄に値を直接セットしていたので、3〜4 秒（Codex）と 11 秒（Antigravity）でパスが 1 フレームで置き換わっていた。矢印を足しても「何をしたらそうなったか」が見えない。**上のチップ行の該当ディレクトリをクリックして入れる**形に rig を直して撮り直した（`launchWith` — チップが無いときだけ従来の直接セット）。欄が既にそのパス（ランチャーの既定 = 最後に使った場所）のときは何もしない — Any Backend の 3 秒で変わらない欄に矢印と枠を付けていた件（作者指摘）もこれで消えた
+- チップは起動のたびに最近使った順で並び替わるので、**位置はテイクごとに測る**（agents-f: acme-api チップ 1108,150 172x48 / 右セルの acme-mobile チップ 1410,96 240x46）。寄りの画角はチップ行を含める（単独セル y 120〜、右セル y 60〜860）
+- agents-d は Codex が起動時に自己更新（0.153.0 → 0.153.4）して exit し、その `disconnected` ピルが次のテイクの待ちを止めた。rig の接続ピルの検査を「いま立てたセルだけ」に絞った
+- agents-e は Antigravity のサインインが長引き（1.1.26 → 1.1.27 に更新も）、バナーが録画の外に出た。rig を「バナー（`Antigravity CLI x.y.z`）が pane に出るまで最大 20 秒待つ」にして agents-f で撮り直し（バナーは take の 9.8 秒ごろ）
+- Any Backend は agents-e の model テイクを使う（ディレクトリは既定のまま、Model ピッカーと ▶ だけ注釈）
+
+## 09-05 作者判断: Any Backend の beat 4（回答の寄り）を外す
+
+- 要点は「モデルを選ぶと、同じ Claude Code がそのモデルで動く」で、返事の中身ではない。beat 4 はナレーション（7.6〜7.9 秒）より素材（13.4 秒）が長く、返事の場面がビートの外に落ちたのを埋めるために足していたもの
+- 代わりに beat 3 の早回しを詰めた（打鍵 3 倍・思考 12 倍）。返事が返って緑になるところまでがナレーションの中に入り、クリップは 27 秒前後に
+- `answer.mp4` は `git rm`
+
+## 09-05 grid の撮り直し（agents-g）
+
+- 出荷判定で、grid ビートの Claude セルの入力欄に薄い文字で「Have index.js import formatDate from utils.js」が写っていると指摘された。Claude Code が作業を終えたあとに自分で出す「次にやること」の候補（ゴーストテキスト）で、こちらが打った文ではないが、打ちかけの指示に見える。Claude への依頼を長くして（関数ごとの説明 + 改善案とトレードオフ）、13 秒の間ずっと作業中の絵にした。撮り直し後の最終フレームの入力欄は空
+- この take は 3 セルに依頼を投げてから始まるので、Antigravity のバナー（メール入り）は開始時点で既にスクロールアウトしている。grid のぼかしは不要になった（agents-b 版では 5.75 秒までぼかしていた）
+- 出荷判定（最終）で ja の beat 3 の末尾 2 フレームが「右上セルの再描画の瞬間（空）」に乗っていると指摘された。素材 7.73 秒に端末の再描画で 2 フレームだけ空になる瞬間があり、trim 0.5 始まりだと ja のビート末尾（7.3 秒）がそこに一致していた。trim を 1.2 始まりにずらしてビートの途中に置いた（0.9 では ja の末尾まで 0.1 秒しか余裕が無く、再描画は 0.3 秒間隔で 2 回ある。1.2 で余裕 0.4 秒。en は元から中間）
