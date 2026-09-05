@@ -4,7 +4,7 @@ marketing repo の台帳 #54 / #55（`feature-videos.md` 第 5 節「Agents & ba
 
 | デッキ | 台帳 # | 素材 | ビート |
 |---|---|---|---|
-| mt-agent-picker | #54 | agents-c/take-pick-codex・take-pick-agy、agents-b/take-agents-grid | ①ランチャー → エージェント行の Codex → ▶ → Codex が立つ ②New terminal → Antigravity → ▶ → 立つ ③3 セル並走（Codex のヘッダに寄って `gpt-5.5` を読ませ、戻る）|
+| mt-agent-picker | #54 | agents-c/take-pick-codex・take-pick-agy、agents-b/take-agents-grid | ①ランチャー → エージェント行の Codex → ▶ → Codex が立つ ②New terminal → Antigravity → ▶ → 立つ ③3 セル並走（俯瞰のまま 10.5 秒保持。寄らない）|
 | mt-any-backend | #55 | agents-c/take-model-launch・30-model-help.png・take-model-launch-final.png | ①ランチャーの Model ピッカーで OpenRouter のプリセット（Kimi K2.7 Code · 3/3）→ ▶ ②設定ビート = Model ピッカー横の help（アプリ自身が `providers` の JSON を表示する）に寄る静止画 ③起動 → バナーの `moonshotai/kimi-k2.7-code … API Usage Billing` に寄る → 質問を打鍵 → 思考（6 倍速）→ 回答 ④回答の寄り（静止画）|
 
 ## 決めたこと・分かったこと
@@ -46,3 +46,4 @@ marketing repo の台帳 #54 / #55（`feature-videos.md` 第 5 節「Agents & ba
 - **Agent Picker beat 1 で Codex と言う** — 絵は Codex を選んで起動する場面なのに、初版は「five agents, three shown here」で名前を出していなかった。「Each cell picks its own CLI — this one starts Codex, one of five agents.」に。「5 つのうち 3 つ」の断りは beat 3（「three of the five agents, one grid」）へ移した
 - **Any Backend beat 1 は「プランの上限」ではない** — 要点は「OpenRouter でいろいろなモデルを使える」。初版の「なぜ」（Hit your plan's limit?）は発生源に無い創作で、台帳の規則（「なぜ」は創作せず発生源から取る）に反していた。「Same Claude Code, many models — pick one per session through OpenRouter.」（何ができるか）に。beat 4 の「backend you chose」も「model you chose」に
 - 絵に写るモデルは Kimi 1 つだけ（ピッカーは native select で一覧が録画に写らない）なので、他のモデル名は読み上げない。「many models」の裏は画面の実測ラベル（`3/3 · 14s · 262k`）と help の文面
+- **grid ビートは寄らない**（作者判断 09-05）。初版は「3 つの CLI が違う」証拠としてヘッダの `gpt-5.5` を読ませるため Codex セルに 1.8 倍で寄って戻していたが、主張は「3 セルが 1 つのグリッドに並んでいる」で、寄りは主張と噛み合わない（skill の「grid ビートは俯瞰」のとおり）。CLI の違いは引きでもセルの色・エージェントのマーク・中身で分かり、名前はナレーションと字幕が言う
