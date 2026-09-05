@@ -1,0 +1,140 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {},
+    "concurrency": 1
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.3,
+    "introPadding": 0.5,
+    "closingPadding": 0.3,
+    "outroPadding": 2.0,
+    "bgmVolume": 0.12,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "ja": "ナレーター"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "落ち着いた、確信のある口調で。短い断定文を、製品キーノートのようにテンポよく読む。感嘆や売り込みの熱量は入れない。"
+        }
+      }
+    }
+  },
+  "captionParams": {
+    "lang": "ja",
+    "captionSplit": "estimate",
+    "textSplit": {
+      "type": "delimiters",
+      "delimiters": [
+        "。"
+      ]
+    },
+    "bottomOffset": 4
+  },
+  "lang": "ja",
+  "title": "MulmoTerminal — Claude セッションを別のバックエンドで動かす",
+  "description": "機能紹介の短尺クリップ。~/.mulmoterminal/config.json の providers に Anthropic 互換のバックエンド（ここでは OpenRouter）を登録すると、ランチャーの Model ピッカーに実測済みのプリセットが並び、同じ Claude Code のセッションが選んだモデルで動く。Claude セッション専用。スライドは英語版と共通。",
+  "beats": [
+    {
+      "text": "プランの上限に当たったら、次のセッションは別のバックエンドで起動できます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Any Backend</div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-any-backend-assets/pick-model.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      },
+      "duration": 5.8
+    },
+    {
+      "text": "config.json に providers を 1 つ書くだけ。形はランチャーのヘルプが教えてくれます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Any Backend</div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-any-backend-assets/help.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      },
+      "duration": 8.0
+    },
+    {
+      "text": "同じ Claude Code、同じセルのまま。いまは OpenRouter 経由の Kimi K2.7 で動いています。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Any Backend</div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-any-backend-assets/cell.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      },
+      "duration": 7.9
+    },
+    {
+      "text": "返事は同じセルに、選んだバックエンドから戻ってきます。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Any Backend</div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-any-backend-assets/answer.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      },
+      "duration": 5.0
+    },
+    {
+      "text": "",
+      "duration": 1.0,
+      "image": {
+        "type": "html_tailwind",
+        "html": [
+          "<div class='w-full h-full bg-black flex flex-col items-center justify-center gap-6'>",
+          "  <div class='font-mono text-4xl text-emerald-400'>npx mulmoterminal@latest</div>",
+          "  <div class='font-mono text-lg text-slate-500'>MIT · receptron.github.io/mulmoterminal</div>",
+          "</div>"
+        ]
+      }
+    }
+  ]
+}
