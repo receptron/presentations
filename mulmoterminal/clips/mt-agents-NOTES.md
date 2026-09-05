@@ -47,4 +47,6 @@ marketing repo の台帳 #54 / #55（`feature-videos.md` 第 5 節「Agents & ba
 - **Any Backend beat 1 は「プランの上限」ではない** — 要点は「OpenRouter でいろいろなモデルを使える」。初版の「なぜ」（Hit your plan's limit?）は発生源に無い創作で、台帳の規則（「なぜ」は創作せず発生源から取る）に反していた。「Same Claude Code, many models — pick one per session through OpenRouter.」（何ができるか）に。beat 4 の「backend you chose」も「model you chose」に
 - 絵に写るモデルは Kimi 1 つだけ（ピッカーは native select で一覧が録画に写らない）なので、他のモデル名は読み上げない。「many models」の裏は画面の実測ラベル（`3/3 · 14s · 262k`）と help の文面
 - **grid ビートは寄らない**（作者判断 09-05）。初版は「3 つの CLI が違う」証拠としてヘッダの `gpt-5.5` を読ませるため Codex セルに 1.8 倍で寄って戻していたが、主張は「3 セルが 1 つのグリッドに並んでいる」で、寄りは主張と噛み合わない（skill の「grid ビートは俯瞰」のとおり）。CLI の違いは引きでもセルの色・エージェントのマーク・中身で分かり、名前はナレーションと字幕が言う
-- **Model ピッカーの一覧は録画に写らない**（native `<select>` の一覧は OS のポップアップで、screencast にも `page.screenshot` にも入らない）。作者指示（09-05）で、選ばれた「Kimi K2.7 Code · 3/3 · 14s · 262k」の**下に琥珀のアンダーライン**（4px・t' 2.3〜5.5）を焼いて、選択結果そのものを指す。一覧を出したいなら OS の `screencapture` で開いた状態を静止画に撮る手がある（未実施）
+- **Model ピッカーの一覧は録画に写らない**（native `<select>` の一覧は OS のポップアップで、screencast にも `page.screenshot` にも入らない）。一覧を出したいなら OS の `screencapture` で開いた状態を静止画に撮る手がある（未実施・作者判断待ち）
+- **アンダーラインは beat 3 のバナー**（作者指示 09-05）。Claude Code のバナー 2 行目 `moonshotai/kimi-k2.7-code` の下に琥珀の線（4px）を、寄りの窓（バナーのセグメント）の間だけ焼く。beat 1 の Model 行に入れた版は「冒頭の方はいらない」で外した
+- **クリックには全部ポインタ**（作者指摘 09-05）。初版は Codex / Antigravity ボタンと ▶ だけで、ディレクトリ欄（rig は値を直接セットするので画面には「パスが現れる」だけ）と、2 セル目を開く `+`（ツールバーの New terminal）に矢印が無かった。ディレクトリ欄は「欄に寄る → 枠パルス → パスが入る」、`+` は trim を 0.7 秒始まりに戻して「矢印 → パルス → ランチャーが開く」を入れた
