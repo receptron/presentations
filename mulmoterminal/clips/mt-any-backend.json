@@ -56,7 +56,7 @@
   "description": "Short feature clip. A providers entry in ~/.mulmoterminal/config.json registers an Anthropic-compatible backend (OpenRouter here); the launcher's Model picker then offers its measured presets, and the same Claude Code session runs on the one you pick. Claude sessions only. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Hit your plan's limit? Launch the next session on another backend.",
+      "text": "Same Claude Code, many models — pick one per session through OpenRouter.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -70,7 +70,7 @@
           "</div>"
         ]
       },
-      "duration": 6.2
+      "duration": 7.6
     },
     {
       "text": "One providers entry in config.json — the launcher's help shows the exact shape.",
@@ -107,7 +107,7 @@
       "duration": 7.6
     },
     {
-      "text": "The reply comes back in the same cell, from the backend you chose.",
+      "text": "The reply comes back in the same cell, from the model you chose.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -121,7 +121,7 @@
           "</div>"
         ]
       },
-      "duration": 5.6
+      "duration": 5.1
     },
     {
       "text": "",

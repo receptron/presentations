@@ -56,7 +56,7 @@
   "description": "機能紹介の短尺クリップ。ランチャーのエージェント行で、そのセルが動かすもの（Claude Code / Codex / Antigravity / Grok / Muse / 素のシェル）を選ぶ。5 つのうち撮影機に入っていた 3 つを見せる。スライドは英語版と共通。",
   "beats": [
     {
-      "text": "セルごとに CLI を選べます。エージェントは 5 つ、ここでは 3 つ。",
+      "text": "セルごとに CLI を選べます。このセルは Codex。5 つのうちの 1 つです。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -70,7 +70,7 @@
           "</div>"
         ]
       },
-      "duration": 6.6
+      "duration": 7.3
     },
     {
       "text": "隣のセルは Antigravity。同じランチャー、同じグリッドです。",
@@ -90,7 +90,7 @@
       "duration": 5.8
     },
     {
-      "text": "Claude Code、Codex、Antigravity。3 つのセル、3 つの CLI、1 つのグリッド。",
+      "text": "Claude Code、Codex、Antigravity。5 つのうち 3 つを、1 つのグリッドで。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -104,7 +104,7 @@
           "</div>"
         ]
       },
-      "duration": 8.3
+      "duration": 7.3
     },
     {
       "text": "",

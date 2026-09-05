@@ -56,7 +56,7 @@
   "description": "Short feature clip. The launcher's agent row picks what a cell runs — Claude Code, Codex, Antigravity, Grok, Muse, or a plain shell — and the cells share one grid. Three of the five agents are shown; the machine had those installed. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Each cell picks its own CLI — five agents, three shown here.",
+      "text": "Each cell picks its own CLI — this one starts Codex, one of five agents.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -70,7 +70,7 @@
           "</div>"
         ]
       },
-      "duration": 6.7
+      "duration": 7.3
     },
     {
       "text": "Antigravity in the next cell. Same launcher, same grid.",
@@ -90,7 +90,7 @@
       "duration": 6.4
     },
     {
-      "text": "Claude Code, Codex, Antigravity — three cells, three CLIs, one grid.",
+      "text": "Claude Code, Codex, Antigravity — three of the five agents, one grid.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -104,7 +104,7 @@
           "</div>"
         ]
       },
-      "duration": 8.6
+      "duration": 8.7
     },
     {
       "text": "",

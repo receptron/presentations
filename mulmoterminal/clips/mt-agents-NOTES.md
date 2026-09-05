@@ -36,7 +36,13 @@ marketing repo の台帳 #54 / #55（`feature-videos.md` 第 5 節「Agents & ba
 
 | デッキ | beat 1 | beat 2 | beat 3 | beat 4 | クリップ |
 |---|---|---|---|---|---|
-| mt-agent-picker | en 6.7 / ja 6.6 | en 6.4 / ja 5.8 | en 8.6 / ja 8.3 | — | pick-codex 9.2 / pick-agy 9.5 / grid 10.5 |
-| mt-any-backend | en 6.2 / ja 5.8 | en 7.9 / ja 8.0 | en 7.6 / ja 7.9 | en 5.6 / ja 5.0 | pick-model 7.8 / help 10.0 / cell 13.4 / answer 6.6 |
+| mt-agent-picker | en 7.3 / ja 7.3 | en 6.4 / ja 5.8 | en 8.7 / ja 7.3 | — | pick-codex 9.2 / pick-agy 7.5 / grid 10.5 |
+| mt-any-backend | en 7.6 / ja 7.8 | en 7.9 / ja 8.0 | en 7.6 / ja 7.9 | en 5.1 / ja 4.5 | pick-model 9.4 / help 10.0 / cell 13.4 / answer 6.6 |
 
-初回レンダーで grid（8.0s）と help（7.4s）が `check-beat-fit` の OVERRUN。素材側を伸ばした（ナレーションは削らない）。
+初回レンダーで grid（8.0s）と help（7.4s）が `check-beat-fit` の OVERRUN、09-05 のナレーション差し替えで pick-model（7.9s）も OVERRUN。いずれも素材側を伸ばした（ナレーションは削らない）。
+
+## 09-05 作者レビュー（ナレーション 2 件・絵は変えない）
+
+- **Agent Picker beat 1 で Codex と言う** — 絵は Codex を選んで起動する場面なのに、初版は「five agents, three shown here」で名前を出していなかった。「Each cell picks its own CLI — this one starts Codex, one of five agents.」に。「5 つのうち 3 つ」の断りは beat 3（「three of the five agents, one grid」）へ移した
+- **Any Backend beat 1 は「プランの上限」ではない** — 要点は「OpenRouter でいろいろなモデルを使える」。初版の「なぜ」（Hit your plan's limit?）は発生源に無い創作で、台帳の規則（「なぜ」は創作せず発生源から取る）に反していた。「Same Claude Code, many models — pick one per session through OpenRouter.」（何ができるか）に。beat 4 の「backend you chose」も「model you chose」に
+- 絵に写るモデルは Kimi 1 つだけ（ピッカーは native select で一覧が録画に写らない）なので、他のモデル名は読み上げない。「many models」の裏は画面の実測ラベル（`3/3 · 14s · 262k`）と help の文面

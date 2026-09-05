@@ -56,7 +56,7 @@
   "description": "機能紹介の短尺クリップ。~/.mulmoterminal/config.json の providers に Anthropic 互換のバックエンド（ここでは OpenRouter）を登録すると、ランチャーの Model ピッカーに実測済みのプリセットが並び、同じ Claude Code のセッションが選んだモデルで動く。Claude セッション専用。スライドは英語版と共通。",
   "beats": [
     {
-      "text": "プランの上限に当たったら、次のセッションは別のバックエンドで起動できます。",
+      "text": "同じ Claude Code で、いろいろなモデルを。OpenRouter 経由で、セッションごとに選べます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -70,7 +70,7 @@
           "</div>"
         ]
       },
-      "duration": 5.8
+      "duration": 7.8
     },
     {
       "text": "config.json に providers を 1 つ書くだけ。形はランチャーのヘルプが教えてくれます。",
@@ -107,7 +107,7 @@
       "duration": 7.9
     },
     {
-      "text": "返事は同じセルに、選んだバックエンドから戻ってきます。",
+      "text": "返事は同じセルに、選んだモデルから戻ってきます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -121,7 +121,7 @@
           "</div>"
         ]
       },
-      "duration": 5.0
+      "duration": 4.5
     },
     {
       "text": "",
