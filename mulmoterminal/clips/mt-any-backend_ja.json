@@ -107,23 +107,6 @@
       "duration": 7.9
     },
     {
-      "text": "返事は同じセルに、選んだモデルから戻ってきます。",
-      "image": {
-        "type": "html_tailwind",
-        "animation": true,
-        "html": [
-          "<div class='w-full h-full bg-slate-950 relative'>",
-          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Any Backend</div>",
-          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
-          "    <video src='./mt-any-backend-assets/answer.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
-          "  </div>",
-          "</div>"
-        ]
-      },
-      "duration": 4.5
-    },
-    {
       "text": "",
       "duration": 1.0,
       "image": {
