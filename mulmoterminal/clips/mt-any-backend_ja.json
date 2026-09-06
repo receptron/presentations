@@ -36,7 +36,8 @@
         "provider": "gemini",
         "speechOptions": {
           "instruction": "落ち着いた、確信のある口調で。短い断定文を、製品キーノートのようにテンポよく読む。感嘆や売り込みの熱量は入れない。"
-        }
+        },
+        "model": "gemini-2.5-pro-preview-tts"
       }
     }
   },
@@ -70,7 +71,7 @@
           "</div>"
         ]
       },
-      "duration": 7.8
+      "duration": 7.9
     },
     {
       "text": "config.json に providers を 1 つ書くだけ。形はランチャーのヘルプが教えてくれます。",
@@ -87,7 +88,7 @@
           "</div>"
         ]
       },
-      "duration": 8.0
+      "duration": 7.9
     },
     {
       "text": "同じ Claude Code、同じセルのまま。いまは OpenRouter 経由の Kimi K2.7 で動いています。",
@@ -104,7 +105,7 @@
           "</div>"
         ]
       },
-      "duration": 7.9
+      "duration": 9.2
     },
     {
       "text": "",

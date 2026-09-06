@@ -36,7 +36,7 @@ To regenerate a single beat's image, delete `output/<basename>/images/<n>p.png` 
 Each script is a single JSON file with this shape (see `mulmoclaude/vision/the-assistant-you-nurture.json` as the reference example):
 
 - `$mulmocast.version`, `canvasSize` (1280×720), `title`, `description`, `lang`
-- `speechParams.speakers` — one "Presenter" speaker, Gemini voice `Kore`
+- `speechParams.speakers` — one "Presenter" speaker, Gemini voice `Kore`, **`model: "gemini-2.5-pro-preview-tts"` on every speaker, in both `en` and `_ja` decks** (decided 2026-09-06; without `model` mulmocast falls back to `gemini-2.5-flash-preview-tts`, which is what every deck before this date used)
 - `imageParams` (provider: openai, model: gpt-image-2; generated beats use the warm golden-daylight Ghibli watercolor `style`), `movieParams` / `soundEffectParams` (provider: replicate)
 - `slideParams.theme` — the shared visual identity: warm sunrise palette (`bg: FFFBF2`, cards `FFF3DC`/`FCE8C8`, text `431407`, primary `EA580C`, accent `F59E0B`), Georgia/Helvetica/Menlo fonts, glass card style, warm cream/gold gradient backgrounds. Keep new scripts consistent with this theme. (Adopted 2026-07 after feedback that the earlier dark-navy/night theme read as gloomy sci-fi; some older decks still use navy. Reserve dark tones for warning beats via overcast light and cold-vs-warm contrast, not night scenes.)
 - `audioParams` — padding and volume settings
