@@ -167,3 +167,9 @@ conversation"）の但し書き。非 symlink 環境では正常系のはず。
 - **screencast は Edit タブのクリック直後に凍った**（final.png は Edit タブ、動画は Media のまま）。ライブは 5.9s まで、Edit タブの状態は final.png から camera-move（セル + Canvas へ 1.33 倍・約 6s）
 - **初めて開くフォルダの trust ダイアログは既定が「No, exit」** — rig の Enter がそれを選んで `[exited]` になった（anywhere-a/b）。capture-pane で見て Down → Enter で承認する（rig 反映済み）。承認は `~/.claude.json` に残るので 2 回目以降は出ない
 - 拡大済みセルの `Mulmo ▾` からは #1965 で Canvas が出ないので、ツリー経由で開く
+
+## 09-06 JA を Pro TTS に切り替え（EN 投稿済み・予約済みの 9 本）
+
+- 作者判断: 話者の `model` を `gemini-2.5-pro-preview-tts` に（無指定は Flash に落ちる。7 月からのデッキは全部 Flash だった）。以後は en / ja とも Pro（規約は presentations `CLAUDE.md`）。EN はレビュー後の修正時に Pro へ
+- 対象: restart / right-click / shortcut-list / launch-form / quit / chat-agent-picker / status-colors / cockpit-roster / tmux-persist の `_ja`。未投稿分（plain-shell 以降）と保留分は触らない
+- Pro は Flash より約 1 割ゆっくり読む。4 本が `check-beat-fit` の OVERRUN（restart beat 2 / right-click / launch-form / quit）。元のレシピは後段が transcript 頼みで再現できないので、完成 asset の最終フレームを `tpad` で 1.5〜2.0 秒伸ばした（`mt-demo-home/footage/2026-09-06/extend-tails-ja-pro.sh`）。EN の同じ asset は尾を使わない

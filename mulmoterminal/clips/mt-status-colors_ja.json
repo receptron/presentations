@@ -36,7 +36,8 @@
         "provider": "gemini",
         "speechOptions": {
           "instruction": "落ち着いた、確信のある口調で。短い断定文を、製品キーノートのようにテンポよく読む。感嘆や売り込みの熱量は入れない。"
-        }
+        },
+        "model": "gemini-2.5-pro-preview-tts"
       }
     }
   },
@@ -73,7 +74,7 @@
           "</div>"
         ]
       },
-      "duration": 9.3
+      "duration": 10.5
     },
     {
       "text": "",

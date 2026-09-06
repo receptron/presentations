@@ -25,70 +25,86 @@
     "suppressSpeech": false,
     "concurrency": 1
   },
-  "lang": "ja",
   "speechParams": {
     "speakers": {
       "Presenter": {
         "displayName": {
-          "ja": "ナレーター"
+          "en": "Presenter"
         },
         "voiceId": "Kore",
         "isDefault": true,
         "provider": "gemini",
         "speechOptions": {
-          "instruction": "落ち着いた、確信のある口調で。短い断定文を、製品キーノートのようにテンポよく読む。感嘆や売り込みの熱量は入れない。"
-        },
-        "model": "gemini-2.5-pro-preview-tts"
+          "instruction": "Calm, confident, measured — short declarative sentences, like a good product keynote. No exclamation marks in delivery, no salesy energy. Let the pauses between sentences breathe."
+        }
       }
     }
   },
   "captionParams": {
-    "lang": "ja",
+    "lang": "en",
     "captionSplit": "estimate",
     "textSplit": {
       "type": "delimiters",
       "delimiters": [
-        "。"
+        ". "
       ]
     },
     "bottomOffset": 4
   },
-  "title": "MulmoTerminal — ショートカットは、未割当も含めて全部一覧に",
-  "description": "機能紹介の短尺クリップ。Settings のキーボードショートカット一覧は読み取り専用。割当済みも Not set も全アクションを並べ、設定したいときは Set up shortcuts… からエージェントに書かせる。スライドは日英とも英語。",
+  "lang": "en",
+  "title": "MulmoTerminal — run a Claude session on another backend",
+  "description": "Short feature clip. A providers entry in ~/.mulmoterminal/config.json registers an Anthropic-compatible backend (OpenRouter here); the launcher's Model picker then offers its measured presets, and the same Claude Code session runs on the one you pick. Claude sessions only. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "ショートカットは未割り当てのものまで全部一覧に出ます。何を割り当てられるかが、ひと目で分かります。",
+      "text": "Same Claude Code, many models — pick one per session through OpenRouter.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Shortcut List</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Any Backend</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
-          "    <video src='./mt-shortcut-list-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "    <video src='./mt-any-backend-assets/pick-model.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
       },
-      "duration": 8.6
+      "duration": 7.6
     },
     {
-      "text": "割り当ては、一覧の下のボタンから。エージェントに頼む形になっていて、どのキーに何を割り当てたいかを伝えると、設定はエージェントが書いてくれます。",
+      "text": "One providers entry in config.json — the launcher's help shows the exact shape.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Set up with an agent</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Any Backend</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
-          "    <video src='./mt-shortcut-list-assets/clip2.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "    <video src='./mt-any-backend-assets/help.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
       },
-      "duration": 12.0
+      "duration": 7.9
+    },
+    {
+      "text": "Same Claude Code, same cell — now on Kimi K2.7 through OpenRouter.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Any Backend</div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-any-backend-assets/cell.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      },
+      "duration": 7.6
     },
     {
       "text": "",

@@ -25,7 +25,6 @@
     "suppressSpeech": false,
     "concurrency": 1
   },
-  "lang": "ja",
   "speechParams": {
     "speakers": {
       "Presenter": {
@@ -53,42 +52,60 @@
     },
     "bottomOffset": 4
   },
-  "title": "MulmoTerminal — ショートカットは、未割当も含めて全部一覧に",
-  "description": "機能紹介の短尺クリップ。Settings のキーボードショートカット一覧は読み取り専用。割当済みも Not set も全アクションを並べ、設定したいときは Set up shortcuts… からエージェントに書かせる。スライドは日英とも英語。",
+  "lang": "ja",
+  "title": "MulmoTerminal — セルごとに動かす CLI を選ぶ",
+  "description": "機能紹介の短尺クリップ。ランチャーのエージェント行で、そのセルが動かすもの（Claude Code / Codex / Antigravity / Grok / Muse / 素のシェル）を選ぶ。5 つのうち撮影機に入っていた 3 つを見せる。スライドは英語版と共通。",
   "beats": [
     {
-      "text": "ショートカットは未割り当てのものまで全部一覧に出ます。何を割り当てられるかが、ひと目で分かります。",
+      "text": "セルごとに CLI を選べます。このセルは Codex。5 つのうちの 1 つです。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Shortcut List</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Agent Picker</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
-          "    <video src='./mt-shortcut-list-assets/clip.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "    <video src='./mt-agent-picker-assets/pick-codex.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
       },
-      "duration": 8.6
+      "duration": 7.2
     },
     {
-      "text": "割り当ては、一覧の下のボタンから。エージェントに頼む形になっていて、どのキーに何を割り当てたいかを伝えると、設定はエージェントが書いてくれます。",
+      "text": "隣のセルは Antigravity。同じランチャー、同じグリッドです。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Set up with an agent</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Agent Picker</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
-          "    <video src='./mt-shortcut-list-assets/clip2.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "    <video src='./mt-agent-picker-assets/pick-agy.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
       },
-      "duration": 12.0
+      "duration": 6.1
+    },
+    {
+      "text": "Claude Code、Codex、Antigravity。5 つのうち 3 つを、1 つのグリッドで。",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Agent Picker</div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-agent-picker-assets/grid.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      },
+      "duration": 9.3
     },
     {
       "text": "",
