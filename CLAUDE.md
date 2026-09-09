@@ -29,6 +29,13 @@ npm run movie -- mulmoclaude/vision/<name>.json   # = mulmo movie -g <file>
 
 `output/` is gitignored. Generation requires API keys in `.env` (OpenAI for images, Gemini for TTS, Replicate for movie/sound effects, etc.).
 
+**Working in a git worktree: copy the finished video back to the main checkout's `output/`.** Because
+`output/` is gitignored, nothing generated in a worktree reaches the main checkout through a PR — the
+deck JSON and its assets merge, the rendered mp4 does not. Whoever opens the video next looks in
+`<main checkout>/output/<deck>/`, so copy it there as soon as it is final (`cp` the generated files
+only; never copy tracked sources out of the worktree). The worktree needs its own `.env` for the API
+keys — symlinking the main checkout's file is enough.
+
 To regenerate a single beat's image, delete `output/<basename>/images/<n>p.png` (0-based beat index) and rerun preview or `mulmo images -g <file>` — only missing files are regenerated. Note the preview server kills a `mulmo viewer` run after 120s, which gpt-image-2 generation can exceed; use `mulmo images -g` directly for image regeneration.
 
 ## MulmoScript structure
