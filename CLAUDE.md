@@ -29,12 +29,25 @@ npm run movie -- mulmoclaude/vision/<name>.json   # = mulmo movie -g <file>
 
 `output/` is gitignored. Generation requires API keys in `.env` (OpenAI for images, Gemini for TTS, Replicate for movie/sound effects, etc.).
 
-**Working in a git worktree: copy the finished video back to the main checkout's `output/`.** Because
-`output/` is gitignored, nothing generated in a worktree reaches the main checkout through a PR — the
-deck JSON and its assets merge, the rendered mp4 does not. Whoever opens the video next looks in
-`<main checkout>/output/<deck>/`, so copy it there as soon as it is final (`cp` the generated files
-only; never copy tracked sources out of the worktree). The worktree needs its own `.env` for the API
-keys — symlinking the main checkout's file is enough.
+**Working in a git worktree: copy the render back to the main checkout.** `output/` is gitignored, so
+nothing generated in a worktree reaches the main checkout through a PR — the deck JSON and its assets
+merge, the rendered files do not. Copy generated files only, never tracked sources:
+
+```bash
+MAIN=$(git worktree list | head -1 | awk '{print $1}')
+DECK=mt-run-menu   # the deck's filename stem, i.e. the directory -g writes to
+mkdir -p "$MAIN/output/$DECK" && cp output/$DECK/*.mp4 "$MAIN/output/$DECK/"
+```
+
+Glob the mp4 rather than typing its name: the suffixes depend on the deck. A deck with
+`captionParams.lang` renders `<basename>_<lang>__<caption>.mp4` (`mt-run-menu_en__en.mp4`), one
+without renders `<basename>_<lang>.mp4` (`collection-creation-demo_en.mp4`), and a `_ja` deck carries
+its own stem (`mt-run-menu_ja_ja__ja.mp4`). If the deck has already been published, its directory on
+main is `output/done/<basename>/` instead — put the render there (the publish flow and the `done/`
+move are documented in `mulmoclaude/youtube/README.md`). Copy when the render is the one you intend
+to ship, and say which branch it came from: until the PR merges, main's deck JSON is older than the
+video sitting next to it. The worktree needs the API keys to
+render at all — symlinking the main checkout's `.env` into it is enough.
 
 To regenerate a single beat's image, delete `output/<basename>/images/<n>p.png` (0-based beat index) and rerun preview or `mulmo images -g <file>` — only missing files are regenerated. Note the preview server kills a `mulmo viewer` run after 120s, which gpt-image-2 generation can exceed; use `mulmo images -g` directly for image regeneration.
 
