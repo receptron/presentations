@@ -70,10 +70,10 @@
           "</div>"
         ]
       },
-      "duration": 10.5
+      "duration": 14.4
     },
     {
-      "text": "To get one, ask the agent for a script.json — labels and commands. The next cell you open lists them.",
+      "text": "To get one, ask the agent for a script.json. From then on it's in the launcher of any new cell, and in that Run menu.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -87,7 +87,7 @@
           "</div>"
         ]
       },
-      "duration": 22.8
+      "duration": 24.2
     },
     {
       "text": "",

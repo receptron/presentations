@@ -70,10 +70,10 @@
           "</div>"
         ]
       },
-      "duration": 10.5
+      "duration": 14.4
     },
     {
-      "text": "無ければエージェントに頼みます。script.json にラベルとコマンド。次に開くセルに並びます。",
+      "text": "無ければエージェントに頼みます。以後は新しいセルのランチャーにも、さっきの Run メニューにも並びます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -87,7 +87,7 @@
           "</div>"
         ]
       },
-      "duration": 22.8
+      "duration": 24.2
     },
     {
       "text": "",
