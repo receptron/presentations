@@ -42,7 +42,7 @@
   },
   "captionParams": {
     "lang": "ja",
-    "captionSplit": "estimate",
+    "captionSplit": "none",
     "textSplit": {
       "type": "delimiters",
       "delimiters": [
