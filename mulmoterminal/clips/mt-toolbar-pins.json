@@ -52,42 +52,59 @@
     "bottomOffset": 4
   },
   "lang": "en",
-  "title": "MulmoTerminal — open a deck from any repository",
-  "description": "Short feature clip. A mulmoScript deck kept inside a repository opens in the Canvas straight from the file tree, and stays that repository's own file. Slides are English in both language versions.",
+  "title": "MulmoTerminal — your favourite collections on the toolbar",
+  "description": "Short feature clip. Pinned collections can be promoted to the toolbar itself, beside Grid and Collections, and open in one press. Opt-in, set in Settings. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "Open a deck straight from the repository it lives in.",
+      "text": "Put the collections you use most on the toolbar itself.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Decks Anywhere</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Toolbar Pins</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
-          "    <video src='./mt-decks-anywhere-assets/open.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "    <video src='./mt-toolbar-pins-assets/toolbar.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
       },
-      "duration": 4.5
+      "duration": 4.6
     },
     {
-      "text": "The Canvas shows its slides, and the file stays where it is.",
+      "text": "Star the ones you reach for, in the Collections view.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
-          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Decks Anywhere</div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Toolbar Pins</div>",
           "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
-          "    <video src='./mt-decks-anywhere-assets/canvas.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "    <video src='./mt-toolbar-pins-assets/star.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
           "  </div>",
           "</div>"
         ]
       },
-      "duration": 5.7
+      "duration": 5.8
+    },
+    {
+      "text": "Then tick them in Settings, under Toolbar pins.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Toolbar Pins</div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-toolbar-pins-assets/settings.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      },
+      "duration": 5.4
     },
     {
       "text": "",
