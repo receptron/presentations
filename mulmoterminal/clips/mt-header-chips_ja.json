@@ -90,20 +90,20 @@
       "duration": 7.5
     },
     {
-      "text": "チップは Settings に画面がありません。設定ファイルに書きます。",
+      "text": "セルに頼めば、アプリ自身の skill が設定を書きます。",
       "image": {
         "type": "html_tailwind",
         "html": [
           "<div class='w-full h-full bg-slate-950 relative'>",
           "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
           "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Header Chips</div>",
-          "  <div class='absolute rounded-lg bg-slate-900 border border-slate-700 font-mono text-2xl text-slate-200 leading-relaxed' style='top:180px;left:120px;right:120px;padding:36px 44px'>",
-          "    <div><span class='text-slate-500'>~/.mulmoterminal/config.json</span></div><div>{ <span class='text-sky-300'>\"chips\"</span>: [<span class='text-emerald-300'>\"git\"</span>, <span class='text-emerald-300'>\"ctx\"</span>, <span class='text-emerald-300'>\"diff\"</span>, <span class='text-emerald-300'>\"usage\"</span>,</div><div>    { <span class='text-sky-300'>\"label\"</span>: <span class='text-emerald-300'>\"Which worktree this cell is on\"</span>,</div><div>      <span class='text-sky-300'>\"text\"</span>: <span class='text-emerald-300'>\"${task}\"</span>, <span class='text-sky-300'>\"when\"</span>: <span class='text-emerald-300'>\"task != \"</span> }] }</div>",
+          "  <div class='absolute' style='top:130px;left:200px;width:880px'>",
+          "    <img src='./mt-header-chips-assets/setup.png' class='rounded-lg shadow-2xl' style='width:880px;display:block'>",
           "  </div>",
           "</div>"
         ]
       },
-      "duration": 4.8
+      "duration": 6.5
     },
     {
       "text": "",
