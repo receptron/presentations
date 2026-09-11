@@ -56,7 +56,24 @@
   "description": "Short feature clip. renderShapeScript draws a ShapeScript model to a PNG the agent reads itself, so it can judge its own model before showing it. Adding a second object to a scene is the case that needs it. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "The agent writes a 3D model, renders it to one sheet of four angles, and reads that sheet itself.",
+      "text": "This is what the agent looks at before it shows you anything.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": true,
+        "html": [
+          "<div class='w-full h-full bg-slate-950 relative'>",
+          "  <div class='absolute flex items-baseline justify-between' style='top:22px;left:40px;right:40px'><span><span class='text-xl font-semibold text-slate-200'>MulmoTerminal</span><span class='font-mono text-lg text-emerald-400 ml-5'>npx mulmoterminal@latest</span></span><span class='font-mono text-sm text-slate-500'>MIT · receptron.github.io/mulmoterminal</span></div>",
+          "  <div class='absolute left-0 right-0 text-center text-5xl font-semibold text-slate-100' style='top:54px'>Look Before Showing</div>",
+          "  <div class='absolute' style='top:104px;left:200px;width:880px'>",
+          "    <video src='./mt-look-before-showing-assets/poster.mp4' autoplay muted playsinline class='rounded-lg shadow-2xl' style='width:880px;display:block'></video>",
+          "  </div>",
+          "</div>"
+        ]
+      },
+      "duration": 5.1
+    },
+    {
+      "text": "It writes the model, renders that sheet, reads it — then shows you the model.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -70,10 +87,10 @@
           "</div>"
         ]
       },
-      "duration": 9.9
+      "duration": 9.3
     },
     {
-      "text": "Having seen the desk, it sets the chair in front of it — then renders again to check that is where it landed.",
+      "text": "Having seen the desk, it sets the chair in front of it, then renders again to check.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -87,7 +104,7 @@
           "</div>"
         ]
       },
-      "duration": 8.5
+      "duration": 8.0
     },
     {
       "text": "",
