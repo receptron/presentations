@@ -56,7 +56,7 @@
   "description": "Short feature clip. renderShapeScript draws a ShapeScript model to a PNG the agent reads itself, so it can judge its own model before showing it. Adding a second object to a scene is the case that needs it. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "エージェントは 3D モデルを書けます。今は、それを画像にして自分で読めます。",
+      "text": "エージェントは 3D モデルを書くと、4 方向を 1 枚に焼いて、その絵を自分で読みます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -73,7 +73,7 @@
       "duration": 7.4
     },
     {
-      "text": "机に椅子を置くには、机が見えている必要があります。描いて、見て、それから置きます。",
+      "text": "机を見たあとなので、椅子を机の前に置けます。そしてもう一度焼いて、そこに置けたことを確かめます。",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -87,7 +87,7 @@
           "</div>"
         ]
       },
-      "duration": 9.4
+      "duration": 8.5
     },
     {
       "text": "",

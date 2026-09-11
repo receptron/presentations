@@ -56,7 +56,7 @@
   "description": "Short feature clip. renderShapeScript draws a ShapeScript model to a PNG the agent reads itself, so it can judge its own model before showing it. Adding a second object to a scene is the case that needs it. Slides are English in both language versions.",
   "beats": [
     {
-      "text": "An agent can write a 3D model. Now it renders that model and reads the picture itself.",
+      "text": "The agent writes a 3D model, renders it to one sheet of four angles, and reads that sheet itself.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -70,10 +70,10 @@
           "</div>"
         ]
       },
-      "duration": 8.7
+      "duration": 9.9
     },
     {
-      "text": "To put a chair at the desk, it has to see the desk. It renders, looks, then places it.",
+      "text": "Having seen the desk, it sets the chair in front of it — then renders again to check that is where it landed.",
       "image": {
         "type": "html_tailwind",
         "animation": true,
@@ -87,7 +87,7 @@
           "</div>"
         ]
       },
-      "duration": 8.4
+      "duration": 8.5
     },
     {
       "text": "",
