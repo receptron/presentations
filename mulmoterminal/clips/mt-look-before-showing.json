@@ -36,7 +36,8 @@
         "provider": "gemini",
         "speechOptions": {
           "instruction": "Calm, confident, measured — short declarative sentences, like a good product keynote. No exclamation marks in delivery, no salesy energy. Let the pauses between sentences breathe."
-        }
+        },
+        "model": "gemini-2.5-pro-preview-tts"
       }
     }
   },
@@ -70,7 +71,7 @@
           "</div>"
         ]
       },
-      "duration": 5.1
+      "duration": 5.6
     },
     {
       "text": "It writes the model, renders that sheet, reads it — then shows you the model.",
@@ -87,7 +88,7 @@
           "</div>"
         ]
       },
-      "duration": 9.3
+      "duration": 7.9
     },
     {
       "text": "Now ask for a chair. Having seen the desk, it sets the chair in front of it, then renders again to check.",
@@ -104,7 +105,7 @@
           "</div>"
         ]
       },
-      "duration": 9.1
+      "duration": 9.7
     },
     {
       "text": "",
