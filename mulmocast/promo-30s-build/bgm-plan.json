@@ -1,0 +1,97 @@
+{
+ "composition_plan": {
+  "positive_global_styles": [
+   "friendly tech product explainer",
+   "acoustic ukulele",
+   "glockenspiel",
+   "hand claps",
+   "light percussion",
+   "instrumental",
+   "bright and warm"
+  ],
+  "negative_global_styles": [
+   "vocals",
+   "lyrics",
+   "EDM",
+   "heavy metal",
+   "distorted guitar",
+   "dark cinematic"
+  ],
+  "sections": [
+   {
+    "section_name": "Small problem",
+    "positive_local_styles": [
+     "light hesitant pizzicato strings",
+     "soft ticking clock percussion",
+     "slightly puzzled",
+     "sparse"
+    ],
+    "negative_local_styles": [
+     "full groove",
+     "drums"
+    ],
+    "duration_ms": 7350,
+    "lines": []
+   },
+   {
+    "section_name": "Bright reveal",
+    "positive_local_styles": [
+     "bright lift",
+     "soft whoosh into warm major key",
+     "glockenspiel sparkle",
+     "ukulele enters"
+    ],
+    "negative_local_styles": [
+     "dark",
+     "tense"
+    ],
+    "duration_ms": 4880,
+    "lines": []
+   },
+   {
+    "section_name": "Explainer groove",
+    "positive_local_styles": [
+     "upbeat whiteboard explainer groove",
+     "ukulele strums",
+     "hand claps",
+     "light brushed drums",
+     "playful"
+    ],
+    "negative_local_styles": [
+     "heavy drums",
+     "distortion"
+    ],
+    "duration_ms": 11070,
+    "lines": []
+   },
+   {
+    "section_name": "Joyful payoff",
+    "positive_local_styles": [
+     "fuller joyful arrangement",
+     "claps and glockenspiel",
+     "uplifting"
+    ],
+    "negative_local_styles": [
+     "dark",
+     "slow"
+    ],
+    "duration_ms": 5380,
+    "lines": []
+   },
+   {
+    "section_name": "Confident outro",
+    "positive_local_styles": [
+     "confident resolution",
+     "final warm chord hit that rings out",
+     "gentle ending"
+    ],
+    "negative_local_styles": [
+     "abrupt cut",
+     "new melody"
+    ],
+    "duration_ms": 4860,
+    "lines": []
+   }
+  ]
+ }
+}
