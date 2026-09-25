@@ -33,9 +33,14 @@ const SVG = [
   stroke("pic", "M695 350 L800 350 L800 430 L695 430 Z M700 425 L730 390 L752 412 L768 396 L796 425"),
   stroke("sun", circlePath(778, 370, 9), RED, 4),
   text("picLabel", 748, 470, 28, "画像生成"),
+  stroke("arrowF", "M545 335 Q585 480 672 538 M672 538 L650 536 M672 538 L662 518"),
+  stroke("film", "M700 503 L800 503 L800 577 L700 577 Z M700 519 L800 519 M700 561 L800 561 M712 509 L712 515 M712 565 L712 571 M728 509 L728 515 M728 565 L728 571 M744 509 L744 515 M744 565 L744 571 M760 509 L760 515 M760 565 L760 571 M776 509 L776 515 M776 565 L776 571 M792 509 L792 515 M792 565 L792 571", INK, 4),
+  stroke("filmPlay", "M740 528 L740 552 L762 540 Z", RED, 4),
+  text("filmLabel", 750, 615, 28, "動画生成"),
   // assemble
   stroke("arrow4", "M815 210 Q870 230 885 262 M885 262 L867 252 M885 262 L889 242"),
   stroke("arrow5", "M815 392 Q870 372 885 340 M885 340 L867 350 M885 340 L889 360"),
+  stroke("arrow8", "M815 540 Q895 470 905 332 M905 332 L893 350 M905 332 L913 351"),
   stroke("arrow6", "M1016 300 L1052 300 M1052 300 L1036 290 M1052 300 L1036 310"),
   stroke("screen", "M1062 245 L1212 245 L1212 355 L1062 355 Z"),
   stroke("play", "M1122 275 L1122 325 L1162 300 Z", RED, 5),
@@ -55,8 +60,8 @@ const BEATS = [
   { id: "title", items: [["title", 0.3, 1.6], ["titleLine", 1.7, 2.2]] },
   { id: "script", items: [["sheet", 0.9, 1.6], ["sBeats", 1.7, 2.2], ["sWords", 3.15, 3.7], ["sPics", 4.4, 5.1], ["sEnd", 5.2, 5.3], ["sLabel", 5.5, 6.1]] },
   { id: "graphai", items: [["arrow1", 0.1, 0.35], ["gNodes", 0.35, 1.0], ["gLabel", 1.0, 1.5], ["gEdges", 2.3, 3.0]] },
-  { id: "agents", items: [["arrow2", 0.1, 0.3], ["mic", 0.3, 0.9], ["micLabel", 1.0, 1.6], ["arrow3", 2.4, 2.6], ["pic", 2.6, 3.1], ["sun", 3.1, 3.3], ["picLabel", 3.3, 3.9]] },
-  { id: "assemble", items: [["arrow4", 1.55, 1.8], ["arrow5", 1.8, 2.05], ["ffLogo", 2.05, 2.9], ["arrow6", 3.0, 3.2], ["screen", 3.2, 3.7], ["play", 3.7, 3.9], ["movieLabel", 3.9, 4.4]] },
+  { id: "agents", items: [["arrow2", 0.6, 0.85], ["mic", 0.85, 1.45], ["micLabel", 1.5, 2.1], ["arrow3", 2.8, 3.0], ["pic", 3.0, 3.5], ["sun", 3.5, 3.7], ["picLabel", 3.7, 4.3], ["arrowF", 5.2, 5.45], ["film", 5.45, 6.0], ["filmPlay", 6.0, 6.2], ["filmLabel", 6.3, 6.9]] },
+  { id: "assemble", items: [["arrow4", 1.5, 1.7], ["arrow5", 1.7, 1.85], ["arrow8", 1.85, 2.05], ["ffLogo", 2.05, 2.9], ["arrow6", 3.0, 3.2], ["screen", 3.2, 3.7], ["play", 3.7, 3.9], ["movieLabel", 3.9, 4.4]] },
   { id: "outputs", items: [["scriptCircle", 0.45, 1.05], ["arrow7", 1.3, 1.6], ["pdf", 1.65, 2.1], ["pdfLabel", 2.1, 2.3], ["pod", 2.5, 2.95], ["podLabel", 2.95, 3.3], ["punch", 3.35, 3.85]] },
 ];
 
@@ -73,7 +78,7 @@ const out = {
     },
   },
   // BGM made with ElevenLabs Music, sections matched to the scene boundaries.
-  audioParams: { ...(base.audioParams ?? {}), bgm: { kind: "path", path: "../resources/bgms/mulmocast-how-it-works.mp3" }, bgmVolume: 0.3 },
+  audioParams: { ...(base.audioParams ?? {}), bgm: { kind: "path", path: "../resources/bgms/mulmocast-how-it-works.mp3" }, bgmVolume: 0.25 },
   beats: base.beats.map((b, i) => ({ ...b, image: images[i] })),
 };
 fs.writeFileSync(OUT, JSON.stringify(out, null, 2) + "\n");
