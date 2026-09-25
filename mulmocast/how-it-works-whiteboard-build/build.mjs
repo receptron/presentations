@@ -52,12 +52,12 @@ const SVG = [
 
 // ---------- timings (local seconds per beat, aligned to measured narration pauses) ----------
 const BEATS = [
-  { id: "title", items: [["title", 0.3, 1.6], ["titleLine", 1.7, 2.1]] },
-  { id: "script", items: [["sheet", 0.2, 0.8], ["sBeats", 0.8, 1.1], ["sWords", 1.9, 2.4], ["sPics", 2.7, 3.3], ["sEnd", 3.4, 3.5], ["sLabel", 3.6, 4.1]] },
-  { id: "graphai", items: [["arrow1", 0.1, 0.35], ["gNodes", 0.35, 1.0], ["gLabel", 1.0, 1.5], ["gEdges", 2.1, 2.8]] },
-  { id: "agents", items: [["arrow2", 0.1, 0.3], ["mic", 0.3, 0.9], ["micLabel", 0.9, 1.4], ["arrow3", 1.8, 2.05], ["pic", 2.05, 2.6], ["sun", 2.6, 2.8], ["picLabel", 2.8, 3.3]] },
-  { id: "assemble", items: [["arrow4", 0.9, 1.2], ["arrow5", 1.2, 1.45], ["ffLogo", 1.5, 2.4], ["arrow6", 2.6, 2.8], ["screen", 2.8, 3.3], ["play", 3.3, 3.5], ["movieLabel", 3.5, 4.0]] },
-  { id: "outputs", items: [["scriptCircle", 0.3, 0.9], ["arrow7", 1.0, 1.3], ["pdf", 1.35, 1.8], ["pdfLabel", 1.8, 2.0], ["pod", 2.6, 3.05], ["podLabel", 3.05, 3.4], ["punch", 3.4, 3.9]] },
+  { id: "title", items: [["title", 0.3, 1.6], ["titleLine", 1.7, 2.2]] },
+  { id: "script", items: [["sheet", 0.9, 1.6], ["sBeats", 1.7, 2.2], ["sWords", 3.15, 3.7], ["sPics", 4.4, 5.1], ["sEnd", 5.2, 5.3], ["sLabel", 5.5, 6.1]] },
+  { id: "graphai", items: [["arrow1", 0.1, 0.35], ["gNodes", 0.35, 1.0], ["gLabel", 1.0, 1.5], ["gEdges", 2.3, 3.0]] },
+  { id: "agents", items: [["arrow2", 0.1, 0.3], ["mic", 0.3, 0.9], ["micLabel", 1.0, 1.6], ["arrow3", 2.4, 2.6], ["pic", 2.6, 3.1], ["sun", 3.1, 3.3], ["picLabel", 3.3, 3.9]] },
+  { id: "assemble", items: [["arrow4", 1.55, 1.8], ["arrow5", 1.8, 2.05], ["ffLogo", 2.05, 2.9], ["arrow6", 3.0, 3.2], ["screen", 3.2, 3.7], ["play", 3.7, 3.9], ["movieLabel", 3.9, 4.4]] },
+  { id: "outputs", items: [["scriptCircle", 0.45, 1.05], ["arrow7", 1.3, 1.6], ["pdf", 1.65, 2.1], ["pdfLabel", 2.1, 2.3], ["pod", 2.5, 2.95], ["podLabel", 2.95, 3.3], ["punch", 3.35, 3.85]] },
 ];
 
 // The FFmpeg project logo (public domain, Wikimedia Commons "FFmpeg_Logo_new.svg"), revealed like handwriting.

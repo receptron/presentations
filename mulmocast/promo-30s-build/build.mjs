@@ -85,7 +85,7 @@ ${cloud("b3", 120, 330, 250, 150, "スライド<br>づくり", 36, "100% 30%")}
 </div>`,
   `
 const animation = new MulmoAnimation();
-animation.typewriter('#note', '手間ばかり…', { start: 5.0, end: 5.7 });
+animation.typewriter('#note', '手間ばかり…', { start: 5.05, end: 5.8 });
 async function render(frame, totalFrames, fps) {
   await waitFonts();
   const t = frame / fps;
@@ -93,17 +93,17 @@ async function render(frame, totalFrames, fps) {
   el('ribbon').style.transform = 'translateY(' + (1 - back(seg(t, 0.1, 0.6))) * -130 + 'px)';
   el('mh').setAttribute('transform', 'rotate(' + t * 540 + ' 60 60)');
   el('hh').setAttribute('transform', 'rotate(' + t * 45 + ' 60 60)');
-  const up = ease(seg(t, 2.4, 2.9));
-  const hr = t < 2.9 ? Math.sin(t * 2) * 2 : Math.sin((t - 2.9) * 9) * 5 * Math.min(1, (t - 2.9) / 0.3);
+  const up = ease(seg(t, 2.35, 2.85));
+  const hr = t < 2.85 ? Math.sin(t * 2) * 2 : Math.sin((t - 2.85) * 9) * 5 * Math.min(1, (t - 2.85) / 0.3);
   headRot('m', hr);
-  face('m', t < 2.5 ? 'neutral' : 'worried');
+  face('m', t < 2.4 ? 'neutral' : 'worried');
   const pl = lerpPose(P.down, P.head, up), pr = mirPose(pl);
   const follow = (p) => ({ E: rotP(p.E, NECK, hr * up * 0.5), H: rotP(p.H, NECK, hr * up) });
   setArm('m', 'L', SL, follow(pl), up > 0.5 ? 'palm' : 'relaxed');
   setArm('m', 'R', SR, follow(pr), up > 0.5 ? 'palm' : 'relaxed');
   blinkEyes('m', t);
-  pop('b1', t, 3.3); pop('b2', t, 4.0); pop('b3', t, 4.5);
-  const g = 0.3 + 0.7 * ease(seg(t, 3.3, 5.0));
+  pop('b1', t, 3.15); pop('b2', t, 3.9); pop('b3', t, 4.4);
+  const g = 0.3 + 0.7 * ease(seg(t, 3.15, 4.8));
   el('stackL').style.transform = 'scaleY(' + g + ')';
   el('stackR').style.transform = 'scaleY(' + g + ')';
 }`,
@@ -126,25 +126,25 @@ ${desk(760, 560, 540)}
 </div>`,
   `
 const animation = new MulmoAnimation();
-animation.codeReveal('#code', ${JSON.stringify(codeLines)}, { start: 2.6, end: 4.3 });
+animation.codeReveal('#code', ${JSON.stringify(codeLines)}, { start: 2.7, end: 4.1 });
 async function render(frame, totalFrames, fps) {
   await waitFonts();
   const t = frame / fps;
   animation.update(frame, fps);
-  const lk = back(seg(t, 1.15, 1.65));
+  const lk = back(seg(t, 1.25, 1.75));
   el('logo').style.transform = 'scale(' + lk + ')';
-  el('logo').style.opacity = seg(t, 1.15, 1.25);
+  el('logo').style.opacity = seg(t, 1.25, 1.35);
   ['sp1', 'sp2', 'sp3', 'sp4'].forEach((id, i) => {
-    const k = back(seg(t, 1.55 + i * 0.1, 1.85 + i * 0.1)) * (1 + Math.sin(t * 6 + i) * 0.15);
+    const k = back(seg(t, 1.65 + i * 0.1, 1.95 + i * 0.1)) * (1 + Math.sin(t * 6 + i) * 0.15);
     el(id).style.transform = 'scale(' + k + ') rotate(' + t * 40 * (i % 2 ? -1 : 1) + 'deg)';
   });
-  el('card').style.opacity = seg(t, 2.2, 2.45);
-  el('card').style.transform = 'translateY(' + (1 - ease(seg(t, 2.2, 2.6))) * 60 + 'px)';
-  el('lab').style.transform = 'translateX(' + (1 - back(seg(t, 2.65, 3.05))) * -800 + 'px)';
+  el('card').style.opacity = seg(t, 2.3, 2.55);
+  el('card').style.transform = 'translateY(' + (1 - ease(seg(t, 2.3, 2.7))) * 60 + 'px)';
+  el('lab').style.transform = 'translateX(' + (1 - back(seg(t, 2.75, 3.15))) * -800 + 'px)';
   face('m', 'happy');
-  const pt = ease(seg(t, 2.3, 2.7));
+  const pt = ease(seg(t, 2.35, 2.75));
   let pl = lerpPose(P.down, P.point, pt);
-  if (t > 2.7) pl = { E: pl.E, H: rotP(pl.H, pl.E, Math.sin((t - 2.7) * 8) * 6) };
+  if (t > 2.75) pl = { E: pl.E, H: rotP(pl.H, pl.E, Math.sin((t - 2.75) * 8) * 6) };
   setArm('m', 'L', SL, pl, pt > 0.4 ? 'point' : 'relaxed');
   setArm('m', 'R', SR, mirPose(P.down), 'relaxed');
   headRot('m', -4 * pt + Math.sin(t * 3) * 2);
@@ -178,7 +178,7 @@ async function render(frame, totalFrames, fps) {
   await waitFonts();
   const t = frame / fps;
   // typing man
-  face('m', t < 4.0 ? 'neutral' : 'happy');
+  face('m', t < 3.9 ? 'neutral' : 'happy');
   const tp = (ph) => ({ E: [P.down.E[0], P.down.E[1] + Math.sin(t * 22 + ph) * 5], H: P.down.H });
   setArm('m', 'L', SL, tp(0), 'relaxed');
   setArm('m', 'R', SR, mirPose(tp(Math.PI)), 'relaxed');
@@ -195,22 +195,22 @@ async function render(frame, totalFrames, fps) {
   });
   // AI core
   el('ring').setAttribute('transform', 'rotate(' + t * 90 + ' 85 85)');
-  const pulse = 1 + 0.15 * Math.sin(seg(t, 4.0, 4.5) * Math.PI);
+  const pulse = 1 + 0.15 * Math.sin(seg(t, 3.9, 4.4) * Math.PI);
   el('ai').style.transform = 'scale(' + pulse + ')';
   // outputs
-  [[1, 0.55], [2, 1.95], [3, 3.05]].forEach(([i, s]) => {
+  [[1, 0.35], [2, 1.7], [3, 2.9]].forEach(([i, s]) => {
     el('a' + i).setAttribute('stroke-dashoffset', 400 * (1 - ease(seg(t, s - 0.3, s))));
     pop('t' + i, t, s);
     el('l' + i).style.transform = 'translateX(' + (1 - back(seg(t, s + 0.1, s + 0.45))) * 400 + 'px)';
   });
   for (let i = 0; i < 9; i++) {
-    const h = t > 0.55 ? 16 + Math.abs(Math.sin(t * 9 + i * 1.3)) * 60 : 16;
+    const h = t > 0.35 ? 16 + Math.abs(Math.sin(t * 9 + i * 1.3)) * 60 : 16;
     const b = el('w' + i); b.setAttribute('height', h); b.setAttribute('y', 75 - h / 2);
   }
-  el('sun').setAttribute('cy', 120 - 70 * ease(seg(t, 2.0, 3.0)));
-  el('pb').setAttribute('width', 122 * seg(t, 3.1, 5.7));
-  const tg = back(seg(t, 4.05, 4.45));
-  el('tag').style.opacity = seg(t, 4.05, 4.15);
+  el('sun').setAttribute('cy', 120 - 70 * ease(seg(t, 1.75, 2.75)));
+  el('pb').setAttribute('width', 122 * seg(t, 2.95, 5.4));
+  const tg = back(seg(t, 3.9, 4.3));
+  el('tag').style.opacity = seg(t, 3.9, 4.0);
   el('tag').style.transform = 'scale(' + tg + ')';
 }`,
 );
@@ -231,14 +231,14 @@ ${outBox("o3", 1040, `<svg width="280" height="220" viewBox="0 0 280 220"><circl
 </div>`,
   `
 const animation = new MulmoAnimation();
-animation.typewriter('#note', 'ぜんぶ同じ台本から！', { start: 0.05, end: 0.75 });
+animation.typewriter('#note', 'ぜんぶ同じ台本から！', { start: 0.0, end: 0.6 });
 const langs = ['こんにちは', 'Hello', '你好', 'Bonjour', 'Hola', '안녕하세요'];
 async function render(frame, totalFrames, fps) {
   await waitFonts();
   const t = frame / fps;
   animation.update(frame, fps);
   el('card').style.transform = 'scale(' + (1 + 0.04 * Math.sin(t * 5)) + ')';
-  [[1, 240, 0.75], [2, 640, 2.1], [3, 1040, 3.5]].forEach(([i, cx, s]) => {
+  [[1, 240, 0.4], [2, 640, 1.25], [3, 1040, 2.75]].forEach(([i, cx, s]) => {
     const k = back(seg(t, s, s + 0.45));
     const e = el('o' + i);
     e.style.opacity = seg(t, s, s + 0.08);
@@ -256,10 +256,10 @@ async function render(frame, totalFrames, fps) {
       const b = el(p + i); b.setAttribute('height', h); b.setAttribute('y', 72 - h / 2);
     });
   }
-  const sec = Math.floor(Math.max(0, t - 2.1) * 4);
+  const sec = Math.floor(Math.max(0, t - 1.25) * 4);
   el('ptime').textContent = '▶ 0:' + String(sec).padStart(2, '0');
   el('mer').setAttribute('rx', Math.abs(Math.cos(t * 2.4)) * 60);
-  el('lang').textContent = langs[Math.floor(Math.max(0, t - 3.5) / 0.4) % langs.length];
+  el('lang').textContent = langs[Math.floor(Math.max(0, t - 2.75) / 0.4) % langs.length];
 }`,
 );
 
@@ -283,35 +283,35 @@ ${star("s1", 110, 420, 50)}${star("s2", 500, 180, 40)}${star("s3", 540, 470, 34)
 </div>`,
   `
 const animation = new MulmoAnimation();
-animation.typewriter('#new', 'はじめまして！', { start: 1.35, end: 2.0 });
-animation.counter('#ver', [1, 5], { start: 2.7, end: 4.7, prefix: 'v', decimals: 0 });
+animation.typewriter('#new', 'はじめまして！', { start: 0.95, end: 1.6 });
+animation.counter('#ver', [1, 5], { start: 2.1, end: 4.1, prefix: 'v', decimals: 0 });
 async function render(frame, totalFrames, fps) {
   await waitFonts();
   const t = frame / fps;
   animation.update(frame, fps);
-  el('strike').style.width = 100 * ease(seg(t, 0.9, 1.3)) + '%';
-  const px = t < 1.3 ? 170 + 180 * seg(t, 0.9, 1.3) : 170 + 200 * seg(t, 1.35, 2.0);
-  const py = t < 1.3 ? 60 : 110;
+  el('strike').style.width = 100 * ease(seg(t, 0.5, 0.9)) + '%';
+  const px = t < 0.9 ? 170 + 180 * seg(t, 0.5, 0.9) : 170 + 200 * seg(t, 0.95, 1.6);
+  const py = t < 0.9 ? 60 : 110;
   el('pencil').style.transform = 'translate(' + (px + Math.sin(t * 30) * 3) + 'px,' + (py + Math.cos(t * 30) * 3) + 'px)';
-  el('pencil').style.opacity = 1 - seg(t, 2.05, 2.2);
+  el('pencil').style.opacity = 1 - seg(t, 1.65, 1.8);
   // left man: types, then cheers
-  const ch = ease(seg(t, 2.4, 2.8));
+  const ch = ease(seg(t, 1.9, 2.3));
   const tp = (ph) => ({ E: [P.down.E[0], P.down.E[1] + Math.sin(t * 22 + ph) * 5 * (1 - ch)], H: P.down.H });
-  const bounce = ch * Math.abs(Math.sin((t - 2.4) * 7)) * 10;
+  const bounce = ch * Math.abs(Math.sin((t - 1.9) * 7)) * 10;
   const cl = lerpPose(tp(0), { E: [P.cheer.E[0], P.cheer.E[1] - bounce], H: [P.cheer.H[0], P.cheer.H[1] - bounce] }, ch);
   setArm('m', 'L', SL, cl, ch > 0.5 ? 'fist' : 'relaxed');
   setArm('m', 'R', SR, mirPose(lerpPose(tp(Math.PI), { E: [P.cheer.E[0], P.cheer.E[1] - bounce], H: [P.cheer.H[0], P.cheer.H[1] - bounce] }, ch)), ch > 0.5 ? 'fist' : 'relaxed');
-  face('m', t < 2.4 ? 'neutral' : 'happy');
+  face('m', t < 1.9 ? 'neutral' : 'happy');
   headRot('m', ch * Math.sin(t * 7) * 4);
   blinkEyes('m', t, 1.1);
   // right panel slides in
-  el('rp').style.transform = 'translateX(' + (1 - ease(seg(t, 2.2, 2.6))) * 660 + 'px)';
+  el('rp').style.transform = 'translateX(' + (1 - ease(seg(t, 1.8, 2.2))) * 660 + 'px)';
   el('cheer').style.transform = 'translateY(' + -Math.abs(Math.sin(t * 6)) * 14 + 'px) rotate(' + Math.sin(t * 6) * 2 + 'deg)';
   el('regen').style.transform = 'rotate(' + t * 300 + 'deg)';
   ['s1', 's2', 's3'].forEach((id, i) => {
     el(id).style.transform = 'scale(' + (0.6 + 0.4 * Math.abs(Math.sin(t * 4 + i))) + ') rotate(' + t * 60 + 'deg)';
   });
-  el('band').style.transform = 'translateX(' + (1 - ease(seg(t, 2.6, 3.0))) * -1100 + 'px)';
+  el('band').style.transform = 'translateX(' + (1 - ease(seg(t, 2.0, 2.4))) * -1100 + 'px)';
 }`,
 );
 
@@ -330,24 +330,24 @@ ${star("s1", 640, 60, 70)}${star("s2", 1070, 120, 50)}${star("s3", 1080, 400, 64
 </div>`,
   `
 const animation = new MulmoAnimation();
-animation.typewriter('#cmd', 'npm install -g mulmocast', { start: 2.1, end: 3.2 });
+animation.typewriter('#cmd', 'npm install -g mulmocast', { start: 2.7, end: 3.8 });
 animation.blink('#cur', { interval: 0.3 });
 async function render(frame, totalFrames, fps) {
   await waitFonts();
   const t = frame / fps;
   animation.update(frame, fps);
-  pop('badge', t, 0.2, 0.5);
+  pop('badge', t, 0.35, 0.5);
   ['s1', 's2', 's3', 's4'].forEach((id, i) => {
     const k = back(seg(t, 0.5 + i * 0.12, 0.8 + i * 0.12)) * (0.8 + 0.25 * Math.sin(t * 5 + i * 2));
     el(id).style.transform = 'scale(' + k + ') rotate(' + t * 50 * (i % 2 ? -1 : 1) + 'deg)';
   });
-  const sw = ease(seg(t, 2.5, 2.7));
+  const sw = ease(seg(t, 3.1, 3.3));
   const bob = 'translateY(' + Math.sin(t * 3) * 6 + 'px)';
   el('wa').style.opacity = 1 - sw; el('wa').style.transform = bob;
   el('wb').style.opacity = sw; el('wb').style.transform = bob;
-  el('term').style.opacity = seg(t, 1.9, 2.05);
-  el('term').style.transform = 'translateY(' + (1 - ease(seg(t, 1.9, 2.2))) * 40 + 'px)';
-  el('url').style.opacity = seg(t, 3.0, 3.4);
+  el('term').style.opacity = seg(t, 2.4, 2.55);
+  el('term').style.transform = 'translateY(' + (1 - ease(seg(t, 2.4, 2.7))) * 40 + 'px)';
+  el('url').style.opacity = seg(t, 3.6, 4.0);
 }`,
 );
 
@@ -382,7 +382,7 @@ const out = {
     },
   },
   // BGM made with ElevenLabs Music, sections matched to the scene boundaries.
-  audioParams: { ...(base.audioParams ?? {}), bgm: { kind: "path", path: "../resources/bgms/mulmocast-promo-30s.mp3" }, bgmVolume: 0.3 },
+  audioParams: { ...(base.audioParams ?? {}), bgm: { kind: "path", path: "../resources/bgms/mulmocast-promo-30s.mp3" }, bgmVolume: 0.25 },
   movieParams: { transition: { type: "fade", duration: 0.3 } },
   beats: base.beats.map((b) => ({ ...b, image: { pain, intro, generate, formats, happy, cta }[b.id] })),
 };
