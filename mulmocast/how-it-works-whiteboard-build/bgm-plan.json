@@ -1,0 +1,105 @@
+{
+ "composition_plan": {
+  "positive_global_styles": [
+   "whiteboard explainer video background music",
+   "thoughtful and friendly",
+   "light acoustic and mallet percussion",
+   "110 bpm",
+   "instrumental",
+   "unobtrusive under narration"
+  ],
+  "negative_global_styles": [
+   "vocals",
+   "lyrics",
+   "EDM drops",
+   "heavy drums",
+   "distorted guitar",
+   "dark"
+  ],
+  "sections": [
+   {
+    "section_name": "Curious opening",
+    "positive_local_styles": [
+     "light curious pizzicato",
+     "soft marimba",
+     "gentle ticking hi-hat"
+    ],
+    "negative_local_styles": [
+     "vocals",
+     "abrupt stop"
+    ],
+    "duration_ms": 4348,
+    "lines": []
+   },
+   {
+    "section_name": "Sketching",
+    "positive_local_styles": [
+     "steady light groove",
+     "marimba melody",
+     "soft claps"
+    ],
+    "negative_local_styles": [
+     "vocals",
+     "abrupt stop"
+    ],
+    "duration_ms": 7116,
+    "lines": []
+   },
+   {
+    "section_name": "Connecting",
+    "positive_local_styles": [
+     "adds warm bass line",
+     "plucked synth arpeggio",
+     "same tempo"
+    ],
+    "negative_local_styles": [
+     "vocals",
+     "abrupt stop"
+    ],
+    "duration_ms": 4548,
+    "lines": []
+   },
+   {
+    "section_name": "Building",
+    "positive_local_styles": [
+     "fuller arrangement",
+     "ukulele strums join"
+    ],
+    "negative_local_styles": [
+     "vocals",
+     "abrupt stop"
+    ],
+    "duration_ms": 8796,
+    "lines": []
+   },
+   {
+    "section_name": "Assembly",
+    "positive_local_styles": [
+     "most energetic part",
+     "glockenspiel sparkles",
+     "driving but light"
+    ],
+    "negative_local_styles": [
+     "vocals",
+     "abrupt stop"
+    ],
+    "duration_ms": 5624,
+    "lines": []
+   },
+   {
+    "section_name": "Wrap up",
+    "positive_local_styles": [
+     "resolving",
+     "final warm chord that rings out",
+     "gentle ending"
+    ],
+    "negative_local_styles": [
+     "vocals",
+     "abrupt stop"
+    ],
+    "duration_ms": 5368,
+    "lines": []
+   }
+  ]
+ }
+}
