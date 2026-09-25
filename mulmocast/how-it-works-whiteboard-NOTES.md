@@ -10,7 +10,7 @@
 ## 書き出し
 
 - 台本の JSON は `node mulmocast/how-it-works-whiteboard-build/build.mjs mulmocast/how-it-works-whiteboard_ja.json` で書き出す（直接編集しない）。
-- 声は `gemini-2.5-pro-preview-tts`（Aoede）。2026-09-24 は `gemini-3.1-flash-tts-preview` が 1 日 100 リクエストの上限に達していたため 2.5 Pro にした。
+- 声は `gemini-3.1-flash-tts-preview`（Aoede、宣伝動画と同じ）。上限（1 分あたり 10 リクエスト、1 日あたり 100 リクエスト）に当たったら時間を空ける。
 - Gemini TTS に話し方の指示を付けると、台本やセリフの話をしている文が安全フィルタ（`PROHIBITED_CONTENT`）で止まることがある。「台本には、場面ごとのセリフと絵の指示を書きます。」が止まったので、2 つ目の文は「まず、場面ごとに、話す言葉と絵の説明を用意します。」にした。
 - BGM は ElevenLabs Music で作った `resources/bgms/mulmocast-how-it-works.mp3`（区間の指定は `how-it-works-whiteboard-build/bgm-plan.json`）。
-- 最初の動画は mulmocast-cli の開発版で書き出した。この repo で作り直すと TTS も全 beat 作り直しになる。
+- 書き出しは `npx mulmocast@2.12.1 movie -g -o "$MAIN/output" mulmocast/how-it-works-whiteboard_ja.json`（`$MAIN` は CLAUDE.md の worktree の節のとおり）。
