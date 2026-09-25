@@ -171,7 +171,7 @@ ${tileBox("t2", 300, `<svg width="150" height="150" viewBox="0 0 150 150"><rect 
 ${tileBox("t3", 490, `<svg width="150" height="150" viewBox="0 0 150 150"><rect x="14" y="22" width="122" height="84" rx="8" fill="#333"/><path d="M64 46 L64 82 L94 64 Z" fill="#fff"/><rect x="14" y="118" width="122" height="10" rx="5" fill="#ddd"/><rect id="pb" x="14" y="118" width="0" height="10" rx="5" fill="#ea8c6c"/></svg>`)}
 <div id="l1" class="olabel" style="left:975px;top:160px;font-size:34px">ナレーション</div>
 <div id="l2" class="olabel" style="left:975px;top:350px;font-size:34px">画像</div>
-<div id="l3" class="olabel" style="left:975px;top:540px;font-size:34px">動画</div>
+<div id="l3" class="olabel" style="left:975px;top:540px;font-size:34px">動画生成</div>
 </div>`,
   `
 async function render(frame, totalFrames, fps) {
