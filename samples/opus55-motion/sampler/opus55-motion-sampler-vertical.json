@@ -1,0 +1,53 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 720,
+    "height": 1280
+  },
+  "title": "Opus 5.5 motion sampler (9:16)",
+  "description": "Sampler of motion patterns seen in Claude Opus 5.5 posts on X (2026-09), rebuilt as html_tailwind animation beats. Silent: each beat has a fixed duration.",
+  "lang": "en",
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "model": "gemini-2.5-pro-preview-tts"
+      }
+    }
+  },
+  "beats": [
+    {
+      "id": "v1-scroll-telop",
+      "text": "",
+      "duration": 6,
+      "image": {
+        "type": "html_tailwind",
+        "html": "<style>.t{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}.g{font-family:Georgia,serif}.m{font-family:Menlo,monospace}</style><div class='t relative overflow-hidden' style='width:720px;height:1280px;background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407;'><div class='absolute left-0 right-0 top-24 text-center g text-5xl font-bold'>MulmoTerminal</div><div class='absolute overflow-hidden' style='left:60px;right:60px;top:420px;height:360px'><div id='roll' class='flex flex-col gap-10'><div class='text-4xl font-bold px-6 py-5 rounded-2xl' style='background:#FFF3DC;border-left:10px solid #EA580C'>Cells run side by side</div><div class='text-4xl font-bold px-6 py-5 rounded-2xl' style='background:#FFF3DC;border-left:10px solid #EA580C'>Each header shows its PR</div><div class='text-4xl font-bold px-6 py-5 rounded-2xl' style='background:#FFF3DC;border-left:10px solid #EA580C'>Tap a chip, open the diff</div><div class='text-4xl font-bold px-6 py-5 rounded-2xl' style='background:#FFF3DC;border-left:10px solid #EA580C'>Done? It chimes.</div></div></div></div>",
+        "script": "// hold each line, then roll up by one row. Step height is measured, not hard-coded.\nvar roll = document.getElementById('roll');\nvar step = roll.children[1].offsetTop - roll.children[0].offsetTop;\nfunction ease(t) { return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }\nfunction render(frame, totalFrames, fps) {\n  var t = frame / fps, y = 0;\n  for (var k = 0; k < 3; k++) y += ease(Math.max(0, Math.min(1, (t - (1.4 + k * 1.4)) / 0.4)));\n  roll.style.transform = 'translateY(' + (-step * y) + 'px)';\n  for (var i = 0; i < roll.children.length; i++) roll.children[i].style.opacity = Math.abs(i - y) < 0.5 ? 1 : 0.35;\n}",
+        "animation": {
+          "fps": 30
+        }
+      }
+    },
+    {
+      "id": "v2-count-up",
+      "text": "",
+      "duration": 5,
+      "image": {
+        "type": "html_tailwind",
+        "html": "<style>.t{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}.g{font-family:Georgia,serif}.m{font-family:Menlo,monospace}</style><div class='t relative overflow-hidden' style='width:720px;height:1280px;background:radial-gradient(1200px 700px at 12% -10%,rgba(253,224,71,.30),transparent 60%),radial-gradient(1000px 600px at 100% 0%,rgba(251,146,60,.22),transparent 55%),linear-gradient(160deg,#FFFBF2,#FFF3DC 55%,#FCE8C8);color:#431407;'>\n<div class='absolute left-0 right-0 top-40 text-center g text-5xl font-bold leading-tight'>Two years<br>in one number</div>\n<div id='n' class='absolute left-0 right-0 text-center font-extrabold' style='top:520px;font-size:150px;color:#EA580C'>0</div>\n<div class='absolute left-0 right-0 text-center text-3xl' style='top:720px'>records kept</div>\n<div class='absolute' style='left:80px;right:80px;top:880px;height:22px;border-radius:11px;background:#FCE8C8'><div id='b' style='width:0;height:100%;border-radius:11px;background:#EA580C'></div></div></div>",
+        "script": "var animation = new MulmoAnimation();\nanimation\n  .animate('#b', { width: [0, 100, '%'] }, { start: 0.4, end: 4.0, easing: 'easeOut' });\nfunction render(frame, totalFrames, fps) {\n  animation.update(frame, fps);\n  var p = Math.max(0, Math.min(1, (frame / fps - 0.4) / 3.6));\n  document.getElementById('n').textContent = Math.round(30113 * (1 - (1 - p) * (1 - p))).toLocaleString('en-US');\n}",
+        "animation": {
+          "fps": 30
+        }
+      }
+    }
+  ]
+}

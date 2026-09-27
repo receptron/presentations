@@ -1,0 +1,2174 @@
+[
+ {
+  "url": "https://x.com/other__reality/status/2102514581684052169",
+  "id": "2102514581684052169",
+  "username": "other__reality",
+  "created_at": "2026-09-22T21:45:13.000Z",
+  "lang": "en",
+  "likes": 6721,
+  "reposts": 701,
+  "quotes": 507,
+  "impressions": 2463796,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 156583
+   }
+  ],
+  "links": [
+   "https://twitter.com/slimer48484/status/2097752569212756134"
+  ],
+  "technique": [
+   "visual-design"
+  ],
+  "what_it_shows": "試したモデルの中で視覚デザインが一番だと示す、約156秒の映像。",
+  "claim": "Claude Opus 5.5 は、これまで試したどのモデルよりも視覚デザインが良い。"
+ },
+ {
+  "url": "https://x.com/xikhar/status/2104001664793600012",
+  "id": "2104001664793600012",
+  "username": "xikhar",
+  "created_at": "2026-09-27T00:14:22.000Z",
+  "lang": "en",
+  "likes": 4749,
+  "reposts": 276,
+  "quotes": 106,
+  "impressions": 486489,
+  "media": [
+   {
+    "type": "video",
+    "width": 3024,
+    "height": 1896,
+    "duration_ms": 140736
+   }
+  ],
+  "links": [],
+  "technique": [
+   "three.js",
+   "blender",
+   "browser-game",
+   "image-gen"
+  ],
+  "what_it_shows": "Blender・画像生成・Three.js で作った、ブラウザで動く Spider-Man 系3Dデモの第3反復。",
+  "claim": "Opus 5.5 medium が Blender と Three.js をブラウザで動くゲーム表現にまとめ、ゲーム開発の未来に見える。"
+ },
+ {
+  "url": "https://x.com/xikhar/status/2102932763750084797",
+  "id": "2102932763750084797",
+  "username": "xikhar",
+  "created_at": "2026-09-24T01:26:56.000Z",
+  "lang": "en",
+  "likes": 3586,
+  "reposts": 146,
+  "quotes": 42,
+  "impressions": 450652,
+  "media": [
+   {
+    "type": "video",
+    "width": 3024,
+    "height": 1896,
+    "duration_ms": 130183
+   }
+  ],
+  "links": [],
+  "technique": [
+   "three.js",
+   "blender",
+   "character-animation",
+   "browser-game"
+  ],
+  "what_it_shows": "シンビオートスーツ、改善したモデルとアニメーション、ゲームプレイを足したブラウザ3D。",
+  "claim": "数回の反復でアニメーションとモデルとゲームメカニクスが良くなった。ゼロから Three.js と Blender で作っている。"
+ },
+ {
+  "url": "https://x.com/sankakuten91256/status/2103483923783373039",
+  "id": "2103483923783373039",
+  "username": "sankakuten91256",
+  "created_at": "2026-09-25T13:57:02.000Z",
+  "lang": "ja",
+  "likes": 3615,
+  "reposts": 346,
+  "quotes": 56,
+  "impressions": 682265,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 15000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "greenscreen",
+   "image-gen"
+  ],
+  "what_it_shows": "9分割ダンス画像とグリーンバック動画の上に、Opus 5.5 のモーショングラフィックスを載せた15秒映像。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/DotCSV/status/2103095281197908137",
+  "id": "2103095281197908137",
+  "username": "DotCSV",
+  "created_at": "2026-09-24T12:12:43.000Z",
+  "lang": "es",
+  "likes": 752,
+  "reposts": 18,
+  "quotes": 0,
+  "impressions": 22432,
+  "media": [
+   {
+    "type": "photo",
+    "width": 846,
+    "height": 452,
+    "duration_ms": null
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics"
+  ],
+  "what_it_shows": "Opus 5.5 のモーショングラフィックスを見て反応している静止画。",
+  "claim": "Opus 5.5 がモーショングラフィックスを作れる、という反応。"
+ },
+ {
+  "url": "https://x.com/Kutinawa_VGamer/status/2103476071018766790",
+  "id": "2103476071018766790",
+  "username": "Kutinawa_VGamer",
+  "created_at": "2026-09-25T13:25:50.000Z",
+  "lang": "ja",
+  "likes": 952,
+  "reposts": 122,
+  "quotes": 9,
+  "impressions": 52271,
+  "media": [
+   {
+    "type": "video",
+    "width": 1280,
+    "height": 720,
+    "duration_ms": 80015
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "technique-catalog"
+  ],
+  "what_it_shows": "いろいろな映像演出の技法を1本にまとめた約80秒の動画。",
+  "claim": "演出技法のまとめを出させて絶句するほどの出来だった。"
+ },
+ {
+  "url": "https://x.com/ring_hyacinth/status/2102986085328716066",
+  "id": "2102986085328716066",
+  "username": "ring_hyacinth",
+  "created_at": "2026-09-24T04:58:48.000Z",
+  "lang": "zh",
+  "likes": 674,
+  "reposts": 52,
+  "quotes": 20,
+  "impressions": 53517,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 40306
+   }
+  ],
+  "links": [],
+  "technique": [
+   "p5.js",
+   "p5.brush",
+   "collage",
+   "frame-by-frame",
+   "node-audio"
+  ],
+  "what_it_shows": "脚本と音楽を渡し、p5.js と p5.brush で手描き紙テクスチャを逐フレーム描いた中秋のコラージュアニメ。",
+  "claim": "LLM には動画と3Dを作る潜在力があり、生成動画とは別の技術経路が見える。"
+ },
+ {
+  "url": "https://x.com/xiaohu/status/2102979455308439555",
+  "id": "2102979455308439555",
+  "username": "xiaohu",
+  "created_at": "2026-09-24T04:32:28.000Z",
+  "lang": "zh",
+  "likes": 563,
+  "reposts": 55,
+  "quotes": 12,
+  "impressions": 81961,
+  "media": [
+   {
+    "type": "video",
+    "width": 1280,
+    "height": 720,
+    "duration_ms": 156629
+   }
+  ],
+  "links": [
+   "https://twitter.com/other__reality/status/2102514581684052169"
+  ],
+  "technique": [
+   "p5.js",
+   "headless-chrome",
+   "ffmpeg",
+   "storyboard",
+   "multi-agent"
+  ],
+  "what_it_shows": "生動画ツールなしで、p5.js の各フレームを Chrome で撮って ffmpeg 合成した手描きMV。",
+  "claim": "モデルが分鏡を書き、曲を9章に分け、並列サブエージェントにコードを書かせて手描きMVにしている。"
+ },
+ {
+  "url": "https://x.com/onofumi_AI/status/2102568200122884553",
+  "id": "2102568200122884553",
+  "username": "onofumi_AI",
+  "created_at": "2026-09-23T01:18:17.000Z",
+  "lang": "ja",
+  "likes": 393,
+  "reposts": 30,
+  "quotes": 4,
+  "impressions": 141325,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 15733
+   }
+  ],
+  "links": [
+   "https://twitter.com/onofumi_ai/status/2102548517596381463"
+  ],
+  "technique": [
+   "three.js",
+   "blender",
+   "cc0-textures"
+  ],
+  "what_it_shows": "同じ大阪城を Three.js と、一度も開かずに書かせた Blender で作り比べた映像。",
+  "claim": "リアルさなら Blender、手軽さなら Three.js。Astra の4割のAPI単価でもこの3Dが作れる予感がある、と前投稿で述べている。"
+ },
+ {
+  "url": "https://x.com/onofumi_AI/status/2102548517596381463",
+  "id": "2102548517596381463",
+  "username": "onofumi_AI",
+  "created_at": "2026-09-23T00:00:04.000Z",
+  "lang": "ja",
+  "likes": 298,
+  "reposts": 27,
+  "quotes": 4,
+  "impressions": 55074,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 23500
+   }
+  ],
+  "links": [],
+  "technique": [
+   "three.js",
+   "line-draw-reveal"
+  ],
+  "what_it_shows": "線から大阪城が立ち上がる Three.js の3Dアニメーション。",
+  "claim": "このクオリティの3Dが作れるなら Astra と比べても引けを取らず、API単価は Astra の4割。"
+ },
+ {
+  "url": "https://x.com/akiy_8/status/2103434383218872503",
+  "id": "2103434383218872503",
+  "username": "akiy_8",
+  "created_at": "2026-09-25T10:40:11.000Z",
+  "lang": "ja",
+  "likes": 349,
+  "reposts": 20,
+  "quotes": 0,
+  "impressions": 27495,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 15000
+   }
+  ],
+  "links": [
+   "https://twitter.com/shneural/status/2103151003272962130"
+  ],
+  "technique": [
+   "webgl2",
+   "raytracing",
+   "html",
+   "halftone",
+   "procedural"
+  ],
+  "what_it_shows": "画像も動画も使わず、HTML1枚の素の WebGL2 で150球をレイトレースし、網点と版ズレまで出した15秒。",
+  "claim": "Three.js なしの数式だけで、ブラウザの HTML 1枚がモーショングラフィックスとして動く。"
+ },
+ {
+  "url": "https://x.com/otsukaroom/status/2103029724109017207",
+  "id": "2103029724109017207",
+  "username": "otsukaroom",
+  "created_at": "2026-09-24T07:52:13.000Z",
+  "lang": "ja",
+  "likes": 322,
+  "reposts": 12,
+  "quotes": 6,
+  "impressions": 94046,
+  "media": [],
+  "links": [],
+  "technique": [
+   "video",
+   "slides"
+  ],
+  "what_it_shows": "コーディングではなく動画とスライドに使え、という意見投稿で、映像そのものは付いていない。",
+  "claim": "コーディングはバグの温床で、動画とスライドだけ作らせるべきだ。"
+ },
+ {
+  "url": "https://x.com/DavidKPiano/status/2103555549929566323",
+  "id": "2103555549929566323",
+  "username": "DavidKPiano",
+  "created_at": "2026-09-25T18:41:39.000Z",
+  "lang": "en",
+  "likes": 304,
+  "reposts": 11,
+  "quotes": 2,
+  "impressions": 16355,
+  "media": [
+   {
+    "type": "video",
+    "width": 1966,
+    "height": 1096,
+    "duration_ms": 97000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "html",
+   "css",
+   "svg",
+   "js",
+   "product-animation"
+  ],
+  "what_it_shows": "Apple の “Wonderful Tools” アニメを HTML・CSS・SVG・JS で再現した約97秒。",
+  "claim": "誇張を疑って試したが、完璧ではないにせよ本当に印象に残った。"
+ },
+ {
+  "url": "https://x.com/LinearUncle/status/2103128559174971663",
+  "id": "2103128559174971663",
+  "username": "LinearUncle",
+  "created_at": "2026-09-24T14:24:57.000Z",
+  "lang": "zh",
+  "likes": 258,
+  "reposts": 31,
+  "quotes": 0,
+  "impressions": 21958,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 457000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "manim",
+   "edge-tts",
+   "explainer"
+  ],
+  "what_it_shows": "Manim と edge-tts で作った、微分の概念を例つきで説明する約457秒の教材動画。",
+  "claim": "Opus 5.5 は Manim が非常に得意で、教育動画制作の新しい手段になる。"
+ },
+ {
+  "url": "https://x.com/lnkiai/status/2103759350330544254",
+  "id": "2103759350330544254",
+  "username": "lnkiai",
+  "created_at": "2026-09-26T08:11:29.000Z",
+  "lang": "ja",
+  "likes": 230,
+  "reposts": 10,
+  "quotes": 2,
+  "impressions": 13173,
+  "media": [
+   {
+    "type": "video",
+    "width": 3840,
+    "height": 2160,
+    "duration_ms": 32136
+   }
+  ],
+  "links": [],
+  "technique": [
+   "remotion",
+   "three.js"
+  ],
+  "what_it_shows": "Remotion と three.js で作った M3E Canvas の 4K 動画。",
+  "claim": "Claude Opus 5.5 が凄すぎる。"
+ },
+ {
+  "url": "https://x.com/mdaman010/status/2103788160031592572",
+  "id": "2103788160031592572",
+  "username": "mdaman010",
+  "created_at": "2026-09-26T10:05:58.000Z",
+  "lang": "en",
+  "likes": 200,
+  "reposts": 14,
+  "quotes": 4,
+  "impressions": 14746,
+  "media": [
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1262,
+    "duration_ms": 48576
+   }
+  ],
+  "links": [],
+  "technique": [
+   "html",
+   "3d",
+   "zoom-narrative",
+   "browser"
+  ],
+  "what_it_shows": "データセンターから GPU、回路、シリコン原子まで潜る3Dを、ブラウザの HTML 1ファイルで動かした映像。",
+  "claim": "約1時間で、ブラウザ直の単一 HTML としてこの3Dモーショングラフィックが作れた。"
+ },
+ {
+  "url": "https://x.com/Hesamation/status/2103822595993018838",
+  "id": "2103822595993018838",
+  "username": "Hesamation",
+  "created_at": "2026-09-26T12:22:48.000Z",
+  "lang": "en",
+  "likes": 165,
+  "reposts": 17,
+  "quotes": 0,
+  "impressions": 8089,
+  "media": [
+   {
+    "type": "video",
+    "width": 1400,
+    "height": 1080,
+    "duration_ms": 91500
+   }
+  ],
+  "links": [],
+  "technique": [
+   "manim",
+   "explainer",
+   "music"
+  ],
+  "what_it_shows": "ポインタを説明する Manim 動画で、例と色以外は音楽も含めて Opus 任せ。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/yanhua1010/status/2103712543168680363",
+  "id": "2103712543168680363",
+  "username": "yanhua1010",
+  "created_at": "2026-09-26T05:05:30.000Z",
+  "lang": "zh",
+  "likes": 197,
+  "reposts": 22,
+  "quotes": 3,
+  "impressions": 19947,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 135338
+   }
+  ],
+  "links": [],
+  "technique": [
+   "hyperframes",
+   "three.js",
+   "html",
+   "ffmpeg"
+  ],
+  "what_it_shows": "HyperFrames で HTML を動画にし、three.js の3Dと HeyGen の曲を ffmpeg で合成した東方文明の紹介。",
+  "claim": "Opus 5.5 は分水嶺だ。"
+ },
+ {
+  "url": "https://x.com/higgsfield_ai/status/2103963588012744859",
+  "id": "2103963588012744859",
+  "username": "higgsfield_ai",
+  "created_at": "2026-09-26T21:43:03.000Z",
+  "lang": "en",
+  "likes": 238,
+  "reposts": 20,
+  "quotes": 4,
+  "impressions": 36159,
+  "media": [
+   {
+    "type": "video",
+    "width": 2160,
+    "height": 2160,
+    "duration_ms": 15000
+   }
+  ],
+  "links": [
+   "https://twitter.com/higgsfield_ai/status/2103839805360820589"
+  ],
+  "technique": [
+   "kinetic-typography",
+   "motion-graphics"
+  ],
+  "what_it_shows": "正方形15秒のタイポグラフィ・モーショングラフィックス。",
+  "claim": "タイポグラフィのモーショングラフィックスが異常にうまく、43分・修正3回でできた。"
+ },
+ {
+  "url": "https://x.com/higgsfield_ai/status/2103964599737536831",
+  "id": "2103964599737536831",
+  "username": "higgsfield_ai",
+  "created_at": "2026-09-26T21:47:05.000Z",
+  "lang": "en",
+  "likes": 100,
+  "reposts": 8,
+  "quotes": 1,
+  "impressions": 11841,
+  "media": [
+   {
+    "type": "video",
+    "width": 2160,
+    "height": 2160,
+    "duration_ms": 10933
+   }
+  ],
+  "links": [
+   "https://twitter.com/higgsfield_ai/status/2103839805360820589"
+  ],
+  "technique": [
+   "parallax",
+   "2.5d",
+   "motion-graphics"
+  ],
+  "what_it_shows": "Opus 5.5 と Higgsfield で作った 2.5D パララックスの短いアニメ。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/erhanmeydan/status/2103917581103169729",
+  "id": "2103917581103169729",
+  "username": "erhanmeydan",
+  "created_at": "2026-09-26T18:40:14.000Z",
+  "lang": "tr",
+  "likes": 147,
+  "reposts": 12,
+  "quotes": 0,
+  "impressions": 12018,
+  "media": [
+   {
+    "type": "video",
+    "width": 2160,
+    "height": 2200,
+    "duration_ms": 48066
+   },
+   {
+    "type": "photo",
+    "width": 4096,
+    "height": 2207,
+    "duration_ms": null
+   }
+  ],
+  "links": [],
+  "technique": [
+   "hyperframes",
+   "three.js",
+   "gsap",
+   "html",
+   "lip-sync"
+  ],
+  "what_it_shows": "同じストーリー動画を Opus 5.5 と Astra 6 に渡し、台詞同期の全画面アニメを並べた比較。",
+  "claim": "HyperFrames が HTML アニメを MP4 にし、3D は Three.js、文字と動きは GSAP で、この比較が可能になった。"
+ },
+ {
+  "url": "https://x.com/NFT_Chen/status/2103380404791333144",
+  "id": "2103380404791333144",
+  "username": "NFT_Chen",
+  "created_at": "2026-09-25T07:05:42.000Z",
+  "lang": "zh",
+  "likes": 117,
+  "reposts": 17,
+  "quotes": 1,
+  "impressions": 46060,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 39288
+   }
+  ],
+  "links": [
+   "https://x.com/nft_chen/status/2103351029685473389?s=46"
+  ],
+  "technique": [
+   "p5.js",
+   "p5.brush",
+   "collage",
+   "paper-cut",
+   "node-audio"
+  ],
+  "what_it_shows": "上海の夜景を切り紙風にし、月の欠けを埋めようとする猫のコラージュアニメ。",
+  "claim": "紙の破れ・重なり・反射が揃い、純粋な生成動画より制御でき、手仕事の感触がある。"
+ },
+ {
+  "url": "https://x.com/ConnorPRose/status/2103494412047147443",
+  "id": "2103494412047147443",
+  "username": "ConnorPRose",
+  "created_at": "2026-09-25T14:38:43.000Z",
+  "lang": "en",
+  "likes": 109,
+  "reposts": 5,
+  "quotes": 3,
+  "impressions": 10933,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 27413
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "music",
+   "sfx"
+  ],
+  "what_it_shows": "Opus 5.5 Max のワンショットで、音楽と効果音まで入ったモーショングラフィックス。",
+  "claim": "モーショングラフィックスでは Opus 5.5 が GPT-6 Astra を大きく上回る。"
+ },
+ {
+  "url": "https://x.com/argofowl/status/2103800311802658965",
+  "id": "2103800311802658965",
+  "username": "argofowl",
+  "created_at": "2026-09-26T10:54:15.000Z",
+  "lang": "en",
+  "likes": 91,
+  "reposts": 2,
+  "quotes": 0,
+  "impressions": 4377,
+  "media": [
+   {
+    "type": "video",
+    "width": 3840,
+    "height": 2160,
+    "duration_ms": 15018
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "code-motion"
+  ],
+  "what_it_shows": "Remotion を使わず約40分で作った 4K の15秒モーショングラフィックス。",
+  "claim": "どのスタイルのモーショングラフィックスもうまく、Remotion なしで足りる。"
+ },
+ {
+  "url": "https://x.com/tequilafunks/status/2103528644828127728",
+  "id": "2103528644828127728",
+  "username": "tequilafunks",
+  "created_at": "2026-09-25T16:54:45.000Z",
+  "lang": "en",
+  "likes": 68,
+  "reposts": 1,
+  "quotes": 1,
+  "impressions": 8618,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 15061
+   }
+  ],
+  "links": [
+   "https://twitter.com/__morse/status/2103485566570369333"
+  ],
+  "technique": [
+   "remotion",
+   "showreel",
+   "motion-graphics"
+  ],
+  "what_it_shows": "履歴書用ショーリールのプロンプトで Remotion が出した15秒のモーショングラフィックス。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/excel_niisan/status/2102719776984559798",
+  "id": "2102719776984559798",
+  "username": "excel_niisan",
+  "created_at": "2026-09-23T11:20:36.000Z",
+  "lang": "ja",
+  "likes": 53,
+  "reposts": 2,
+  "quotes": 0,
+  "impressions": 7580,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 159765
+   },
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 172330
+   }
+  ],
+  "links": [],
+  "technique": [
+   "presentation-video",
+   "motion-graphics",
+   "document-to-video"
+  ],
+  "what_it_shows": "同じ Word 群とプロンプトから作った、経費精算の研修プレゼン動画を Opus 5.5 と GPT-6 Astra で左右比較。",
+  "claim": "Opus 5.5 は話の組み立てがうまく、なめらかなモーショングラフィックで内容を補足し、Astra は支離滅裂に感じる。"
+ },
+ {
+  "url": "https://x.com/szounft/status/2103947802426699853",
+  "id": "2103947802426699853",
+  "username": "szounft",
+  "created_at": "2026-09-26T20:40:20.000Z",
+  "lang": "ja",
+  "likes": 59,
+  "reposts": 2,
+  "quotes": 0,
+  "impressions": 3895,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 30000
+   }
+  ],
+  "links": [
+   "https://twitter.com/szounft/status/2103748589218615747",
+   "https://shinnzou2003-cpu.github.io/SUZUNEBATTLE/"
+  ],
+  "technique": [
+   "motion-graphics",
+   "chroma-key",
+   "game-hud",
+   "logo-sting",
+   "sfx"
+  ],
+  "what_it_shows": "キャラ動画を渡しただけで、背景抜き、VS/K.O.、HPとコンボのHUD、BGMと効果音まで入った対戦プロモ。",
+  "claim": "ポン出しでロゴ演出からゲームHUD、音まで全部込みになる。"
+ },
+ {
+  "url": "https://x.com/FantasistaAI/status/2103876607765283321",
+  "id": "2103876607765283321",
+  "username": "FantasistaAI",
+  "created_at": "2026-09-26T15:57:26.000Z",
+  "lang": "ja",
+  "likes": 45,
+  "reposts": 5,
+  "quotes": 3,
+  "impressions": 5921,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 7040
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "code-motion"
+  ],
+  "what_it_shows": "Filmora・Remotion・動画生成を禁じて出た、約7秒のモーショングラフィックス。",
+  "claim": "日本のアニメ系は単体では無理で、画像生成や動画生成を絡めて初めて真価が出る。"
+ },
+ {
+  "url": "https://x.com/martinleblanc/status/2103565583128346678",
+  "id": "2103565583128346678",
+  "username": "martinleblanc",
+  "created_at": "2026-09-25T19:21:32.000Z",
+  "lang": "en",
+  "likes": 48,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 4377,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 10000
+   },
+   {
+    "type": "video",
+    "width": 2368,
+    "height": 1184,
+    "duration_ms": 12500
+   }
+  ],
+  "links": [],
+  "technique": [
+   "storyboard",
+   "motion-graphics"
+  ],
+  "what_it_shows": "同じ絵コンテに対する Opus 5.5 とプロのモーショングラフィックスデザイナーの横並び。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/itsluizneto/status/2102540146055008689",
+  "id": "2102540146055008689",
+  "username": "itsluizneto",
+  "created_at": "2026-09-22T23:26:48.000Z",
+  "lang": "en",
+  "likes": 12,
+  "reposts": 2,
+  "quotes": 0,
+  "impressions": 805,
+  "media": [
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1350,
+    "duration_ms": 78466
+   },
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1350,
+    "duration_ms": 78466
+   },
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1350,
+    "duration_ms": 78466
+   }
+  ],
+  "links": [],
+  "technique": [
+   "explainer",
+   "screenshot-to-video",
+   "motion-graphics"
+  ],
+  "what_it_shows": "数枚のスクショと古い投稿から作った、縦型の説明動画が3本。",
+  "claim": "ここ数週間 Astra と Fable で作っていたが、Opus 5.5 の方が良く、編集がずっと少ない。"
+ },
+ {
+  "url": "https://x.com/chatcutapp/status/2102819759247208653",
+  "id": "2102819759247208653",
+  "username": "chatcutapp",
+  "created_at": "2026-09-23T17:57:53.000Z",
+  "lang": "en",
+  "likes": 26,
+  "reposts": 1,
+  "quotes": 0,
+  "impressions": 2899,
+  "media": [
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1920,
+    "duration_ms": 31916
+   }
+  ],
+  "links": [],
+  "technique": [
+   "reference-recreation",
+   "timeline-edit",
+   "motion-graphics"
+  ],
+  "what_it_shows": "手描きキャラから抽象モーショングラフィックスまで、参照（上）と Opus 5.5＋ChatCut（下）の再現比較。",
+  "claim": "任意のアニメ参照を、編集できる実タイムライン上に再現できる。"
+ },
+ {
+  "url": "https://x.com/koharu_ai_diary/status/2103794245186506804",
+  "id": "2103794245186506804",
+  "username": "koharu_ai_diary",
+  "created_at": "2026-09-26T10:30:09.000Z",
+  "lang": "ja",
+  "likes": 35,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 561,
+  "media": [
+   {
+    "type": "video",
+    "width": 1280,
+    "height": 720,
+    "duration_ms": 41933
+   }
+  ],
+  "links": [],
+  "technique": [
+   "slides",
+   "pdf-to-video",
+   "chart-animation"
+  ],
+  "what_it_shows": "月次報告PDFが表紙から始まり、グラフが伸びて「では、本題に入ります」で止まる冒頭動画。",
+  "claim": "プレゼン冒頭のつかみは、この組み合わせで会議に流せる水準になった。"
+ },
+ {
+  "url": "https://x.com/AiNamanari33743/status/2104154745988587531",
+  "id": "2104154745988587531",
+  "username": "AiNamanari33743",
+  "created_at": "2026-09-27T10:22:39.000Z",
+  "lang": "ja",
+  "likes": 38,
+  "reposts": 1,
+  "quotes": 0,
+  "impressions": 2687,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 15866
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "ffmpeg",
+   "python",
+   "overlay"
+  ],
+  "what_it_shows": "通常のダンス動画の上に、Python と ffmpeg だけで載せたモーショングラフィックス。",
+  "claim": "After Effects などの編集ソフトは不要だった。"
+ },
+ {
+  "url": "https://x.com/ConnorPRose/status/2103138959547416951",
+  "id": "2103138959547416951",
+  "username": "ConnorPRose",
+  "created_at": "2026-09-24T15:06:17.000Z",
+  "lang": "en",
+  "likes": 28,
+  "reposts": 1,
+  "quotes": 3,
+  "impressions": 3475,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 62848
+   }
+  ],
+  "links": [],
+  "technique": [
+   "storyboard",
+   "motion-graphics",
+   "music"
+  ],
+  "what_it_shows": "絵コンテから完成したモーショングラフィックスまでをワンショットで通し、音楽もAIの約63秒。",
+  "claim": "絵コンテから映像と音楽までワンショットで通る。"
+ },
+ {
+  "url": "https://x.com/tkz_aiart/status/2103693888611660161",
+  "id": "2103693888611660161",
+  "username": "tkz_aiart",
+  "created_at": "2026-09-26T03:51:22.000Z",
+  "lang": "ja",
+  "likes": 26,
+  "reposts": 2,
+  "quotes": 1,
+  "impressions": 4195,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 36020
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "prompt-only"
+  ],
+  "what_it_shows": "編集ソフトに触らず、プロンプトだけで完成した約36秒のモーショングラフィックス。",
+  "claim": "After Effects で何時間もかかっていたものがプロンプトだけで完成する。"
+ },
+ {
+  "url": "https://x.com/pirrer/status/2103737429954056454",
+  "id": "2103737429954056454",
+  "username": "pirrer",
+  "created_at": "2026-09-26T06:44:23.000Z",
+  "lang": "en",
+  "likes": 8,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 1072,
+  "media": [
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1920,
+    "duration_ms": 178333
+   }
+  ],
+  "links": [],
+  "technique": [
+   "html",
+   "blender",
+   "claymation",
+   "three.js",
+   "browser-game"
+  ],
+  "what_it_shows": "公開4日で閲覧の多い作例（単一ウェブページの短編、Blender のクレイアニメ、カート、スプラトゥーン風、three.js の船、レンズ実験）をまとめた縦動画。",
+  "claim": "API価格は Opus 5 より20%低く、ワンプロンプトのゲームではグラフィックと仕上げの点で Opus 5.5 が最高だった、と Anthropic のテスター談として述べている。"
+ },
+ {
+  "url": "https://x.com/moonshot104/status/2103473343596785764",
+  "id": "2103473343596785764",
+  "username": "moonshot104",
+  "created_at": "2026-09-25T13:15:00.000Z",
+  "lang": "en",
+  "likes": 2,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 161,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 116720
+   }
+  ],
+  "links": [],
+  "technique": [
+   "javascript",
+   "frame-by-frame",
+   "generative-art"
+  ],
+  "what_it_shows": "洞窟壁画からジェネレーティブアートまで、4万年の美術を117秒でたどる、コードだけのアニメ。",
+  "claim": "写真も動画クリップも生成画像もなく、JavaScript が全フレームを描いた。"
+ },
+ {
+  "url": "https://x.com/brsabel/status/2103132094243521015",
+  "id": "2103132094243521015",
+  "username": "brsabel",
+  "created_at": "2026-09-24T14:39:00.000Z",
+  "lang": "en",
+  "likes": 11,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 582,
+  "media": [
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1350,
+    "duration_ms": 37400
+   },
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1350,
+    "duration_ms": 61400
+   }
+  ],
+  "links": [],
+  "technique": [
+   "3d",
+   "data-viz",
+   "timelapse"
+  ],
+  "what_it_shows": "マンハッタン全建物の築年と平日地下鉄乗降を、それぞれ3Dタイムラプスにした縦動画2本。",
+  "claim": "3Dデータビズとストーリーテリングの出来を見るために渡したら、このタイムラプスが返った。"
+ },
+ {
+  "url": "https://x.com/guriham_lab/status/2104154927362945532",
+  "id": "2104154927362945532",
+  "username": "guriham_lab",
+  "created_at": "2026-09-27T10:23:22.000Z",
+  "lang": "ja",
+  "likes": 13,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 503,
+  "media": [
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1920,
+    "duration_ms": 28900
+   }
+  ],
+  "links": [],
+  "technique": [
+   "remotion",
+   "data-story",
+   "original-bgm"
+  ],
+  "what_it_shows": "2年・30,113枚の生成記録を、Remotion と自作BGMで振り返る縦動画。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/RyoThiisryo/status/2103313873571090726",
+  "id": "2103313873571090726",
+  "username": "RyoThiisryo",
+  "created_at": "2026-09-25T02:41:19.000Z",
+  "lang": "ja",
+  "likes": 16,
+  "reposts": 1,
+  "quotes": 1,
+  "impressions": 1986,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 48625
+   },
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 17585
+   }
+  ],
+  "links": [],
+  "technique": [
+   "code-motion",
+   "music-video"
+  ],
+  "what_it_shows": "Suno の曲を添付しただけで、コードが描いたMVアニメが2本。",
+  "claim": "動画生成AIのクレジットは使わず、トークンだけで1時間39分（超高）でMVになった。"
+ },
+ {
+  "url": "https://x.com/ystknsh/status/2102766871007436993",
+  "id": "2102766871007436993",
+  "username": "ystknsh",
+  "created_at": "2026-09-23T14:27:44.000Z",
+  "lang": "ja",
+  "likes": 11,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 18719,
+  "media": [
+   {
+    "type": "video",
+    "width": 1280,
+    "height": 720,
+    "duration_ms": 30000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "mulmocast",
+   "narrated-animation"
+  ],
+  "what_it_shows": "上げて落とす落差を30秒にしたファン動画。台本とアニメは Opus 5.5、動画生成は MulmoCast。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/motion_mau/status/2102702060198346772",
+  "id": "2102702060198346772",
+  "username": "motion_mau",
+  "created_at": "2026-09-23T10:10:12.000Z",
+  "lang": "en",
+  "likes": 12,
+  "reposts": 2,
+  "quotes": 0,
+  "impressions": 1444,
+  "media": [
+   {
+    "type": "video",
+    "width": 2880,
+    "height": 2160,
+    "duration_ms": 14200
+   }
+  ],
+  "links": [
+   "https://twitter.com/LottieFiles/status/2102582268913140058"
+  ],
+  "technique": [
+   "lottie",
+   "slides",
+   "explainer"
+  ],
+  "what_it_shows": "Opus 5.5 自身の解説スライド動画を、編集可能な Lottie としてワンショットで作った横長14秒。",
+  "claim": "ワンショットのプロンプトは Opus 5.5 でずっと良くなった。"
+ },
+ {
+  "url": "https://x.com/kelly_thepotato/status/2103776947310637367",
+  "id": "2103776947310637367",
+  "username": "kelly_thepotato",
+  "created_at": "2026-09-26T09:21:25.000Z",
+  "lang": "en",
+  "likes": 10,
+  "reposts": 3,
+  "quotes": 0,
+  "impressions": 441,
+  "media": [
+   {
+    "type": "video",
+    "width": 1948,
+    "height": 1080,
+    "duration_ms": 15000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "lottie",
+   "vector",
+   "showreel"
+  ],
+  "what_it_shows": "ベクターで編集できる Lottie の、Claude 向けモーションリール15秒。",
+  "claim": "Opus 5.5 のワンショットはかなり良く、少し直せば出荷できる。"
+ },
+ {
+  "url": "https://x.com/NoFollowers2023/status/2102787420399825023",
+  "id": "2102787420399825023",
+  "username": "NoFollowers2023",
+  "created_at": "2026-09-23T15:49:23.000Z",
+  "lang": "en",
+  "likes": 3,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 1449,
+  "media": [
+   {
+    "type": "video",
+    "width": 1280,
+    "height": 720,
+    "duration_ms": 160612
+   }
+  ],
+  "links": [
+   "https://twitter.com/teortaxesTex/status/2102137419281695057"
+  ],
+  "technique": [
+   "p5.js",
+   "music-video"
+  ],
+  "what_it_shows": "P5.js で描いた “I'm Bellard” のミュージックビデオ、約161秒。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/arlooooooo/status/2103282282790633715",
+  "id": "2103282282790633715",
+  "username": "arlooooooo",
+  "created_at": "2026-09-25T00:35:47.000Z",
+  "lang": "en",
+  "likes": 1,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 36,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 177000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "p5.js",
+   "p5.brush",
+   "frame-by-frame",
+   "storyboard"
+  ],
+  "what_it_shows": "4,248フレームを p5.brush の一筆ずつで塗った “Drive to the Sea”。",
+  "claim": "画像モデルも動画モデルも使っていない。"
+ },
+ {
+  "url": "https://x.com/pranesh/status/2102937902506504319",
+  "id": "2102937902506504319",
+  "username": "pranesh",
+  "created_at": "2026-09-24T01:47:21.000Z",
+  "lang": "en",
+  "likes": 4,
+  "reposts": 1,
+  "quotes": 0,
+  "impressions": 1018,
+  "media": [],
+  "links": [
+   "https://x.com/other__reality/status/2102514581684052169?s=20"
+  ],
+  "technique": [
+   "p5.js",
+   "chromium",
+   "nodejs",
+   "ffmpeg",
+   "github"
+  ],
+  "what_it_shows": "本人の映像はなく、p5.js・Chromium・Node・ffmpeg と GitHub リポジトリで作られたMVだと紹介している。",
+  "claim": "2パスの Opus 5.5 と、そのパイプラインで作ったMVが公開翌日に100万再生を超えた、と述べている。"
+ },
+ {
+  "url": "https://x.com/AzamIntikhab/status/2102508449955524707",
+  "id": "2102508449955524707",
+  "username": "AzamIntikhab",
+  "created_at": "2026-09-22T21:20:51.000Z",
+  "lang": "en",
+  "likes": 1,
+  "reposts": 1,
+  "quotes": 1,
+  "impressions": 442,
+  "media": [
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1350,
+    "duration_ms": 17000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "generative-art",
+   "python",
+   "javascript",
+   "headless-chrome",
+   "ffmpeg"
+  ],
+  "what_it_shows": "次トークンの選び方を題材にしたジェネレーティブアートを、ヘッドレス Chrome で撮って ffmpeg にした17秒。",
+  "claim": "描くだけでなく、自分のフレームを見てバグを3つ直し、再レンダーまでした。"
+ },
+ {
+  "url": "https://x.com/shoei05/status/2103188019440394621",
+  "id": "2103188019440394621",
+  "username": "shoei05",
+  "created_at": "2026-09-24T18:21:13.000Z",
+  "lang": "ja",
+  "likes": 6,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 586,
+  "media": [
+   {
+    "type": "video",
+    "width": 1280,
+    "height": 720,
+    "duration_ms": 62740
+   }
+  ],
+  "links": [],
+  "technique": [
+   "blender",
+   "tts",
+   "roleplay"
+  ],
+  "what_it_shows": "禁煙外来の初診ロールプレイで、音声に合わせて Blender に作らせたアニメ。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/doerstokyo342/status/2102625703950971185",
+  "id": "2102625703950971185",
+  "username": "doerstokyo342",
+  "created_at": "2026-09-23T05:06:47.000Z",
+  "lang": "ja",
+  "likes": 12,
+  "reposts": 3,
+  "quotes": 0,
+  "impressions": 1162,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 60000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "explainer",
+   "claude-code"
+  ],
+  "what_it_shows": "Claude Code 単体で生成した60秒の動画。",
+  "claim": "短時間・低コストで教材、広告、プレゼンの伝え方が変わる。"
+ },
+ {
+  "url": "https://x.com/doerstokyo342/status/2103781798132211788",
+  "id": "2103781798132211788",
+  "username": "doerstokyo342",
+  "created_at": "2026-09-26T09:40:41.000Z",
+  "lang": "ja",
+  "likes": 12,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 786,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 68000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "pixel-art",
+   "lowpoly-3d",
+   "pika",
+   "lipsync"
+  ],
+  "what_it_shows": "ドット絵、ローポリ3D、Pika の生成動画を重ね、リアクションとリップシンクのある掛け合い。",
+  "claim": "依頼するだけで、その3レイヤーを統合した仕組みが完結する。"
+ },
+ {
+  "url": "https://x.com/den_neko__/status/2103801444596109428",
+  "id": "2103801444596109428",
+  "username": "den_neko__",
+  "created_at": "2026-09-26T10:58:45.000Z",
+  "lang": "ja",
+  "likes": 5,
+  "reposts": 1,
+  "quotes": 0,
+  "impressions": 72,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 55666
+   }
+  ],
+  "links": [],
+  "technique": [
+   "blender",
+   "three.js",
+   "kinetic-typography",
+   "game-ui",
+   "compositing"
+  ],
+  "what_it_shows": "合戦「南橋の戦い」を、Blender の地図の上で three.js の兵とカメラが動き、カットインと筆字をコード合成したゲーム風映像。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/cryptoninjanime/status/2102580899040972982",
+  "id": "2102580899040972982",
+  "username": "cryptoninjanime",
+  "created_at": "2026-09-23T02:08:45.000Z",
+  "lang": "ja",
+  "likes": 0,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 244,
+  "media": [
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1920,
+    "duration_ms": 8341
+   }
+  ],
+  "links": [],
+  "technique": [
+   "kinetic-typography",
+   "code-motion",
+   "scroll-telop"
+  ],
+  "what_it_shows": "画像15枚の切替と、コードで描いた巻物テロップを上下で比べた縦動画。",
+  "claim": "コード版の方が動きがなめらかで、8.2MB から 11KB になり、色と文字の差し替えもできる。"
+ },
+ {
+  "url": "https://x.com/suna_gaku/status/2103311531769561155",
+  "id": "2103311531769561155",
+  "username": "suna_gaku",
+  "created_at": "2026-09-25T02:32:01.000Z",
+  "lang": "ja",
+  "likes": 4,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 576,
+  "media": [
+   {
+    "type": "video",
+    "width": 1574,
+    "height": 1010,
+    "duration_ms": 112381
+   }
+  ],
+  "links": [],
+  "technique": [
+   "claude-design",
+   "self-intro",
+   "ui-motion"
+  ],
+  "what_it_shows": "ドキュメントを参照して Claude Design が仕上げた自己紹介動画、約112秒。",
+  "claim": "アニメーションと表現力は触った限り一番で、UI・UX設計に使うべき。"
+ },
+ {
+  "url": "https://x.com/se_yakiimosan/status/2103424382249099343",
+  "id": "2103424382249099343",
+  "username": "se_yakiimosan",
+  "created_at": "2026-09-25T10:00:27.000Z",
+  "lang": "ja",
+  "likes": 8,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 397,
+  "media": [],
+  "links": [
+   "https://twitter.com/se_yakiimosan/status/2103329890976342425"
+  ],
+  "technique": [
+   "slides",
+   "narration-sync",
+   "pr-video"
+  ],
+  "what_it_shows": "この投稿自体に映像はなく、ナレーションとスライドのタイミングが合うPR動画だと述べている。",
+  "claim": "雑な指示でも、以前はこんなに綺麗にナレーションとスライドが合わなかった。"
+ },
+ {
+  "url": "https://x.com/gigabit_million/status/2104068536041959719",
+  "id": "2104068536041959719",
+  "username": "gigabit_million",
+  "created_at": "2026-09-27T04:40:05.000Z",
+  "lang": "ja",
+  "likes": 9,
+  "reposts": 4,
+  "quotes": 0,
+  "impressions": 941,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 60000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "news-brief",
+   "automation"
+  ],
+  "what_it_shows": "Steam の新作をゲーマー目線で約60秒にまとめた、毎朝自動のニュース動画。",
+  "claim": "もはやニュースアプリで、毎朝自動作成できる。"
+ },
+ {
+  "url": "https://x.com/ai_300/status/2104028254348964135",
+  "id": "2104028254348964135",
+  "username": "ai_300",
+  "created_at": "2026-09-27T02:00:01.000Z",
+  "lang": "ja",
+  "likes": 5,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 1381,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 15000
+   }
+  ],
+  "links": [
+   "https://twitter.com/ai_300/status/2100721469844275247"
+  ],
+  "technique": [
+   "motion-graphics",
+   "showreel",
+   "model-comparison"
+  ],
+  "what_it_shows": "同じ「履歴書用15秒ショーリール」指示を Opus 5.5 と GPT-6 Astra に投げた比較動画。",
+  "claim": "条件は同じで、Opus 5.5 を見たあとだと Astra は勝負になっておらず、構成・動き・見せ方まで変わる。"
+ },
+ {
+  "url": "https://x.com/maruta_aicase/status/2102647936773726257",
+  "id": "2102647936773726257",
+  "username": "maruta_aicase",
+  "created_at": "2026-09-23T06:35:08.000Z",
+  "lang": "ja",
+  "likes": 2,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 216,
+  "media": [
+   {
+    "type": "video",
+    "width": 1660,
+    "height": 1042,
+    "duration_ms": 41666
+   }
+  ],
+  "links": [],
+  "technique": [
+   "slides",
+   "model-comparison"
+  ],
+  "what_it_shows": "同じ指示・無修正で、左 GPT-6 Sol・右 Opus 5.5 のスライド5種を並べた約42秒。",
+  "claim": "Sol は会議向けにすっきり、Opus 5.5 は情報密度の高い企画書になり、優劣より場面で分かれる。"
+ },
+ {
+  "url": "https://x.com/ai_na_nitijou/status/2103333636942753870",
+  "id": "2103333636942753870",
+  "username": "ai_na_nitijou",
+  "created_at": "2026-09-25T03:59:51.000Z",
+  "lang": "ja",
+  "likes": 1,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 114,
+  "media": [],
+  "links": [
+   "https://ai-na-nitijou-video.web.app/"
+  ],
+  "technique": [
+   "landing-page",
+   "pixel-art",
+   "css-animation"
+  ],
+  "what_it_shows": "ファミコン風を頼んだらアニメーションまで付いた、動画制作サービスの公開LP。",
+  "claim": "LP刷新の出来に驚いた。"
+ },
+ {
+  "url": "https://x.com/Qestir/status/2103555083573383296",
+  "id": "2103555083573383296",
+  "username": "Qestir",
+  "created_at": "2026-09-25T18:39:48.000Z",
+  "lang": "ja",
+  "likes": 0,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 239,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 20000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "multi-agent",
+   "code-motion",
+   "skill"
+  ],
+  "what_it_shows": "自作Skillとサブエージェント6体が、エンジン構築からレンダリングまで通した20秒のモーショングラフィックス。",
+  "claim": "テンプレートではなくコードから映像の仕組み自体を組ませても、約120万トークンで想定以上のものができた。"
+ },
+ {
+  "url": "https://x.com/renkon40/status/2102926057213190625",
+  "id": "2102926057213190625",
+  "username": "renkon40",
+  "created_at": "2026-09-24T01:00:17.000Z",
+  "lang": "ja",
+  "likes": 0,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 501,
+  "media": [],
+  "links": [
+   "https://rengakucho.github.io/r/0227-x-reply/"
+  ],
+  "technique": [
+   "slides",
+   "video-edit",
+   "model-comparison"
+  ],
+  "what_it_shows": "映像そのものはなく、6分野比較の結果ページへのリンク。",
+  "claim": "動画編集は確認なし1回で総合1位、スライド新規は91点で Astra の79点を上回った。"
+ },
+ {
+  "url": "https://x.com/shun_cmdouga/status/2102719159524307233",
+  "id": "2102719159524307233",
+  "username": "shun_cmdouga",
+  "created_at": "2026-09-23T11:18:08.000Z",
+  "lang": "ja",
+  "likes": 1,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 445,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 10048
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "kinetic-typography",
+   "sfx",
+   "product-intro"
+  ],
+  "what_it_shows": "家事代行サービスの紹介で、テキストアニメと効果音が入った約10秒。",
+  "claim": "テキストアニメーションとSEを含め、動画としてのクオリティが想像以上。"
+ },
+ {
+  "url": "https://x.com/cedric_chee/status/2103643080150888701",
+  "id": "2103643080150888701",
+  "username": "cedric_chee",
+  "created_at": "2026-09-26T00:29:28.000Z",
+  "lang": "en",
+  "likes": 0,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 139,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 44500
+   }
+  ],
+  "links": [],
+  "technique": [
+   "launch-video",
+   "code-motion",
+   "voiceover",
+   "music"
+  ],
+  "what_it_shows": "エージェント工学スタートアップのローンチ動画。アニメ・音楽・ナレーションが全部コードで約45秒。",
+  "claim": "20分で全部コードになり、モーションデザインが非常に強い。コードがモーショングラフィックスと説明動画を食い始めている。"
+ },
+ {
+  "url": "https://x.com/1littlecoder/status/2103587706999914649",
+  "id": "2103587706999914649",
+  "username": "1littlecoder",
+  "created_at": "2026-09-25T20:49:26.000Z",
+  "lang": "en",
+  "likes": 41,
+  "reposts": 4,
+  "quotes": 0,
+  "impressions": 2610,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 10000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "kinetic-typography",
+   "showreel"
+  ],
+  "what_it_shows": "自分を紹介する10秒の動的モーショングラフィックス。隅の定型フレームは避けるよう指示。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/Seededyt/status/2103800567269384387",
+  "id": "2103800567269384387",
+  "username": "Seededyt",
+  "created_at": "2026-09-26T10:55:16.000Z",
+  "lang": "en",
+  "likes": 0,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 3,
+  "media": [],
+  "links": [
+   "https://www.youtube.com/watch?v=0wJ12YSf9EE"
+  ],
+  "technique": [
+   "html",
+   "gsap",
+   "three.js",
+   "webgl",
+   "hyperframes",
+   "web-audio"
+  ],
+  "what_it_shows": "投稿に映像はなく、5分本編は YouTube。HTML・GSAP・Three.js・WebGL を HyperFrames で60fps描画。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/lolkain/status/2103191497424376286",
+  "id": "2103191497424376286",
+  "username": "lolkain",
+  "created_at": "2026-09-24T18:35:03.000Z",
+  "lang": "en",
+  "likes": 1,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 140,
+  "media": [],
+  "links": [
+   "https://lolkain.github.io/depth-of-light/"
+  ],
+  "technique": [
+   "three.js",
+   "webgl",
+   "live-demo"
+  ],
+  "what_it_shows": "水面から深海まで光の変化を見る、ブラウザの海。ライブデモのみで動画は付いていない。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/NicksonTan/status/2102798578427265368",
+  "id": "2102798578427265368",
+  "username": "NicksonTan",
+  "created_at": "2026-09-23T16:33:43.000Z",
+  "lang": "en",
+  "likes": 0,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 107,
+  "media": [
+   {
+    "type": "video",
+    "width": 2966,
+    "height": 1958,
+    "duration_ms": 72316
+   }
+  ],
+  "links": [],
+  "technique": [
+   "three.js",
+   "blender",
+   "glb"
+  ],
+  "what_it_shows": "1枚の画像から、ヘッドレス Blender の GLB 21体を置いた Three.js シーン、約72秒。",
+  "claim": "medium・プロンプト約3回・22.68ドルで、欲しかった雰囲気を捉えた。"
+ },
+ {
+  "url": "https://x.com/Kamal_AnanD1/status/2103777902722797951",
+  "id": "2103777902722797951",
+  "username": "Kamal_AnanD1",
+  "created_at": "2026-09-26T09:25:12.000Z",
+  "lang": "en",
+  "likes": 2,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 96,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 90000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "code-motion",
+   "explainer"
+  ],
+  "what_it_shows": "株式市場の仕組みを90秒で説明するモーショングラフィックス。Skill も Remotion も HyperFrames もなし。",
+  "claim": "ワンショットの完全なコードで、モーショングラフィックス設計では一番だ。"
+ },
+ {
+  "url": "https://x.com/RiverRoadLabs/status/2104001423281201432",
+  "id": "2104001423281201432",
+  "username": "RiverRoadLabs",
+  "created_at": "2026-09-27T00:13:24.000Z",
+  "lang": "en",
+  "likes": 2,
+  "reposts": 0,
+  "quotes": 1,
+  "impressions": 799,
+  "media": [
+   {
+    "type": "video",
+    "width": 1080,
+    "height": 1080,
+    "duration_ms": 56466
+   }
+  ],
+  "links": [],
+  "technique": [
+   "custom-renderer",
+   "code-motion"
+  ],
+  "what_it_shows": "一晩・数プロンプトで、レンダラーをゼロから書いて作った正方形の約56秒。",
+  "claim": "After Effects は使わず、レンダラー自体を一から書いた。"
+ },
+ {
+  "url": "https://x.com/Bhagat_X1/status/2103864672445469153",
+  "id": "2103864672445469153",
+  "username": "Bhagat_X1",
+  "created_at": "2026-09-26T15:10:00.000Z",
+  "lang": "en",
+  "likes": 1,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 45,
+  "media": [
+   {
+    "type": "photo",
+    "width": 2188,
+    "height": 1563,
+    "duration_ms": null
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "model-comparison"
+  ],
+  "what_it_shows": "Opus 5.5 と Opus 5 の比較に添えた静止画1枚。",
+  "claim": "Opus 5 より見た目が良く、アニメが滑らかで、修正が少ない。"
+ },
+ {
+  "url": "https://x.com/RohithThakurwar/status/2103770574015410556",
+  "id": "2103770574015410556",
+  "username": "RohithThakurwar",
+  "created_at": "2026-09-26T08:56:05.000Z",
+  "lang": "en",
+  "likes": 7,
+  "reposts": 3,
+  "quotes": 0,
+  "impressions": 113,
+  "media": [
+   {
+    "type": "video",
+    "width": 750,
+    "height": 950,
+    "duration_ms": 10200
+   }
+  ],
+  "links": [],
+  "technique": [
+   "rive",
+   "character-animation"
+  ],
+  "what_it_shows": "不機嫌な茶トラ猫の、Rive CLI で作った約10秒のキャラアニメ。",
+  "claim": "コードを書かずにアニメを作ったのは初めてで、モーショングラフィックスがとても良い。"
+ },
+ {
+  "url": "https://x.com/pranavclickks/status/2103598924632396258",
+  "id": "2103598924632396258",
+  "username": "pranavclickks",
+  "created_at": "2026-09-25T21:34:01.000Z",
+  "lang": "en",
+  "likes": 3,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 301,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 66858
+   }
+  ],
+  "links": [
+   "https://twitter.com/twoclipping/status/2103273003555402193"
+  ],
+  "technique": [
+   "remotion",
+   "product-demo",
+   "ui-motion"
+  ],
+  "what_it_shows": "自社SaaSの製品デモ。フロントのコードベースを Remotion で画面収録風に組み立てた約67秒。",
+  "claim": "AIのモーショングラフィックスは After Effects に追いつき、固定収録と違いUIの部品を切り離して動かせる。"
+ },
+ {
+  "url": "https://x.com/QinElke/status/2104176976261271655",
+  "id": "2104176976261271655",
+  "username": "QinElke",
+  "created_at": "2026-09-27T11:50:59.000Z",
+  "lang": "en",
+  "likes": 1,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 17,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 30058
+   }
+  ],
+  "links": [
+   "https://gmapsscraper.io"
+  ],
+  "technique": [
+   "remotion",
+   "lipsync",
+   "product-intro"
+  ],
+  "what_it_shows": "サイトを読ませて台本を書かせ、Remotion で全フレームと口パクの営業キャラを描いた30秒プロモ。",
+  "claim": "After Effects もデザイナーもなし。"
+ },
+ {
+  "url": "https://x.com/melvindvivas/status/2103762693664727066",
+  "id": "2103762693664727066",
+  "username": "melvindvivas",
+  "created_at": "2026-09-26T08:24:46.000Z",
+  "lang": "en",
+  "likes": 15,
+  "reposts": 2,
+  "quotes": 0,
+  "impressions": 1358,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 60053
+   }
+  ],
+  "links": [],
+  "technique": [
+   "motion-graphics",
+   "explainer"
+  ],
+  "what_it_shows": "LLMの仕組みをワンショットで説明した約60秒のモーショングラフィックス。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/jitzu_dev/status/2103193256120996022",
+  "id": "2103193256120996022",
+  "username": "jitzu_dev",
+  "created_at": "2026-09-24T18:42:02.000Z",
+  "lang": "en",
+  "likes": 0,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 1,
+  "media": [],
+  "links": [
+   "https://aoe.simoncurtis.dev/"
+  ],
+  "technique": [
+   "three.js",
+   "blender",
+   "browser-game"
+  ],
+  "what_it_shows": "外部アセットなし、Three.js と Blender MCP だけで10時間作ったブラウザゲームの公開URL。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/Grace_sunnyy/status/2103454969773142033",
+  "id": "2103454969773142033",
+  "username": "Grace_sunnyy",
+  "created_at": "2026-09-25T12:01:59.000Z",
+  "lang": "zh",
+  "likes": 0,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 46,
+  "media": [],
+  "links": [
+   "https://moon.airoseagent.com"
+  ],
+  "technique": [
+   "three.js",
+   "gsap",
+   "canvas",
+   "web-audio",
+   "react"
+  ],
+  "what_it_shows": "投稿に動画はなく、3D月餅・Canvas・リアルタイム音の中秋H5サイトへのリンク。紹介動画は31分で生成したと書いている。",
+  "claim": "紹介動画の効果は悪くない。"
+ },
+ {
+  "url": "https://x.com/zombico_/status/2102848451708870757",
+  "id": "2102848451708870757",
+  "username": "zombico_",
+  "created_at": "2026-09-23T19:51:54.000Z",
+  "lang": "en",
+  "likes": 2,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 278,
+  "media": [
+   {
+    "type": "video",
+    "width": 1686,
+    "height": 1058,
+    "duration_ms": 17935
+   }
+  ],
+  "links": [],
+  "technique": [
+   "three.js",
+   "blender"
+  ],
+  "what_it_shows": "Three.js と Blender を450行のレシピとして生成した約18秒。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/0xchosen/status/2102860897945362527",
+  "id": "2102860897945362527",
+  "username": "0xchosen",
+  "created_at": "2026-09-23T20:41:21.000Z",
+  "lang": "en",
+  "likes": 3,
+  "reposts": 0,
+  "quotes": 1,
+  "impressions": 251,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 182000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "p5.js",
+   "explainer"
+  ],
+  "what_it_shows": "ユーザーから来る厄介なプロンプトを題材にした、約182秒の p5.js アニメ。",
+  "claim": "p5.js が非常にうまく、ユーモアもある。"
+ },
+ {
+  "url": "https://x.com/kuangsixin/status/2103782099798917271",
+  "id": "2103782099798917271",
+  "username": "kuangsixin",
+  "created_at": "2026-09-26T09:41:53.000Z",
+  "lang": "zh",
+  "likes": 2,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 33,
+  "media": [
+   {
+    "type": "video",
+    "width": 1920,
+    "height": 1080,
+    "duration_ms": 30000
+   }
+  ],
+  "links": [],
+  "technique": [
+   "p5.js",
+   "storyboard",
+   "sfx"
+  ],
+  "what_it_shows": "帽子を奪い合う Clawd と雪人の30秒。分鏡、手描きブラシ、転換、擬音までコード。",
+  "claim": null
+ },
+ {
+  "url": "https://x.com/Vladic_ETH/status/2104198303919305127",
+  "id": "2104198303919305127",
+  "username": "Vladic_ETH",
+  "created_at": "2026-09-27T13:15:44.000Z",
+  "lang": "en",
+  "likes": 1,
+  "reposts": 0,
+  "quotes": 0,
+  "impressions": 61,
+  "media": [
+   {
+    "type": "video",
+    "width": 1280,
+    "height": 720,
+    "duration_ms": 156650
+   }
+  ],
+  "links": [
+   "https://x.com/_mexicat/status/2103108369569726802/video/1"
+  ],
+  "technique": [
+   "p5.js",
+   "canvas",
+   "three.js",
+   "ffmpeg",
+   "headless-chrome"
+  ],
+  "what_it_shows": "引用しているのは暗いHUDとオシロスコープのクリップで、本文はコード描画パイプラインの説明。",
+  "claim": "動画は生成していない。JS/Canvas/p5.js/Three.js をブラウザが撮って ffmpeg が繋ぐ副作用で、文字が鋭く、物体が反復し、カットが溶けない。ワンプロンプトは宣伝で、実ブリーフは約9500字。"
+ }
+]

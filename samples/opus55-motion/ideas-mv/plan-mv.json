@@ -1,0 +1,69 @@
+{
+ "composition_plan": {
+  "positive_global_styles": [
+   "instrumental",
+   "dreamy indie electronic",
+   "120 bpm",
+   "clear four-on-the-floor kick",
+   "warm analog synths",
+   "hand-made, playful"
+  ],
+  "negative_global_styles": [
+   "vocals",
+   "lyrics",
+   "spoken word",
+   "orchestral",
+   "slow tempo change"
+  ],
+  "sections": [
+   {
+    "section_name": "Intro",
+    "positive_local_styles": [
+     "soft synth arpeggio",
+     "filtered",
+     "no drums yet"
+    ],
+    "negative_local_styles": [
+     "kick"
+    ],
+    "duration_ms": 4000,
+    "lines": []
+   },
+   {
+    "section_name": "Groove",
+    "positive_local_styles": [
+     "kick enters on beat one",
+     "punchy kick on every beat",
+     "bass line",
+     "claps on 2 and 4"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 10000,
+    "lines": []
+   },
+   {
+    "section_name": "Lift",
+    "positive_local_styles": [
+     "bright lead melody",
+     "full energy",
+     "kick on every beat"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 7000,
+    "lines": []
+   },
+   {
+    "section_name": "Out",
+    "positive_local_styles": [
+     "one final hit then a reverb tail",
+     "fade"
+    ],
+    "negative_local_styles": [
+     "new melody"
+    ],
+    "duration_ms": 3000,
+    "lines": []
+   }
+  ]
+ }
+}
