@@ -1,0 +1,9 @@
+{"$mulmocast":{"version":"1.1"},"canvasSize":{"width":1280,"height":720},"title":"story assets","lang":"en",
+ "imageParams":{"provider":"google","model":"gemini-3-pro-image-preview"},
+ "speechParams":{"speakers":{"Presenter":{"voiceId":"Kore","isDefault":true,"provider":"gemini"}}},
+ "beats":[
+  {"id":"map","text":"","duration":1,"imagePrompt":"Top-down fantasy battlefield map painted in Japanese sumi-e ink wash on aged paper: a winding river crossing the valley from top to bottom, one wooden bridge in the centre, forested hills on the left, rice fields and a small village on the right, mountains along the top edge. Muted ink greys with faint indigo and ochre washes. Absolutely no text, no labels, no people, no borders."},
+  {"id":"sky","text":"","duration":1,"imagePrompt":"Paper-cut collage layer on a pure flat white background: a large torn-paper full moon made of textured cream paper, with a small missing bite on its right edge, plus a few torn paper clouds in deep indigo. Visible paper fibres and torn edges, flat lighting, no shadows on the background, no text."},
+  {"id":"city","text":"","duration":1,"imagePrompt":"Paper-cut collage layer on a pure flat white background: a long horizontal silhouette of a night city skyline cut from dark navy textured paper, with tiny cut-out lit windows in warm yellow paper, torn bottom edge, occupying the lower 40 percent of the image. Flat lighting, no shadows on the background, no text."},
+  {"id":"cat","text":"","duration":1,"imagePrompt":"Paper-cut collage element on a pure flat white background: a small black paper cat sitting and looking up, cut from textured black paper with a few orange paper details, torn edges, centred, occupying about a third of the image height. Flat lighting, no shadow on the background, no text."}
+ ]}

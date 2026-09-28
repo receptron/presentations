@@ -1,0 +1,54 @@
+{
+ "composition_plan": {
+  "positive_global_styles": [
+   "instrumental",
+   "tv news broadcast bed",
+   "modern",
+   "pulsing synths",
+   "steady tempo 100 bpm",
+   "subtle, sits under a voice"
+  ],
+  "negative_global_styles": [
+   "vocals",
+   "lyrics",
+   "loud drums",
+   "heavy bass drops"
+  ],
+  "sections": [
+   {
+    "section_name": "Sting",
+    "positive_local_styles": [
+     "bold news-open sting",
+     "rising brass-like synth hit"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 4000,
+    "lines": []
+   },
+   {
+    "section_name": "Bed",
+    "positive_local_styles": [
+     "low-key pulsing bed",
+     "ticking hi-hat",
+     "sparse",
+     "leaves room for speech"
+    ],
+    "negative_local_styles": [
+     "melody"
+    ],
+    "duration_ms": 40000,
+    "lines": []
+   },
+   {
+    "section_name": "Out",
+    "positive_local_styles": [
+     "closing sting",
+     "resolving chord"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 6000,
+    "lines": []
+   }
+  ]
+ }
+}

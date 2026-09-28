@@ -10,6 +10,8 @@ Scripts live under `mulmoclaude/`, organized by intent: `vision/` (Why), `demos/
 
 File naming across all script directories: the unsuffixed name is the English version (canonical, e.g. `collection-creation-demo.json`), `_ja` is the Japanese version. Demo asset directories follow the same rule (`collection-demo-assets/` = English captures, `collection-demo-assets-ja/` = Japanese). Decks are authored in Japanese first (`_ja`), then translated into the unsuffixed English version with slides, narration, and captures all in English.
 
+`samples/` holds technique samples, not published decks. `samples/opus55-motion/README.md` is the index of motion patterns rebuilt from Claude Opus 5.5 posts on X (3D, shaders, lip-sync, beat-synced MV, live-data news, footage overlays, …) with the `html_tailwind` animation pitfalls found while building them — read it before writing an animated beat.
+
 For decks with app screenshots (`mulmoclaude/demos/` and `mulmoclaude/tutorials/`), follow `mulmoclaude/demos/DEMO-GUIDE.md` — beat structure, HTML slide snippets, capture conventions, and narration rules distilled from the reviewed `tutorials/collection-creation-demo_ja.json`.
 
 ## Commands
@@ -78,7 +80,7 @@ Consult these files (not memory or the web) for available beat fields, slide lay
 npm run validate -- mulmoclaude/vision/<name>.json   # = mulmo tool complete -o /dev/null <file>
 ```
 
-`npm test` validates every script under `mulmoclaude/` and `mulmoterminal/` (skipping either root if absent) at once (`scripts/validate-all.js`, using the local devDependency's `mulmoScriptSchema` — reports all invalid files with full Zod issue paths).
+`npm test` validates every script under `mulmoclaude/`, `mulmoterminal/` and `samples/` (skipping a root if absent; under `samples/` only JSON files with a `$mulmocast` key count as scripts, since data files sit next to the decks) at once (`scripts/validate-all.js`, using the local devDependency's `mulmoScriptSchema` — reports all invalid files with full Zod issue paths).
 
 The CLI has no dedicated `validate` command; `tool complete` parses the script against the full schema first, prints `Validation errors:` with field paths and exits 1 on failure, exits 0 on success. The `-o /dev/null` discards the completed-script output (otherwise it writes `<name>_completed.json` next to the file).
 

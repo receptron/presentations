@@ -2,19 +2,34 @@ const fs = require("fs");
 const path = require("path");
 const { mulmoScriptSchema } = require("mulmocast");
 
-const roots = ["mulmoclaude", "mulmoterminal"].map((d) => path.join(__dirname, "..", d));
+// samples/ also holds data JSON next to its decks (beat tables, fetched data, music plans),
+// so there only files carrying the "$mulmocast" key are treated as MulmoScripts.
+const roots = [
+  { dir: "mulmoclaude", scriptsOnly: false },
+  { dir: "mulmoterminal", scriptsOnly: false },
+  { dir: "samples", scriptsOnly: true },
+];
+const isMulmoScript = (file) => {
+  try {
+    return Object.prototype.hasOwnProperty.call(JSON.parse(fs.readFileSync(file, "utf8")), "$mulmocast");
+  } catch {
+    return true; // unreadable JSON is reported by the validation below
+  }
+};
 const files = roots
-  .filter((root) => fs.existsSync(root))
-  .flatMap((root) =>
+  .map(({ dir, scriptsOnly }) => ({ root: path.join(__dirname, "..", dir), scriptsOnly }))
+  .filter(({ root }) => fs.existsSync(root))
+  .flatMap(({ root, scriptsOnly }) =>
     fs
       .readdirSync(root, { recursive: true })
       .filter((f) => f.endsWith(".json"))
-      .map((f) => path.join(root, f)),
+      .map((f) => path.join(root, f))
+      .filter((file) => !scriptsOnly || isMulmoScript(file)),
   )
   .sort();
 
 if (files.length === 0) {
-  console.error("No MulmoScript files found under mulmoclaude/ or mulmoterminal/");
+  console.error("No MulmoScript files found under mulmoclaude/, mulmoterminal/ or samples/");
   process.exit(1);
 }
 
