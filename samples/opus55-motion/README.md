@@ -6,18 +6,20 @@ X で「Claude Opus 5.5 で作った」とされる映像表現を集め、mulmo
 
 | フォルダ | 台本 | 中身 | 生成 AI | 動画 |
 |---|---|---|---|---|
-| `sampler/` | `opus55-motion-sampler.json`（16:9、8 演出）、`opus55-motion-sampler-vertical.json`（9:16、2 演出） | L1（手堅い）: タイポ、UI 部品の持ち上げ、潜るズーム、線画、蓄積する暦、左右比較、筆致、Three.js の空間、巻物テロップ、数字の増加 | なし | [16:9](https://github.com/user-attachments/assets/02def2c7-bb81-4f9c-81b0-adcc16ff6e50)・[9:16](https://github.com/user-attachments/assets/e546194a-1353-478f-b5e6-07c82dbf6250) |
-| `showcase/` | `opus55-motion-showcase.json`（16:9、8 演出）、`opus55-motion-shorts.json`（9:16、10 秒） | L2（映像的）・L3（作品的）・Shorts のハイテンポ | なし | [L2・L3](https://github.com/user-attachments/assets/b1bd8383-9445-4ee6-a6fd-ddaff02d5571)・[Shorts](https://github.com/user-attachments/assets/ab7f761f-81bd-464e-8cb9-f71f5d644809) |
+| `sampler/` | `opus55-motion-sampler.json`（16:9、8 演出） | L1（手堅い）: タイポ、UI 部品の持ち上げ、潜るズーム、線画、蓄積する暦、左右比較、筆致、Three.js の空間、巻物テロップ、数字の増加 | なし | [16:9](https://github.com/user-attachments/assets/02def2c7-bb81-4f9c-81b0-adcc16ff6e50) |
+| `sampler/` | `opus55-motion-sampler-vertical.json`（9:16、2 演出） | L1 の縦型 | なし | [9:16](https://github.com/user-attachments/assets/e546194a-1353-478f-b5e6-07c82dbf6250) |
+| `showcase/` | `opus55-motion-showcase.json`（16:9、8 演出） | L2（映像的）・L3（作品的） | なし | [L2・L3](https://github.com/user-attachments/assets/b1bd8383-9445-4ee6-a6fd-ddaff02d5571) |
+| `showcase/` | `opus55-motion-shorts.json`（9:16、10 秒） | Shorts のハイテンポ | なし | [Shorts](https://github.com/user-attachments/assets/ab7f761f-81bd-464e-8cb9-f71f5d644809) |
 | `ideas-mv/` | `ideas-mv.json` | 曲のキックごとに筆が入り、風景画が描き上がる MV | ElevenLabs（BGM） | [MV](https://github.com/user-attachments/assets/038b442c-cc00-4387-a6cd-3682bf48ccc0) |
 | `ideas-explain/` | `ideas-explain.json` | 微分の解説（KaTeX）、深海への降下、美術史の早回し | なし（ナレーションの案は `NOTES.md`） | [解説](https://github.com/user-attachments/assets/2d484d18-35c9-4843-aeb7-43711d77eefe) |
 | `ideas-news/` | `ideas-news.json` | 公開データから自動で組むニュース番組（GitHub の新しいリポジトリ、28 都市の気温の地球儀） | Gemini 3.1 Flash TTS、ElevenLabs | [ニュース](https://github.com/user-attachments/assets/ce1fd1ab-91ea-4156-a870-093981355a3c) |
 | `ideas-story/` | `ideas-story.json`、画像の生成用に `assets.json` | 音声に合わせて口が動く掛け合い、墨絵の合戦の地図、対戦ゲーム風の HUD、切り絵のコラージュ | Gemini 3.1 Flash TTS、Nano Banana Pro | [キャラクター](https://github.com/user-attachments/assets/7bbc31f4-b7a5-4982-8a7c-2b5d2659194c) |
 | `ideas-3d/` | `ideas-3d.json` | GLB のロボットが走るゲーム映像、2 コマ打ちの粘土、設計図と描画で見せる城 | なし | [3D](https://github.com/user-attachments/assets/e7414fb6-fbbc-43d8-92f3-92ff0cda9f80) |
 | `ideas-composite/` | `ideas-composite.json` | 撮影映像の上の注釈とルーペ、参照と再現の比較、アイコンの振り付け、Lottie、8bit | なし | [合成と形式](https://github.com/user-attachments/assets/319fa0c4-3fcc-4eb0-8c90-56e3f16bde03) |
-| `../cinematic/` | `cinematic.json`（16:9、8 ショット、ナレーション無し） | そのまま自分の動画に入れられる 3D のショット: 山並みの日の出、黄金の時間の海、金属の立体タイトル、製品のヒーローショット、3D 空間の UI スクリーン、粒子 → 文字 → ロゴ、文字めくりの案内板、撮影映像への注釈。文字と色は `build.py` の `SHOTS` で差し替える（12 節） | なし | PR に添付 |
+| `../cinematic/` | `cinematic.json`（16:9、8 ショット、ナレーション無し） | そのまま自分の動画に入れられる 3D のショット: 山並みの日の出、黄金の時間の海、金属の立体タイトル、製品のヒーローショット、3D 空間の UI スクリーン、粒子 → 文字 → ロゴ、文字めくりの案内板、撮影映像への注釈。文字と色は `build.py` の `SHOTS` で差し替える（12 節） | なし | [シネマティック](https://github.com/user-attachments/assets/ce20f888-2bbb-40c8-ba97-2e7e6dd13fcf) |
 | `research/` | `x-posts.json` | X から集めた 79 件（URL・投稿者・日付・反応数・動画の縦横と尺・技法タグ・要約）。投稿の本文は含めていない | — | — |
 
-動画は repo に入れず、PR #128 の本文に添付したもの（書き出した時点の版。台本を直した後は一致しない）。どの台本も、隣の `build.py` が書き出したもの。台本を直すときは `build.py` を直して、そのフォルダで `python3 build.py` を実行する。台本の JSON は直接編集しない。
+動画は repo に入れず、PR #128 の本文（`cinematic/` は PR #129）に添付したもの。1 つのセルに動画のリンクが 1 本だけのときに GitHub が再生画面として埋め込むので、動画が 2 本ある台本は行を分けてある（書き出した時点の版。台本を直した後は一致しない）。どの台本も、隣の `build.py` が書き出したもの。台本を直すときは `build.py` を直して、そのフォルダで `python3 build.py` を実行する。台本の JSON は直接編集しない。
 
 ## 作り直し方
 
