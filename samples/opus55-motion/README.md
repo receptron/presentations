@@ -14,6 +14,7 @@ X で「Claude Opus 5.5 で作った」とされる映像表現を集め、mulmo
 | `ideas-story/` | `ideas-story.json`、画像の生成用に `assets.json` | 音声に合わせて口が動く掛け合い、墨絵の合戦の地図、対戦ゲーム風の HUD、切り絵のコラージュ | Gemini 3.1 Flash TTS、Nano Banana Pro | [キャラクター](https://github.com/user-attachments/assets/7bbc31f4-b7a5-4982-8a7c-2b5d2659194c) |
 | `ideas-3d/` | `ideas-3d.json` | GLB のロボットが走るゲーム映像、2 コマ打ちの粘土、設計図と描画で見せる城 | なし | [3D](https://github.com/user-attachments/assets/e7414fb6-fbbc-43d8-92f3-92ff0cda9f80) |
 | `ideas-composite/` | `ideas-composite.json` | 撮影映像の上の注釈とルーペ、参照と再現の比較、アイコンの振り付け、Lottie、8bit | なし | [合成と形式](https://github.com/user-attachments/assets/319fa0c4-3fcc-4eb0-8c90-56e3f16bde03) |
+| `../cinematic/` | `cinematic.json`（16:9、8 ショット、ナレーション無し） | そのまま自分の動画に入れられる 3D のショット: 山並みの日の出、黄金の時間の海、金属の立体タイトル、製品のヒーローショット、3D 空間の UI スクリーン、粒子 → 文字 → ロゴ、文字めくりの案内板、撮影映像への注釈。文字と色は `build.py` の `SHOTS` で差し替える（12 節） | なし | PR に添付 |
 | `research/` | `x-posts.json` | X から集めた 79 件（URL・投稿者・日付・反応数・動画の縦横と尺・技法タグ・要約）。投稿の本文は含めていない | — | — |
 
 動画は repo に入れず、PR #128 の本文に添付したもの（書き出した時点の版。台本を直した後は一致しない）。どの台本も、隣の `build.py` が書き出したもの。台本を直すときは `build.py` を直して、そのフォルダで `python3 build.py` を実行する。台本の JSON は直接編集しない。
@@ -178,3 +179,51 @@ X で目立っていて、社内のデッキにまだ無いのは次の 5 つ。
 - **アニメーションの beat はキャッシュされない**: 2.7.2 では、`animation` 付きの `html_tailwind` の beat は、中身を変えていなくても書き出すたびに `*_animated.mp4` と静止画が作り直される（2026-09-27、変更していない試験用デッキを書き出し直して、4 beat すべての更新時刻が新しくなることで確認した）。beat が多いデッキは、1 か所を直しただけでも全体の書き出し時間がかかる
 - **データの題材**: 実データで自動生成するときは、題材を選ぶ段階でセンシティブなもの（災害、政治、企業の内紛、プライバシー）を外す。最初の版では Hacker News の見出しと地震のデータを使っていたが、差し替えた
 - **Opus 5.5 の MV のソース**: X で話題になった Opus 5.5 の MV（「I'm Upping My P(doom)」）のソースコードが、GitHub の `JohnHeibel/PDoomVideo` で公開されていた（2026-09-27 の検索で今週の新しいリポジトリ 6 位、★1,150）
+
+## 10. 3D の場面を作り込むときの落とし穴（mulmocast 2.12.1、three.js r147、2026-09-29）
+
+AI Short Film Fes 2025 の告知動画を 1 年後に作り直したとき（ystknsh/media の PR #4・#5）に、13 場面を three.js で作って見つけたもの。どれもエラーにはならず、画が悪くなるか、何も映らないだけなので気づきにくい。対策は `samples/cinematic/kit/` に入れてある。
+
+1. **`<video>` は撮影の直前に beat の経過時刻へシークし直される**: mulmocast は `render()` の後に、ページ内のすべての `<video>` を `frame / fps` の位置へシークしてからスクリーンショットを撮る（`html_render.js` の `syncVideosToFrame`、2.12.1 で確認）。途中から映す・速度を変える・止める、は `<video>` をそのまま見せる形では効かない。`<video>` は見えない読み込み元にして、`render()` の中で自分でシークし、そのコマを canvas に描き写す（kit の `paint()`）。**ideas-composite の footage-overlay は 0.75 倍速の位置を読んでいるので、2.12.1 で書き出すと本体の映像だけ等速に戻る可能性がある**（未確認）
+2. **相対パスが解決されるのは html の `src` 属性だけ**: 台本のフォルダを基準に `file://` へ書き換わるのは `src="..."`（引用符はどちらでも）だけで、JavaScript の文字列の相対パスは解決されない。素材は html に見えない `<img src='assets/…'>` として置き、JS はその要素の `src` から読む
+3. **画が白っぽい粘土のようになる原因が 3 つ**。どれも、背景を #05070b にしても灰色に浮く、という同じ症状になる
+   - 16 進の色で照らす場面（`NoToneMapping` のまま）に、仕上げのパスで `pow(c, 1/2.2)` を掛けると、ガンマが二重になって黒が浮く。逆に、`objects/Sky` や `objects/Water` のように物理的な光の量を出す場面は、最後に 1 回だけ「露出 → ACES → sRGB」を掛けないと暗く沈む（`samples/cinematic/scenes/golden_ocean.js`）。規則で決めず、書き出したコマで判断する
+   - `objects/Sky` で濁り（turbidity）を上げて夕焼けにすると、太陽の周りの白い光輪が画面の半分に広がって全体が白く飛ぶ。黄金の時間は、範囲を決めた空のグラデーション（同じく golden_ocean）の方が色が残る
+   - `scene.environment` に `RoomEnvironment` を使うと、明るい灰色の部屋が金属にも暗い床にも映り込む。金はオリーブ色に濁る。暗いスタジオ（暗い球の内側に暖色のソフトボックス・寒色の帯・小さな強い光）を PMREM にすると、金らしい明暗の映り込みになる
+   - WebGL の canvas を `alpha: true` で作ると、半透明の面から下の層が透ける
+4. **細い線がギザギザになる**: `WebGLRenderer` の `antialias` は canvas に直接描くときだけ効く。`EffectComposer` の描画先にはアンチエイリアスが無いので、`new THREE.WebGLRenderTarget(w, h, { samples: 4 })` を渡して MSAA にする
+5. **CSS `matrix3d` の z の行がすべて 0 だと、要素が描かれない**: 3D の面に html を貼るために射影行列から `matrix3d` を作るとき、z の行を 0 にすると逆行列を持たない変形になり、ブラウザはその要素を描かない。z の対角だけ 1 にする
+6. **面取りした枠の穴が埋まる**: `ShapeGeometry` の穴は、面取りを外形の面取りから 45° の辺に沿って内側にずらした寸法にする（`c - 太さ × 0.414`）。大きいと穴の角が外形からはみ出し、三角形分割が穴を埋めて「半透明の板」になる
+7. **重い WebGL を途中の 1 コマから描くと、コンテキストが落ちることがある**: 確かめ用に beat を途中の時刻から 1 コマだけ撮ると、WebGL のコンテキストが失われて黒くなることがあった。mulmocast の書き出し（1 コマ目から順に撮る）では起きなかった。最終確認は本番の書き出しで行う
+8. **書き出しのタイムアウト**: WebGL の beat が多いと、`Navigation timeout` や `Runtime.callFunctionOn timed out` で止まることがある。`images` を走らせ直すと通った（済んだ beat の分は速い）。`<video preload='auto'>` はネットワークが静かにならず、ページの読み込み完了の判定（`networkidle0`）を遅らせるので `preload='metadata'` にする
+9. **外部の生成 API**
+   - Gemini 3.1 Flash TTS: 1 回の `mulmo audio` で 1 本でも失敗すると、その回に生成した音声は 1 本も保存されない。1 分あたり 10 回の上限があるので、4 本ずつ 70 秒あけて生成すると無駄が出ない。特定の文だけ音声が返らない（`No audio data returned`）ことがあり、言い回しを変えると通った（「Any genre. Three minutes or less. Anyone can enter.」が 2 回とも返らなかった）
+   - ElevenLabs Music: 返ってくる曲の冒頭に 1〜14 秒の無音が入ることがある。`audioParams.bgm` に再生開始位置の指定は無いので、ffmpeg で頭を切ってから渡す。`composition_plan` の区間ごとの指示は効かなかったので、曲調を切り替えたいときは 2 回に分けて生成してつなぐ
+
+## 11. 3D の場面を分業して作る（Codex と検品）
+
+同じ告知動画の作り直しで、13 場面の下書きを Codex（gpt-6-astra）に並列で頼み、こちらで検品して仕上げた。そのときの型。
+
+- **場面ごとのファイル**: 1 場面 = `scenes/<id>.html` と `scenes/<id>.js`。`build.py` が共通部品（kit）と定数（beat の長さ `D`、合図の時刻 `C`、差し替え用の `P`）を前に付けて台本を書き出す。`.js` の 1 行目の `// requires: objects/Water, objects/Sky` で、その beat だけ three.js の追加部品を読み込む（全部を毎回読むとタイムアウトが増えた）
+- **約束事（BRIEF）を 1 枚にする**: 描画の決まり（上の 10 節）、画づくりの基準、場面の一覧を `scenes/BRIEF.md` に書き、依頼文ではそれを読ませる。自分の言葉で要約して渡すと、要約の誤りがそのまま相手の誤りになる
+- **Codex はサンドボックスで Chrome を起動できない**（起動直後に SIGABRT）。コマを撮って確かめるのはこちらの役目で、撮ったコマを `codex exec -i <png>` で添付して差し戻す
+- **時刻は定数で書かせる**: 合図は `C[i]` だけで書かせる。ナレーションを録り直しても、`build.py` の数字を変えるだけで場面は書き直さずに追従する
+- **1 回目は全場面に同じ癖が出る**: 最初の 12 場面は、すべてに同じガンマの二重掛けが入っていた。1 場面ずつ直すより、原因を 1 つ見つけて全場面に当てる方が早い。画が変わらないときは、場面より先に、撮る側（確認用の仕組み）と相手側（利用上限で何も書き換えていなかった）を疑う
+- **Codex の利用上限**: 5 本を並列で 2 周させたところで上限に達し、2 周目は何も書き換えずに終わっていた（ログの末尾に `You've hit your usage limit`）
+
+## 12. シネマティックのショット（`samples/cinematic/`）
+
+演出の見本ではなく、**文字と色を差し替えれば自分の動画にそのまま入れられるショット**。すべて three.js で、ナレーションの無い beat なので書き出しに API の費用はかからない。差し替える値は `samples/cinematic/build.py` の `SHOTS`（ショットごとの秒数と `P`）にあり、場面の中の文字はすべて `P` から読む。場面を書く・直すときの約束事は `samples/cinematic/scenes/BRIEF.md`、共通部品は `samples/cinematic/kit/`。
+
+| ショット | 使いどころ | `P` で変えられるもの | 中身 |
+|---|---|---|---|
+| `sunrise_peaks` | オープニング、章の扉 | `eyebrow`・`title` | 雲海の上に並ぶ雪の峰に朝日が差す。尾根の輪郭光、金色に照らされた雲海、カメラが寄る |
+| `golden_ocean` | エンディング、旅、ブランドの雰囲気 | `line` | 黄金の時間の外洋。波のうねり、太陽から伸びる光の道、低く進むカメラ |
+| `metal_title` | 任意の文字のタイトル | `lines`・`sub`・`metal`（gold / silver / copper） | 面取りした金属の立体文字に、光が横切って映り込む |
+| `product_hero` | 製品の紹介 | `name`・`tagline` | ガラスと金属の端末が、スタジオ照明の台座で回る |
+| `ui_screen` | アプリやサイトの紹介 | `app`・`headline` | 3D 空間に浮かぶガラスの画面に、数字が数え上がりグラフが描かれるダッシュボード（html を `matrix3d` で投影） |
+| `particle_logo` | 冒頭、転換 | `word`・`logo`（`star` か SVG の path） | 数万の光の粒が星雲から文字になり、ロゴの形に流れ込む |
+| `split_flap` | 告知、数字、行き先 | `rows`（見出しと値の組） | 蝶番で実際にめくれる文字めくりの案内板 |
+| `footage_notes` | 画面収録の解説 | `note`・`footage`・`focus`（注目点、映像の画素座標）・`radius`・`zoom` | 撮影映像がゆっくり止まり、カメラが注目点に寄り、手描きの赤丸・ルーペ・注記が入り、最後はブラウン管のように消える（`paint()` で描き写す）。見本は Claude Code のキャラクターに寄る |
+
+作り方: 下書きは Codex（gpt-6-astra）が `scenes/BRIEF.md` を約束事として書き、mulmocast 2.12.1 で書き出したコマを見て 2 周目を依頼し、光と露出の設定（golden_ocean の空と表示変換など）はこちらで直した。書き出しは repo のルートから `npm run movie -- -o "$MAIN/output" samples/cinematic/cinematic.json`（先に `python3 samples/cinematic/build.py`）。
