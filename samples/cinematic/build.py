@@ -22,7 +22,8 @@ SHOTS = [
     ("ui_screen", 7.0, {"app": "Dashboard", "headline": "Everything, at a glance."}),
     ("particle_logo", 7.0, {"word": "Create", "logo": "star"}),
     ("split_flap", 6.0, {"rows": [["NOW BOARDING", "GATE 12"], ["NEXT STOP", "TOKYO"]]}),
-    ("footage_notes", 8.0, {"note": "Look here", "footage": "../../mulmoterminal/clips/first-run-assets/07-grid.mp4"}),
+    ("footage_notes", 8.0, {"note": "Meet Claude", "footage": "../../mulmoterminal/clips/first-run-assets/07-grid.mp4",
+                            "focus": [678, 100], "radius": 46, "zoom": 1.6}),  # focus: footage pixels (Claude Code's mascot)
 ]
 TOTAL_FRAMES = sum(math.floor(d * FPS) for _, d, _ in SHOTS)
 

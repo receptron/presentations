@@ -62,15 +62,16 @@ async function render(frame,totalFrames,fps){
   g.clearRect(0,0,1600,900);g.drawImage(source,0,0);
   const reveal=easeOut(seg(t,D*.40,D*.54));
   // Burn down the surrounds, keeping the circular area of interest at full exposure.
-  const fx=744,fy=410;
-  g.save();g.beginPath();g.rect(0,0,1600,900);g.arc(fx,fy,115,0,Math.PI*2,true);
+  // P.focus is the point of interest in footage pixels; map it into this 1600x900 canvas
+  const k=1600/sw,fx=(P.focus[0]-(vw-sw)/2)*k,fy=(P.focus[1]-(vh-sh)/2)*k,R=P.radius*k;
+  g.save();g.beginPath();g.rect(0,0,1600,900);g.arc(fx,fy,R*1.03,0,Math.PI*2,true);
   g.fillStyle=`rgba(0,3,8,${reveal*.27})`;g.fill('evenodd');g.restore();
   const circle=seg(t,D*.49,D*.64);
   g.save();g.strokeStyle='#ff4d43';g.lineWidth=5.5;g.lineCap='round';g.lineJoin='round';
   g.shadowColor='rgba(0,0,0,.75)';g.shadowBlur=5;g.beginPath();
   const end=circle*Math.PI*2.16,steps=Math.ceil(end*45);
   for(let i=0;i<=steps&&circle>0;i++){
-    const a=-.45+end*i/Math.max(1,steps),radius=112+Math.sin(a*3+.5)*4+Math.cos(a*7)*1.6;
+    const a=-.45+end*i/Math.max(1,steps),radius=R+Math.sin(a*3+.5)*R*.036+Math.cos(a*7)*R*.014;
     const x=fx+Math.cos(a)*radius,y=fy+Math.sin(a)*radius*.82;
     i?g.lineTo(x,y):g.moveTo(x,y);
   }g.stroke();g.restore();
@@ -78,7 +79,8 @@ async function render(frame,totalFrames,fps){
   g.fillStyle='rgba(0,0,0,.055)';for(let y=0;y<900;y+=3)g.fillRect(0,y,1600,1);
   s.texture.needsUpdate=true;
   const lg=s.loupeCanvas.getContext('2d');lg.clearRect(0,0,640,640);
-  lg.drawImage(source,fx-105,fy-105,210,210,0,0,640,640);s.loupeTexture.needsUpdate=true;
+  const half=R/P.zoom*2.2;  // P.zoom: how much larger the loupe shows the circled area
+  lg.drawImage(source,fx-half,fy-half,half*2,half*2,0,0,640,640);s.loupeTexture.needsUpdate=true;
   const dismiss=1-ease(seg(t,D*.82,D*.87)),visible=reveal*dismiss;
   s.lens.visible=visible>.001;s.lens.scale.setScalar(Math.max(.001,visible));
   s.lens.position.set(4.85,lerp(.95,1.2,ease(u)),1.0);
@@ -93,8 +95,10 @@ async function render(frame,totalFrames,fps){
   s.screen.visible=u<.937;
   s.flash.material.opacity=seg(t,D*.908,D*.92)*(1-seg(t,D*.937,D*.951));
   s.flash.scale.x=Math.max(.001,1-easeIn(seg(t,D*.92,D*.947)));
-  s.cam.position.set(lerp(.55,-.22,ease(u)),lerp(.3,.1,u),lerp(17.6,16.3,ease(u)));
-  s.cam.lookAt(0,0,0);s.cam.updateMatrixWorld(true);
+  // push toward the point of interest while the circle draws, so the subject reads as a close-up
+  const push=ease(seg(t,D*.36,D*.58)),wx=fx/100-8,wy=4.5-fy/100;
+  s.cam.position.set(lerp(lerp(.55,-.22,ease(u)),wx*.55,push),lerp(lerp(.3,.1,u),wy*.5,push),lerp(lerp(17.6,16.3,ease(u)),12.2,push));
+  s.cam.lookAt(wx*.6*push,wy*.55*push,0);s.cam.updateMatrixWorld(true);
   const caption=el('notes-caption');
   const p=new THREE.Vector3(3.25,-1.22,1).project(s.cam);
   caption.style.transform=`translate(${(p.x*.5+.5)*1280}px,${(-p.y*.5+.5)*720}px)`;

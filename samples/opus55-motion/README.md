@@ -224,6 +224,6 @@ AI Short Film Fes 2025 の告知動画を 1 年後に作り直したとき（yst
 | `ui_screen` | アプリやサイトの紹介 | `app`・`headline` | 3D 空間に浮かぶガラスの画面に、数字が数え上がりグラフが描かれるダッシュボード（html を `matrix3d` で投影） |
 | `particle_logo` | 冒頭、転換 | `word`・`logo`（`star` か SVG の path） | 数万の光の粒が星雲から文字になり、ロゴの形に流れ込む |
 | `split_flap` | 告知、数字、行き先 | `rows`（見出しと値の組） | 蝶番で実際にめくれる文字めくりの案内板 |
-| `footage_notes` | 画面収録の解説 | `note`・`footage` | 撮影映像がゆっくり止まり、ルーペ・手描きの赤丸・注記が入り、最後はブラウン管のように消える（`paint()` で描き写す） |
+| `footage_notes` | 画面収録の解説 | `note`・`footage`・`focus`（注目点、映像の画素座標）・`radius`・`zoom` | 撮影映像がゆっくり止まり、カメラが注目点に寄り、手描きの赤丸・ルーペ・注記が入り、最後はブラウン管のように消える（`paint()` で描き写す）。見本は Claude Code のキャラクターに寄る |
 
 作り方: 下書きは Codex（gpt-6-astra）が `scenes/BRIEF.md` を約束事として書き、mulmocast 2.12.1 で書き出したコマを見て 2 周目を依頼し、光と露出の設定（golden_ocean の空と表示変換など）はこちらで直した。書き出しは repo のルートから `npm run movie -- -o "$MAIN/output" samples/cinematic/cinematic.json`（先に `python3 samples/cinematic/build.py`）。
