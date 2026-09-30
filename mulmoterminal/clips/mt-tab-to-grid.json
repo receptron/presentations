@@ -1,0 +1,109 @@
+{
+  "$mulmocast": {
+    "version": "1.1"
+  },
+  "canvasSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "imageParams": {
+    "provider": "openai",
+    "images": {},
+    "concurrency": 1
+  },
+  "audioParams": {
+    "bgm": {
+      "kind": "path",
+      "path": "../../resources/bgms/morning001.mp3"
+    },
+    "padding": 0.2,
+    "introPadding": 0.3,
+    "closingPadding": 0.3,
+    "outroPadding": 0.8,
+    "bgmVolume": 0.1,
+    "audioVolume": 1,
+    "suppressSpeech": false,
+    "concurrency": 1
+  },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "displayName": {
+          "en": "Presenter"
+        },
+        "voiceId": "Kore",
+        "isDefault": true,
+        "provider": "gemini",
+        "speechOptions": {
+          "instruction": "Calm, confident, brisk — short declarative sentences, like a good product keynote. No salesy energy."
+        },
+        "model": "gemini-2.5-flash-preview-tts"
+      }
+    }
+  },
+  "lang": "en",
+  "title": "MulmoTerminal — from tab hopping to one grid",
+  "description": "BH-030 vA6 (briefVersion: bh030-a6-amber-fill-not-thin-stroke-2026-09-30). X short: scattered terminal-tab hopping, then the whole team on one MulmoTerminal grid, then Expand on the amber waiting-on-you cell acme-api (AskUserQuestion: rate-limit Fixed window / Token bucket) — waiting cell HEADER is filled with product amber #f5a623 (not thin stroke) — to give the next instruction, then back to the full 2x3 grid (end beat plays the end-grid.mp4 mosaic). Real captures only, captions off.",
+  "beats": [
+    {
+      "text": "Scattered terminals. Jumping tabs to chase every agent.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-black relative'>",
+          "  <video src='./mt-tab-to-grid-assets/before-term.mp4' autoplay muted playsinline style='position:absolute;inset:0;width:1280px;height:720px;object-fit:cover;display:block'></video>",
+          "</div>"
+        ]
+      },
+      "duration": 4
+    },
+    {
+      "text": "MulmoTerminal puts the whole team on one grid.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-black relative'>",
+          "  <video src='./mt-tab-to-grid-assets/grid-live.mp4' autoplay muted playsinline style='position:absolute;inset:0;width:1280px;height:720px;object-fit:cover;display:block'></video>",
+          "</div>"
+        ]
+      },
+      "duration": 4
+    },
+    {
+      "text": "Open a waiting-on-you cell and give the next instruction.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-black relative'>",
+          "  <video src='./mt-tab-to-grid-assets/expand-live.mp4' autoplay muted playsinline style='position:absolute;inset:0;width:1280px;height:720px;object-fit:cover;display:block'></video>",
+          "</div>"
+        ]
+      },
+      "duration": 5.5
+    },
+    {
+      "text": "Back to the whole grid.",
+      "image": {
+        "type": "html_tailwind",
+        "animation": {
+          "movie": true
+        },
+        "html": [
+          "<div class='w-full h-full bg-black relative'>",
+          "  <video src='./mt-tab-to-grid-assets/end-grid.mp4' autoplay muted playsinline style='position:absolute;inset:0;width:1280px;height:720px;object-fit:cover;display:block'></video>",
+          "</div>"
+        ]
+      },
+      "duration": 3.5
+    }
+  ]
+}
